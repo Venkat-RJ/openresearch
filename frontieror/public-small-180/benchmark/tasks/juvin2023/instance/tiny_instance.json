@@ -1,0 +1,65 @@
+{
+  "problem_type": "pFJSSP",
+  "num_jobs": 2,
+  "num_machines": 2,
+  "num_operations_per_job": [
+    2,
+    2
+  ],
+  "total_operations": 4,
+  "average_flexibility": 1.25,
+  "processing_time_max": 5,
+  "preemption_allowed": true,
+  "migration_allowed": false,
+  "jobs": [
+    {
+      "job_id": 0,
+      "operations": [
+        {
+          "operation_id": 0,
+          "eligible_machines": [
+            1
+          ],
+          "processing_times": {
+            "1": 2
+          }
+        },
+        {
+          "operation_id": 1,
+          "eligible_machines": [
+            0
+          ],
+          "processing_times": {
+            "0": 1
+          }
+        }
+      ]
+    },
+    {
+      "job_id": 1,
+      "operations": [
+        {
+          "operation_id": 0,
+          "eligible_machines": [
+            0,
+            1
+          ],
+          "processing_times": {
+            "0": 1,
+            "1": 1
+          }
+        },
+        {
+          "operation_id": 1,
+          "eligible_machines": [
+            0
+          ],
+          "processing_times": {
+            "0": 5
+          }
+        }
+      ]
+    }
+  ],
+  "seed": 42
+}

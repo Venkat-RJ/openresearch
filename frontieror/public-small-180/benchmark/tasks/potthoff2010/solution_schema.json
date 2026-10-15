@@ -1,0 +1,16 @@
+{
+  "released_problem_variant": "<str, fixed='relief_point_completion_v1'> Must match the executable instance contract.",
+  "objective_value": "<float> Total cost of the rescheduling plan, combining the cost of the selected completions for all original duties and the penalty for all canceled tasks.",
+  "canceled_tasks": "<list[str]> Identifiers of the unfinished tasks that are canceled rather than covered by any driver.",
+  "duty_assignments": {
+    "<duty_id>": {
+      "completion_index": "<int> Index of the feasible completion selected for this original duty among the enumerated completions.",
+      "cost": "<float> Exact released completion cost: fixed change cost plus task-reassignment, new-transfer, and taxi costs (zero only for an unchanged completion).",
+      "covered_tasks": "<list[str]> Ordered identifiers of tasks operated by the duty.",
+      "uses_taxi": "<bool> Exact taxi-use flag derived from the route connections and return.",
+      "release_at_relief_point": "<bool> True only when the frozen horizon provides no timely base return and the driver is released at the final relief point.",
+      "return_station": "<str> Station reached at the end of the released completion.",
+      "return_time_minutes": "<int> Derived end/return time in minutes from midnight."
+    }
+  }
+}

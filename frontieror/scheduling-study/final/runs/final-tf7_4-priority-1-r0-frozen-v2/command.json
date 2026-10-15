@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "docker",
+    "exec",
+    "frontieror-final-1791453882568582000",
+    "python3",
+    "timed_solver.py",
+    "--output",
+    "/work/runs/final-tf7_4-priority-1-r0-frozen-v2/output.json",
+    "--directory",
+    "/work/runs/final-tf7_4-priority-1-r0-frozen-v2/timing",
+    "--deadline",
+    "300",
+    "--",
+    "./frozen-v2",
+    "/work/runs/final-tf7_4-priority-1-r0-frozen-v2/input.txt",
+    "/work/runs/final-tf7_4-priority-1-r0-frozen-v2/output.json",
+    "290",
+    "104729",
+    "1"
+  ],
+  "started_unix": 1791502726.1303658
+}

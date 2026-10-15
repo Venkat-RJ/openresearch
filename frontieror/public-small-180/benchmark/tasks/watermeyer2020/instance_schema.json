@@ -1,0 +1,21 @@
+{
+  "n": "<int> Number of real activities in the project.",
+  "num_activities": "<int> Total number of activities including the fictitious project-start and project-end activities.",
+  "num_resources": "<int> Number of partially renewable resources available to the project.",
+  "d_bar": "<int> Prescribed maximum allowable project duration.",
+  "activities": {
+    "{activity_id}": {
+      "processing_time": "<int> Duration for which the activity runs continuously once started.",
+      "resource_demands": {
+        "{resource_id}": "<int> Per-period consumption of the resource while the activity is in execution."
+      }
+    }
+  },
+  "temporal_constraints": "<list[dict], length num_constraints> Each entry specifies a sequencing relationship between two activities with fields 'i' (first activity), 'j' (second activity), and 'delta' (minimum time lag requiring that the start of activity j minus the start of activity i is at least delta).",
+  "resources": {
+    "{resource_id}": {
+      "capacity": "<int> Maximum total consumption allowed across all activities for this resource over its designated periods.",
+      "periods": "<list[int]> Subset of periods within the planning horizon during which this resource is available."
+    }
+  }
+}

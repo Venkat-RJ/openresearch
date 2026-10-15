@@ -1,0 +1,8 @@
+{
+  "graph": {
+    "num_vertices": "<int> Total number of vertices in the graph available for inclusion in the clique.",
+    "num_edges": "<int> Total number of edges in the graph.",
+    "vertices": "<list[int], length num_vertices> Identifiers of all vertices in the graph.",
+    "edges": "<list[list[int]], shape [num_edges][3]> Each entry is a triple [u, v, weight] giving an undirected edge between two vertices together with the positive weight earned when both endpoints are selected."
+  }
+}

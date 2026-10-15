@@ -1,0 +1,334 @@
+{
+  "experiment_id": "a319a88f-fa71-4476-9068-b0dcd135e0c1",
+  "readback_verified": true,
+  "outcome": {
+    "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+    "group": 5,
+    "summary": {
+      "implemented": 30,
+      "official_attempted": 30,
+      "official_feasible": 29,
+      "best_tiny_quality_gate_passes": 28,
+      "objective_beats_excluding_numerical_noise": 0,
+      "native_quality_failure": [
+        "rahmaniani2022"
+      ],
+      "no_complete_candidate_witness": [
+        "rahmaniani2018"
+      ],
+      "final_unthrottled_early_clock_native_verification": "All30 native streams verified;29 complete witness streams,1 empty no-witness log; descriptive evidence only",
+      "final300_attempted_from_native_csv": 30,
+      "final300_full_precision_native_verified": 30,
+      "final300_api_readbacks_verified": 30,
+      "final300_checker_feasible_verified": 29,
+      "final300_quality_gate_passes_verified": 28,
+      "final300_pending_archive_or_readback": [],
+      "final300_objective_beats_excluding_numerical_noise": 0,
+      "final300_total_logged_events_verified": 201,
+      "final300_terminal_log_objective_exact_equal": 28,
+      "final300_terminal_log_objective_numerically_close": 29,
+      "live_followup_pending": [
+        "rahmaniani2018 diagnostic-only telemetry"
+      ]
+    },
+    "artifacts": [
+      {
+        "path": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/group5-results.json",
+        "sha256": "237d0e007b958068d30bac8a98fcc9d081bc582c9c58dbdb83d66f344eb30d1c"
+      },
+      {
+        "path": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/group5-final-measured.json",
+        "sha256": "4373f648ed07051def1b432d3c45eb4b145936370c87d801c8a7c975178857bc"
+      },
+      {
+        "path": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/group5-rahmaniani2018-final-diagnosis.json",
+        "sha256": "d7276e142c3a1aa1e442723fd6bff2e6a64009325de8b75d6a0714e82c9c6269"
+      },
+      {
+        "path": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/group5-rahmaniani2018-diagnostic-readiness.json",
+        "sha256": "a6ac5a98d5472e45d5ae621bbc2db6652cc5c6dde934af5303ab4d0b8596835e"
+      }
+    ],
+    "final_task_records": [
+      {
+        "task": "pecin2017",
+        "experiment_id": "4964fae9-3b40-4064-8004-3da8adac1722",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "678797443b2c21f1d3347995d940f227d21d85d20bd45e8a9eba6cc5642710d5",
+        "candidate_full_precision": 349.6749216011134,
+        "reference_full_precision": 349.6749216011134,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "pedersen2024",
+        "experiment_id": "308913f5-65b7-4941-aba8-fd5da26d1045",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "94205b064ab7bd7d4ec94fbccca00fd3d95ca4367a7cb5dac1eb10a83ee99222",
+        "candidate_full_precision": 58.6944,
+        "reference_full_precision": 58.6944,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "pessoa2021",
+        "experiment_id": "70d69e6f-d3b0-427e-bf65-b1e78de9a747",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "1bb7ff7e9371b947a51e10e2b7beda84e19a175f4ce8e75ea94401477b33b40e",
+        "candidate_full_precision": 380,
+        "reference_full_precision": 380.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "pettersson2020",
+        "experiment_id": "19fb5541-9e12-45f7-b081-fc681db4fc75",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "04234eb09c148b49a3aa6933ceb92cb0688c30556b287c3067bfe72b5784a56b",
+        "candidate_full_precision": 1,
+        "reference_full_precision": 1.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "pinnoi1997",
+        "experiment_id": "ecd0a7b0-1adb-4833-bcfe-8f33c7f11c92",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "8802bf7d985edd731a6d253bd36209931af9f5444e410cfa6336434d6d252fc7",
+        "candidate_full_precision": 4,
+        "reference_full_precision": 4.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "potthoff2010",
+        "experiment_id": "91a3edb2-6963-46da-95b6-4f52afc35657",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "d172b08dd5db42c5f962ae113e546f73c9bef4b6e2ab488d285bc8d2929ce506",
+        "candidate_full_precision": 626900,
+        "reference_full_precision": 626900.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "rahimian2017",
+        "experiment_id": "f29e9d31-5183-45c8-a7da-1e2517258510",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "6bcc38387ff93ac3a9a52a322f6f836dea920df270375cc5cba6c41cc7b1a5e7",
+        "candidate_full_precision": 80,
+        "reference_full_precision": 80.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "rahmaniani2017",
+        "experiment_id": "b0e4c530-a95c-4923-a41e-28f8ef00c1b8",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "4d85ac90fffc9f9136357a0bae73977714766251179aecd3cb99897616976572",
+        "candidate_full_precision": 147053.72896816232,
+        "reference_full_precision": 147053.7289681623,
+        "signed_gap_full_precision": 1.9791290340576673e-16
+      },
+      {
+        "task": "rahmaniani2018",
+        "experiment_id": "2ef357a6-4558-438d-be56-3b971f9d3ffc",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "974bd301e5fe92a10b7830be1b655e8152ba646ae47cb74f83ddae07583b59ac",
+        "candidate_full_precision": null,
+        "reference_full_precision": 1524152091.78372,
+        "signed_gap_full_precision": null
+      },
+      {
+        "task": "rahmaniani2020",
+        "experiment_id": "82413841-09b0-4dae-a08f-5fd502cf350a",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "c00cf63ca0fec8a7feaf5dcb92f6f32d344587f451286bb88a2b641c98b99eab",
+        "candidate_full_precision": 6251.751,
+        "reference_full_precision": 6251.751,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "rahmaniani2022",
+        "experiment_id": "3c8aba01-c687-456c-963a-774c52bb7906",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "c9c5f836a21fbf569925b73c7b215aa5823028fa0fa2c46dd84f904cdd985046",
+        "candidate_full_precision": 10791723615.346888,
+        "reference_full_precision": 9638644595.031485,
+        "signed_gap_full_precision": 0.11963082661122193
+      },
+      {
+        "task": "reihaneh2019",
+        "experiment_id": "0d731a93-d0f9-470a-a00b-fbe59a15a122",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "3f180a63ace77193f68914eaf9d43e62f60f855ebc5a72c67660bc7db5ea2a56",
+        "candidate_full_precision": 534.0064,
+        "reference_full_precision": 534.0064,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "reinhardt2016",
+        "experiment_id": "360dfe02-6666-4759-8740-400e3044d4d1",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "cc8671dea3fbc3c49812ae9b614e300a315d21a193a5cea676a5d89a37a4825d",
+        "candidate_full_precision": 369.3,
+        "reference_full_precision": 369.29999999999995,
+        "signed_gap_full_precision": 1.5392206569403743e-16
+      },
+      {
+        "task": "ribeiro1994",
+        "experiment_id": "87b4232c-7fab-4312-9c57-b91279026e32",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "630ba337d95ddc77e762c5a69f818fc74358ad6080113e39bb602e20d0fb3e2c",
+        "candidate_full_precision": 110314,
+        "reference_full_precision": 110314.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "riley2025",
+        "experiment_id": "3ce19d4a-cf20-46a3-a6d3-91960c3e4921",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "928524526508457636f78e59534da157dd003e7bd68bef9fe57c7d13bab05246",
+        "candidate_full_precision": 367596.5481017363,
+        "reference_full_precision": 367596.5481017368,
+        "signed_gap_full_precision": -1.4251193351147018e-15
+      },
+      {
+        "task": "roberti2015",
+        "experiment_id": "ba6a6bbf-9f47-41d4-874e-6f229b6497d0",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "b14a810f71b2af39a62b3112d13bd10d677f3e1d4ccd9d0ccd08a973f07de16b",
+        "candidate_full_precision": 4959.0,
+        "reference_full_precision": 4959.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "roberti2018",
+        "experiment_id": "388d919f-52fe-4b7a-9b57-9adbed998d18",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "fbe6bd1a7921b18b4579f6a7e0d3c130ac67bda2ce9e27d04e84e44e10007668",
+        "candidate_full_precision": 839.9422924874023,
+        "reference_full_precision": 839.9422924874023,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "roberti2021",
+        "experiment_id": "f4b1a111-1d85-489e-a5d0-96c476f991e5",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "634164773e87c293e5bb69dc1180476629c1d8587d80db8cad276e9c98a36399",
+        "candidate_full_precision": 93.0,
+        "reference_full_precision": 93.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "ropke2009",
+        "experiment_id": "c590d39a-d76c-42a5-af7a-37b442b9c9f9",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "3947ccc46db6bd0e111cbe6345bf200a825b8ecbe98959f02f0c4f56714ce402",
+        "candidate_full_precision": 485.5779854924557,
+        "reference_full_precision": 485.5779854924557,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "roshanaei2017",
+        "experiment_id": "4c80fbda-00df-42aa-a21b-069fbb24d7fa",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "8a4a7cc288375ff7f997e3d9319e36deeb17c9a1d5265ae2af28c15a97196009",
+        "candidate_full_precision": 4435.474766666666,
+        "reference_full_precision": 4435.474766666668,
+        "signed_gap_full_precision": -4.1010027093736727e-16
+      },
+      {
+        "task": "rostami2021",
+        "experiment_id": "4bada54b-fcee-4f0d-bdd5-c72ba338d77c",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "f18ddac41c6b430e492c4fd8f200c22fb8627d428df0144f22cffb98e3ebc7f9",
+        "candidate_full_precision": 2032.9899999999998,
+        "reference_full_precision": 2032.9900000000002,
+        "signed_gap_full_precision": -2.236840077356328e-16
+      },
+      {
+        "task": "rothenbacher2018",
+        "experiment_id": "05d5d78c-6d88-4782-ab6e-98ac2b81929d",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "6efdb39ab8d241e8b9559fb5dde20d26cb25f30e1f348abcf7125bb0cdca84e1",
+        "candidate_full_precision": 345.84599999999995,
+        "reference_full_precision": 345.846,
+        "signed_gap_full_precision": -1.643604924180358e-16
+      },
+      {
+        "task": "rothenbacher2019",
+        "experiment_id": "8f77f435-663e-4db8-a837-0fe284f125a7",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "ee7cc000ac388cc1d89978b72558dae3631211d416bb3b37cd64ac5aeb94014f",
+        "candidate_full_precision": 1072.0332108486161,
+        "reference_full_precision": 1072.033210848616,
+        "signed_gap_full_precision": 2.1209573839904105e-16
+      },
+      {
+        "task": "ruiz2007",
+        "experiment_id": "ffb621ce-911c-410e-8cb7-e0b0dd8ca4fd",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "d381936d2596ad186efd056970a3bc4410a2cb4ea6d4cbaa832394f7d1f8ccfb",
+        "candidate_full_precision": 1097,
+        "reference_full_precision": 1097.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "sadykov2013",
+        "experiment_id": "d4310ecc-28b8-4031-966a-aee80699f818",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "9130923a5398100c014a7e4eda7f71623ef78c7e74eaa39ef37f7e94ed500b88",
+        "candidate_full_precision": 23,
+        "reference_full_precision": 23.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "salemi2022",
+        "experiment_id": "5c9bbae6-971e-4315-85f6-57b888f86ecc",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "4aebcf3a888f889b595d4abe4164c002559ffa1e157415c9efc00755899a95a6",
+        "candidate_full_precision": 457723.21008200006,
+        "reference_full_precision": 457720.7146759997,
+        "signed_gap_full_precision": 5.451809193554754e-06
+      },
+      {
+        "task": "samarghandi2017",
+        "experiment_id": "9dc5e057-b36a-4552-8be7-4ab9efa3f574",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "ff42ea3408af59dc0fc8c49c5502417d70523fb252b4d5b58655b3b0906ee8ea",
+        "candidate_full_precision": 683,
+        "reference_full_precision": 683.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "sansegundo2016",
+        "experiment_id": "e6702d49-abee-4fdb-9178-556f5cbcd0f2",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "7988ce58893d21caec9583a2d8ee9c55bd3bf35932e9fca8aeb048ba655e8cfb",
+        "candidate_full_precision": 4,
+        "reference_full_precision": 4.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "sansegundo2023",
+        "experiment_id": "41936498-9be0-43fb-a4b6-6f8590266982",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "7b03330493ee69f171c53dafcac9e7b8105458369537419733024b6c7ff72b22",
+        "candidate_full_precision": 17,
+        "reference_full_precision": 17.0,
+        "signed_gap_full_precision": 0.0
+      },
+      {
+        "task": "savelsbergh1997",
+        "experiment_id": "8c197945-b0e6-4fe5-b988-d5ee7c08b5b6",
+        "readback_verified": true,
+        "evaluated_primary_code_sha256": "5e6feffaa57681955abb61ce7a2e7b1b17aef8dbd2b1ab84372f1bd22051fd3b",
+        "candidate_full_precision": 374,
+        "reference_full_precision": 374.0,
+        "signed_gap_full_precision": 0.0
+      }
+    ],
+    "energy2018_conclusion": "Primary six-hour restricted candidate published no witness; original-instance infeasibility not claimed. Specific binding policy restriction unknown without archived numeric optimizer status. Root-authorized same-policy LIVE diagnostic ready; no3h edits or worker solver execution.",
+    "energy2022_conclusion": "Checker feasible10791723615.346888 vs9638644595.031485; gap0.11963082661122193; own baseline reduction0.1142712430205174; fails10percent gate.",
+    "qualifications": [
+      "No hardened AOCC or matched-hardware QTE certification",
+      "Intermediate snapshot presence verified, not independent checker replay of every incumbent",
+      "Earlier measured runs retained with immutable evaluated source hashes",
+      "No original-instance infeasibility or license failure inferred from Rahmaniani2018 no-witness error",
+      "Rahmaniani2018 live diagnostic differs from immutable primary only in telemetry; primary outcome retains evaluated hash974bd301e5fe92a10b7830be1b655e8152ba646ae47cb74f83ddae07583b59ac"
+    ]
+  }
+}

@@ -1,0 +1,605 @@
+{
+  "instance_name": "instance_1",
+  "problem_type": "QSTP",
+  "description": "Quota Steiner Tree Problem instance with 10 potential turbines, 2 substations, 0 Steiner nodes. Topology: no Steiner (paper topology 1). Area: 10.0 km x 10.0 km.",
+  "parameters": {
+    "num_potential_turbines": 10,
+    "num_substations": 2,
+    "num_steiner_nodes": 0,
+    "total_nodes": 12,
+    "total_edges": 66,
+    "quota": 30.76,
+    "total_available_profit": 61.51,
+    "quota_fraction": 0.5,
+    "alpha": 1.0,
+    "area_width_km": 10.0,
+    "area_height_km": 10.0,
+    "topology": "no_steiner",
+    "cable_cost_per_km": 1.0,
+    "scenic_quality_range": [
+      1,
+      9
+    ],
+    "seed": 42
+  },
+  "objective": {
+    "description": "C_bar(S) = alpha * C(S) + (1-alpha) * L(S)",
+    "alpha": 1.0,
+    "C_description": "sum of edge costs + sum of turbine installation costs for selected turbines",
+    "L_description": "sum of edge scenic impacts + sum of turbine scenic impacts for selected turbines"
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "type": "substation",
+      "x": 2.7047,
+      "y": 3.3528,
+      "cost": 0.0,
+      "profit": 0.0,
+      "scenic_impact": 0.0
+    },
+    {
+      "id": 1,
+      "type": "substation",
+      "x": 7.2385,
+      "y": 5.7824,
+      "cost": 0.0,
+      "profit": 0.0,
+      "scenic_impact": 0.0
+    },
+    {
+      "id": 2,
+      "type": "potential_turbine",
+      "x": 3.036,
+      "y": 2.8376,
+      "cost": 9.17,
+      "profit": 4.27,
+      "scenic_impact": 6.0
+    },
+    {
+      "id": 3,
+      "type": "potential_turbine",
+      "x": 5.5119,
+      "y": 2.0706,
+      "cost": 14.38,
+      "profit": 4.83,
+      "scenic_impact": 5.0
+    },
+    {
+      "id": 4,
+      "type": "potential_turbine",
+      "x": 5.6477,
+      "y": 0.0,
+      "cost": 13.63,
+      "profit": 9.1,
+      "scenic_impact": 4.0
+    },
+    {
+      "id": 5,
+      "type": "potential_turbine",
+      "x": 3.7421,
+      "y": 0.0,
+      "cost": 13.79,
+      "profit": 5.8,
+      "scenic_impact": 3.0
+    },
+    {
+      "id": 6,
+      "type": "potential_turbine",
+      "x": 8.5233,
+      "y": 0.0,
+      "cost": 5.98,
+      "profit": 7.6,
+      "scenic_impact": 8.0
+    },
+    {
+      "id": 7,
+      "type": "potential_turbine",
+      "x": 0.0,
+      "y": 0.0,
+      "cost": 14.73,
+      "profit": 6.66,
+      "scenic_impact": 5.0
+    },
+    {
+      "id": 8,
+      "type": "potential_turbine",
+      "x": 1.8328,
+      "y": 2.2532,
+      "cost": 10.97,
+      "profit": 5.49,
+      "scenic_impact": 5.0
+    },
+    {
+      "id": 9,
+      "type": "potential_turbine",
+      "x": 2.1871,
+      "y": 4.7404,
+      "cost": 10.98,
+      "profit": 6.55,
+      "scenic_impact": 2.0
+    },
+    {
+      "id": 10,
+      "type": "potential_turbine",
+      "x": 0.0,
+      "y": 1.8951,
+      "cost": 12.05,
+      "profit": 7.49,
+      "scenic_impact": 6.0
+    },
+    {
+      "id": 11,
+      "type": "potential_turbine",
+      "x": 3.3499,
+      "y": 5.3789,
+      "cost": 11.58,
+      "profit": 3.72,
+      "scenic_impact": 7.0
+    }
+  ],
+  "edges": [
+    {
+      "id": 0,
+      "from": 0,
+      "to": 1,
+      "cost": 0.0,
+      "scenic_impact": 0.0
+    },
+    {
+      "id": 1,
+      "from": 0,
+      "to": 2,
+      "cost": 0.6125,
+      "scenic_impact": 2.7564
+    },
+    {
+      "id": 2,
+      "from": 0,
+      "to": 3,
+      "cost": 3.0862,
+      "scenic_impact": 12.3447
+    },
+    {
+      "id": 3,
+      "from": 0,
+      "to": 4,
+      "cost": 4.4612,
+      "scenic_impact": 20.0755
+    },
+    {
+      "id": 4,
+      "from": 0,
+      "to": 5,
+      "cost": 3.5096,
+      "scenic_impact": 12.2837
+    },
+    {
+      "id": 5,
+      "from": 0,
+      "to": 6,
+      "cost": 6.7155,
+      "scenic_impact": 47.0082
+    },
+    {
+      "id": 6,
+      "from": 0,
+      "to": 7,
+      "cost": 4.3077,
+      "scenic_impact": 19.3849
+    },
+    {
+      "id": 7,
+      "from": 0,
+      "to": 8,
+      "cost": 1.4033,
+      "scenic_impact": 6.315
+    },
+    {
+      "id": 8,
+      "from": 0,
+      "to": 9,
+      "cost": 1.481,
+      "scenic_impact": 4.443
+    },
+    {
+      "id": 9,
+      "from": 0,
+      "to": 10,
+      "cost": 3.0725,
+      "scenic_impact": 13.8263
+    },
+    {
+      "id": 10,
+      "from": 0,
+      "to": 11,
+      "cost": 2.1263,
+      "scenic_impact": 10.6317
+    },
+    {
+      "id": 11,
+      "from": 1,
+      "to": 2,
+      "cost": 5.1316,
+      "scenic_impact": 30.7893
+    },
+    {
+      "id": 12,
+      "from": 1,
+      "to": 3,
+      "cost": 4.0937,
+      "scenic_impact": 22.5155
+    },
+    {
+      "id": 13,
+      "from": 1,
+      "to": 4,
+      "cost": 5.9972,
+      "scenic_impact": 29.9862
+    },
+    {
+      "id": 14,
+      "from": 1,
+      "to": 5,
+      "cost": 6.7573,
+      "scenic_impact": 33.7864
+    },
+    {
+      "id": 15,
+      "from": 1,
+      "to": 6,
+      "cost": 5.9234,
+      "scenic_impact": 41.4639
+    },
+    {
+      "id": 16,
+      "from": 1,
+      "to": 7,
+      "cost": 9.2646,
+      "scenic_impact": 41.6905
+    },
+    {
+      "id": 17,
+      "from": 1,
+      "to": 8,
+      "cost": 6.4558,
+      "scenic_impact": 35.5067
+    },
+    {
+      "id": 18,
+      "from": 1,
+      "to": 9,
+      "cost": 5.1578,
+      "scenic_impact": 18.0521
+    },
+    {
+      "id": 19,
+      "from": 1,
+      "to": 10,
+      "cost": 8.2163,
+      "scenic_impact": 49.2976
+    },
+    {
+      "id": 20,
+      "from": 1,
+      "to": 11,
+      "cost": 3.9095,
+      "scenic_impact": 23.4569
+    },
+    {
+      "id": 21,
+      "from": 2,
+      "to": 3,
+      "cost": 2.592,
+      "scenic_impact": 11.6639
+    },
+    {
+      "id": 22,
+      "from": 2,
+      "to": 4,
+      "cost": 3.8565,
+      "scenic_impact": 15.4262
+    },
+    {
+      "id": 23,
+      "from": 2,
+      "to": 5,
+      "cost": 2.9241,
+      "scenic_impact": 13.1586
+    },
+    {
+      "id": 24,
+      "from": 2,
+      "to": 6,
+      "cost": 6.1776,
+      "scenic_impact": 37.0655
+    },
+    {
+      "id": 25,
+      "from": 2,
+      "to": 7,
+      "cost": 4.1556,
+      "scenic_impact": 16.6225
+    },
+    {
+      "id": 26,
+      "from": 2,
+      "to": 8,
+      "cost": 1.3376,
+      "scenic_impact": 8.0257
+    },
+    {
+      "id": 27,
+      "from": 2,
+      "to": 9,
+      "cost": 2.0836,
+      "scenic_impact": 8.3343
+    },
+    {
+      "id": 28,
+      "from": 2,
+      "to": 10,
+      "cost": 3.1789,
+      "scenic_impact": 17.4841
+    },
+    {
+      "id": 29,
+      "from": 2,
+      "to": 11,
+      "cost": 2.5606,
+      "scenic_impact": 15.3637
+    },
+    {
+      "id": 30,
+      "from": 3,
+      "to": 4,
+      "cost": 2.075,
+      "scenic_impact": 8.3002
+    },
+    {
+      "id": 31,
+      "from": 3,
+      "to": 5,
+      "cost": 2.7239,
+      "scenic_impact": 9.5336
+    },
+    {
+      "id": 32,
+      "from": 3,
+      "to": 6,
+      "cost": 3.6546,
+      "scenic_impact": 21.9274
+    },
+    {
+      "id": 33,
+      "from": 3,
+      "to": 7,
+      "cost": 5.888,
+      "scenic_impact": 29.4399
+    },
+    {
+      "id": 34,
+      "from": 3,
+      "to": 8,
+      "cost": 3.6836,
+      "scenic_impact": 18.4181
+    },
+    {
+      "id": 35,
+      "from": 3,
+      "to": 9,
+      "cost": 4.2641,
+      "scenic_impact": 12.7922
+    },
+    {
+      "id": 36,
+      "from": 3,
+      "to": 10,
+      "cost": 5.5147,
+      "scenic_impact": 24.8161
+    },
+    {
+      "id": 37,
+      "from": 3,
+      "to": 11,
+      "cost": 3.9521,
+      "scenic_impact": 17.7844
+    },
+    {
+      "id": 38,
+      "from": 4,
+      "to": 5,
+      "cost": 1.9056,
+      "scenic_impact": 6.6696
+    },
+    {
+      "id": 39,
+      "from": 4,
+      "to": 6,
+      "cost": 2.8756,
+      "scenic_impact": 17.2536
+    },
+    {
+      "id": 40,
+      "from": 4,
+      "to": 7,
+      "cost": 5.6477,
+      "scenic_impact": 22.5908
+    },
+    {
+      "id": 41,
+      "from": 4,
+      "to": 8,
+      "cost": 4.4306,
+      "scenic_impact": 24.3684
+    },
+    {
+      "id": 42,
+      "from": 4,
+      "to": 9,
+      "cost": 5.8692,
+      "scenic_impact": 23.4767
+    },
+    {
+      "id": 43,
+      "from": 4,
+      "to": 10,
+      "cost": 5.9572,
+      "scenic_impact": 29.7859
+    },
+    {
+      "id": 44,
+      "from": 4,
+      "to": 11,
+      "cost": 5.8491,
+      "scenic_impact": 26.3211
+    },
+    {
+      "id": 45,
+      "from": 5,
+      "to": 6,
+      "cost": 4.7812,
+      "scenic_impact": 31.0778
+    },
+    {
+      "id": 46,
+      "from": 5,
+      "to": 7,
+      "cost": 3.7421,
+      "scenic_impact": 13.0974
+    },
+    {
+      "id": 47,
+      "from": 5,
+      "to": 8,
+      "cost": 2.9534,
+      "scenic_impact": 13.2901
+    },
+    {
+      "id": 48,
+      "from": 5,
+      "to": 9,
+      "cost": 4.9889,
+      "scenic_impact": 17.4613
+    },
+    {
+      "id": 49,
+      "from": 5,
+      "to": 10,
+      "cost": 4.1946,
+      "scenic_impact": 18.8757
+    },
+    {
+      "id": 50,
+      "from": 5,
+      "to": 11,
+      "cost": 5.3932,
+      "scenic_impact": 26.9659
+    },
+    {
+      "id": 51,
+      "from": 6,
+      "to": 7,
+      "cost": 8.5233,
+      "scenic_impact": 59.6631
+    },
+    {
+      "id": 52,
+      "from": 6,
+      "to": 8,
+      "cost": 7.0597,
+      "scenic_impact": 45.8882
+    },
+    {
+      "id": 53,
+      "from": 6,
+      "to": 9,
+      "cost": 7.9132,
+      "scenic_impact": 39.566
+    },
+    {
+      "id": 54,
+      "from": 6,
+      "to": 10,
+      "cost": 8.7314,
+      "scenic_impact": 52.3886
+    },
+    {
+      "id": 55,
+      "from": 6,
+      "to": 11,
+      "cost": 7.463,
+      "scenic_impact": 52.2411
+    },
+    {
+      "id": 56,
+      "from": 7,
+      "to": 8,
+      "cost": 2.9045,
+      "scenic_impact": 17.4269
+    },
+    {
+      "id": 57,
+      "from": 7,
+      "to": 9,
+      "cost": 5.2206,
+      "scenic_impact": 20.8825
+    },
+    {
+      "id": 58,
+      "from": 7,
+      "to": 10,
+      "cost": 1.8951,
+      "scenic_impact": 10.423
+    },
+    {
+      "id": 59,
+      "from": 7,
+      "to": 11,
+      "cost": 6.3367,
+      "scenic_impact": 41.1889
+    },
+    {
+      "id": 60,
+      "from": 8,
+      "to": 9,
+      "cost": 2.5123,
+      "scenic_impact": 7.5369
+    },
+    {
+      "id": 61,
+      "from": 8,
+      "to": 10,
+      "cost": 1.8675,
+      "scenic_impact": 10.271
+    },
+    {
+      "id": 62,
+      "from": 8,
+      "to": 11,
+      "cost": 3.4744,
+      "scenic_impact": 22.5837
+    },
+    {
+      "id": 63,
+      "from": 9,
+      "to": 10,
+      "cost": 3.5888,
+      "scenic_impact": 10.7663
+    },
+    {
+      "id": 64,
+      "from": 9,
+      "to": 11,
+      "cost": 1.3266,
+      "scenic_impact": 5.3063
+    },
+    {
+      "id": 65,
+      "from": 10,
+      "to": 11,
+      "cost": 4.8331,
+      "scenic_impact": 28.9985
+    }
+  ]
+}

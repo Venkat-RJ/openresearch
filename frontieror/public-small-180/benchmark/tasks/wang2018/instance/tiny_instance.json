@@ -1,0 +1,1061 @@
+{
+  "instance_id": 1,
+  "problem_name": "Integrated Berth Allocation, QC Assignment, and Yard Assignment",
+  "num_vessels": 15,
+  "num_berths": 2,
+  "num_QCs": 5,
+  "num_subblocks": 80,
+  "H": 42,
+  "E": 6,
+  "time_step_duration_hours": 4,
+  "QC_handling_speed_containers_per_hour": 30,
+  "containers_per_QC_timestep": 120,
+  "penalty_cost_coefficient_co": 5e-06,
+  "QC_capacity_per_timestep": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "loading_route_lengths_D_L": [
+    [
+      315.0,
+      815.0
+    ],
+    [
+      265.0,
+      765.0
+    ],
+    [
+      215.0,
+      715.0
+    ],
+    [
+      165.0,
+      665.0
+    ],
+    [
+      115.0,
+      615.0
+    ],
+    [
+      95.0,
+      565.0
+    ],
+    [
+      145.0,
+      515.0
+    ],
+    [
+      195.0,
+      465.0
+    ],
+    [
+      245.0,
+      415.0
+    ],
+    [
+      295.0,
+      365.0
+    ],
+    [
+      395.0,
+      895.0
+    ],
+    [
+      345.0,
+      845.0
+    ],
+    [
+      295.0,
+      795.0
+    ],
+    [
+      245.0,
+      745.0
+    ],
+    [
+      195.0,
+      695.0
+    ],
+    [
+      175.0,
+      645.0
+    ],
+    [
+      225.0,
+      595.0
+    ],
+    [
+      275.0,
+      545.0
+    ],
+    [
+      325.0,
+      495.0
+    ],
+    [
+      375.0,
+      445.0
+    ],
+    [
+      475.0,
+      975.0
+    ],
+    [
+      425.0,
+      925.0
+    ],
+    [
+      375.0,
+      875.0
+    ],
+    [
+      325.0,
+      825.0
+    ],
+    [
+      275.0,
+      775.0
+    ],
+    [
+      255.0,
+      725.0
+    ],
+    [
+      305.0,
+      675.0
+    ],
+    [
+      355.0,
+      625.0
+    ],
+    [
+      405.0,
+      575.0
+    ],
+    [
+      455.0,
+      525.0
+    ],
+    [
+      555.0,
+      1055.0
+    ],
+    [
+      505.0,
+      1005.0
+    ],
+    [
+      455.0,
+      955.0
+    ],
+    [
+      405.0,
+      905.0
+    ],
+    [
+      355.0,
+      855.0
+    ],
+    [
+      335.0,
+      805.0
+    ],
+    [
+      385.0,
+      755.0
+    ],
+    [
+      435.0,
+      705.0
+    ],
+    [
+      485.0,
+      655.0
+    ],
+    [
+      535.0,
+      605.0
+    ],
+    [
+      635.0,
+      1135.0
+    ],
+    [
+      585.0,
+      1085.0
+    ],
+    [
+      535.0,
+      1035.0
+    ],
+    [
+      485.0,
+      985.0
+    ],
+    [
+      435.0,
+      935.0
+    ],
+    [
+      415.0,
+      885.0
+    ],
+    [
+      465.0,
+      835.0
+    ],
+    [
+      515.0,
+      785.0
+    ],
+    [
+      565.0,
+      735.0
+    ],
+    [
+      615.0,
+      685.0
+    ],
+    [
+      715.0,
+      1215.0
+    ],
+    [
+      665.0,
+      1165.0
+    ],
+    [
+      615.0,
+      1115.0
+    ],
+    [
+      565.0,
+      1065.0
+    ],
+    [
+      515.0,
+      1015.0
+    ],
+    [
+      495.0,
+      965.0
+    ],
+    [
+      545.0,
+      915.0
+    ],
+    [
+      595.0,
+      865.0
+    ],
+    [
+      645.0,
+      815.0
+    ],
+    [
+      695.0,
+      765.0
+    ],
+    [
+      795.0,
+      1295.0
+    ],
+    [
+      745.0,
+      1245.0
+    ],
+    [
+      695.0,
+      1195.0
+    ],
+    [
+      645.0,
+      1145.0
+    ],
+    [
+      595.0,
+      1095.0
+    ],
+    [
+      575.0,
+      1045.0
+    ],
+    [
+      625.0,
+      995.0
+    ],
+    [
+      675.0,
+      945.0
+    ],
+    [
+      725.0,
+      895.0
+    ],
+    [
+      775.0,
+      845.0
+    ],
+    [
+      875.0,
+      1375.0
+    ],
+    [
+      825.0,
+      1325.0
+    ],
+    [
+      775.0,
+      1275.0
+    ],
+    [
+      725.0,
+      1225.0
+    ],
+    [
+      675.0,
+      1175.0
+    ],
+    [
+      655.0,
+      1125.0
+    ],
+    [
+      705.0,
+      1075.0
+    ],
+    [
+      755.0,
+      1025.0
+    ],
+    [
+      805.0,
+      975.0
+    ],
+    [
+      855.0,
+      925.0
+    ]
+  ],
+  "average_unloading_route_lengths_D_U": [
+    485.0,
+    870.0
+  ],
+  "vessels": [
+    {
+      "vessel_id": 1,
+      "vessel_class": "feeder",
+      "workload_QC_timesteps": 2,
+      "total_containers": 240,
+      "loading_containers": 125,
+      "unloading_containers": 115,
+      "reserved_subblocks": 3,
+      "penalty_cost_coefficient": 6,
+      "feasible_time_window": [
+        26,
+        30
+      ],
+      "expected_time_window": [
+        27,
+        30
+      ],
+      "z_min_QC": 1,
+      "z_max_QC": 3,
+      "qc_profiles": [
+        {
+          "handling_time": 2,
+          "qc_per_timestep": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 2,
+      "vessel_class": "medium",
+      "workload_QC_timesteps": 10,
+      "total_containers": 1200,
+      "loading_containers": 563,
+      "unloading_containers": 637,
+      "reserved_subblocks": 6,
+      "penalty_cost_coefficient": 7,
+      "feasible_time_window": [
+        8,
+        17
+      ],
+      "expected_time_window": [
+        9,
+        16
+      ],
+      "z_min_QC": 2,
+      "z_max_QC": 4,
+      "qc_profiles": [
+        {
+          "handling_time": 3,
+          "qc_per_timestep": [
+            4,
+            4,
+            2
+          ]
+        },
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            4,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "handling_time": 5,
+          "qc_per_timestep": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 3,
+      "vessel_class": "jumbo",
+      "workload_QC_timesteps": 18,
+      "total_containers": 2160,
+      "loading_containers": 975,
+      "unloading_containers": 1185,
+      "reserved_subblocks": 8,
+      "penalty_cost_coefficient": 11,
+      "feasible_time_window": [
+        33,
+        42
+      ],
+      "expected_time_window": [
+        34,
+        41
+      ],
+      "z_min_QC": 3,
+      "z_max_QC": 5,
+      "qc_profiles": [
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            5,
+            5,
+            5,
+            3
+          ]
+        },
+        {
+          "handling_time": 5,
+          "qc_per_timestep": [
+            5,
+            4,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "handling_time": 6,
+          "qc_per_timestep": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 4,
+      "vessel_class": "feeder",
+      "workload_QC_timesteps": 4,
+      "total_containers": 480,
+      "loading_containers": 273,
+      "unloading_containers": 207,
+      "reserved_subblocks": 2,
+      "penalty_cost_coefficient": 4,
+      "feasible_time_window": [
+        10,
+        19
+      ],
+      "expected_time_window": [
+        12,
+        16
+      ],
+      "z_min_QC": 1,
+      "z_max_QC": 3,
+      "qc_profiles": [
+        {
+          "handling_time": 2,
+          "qc_per_timestep": [
+            3,
+            1
+          ]
+        },
+        {
+          "handling_time": 3,
+          "qc_per_timestep": [
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 5,
+      "vessel_class": "feeder",
+      "workload_QC_timesteps": 4,
+      "total_containers": 480,
+      "loading_containers": 259,
+      "unloading_containers": 221,
+      "reserved_subblocks": 2,
+      "penalty_cost_coefficient": 5,
+      "feasible_time_window": [
+        32,
+        38
+      ],
+      "expected_time_window": [
+        33,
+        38
+      ],
+      "z_min_QC": 1,
+      "z_max_QC": 3,
+      "qc_profiles": [
+        {
+          "handling_time": 2,
+          "qc_per_timestep": [
+            3,
+            1
+          ]
+        },
+        {
+          "handling_time": 3,
+          "qc_per_timestep": [
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 6,
+      "vessel_class": "jumbo",
+      "workload_QC_timesteps": 17,
+      "total_containers": 2040,
+      "loading_containers": 1183,
+      "unloading_containers": 857,
+      "reserved_subblocks": 8,
+      "penalty_cost_coefficient": 11,
+      "feasible_time_window": [
+        30,
+        40
+      ],
+      "expected_time_window": [
+        31,
+        38
+      ],
+      "z_min_QC": 3,
+      "z_max_QC": 5,
+      "qc_profiles": [
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            5,
+            5,
+            4,
+            3
+          ]
+        },
+        {
+          "handling_time": 5,
+          "qc_per_timestep": [
+            5,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 7,
+      "vessel_class": "feeder",
+      "workload_QC_timesteps": 5,
+      "total_containers": 600,
+      "loading_containers": 332,
+      "unloading_containers": 268,
+      "reserved_subblocks": 2,
+      "penalty_cost_coefficient": 2,
+      "feasible_time_window": [
+        14,
+        23
+      ],
+      "expected_time_window": [
+        17,
+        20
+      ],
+      "z_min_QC": 1,
+      "z_max_QC": 3,
+      "qc_profiles": [
+        {
+          "handling_time": 2,
+          "qc_per_timestep": [
+            3,
+            2
+          ]
+        },
+        {
+          "handling_time": 3,
+          "qc_per_timestep": [
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            2,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 8,
+      "vessel_class": "medium",
+      "workload_QC_timesteps": 12,
+      "total_containers": 1440,
+      "loading_containers": 639,
+      "unloading_containers": 801,
+      "reserved_subblocks": 4,
+      "penalty_cost_coefficient": 10,
+      "feasible_time_window": [
+        17,
+        26
+      ],
+      "expected_time_window": [
+        19,
+        25
+      ],
+      "z_min_QC": 2,
+      "z_max_QC": 4,
+      "qc_profiles": [
+        {
+          "handling_time": 3,
+          "qc_per_timestep": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            4,
+            4,
+            2,
+            2
+          ]
+        },
+        {
+          "handling_time": 5,
+          "qc_per_timestep": [
+            4,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 9,
+      "vessel_class": "jumbo",
+      "workload_QC_timesteps": 20,
+      "total_containers": 2400,
+      "loading_containers": 1294,
+      "unloading_containers": 1106,
+      "reserved_subblocks": 8,
+      "penalty_cost_coefficient": 12,
+      "feasible_time_window": [
+        5,
+        14
+      ],
+      "expected_time_window": [
+        6,
+        13
+      ],
+      "z_min_QC": 3,
+      "z_max_QC": 5,
+      "qc_profiles": [
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "handling_time": 5,
+          "qc_per_timestep": [
+            5,
+            5,
+            4,
+            3,
+            3
+          ]
+        },
+        {
+          "handling_time": 6,
+          "qc_per_timestep": [
+            5,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 10,
+      "vessel_class": "jumbo",
+      "workload_QC_timesteps": 19,
+      "total_containers": 2280,
+      "loading_containers": 1217,
+      "unloading_containers": 1063,
+      "reserved_subblocks": 9,
+      "penalty_cost_coefficient": 14,
+      "feasible_time_window": [
+        1,
+        8
+      ],
+      "expected_time_window": [
+        2,
+        7
+      ],
+      "z_min_QC": 3,
+      "z_max_QC": 5,
+      "qc_profiles": [
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            5,
+            5,
+            5,
+            4
+          ]
+        },
+        {
+          "handling_time": 5,
+          "qc_per_timestep": [
+            5,
+            5,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "handling_time": 6,
+          "qc_per_timestep": [
+            4,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 11,
+      "vessel_class": "medium",
+      "workload_QC_timesteps": 11,
+      "total_containers": 1320,
+      "loading_containers": 584,
+      "unloading_containers": 736,
+      "reserved_subblocks": 4,
+      "penalty_cost_coefficient": 8,
+      "feasible_time_window": [
+        11,
+        20
+      ],
+      "expected_time_window": [
+        12,
+        19
+      ],
+      "z_min_QC": 2,
+      "z_max_QC": 4,
+      "qc_profiles": [
+        {
+          "handling_time": 3,
+          "qc_per_timestep": [
+            4,
+            4,
+            3
+          ]
+        },
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            4,
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "handling_time": 5,
+          "qc_per_timestep": [
+            3,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 12,
+      "vessel_class": "jumbo",
+      "workload_QC_timesteps": 17,
+      "total_containers": 2040,
+      "loading_containers": 1193,
+      "unloading_containers": 847,
+      "reserved_subblocks": 9,
+      "penalty_cost_coefficient": 10,
+      "feasible_time_window": [
+        2,
+        8
+      ],
+      "expected_time_window": [
+        2,
+        7
+      ],
+      "z_min_QC": 3,
+      "z_max_QC": 5,
+      "qc_profiles": [
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            5,
+            5,
+            4,
+            3
+          ]
+        },
+        {
+          "handling_time": 5,
+          "qc_per_timestep": [
+            5,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 13,
+      "vessel_class": "medium",
+      "workload_QC_timesteps": 13,
+      "total_containers": 1560,
+      "loading_containers": 722,
+      "unloading_containers": 838,
+      "reserved_subblocks": 6,
+      "penalty_cost_coefficient": 8,
+      "feasible_time_window": [
+        30,
+        37
+      ],
+      "expected_time_window": [
+        30,
+        36
+      ],
+      "z_min_QC": 2,
+      "z_max_QC": 4,
+      "qc_profiles": [
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            4,
+            4,
+            3,
+            2
+          ]
+        },
+        {
+          "handling_time": 5,
+          "qc_per_timestep": [
+            4,
+            3,
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 14,
+      "vessel_class": "feeder",
+      "workload_QC_timesteps": 4,
+      "total_containers": 480,
+      "loading_containers": 237,
+      "unloading_containers": 243,
+      "reserved_subblocks": 2,
+      "penalty_cost_coefficient": 6,
+      "feasible_time_window": [
+        12,
+        17
+      ],
+      "expected_time_window": [
+        12,
+        16
+      ],
+      "z_min_QC": 1,
+      "z_max_QC": 3,
+      "qc_profiles": [
+        {
+          "handling_time": 2,
+          "qc_per_timestep": [
+            3,
+            1
+          ]
+        },
+        {
+          "handling_time": 3,
+          "qc_per_timestep": [
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "handling_time": 4,
+          "qc_per_timestep": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "vessel_id": 15,
+      "vessel_class": "medium",
+      "workload_QC_timesteps": 6,
+      "total_containers": 720,
+      "loading_containers": 303,
+      "unloading_containers": 417,
+      "reserved_subblocks": 7,
+      "penalty_cost_coefficient": 6,
+      "feasible_time_window": [
+        15,
+        23
+      ],
+      "expected_time_window": [
+        17,
+        23
+      ],
+      "z_min_QC": 2,
+      "z_max_QC": 4,
+      "qc_profiles": [
+        {
+          "handling_time": 3,
+          "qc_per_timestep": [
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    }
+  ]
+}

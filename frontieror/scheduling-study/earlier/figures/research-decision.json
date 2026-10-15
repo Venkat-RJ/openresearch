@@ -1,0 +1,519 @@
+{
+  "scope": "Completed development decision, condensed from recorded hypotheses, source identities and outcomes. No unrecorded internal reasoning.",
+  "experiment": "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+  "decision": "73b95dd4-3437-4ce9-bf71-00139315f2b7",
+  "repetition": "16ee170b-9e44-4f40-8710-ba553db28de8",
+  "subsequent_decision": "112286f2-4ab7-49d0-8765-04b72fb2b5b1",
+  "source_sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+  "codechange_id": "3320aab5-d27f-4d1a-a8dc-d8999b7146ca",
+  "hypothesis": "Move beyond time scaling. v1 rebuilds every machine arc for every neighbor and uses only dispatch-generated elites. v2 updates links only on the moved row, memoized DFS computes exact earliest starts with cycle detection and safe nonnegative tardiness partial-sum cutoffs, fixes aspiration ordering, randomizes machine traversal, and learns diverse local-search elites for restarts. Same weighted tardiness objective and tiny-flow tie break. Adaptation of generic critical-path tabu and elite diversification ideas, not a reproduction of published GRASP or shifting bottleneck. Equal-budget comparison to v1 at 300s on public inspected cases, then cross-seed confirmation.",
+  "decision_text": "v2 valid on all six cases including tiny2197. At equal300s seed0 one worker v2 improves every large case over v1: 30579 vs31807,29196 vs29340,30217 vs31041,30915 vs31467,26967 vs28252. It beats4/5 published references, missing large4 by513 (1.687%). Actual elapsed large cases299.869-299.893s; tiny300.446s includes setup. Compound evaluation supports combined changes only; cannot identify pruning versus diversification contribution. Best new record large2=29196, not best-known claim.\nNext: Confirm frozen v2 at300s seed1 across all five cases, paired with prior v1 seed1. If broad improvement persists, extend v2 to1200s uniformly to target large4 and establish stronger all-five confirmation.",
+  "subsequent_decision_text": "v2 improves v1 on all five paired cases at300s seed1 as well as seed0, 10/10 paired wins across two seeds. All checks pass. Seed1 scores31078,28663,30190,30590,27501; three reference wins, remaining gaps large1+198 and large4+188. Actual elapsed299.857-299.915s. New best observed large2=28663, 10.192% belowreference. v2 evidence stronger than v1 short-run performance but stochastic sensitivity remains. No external best-known claim.\nNext: Uniform1200s seed0 on frozen v2 across all five large cases to seek all-five wins with one budget/seed. Develop a standalone CP-SAT destroy-and-repair LNS as an independent stronger comparator, and resolve exact-instance literature comparison limits.",
+  "pairs": [
+    {
+      "instance": "large-1",
+      "v1": 31807,
+      "v2": 30579,
+      "reference": 30880,
+      "v1_experiment": "6f38b210-3141-4371-a778-652084c3bd12",
+      "v2_experiment": "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+      "input_sha256": "be6d981481a49983b963fbf518d264d2c5b0f62f6f05b6539375b59baee99c99"
+    },
+    {
+      "instance": "large-2",
+      "v1": 29340,
+      "v2": 29196,
+      "reference": 31916,
+      "v1_experiment": "6f38b210-3141-4371-a778-652084c3bd12",
+      "v2_experiment": "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+      "input_sha256": "4ac87c7ab3710dcef6db80a96664c9116ee41445bf02cf7143b238cd6f9fac1c"
+    },
+    {
+      "instance": "large-3",
+      "v1": 31041,
+      "v2": 30217,
+      "reference": 31805,
+      "v1_experiment": "6f38b210-3141-4371-a778-652084c3bd12",
+      "v2_experiment": "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+      "input_sha256": "463173e5f449f9fdd819a817bbfdb70edfd742cbc2493cea95ae826307c42b68"
+    },
+    {
+      "instance": "large-4",
+      "v1": 31467,
+      "v2": 30915,
+      "reference": 30402,
+      "v1_experiment": "6f38b210-3141-4371-a778-652084c3bd12",
+      "v2_experiment": "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+      "input_sha256": "c46d7823611c9641b593d2e14332ffcbdca12b64aa208c35c1e04f690078d248"
+    },
+    {
+      "instance": "large-5",
+      "v1": 28252,
+      "v2": 26967,
+      "reference": 28244,
+      "v1_experiment": "6f38b210-3141-4371-a778-652084c3bd12",
+      "v2_experiment": "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+      "input_sha256": "4703c4bd6709943dce25014ca6b0ca1f3e1a1a699440cd6be55dce122cccdbc8"
+    }
+  ],
+  "records": [
+    {
+      "id": "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+      "kind": "Experiment",
+      "title": "eval-20261008T014545-af260b: Incremental-link bounded DAG tabu with evolving elites v2",
+      "description": "Validate new memoized earliest-start evaluation, safe partial-sum pruning and elite diversification, then equal-300-second seed0 comparison to v1 on all five already-inspected large cases. Tiny must remain2197. Compound change, no individual-component causal attribution.",
+      "status": "complete",
+      "created": "2026-10-08T01:45:45.490000+00:00",
+      "config": {
+        "seed": 0,
+        "workers": 1,
+        "candidate": {
+          "title": "Incremental-link bounded DAG tabu with evolving elites v2",
+          "sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+          "filename": "solver.cpp",
+          "language": "cpp",
+          "hypothesis": "Move beyond time scaling. v1 rebuilds every machine arc for every neighbor and uses only dispatch-generated elites. v2 updates links only on the moved row, memoized DFS computes exact earliest starts with cycle detection and safe nonnegative tardiness partial-sum cutoffs, fixes aspiration ordering, randomizes machine traversal, and learns diverse local-search elites for restarts. Same weighted tardiness objective and tiny-flow tie break. Adaptation of generic critical-path tabu and elite diversification ideas, not a reproduction of published GRASP or shifting bottleneck. Equal-budget comparison to v1 at 300s on public inspected cases, then cross-seed confirmation.",
+          "candidate_id": "fac927a1-eb67-441c-8f44-ad2c6828ca8b",
+          "codechange_id": "3320aab5-d27f-4d1a-a8dc-d8999b7146ca"
+        },
+        "instances": [
+          "tiny",
+          "large-1",
+          "large-2",
+          "large-3",
+          "large-4",
+          "large-5"
+        ],
+        "comparison": "Quality against published reference; speed across different hardware is not established",
+        "cpu_affinity": false,
+        "memory_sandbox": false,
+        "requested_seconds": 300,
+        "process_grace_seconds": 3
+      },
+      "codechanges": [
+        "3320aab5-d27f-4d1a-a8dc-d8999b7146ca"
+      ],
+      "outcome": {
+        "experiment_id": "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+        "label": "eval-20261008T014545-af260b",
+        "candidate_id": "fac927a1-eb67-441c-8f44-ad2c6828ca8b",
+        "config": {
+          "candidate": {
+            "candidate_id": "fac927a1-eb67-441c-8f44-ad2c6828ca8b",
+            "title": "Incremental-link bounded DAG tabu with evolving elites v2",
+            "hypothesis": "Move beyond time scaling. v1 rebuilds every machine arc for every neighbor and uses only dispatch-generated elites. v2 updates links only on the moved row, memoized DFS computes exact earliest starts with cycle detection and safe nonnegative tardiness partial-sum cutoffs, fixes aspiration ordering, randomizes machine traversal, and learns diverse local-search elites for restarts. Same weighted tardiness objective and tiny-flow tie break. Adaptation of generic critical-path tabu and elite diversification ideas, not a reproduction of published GRASP or shifting bottleneck. Equal-budget comparison to v1 at 300s on public inspected cases, then cross-seed confirmation.",
+            "language": "cpp",
+            "filename": "solver.cpp",
+            "sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+            "codechange_id": "3320aab5-d27f-4d1a-a8dc-d8999b7146ca"
+          },
+          "instances": [
+            "tiny",
+            "large-1",
+            "large-2",
+            "large-3",
+            "large-4",
+            "large-5"
+          ],
+          "requested_seconds": 300,
+          "process_grace_seconds": 3,
+          "seed": 0,
+          "workers": 1,
+          "cpu_affinity": false,
+          "memory_sandbox": false,
+          "comparison": "Quality against published reference; speed across different hardware is not established"
+        },
+        "results": [
+          {
+            "instance": "tiny",
+            "seed": 0,
+            "workers": 1,
+            "seconds": 300,
+            "elapsed_seconds": 300.4455409049988,
+            "returncode": 0,
+            "timed_out": false,
+            "feasible": true,
+            "reference": 2197,
+            "official": {
+              "feasible": true,
+              "violated_constraints": [],
+              "violations": [],
+              "violation_magnitudes": []
+            },
+            "audit": {
+              "feasible": true,
+              "recomputed_objective": 2197,
+              "jobs_checked": 10,
+              "operations_checked": 30,
+              "errors": []
+            },
+            "objective": 2197,
+            "reference_reduction_percent": 0.0
+          },
+          {
+            "instance": "large-1",
+            "seed": 0,
+            "workers": 1,
+            "seconds": 300,
+            "elapsed_seconds": 299.8750960826874,
+            "returncode": 0,
+            "timed_out": false,
+            "feasible": true,
+            "reference": 30880,
+            "official": {
+              "feasible": true,
+              "violated_constraints": [],
+              "violations": [],
+              "violation_magnitudes": []
+            },
+            "audit": {
+              "feasible": true,
+              "recomputed_objective": 30579,
+              "jobs_checked": 30,
+              "operations_checked": 300,
+              "errors": []
+            },
+            "objective": 30579,
+            "reference_reduction_percent": 0.9747409326424871
+          },
+          {
+            "instance": "large-2",
+            "seed": 0,
+            "workers": 1,
+            "seconds": 300,
+            "elapsed_seconds": 299.8686830997467,
+            "returncode": 0,
+            "timed_out": false,
+            "feasible": true,
+            "reference": 31916,
+            "official": {
+              "feasible": true,
+              "violated_constraints": [],
+              "violations": [],
+              "violation_magnitudes": []
+            },
+            "audit": {
+              "feasible": true,
+              "recomputed_objective": 29196,
+              "jobs_checked": 30,
+              "operations_checked": 300,
+              "errors": []
+            },
+            "objective": 29196,
+            "reference_reduction_percent": 8.52237122446422
+          },
+          {
+            "instance": "large-3",
+            "seed": 0,
+            "workers": 1,
+            "seconds": 300,
+            "elapsed_seconds": 299.86901688575745,
+            "returncode": 0,
+            "timed_out": false,
+            "feasible": true,
+            "reference": 31805,
+            "official": {
+              "feasible": true,
+              "violated_constraints": [],
+              "violations": [],
+              "violation_magnitudes": []
+            },
+            "audit": {
+              "feasible": true,
+              "recomputed_objective": 30217,
+              "jobs_checked": 30,
+              "operations_checked": 300,
+              "errors": []
+            },
+            "objective": 30217,
+            "reference_reduction_percent": 4.992925640622544
+          },
+          {
+            "instance": "large-4",
+            "seed": 0,
+            "workers": 1,
+            "seconds": 300,
+            "elapsed_seconds": 299.8926856517792,
+            "returncode": 0,
+            "timed_out": false,
+            "feasible": true,
+            "reference": 30402,
+            "official": {
+              "feasible": true,
+              "violated_constraints": [],
+              "violations": [],
+              "violation_magnitudes": []
+            },
+            "audit": {
+              "feasible": true,
+              "recomputed_objective": 30915,
+              "jobs_checked": 30,
+              "operations_checked": 300,
+              "errors": []
+            },
+            "objective": 30915,
+            "reference_reduction_percent": -1.6873889875666075
+          },
+          {
+            "instance": "large-5",
+            "seed": 0,
+            "workers": 1,
+            "seconds": 300,
+            "elapsed_seconds": 299.87988781929016,
+            "returncode": 0,
+            "timed_out": false,
+            "feasible": true,
+            "reference": 28244,
+            "official": {
+              "feasible": true,
+              "violated_constraints": [],
+              "violations": [],
+              "violation_magnitudes": []
+            },
+            "audit": {
+              "feasible": true,
+              "recomputed_objective": 26967,
+              "jobs_checked": 30,
+              "operations_checked": 300,
+              "errors": []
+            },
+            "objective": 26967,
+            "reference_reduction_percent": 4.521314261436057
+          }
+        ]
+      }
+    },
+    {
+      "id": "73b95dd4-3437-4ce9-bf71-00139315f2b7",
+      "kind": "Belief",
+      "title": "Sagent decision: 70369f29",
+      "description": "v2 valid on all six cases including tiny2197. At equal300s seed0 one worker v2 improves every large case over v1: 30579 vs31807,29196 vs29340,30217 vs31041,30915 vs31467,26967 vs28252. It beats4/5 published references, missing large4 by513 (1.687%). Actual elapsed large cases299.869-299.893s; tiny300.446s includes setup. Compound evaluation supports combined changes only; cannot identify pruning versus diversification contribution. Best new record large2=29196, not best-known claim.\nNext: Confirm frozen v2 at300s seed1 across all five cases, paired with prior v1 seed1. If broad improvement persists, extend v2 to1200s uniformly to target large4 and establish stronger all-five confirmation.",
+      "status": "active",
+      "created": "2026-10-08T02:15:55.546000+00:00"
+    },
+    {
+      "id": "16ee170b-9e44-4f40-8710-ba553db28de8",
+      "kind": "Experiment",
+      "title": "eval-20261008T021601-cacd61: Incremental-link bounded DAG tabu with evolving elites v2",
+      "description": "Cross-seed confirmation of frozen v2 combined improvements at same300s one-worker budget as prior v1 seed1 across all five public inspected large cases. Determine whether seed0 5/5 paired v1 wins survive another seed and whether all reference wins occur.",
+      "status": "complete",
+      "created": "2026-10-08T02:16:01.020000+00:00",
+      "config": {
+        "seed": 1,
+        "workers": 1,
+        "candidate": {
+          "title": "Incremental-link bounded DAG tabu with evolving elites v2",
+          "sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+          "filename": "solver.cpp",
+          "language": "cpp",
+          "hypothesis": "Move beyond time scaling. v1 rebuilds every machine arc for every neighbor and uses only dispatch-generated elites. v2 updates links only on the moved row, memoized DFS computes exact earliest starts with cycle detection and safe nonnegative tardiness partial-sum cutoffs, fixes aspiration ordering, randomizes machine traversal, and learns diverse local-search elites for restarts. Same weighted tardiness objective and tiny-flow tie break. Adaptation of generic critical-path tabu and elite diversification ideas, not a reproduction of published GRASP or shifting bottleneck. Equal-budget comparison to v1 at 300s on public inspected cases, then cross-seed confirmation.",
+          "candidate_id": "fac927a1-eb67-441c-8f44-ad2c6828ca8b",
+          "codechange_id": "3320aab5-d27f-4d1a-a8dc-d8999b7146ca"
+        },
+        "instances": [
+          "large-1",
+          "large-2",
+          "large-3",
+          "large-4",
+          "large-5"
+        ],
+        "comparison": "Quality against published reference; speed across different hardware is not established",
+        "cpu_affinity": false,
+        "memory_sandbox": false,
+        "requested_seconds": 300,
+        "process_grace_seconds": 3
+      },
+      "codechanges": [
+        "3320aab5-d27f-4d1a-a8dc-d8999b7146ca"
+      ],
+      "outcome": {
+        "experiment_id": "16ee170b-9e44-4f40-8710-ba553db28de8",
+        "label": "eval-20261008T021601-cacd61",
+        "candidate_id": "fac927a1-eb67-441c-8f44-ad2c6828ca8b",
+        "config": {
+          "candidate": {
+            "candidate_id": "fac927a1-eb67-441c-8f44-ad2c6828ca8b",
+            "title": "Incremental-link bounded DAG tabu with evolving elites v2",
+            "hypothesis": "Move beyond time scaling. v1 rebuilds every machine arc for every neighbor and uses only dispatch-generated elites. v2 updates links only on the moved row, memoized DFS computes exact earliest starts with cycle detection and safe nonnegative tardiness partial-sum cutoffs, fixes aspiration ordering, randomizes machine traversal, and learns diverse local-search elites for restarts. Same weighted tardiness objective and tiny-flow tie break. Adaptation of generic critical-path tabu and elite diversification ideas, not a reproduction of published GRASP or shifting bottleneck. Equal-budget comparison to v1 at 300s on public inspected cases, then cross-seed confirmation.",
+            "language": "cpp",
+            "filename": "solver.cpp",
+            "sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+            "codechange_id": "3320aab5-d27f-4d1a-a8dc-d8999b7146ca"
+          },
+          "instances": [
+            "large-1",
+            "large-2",
+            "large-3",
+            "large-4",
+            "large-5"
+          ],
+          "requested_seconds": 300,
+          "process_grace_seconds": 3,
+          "seed": 1,
+          "workers": 1,
+          "cpu_affinity": false,
+          "memory_sandbox": false,
+          "comparison": "Quality against published reference; speed across different hardware is not established"
+        },
+        "results": [
+          {
+            "instance": "large-1",
+            "seed": 1,
+            "workers": 1,
+            "seconds": 300,
+            "elapsed_seconds": 299.8837218284607,
+            "returncode": 0,
+            "timed_out": false,
+            "feasible": true,
+            "reference": 30880,
+            "official": {
+              "feasible": true,
+              "violated_constraints": [],
+              "violations": [],
+              "violation_magnitudes": []
+            },
+            "audit": {
+              "feasible": true,
+              "recomputed_objective": 31078,
+              "jobs_checked": 30,
+              "operations_checked": 300,
+              "errors": []
+            },
+            "objective": 31078,
+            "reference_reduction_percent": -0.6411917098445595
+          },
+          {
+            "instance": "large-2",
+            "seed": 1,
+            "workers": 1,
+            "seconds": 300,
+            "elapsed_seconds": 299.9152612686157,
+            "returncode": 0,
+            "timed_out": false,
+            "feasible": true,
+            "reference": 31916,
+            "official": {
+              "feasible": true,
+              "violated_constraints": [],
+              "violations": [],
+              "violation_magnitudes": []
+            },
+            "audit": {
+              "feasible": true,
+              "recomputed_objective": 28663,
+              "jobs_checked": 30,
+              "operations_checked": 300,
+              "errors": []
+            },
+            "objective": 28663,
+            "reference_reduction_percent": 10.19237999749342
+          },
+          {
+            "instance": "large-3",
+            "seed": 1,
+            "workers": 1,
+            "seconds": 300,
+            "elapsed_seconds": 299.8662221431732,
+            "returncode": 0,
+            "timed_out": false,
+            "feasible": true,
+            "reference": 31805,
+            "official": {
+              "feasible": true,
+              "violated_constraints": [],
+              "violations": [],
+              "violation_magnitudes": []
+            },
+            "audit": {
+              "feasible": true,
+              "recomputed_objective": 30190,
+              "jobs_checked": 30,
+              "operations_checked": 300,
+              "errors": []
+            },
+            "objective": 30190,
+            "reference_reduction_percent": 5.07781795315202
+          },
+          {
+            "instance": "large-4",
+            "seed": 1,
+            "workers": 1,
+            "seconds": 300,
+            "elapsed_seconds": 299.85736322402954,
+            "returncode": 0,
+            "timed_out": false,
+            "feasible": true,
+            "reference": 30402,
+            "official": {
+              "feasible": true,
+              "violated_constraints": [],
+              "violations": [],
+              "violation_magnitudes": []
+            },
+            "audit": {
+              "feasible": true,
+              "recomputed_objective": 30590,
+              "jobs_checked": 30,
+              "operations_checked": 300,
+              "errors": []
+            },
+            "objective": 30590,
+            "reference_reduction_percent": -0.6183803697125189
+          },
+          {
+            "instance": "large-5",
+            "seed": 1,
+            "workers": 1,
+            "seconds": 300,
+            "elapsed_seconds": 299.8954210281372,
+            "returncode": 0,
+            "timed_out": false,
+            "feasible": true,
+            "reference": 28244,
+            "official": {
+              "feasible": true,
+              "violated_constraints": [],
+              "violations": [],
+              "violation_magnitudes": []
+            },
+            "audit": {
+              "feasible": true,
+              "recomputed_objective": 27501,
+              "jobs_checked": 30,
+              "operations_checked": 300,
+              "errors": []
+            },
+            "objective": 27501,
+            "reference_reduction_percent": 2.6306472171080584
+          }
+        ]
+      }
+    },
+    {
+      "id": "112286f2-4ab7-49d0-8765-04b72fb2b5b1",
+      "kind": "Belief",
+      "title": "Sagent decision: 16ee170b",
+      "description": "v2 improves v1 on all five paired cases at300s seed1 as well as seed0, 10/10 paired wins across two seeds. All checks pass. Seed1 scores31078,28663,30190,30590,27501; three reference wins, remaining gaps large1+198 and large4+188. Actual elapsed299.857-299.915s. New best observed large2=28663, 10.192% belowreference. v2 evidence stronger than v1 short-run performance but stochastic sensitivity remains. No external best-known claim.\nNext: Uniform1200s seed0 on frozen v2 across all five large cases to seek all-five wins with one budget/seed. Develop a standalone CP-SAT destroy-and-repair LNS as an independent stronger comparator, and resolve exact-instance literature comparison limits.",
+      "status": "active",
+      "created": "2026-10-08T02:41:27.559000+00:00"
+    }
+  ],
+  "provenance": {
+    "70369f29-ec45-4926-8c8e-5fffd15e2aa3": {
+      "snapshot_sha256": "ea8b4e91421d807d09988acfde3b5217a043ec49175007577d7ed0b6f632cda1",
+      "original_snapshot": "frontieror-publication-figures-20261008/data/trackinizer/70369f29-ec45-4926-8c8e-5fffd15e2aa3.json"
+    },
+    "73b95dd4-3437-4ce9-bf71-00139315f2b7": {
+      "snapshot_sha256": "ff26009ba2d423f4a25ec1bfe029b5b6064794f751483bc6bda5b42b03652206",
+      "original_snapshot": "frontieror-publication-figures-20261008/data/trackinizer/73b95dd4-3437-4ce9-bf71-00139315f2b7.json"
+    },
+    "16ee170b-9e44-4f40-8710-ba553db28de8": {
+      "snapshot_sha256": "0302c029e795bc11757aa1a613460da8a63ac73251d92327dd53f6793a7aa3bd",
+      "original_snapshot": "frontieror-publication-figures-20261008/data/trackinizer/16ee170b-9e44-4f40-8710-ba553db28de8.json"
+    },
+    "112286f2-4ab7-49d0-8765-04b72fb2b5b1": {
+      "snapshot_sha256": "435ebe61745cb0c8863f9a49a9ef446d86d8e5b7548ac92fcb69a4116beaebef",
+      "original_snapshot": "frontieror-publication-figures-20261008/data/trackinizer/112286f2-4ab7-49d0-8765-04b72fb2b5b1.json"
+    }
+  }
+}

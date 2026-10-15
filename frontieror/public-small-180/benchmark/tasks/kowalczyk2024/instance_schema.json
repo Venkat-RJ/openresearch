@@ -1,0 +1,13 @@
+{
+  "n": "<int> Number of jobs to be scheduled.",
+  "m": "<int> Number of identical parallel machines available.",
+  "T": "<int> Planning horizon within which all jobs must complete.",
+  "jobs": [
+    {
+      "id": "<int> Unique identifier for the job.",
+      "p": "<int> Processing time required to complete the job.",
+      "d": "<int> Due date by which the job should ideally be completed.",
+      "w": "<int> Priority weight of the job, reflecting the cost per unit of tardiness."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "objective_value": "<float> Total annualized system cost represented by the complete submitted plan.",
+  "model_variables": "<dict, key: canonical variable name> Sparse complete witness; omitted variables are zero. Use Gurobi bracket syntax exactly as specified by model_variable_name_patterns.",
+  "investments": {
+    "<key: '{cluster_id}'>": {
+      "resource_type": "<str> Technology category of the resource cluster (such as natural_gas_CT, solar, wind, coal, nuclear, battery, or hydro).",
+      "zone": "<int> Zone in which the resource cluster is located.",
+      "new_units": "<float> Integer investment-count variable in the MILP: physical blocks for UC clusters and 1-MW increments for non-UC clusters.",
+      "new_MW": "<float> New power capacity installed in the cluster, in MW.",
+      "retired_units": "<float> Number of existing units retired from the cluster.",
+      "retired_MW": "<float> Power capacity retired from the cluster, in MW.",
+      "total_capacity_MW": "<float> Final installed power capacity of the cluster after investments and retirements, in MW."
+    }
+  },
+  "storage_energy_investments": {
+    "<key: '{cluster_id}'>": {
+      "new_units": "<float> Integer energy-investment count in the MILP; non-UC storage uses 1-MWh increments.",
+      "new_MWh": "<float> New energy capacity added to the storage cluster, in MWh.",
+      "total_energy_MWh": "<float> Final installed energy capacity of the storage cluster, in MWh."
+    }
+  },
+  "transmission_investments": {
+    "<key: '{line_id}'>": {
+      "new_MW": "<float> New transmission capacity added in integer 1-MW increments in the MILP.",
+      "total_capacity_MW": "<float> Final installed transmission capacity of the line after expansion, in MW."
+    }
+  },
+  "model_variable_name_patterns": {
+    "y_P_new[i], y_P_ret[i], y_P[i]": "generator capacity variables",
+    "y_E_new[i], y_E_ret[i], y_E[i]": "storage-energy variables",
+    "y_F_new[l], y_F[l]": "transmission variables",
+    "x_inj[i,t], x_wdw[i,t], x_soc[i,t]": "generation/storage operations",
+    "x_nse[s,z,t]": "non-served energy",
+    "x_lvl[i,t], x_spill[i,t]": "hydro operations",
+    "x_flow[l,t]": "transmission flow",
+    "x_commit[i,t], x_start[i,t], x_shut[i,t]": "unit commitment",
+    "x_RPS[w], x_CO2[w]": "policy slack variables"
+  }
+}

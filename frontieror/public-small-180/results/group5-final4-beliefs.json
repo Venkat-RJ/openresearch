@@ -1,0 +1,27 @@
+[
+  {
+    "task_id": "rahmaniani2018",
+    "belief_id": "730facde-d897-44d7-b6e2-891762a115b0",
+    "description": "Restricted dispatch policy: constant thermal commitments/output except one flexible gas balancer per zone; renewable/hydro profile injections; zero storage operations; compact capacity-investment MIP with violated-hour constraint generation and complete336hour underscore witness. All original operational rows independently evaluated from derived profiles before publishing."
+  },
+  {
+    "task_id": "rahmaniani2022",
+    "belief_id": "805f36f7-3912-4f54-bd8b-408fa4fce5f7",
+    "description": "Same profile-dispatch restricted policy with released1MW increments, explicit hydro inflow/spill and bracket witness; active-hour constraint generation keeps models below restricted license."
+  },
+  {
+    "task_id": "riley2025",
+    "belief_id": "d40d0fd1-522b-407c-b564-5cd2da203654",
+    "description": "Exploit public zero-cost depot legs to redeploy modules freely between periods. Purchase count search; per-period small integer site allocations and continuous served fractions; sparse complete balance witness using depot movements; no custom scorer."
+  },
+  {
+    "task_id": "salemi2022",
+    "belief_id": "b8567bfd-334a-4572-b223-bb10037ccd80",
+    "description": "Worst-demand robust commitment master with240dispatch variables and simplified startup objective; exact startup q recomputed; each50scenario small LP refines production. Full robust master incumbent is feasible for all scenarios and callback serializes it."
+  },
+  {
+    "task_id": "logger-compliance",
+    "belief_id": "14a97371-9cdf-4230-bfc2-96b24c92bc7c",
+    "description": "Add complete original-witness MIPSOL callbacks to pecin,pedersen,pessoa; materialize original routes/tree/robust routes and recompute true objective. Missed prior incumbent count unknown; do not retroactively assert timing/AOCC compliance."
+  }
+]

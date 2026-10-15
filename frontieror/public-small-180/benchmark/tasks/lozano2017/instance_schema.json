@@ -1,0 +1,19 @@
+{
+  "n": "<int> Total number of variables across both the leader and the follower.",
+  "n1": "<int> Number of variables controlled by the leader.",
+  "n2": "<int> Number of variables controlled by the follower.",
+  "m1": "<int> Number of upper-level inequality constraints.",
+  "m2": "<int> Number of lower-level inequality constraints.",
+  "all_leader_vars_integer": "<bool> Whether all leader variables are restricted to nonnegative integer values.",
+  "leader_follower_objective_coefficients_fixed_zero": "<bool, must be true> This released benchmark fixes every d1 coefficient on follower variables in the leader objective to zero.",
+  "num_integer_follower_vars": "<int> Number of follower variables that are restricted to nonnegative integer values.",
+  "integer_follower_vars": "<list[int], length num_integer_follower_vars> One-based indices identifying which follower variables must take nonnegative integer values.",
+  "c": "<list[int], length n1> Leader's objective function coefficients applied to the leader's variables.",
+  "d2": "<list[int], length n2> Follower's objective function coefficients applied only to the follower objective.",
+  "A1": "<list[list[int]], shape [m1][n1]> Upper-level constraint coefficients applied to the leader's variables.",
+  "B1": "<list[list[int]], shape [m1][n2]> Upper-level constraint coefficients applied to the follower's variables.",
+  "b1": "<list[int], length m1> Right-hand side limits for the upper-level constraints.",
+  "A2": "<list[list[int]], shape [m2][n1]> Lower-level constraint coefficients applied to the leader's variables.",
+  "B2": "<list[list[int]], shape [m2][n2]> Lower-level constraint coefficients applied to the follower's variables.",
+  "b2": "<list[int], length m2> Right-hand side limits for the lower-level constraints."
+}

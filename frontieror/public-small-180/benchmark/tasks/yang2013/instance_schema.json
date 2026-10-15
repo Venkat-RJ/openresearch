@@ -1,0 +1,6 @@
+{
+  "n": "<int> Number of items available for selection.",
+  "capacity": "<int> Maximum total weight the knapsack can carry.",
+  "weights": "<list[int], length n> Weight of each item.",
+  "profit_matrix": "<list[list[int]], shape [n][n]> Symmetric matrix where the diagonal entry for an item is its standalone profit and each off-diagonal entry for a pair of items is the additional interaction profit earned when both items are selected together."
+}

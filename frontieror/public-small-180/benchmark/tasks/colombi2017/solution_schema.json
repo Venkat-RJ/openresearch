@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Net profit of the tour, equal to total collected profit minus total traveling cost minus total penalty cost paid to override weak incompatibilities.",
+  "served_arcs": "<list[dict], length variable> Profitable arcs selected to be served in the tour, with fields 'from' (starting node of the profitable arc), 'to' (ending node of the profitable arc), 'profit' (profit collected from serving this arc), and 'cost' (traveling cost of this arc).",
+  "tour_arcs": "<list[dict], length variable> Arcs traversed at least once in the closed tour starting and ending at the depot, with fields 'from' (starting node of the traversed arc), 'to' (ending node of the traversed arc), 'count' (number of times this arc is traversed in the tour), and 'cost' (traveling cost per traversal of this arc)."
+}

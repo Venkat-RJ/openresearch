@@ -1,0 +1,240 @@
+{
+  "instance_id": 1,
+  "problem_type": "nagy2015",
+  "description": "Tiny smoke-test (n=10, well within [1, s=30] small band per [STRICT] (s,m,l)=(30,100,199)), Set 2 demands (10-98% of C), C=160; scale-DOWN rotation from demoted tiny_instance_2.json (n=30 saturated-at-s-tier) — stepped below the prior failed-at-100s n=15 and n=30 tiny attempts.",
+  "num_customers": 10,
+  "vehicle_capacity": 160,
+  "demand_set": "set2",
+  "clustered": false,
+  "seed_used": 21140501,
+  "generation_attempt": 1,
+  "depot": {
+    "id": 0,
+    "x": 35,
+    "y": 35
+  },
+  "customers": [
+    {
+      "id": 1,
+      "x": 70,
+      "y": 34,
+      "delivery_demand": 40,
+      "pickup_demand": 84
+    },
+    {
+      "id": 2,
+      "x": 22,
+      "y": 35,
+      "delivery_demand": 116,
+      "pickup_demand": 40
+    },
+    {
+      "id": 3,
+      "x": 64,
+      "y": 84,
+      "delivery_demand": 156,
+      "pickup_demand": 116
+    },
+    {
+      "id": 4,
+      "x": 81,
+      "y": 7,
+      "delivery_demand": 124,
+      "pickup_demand": 156
+    },
+    {
+      "id": 5,
+      "x": 48,
+      "y": 80,
+      "delivery_demand": 152,
+      "pickup_demand": 124
+    },
+    {
+      "id": 6,
+      "x": 62,
+      "y": 86,
+      "delivery_demand": 156,
+      "pickup_demand": 152
+    },
+    {
+      "id": 7,
+      "x": 71,
+      "y": 96,
+      "delivery_demand": 96,
+      "pickup_demand": 156
+    },
+    {
+      "id": 8,
+      "x": 5,
+      "y": 88,
+      "delivery_demand": 108,
+      "pickup_demand": 96
+    },
+    {
+      "id": 9,
+      "x": 33,
+      "y": 17,
+      "delivery_demand": 156,
+      "pickup_demand": 108
+    },
+    {
+      "id": 10,
+      "x": 56,
+      "y": 91,
+      "delivery_demand": 84,
+      "pickup_demand": 156
+    }
+  ],
+  "distance_matrix": [
+    [
+      0,
+      35,
+      13,
+      57,
+      54,
+      47,
+      58,
+      71,
+      61,
+      18,
+      60
+    ],
+    [
+      35,
+      0,
+      48,
+      50,
+      29,
+      51,
+      53,
+      62,
+      85,
+      41,
+      59
+    ],
+    [
+      13,
+      48,
+      0,
+      65,
+      65,
+      52,
+      65,
+      78,
+      56,
+      21,
+      66
+    ],
+    [
+      57,
+      50,
+      65,
+      0,
+      79,
+      16,
+      3,
+      14,
+      59,
+      74,
+      11
+    ],
+    [
+      54,
+      29,
+      65,
+      79,
+      0,
+      80,
+      81,
+      90,
+      111,
+      49,
+      88
+    ],
+    [
+      47,
+      51,
+      52,
+      16,
+      80,
+      0,
+      15,
+      28,
+      44,
+      65,
+      14
+    ],
+    [
+      58,
+      53,
+      65,
+      3,
+      81,
+      15,
+      0,
+      13,
+      57,
+      75,
+      8
+    ],
+    [
+      71,
+      62,
+      78,
+      14,
+      90,
+      28,
+      13,
+      0,
+      66,
+      88,
+      16
+    ],
+    [
+      61,
+      85,
+      56,
+      59,
+      111,
+      44,
+      57,
+      66,
+      0,
+      76,
+      51
+    ],
+    [
+      18,
+      41,
+      21,
+      74,
+      49,
+      65,
+      75,
+      88,
+      76,
+      0,
+      77
+    ],
+    [
+      60,
+      59,
+      66,
+      11,
+      88,
+      14,
+      8,
+      16,
+      51,
+      77,
+      0
+    ]
+  ],
+  "notes": {
+    "distance_metric": "Euclidean distance rounded to nearest integer",
+    "fleet_type": "Homogeneous, unlimited vehicles",
+    "objective": "Minimize total distance travelled",
+    "splitting_rule": "A customer with both delivery and pickup may be served in two separate visits (one for delivery, one for pickup). Each delivery/pickup request must be fully satisfied in a single visit.",
+    "formulation_reference": "Section 5.1, Nagy et al. (2015), Transportation Science 49(2):271-294"
+  }
+}

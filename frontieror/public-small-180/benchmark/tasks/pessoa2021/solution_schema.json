@@ -1,0 +1,10 @@
+{
+  "objective_value": "<float> Total transportation cost across all vehicle routes.",
+  "routes": [
+    {
+      "customers": "<list[int], length varies> Ordered sequence of customer identifiers visited by this vehicle, starting after the depot and ending before the return to depot.",
+      "cost": "<int> Total travel distance for this route, including departure from and return to the depot.",
+      "worst_case_demand": "<int> Maximum possible total demand of the customers on this route over all demand realizations within the uncertainty set."
+    }
+  ]
+}

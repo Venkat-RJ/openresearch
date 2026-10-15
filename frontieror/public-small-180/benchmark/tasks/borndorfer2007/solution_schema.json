@@ -1,0 +1,20 @@
+{
+  "objective_value": "<float> Weighted combination of total line cost and total passenger travel time achieved by the solution.",
+  "active_lines": [
+    {
+      "line_index": "<int> Identifier of this line within the enumerated set of candidate lines.",
+      "mode": "<str> Transportation mode operating this line.",
+      "nodes": "<list[int]> Ordered sequence of station identifiers visited by this line from one terminal to the other.",
+      "edges": "<list[int]> Ordered sequence of edge identifiers traversed by this line.",
+      "frequency": "<float> Number of vehicle runs per planning period operated on this line."
+    }
+  ],
+  "active_passenger_paths": [
+    {
+      "origin": "<int> Origin station identifier of the OD pair carried by this path.",
+      "destination": "<int> Destination station identifier of the OD pair carried by this path.",
+      "arcs": "<list[int]> Ordered sequence of directed arc identifiers traversed by this path from origin to destination.",
+      "flow": "<float> Number of passengers routed along this path. The released certificate requires a non-empty complete path-flow witness so demand, capacity, and passenger travel cost can all be checked exactly."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "objective_value": "<float> Total expected cost across the scenario tree, combining capital investment expenditures and expected operational costs.",
+  "alpha": "<dict> Complete generator commitment variables keyed by scenario-tree node, representative day, lower-level scenario, hour, and generator.",
+  "gamma": "<dict> Complete generator startup variables using the same composite key convention.",
+  "p_gen": "<dict> Complete generator dispatch variables in MW.",
+  "s_res": "<dict> Complete generator reserve variables in MW.",
+  "f_fwd": "<dict> Complete forward transmission-flow variables in MW.",
+  "f_bwd": "<dict> Complete backward transmission-flow variables in MW.",
+  "u_stor": "<dict> Complete storage charging variables.",
+  "v_stor": "<dict> Complete storage discharging variables.",
+  "r_stor": "<dict> Complete storage state-of-charge variables.",
+  "investments": {
+    "<scenario_node_id>": {
+      "generators": "<dict, key: '{generator_id}'> Whether each candidate generator is built at this scenario tree node (1 = build, 0 = do not build).",
+      "lines": "<dict, key: '{line_id}'> Whether each candidate transmission line is built at this scenario tree node (1 = build, 0 = do not build).",
+      "storage": "<dict, key: '{storage_id}'> Whether each candidate storage unit is built at this scenario tree node (1 = build, 0 = do not build)."
+    }
+  }
+}

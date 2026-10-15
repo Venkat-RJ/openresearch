@@ -1,0 +1,29 @@
+{
+  "num_vessels": "<int> Total number of vessels to be served at the terminal during the planning horizon.",
+  "num_berths": "<int> Number of berths available along the quay for vessel mooring.",
+  "num_QCs": "<int> Total number of quay cranes shared across all berths.",
+  "num_subblocks": "<int> Total number of yard subblocks available for container storage.",
+  "H": "<int> Length of the cyclical weekly planning horizon in discrete time steps.",
+  "E": "<int> Extension length beyond the planning horizon to accommodate vessels whose handling wraps across the weekly boundary.",
+  "penalty_cost_coefficient_co": "<float> Global cost coefficient that scales yard transportation costs for loading and unloading routes.",
+  "QC_capacity_per_timestep": "<list[int], length H+E> Maximum number of quay cranes available for use at each time step.",
+  "loading_route_lengths_D_L": "<list[list[float]], shape [num_subblocks][num_berths]> Distance from each yard subblock to each berth for transporting loading containers.",
+  "average_unloading_route_lengths_D_U": "<list[float], length num_berths> Average distance from each berth to all yard subblocks for transporting unloading containers.",
+  "vessels": [
+    {
+      "vessel_id": "<int> Unique identifier for the vessel.",
+      "loading_containers": "<int> Number of containers to be loaded onto the vessel.",
+      "unloading_containers": "<int> Number of containers to be unloaded from the vessel.",
+      "reserved_subblocks": "<int> Number of distinct yard subblocks that must be reserved for this vessel's containers.",
+      "penalty_cost_coefficient": "<float> Per-vessel cost weight applied to deviations between actual and expected service times.",
+      "feasible_time_window": "<list[int], length 2> Earliest permissible handling start time step and latest permissible handling end time step for the vessel.",
+      "expected_time_window": "<list[int], length 2> Preferred handling start time step and preferred handling end time step within which the vessel ideally receives service.",
+      "qc_profiles": [
+        {
+          "handling_time": "<int> Number of consecutive time steps required to complete handling under this quay crane profile.",
+          "qc_per_timestep": "<list[int], length handling_time> Number of quay cranes assigned to the vessel at each successive time step of handling under this profile."
+        }
+      ]
+    }
+  ]
+}

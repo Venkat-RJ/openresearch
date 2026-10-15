@@ -1,0 +1,156 @@
+{
+  "solver": "Gurobi_MILP",
+  "status": "optimal",
+  "objective_value": 1673.9995044819998,
+  "mip_gap": 0.0,
+  "bar_areas": [
+    {
+      "bar_id": 1,
+      "area": 8,
+      "area_index": 8
+    },
+    {
+      "bar_id": 2,
+      "area": 0.01,
+      "area_index": 0
+    },
+    {
+      "bar_id": 3,
+      "area": 9,
+      "area_index": 9
+    },
+    {
+      "bar_id": 4,
+      "area": 4,
+      "area_index": 4
+    },
+    {
+      "bar_id": 5,
+      "area": 0.01,
+      "area_index": 0
+    },
+    {
+      "bar_id": 6,
+      "area": 0.01,
+      "area_index": 0
+    },
+    {
+      "bar_id": 7,
+      "area": 6,
+      "area_index": 6
+    },
+    {
+      "bar_id": 8,
+      "area": 6,
+      "area_index": 6
+    },
+    {
+      "bar_id": 9,
+      "area": 6,
+      "area_index": 6
+    },
+    {
+      "bar_id": 10,
+      "area": 0.01,
+      "area_index": 0
+    }
+  ],
+  "displacements": [
+    {
+      "dof_id": 1,
+      "load": 1,
+      "value": 1.4553536040911
+    },
+    {
+      "dof_id": 2,
+      "load": 1,
+      "value": -6.329978233004932
+    },
+    {
+      "dof_id": 3,
+      "load": 1,
+      "value": -1.6993301657403492
+    },
+    {
+      "dof_id": 4,
+      "load": 1,
+      "value": -6.88614248551416
+    },
+    {
+      "dof_id": 5,
+      "load": 1,
+      "value": 0.8991893515819249
+    },
+    {
+      "dof_id": 6,
+      "load": 1,
+      "value": -2.5931884782855645
+    },
+    {
+      "dof_id": 7,
+      "load": 1,
+      "value": -0.8007205763716223
+    },
+    {
+      "dof_id": 8,
+      "load": 1,
+      "value": -2.500833996334651
+    }
+  ],
+  "bar_forces": [
+    {
+      "bar_id": 1,
+      "load": 1,
+      "force": 199819.85590709437
+    },
+    {
+      "bar_id": 2,
+      "load": 1,
+      "force": 154.490070141459
+    },
+    {
+      "bar_id": 3,
+      "load": 1,
+      "force": -200180.14409290563
+    },
+    {
+      "bar_id": 4,
+      "load": 1,
+      "force": -99845.50992985854
+    },
+    {
+      "bar_id": 5,
+      "load": 1,
+      "force": -25.654022764152614
+    },
+    {
+      "bar_id": 6,
+      "load": 1,
+      "force": 154.490070141459
+    },
+    {
+      "bar_id": 7,
+      "load": 1,
+      "force": 141676.11845667803
+    },
+    {
+      "bar_id": 8,
+      "load": 1,
+      "force": -141166.594017941
+    },
+    {
+      "bar_id": 9,
+      "load": 1,
+      "force": 141202.8742848635
+    },
+    {
+      "bar_id": 10,
+      "load": 1,
+      "force": -218.4819524460181
+    }
+  ],
+  "solve_time": 0.2262709140777588,
+  "num_vars": 238,
+  "num_constrs": 258,
+  "runtime": 0.29
+}

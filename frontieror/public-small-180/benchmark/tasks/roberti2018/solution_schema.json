@@ -1,0 +1,17 @@
+{
+  "objective_value": "<float> Total cost combining first-echelon travel cost, satellite handling cost, and second-echelon travel cost.",
+  "first_echelon_routes": [
+    {
+      "vehicle": "<int> Identifier of the first-echelon vehicle performing this tour.",
+      "route": "<list[int], length variable> Ordered sequence of node ids visited by the first-echelon vehicle, starting and ending at the depot.",
+      "deliveries": "<dict, key: '{satellite_id}'> Quantity of freight delivered by this first-echelon vehicle to each satellite it visits."
+    }
+  ],
+  "second_echelon_routes": [
+    {
+      "satellite": "<int> Identifier of the satellite from which this second-echelon vehicle departs and returns.",
+      "route": "<list[int], length variable> Ordered sequence of node ids visited by the second-echelon vehicle, starting and ending at the originating satellite."
+    }
+  ],
+  "group_assignments": "<dict, key: '{group_id}'> Satellite identifier to which each customer group is assigned for second-echelon service."
+}

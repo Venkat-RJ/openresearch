@@ -1,0 +1,89 @@
+{
+  "task": "ji2019",
+  "objective": 2745.6000000000004,
+  "reference": 2613.0000000000005,
+  "signed_gap": 0.05074626865671637,
+  "solution_sha256": "280d133a97ea0bdc1cc90e318f3ba452ab6cac272113ee2da29ec45c5772398d",
+  "frozen_code_sha256": "c2e1a35ef42cd90c5cde898d678c03478720343eac6cf333150ad1f1cb60325b",
+  "native_record": "4b0b2986-458d-4ecd-9d37-140c3362bf3e",
+  "official_native_checker_feasible": true,
+  "audit_method": "Existing upstream build_and_solve_model AST stopped before optimize; all official constraint expressions evaluated at explicit variable completion; no solve/custom model/scorer",
+  "official_constraints_checked": 3825,
+  "official_variable_domains_checked": 1205,
+  "violations": [],
+  "right_wall_anchors": [
+    0,
+    1,
+    4
+  ],
+  "integer_placements": {
+    "0": [
+      21,
+      63
+    ],
+    "1": [
+      15,
+      0
+    ],
+    "4": [
+      22,
+      0
+    ],
+    "6": [
+      1,
+      0
+    ],
+    "7": [
+      12,
+      0
+    ]
+  },
+  "sibling_moorings": {
+    "6": "left of7, contained length65.4 within100.3",
+    "7": "left of4, contained length100.3 within127.6"
+  },
+  "inactive_extension": "Transshipment placements(0,0), omitted binaries0, lt/b/v completed from same-lockage geometry, used lockages0/1, C2..C9 extended by85, berth idle only active assignments",
+  "T1": 1128.4,
+  "penalty": 407,
+  "weighted_Eq3_T2": 1210.1999999999998,
+  "weighted_Eq3_total": 2745.6,
+  "released_Eq4_physical_T2": 634.2,
+  "released_Eq4_physical_total": 2169.6000000000004,
+  "berth_idle_values": [
+    {
+      "ship": 5,
+      "order": 9,
+      "berth": 0,
+      "idle": 32.2
+    },
+    {
+      "ship": 3,
+      "order": 8,
+      "berth": 1,
+      "idle": 6.799999999999997
+    },
+    {
+      "ship": 8,
+      "order": 9,
+      "berth": 1,
+      "idle": 0.0
+    },
+    {
+      "ship": 2,
+      "order": 8,
+      "berth": 2,
+      "idle": 6.0
+    },
+    {
+      "ship": 9,
+      "order": 9,
+      "berth": 2,
+      "idle": 0.0
+    }
+  ],
+  "classification": "Reference-comparable feasible positive gap5.0746% under actual upstream/checker weightedEq3 and continuous idle domains; no beat",
+  "qualification": "Released Eq4 cumulative-completion objective is not weightedEq3: same witness physical total differs. Variable-list prose says integer omega, Eq57/upstream uses continuous omega; actual reconstructed idle32.2 and6.8 are noninteger. No unqualified literal full-formulation equivalence claim. Original2354.2 remains quarantined.",
+  "corrects_record": "18ff6f72-8be5-4ad4-a737-a14ee9ef8539",
+  "correction": "Earlier qualification mistakenly named idle10.9; computed berth_idle_values actually32.2,6.8,6,0,0. Objective/domain/3825-constraint results unchanged.",
+  "audit_record": "6364be25-544e-46a9-9401-9d48f3a0d523"
+}

@@ -1,0 +1,434 @@
+{
+  "instance_id": 1,
+  "scale": "small",
+  "label": "5-2-2-2",
+  "num_patients": 5,
+  "num_hospitals": 2,
+  "num_days": 2,
+  "num_ors_per_hospital": 2,
+  "num_mandatory_patients": 0,
+  "num_scenarios": 30,
+  "generation_seed": 42,
+  "global_parameters": {
+    "kappa_1": 50,
+    "kappa_2": -5,
+    "kappa_3": -80,
+    "kappa_4": -100,
+    "Gamma": 500,
+    "duration_mean_minutes": 160.0,
+    "duration_std_minutes": 40.0,
+    "duration_truncation_low_minutes": 45.0,
+    "duration_truncation_high_minutes": 480.0
+  },
+  "patients": [
+    {
+      "patient_id": 0,
+      "alpha_p": 65,
+      "rho_p": 5,
+      "omega_p": 315.0,
+      "is_mandatory": false,
+      "c_sched_per_day": {
+        "1": -16000.0,
+        "2": -15750.0
+      },
+      "c_unsched": 1550.0,
+      "c_cancel": 24800.0
+    },
+    {
+      "patient_id": 1,
+      "alpha_p": 107,
+      "rho_p": 1,
+      "omega_p": 105.0,
+      "is_mandatory": false,
+      "c_sched_per_day": {
+        "1": -5300.0,
+        "2": -5250.0
+      },
+      "c_unsched": 520.0,
+      "c_cancel": 8320.0
+    },
+    {
+      "patient_id": 2,
+      "alpha_p": 99,
+      "rho_p": 4,
+      "omega_p": 388.0,
+      "is_mandatory": false,
+      "c_sched_per_day": {
+        "1": -19600.0,
+        "2": -19400.0
+      },
+      "c_unsched": 1920.0,
+      "c_cancel": 30720.0
+    },
+    {
+      "patient_id": 3,
+      "alpha_p": 86,
+      "rho_p": 2,
+      "omega_p": 168.0,
+      "is_mandatory": false,
+      "c_sched_per_day": {
+        "1": -8500.0,
+        "2": -8400.0
+      },
+      "c_unsched": 830.0,
+      "c_cancel": 13280.0
+    },
+    {
+      "patient_id": 4,
+      "alpha_p": 86,
+      "rho_p": 1,
+      "omega_p": 84.0,
+      "is_mandatory": false,
+      "c_sched_per_day": {
+        "1": -4250.0,
+        "2": -4200.0
+      },
+      "c_unsched": 415.0,
+      "c_cancel": 6640.0
+    }
+  ],
+  "hospitals": [
+    {
+      "hospital_id": 0,
+      "num_ors": 2,
+      "days": [
+        {
+          "day_id": 0,
+          "day_label": 1,
+          "B_hd": 450,
+          "F_hd": 5952,
+          "G_hd": 2236
+        },
+        {
+          "day_id": 1,
+          "day_label": 2,
+          "B_hd": 465,
+          "F_hd": 5435,
+          "G_hd": 2286
+        }
+      ]
+    },
+    {
+      "hospital_id": 1,
+      "num_ors": 2,
+      "days": [
+        {
+          "day_id": 0,
+          "day_label": 1,
+          "B_hd": 450,
+          "F_hd": 4256,
+          "G_hd": 2340
+        },
+        {
+          "day_id": 1,
+          "day_label": 2,
+          "B_hd": 450,
+          "F_hd": 5001,
+          "G_hd": 1871
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": 0,
+      "surgery_durations_minutes": [
+        187.99,
+        157.77,
+        204.88,
+        174.16,
+        125.62
+      ]
+    },
+    {
+      "scenario_id": 1,
+      "surgery_durations_minutes": [
+        221.4,
+        137.22,
+        103.27,
+        120.01,
+        120.72
+      ]
+    },
+    {
+      "scenario_id": 2,
+      "surgery_durations_minutes": [
+        240.43,
+        182.56,
+        154.83,
+        229.62,
+        161.43
+      ]
+    },
+    {
+      "scenario_id": 3,
+      "surgery_durations_minutes": [
+        142.29,
+        139.93,
+        159.82,
+        197.94,
+        135.01
+      ]
+    },
+    {
+      "scenario_id": 4,
+      "surgery_durations_minutes": [
+        165.34,
+        183.83,
+        237.24,
+        161.9,
+        150.96
+      ]
+    },
+    {
+      "scenario_id": 5,
+      "surgery_durations_minutes": [
+        113.51,
+        109.65,
+        234.43,
+        169.26,
+        140.0
+      ]
+    },
+    {
+      "scenario_id": 6,
+      "surgery_durations_minutes": [
+        184.63,
+        187.32,
+        157.03,
+        125.37,
+        121.96
+      ]
+    },
+    {
+      "scenario_id": 7,
+      "surgery_durations_minutes": [
+        133.68,
+        140.63,
+        140.9,
+        161.14,
+        131.89
+      ]
+    },
+    {
+      "scenario_id": 8,
+      "surgery_durations_minutes": [
+        102.22,
+        160.99,
+        114.76,
+        125.92,
+        206.27
+      ]
+    },
+    {
+      "scenario_id": 9,
+      "surgery_durations_minutes": [
+        120.48,
+        141.68,
+        182.4,
+        223.59,
+        147.78
+      ]
+    },
+    {
+      "scenario_id": 10,
+      "surgery_durations_minutes": [
+        148.01,
+        171.31,
+        186.48,
+        127.04,
+        130.43
+      ]
+    },
+    {
+      "scenario_id": 11,
+      "surgery_durations_minutes": [
+        197.56,
+        125.67,
+        134.65,
+        227.61,
+        149.06
+      ]
+    },
+    {
+      "scenario_id": 12,
+      "surgery_durations_minutes": [
+        166.91,
+        147.35,
+        80.73,
+        117.33,
+        150.49
+      ]
+    },
+    {
+      "scenario_id": 13,
+      "surgery_durations_minutes": [
+        167.14,
+        111.89,
+        174.46,
+        114.13,
+        139.7
+      ]
+    },
+    {
+      "scenario_id": 14,
+      "surgery_durations_minutes": [
+        155.95,
+        122.24,
+        169.26,
+        164.55,
+        196.63
+      ]
+    },
+    {
+      "scenario_id": 15,
+      "surgery_durations_minutes": [
+        203.87,
+        233.26,
+        90.99,
+        228.18,
+        158.57
+      ]
+    },
+    {
+      "scenario_id": 16,
+      "surgery_durations_minutes": [
+        139.72,
+        181.75,
+        171.04,
+        156.41,
+        193.64
+      ]
+    },
+    {
+      "scenario_id": 17,
+      "surgery_durations_minutes": [
+        176.77,
+        198.99,
+        187.82,
+        185.28,
+        107.34
+      ]
+    },
+    {
+      "scenario_id": 18,
+      "surgery_durations_minutes": [
+        149.84,
+        236.37,
+        110.01,
+        144.9,
+        113.41
+      ]
+    },
+    {
+      "scenario_id": 19,
+      "surgery_durations_minutes": [
+        333.69,
+        216.47,
+        177.32,
+        121.43,
+        106.5
+      ]
+    },
+    {
+      "scenario_id": 20,
+      "surgery_durations_minutes": [
+        113.32,
+        150.77,
+        300.36,
+        173.82,
+        186.35
+      ]
+    },
+    {
+      "scenario_id": 21,
+      "surgery_durations_minutes": [
+        177.98,
+        132.94,
+        119.06,
+        193.03,
+        149.79
+      ]
+    },
+    {
+      "scenario_id": 22,
+      "surgery_durations_minutes": [
+        98.02,
+        142.4,
+        141.32,
+        212.48,
+        135.92
+      ]
+    },
+    {
+      "scenario_id": 23,
+      "surgery_durations_minutes": [
+        121.26,
+        175.93,
+        147.85,
+        154.4,
+        278.7
+      ]
+    },
+    {
+      "scenario_id": 24,
+      "surgery_durations_minutes": [
+        233.55,
+        135.45,
+        129.59,
+        135.42,
+        148.65
+      ]
+    },
+    {
+      "scenario_id": 25,
+      "surgery_durations_minutes": [
+        145.28,
+        154.05,
+        154.52,
+        170.49,
+        142.61
+      ]
+    },
+    {
+      "scenario_id": 26,
+      "surgery_durations_minutes": [
+        133.04,
+        157.04,
+        177.86,
+        146.15,
+        108.08
+      ]
+    },
+    {
+      "scenario_id": 27,
+      "surgery_durations_minutes": [
+        126.77,
+        162.17,
+        177.84,
+        126.53,
+        121.12
+      ]
+    },
+    {
+      "scenario_id": 28,
+      "surgery_durations_minutes": [
+        137.55,
+        180.59,
+        156.51,
+        191.76,
+        230.43
+      ]
+    },
+    {
+      "scenario_id": 29,
+      "surgery_durations_minutes": [
+        250.59,
+        156.57,
+        167.99,
+        247.14,
+        130.71
+      ]
+    }
+  ]
+}

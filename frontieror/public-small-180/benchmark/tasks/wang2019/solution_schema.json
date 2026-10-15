@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total cost comprising flow transportation costs and vehicle deployment costs.",
+  "flows": "<dict, key: 'x_{commodity}_{from}_{to}'> Amount of a commodity routed along a directed arc.",
+  "vehicles": "<dict, key: 'y_{fleet_type}_{from}_{to}'> Number of vehicles of a given type assigned to a directed arc."
+}

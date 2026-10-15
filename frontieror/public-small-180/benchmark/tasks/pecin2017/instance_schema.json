@@ -1,0 +1,22 @@
+{
+  "problem_parameters": {
+    "n_nodes": "<int> Total number of nodes including the depot source, all customers, and the depot sink.",
+    "n_customers": "<int> Number of customers that must be served.",
+    "vehicle_capacity": "<int> Maximum total demand that a single vehicle can carry on one route.",
+    "planning_horizon": "<int> Latest time by which all vehicles must return to the depot.",
+    "travel_cost_type": "<str> Method used to compute travel cost between every pair of locations.",
+    "travel_time_type": "<str> Method used to compute travel time between every pair of locations."
+  },
+  "nodes": [
+    {
+      "id": "<int> Unique index of this node in the node list.",
+      "type": "<str> Role of this node: 'depot_source' for the starting depot, 'customer' for a delivery location, or 'depot_sink' for the return depot.",
+      "x": "<float> Horizontal coordinate of this node in the two-dimensional plane.",
+      "y": "<float> Vertical coordinate of this node in the two-dimensional plane.",
+      "demand": "<int> Quantity of goods that must be delivered to this node.",
+      "service_time": "<int> Time a vehicle must spend at this node once service begins.",
+      "time_window_open": "<float> Earliest time at which service may begin at this node.",
+      "time_window_close": "<float> Latest time at which service may begin at this node."
+    }
+  ]
+}

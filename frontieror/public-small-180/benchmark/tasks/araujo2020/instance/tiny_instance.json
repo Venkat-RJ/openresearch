@@ -1,0 +1,560 @@
+{
+  "problem_variant": "MMRCPSP",
+  "description": "MMRCPSP instance with 10 real jobs following PSPLIB J30 format. Scale: small. Instance 1/10.",
+  "meta": {
+    "instance_index": 1,
+    "scale": "small",
+    "num_real_jobs": 10,
+    "num_total_jobs": 12,
+    "num_modes_per_job": 3,
+    "num_renewable_resources": 2,
+    "num_nonrenewable_resources": 2,
+    "generation_seed": 42
+  },
+  "projects": [
+    {
+      "project_id": 0,
+      "release_date": 0,
+      "num_jobs": 12,
+      "artificial_source_job_id": 0,
+      "artificial_sink_job_id": 11
+    }
+  ],
+  "resources": {
+    "renewable": [
+      {
+        "resource_id": 0,
+        "capacity": 4
+      },
+      {
+        "resource_id": 1,
+        "capacity": 4
+      }
+    ],
+    "nonrenewable": [
+      {
+        "resource_id": 0,
+        "capacity": 20
+      },
+      {
+        "resource_id": 1,
+        "capacity": 20
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "job_id": 0,
+      "project_id": 0,
+      "type": "artificial_source",
+      "successors": [
+        2
+      ],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 0,
+          "renewable_consumption": [
+            0,
+            0
+          ],
+          "nonrenewable_consumption": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 1,
+      "project_id": 0,
+      "type": "real",
+      "successors": [
+        11
+      ],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 6,
+          "renewable_consumption": [
+            2,
+            1
+          ],
+          "nonrenewable_consumption": [
+            1,
+            1
+          ]
+        },
+        {
+          "mode_id": 1,
+          "duration": 6,
+          "renewable_consumption": [
+            0,
+            0
+          ],
+          "nonrenewable_consumption": [
+            3,
+            0
+          ]
+        },
+        {
+          "mode_id": 2,
+          "duration": 1,
+          "renewable_consumption": [
+            0,
+            1
+          ],
+          "nonrenewable_consumption": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 2,
+      "project_id": 0,
+      "type": "real",
+      "successors": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 5,
+          "renewable_consumption": [
+            1,
+            4
+          ],
+          "nonrenewable_consumption": [
+            3,
+            1
+          ]
+        },
+        {
+          "mode_id": 1,
+          "duration": 4,
+          "renewable_consumption": [
+            2,
+            0
+          ],
+          "nonrenewable_consumption": [
+            1,
+            3
+          ]
+        },
+        {
+          "mode_id": 2,
+          "duration": 3,
+          "renewable_consumption": [
+            2,
+            1
+          ],
+          "nonrenewable_consumption": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 3,
+      "project_id": 0,
+      "type": "real",
+      "successors": [
+        11
+      ],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 1,
+          "renewable_consumption": [
+            0,
+            3
+          ],
+          "nonrenewable_consumption": [
+            0,
+            2
+          ]
+        },
+        {
+          "mode_id": 1,
+          "duration": 3,
+          "renewable_consumption": [
+            2,
+            0
+          ],
+          "nonrenewable_consumption": [
+            3,
+            0
+          ]
+        },
+        {
+          "mode_id": 2,
+          "duration": 4,
+          "renewable_consumption": [
+            0,
+            2
+          ],
+          "nonrenewable_consumption": [
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 4,
+      "project_id": 0,
+      "type": "real",
+      "successors": [
+        8
+      ],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 6,
+          "renewable_consumption": [
+            0,
+            0
+          ],
+          "nonrenewable_consumption": [
+            1,
+            2
+          ]
+        },
+        {
+          "mode_id": 1,
+          "duration": 1,
+          "renewable_consumption": [
+            1,
+            0
+          ],
+          "nonrenewable_consumption": [
+            3,
+            2
+          ]
+        },
+        {
+          "mode_id": 2,
+          "duration": 4,
+          "renewable_consumption": [
+            2,
+            1
+          ],
+          "nonrenewable_consumption": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 5,
+      "project_id": 0,
+      "type": "real",
+      "successors": [
+        3
+      ],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 2,
+          "renewable_consumption": [
+            2,
+            0
+          ],
+          "nonrenewable_consumption": [
+            1,
+            1
+          ]
+        },
+        {
+          "mode_id": 1,
+          "duration": 2,
+          "renewable_consumption": [
+            3,
+            3
+          ],
+          "nonrenewable_consumption": [
+            2,
+            1
+          ]
+        },
+        {
+          "mode_id": 2,
+          "duration": 6,
+          "renewable_consumption": [
+            2,
+            0
+          ],
+          "nonrenewable_consumption": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 6,
+      "project_id": 0,
+      "type": "real",
+      "successors": [
+        10
+      ],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 3,
+          "renewable_consumption": [
+            3,
+            2
+          ],
+          "nonrenewable_consumption": [
+            0,
+            1
+          ]
+        },
+        {
+          "mode_id": 1,
+          "duration": 5,
+          "renewable_consumption": [
+            2,
+            1
+          ],
+          "nonrenewable_consumption": [
+            3,
+            3
+          ]
+        },
+        {
+          "mode_id": 2,
+          "duration": 6,
+          "renewable_consumption": [
+            3,
+            1
+          ],
+          "nonrenewable_consumption": [
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 7,
+      "project_id": 0,
+      "type": "real",
+      "successors": [
+        1,
+        3,
+        5,
+        8,
+        10
+      ],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 2,
+          "renewable_consumption": [
+            4,
+            4
+          ],
+          "nonrenewable_consumption": [
+            2,
+            3
+          ]
+        },
+        {
+          "mode_id": 1,
+          "duration": 5,
+          "renewable_consumption": [
+            3,
+            2
+          ],
+          "nonrenewable_consumption": [
+            1,
+            1
+          ]
+        },
+        {
+          "mode_id": 2,
+          "duration": 5,
+          "renewable_consumption": [
+            3,
+            0
+          ],
+          "nonrenewable_consumption": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 8,
+      "project_id": 0,
+      "type": "real",
+      "successors": [
+        11
+      ],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 2,
+          "renewable_consumption": [
+            1,
+            3
+          ],
+          "nonrenewable_consumption": [
+            0,
+            3
+          ]
+        },
+        {
+          "mode_id": 1,
+          "duration": 4,
+          "renewable_consumption": [
+            3,
+            2
+          ],
+          "nonrenewable_consumption": [
+            0,
+            0
+          ]
+        },
+        {
+          "mode_id": 2,
+          "duration": 6,
+          "renewable_consumption": [
+            2,
+            2
+          ],
+          "nonrenewable_consumption": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 9,
+      "project_id": 0,
+      "type": "real",
+      "successors": [
+        11
+      ],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 4,
+          "renewable_consumption": [
+            1,
+            3
+          ],
+          "nonrenewable_consumption": [
+            0,
+            2
+          ]
+        },
+        {
+          "mode_id": 1,
+          "duration": 5,
+          "renewable_consumption": [
+            1,
+            0
+          ],
+          "nonrenewable_consumption": [
+            2,
+            1
+          ]
+        },
+        {
+          "mode_id": 2,
+          "duration": 2,
+          "renewable_consumption": [
+            2,
+            1
+          ],
+          "nonrenewable_consumption": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 10,
+      "project_id": 0,
+      "type": "real",
+      "successors": [
+        11
+      ],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 4,
+          "renewable_consumption": [
+            0,
+            0
+          ],
+          "nonrenewable_consumption": [
+            2,
+            2
+          ]
+        },
+        {
+          "mode_id": 1,
+          "duration": 2,
+          "renewable_consumption": [
+            0,
+            1
+          ],
+          "nonrenewable_consumption": [
+            0,
+            0
+          ]
+        },
+        {
+          "mode_id": 2,
+          "duration": 6,
+          "renewable_consumption": [
+            3,
+            0
+          ],
+          "nonrenewable_consumption": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 11,
+      "project_id": 0,
+      "type": "artificial_sink",
+      "successors": [],
+      "modes": [
+        {
+          "mode_id": 0,
+          "duration": 0,
+          "renewable_consumption": [
+            0,
+            0
+          ],
+          "nonrenewable_consumption": [
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

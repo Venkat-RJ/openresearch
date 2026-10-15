@@ -1,0 +1,12 @@
+{
+  "objective_value": "<float> Equal-weighted combined cost (one-half of the first total cost plus one-half of the second total cost) at the non-dominated solution that minimizes this weighted sum.",
+  "pareto_front": "<list[list[int]], shape [num_nondominated_points][2]> Complete set of non-dominated cost pairs, each pair giving the first total cost and the second total cost of a non-dominated solution.",
+  "solutions": [
+    {
+      "z1": "<int> First total cost (sum of fixed opening costs and assignment costs under the first cost structure) of this non-dominated solution.",
+      "z2": "<int> Second total cost (sum of fixed opening costs and assignment costs under the second cost structure) of this non-dominated solution.",
+      "open_facilities": "<list[int]> Indices of facilities that are opened in this non-dominated solution.",
+      "assignments": "<dict, key: '{customer}'> Index of the open facility to which each customer is assigned in this non-dominated solution."
+    }
+  ]
+}

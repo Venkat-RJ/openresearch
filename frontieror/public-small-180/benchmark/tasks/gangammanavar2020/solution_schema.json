@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Expected total cost across all demand scenarios, comprising holding, backlog penalty, and transshipment costs.",
+  "s": "<list[float], length N> Order-up-to stock level positioned at each retailer before demand is observed.",
+  "scenarios": "<list[dict], length num_scenarios> Per-scenario allocation and fulfillment plan, where each entry has fields 'e' (<list[float], length N> ending inventory remaining at each retailer after serving demand and shipping out goods), 'f' (<list[float], length N> on-hand stock used directly to serve local customer demand at each retailer), 'q' (<list[float], length N> portion of each retailer's order-up-to level not consumed as ending inventory, used in the inventory-replenishment balance), 'r' (<list[float], length N> backlogged demand at each retailer that could not be fulfilled from on-hand stock or inbound transshipments), and 't' (<list[list[float]], shape [N][N]> goods shipped from each origin retailer (row) to each destination retailer (column), with zero on the diagonal)."
+}

@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Total cost including initial inventory costs, setup costs, variable production costs, and holding costs.",
+  "production": "<list[list[float]], shape [num_items][num_periods]> Quantity of each item produced on the machine in each period.",
+  "setup": "<list[list[int]], shape [num_items][num_periods]> Whether the machine is set up to produce each item in each period (1 = yes, 0 = no).",
+  "inventory": "<list[list[float]], shape [num_items][num_periods+1]> Stock of each item on hand at each point in time, where the first entry is the initial inventory before the first period and subsequent entries are the inventory at the end of each period."
+}

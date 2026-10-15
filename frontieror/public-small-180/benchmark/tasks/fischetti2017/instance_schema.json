@@ -1,0 +1,10 @@
+{
+  "num_facilities": "<int> Number of potential facility locations that may be opened.",
+  "num_customers": "<int> Number of customers that must be served by open facilities.",
+  "facility_locations_x": "<list[float], length num_facilities> Horizontal coordinate of each potential facility location.",
+  "facility_locations_y": "<list[float], length num_facilities> Vertical coordinate of each potential facility location.",
+  "customer_locations_x": "<list[float], length num_customers> Horizontal coordinate of each customer location.",
+  "customer_locations_y": "<list[float], length num_customers> Vertical coordinate of each customer location.",
+  "opening_costs": "<list[float], length num_facilities> Cost incurred for opening each facility.",
+  "allocation_costs": "<list[list[float]], shape [num_facilities][num_customers]> Cost coefficient for serving each customer from each facility."
+}

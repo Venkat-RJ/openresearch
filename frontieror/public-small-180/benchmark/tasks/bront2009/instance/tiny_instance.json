@@ -1,0 +1,187 @@
+{
+  "instance_id": 1,
+  "description": "Example 0 from paper (3 cities, 3 legs, 8 products, 5 segments) with alpha=0.6 (scarce capacity)",
+  "source": "Bront et al. (2009), Section 3, Figure 1, Table 1",
+  "network": {
+    "num_cities": 3,
+    "city_names": [
+      "A",
+      "B",
+      "C"
+    ],
+    "num_legs": 3,
+    "legs": [
+      {
+        "leg_id": 1,
+        "origin": "A",
+        "destination": "B",
+        "capacity": 6
+      },
+      {
+        "leg_id": 2,
+        "origin": "A",
+        "destination": "C",
+        "capacity": 3
+      },
+      {
+        "leg_id": 3,
+        "origin": "B",
+        "destination": "C",
+        "capacity": 3
+      }
+    ]
+  },
+  "products": [
+    {
+      "product_id": 1,
+      "origin_destination": "A->C",
+      "class": "H",
+      "fare": 1200,
+      "legs_used": [
+        2
+      ]
+    },
+    {
+      "product_id": 2,
+      "origin_destination": "A->B->C",
+      "class": "H",
+      "fare": 800,
+      "legs_used": [
+        1,
+        3
+      ]
+    },
+    {
+      "product_id": 3,
+      "origin_destination": "A->B",
+      "class": "H",
+      "fare": 500,
+      "legs_used": [
+        1
+      ]
+    },
+    {
+      "product_id": 4,
+      "origin_destination": "B->C",
+      "class": "H",
+      "fare": 500,
+      "legs_used": [
+        3
+      ]
+    },
+    {
+      "product_id": 5,
+      "origin_destination": "A->C",
+      "class": "L",
+      "fare": 800,
+      "legs_used": [
+        2
+      ]
+    },
+    {
+      "product_id": 6,
+      "origin_destination": "A->B->C",
+      "class": "L",
+      "fare": 500,
+      "legs_used": [
+        1,
+        3
+      ]
+    },
+    {
+      "product_id": 7,
+      "origin_destination": "A->B",
+      "class": "L",
+      "fare": 300,
+      "legs_used": [
+        1
+      ]
+    },
+    {
+      "product_id": 8,
+      "origin_destination": "B->C",
+      "class": "L",
+      "fare": 300,
+      "legs_used": [
+        3
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": 1,
+      "lambda_l": 0.15,
+      "consideration_set": [
+        1,
+        5
+      ],
+      "preference_vector": [
+        5,
+        8
+      ],
+      "no_purchase_preference": 2,
+      "description": "Price sensitive, Nonstop (A->C)"
+    },
+    {
+      "segment_id": 2,
+      "lambda_l": 0.15,
+      "consideration_set": [
+        1,
+        2
+      ],
+      "preference_vector": [
+        10,
+        6
+      ],
+      "no_purchase_preference": 5,
+      "description": "Price insensitive (A->C)"
+    },
+    {
+      "segment_id": 3,
+      "lambda_l": 0.2,
+      "consideration_set": [
+        5,
+        6
+      ],
+      "preference_vector": [
+        8,
+        5
+      ],
+      "no_purchase_preference": 2,
+      "description": "Price sensitive (A->C)"
+    },
+    {
+      "segment_id": 4,
+      "lambda_l": 0.25,
+      "consideration_set": [
+        3,
+        7
+      ],
+      "preference_vector": [
+        4,
+        8
+      ],
+      "no_purchase_preference": 2,
+      "description": "Price sensitive (A->B)"
+    },
+    {
+      "segment_id": 5,
+      "lambda_l": 0.25,
+      "consideration_set": [
+        4,
+        8
+      ],
+      "preference_vector": [
+        6,
+        8
+      ],
+      "no_purchase_preference": 2,
+      "description": "Price sensitive (B->C)"
+    }
+  ],
+  "booking_horizon": {
+    "T": 30
+  },
+  "alpha": 0.6,
+  "lambda": 1.0
+}

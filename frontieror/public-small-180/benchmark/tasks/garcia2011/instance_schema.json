@@ -1,0 +1,6 @@
+{
+  "n": "<int> Total number of nodes (customers) in the network.",
+  "p": "<int> Number of nodes to be selected as facility sites (medians).",
+  "node_coordinates": "<list[list[int]], shape [n][2]> Two-dimensional integer coordinates for each node.",
+  "cost_matrix": "<list[list[int]], shape [n][n]> Pairwise service cost between every pair of nodes, where the cost from a node to itself is zero."
+}

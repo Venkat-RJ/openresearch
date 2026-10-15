@@ -1,0 +1,25 @@
+{
+  "n_nodes": "<int> Total number of cities in the air transportation network, each serving as an origin, destination, and candidate hub location.",
+  "p": "<int> Number of hubs the entering airline must open.",
+  "r": "<int> Number of hubs operated by the competing incumbent airline.",
+  "nodes": [
+    {
+      "id": "<int> Zero-based identifier of the city.",
+      "x": "<float> Horizontal spatial coordinate of the city.",
+      "y": "<float> Vertical spatial coordinate of the city.",
+      "waiting_time": "<float> Fixed layover delay passengers experience at this city's airport."
+    }
+  ],
+  "demand_matrix": "<list[list[int]], shape [n_nodes][n_nodes]> Number of passengers wishing to travel from each origin city to each destination city.",
+  "distance_matrix": "<list[list[float]], shape [n_nodes][n_nodes]> Euclidean distance between each pair of cities.",
+  "competitor_hub_locations": "<list[int], length r> Node identifiers of the incumbent airline's fixed hub airports.",
+  "parameters": {
+    "alpha": "<float> Discount factor applied to the fare on the hub-to-hub leg of a two-hub route, reflecting economies of scale.",
+    "gamma": "<float> Weight controlling how much passengers value travel time relative to fare when choosing a route.",
+    "beta": "<float> Exponent governing how steeply route attractiveness decays with increasing travel time.",
+    "lambda": "<float> Exponent governing how steeply route attractiveness decays with increasing fare.",
+    "cost_scalar": "<float> Proportionality constant converting distances into fares.",
+    "attractiveness_2hub": "<float> Base attractiveness value assigned to routes passing through two distinct hubs.",
+    "attractiveness_1hub": "<float> Base attractiveness value assigned to routes passing through a single hub."
+  }
+}

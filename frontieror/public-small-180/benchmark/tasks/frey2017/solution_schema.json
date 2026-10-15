@@ -1,0 +1,22 @@
+{
+  "objective_value": "<float> Total penalty incurred from carousel utilization exceeding the target across all carousels, threshold levels, and peak intervals.",
+  "assignments": [
+    {
+      "flight_id": "<int> Identifier of the flight being scheduled.",
+      "carousel_id": "<int> Identifier of the carousel chosen to handle this flight's baggage.",
+      "carousel_type": "<int> Type of the chosen carousel, which determines its capacity characteristics.",
+      "working_stations": "<int> Number of working stations allocated to this flight at the chosen carousel.",
+      "handling_start_period": "<int> Period in which baggage handling for this flight begins at the carousel.",
+      "depletion_start_period": "<int> Period in which transfer of this flight's bags from central storage to the carousel begins.",
+      "end_period": "<int> Period by which baggage handling for this flight must conclude."
+    }
+  ],
+  "utilization_violations": [
+    {
+      "carousel_id": "<int> Identifier of the carousel whose utilization exceeded the target during the peak interval.",
+      "peak_interval": "<int> Identifier of the peak interval in which the utilization overshoot is flagged.",
+      "threshold_level": "<int> Index of the threshold level flagged as exceeded for this carousel and peak interval.",
+      "threshold_value": "<float> Value of the flagged threshold used as the allowable overshoot above the target utilization."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Problem Description
+
+Given an undirected graph with a specified set of vertices and a specified set of edges connecting pairs of vertices, the task is to assign a color to every vertex such that no two vertices connected by an edge share the same color, using the fewest colors possible. The number of colors used equals the chromatic number of the graph.
+
+Every vertex must receive exactly one color. Two vertices that are directly connected by an edge must receive different colors. The goal is to minimize the total number of distinct colors used across all vertices.
+
+The input data for an instance consists of the number of vertices, the number of edges, and the list of edges, where each edge is an unordered pair of distinct vertices. An instance may also provide auxiliary lower and upper bounds on the chromatic number.

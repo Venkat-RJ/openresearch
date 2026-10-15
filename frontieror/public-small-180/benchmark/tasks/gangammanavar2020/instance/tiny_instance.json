@@ -1,0 +1,162 @@
+{
+  "problem_type": "transship",
+  "description": "Multilocation Transshipment Problem with Random Cost Coefficients",
+  "source": "Gangammanavar, Liu, Sen (2020), based on Herer et al. (2006)",
+  "instance_index": 1,
+  "seed": 1042,
+  "N": 3,
+  "retailer_locations": [
+    [
+      27.46,
+      36.96
+    ],
+    [
+      89.16,
+      84.62
+    ],
+    [
+      49.04,
+      94.74
+    ]
+  ],
+  "first_stage": {
+    "description": "Order-up-to quantities s_i >= 0 for each retailer",
+    "num_variables": 3,
+    "num_constraints": 0,
+    "variable_lower_bounds": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "second_stage": {
+    "description": "Determine ending inventory, backlog, and transshipment quantities to minimize expected cost",
+    "num_variables": 21,
+    "num_constraints": 13,
+    "holding_costs": [
+      1.639,
+      1.2216,
+      0.7571
+    ],
+    "penalty_costs": [
+      6.131,
+      6.688,
+      7.3958
+    ],
+    "transshipment_costs_mean": [
+      [
+        0.0,
+        2.9561,
+        2.5525
+      ],
+      [
+        2.9715,
+        0.0,
+        1.8795
+      ],
+      [
+        2.5476,
+        1.8697,
+        0.0
+      ]
+    ],
+    "transshipment_costs_std": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.3759
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "random_cost_links": [
+      [
+        1,
+        2
+      ]
+    ],
+    "random_cost_std_fraction": 0.2,
+    "random_cost_distribution": "Normal(mean=c_ij, std=0.2*c_ij) for selected links",
+    "mean_demands": [
+      30.7,
+      40.5,
+      18.1
+    ],
+    "demand_distribution": {
+      "type": "discrete",
+      "num_scenarios": 8,
+      "scenarios": [
+        [
+          28.91,
+          41.86,
+          26.08
+        ],
+        [
+          34.79,
+          51.08,
+          15.84
+        ],
+        [
+          27.07,
+          36.46,
+          18.58
+        ],
+        [
+          28.71,
+          39.45,
+          16.45
+        ],
+        [
+          30.89,
+          32.23,
+          15.45
+        ],
+        [
+          20.13,
+          47.51,
+          16.41
+        ],
+        [
+          31.31,
+          27.15,
+          15.32
+        ],
+        [
+          9.55,
+          67.17,
+          21.6
+        ]
+      ],
+      "probabilities": [
+        0.063324,
+        0.051975,
+        0.189114,
+        0.126725,
+        0.125031,
+        0.073401,
+        0.188582,
+        0.181848
+      ]
+    }
+  },
+  "formulation": {
+    "first_stage_objective": "min_{s >= 0} E[h(s, omega)]",
+    "second_stage_objective": "h(s, omega) = min sum_i(h_i*e_i + p_i*r_i) + sum_{i!=j}(c_ij(omega)*t_ij)",
+    "constraints": [
+      "f_i + sum_{j!=i} t_{ij} + e_i = s_i, for all i (stock allocation)",
+      "f_i + sum_{j!=i} t_{ji} + r_i = d_i(omega), for all i (demand satisfaction)",
+      "e_i + q_i = s_i, for all i (inventory-replenishment balance)",
+      "sum_i(r_i + q_i) = sum_i d_i(omega) (total system balance)",
+      "e_i, f_i, q_i, r_i, t_{ij} >= 0 (non-negativity)"
+    ],
+    "recourse_property": "Relatively complete recourse: backlog variables r_i can absorb any unmet demand for any s >= 0 and any demand realization"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "n_clients": "<int> Number of clients that must each be assigned to a server.",
+  "n_servers": "<int> Number of servers available to process client demands.",
+  "out_of_star_density": "<float> Fraction of cross-server assignment pairs that carry a nonzero pairwise interaction cost.",
+  "demands": "<list[float], length n_clients> Processing demand of each client.",
+  "processing_rates": "<list[float], length n_servers> Processing rate of each server.",
+  "linear_costs": "<list[list[float]], shape [n_clients][n_servers]> Cost of assigning each client to each server, equal to the product of the client's demand and the server's processing rate.",
+  "quadratic_costs": "<list[list[float]], shape [n_quadratic_pairs][5]> Pairwise interaction costs, where each entry is [client_1, server_1, client_2, server_2, cost] representing the joint cost incurred when client_1 is assigned to server_1 and client_2 is assigned to server_2 simultaneously."
+}

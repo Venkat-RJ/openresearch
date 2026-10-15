@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total cost of the solution, including fixed costs of opened plants and shipping costs from plants to customers.",
+  "open_plants": "<list[int]> Indices of the plants that are opened to serve customers.",
+  "assignments": "<dict[str, dict[str, float]], key: '{customer}' mapping to inner key '{plant}'> Fraction of each customer's demand supplied by each plant."
+}

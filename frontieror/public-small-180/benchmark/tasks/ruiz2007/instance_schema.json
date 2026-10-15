@@ -1,0 +1,7 @@
+{
+  "n_jobs": "<int> Number of jobs to be processed through the production line.",
+  "n_machines": "<int> Number of machines arranged sequentially in the production line.",
+  "no_idle_machines": "<list[int], length varies> Machines (1-indexed) designated as no-idle, where processing must be continuous with no gaps between consecutive jobs.",
+  "no_idle_flags": "<list[bool], length n_machines> Whether each machine (0-indexed) is designated as no-idle, requiring continuous processing with no gaps between consecutive jobs.",
+  "processing_times": "<list[list[int]], shape [n_jobs][n_machines]> Time required for each job to be processed on each machine."
+}

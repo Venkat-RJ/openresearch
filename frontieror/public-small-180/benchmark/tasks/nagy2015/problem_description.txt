@@ -1,0 +1,9 @@
+# Problem Description
+
+A logistics company operates a fleet of identical vehicles from a single depot to serve a set of customers. Each customer has a delivery demand (goods to be brought from the depot) and a pickup demand (goods to be collected and returned to the depot). All delivery goods originate at the depot and all pickup goods must be transported back to the depot; goods may not be transferred directly between customers. The key feature of this problem is that a customer's delivery request and its pickup request may be served on separate visits by different vehicles. Each individual request (delivery or pickup) must, however, be fulfilled entirely in a single visit. The company has an unlimited number of vehicles available, all sharing the same capacity.
+
+The input data consists of the number of customers n, the vehicle capacity C, the delivery demand for each customer, the pickup demand for each customer, and a symmetric distance matrix giving the distance between the depot and every customer and between every pair of customers. Distances are Euclidean, rounded to the nearest integer.
+
+The company must design vehicle routes that serve every customer's delivery demand and every customer's pickup demand. Each individual delivery request must be fulfilled in a single visit by one vehicle, and each individual pickup request must be fulfilled in a single visit by one vehicle; the delivery and pickup for the same customer may be performed on the same trip or on separate trips by different vehicles. Each vehicle starts and ends at the depot. At any point during a vehicle's trip the total cargo on board (delivery goods still to be dropped off plus pickup goods already collected) must not exceed the vehicle capacity. A vehicle leaves the depot carrying only delivery goods and returns to the depot carrying only pickup goods.
+
+The goal is to minimize the total distance traveled by all vehicles, summed over all legs of all trips.

@@ -1,0 +1,12 @@
+{
+  "objective_value": "<float> Total travel cost summed over all arcs traversed by all vehicles across all depots and periods.",
+  "routes": [
+    {
+      "depot": "<int> Zero-based depot identifier.",
+      "period": "<int> One-based period identifier.",
+      "vehicle": "<int> One-based vehicle identifier local to the assigned depot; valid values are 1 through instance field m.",
+      "customers": "<list[int]> Ordered zero-based customer identifiers, excluding the depot."
+    }
+  ],
+  "assignments": "<dict, key: '{customer_id}'> Joint depot-and-pattern assignment for each customer, where each value is an object with 'depot' (identifier of the depot serving the customer) and 'pattern' (list of periods on which the customer is visited)."
+}

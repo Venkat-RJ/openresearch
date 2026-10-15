@@ -1,0 +1,89 @@
+{
+  "scope": "Documented development workflow and separate completed final comparison",
+  "kind": "Artifact and source mapping, not a measured elapsed-time timeline",
+  "source_snapshots": {
+    "research-worker.py": {
+      "original": "campaign/objective-research/runner-source.py",
+      "portable": "workflow/source/research-worker.py",
+      "sha256": "b8785aacd2a4f2618e69708a33736c4c7a03ff76e7f18f33aef16ce9d3169f9c",
+      "scope": "Saved research-worker snapshot; custom tool implementation"
+    },
+    "campaign.py": {
+      "original": "pilot/campaign.py",
+      "portable": "workflow/source/campaign.py",
+      "sha256": "33e4fcb95fcbe30b73238010d3a05dd246b25e0e7ab25548aa812738034b9363",
+      "scope": "Campaign record and readback helpers at article preparation"
+    },
+    "dispatch_baseline.py": {
+      "original": "pilot/dispatch_baseline.py",
+      "portable": "workflow/source/dispatch_baseline.py",
+      "sha256": "05a51ce6cbb869c0924ccab6687837da5ced63f4b15bb660e671dea7ea43a6fb",
+      "scope": "Codex dispatch baseline source"
+    },
+    "cpsat_baseline.py": {
+      "original": "pilot/cpsat_baseline.py",
+      "portable": "workflow/source/cpsat_baseline.py",
+      "sha256": "242fcf784c5440666f91baad2e1f2c82b34c3d1d157d984af11193209008a02d",
+      "scope": "Codex initial CP-SAT baseline source, distinct from Sagent LNS"
+    }
+  },
+  "tools": [
+    {
+      "name": "CampaignState",
+      "actor": "Sagent reads; Codex implemented the tool",
+      "input": "Record offset",
+      "output": "Objective, record index, candidate versions and pending interpretation"
+    },
+    {
+      "name": "SaveSolver",
+      "actor": "Sagent proposes; custom tool stores",
+      "input": "Hypothesis and complete standalone source",
+      "output": "Candidate ID, source SHA-256 and linked Trackinizer CodeChange"
+    },
+    {
+      "name": "EvaluateSolver",
+      "actor": "Sagent selects experiment; custom runner executes and checks",
+      "input": "Candidate, instances, budget, seed and worker count",
+      "output": "Saved schedules, timing, logs, both validation results, linked experiment and observation with readback"
+    },
+    {
+      "name": "RecordConclusion",
+      "actor": "Sagent interprets; custom tool writes and reads back",
+      "input": "Pending experiment ID, interpretation and next step",
+      "output": "Linked belief and cleared pending interpretation"
+    }
+  ],
+  "recording_gate": "Another EvaluateSolver call is blocked while the preceding interpretation is pending; persistence failure raises an error.",
+  "example": {
+    "source": "assets/research-decision.json",
+    "experiment": "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+    "belief": "73b95dd4-3437-4ce9-bf71-00139315f2b7",
+    "codechange": "3320aab5-d27f-4d1a-a8dc-d8999b7146ca",
+    "solver_source_sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e"
+  },
+  "final_study": {
+    "protocol": "final/plan-before-generation.json",
+    "runner": "final/source/final_comparison.py",
+    "audit": "final/independent-audit/audit-source.py",
+    "experiment": "30259df7-e529-4d91-a667-98dc707a25f9",
+    "conclusion": "4e0b7540-a429-41ff-9f21-8378d4d8ccc2",
+    "executions": 180,
+    "cases": 30,
+    "masking": "Protocol prohibited feeding intermediate scores to Sagent or changing frozen implementations; not a filesystem access-control claim"
+  },
+  "figures": {
+    "script": "scripts/plot_final.py",
+    "inputs": [
+      "assets/final-instance-data.json",
+      "assets/final-analysis.json"
+    ],
+    "kind": "Generated after the completed independent audit, from saved observations"
+  },
+  "recording": {
+    "source": "assets/trackinizer-research-replay.json",
+    "web_copy": "assets/trackinizer-research-replay.mp4",
+    "scope": "Actual development UI recording, captured 8 October before final completion. Record replay is not elapsed solver time."
+  },
+  "new_solver_runs": 0,
+  "database_export": false
+}

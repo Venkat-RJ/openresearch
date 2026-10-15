@@ -1,0 +1,25 @@
+{
+  "dimensions": {
+    "n": "<int> Number of item types to be produced.",
+    "m": "<int> Number of parallel machines available for production.",
+    "p": "<int> Number of planning periods in the horizon."
+  },
+  "parameters": {
+    "Cut": "<float> Capacity utilization factor scaling total demand to determine base machine capacity.",
+    "CutVar": "<float> Capacity variation factor controlling the spread of capacity across machines.",
+    "Theta": "<int> Multiplier applied to setup times to compute the corresponding setup costs.",
+    "MProb": "<float> Probability that each additional machine is eligible to produce a given item.",
+    "MBal": "<float> Maximum allowed imbalance in the number of items assignable to any two machines, as a fraction of n."
+  },
+  "demands": "<list[list[int]], shape [n][p]> Quantity of each item that must be delivered in each period.",
+  "inventory_costs": "<list[int], length n> Per-unit cost of holding one unit of each item in inventory for one period.",
+  "processing_time": "<int> Time required to produce one unit of any item on any machine.",
+  "setup_times": "<list[list[list[int]]], shape [n][n][m]> Time needed to change each machine from producing one item to another.",
+  "setup_costs": "<list[list[list[int]]], shape [n][n][m]> Cost incurred when changing each machine from producing one item to another.",
+  "machine_capacities": "<list[list[int]], shape [m][p]> Available production time on each machine in each period.",
+  "max_production": "<list[list[int]], shape [n][p]> Maximum quantity of each item that can be produced from each period onward.",
+  "max_setups_per_item": "<list[list[list[int]]], shape [n][m][p]> Maximum number of times each machine can be set up to produce a given item in a given period.",
+  "minimum_lot_sizes": "<list[int], length n> Minimum production batch size required for each item when its setup is not carried over.",
+  "shortcut_items": "<list[int], length ceil(n/10)> Indices of items with cleansing properties that reduce transition costs and times when used as intermediaries.",
+  "machine_eligibility": "<list[list[int]], shape [n][m]> Whether each machine is allowed to produce each item (1 = eligible, 0 = not eligible)."
+}

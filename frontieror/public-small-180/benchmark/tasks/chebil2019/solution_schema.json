@@ -1,0 +1,10 @@
+{
+  "objective_value": "<float> Net profit, equal to total profit of selected items minus total setup cost of activated families.",
+  "families_selected": "<list[int], length num_selected_families> Identifiers of families that are activated so their items become eligible to enter the knapsack.",
+  "items_selected": [
+    {
+      "family": "<int> Family to which this selected item belongs.",
+      "item": "<int> Identifier of the selected item within its family."
+    }
+  ]
+}

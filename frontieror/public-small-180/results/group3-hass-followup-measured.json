@@ -1,0 +1,78 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "task": "hassannayebi2016",
+  "batch": "final300-logging2",
+  "budget_seconds": 300,
+  "scope": "Targeted root sequential officialDocker tiny followup; no local optimize or solver run",
+  "source_sha256": "f1fc94f9b5368af0972cb88fe816ab0b901841ef2819a58ff4e514150a43fd54",
+  "solution_sha256": "0e51a236422273e2392400d9bd4f39c42097ab345d6821ea9bbf9d812a9473a3",
+  "native_experiment": "c040d489-4271-4e5f-a4eb-ae9932b24001",
+  "native_experiment_exact_GET_readback": true,
+  "objective": 323.3333333333333,
+  "reference": 323.3333333333333,
+  "native_time_seconds": 0.53,
+  "status": "pass",
+  "classification": "Reference tie; original grade preserved; full FIFO incumbent emission and retention verified on all6 snapshots",
+  "snapshot_checks": [
+    {
+      "event": 1,
+      "time": 0.012,
+      "objective": 392.000000008909,
+      "official_checker_feasible": true,
+      "exact_FIFO_matches_event_and_snapshot": true,
+      "AWT_matches": true
+    },
+    {
+      "event": 2,
+      "time": 0.038,
+      "objective": 390.6,
+      "official_checker_feasible": true,
+      "exact_FIFO_matches_event_and_snapshot": true,
+      "AWT_matches": true
+    },
+    {
+      "event": 3,
+      "time": 0.088,
+      "objective": 340.3006993006993,
+      "official_checker_feasible": true,
+      "exact_FIFO_matches_event_and_snapshot": true,
+      "AWT_matches": true
+    },
+    {
+      "event": 4,
+      "time": 0.089,
+      "objective": 327.0,
+      "official_checker_feasible": true,
+      "exact_FIFO_matches_event_and_snapshot": true,
+      "AWT_matches": true
+    },
+    {
+      "event": 5,
+      "time": 0.092,
+      "objective": 323.33333333333337,
+      "official_checker_feasible": true,
+      "exact_FIFO_matches_event_and_snapshot": true,
+      "AWT_matches": true
+    },
+    {
+      "event": 6,
+      "time": 0.278,
+      "objective": 323.3333333333333,
+      "official_checker_feasible": true,
+      "exact_FIFO_matches_event_and_snapshot": true,
+      "AWT_matches": true
+    }
+  ],
+  "terminal_exact_event_equal": true,
+  "terminal_departures_equal_last_snapshot": true,
+  "primary_report_sha256_unchanged": "2964b551d2f970e7482e1d4882e8daf929c4af6e505a6d50be24ae4662ee336d",
+  "primary_frozen_source_unchanged": "41edd54d2b195991a169542ebc8752d6ba467a1aa84d5919c4efe3f52606827a",
+  "official_checker_method": "Existing pure check_feasibility for each snapshot; exact FIFO rhs exposed by constraint27 diagnostic on in-memory objective0 copy; no custom scorer/checker changes/optimize",
+  "AOCC_QTE": "No hardened or matched-hardware compliance claim; only witnessed trueFIFO stream integrity verified",
+  "previous_scalar_qualification": "Old scalar323.3333331772154 lacked departure witness; no retrospective objectivebeat certification. Followup returned323.3333333333333 tie.",
+  "hypothesis": "19224701-0b10-4c95-845f-fb7c82d00f41",
+  "readiness_experiment": "07dc634e-68a8-4d53-8d60-13e093289c9e",
+  "raw_outputs": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/final300-logging2/raw_outputs/hassannayebi2016",
+  "owner_conclusion": "2a59bc13-d252-4236-8772-4b669d50f845",
+  "owner_conclusion_readback_verified": true
+}

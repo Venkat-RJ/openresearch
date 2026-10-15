@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Total cost comprising facility opening costs and allocation costs.",
+  "variant": "<string, exactly 'quadratic'> Released qUFL benchmark variant.",
+  "y": "<list[int], length num_facilities> Whether each facility is opened (1) or not (0).",
+  "x": "<list[list[float]], shape [num_facilities][num_customers]> Fraction of each customer's demand served by each facility."
+}

@@ -1,0 +1,14 @@
+{
+  "num_customers": "<int> Number of customers to be served by the supplier.",
+  "num_periods": "<int> Number of discrete time periods in the planning horizon.",
+  "num_vehicles": "<int> Number of identical vehicles available for deliveries each period.",
+  "vehicle_capacity": "<int> Maximum total quantity that a single vehicle can carry on one route.",
+  "num_nodes": "<int> Total number of locations, including the depot (index 0) and all customers.",
+  "coordinates": "<list[list[int]], shape [num_nodes][2]> X and Y coordinates of each location on a plane.",
+  "distance_matrix": "<list[list[int]], shape [num_nodes][num_nodes]> Symmetric travel cost between each pair of locations, computed as rounded Euclidean distance.",
+  "holding_costs": "<list[float], length num_nodes> Per-unit cost charged on inventory remaining at each location at the end of each period.",
+  "customer_demands": "<list[list[int]], shape [num_customers][num_periods]> Quantity of commodity consumed by each customer in each period.",
+  "supplier_production": "<list[int], length num_periods> Quantity of commodity produced at the depot in each period.",
+  "inventory_capacities": "<list[int], length num_nodes> Maximum inventory that can be stored at each location, with index 0 for the depot and the rest for customers.",
+  "initial_inventories": "<list[int], length num_nodes> Inventory on hand at each location at the start of the planning horizon, with index 0 for the depot and the rest for customers."
+}

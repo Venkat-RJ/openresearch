@@ -1,0 +1,46 @@
+{
+  "verified_at_utc": "2026-10-14T19:17:44.754842+00:00",
+  "scope": "Offline verification of the local evidence archive; no optimization or network requests.",
+  "python": "3.11",
+  "archive_checks": {
+    "copied_file_hashes_verified": 6725,
+    "selected_task_sources_verified": 180,
+    "primary_and_followup_manifests_verified": true,
+    "featured_saved_solutions_checker_feasible": 5,
+    "large_saved_cases_checked": 10,
+    "large_incumbent_improvements": 7
+  },
+  "scheduling_checks": {
+    "execution_records": 291,
+    "valid_saved_schedules": 290,
+    "retained_development_failure": 1,
+    "final_executions": 180,
+    "final_valid_schedules": 180,
+    "final_instance_mean_wins": 29,
+    "final_instance_mean_losses": 1,
+    "registered_analysis_matches": true
+  },
+  "credential_scan": {
+    "method": "Private key, common GitHub/OpenAI/AWS token and credential-in-URL patterns over text artifacts",
+    "matches": 0,
+    "limit": "Pattern scan, not a guarantee that every form of sensitive data is absent."
+  },
+  "publication": {
+    "github_remote_created": false,
+    "website_published": false
+  },
+  "limits": [
+    "No external scientific replication",
+    "No new solver runs",
+    "No full benchmark rerun",
+    "Historical paths and record IDs retained in byte-preserved evidence"
+  ],
+  "navigation_checks": {
+    "local_archive_links_checked": 2082,
+    "broken_links": 0,
+    "article_evidence_links": 13,
+    "article_prose_preserved": true,
+    "article_figures": 8
+  },
+  "_release_note": "Historical original-evidence record. Hashes and publication state refer to the private prepublication snapshot, not the sanitized release. See release-manifest.json and verification-public.json."
+}

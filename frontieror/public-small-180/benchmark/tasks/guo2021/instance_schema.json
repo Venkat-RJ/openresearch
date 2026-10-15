@@ -1,0 +1,52 @@
+{
+  "num_patients": "<int> Total number of patients on the shared waiting list requiring surgery.",
+  "num_hospitals": "<int> Number of collaborating hospitals in the network.",
+  "num_days": "<int> Number of days in the planning horizon.",
+  "num_ors_per_hospital": "<int> Number of identical operating rooms available at each hospital.",
+  "num_mandatory_patients": "<int> Number of patients whose health status score meets or exceeds the mandatory threshold.",
+  "num_scenarios": "<int> Number of equally likely scenarios representing uncertain surgery durations.",
+  "global_parameters": {
+    "kappa_1": "<int> Per-unit benefit earned when a patient is scheduled for surgery.",
+    "kappa_2": "<int> Per-unit penalty incurred when a non-mandatory patient is postponed to a future planning horizon.",
+    "kappa_3": "<int> Per-unit cancellation cost applied to non-mandatory patients whose scheduled surgery is cancelled.",
+    "kappa_4": "<int> Per-unit cancellation cost applied to mandatory patients whose scheduled surgery is cancelled.",
+    "Gamma": "<int> Health status score threshold at or above which a patient is classified as mandatory.",
+    "duration_mean_minutes": "<float> Mean of the truncated lognormal distribution used to generate surgery durations, in minutes.",
+    "duration_std_minutes": "<float> Standard deviation of the truncated lognormal distribution used to generate surgery durations, in minutes.",
+    "duration_truncation_low_minutes": "<float> Lower truncation bound for surgery durations, in minutes.",
+    "duration_truncation_high_minutes": "<float> Upper truncation bound for surgery durations, in minutes."
+  },
+  "patients": [
+    {
+      "patient_id": "<int> Unique identifier for the patient.",
+      "alpha_p": "<int> Number of days the patient has been waiting since referral.",
+      "rho_p": "<int> Urgency rating of the patient, where higher values indicate greater urgency.",
+      "omega_p": "<float> Health status score computed from the patient's waiting time and urgency rating.",
+      "is_mandatory": "<bool> Whether the patient must be scheduled within this planning horizon.",
+      "c_sched_per_day": "<dict, key: '{day_label}'> Scheduling benefit for assigning this patient to surgery on each day of the planning horizon.",
+      "c_unsched": "<float> Penalty incurred if this non-mandatory patient is postponed to a future planning horizon.",
+      "c_cancel": "<float> Penalty incurred if this patient's scheduled surgery is cancelled on the day of surgery."
+    }
+  ],
+  "hospitals": [
+    {
+      "hospital_id": "<int> Unique identifier for the hospital.",
+      "num_ors": "<int> Number of operating rooms at this hospital.",
+      "days": [
+        {
+          "day_id": "<int> Zero-based index of the day within the planning horizon.",
+          "day_label": "<int> One-based label of the day within the planning horizon.",
+          "B_hd": "<int> Maximum available operating time per OR at this hospital on this day, in minutes.",
+          "F_hd": "<int> Cost of opening each individual operating room at this hospital on this day.",
+          "G_hd": "<int> Cost of opening this hospital's surgical suite on this day."
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "<int> Unique identifier for the uncertainty scenario.",
+      "surgery_durations_minutes": "<list[float], length num_patients> Realized surgery duration for each patient under this scenario, in minutes."
+    }
+  ]
+}

@@ -1,0 +1,812 @@
+{
+  "instance_id": 1,
+  "problem": "S2L-CVRP",
+  "description": "Stochastic 2D loading CVRP: 15 customers, type 2, domain 2, 10% stochastic",
+  "seed": 1000,
+  "parameters": {
+    "n_customers": 15,
+    "item_type": 2,
+    "domain_size": 2,
+    "pct_stochastic_customers": 10,
+    "num_stochastic_customers": 2,
+    "recourse_cost_cf": 10
+  },
+  "vehicle": {
+    "H": 40,
+    "W": 20,
+    "Q": 120,
+    "K": 4
+  },
+  "depot": {
+    "id": 0,
+    "x": 99,
+    "y": 54
+  },
+  "customers": [
+    {
+      "id": 1,
+      "is_stochastic": false,
+      "num_items": 2,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "horizontal",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 5,
+              "width": 11,
+              "weight": 13,
+              "probability": 1.0
+            }
+          ]
+        },
+        {
+          "item_id": 2,
+          "shape": "vertical",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 36,
+              "width": 4,
+              "weight": 19,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "is_stochastic": false,
+      "num_items": 2,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "vertical",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 20,
+              "width": 4,
+              "weight": 17,
+              "probability": 1.0
+            }
+          ]
+        },
+        {
+          "item_id": 2,
+          "shape": "horizontal",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 5,
+              "width": 16,
+              "weight": 17,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "is_stochastic": false,
+      "num_items": 2,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "vertical",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 26,
+              "width": 2,
+              "weight": 21,
+              "probability": 1.0
+            }
+          ]
+        },
+        {
+          "item_id": 2,
+          "shape": "horizontal",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 5,
+              "width": 8,
+              "weight": 15,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "is_stochastic": false,
+      "num_items": 1,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "homogeneous",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 20,
+              "width": 9,
+              "weight": 34,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "is_stochastic": false,
+      "num_items": 1,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "horizontal",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 5,
+              "width": 18,
+              "weight": 41,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "is_stochastic": false,
+      "num_items": 1,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "homogeneous",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 19,
+              "width": 9,
+              "weight": 33,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "is_stochastic": false,
+      "num_items": 2,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "vertical",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 31,
+              "width": 3,
+              "weight": 13,
+              "probability": 1.0
+            }
+          ]
+        },
+        {
+          "item_id": 2,
+          "shape": "homogeneous",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 16,
+              "width": 9,
+              "weight": 18,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "is_stochastic": false,
+      "num_items": 1,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "homogeneous",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 11,
+              "width": 10,
+              "weight": 23,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "is_stochastic": false,
+      "num_items": 1,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "horizontal",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 4,
+              "width": 9,
+              "weight": 32,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "is_stochastic": true,
+      "num_items": 2,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "vertical",
+          "is_stochastic": true,
+          "num_realizations": 2,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 22,
+              "width": 3,
+              "weight": 17,
+              "probability": 0.5
+            },
+            {
+              "realization_id": 2,
+              "height": 24,
+              "width": 1,
+              "weight": 6,
+              "probability": 0.5
+            }
+          ]
+        },
+        {
+          "item_id": 2,
+          "shape": "horizontal",
+          "is_stochastic": true,
+          "num_realizations": 2,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 4,
+              "width": 7,
+              "weight": 4,
+              "probability": 0.5
+            },
+            {
+              "realization_id": 2,
+              "height": 8,
+              "width": 13,
+              "weight": 16,
+              "probability": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "is_stochastic": true,
+      "num_items": 2,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "homogeneous",
+          "is_stochastic": true,
+          "num_realizations": 2,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 9,
+              "width": 5,
+              "weight": 6,
+              "probability": 0.5
+            },
+            {
+              "realization_id": 2,
+              "height": 5,
+              "width": 11,
+              "weight": 8,
+              "probability": 0.5
+            }
+          ]
+        },
+        {
+          "item_id": 2,
+          "shape": "horizontal",
+          "is_stochastic": true,
+          "num_realizations": 2,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 8,
+              "width": 11,
+              "weight": 19,
+              "probability": 0.5
+            },
+            {
+              "realization_id": 2,
+              "height": 3,
+              "width": 6,
+              "weight": 4,
+              "probability": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "is_stochastic": false,
+      "num_items": 2,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "vertical",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 34,
+              "width": 3,
+              "weight": 13,
+              "probability": 1.0
+            }
+          ]
+        },
+        {
+          "item_id": 2,
+          "shape": "horizontal",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 6,
+              "width": 11,
+              "weight": 12,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "is_stochastic": false,
+      "num_items": 1,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "homogeneous",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 13,
+              "width": 5,
+              "weight": 21,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "is_stochastic": false,
+      "num_items": 2,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "vertical",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 27,
+              "width": 4,
+              "weight": 10,
+              "probability": 1.0
+            }
+          ]
+        },
+        {
+          "item_id": 2,
+          "shape": "homogeneous",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 13,
+              "width": 5,
+              "weight": 9,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "is_stochastic": false,
+      "num_items": 2,
+      "items": [
+        {
+          "item_id": 1,
+          "shape": "horizontal",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 5,
+              "width": 9,
+              "weight": 11,
+              "probability": 1.0
+            }
+          ]
+        },
+        {
+          "item_id": 2,
+          "shape": "horizontal",
+          "is_stochastic": false,
+          "num_realizations": 1,
+          "realizations": [
+            {
+              "realization_id": 1,
+              "height": 4,
+              "width": 11,
+              "weight": 11,
+              "probability": 1.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "distance_matrix": [
+    [
+      0,
+      45,
+      87,
+      71,
+      52,
+      31,
+      87,
+      28,
+      62,
+      47,
+      33,
+      59,
+      51,
+      99,
+      9,
+      81
+    ],
+    [
+      45,
+      0,
+      87,
+      98,
+      80,
+      45,
+      98,
+      67,
+      41,
+      76,
+      12,
+      78,
+      79,
+      81,
+      36,
+      77
+    ],
+    [
+      87,
+      87,
+      0,
+      53,
+      55,
+      56,
+      22,
+      76,
+      50,
+      56,
+      83,
+      40,
+      53,
+      37,
+      84,
+      11
+    ],
+    [
+      71,
+      98,
+      53,
+      0,
+      19,
+      52,
+      35,
+      46,
+      78,
+      24,
+      88,
+      21,
+      20,
+      88,
+      74,
+      58
+    ],
+    [
+      52,
+      80,
+      55,
+      19,
+      0,
+      35,
+      44,
+      28,
+      66,
+      5,
+      70,
+      15,
+      2,
+      85,
+      55,
+      56
+    ],
+    [
+      31,
+      45,
+      56,
+      52,
+      35,
+      0,
+      59,
+      30,
+      38,
+      31,
+      36,
+      34,
+      34,
+      70,
+      28,
+      50
+    ],
+    [
+      87,
+      98,
+      22,
+      35,
+      44,
+      59,
+      0,
+      69,
+      65,
+      46,
+      91,
+      30,
+      42,
+      59,
+      86,
+      31
+    ],
+    [
+      28,
+      67,
+      76,
+      46,
+      28,
+      30,
+      69,
+      0,
+      68,
+      24,
+      55,
+      39,
+      28,
+      98,
+      34,
+      73
+    ],
+    [
+      62,
+      41,
+      50,
+      78,
+      66,
+      38,
+      65,
+      68,
+      0,
+      63,
+      41,
+      57,
+      64,
+      41,
+      55,
+      39
+    ],
+    [
+      47,
+      76,
+      56,
+      24,
+      5,
+      31,
+      46,
+      24,
+      63,
+      0,
+      65,
+      16,
+      4,
+      83,
+      50,
+      56
+    ],
+    [
+      33,
+      12,
+      83,
+      88,
+      70,
+      36,
+      91,
+      55,
+      41,
+      65,
+      0,
+      69,
+      68,
+      82,
+      24,
+      74
+    ],
+    [
+      59,
+      78,
+      40,
+      21,
+      15,
+      34,
+      30,
+      39,
+      57,
+      16,
+      69,
+      0,
+      13,
+      70,
+      59,
+      41
+    ],
+    [
+      51,
+      79,
+      53,
+      20,
+      2,
+      34,
+      42,
+      28,
+      64,
+      4,
+      68,
+      13,
+      0,
+      82,
+      54,
+      54
+    ],
+    [
+      99,
+      81,
+      37,
+      88,
+      85,
+      70,
+      59,
+      98,
+      41,
+      83,
+      82,
+      70,
+      82,
+      0,
+      93,
+      30
+    ],
+    [
+      9,
+      36,
+      84,
+      74,
+      55,
+      28,
+      86,
+      34,
+      55,
+      50,
+      24,
+      59,
+      54,
+      93,
+      0,
+      77
+    ],
+    [
+      81,
+      77,
+      11,
+      58,
+      56,
+      50,
+      31,
+      73,
+      39,
+      56,
+      74,
+      41,
+      54,
+      30,
+      77,
+      0
+    ]
+  ],
+  "feasibility_check": "PASSED",
+  "generation_attempts": 1
+}

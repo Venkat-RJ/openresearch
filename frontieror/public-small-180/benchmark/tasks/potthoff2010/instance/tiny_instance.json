@@ -1,0 +1,1189 @@
+{
+  "instance_id": "instance_1",
+  "instance_number": 1,
+  "scale": "small",
+  "description": "OCRSP instance 1 (small): linear network, two_sided_blockage at 07:00",
+  "network": {
+    "stations": [
+      {
+        "id": "S000",
+        "name": "Stn0",
+        "is_relief_point": true,
+        "is_crew_base": true,
+        "has_canteen": true,
+        "x": 0.0,
+        "y": 0.0
+      },
+      {
+        "id": "S001",
+        "name": "Stn1",
+        "is_relief_point": true,
+        "is_crew_base": false,
+        "has_canteen": false,
+        "x": 30.0,
+        "y": 0.0
+      },
+      {
+        "id": "S002",
+        "name": "Stn2",
+        "is_relief_point": true,
+        "is_crew_base": true,
+        "has_canteen": true,
+        "x": 60.0,
+        "y": 0.0
+      },
+      {
+        "id": "S003",
+        "name": "Stn3",
+        "is_relief_point": true,
+        "is_crew_base": false,
+        "has_canteen": false,
+        "x": 90.0,
+        "y": 0.0
+      },
+      {
+        "id": "S004",
+        "name": "Stn4",
+        "is_relief_point": true,
+        "is_crew_base": false,
+        "has_canteen": false,
+        "x": 120.0,
+        "y": 0.0
+      }
+    ],
+    "crew_bases": [
+      "S000",
+      "S002"
+    ],
+    "route_segments": [
+      {
+        "from_station": "S000",
+        "to_station": "S001",
+        "travel_time_minutes": 15,
+        "distance_km": 30.0,
+        "bidirectional": true
+      },
+      {
+        "from_station": "S001",
+        "to_station": "S002",
+        "travel_time_minutes": 17,
+        "distance_km": 30.0,
+        "bidirectional": true
+      },
+      {
+        "from_station": "S002",
+        "to_station": "S003",
+        "travel_time_minutes": 22,
+        "distance_km": 30.0,
+        "bidirectional": true
+      },
+      {
+        "from_station": "S003",
+        "to_station": "S004",
+        "travel_time_minutes": 16,
+        "distance_km": 30.0,
+        "bidirectional": true
+      }
+    ],
+    "taxi_connections": [
+      {
+        "from_station": "S000",
+        "to_station": "S001",
+        "travel_time_minutes": 45,
+        "bidirectional": true
+      },
+      {
+        "from_station": "S002",
+        "to_station": "S001",
+        "travel_time_minutes": 45,
+        "bidirectional": true
+      },
+      {
+        "from_station": "S002",
+        "to_station": "S003",
+        "travel_time_minutes": 45,
+        "bidirectional": true
+      }
+    ]
+  },
+  "train_lines": [
+    {
+      "line_id": "L000",
+      "type": "intercity",
+      "stations": [
+        "S000",
+        "S001",
+        "S002"
+      ],
+      "segment_travel_times": [
+        15,
+        17
+      ],
+      "frequency_per_hour": 2
+    },
+    {
+      "line_id": "L001",
+      "type": "regional",
+      "stations": [
+        "S001",
+        "S002",
+        "S003"
+      ],
+      "segment_travel_times": [
+        17,
+        22
+      ],
+      "frequency_per_hour": 2
+    },
+    {
+      "line_id": "L002",
+      "type": "regional",
+      "stations": [
+        "S001",
+        "S002",
+        "S003"
+      ],
+      "segment_travel_times": [
+        17,
+        22
+      ],
+      "frequency_per_hour": 2
+    },
+    {
+      "line_id": "L003",
+      "type": "intercity",
+      "stations": [
+        "S004",
+        "S003",
+        "S002"
+      ],
+      "segment_travel_times": [
+        16,
+        22
+      ],
+      "frequency_per_hour": 2
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "T00000",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "07:12",
+      "departure_time_minutes": 432,
+      "arrival_time": "07:27",
+      "arrival_time_minutes": 447,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00001",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "07:28",
+      "departure_time_minutes": 448,
+      "arrival_time": "07:45",
+      "arrival_time_minutes": 465,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00002",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "07:42",
+      "departure_time_minutes": 462,
+      "arrival_time": "07:57",
+      "arrival_time_minutes": 477,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00003",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "07:59",
+      "departure_time_minutes": 479,
+      "arrival_time": "08:16",
+      "arrival_time_minutes": 496,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00004",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "08:12",
+      "departure_time_minutes": 492,
+      "arrival_time": "08:27",
+      "arrival_time_minutes": 507,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00005",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "08:42",
+      "departure_time_minutes": 522,
+      "arrival_time": "08:57",
+      "arrival_time_minutes": 537,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00006",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "09:00",
+      "departure_time_minutes": 540,
+      "arrival_time": "09:17",
+      "arrival_time_minutes": 557,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00007",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "09:12",
+      "departure_time_minutes": 552,
+      "arrival_time": "09:27",
+      "arrival_time_minutes": 567,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00008",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "09:30",
+      "departure_time_minutes": 570,
+      "arrival_time": "09:47",
+      "arrival_time_minutes": 587,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00009",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "09:42",
+      "departure_time_minutes": 582,
+      "arrival_time": "09:57",
+      "arrival_time_minutes": 597,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00010",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "09:58",
+      "departure_time_minutes": 598,
+      "arrival_time": "10:15",
+      "arrival_time_minutes": 615,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00011",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "10:12",
+      "departure_time_minutes": 612,
+      "arrival_time": "10:27",
+      "arrival_time_minutes": 627,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00012",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "10:30",
+      "departure_time_minutes": 630,
+      "arrival_time": "10:47",
+      "arrival_time_minutes": 647,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00013",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "10:42",
+      "departure_time_minutes": 642,
+      "arrival_time": "10:57",
+      "arrival_time_minutes": 657,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00014",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "11:00",
+      "departure_time_minutes": 660,
+      "arrival_time": "11:17",
+      "arrival_time_minutes": 677,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00015",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "11:12",
+      "departure_time_minutes": 672,
+      "arrival_time": "11:27",
+      "arrival_time_minutes": 687,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00016",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "11:29",
+      "departure_time_minutes": 689,
+      "arrival_time": "11:46",
+      "arrival_time_minutes": 706,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00017",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "11:42",
+      "departure_time_minutes": 702,
+      "arrival_time": "11:57",
+      "arrival_time_minutes": 717,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00018",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "11:59",
+      "departure_time_minutes": 719,
+      "arrival_time": "12:16",
+      "arrival_time_minutes": 736,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00019",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "12:12",
+      "departure_time_minutes": 732,
+      "arrival_time": "12:27",
+      "arrival_time_minutes": 747,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00020",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "12:30",
+      "departure_time_minutes": 750,
+      "arrival_time": "12:47",
+      "arrival_time_minutes": 767,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00021",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "12:42",
+      "departure_time_minutes": 762,
+      "arrival_time": "12:57",
+      "arrival_time_minutes": 777,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00022",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "12:58",
+      "departure_time_minutes": 778,
+      "arrival_time": "13:15",
+      "arrival_time_minutes": 795,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00023",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "13:28",
+      "departure_time_minutes": 808,
+      "arrival_time": "13:45",
+      "arrival_time_minutes": 825,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00024",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "13:59",
+      "departure_time_minutes": 839,
+      "arrival_time": "14:16",
+      "arrival_time_minutes": 856,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00025",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "14:12",
+      "departure_time_minutes": 852,
+      "arrival_time": "14:27",
+      "arrival_time_minutes": 867,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00026",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "14:28",
+      "departure_time_minutes": 868,
+      "arrival_time": "14:45",
+      "arrival_time_minutes": 885,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00027",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "14:42",
+      "departure_time_minutes": 882,
+      "arrival_time": "14:57",
+      "arrival_time_minutes": 897,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00028",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "14:58",
+      "departure_time_minutes": 898,
+      "arrival_time": "15:15",
+      "arrival_time_minutes": 915,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00029",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "15:12",
+      "departure_time_minutes": 912,
+      "arrival_time": "15:27",
+      "arrival_time_minutes": 927,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00030",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "15:29",
+      "departure_time_minutes": 929,
+      "arrival_time": "15:46",
+      "arrival_time_minutes": 946,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00031",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "15:42",
+      "departure_time_minutes": 942,
+      "arrival_time": "15:57",
+      "arrival_time_minutes": 957,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00032",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "15:59",
+      "departure_time_minutes": 959,
+      "arrival_time": "16:16",
+      "arrival_time_minutes": 976,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00033",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "16:12",
+      "departure_time_minutes": 972,
+      "arrival_time": "16:27",
+      "arrival_time_minutes": 987,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00034",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "16:28",
+      "departure_time_minutes": 988,
+      "arrival_time": "16:45",
+      "arrival_time_minutes": 1005,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00035",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "16:42",
+      "departure_time_minutes": 1002,
+      "arrival_time": "16:57",
+      "arrival_time_minutes": 1017,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00036",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "17:12",
+      "departure_time_minutes": 1032,
+      "arrival_time": "17:27",
+      "arrival_time_minutes": 1047,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00037",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "17:28",
+      "departure_time_minutes": 1048,
+      "arrival_time": "17:45",
+      "arrival_time_minutes": 1065,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00038",
+      "line_id": "L000",
+      "departure_station": "S000",
+      "arrival_station": "S001",
+      "departure_time": "17:42",
+      "departure_time_minutes": 1062,
+      "arrival_time": "17:57",
+      "arrival_time_minutes": 1077,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    },
+    {
+      "task_id": "T00039",
+      "line_id": "L000",
+      "departure_station": "S001",
+      "arrival_station": "S002",
+      "departure_time": "17:59",
+      "departure_time_minutes": 1079,
+      "arrival_time": "18:16",
+      "arrival_time_minutes": 1096,
+      "task_type": "A_to_B",
+      "direction": "forward",
+      "rolling_stock_type": "RS_INT"
+    }
+  ],
+  "active_duties": [
+    {
+      "duty_id": "D0000",
+      "duty_type": "active",
+      "crew_base": "S000",
+      "start_time": "06:17",
+      "start_time_minutes": 377,
+      "end_time": "07:58",
+      "end_time_minutes": 478,
+      "tasks": [],
+      "pre_disruption_tasks": [
+        "P00034",
+        "P00035"
+      ],
+      "task_details": [
+        {
+          "task_id": "P00034",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "06:47",
+          "arrival_time": "07:04"
+        },
+        {
+          "task_id": "P00035",
+          "departure_station": "S002",
+          "arrival_station": "S003",
+          "departure_time": "07:06",
+          "arrival_time": "07:28"
+        }
+      ],
+      "route_knowledge": [
+        "S000",
+        "S001",
+        "S002",
+        "S003"
+      ],
+      "rolling_stock_licenses": [
+        "RS_REG"
+      ],
+      "has_meal_break": false,
+      "meal_break": null
+    },
+    {
+      "duty_id": "D0001",
+      "duty_type": "active",
+      "crew_base": "S002",
+      "start_time": "04:00",
+      "start_time_minutes": 240,
+      "end_time": "14:46",
+      "end_time_minutes": 886,
+      "tasks": [
+        "T00002",
+        "T00003",
+        "T00006",
+        "T00010",
+        "T00014",
+        "T00018",
+        "T00022",
+        "T00024"
+      ],
+      "pre_disruption_tasks": [
+        "P00061",
+        "P00026",
+        "P00027",
+        "P00089",
+        "P00080",
+        "P00081",
+        "P00022",
+        "P00023"
+      ],
+      "task_details": [
+        {
+          "task_id": "P00061",
+          "departure_station": "S002",
+          "arrival_station": "S001",
+          "departure_time": "04:28",
+          "arrival_time": "04:45"
+        },
+        {
+          "task_id": "P00026",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "04:47",
+          "arrival_time": "05:04"
+        },
+        {
+          "task_id": "P00027",
+          "departure_station": "S002",
+          "arrival_station": "S003",
+          "departure_time": "05:06",
+          "arrival_time": "05:28"
+        },
+        {
+          "task_id": "P00089",
+          "departure_station": "S003",
+          "arrival_station": "S004",
+          "departure_time": "05:32",
+          "arrival_time": "05:48"
+        },
+        {
+          "task_id": "P00080",
+          "departure_station": "S004",
+          "arrival_station": "S003",
+          "departure_time": "06:04",
+          "arrival_time": "06:20"
+        },
+        {
+          "task_id": "P00081",
+          "departure_station": "S003",
+          "arrival_station": "S002",
+          "departure_time": "06:21",
+          "arrival_time": "06:43"
+        },
+        {
+          "task_id": "P00022",
+          "departure_station": "S002",
+          "arrival_station": "S001",
+          "departure_time": "06:46",
+          "arrival_time": "07:03"
+        },
+        {
+          "task_id": "P00023",
+          "departure_station": "S001",
+          "arrival_station": "S000",
+          "departure_time": "07:05",
+          "arrival_time": "07:20"
+        },
+        {
+          "task_id": "T00002",
+          "departure_station": "S000",
+          "arrival_station": "S001",
+          "departure_time": "07:42",
+          "arrival_time": "07:57"
+        },
+        {
+          "task_id": "T00003",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "07:59",
+          "arrival_time": "08:16"
+        },
+        {
+          "task_id": "T00006",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "09:00",
+          "arrival_time": "09:17"
+        },
+        {
+          "task_id": "T00010",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "09:58",
+          "arrival_time": "10:15"
+        },
+        {
+          "task_id": "T00014",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "11:00",
+          "arrival_time": "11:17"
+        },
+        {
+          "task_id": "T00018",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "11:59",
+          "arrival_time": "12:16"
+        },
+        {
+          "task_id": "T00022",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "12:58",
+          "arrival_time": "13:15"
+        },
+        {
+          "task_id": "T00024",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "13:59",
+          "arrival_time": "14:16"
+        }
+      ],
+      "route_knowledge": [
+        "S000",
+        "S001",
+        "S002",
+        "S003",
+        "S004"
+      ],
+      "rolling_stock_licenses": [
+        "RS_INT",
+        "RS_REG"
+      ],
+      "has_meal_break": true,
+      "meal_break": null
+    },
+    {
+      "duty_id": "D0002",
+      "duty_type": "active",
+      "crew_base": "S000",
+      "start_time": "09:42",
+      "start_time_minutes": 582,
+      "end_time": "18:15",
+      "end_time_minutes": 1095,
+      "tasks": [
+        "T00011",
+        "T00012",
+        "T00016",
+        "T00020",
+        "T00023",
+        "T00026",
+        "T00030",
+        "T00034",
+        "T00037"
+      ],
+      "pre_disruption_tasks": [],
+      "task_details": [
+        {
+          "task_id": "T00011",
+          "departure_station": "S000",
+          "arrival_station": "S001",
+          "departure_time": "10:12",
+          "arrival_time": "10:27"
+        },
+        {
+          "task_id": "T00012",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "10:30",
+          "arrival_time": "10:47"
+        },
+        {
+          "task_id": "T00016",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "11:29",
+          "arrival_time": "11:46"
+        },
+        {
+          "task_id": "T00020",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "12:30",
+          "arrival_time": "12:47"
+        },
+        {
+          "task_id": "T00023",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "13:28",
+          "arrival_time": "13:45"
+        },
+        {
+          "task_id": "T00026",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "14:28",
+          "arrival_time": "14:45"
+        },
+        {
+          "task_id": "T00030",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "15:29",
+          "arrival_time": "15:46"
+        },
+        {
+          "task_id": "T00034",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "16:28",
+          "arrival_time": "16:45"
+        },
+        {
+          "task_id": "T00037",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "17:28",
+          "arrival_time": "17:45"
+        }
+      ],
+      "route_knowledge": [
+        "S000",
+        "S001",
+        "S002",
+        "S003"
+      ],
+      "rolling_stock_licenses": [
+        "RS_INT"
+      ],
+      "has_meal_break": true,
+      "meal_break": null
+    },
+    {
+      "duty_id": "D0003",
+      "duty_type": "active",
+      "crew_base": "S002",
+      "start_time": "09:00",
+      "start_time_minutes": 540,
+      "end_time": "10:17",
+      "end_time_minutes": 617,
+      "tasks": [
+        "T00008"
+      ],
+      "pre_disruption_tasks": [],
+      "task_details": [
+        {
+          "task_id": "T00008",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "09:30",
+          "arrival_time": "09:47"
+        }
+      ],
+      "route_knowledge": [
+        "S000",
+        "S001",
+        "S002",
+        "S003",
+        "S004"
+      ],
+      "rolling_stock_licenses": [
+        "RS_INT"
+      ],
+      "has_meal_break": false,
+      "meal_break": null
+    },
+    {
+      "duty_id": "D0004",
+      "duty_type": "active",
+      "crew_base": "S000",
+      "start_time": "05:33",
+      "start_time_minutes": 333,
+      "end_time": "07:29",
+      "end_time_minutes": 449,
+      "tasks": [],
+      "pre_disruption_tasks": [
+        "P00008",
+        "P00009",
+        "P00033"
+      ],
+      "task_details": [
+        {
+          "task_id": "P00008",
+          "departure_station": "S000",
+          "arrival_station": "S001",
+          "departure_time": "06:03",
+          "arrival_time": "06:18"
+        },
+        {
+          "task_id": "P00009",
+          "departure_station": "S001",
+          "arrival_station": "S002",
+          "departure_time": "06:19",
+          "arrival_time": "06:36"
+        },
+        {
+          "task_id": "P00033",
+          "departure_station": "S002",
+          "arrival_station": "S003",
+          "departure_time": "06:37",
+          "arrival_time": "06:59"
+        }
+      ],
+      "route_knowledge": [
+        "S000",
+        "S001",
+        "S002",
+        "S003"
+      ],
+      "rolling_stock_licenses": [
+        "RS_INT",
+        "RS_REG"
+      ],
+      "has_meal_break": false,
+      "meal_break": null
+    },
+    {
+      "duty_id": "D0005",
+      "duty_type": "active",
+      "crew_base": "S002",
+      "start_time": "06:26",
+      "start_time_minutes": 386,
+      "end_time": "07:40",
+      "end_time_minutes": 460,
+      "tasks": [],
+      "pre_disruption_tasks": [
+        "P00059"
+      ],
+      "task_details": [
+        {
+          "task_id": "P00059",
+          "departure_station": "S002",
+          "arrival_station": "S003",
+          "departure_time": "06:56",
+          "arrival_time": "07:18"
+        }
+      ],
+      "route_knowledge": [
+        "S000",
+        "S001",
+        "S002",
+        "S003",
+        "S004"
+      ],
+      "rolling_stock_licenses": [
+        "RS_REG"
+      ],
+      "has_meal_break": false,
+      "meal_break": null
+    }
+  ],
+  "reserve_duties": [
+    {
+      "duty_id": "R0000",
+      "duty_type": "reserve",
+      "crew_base": "S000",
+      "start_time": "11:00",
+      "start_time_minutes": 660,
+      "end_time": "19:00",
+      "end_time_minutes": 1140,
+      "standby_station": "S000",
+      "tasks": [],
+      "pre_disruption_tasks": [],
+      "task_details": [],
+      "route_knowledge": [
+        "S000",
+        "S001",
+        "S002",
+        "S003"
+      ],
+      "rolling_stock_licenses": [
+        "RS_INT",
+        "RS_REG"
+      ],
+      "has_meal_break": false,
+      "meal_break": null
+    }
+  ],
+  "disruption": {
+    "disruption_type": "two_sided_blockage",
+    "blocked_segment": {
+      "from_station": "S001",
+      "to_station": "S002"
+    },
+    "start_time": "07:00",
+    "start_time_minutes": 420,
+    "end_time": "10:00",
+    "end_time_minutes": 600,
+    "duration_hours": 3,
+    "rescheduling_time": "07:00",
+    "rescheduling_time_minutes": 420,
+    "canceled_tasks": [
+      "T00003",
+      "T00006",
+      "T00001",
+      "T00010",
+      "T00008"
+    ],
+    "modified_tasks": [],
+    "affected_duty_ids": [
+      "D0001",
+      "D0003"
+    ],
+    "num_affected_duties": 2
+  },
+  "parameters": {
+    "cost_cancel_A_to_B": 20000,
+    "cost_cancel_A_to_A": 3000,
+    "cost_duty_changed": 400,
+    "cost_task_reassigned": 50,
+    "cost_new_transfer": 1,
+    "cost_taxi": 1000,
+    "max_overtime_minutes": 60,
+    "meal_break_min_minutes": 30,
+    "max_work_before_break_hours": 5.5,
+    "max_work_after_break_hours": 5.5,
+    "min_connection_time_minutes": 5,
+    "max_duty_duration_hours": 10,
+    "disruption_duration_hours": 3
+  },
+  "summary": {
+    "num_stations": 5,
+    "num_crew_bases": 2,
+    "num_route_segments": 4,
+    "num_train_lines": 4,
+    "num_tasks": 40,
+    "num_active_duties": 6,
+    "num_reserve_duties": 1,
+    "num_affected_duties": 2,
+    "num_canceled_tasks": 5,
+    "num_modified_tasks": 0,
+    "reserve_set": "R1",
+    "topology": "linear",
+    "generation_seed": 42100,
+    "generation_iteration": 0
+  },
+  "released_problem_variant": "relief_point_completion_v1"
+}

@@ -1,0 +1,27 @@
+{
+  "problem_type": "<str> Type identifier for the optimization problem.",
+  "n": "<int> Number of customers to be served.",
+  "d": "<int> Number of depots from which vehicles operate.",
+  "t": "<int> Number of periods (days) in the planning horizon.",
+  "m": "<int> Number of identical vehicles stationed at each depot.",
+  "vehicle_capacity": "<int> Maximum total demand a single vehicle can carry on one route.",
+  "route_duration_limit": "<int> Maximum total duration of a single route, including travel times and service times.",
+  "depots": [
+    {
+      "id": "<int> Zero-based identifier for this depot.",
+      "x": "<int> Horizontal coordinate of this depot in the service area.",
+      "y": "<int> Vertical coordinate of this depot in the service area."
+    }
+  ],
+  "customers": [
+    {
+      "id": "<int> Zero-based identifier for this customer.",
+      "x": "<int> Horizontal coordinate of this customer in the service area.",
+      "y": "<int> Vertical coordinate of this customer in the service area.",
+      "demand": "<int> Quantity of goods to be delivered to this customer on each visit.",
+      "service_duration": "<int> Time spent at this customer's site during each visit.",
+      "frequency": "<int> Number of times this customer must be visited over the planning horizon.",
+      "pattern_list": "<list[list[int]], length varies> Feasible visit patterns for this customer, where each pattern is a list of 1-based period indices on which visits occur."
+    }
+  ]
+}

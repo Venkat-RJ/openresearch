@@ -1,0 +1,346 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "group": 3,
+  "scope": "tiny-only300seconds standardDocker1CPU root driver",
+  "report_path": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/group3-results.json",
+  "report_sha256": "2964b551d2f970e7482e1d4882e8daf929c4af6e505a6d50be24ae4662ee336d",
+  "tasks": 30,
+  "feasible": 30,
+  "native_gate_passes": 29,
+  "native_gate_failures": [
+    "huisman2005"
+  ],
+  "substantive_improvements": [
+    "furini2016",
+    "hadjar2006"
+  ],
+  "numerical_scale_decrease": [
+    "fischetti2017"
+  ],
+  "positive_gaps": [
+    "huisman2005",
+    "ji2019"
+  ],
+  "reference_ties": 25,
+  "all30_frozen_hashes": "verified readiness=manifest=actual bytes",
+  "all30_native_experiment_outcomes": "GETreadback exact asserted",
+  "streams": {
+    "complete_snapshot_tasks": 20,
+    "scalar_only_tasks": 10,
+    "terminal_exact_equal_tasks": 29,
+    "terminal_mismatch": "Hass raw scalar323.3333331772154 vs returned/checker FIFO323.3333333333333; cannot certify numericalbeat",
+    "AOCC": "unclaimed; descriptive stream checks only"
+  },
+  "audits": {
+    "ji": "results/group3-ji-final-audit.json",
+    "ji_record": "6364be25-544e-46a9-9401-9d48f3a0d523",
+    "repeat_physical_witness_record": "760b639b-5959-4b26-96f9-7ec01baf463a",
+    "hass_original_scalar_qualification_record": "d223a8b6-87ae-4490-b2d7-39ef66f1f416"
+  },
+  "Hass_live_followup": "Separate READY f1fc94f9b5368af0972cb88fe816ab0b901841ef2819a58ff4e514150a43fd54; native pending; frozen grade preserved",
+  "alternative_coverage": "Separate measured alternatives: GTSP layeredDP null/slower; Hadjar route pricing improves; Gruson retailerDP closesgap; He QP closesgap; Huisman full-duty pricing62→42 remainsgatefail; Ji conservative contract restorescomparability butworse. Other tasks use initial methods/internal heuristic-exact alternatives or proven lower-bound ties; not every task has a separate measured alternative.",
+  "per_task": [
+    {
+      "task": "fischetti1997",
+      "objective": 1083,
+      "reference": 1083,
+      "signed_gap": 0.0,
+      "runtime_seconds": 4.09,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "d9ade363-7e31-46a4-b560-96b02471a2f2",
+      "source_sha256": "2340739844fb1b48cc89b9ade50cd50e433a5dc1761176fbfdab68e24b1167ff"
+    },
+    {
+      "task": "fischetti1998",
+      "objective": 287,
+      "reference": 287,
+      "signed_gap": 0.0,
+      "runtime_seconds": 296.23,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "7e7ad8f2-76c1-4c46-944d-5347b0d5e8c5",
+      "source_sha256": "1f90947c248b770b7b12ed9b8e99f8e56e4e11af6f04035a72f6b599f50274f7"
+    },
+    {
+      "task": "fischetti2017",
+      "objective": 180.0971233764788,
+      "reference": 180.09712492931288,
+      "signed_gap": -8.622203596090951e-09,
+      "runtime_seconds": 0.27,
+      "classification": "numerical-tolerance-scale strict decrease, not substantive improvement",
+      "native_experiment": "53a2212a-8bfd-4726-a5a8-0074a26688bf",
+      "source_sha256": "1c231485d5e6d9a5c0f3a37a71770c831808b2d3b187c15c76179535fb6eeed0"
+    },
+    {
+      "task": "fleszar2022b",
+      "objective": 2397,
+      "reference": 2397,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.32,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "1deb8f1f-32f4-4f9c-b25b-d5c749057338",
+      "source_sha256": "938bea5995744dccd4101acf262df68c4bbd200c5f1b9aa6a207f65acd0bf37b"
+    },
+    {
+      "task": "forrest2006",
+      "objective": 17.122,
+      "reference": 17.122000000000003,
+      "signed_gap": 2.0749408239694545e-16,
+      "runtime_seconds": 0.26,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "9f305308-d4ef-4bca-a86e-04db413e3259",
+      "source_sha256": "e1301fc7795cc7218b166b6a40383cb5783e60b53896ee35f3c1123faa8e2f53"
+    },
+    {
+      "task": "fragkos2016",
+      "objective": 8504.651195279992,
+      "reference": 8504.651195279992,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.25,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "e26d28eb-179b-4b77-b608-506b9b29819e",
+      "source_sha256": "51c9b60d437f2d4aa18cb173dfab859bd25b6bc7d880a7985515a239549de1eb"
+    },
+    {
+      "task": "fragkos2021",
+      "objective": 774228.6679196148,
+      "reference": 774228.6679196148,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.3,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "2f08b6f7-7453-4286-b6f9-0f9bfe049c59",
+      "source_sha256": "89d846f75c94f5fb4e28ae49f9c9043fab14274d6ca33b4e9e58a172eb1be959"
+    },
+    {
+      "task": "freeman2018",
+      "objective": 27763260.0,
+      "reference": 27763260,
+      "signed_gap": 0.0,
+      "runtime_seconds": 1.07,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "c68f0290-f733-41ad-8a02-751c3c09b257",
+      "source_sha256": "80f4dffcf042440118439179ab11fe71913242466779209a4446c3d77f00134e"
+    },
+    {
+      "task": "freling2003",
+      "objective": 2085.089084,
+      "reference": 2085.089084,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.22,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "4262971b-e0f6-47d6-841d-da59372a45fe",
+      "source_sha256": "8cc498cc166805db8f1b4209cfb8c70d7dab3a9109d6c252adf0f4da49328dc8"
+    },
+    {
+      "task": "frey2017",
+      "objective": 0,
+      "reference": 0,
+      "signed_gap": 0,
+      "runtime_seconds": 0.26,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "c7d8868a-b19b-4cf8-894f-5aeedb5ff04a",
+      "source_sha256": "683dd5b064ab42ef37a64de54a19af033971c516bf79cf9d405fef05ce7fe8d9"
+    },
+    {
+      "task": "furini2016",
+      "objective": 1600,
+      "reference": 1592,
+      "signed_gap": -0.005025125628140704,
+      "runtime_seconds": 0.25,
+      "classification": "audited physical optimum1600 vs1592; substantive0.50251256% improvement",
+      "native_experiment": "56b3fc69-99e8-4814-90bb-c415a621abb3",
+      "source_sha256": "d36dfe460a2b3895fa2215071e0e05295305e016f86c89fa5450283f0f564671"
+    },
+    {
+      "task": "furini2017",
+      "objective": 4,
+      "reference": 4,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.25,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "6169bf77-ec93-4705-9047-34a734df5cc6",
+      "source_sha256": "0ff82cf5bbbc33009157c318d058d5337650a6f604aea58f27bad9bc63a200dd"
+    },
+    {
+      "task": "furini2019",
+      "objective": 3,
+      "reference": 3,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.2,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "cb9b6209-eedd-46f8-84ef-e9708e6e7a2f",
+      "source_sha256": "ed788ba15875f6d3879b918c092e12dfafb040dc7ec93bc02e1b1e8ce1e2eb8c"
+    },
+    {
+      "task": "furini2021",
+      "objective": 2,
+      "reference": 2,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.22,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "45c7c122-0020-4c98-a5aa-00ba74e6ac63",
+      "source_sha256": "3fabc461c807fd5cff0887653bfb28f7055b7034d42501b4b9b3ef445adc1c34"
+    },
+    {
+      "task": "gamache1999",
+      "objective": 0.0,
+      "reference": 0,
+      "signed_gap": 0,
+      "runtime_seconds": 5.96,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "0789c652-3292-4dff-ab5a-86e7aa3e4288",
+      "source_sha256": "ac2ccaa8143b496ca3a45d29ded42ccadffc941fbe612c4d064418a4aa7d42d0"
+    },
+    {
+      "task": "gangammanavar2020",
+      "objective": 29.19018612878519,
+      "reference": 29.19018612878519,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.26,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "9fb67d54-07c5-4028-a520-a3dcd8ae76f8",
+      "source_sha256": "b9db05435716a356302c5899347e565ead30537ba2180ef4dd9caf825fe8ba3e"
+    },
+    {
+      "task": "garcia2011",
+      "objective": 167268,
+      "reference": 167268,
+      "signed_gap": 0.0,
+      "runtime_seconds": 297.36,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "bfc8c13c-90ea-4555-935b-817c0d20e3f5",
+      "source_sha256": "660f0b7b79cd872f6ae9bb806ebaa858667bc9a7b048a6becd19d815c389730a"
+    },
+    {
+      "task": "gruson2021",
+      "objective": 179645.653626,
+      "reference": 179645.65362599993,
+      "signed_gap": 4.860206167412926e-16,
+      "runtime_seconds": 296.2,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "5d115bb6-64b8-48d9-995a-b1beaa4605be",
+      "source_sha256": "7d704f83365fe56ecc6632e43c4fc4590cbf5ff2361171408504b18f7ed0d9ac"
+    },
+    {
+      "task": "gschwind2021",
+      "objective": 11,
+      "reference": 11,
+      "signed_gap": 0.0,
+      "runtime_seconds": 297.23,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "b3f88ff8-9390-4a3f-b541-eb7ef032e2b3",
+      "source_sha256": "16f51287a37379183d06add660d525d884a55a7da48e606537dcfa623983c4b1"
+    },
+    {
+      "task": "gualandi2012",
+      "objective": 5,
+      "reference": 5,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.21,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "1c25df12-59e7-4819-9f00-68d1f9ab77cb",
+      "source_sha256": "ffbd24f7402bcfa94bdd9cda19f7bc2ef9930a71254a0b63cbee5502cb54b0f2"
+    },
+    {
+      "task": "guo2021",
+      "objective": -38094.0,
+      "reference": -38093.99999999999,
+      "signed_gap": -1.9100009487539841e-16,
+      "runtime_seconds": 0.55,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "88d4e900-470c-4858-95d9-db8ac90342c9",
+      "source_sha256": "2fd0e6935d4990d782c86295cad3e54421504e92d99c5256fc8e9e79028de157"
+    },
+    {
+      "task": "hadjar2006",
+      "objective": 232286.38999999998,
+      "reference": 232291.78,
+      "signed_gap": -2.3203576123158425e-05,
+      "runtime_seconds": 0.56,
+      "classification": "audited genuine5.39 decrease vs232291.78; substantive0.00232036% improvement",
+      "native_experiment": "757d3b4d-2d22-4116-92e5-0112c51319b8",
+      "source_sha256": "4b4ab4234b65262d3da46154069b90a0e56043ce9992347987f4b6687cc4ea59"
+    },
+    {
+      "task": "hassannayebi2016",
+      "objective": 323.3333333333333,
+      "reference": 323.3333333333333,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.5,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "cc83e98c-3d54-4f37-ab46-8e7ecfc19d35",
+      "source_sha256": "41edd54d2b195991a169542ebc8752d6ba467a1aa84d5919c4efe3f52606827a"
+    },
+    {
+      "task": "he2020",
+      "objective": 1102.698,
+      "reference": 1102.6980000000003,
+      "signed_gap": -2.0619759484757567e-16,
+      "runtime_seconds": 0.27,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "da0b01b9-5069-4225-8b9d-12307ad3c653",
+      "source_sha256": "2279ef6a674828ac42fa3199af84ac5ed334161202fd35fdd5def96401db8ac4"
+    },
+    {
+      "task": "hewitt2024",
+      "objective": 3963357.2509966986,
+      "reference": 3963357.2509966986,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.32,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "3194eb7a-975c-42bf-8fdb-acf100b91c2b",
+      "source_sha256": "6ed97956b4cc92d4606eccbc60c5f665149f5937a810ea182ef61fb5489a7e0d"
+    },
+    {
+      "task": "hoffman1993",
+      "objective": 16.0,
+      "reference": 16,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.26,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "89f2598c-508c-4d14-abe6-2940a004b6bc",
+      "source_sha256": "7a0c50c8169f637558c6d9734f701da06cfe327866cb2de1fd50a5e4f01ad3b2"
+    },
+    {
+      "task": "hosseinian2020",
+      "objective": 939.0,
+      "reference": 939,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.21,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "826b7cb0-3c6c-4981-b5c0-ba90a04829dd",
+      "source_sha256": "7a2af4a0c19e8fbd28901e9a30f0b9fabdb544d18b637310881a1f2c5bf19900"
+    },
+    {
+      "task": "huisman2005",
+      "objective": 42,
+      "reference": 37,
+      "signed_gap": 0.13513513513513514,
+      "runtime_seconds": 10.63,
+      "classification": "feasible42 vs37,13.5135135% worse; native10% gate failure; improved initial62",
+      "native_experiment": "4c043c92-47d2-475d-8c1d-60e57b78f1aa",
+      "source_sha256": "0ffb27ceffcb65b4baaa3ac8d235f531be878d6396ad36005b909c718b04e8ed"
+    },
+    {
+      "task": "ji2019",
+      "objective": 2745.6000000000004,
+      "reference": 2613.0000000000005,
+      "signed_gap": 0.05074626865671637,
+      "runtime_seconds": 0.26,
+      "classification": "actual upstream/checkerEq3 common integer mooring contract feasible;2745.6 vs2613,+5.0746269%; releasedEq4 objective differs; no beat",
+      "native_experiment": "4b0b2986-458d-4ecd-9d37-140c3362bf3e",
+      "source_sha256": "c2e1a35ef42cd90c5cde898d678c03478720343eac6cf333150ad1f1cb60325b"
+    },
+    {
+      "task": "juvin2023",
+      "objective": 8.0,
+      "reference": 8,
+      "signed_gap": 0.0,
+      "runtime_seconds": 0.2,
+      "classification": "reference tie; floating representation differences do not count as substantive improvements",
+      "native_experiment": "72113d8c-f61f-48be-bd33-febef3eb9a88",
+      "source_sha256": "5b81dc6b57889b2af0f52d22332ac720f4c9cb1ca28c76aa2e07497384f3a24c"
+    }
+  ],
+  "final_record": "8bb5b6c7-bd1a-49f2-a42b-a43f7161b617",
+  "readback_verified": true
+}

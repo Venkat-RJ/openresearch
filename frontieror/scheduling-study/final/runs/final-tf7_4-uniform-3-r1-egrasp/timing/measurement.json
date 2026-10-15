@@ -1,0 +1,36 @@
+{
+  "argv": [
+    "./egrasp",
+    "/work/runs/final-tf7_4-uniform-3-r1-egrasp/input.xml",
+    "/work/runs/final-tf7_4-uniform-3-r1-egrasp/output.xml",
+    "s",
+    "290"
+  ],
+  "pid": 61,
+  "started_unix": 1791455627.2492769,
+  "external_deadline_seconds": 300.0,
+  "elapsed_seconds": 290.78585279900017,
+  "user_cpu_seconds": 289.045586,
+  "system_cpu_seconds": 0.0029969999999999997,
+  "returncode": 1,
+  "timed_out": false,
+  "samples": [
+    {
+      "observed_seconds": 290.763654632,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "parseable": false,
+      "parse_error": "ParseError"
+    },
+    {
+      "observed_seconds": 290.7821064240002,
+      "sha256": "d71035a7571bbe19c9b52c1109c85bfb9ed0c6bff7d97e0c4e8e12d436bbda7b",
+      "bytes": 7162,
+      "parseable": true,
+      "parse_error": null,
+      "snapshot": "snapshot-0001.xml"
+    }
+  ],
+  "validation_status": "Pending both schedule validators; parseable is not feasible",
+  "timing_scope": "Process startup and execution; excludes container startup and preconversion"
+}

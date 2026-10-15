@@ -1,0 +1,26 @@
+{
+  "num_nodes": "<int> Number of nodes in the network, all of which are candidates for hub facilities.",
+  "num_commodities": "<int> Number of origin-destination commodity pairs with positive shipment flow.",
+  "parameters": {
+    "tau": "<float> Interhub discount factor applied to the transfer leg between two hubs, reflecting economies of scale.",
+    "TC": "<float> Transportation cost scaling factor applied to all Euclidean distances.",
+    "chi": "<float> Collection cost parameter applied to the leg from the origin to the first hub.",
+    "delta": "<float> Distribution cost parameter applied to the leg from the last hub to the destination."
+  },
+  "nodes": [
+    {
+      "id": "<int> Zero-based identifier of the node.",
+      "x": "<float> Horizontal coordinate of the node in the plane.",
+      "y": "<float> Vertical coordinate of the node in the plane.",
+      "fixed_cost": "<float> Fixed setup cost incurred when a hub is opened at this node."
+    }
+  ],
+  "distances": "<list[list[float]], shape [num_nodes][num_nodes]> Symmetric pairwise Euclidean distance between each pair of nodes, scaled by TC.",
+  "commodities": [
+    {
+      "origin": "<int> Node index where the shipment originates.",
+      "destination": "<int> Node index where the shipment is destined.",
+      "flow": "<float> Volume of goods to be shipped from the origin to the destination."
+    }
+  ]
+}

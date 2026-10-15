@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Total network cost, comprising target-to-Steiner assignment costs, spanning tree edge costs, and Steiner node activation costs.",
+  "active_steiner_nodes": "<list[int]> Indices of the Steiner nodes selected for activation in the network.",
+  "assignments": "<dict, key: '{target_node}'> Index of the active Steiner node to which each target node is connected.",
+  "steiner_tree_edges": "<list[list[int]], shape [num_edges][2]> Pairs of active Steiner node indices connected by an edge in the spanning tree."
+}

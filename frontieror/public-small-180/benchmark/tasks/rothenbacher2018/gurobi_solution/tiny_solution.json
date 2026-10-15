@@ -1,0 +1,73 @@
+{
+  "instance_path": "research-workspace/Code/efficient_opt_bench/efficient_opt_benchmark/rothenbacher2018/instance/tiny_instance.json",
+  "solver": "Gurobi",
+  "formulation": "compact_arc_flow_MIP_with_node_copies",
+  "note": "The paper only provides a set-partitioning model (1a)-(1d) requiring branch-and-price-and-cut. This compact arc-flow MIP with decouple/couple node copies is an implementation choice.",
+  "solve_time_seconds": 3.69,
+  "time_limit_seconds": 100,
+  "status": "optimal",
+  "objective_value": 345.846,
+  "mip_gap": 0.0,
+  "routes": [
+    {
+      "vehicle_class": 2,
+      "vehicle_index": 0,
+      "vehicle_description": "Truck type 1 + Trailer type 1",
+      "is_complete_vehicle": true,
+      "fixed_cost": 50.0,
+      "customers_served": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "route_sequence": [
+        0,
+        4,
+        10,
+        3,
+        1,
+        2,
+        16,
+        6,
+        5,
+        0
+      ],
+      "route_sequence_physical": [
+        0,
+        4,
+        4,
+        3,
+        1,
+        2,
+        4,
+        6,
+        5,
+        0
+      ],
+      "decouple_locations": [
+        4
+      ],
+      "couple_locations": [
+        4
+      ],
+      "arrival_times": {
+        "0": 0.0,
+        "4": 34.67,
+        "10": 39.67,
+        "3": 58.22,
+        "1": 75.66,
+        "2": 112.31,
+        "16": 176.49,
+        "6": 234.61,
+        "5": 284.2
+      },
+      "travel_cost": 291.846,
+      "handling_cost": 4.0,
+      "route_cost": 345.846
+    }
+  ],
+  "runtime": 3.81
+}

@@ -1,0 +1,16 @@
+{
+  "objective_value": "<float> Objective value of the primary problem variant solved for this instance: total opening cost of selected facilities for the Partial Set Covering Location Problem, or total covered demand for the Maximal Covering Location Problem.",
+  "primary_problem_type": "<str> Variant whose value is reported by objective_value; must be one of the instance problem_types.",
+  "results": {
+    "PSCLP": {
+      "objective_value": "<float> Minimum total opening cost of the selected facilities such that the covered demand meets the required threshold.",
+      "open_facilities": "<list[int]> Indices of facilities selected to be opened in the Partial Set Covering Location Problem.",
+      "covered_demand": "<float> Total demand of the customers counted as covered by the selected facilities."
+    },
+    "MCLP": {
+      "objective_value": "<float> Maximum total demand of customers counted as covered by the selected facilities while respecting the opening budget.",
+      "open_facilities": "<list[int]> Indices of facilities selected to be opened in the Maximal Covering Location Problem.",
+      "covered_demand": "<float> Total demand of the customers counted as covered by the selected facilities."
+    }
+  }
+}

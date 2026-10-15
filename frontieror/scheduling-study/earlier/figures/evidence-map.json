@@ -1,0 +1,180 @@
+{
+  "scope": "Completed public and development evidence only; no confirmatory intermediate results",
+  "figures_and_audits": [
+    {
+      "id": "01_v1_v2_matched",
+      "caption": "Five familiar public cases at each of two seeds; identical instance hashes and requested 300-second solver budgets, one worker. Lower is better. v2 has a lower objective in all ten matched case-seed comparisons. These are successive implementations developed using public cases, not an ablation or independent holdout. Native host runs were not CPU-isolated; elapsed times are in the source table.",
+      "experiments": [
+        "0bb8fe54-9c72-4a69-819c-b0ff4f43264e",
+        "16ee170b-9e44-4f40-8710-ba553db28de8",
+        "6f38b210-3141-4371-a778-652084c3bd12",
+        "70369f29-ec45-4926-8c8e-5fffd15e2aa3"
+      ]
+    },
+    {
+      "id": "04_published_references",
+      "caption": "One FrontierOR task, bierwirth2017, and its five familiar large public cases. v2 endpoints used 1,200-second requested budgets; the published references used approximately 3,600 seconds on unmatched hardware. This is an objective-quality comparison, not a speedup or optimality-gap plot. large-1 reference 30,879.999981 is displayed rounded to 30,880. The seed-1 v2 series combines three validated completed cases before a host reboot and two separately resumed cases; experiment boundaries are retained in the data.",
+      "experiments": [
+        "651bfdac-5cf7-40d4-b06e-1b2272e73d93",
+        "e42d9b87-4843-4ebf-9ef3-7d6826ccae75",
+        "f7c592ac-b6a0-4c42-97c8-726f0a2551ec"
+      ]
+    },
+    {
+      "id": "05_development_first",
+      "caption": "First custom development distribution: TF 2, 3, 4 crossed with uniform/priority weights, two cases per stratum. One execution per solver. All twelve pairs shown: two v2 numeric wins, one EGRASP numeric win, eight zero ties, one valid v2 result paired with an EGRASP deadline failure. Failure has no numeric objective or improvement percentage. Internal budgets differed (v2 300 s, EGRASP 298 s); external deadline 300 s. Zero ties are retained and are not omitted from any count. Both studies use a historical author-provided EGRASP binary in Linux x86 emulation, one CPU quota and 512 MiB. EGRASP randomness is undocumented; host contention is a limitation.",
+      "experiments": [
+        "72c3545c-c8b0-4946-846a-481a873a6707"
+      ]
+    },
+    {
+      "id": "06_development_harder",
+      "caption": "Second, separately designed development distribution: exact TF 1.5, 1.75, 2 with release + ceil(TF × job processing sum), uniform/priority weights and two cases per stratum. Both implementations requested 290 s within 300 s external deadlines. All 24 schedules were valid and in time. v2 had lower objectives in all twelve pairs; arithmetic mean per-case reduction 9.73%. This distribution was selected after the first study, so the studies are not pooled and these are not confirmatory results. One execution per solver; no inferential error bars. Both studies use a historical author-provided EGRASP binary in Linux x86 emulation, one CPU quota and 512 MiB. EGRASP randomness is undocumented; host contention is a limitation.",
+      "experiments": [
+        "baf3ce95-a680-460a-a7da-f0f3ce20c493"
+      ]
+    },
+    {
+      "id": "10_gantt_large-1",
+      "caption": "Exact operation intervals reconstructed from saved validated schedules and input processing times. Bar labels are zero-based job IDs where width permits; every operation remains in the source data. Bar color denotes whether its job ultimately finished late, not whether that operation alone violated a deadline. Shared time axis; machine IDs are zero-based. These are schedule timelines, not optimization convergence. Both runs use seed 0 and 1,200-second requested budgets. v2 wins this instance.",
+      "experiments": [
+        "993311ac-aaee-4b30-a8db-783a8862bd9b",
+        "e42d9b87-4843-4ebf-9ef3-7d6826ccae75"
+      ]
+    },
+    {
+      "id": "11_completion_occupancy_large-1",
+      "caption": "Each vertical tick is the actual job due date. Dots/squares show saved completion times; segments show positive tardiness. Objective contributions are weight × max(0, completion − due), exported per job in data/job-completions.csv. Occupancy divides each machine’s fixed processing workload by that algorithm’s own schedule makespan; it is not CPU utilization, and higher occupancy is not necessarily lower weighted tardiness. Same schedules as the corresponding Gantt figure.",
+      "experiments": [
+        "993311ac-aaee-4b30-a8db-783a8862bd9b",
+        "e42d9b87-4843-4ebf-9ef3-7d6826ccae75"
+      ]
+    },
+    {
+      "id": "10_gantt_large-5",
+      "caption": "Exact operation intervals reconstructed from saved validated schedules and input processing times. Bar labels are zero-based job IDs where width permits; every operation remains in the source data. Bar color denotes whether its job ultimately finished late, not whether that operation alone violated a deadline. Shared time axis; machine IDs are zero-based. These are schedule timelines, not optimization convergence. Both runs use seed 0 and 1,200-second requested budgets. LNS wins this instance.",
+      "experiments": [
+        "993311ac-aaee-4b30-a8db-783a8862bd9b",
+        "e42d9b87-4843-4ebf-9ef3-7d6826ccae75"
+      ]
+    },
+    {
+      "id": "13_research_evolution",
+      "caption": "Top: the custom integrated research loop, not a claim that the default public components enforce persistence automatically. Middle: selected implemented candidate stages in chronological order, including two v1 build failures and the initial LNS startup failure. Arrows show recorded progression, not a causal ablation or proof of novelty. Sagent proposed and implemented research variants; Codex supplied substantial infrastructure, experimental controls and independent validation. Trackinizer experiment and conclusion readbacks are preserved in data/trackinizer. The active confirmatory evaluation is not an outcome in this diagram.",
+      "experiments": [
+        "00747a59-eb1c-4164-89f7-4919db09785d",
+        "036961f1-c5f4-46f4-a01c-a82a1b6282d5",
+        "0bb8fe54-9c72-4a69-819c-b0ff4f43264e",
+        "16ee170b-9e44-4f40-8710-ba553db28de8",
+        "1ab00b31-f033-4648-a2d9-4b3c96932e8e",
+        "2cf29c95-2be7-4a59-a0cd-a4d8fb01ccc2",
+        "36bc726a-32e5-4860-b61c-8ceb6090511c",
+        "6f38b210-3141-4371-a778-652084c3bd12",
+        "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+        "7268c738-ea35-49e6-a8c6-236e163cc372",
+        "7cfe084e-f5cb-4d55-b14c-0cd510b1cb1a",
+        "919d2029-f188-432e-896b-1241f2e11057",
+        "993311ac-aaee-4b30-a8db-783a8862bd9b",
+        "b3e0b6df-1825-448a-8230-33a423deed28",
+        "c4ddc572-773c-4891-9c3f-83f9513cebcf",
+        "e42d9b87-4843-4ebf-9ef3-7d6826ccae75",
+        "f7c592ac-b6a0-4c42-97c8-726f0a2551ec"
+      ]
+    },
+    {
+      "id": "v2_lns_1200_both_seeds",
+      "caption": "Frozen v2 versus the independent CP-SAT destroy-and-repair LNS implementation on five familiar FrontierOR bierwirth2017 public cases, separately for seeds 0 and 1. Both use nominal 1,200-second solver budgets and one worker. Lower total weighted tardiness is better. v2 wins eight of ten matched case-seed comparisons. LNS wins large-5 at seed 0 (25,633 versus 26,113) and large-4 at seed 1 (29,810 versus 30,120). Input hashes match within every pair, and both validators were freshly rerun on all 20 saved schedules. Matching seed labels does not synchronize randomness. Native host runs were not CPU-isolated, so equal computational effort is not established. The seed-1 v2 records combine three completed pre-reboot cases and two resumed cases. No population confidence interval is inferred from these reused five cases. The separate 180-run confirmatory evaluation was not accessed.",
+      "audit": {
+        "status": "passed",
+        "schedules": 20,
+        "official_and_independent_checks": 20,
+        "new_completed_experiment": "300b0271-51db-4cbc-874b-b051341cdd76",
+        "new_conclusion": "c61d56b6-ea2d-4f57-b8cc-c09735948829",
+        "trackinizer_outcome_matched": true,
+        "solver_source_hash_matched": true,
+        "final_evaluation_accessed": false,
+        "new_solver_runs": 0
+      }
+    },
+    {
+      "id": "first_development",
+      "audit_sha256": "d14df058361d6a2e462615fa47a709cc7973ffa0f1da12fbd5af68cf1ab0e9ce"
+    },
+    {
+      "id": "second_development",
+      "audit_sha256": "6d70cd2ae23f822b99364d1418e361e11d26a6b4581da26d737ba631f1f9a64d"
+    },
+    {
+      "id": "v2_3600_seed0",
+      "kind": "exact endpoint table",
+      "experiment": "09e44240-79fb-454f-bd65-50f456454989",
+      "conclusion": "99063d8f-9e1e-44bc-b798-2c3b89db384d",
+      "source_sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+      "caption": "Five completed seed-0 runs, 3600-second nominal budget, one worker; unmatched reference hardware. Four endpoints improve over separate 1200-second runs, one ties. No convergence history or global-optimality claim.",
+      "trackinizer_readback": true
+    },
+    {
+      "id": "research-decision",
+      "kind": "recorded decision timeline",
+      "source_asset": "research-decision.json",
+      "source_records": [
+        "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+        "73b95dd4-3437-4ce9-bf71-00139315f2b7",
+        "16ee170b-9e44-4f40-8710-ba553db28de8",
+        "112286f2-4ab7-49d0-8765-04b72fb2b5b1"
+      ],
+      "source_sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+      "caption": "One completed Sagent research episode: a combined v1-to-v2 revision, a matched 300-second seed-0 comparison, the remaining large-4 reference miss and a recorded second-seed decision. Summarized from four original Trackinizer snapshots; no component-level causal claim."
+    },
+    {
+      "id": "trackinizer-recording",
+      "kind": "actual UI screen recording",
+      "source_asset": "trackinizer-research-replay.json",
+      "source_sha256": "d106b420e044a6cfa5ced72199484487ae6e3f342534b8e95d79091cc4667d51",
+      "recorded_by": "Venkat",
+      "caption": "A 21.5-second user recording of Trackinizer Replay at 2x and the campaign objective. The UI adds nodes in record creation order using current relations; animation spacing does not measure experiment time. Plans and active records are included. Silent web copy with editorial captions, no invented solver trajectory."
+    }
+  ],
+  "assets_sha256": {
+    "01_v1_v2_matched.pdf": "59d46ecba7cd80fc3891b5842e9522c18b3ddf73acbd5c61a8a3939d0bd8bd71",
+    "01_v1_v2_matched.png": "4192b776ece46577bce413e34738018725d6b2b27ce13f29f94aa751faccf1d8",
+    "01_v1_v2_matched.svg": "5ce90cc940caac90deee525004f19b95041c692d02ca315b10f25eb638de7d98",
+    "04_published_references.pdf": "fe4fd0220fba436688e2b2e8a3f899e1738a38164745ec0d1b99842e3eed9a07",
+    "04_published_references.png": "afa8ed633cc1236d997ebd85329c6d1e02840ee41287625afcdd5e918d874cdd",
+    "04_published_references.svg": "637b647f6870e79a87ca6de302380e1eb2a0689d744aaf1155777433a304eae3",
+    "05_development_first.pdf": "afc88dfd2d7f0c063b532dc9ab6a74022c4dd697be8c99ab0d3966e0ce87dc04",
+    "05_development_first.png": "286b8e53ade569ca00e2f3f6aeb6cb46637ba92825b957777f758ba19187f771",
+    "05_development_first.svg": "19f26e3a02d595eab507524d3a1cddb1dae6c731316e636cc681bd41689b7c77",
+    "06_development_harder.pdf": "7d432a6eb26c4d33ada766cd1c7e5e2ca57be5584f71ab5d25a21d92fc416ee5",
+    "06_development_harder.png": "0efe23cebd3e36f62a7519be89c8fef60b4fb3ece0f40a8776892b8075fb7fc2",
+    "06_development_harder.svg": "e20b79077b7a6bc9b1005c1ec90e5318260be679a0f62315a74558a3ad556092",
+    "10_gantt_large-1.pdf": "274cadbe0a20a79500068a559fdc9ed5539cf61584b2e0c3f5056ce7d9bd2476",
+    "10_gantt_large-1.png": "00b14e3c7698bc52106f06824e254fc764b7364c7e074be0d7f3289cc29be7a9",
+    "10_gantt_large-1.svg": "186fe4a3549f0aca129443d9e47e859ceef58404f9904410dc9d7c48dd664640",
+    "10_gantt_large-5.pdf": "939732b4a881d48cfd42b679f85a42405de8508822ba9ddc38059f4745f13c87",
+    "10_gantt_large-5.png": "4fd0b9dffac62c1ab1b259ac2c080e73185818a676efed233570b4640cec502f",
+    "10_gantt_large-5.svg": "8942c4a5322ff29208100447f989ad88b861abf02b924d1446163ff10b595988",
+    "11_completion_occupancy_large-1.pdf": "9fd5f55c04d65d0cf57f20ae9ba43cc0e640d8c4fce19812cbfa20c279280c53",
+    "11_completion_occupancy_large-1.png": "01ee4f35f448f4886abbb65721d0e86259f856cc79ff00554aec52000457c656",
+    "11_completion_occupancy_large-1.svg": "0f3b7a22985f028c65f60a8c2c64b881c2ab954b5e4b00f5edb01f6e6a3db813",
+    "13_research_evolution.pdf": "9a6e55ea182db585eab1b2b6c42d3b9133e6ba490373f3beb0de8edfb422dfbb",
+    "13_research_evolution.png": "ffda9f98541e28355177bfb2cc35dd5a21bc833e440b2267cab02914434e8f42",
+    "13_research_evolution.svg": "8b3dd0de7a503f2ff3915276f6dca4d33e495bd6f0e292a7bf379eb3091beec9",
+    "FINAL-REPORT-TEMPLATE.md": "e5c864827da5da2327b8395d10ad7c91573bb81fe3d34858a03d1b5fcbfe37b6",
+    "README.txt": "912b9a167bbaf937ccf592351a12b66d35cc09009d5a92f67f14d1e79245fab9",
+    "article.md": "828b9b746637ea30d0cf683cb1f21e83508c5f801041a417336b258a4158a06c",
+    "development-results.json": "eac3f5fdaf40e85660db22bbce1269b8bf3976e7851ab49d3c582bb79f4b6b2a",
+    "job-completions.csv": "587e6ae879e0138ca82e654039b86f8a0f0b27191001400016510224847203fc",
+    "operations.csv": "85c363d97d8c82794bb2f8f399f5c916b7254adf6f2db449486f4a59f251bdbb",
+    "plot_comparisons.py": "2ac6e736b4b5b274b18954809dfd013ea78c135ce2bd8e1b6daa94ba755fba4d",
+    "public-results.json": "79b77a3370b0d3bbe5de464544f1cf6e93df6c89765a0e9668426de165d1af75",
+    "research-decision.json": "a600858a4d361b8ffb592fa59ec0ac6b1976b3bdd48688e9a59e4980625b190e",
+    "trackinizer-research-replay-poster.jpg": "4605b67f5cf980a4b030b8dbcc5d060ca0571da246bf29d809e2ab285e624a9b",
+    "trackinizer-research-replay.json": "491d0179802ce571c8db71712e346232c7a7b9db5a841166457a7994400041f9",
+    "trackinizer-research-replay.mp4": "c6ebd019b92de987571d1efe2dfaaab12a044189adee5094ee232542639d16bd",
+    "trackinizer-research-replay.vtt": "68c239e55641b2b11da8482bc96f1806db509cf8ad6274def43a88228a0314b7",
+    "v2_lns_1200_both_seeds.pdf": "82331df1c91a5b3df2ec2e5b8649ea84ddec5cf07267ac63973be9467383aae6",
+    "v2_lns_1200_both_seeds.png": "f33b72658ea3cc58130e84a0c4c22a3800b680e465d38f341cb9483e98a4d448",
+    "v2_lns_1200_both_seeds.svg": "ade7462751be40ca0b76515532faa6e7e251e1cd9dc0768a536a134a5ab9b21b"
+  }
+}

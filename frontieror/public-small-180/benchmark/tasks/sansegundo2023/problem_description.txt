@@ -1,0 +1,5 @@
+# Problem Description
+
+Given a simple undirected graph defined by a set of vertices and a set of edges, the goal is to find a clique of maximum size, where a clique is a subset of vertices in which every pair of vertices is connected by an edge. The input specifies the number of vertices, the number of edges, the complete list of vertices (indexed from zero), and the complete list of edges as pairs of vertex indices. An adjacency list representation is also provided, mapping each vertex to the list of its neighbors.
+
+The task is to select a subset of the vertices such that the number of selected vertices is as large as possible, subject to the requirement that every two selected vertices must be connected by an edge in the graph. Equivalently, for every pair of distinct vertices u and v that are NOT connected by an edge in the graph, at most one of u and v may be selected. The goal is to maximize the total number of selected vertices subject to this pairwise non-adjacency restriction.

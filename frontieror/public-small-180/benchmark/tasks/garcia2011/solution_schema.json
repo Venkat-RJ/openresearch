@@ -1,0 +1,5 @@
+{
+  "objective_value": "<int> Total service cost summed over all nodes assigned to their nearest open median.",
+  "opened_facilities": "<list[int], length p> Indices of the nodes selected as median facility sites.",
+  "assignments": "<list[dict], length n> Assignment of each node to its serving median, with fields 'customer' (node index), 'facility' (median index), and 'cost' (service cost from the node to its assigned median)."
+}

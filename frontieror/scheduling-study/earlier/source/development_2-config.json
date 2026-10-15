@@ -1,0 +1,136 @@
+{
+  "stage": "development",
+  "image": "sha256:5bf378efea878ad3fba6a3772e7eee8061dcd620d6f738e8dccd27286679c448",
+  "generator_version": "custom-jsptwt-development-v0.2",
+  "plan": [
+    {
+      "name": "dev2-tf3_2-uniform-0",
+      "tightness": "3/2",
+      "weights": "uniform",
+      "seed": "development-v2:3/2:uniform:0"
+    },
+    {
+      "name": "dev2-tf3_2-uniform-1",
+      "tightness": "3/2",
+      "weights": "uniform",
+      "seed": "development-v2:3/2:uniform:1"
+    },
+    {
+      "name": "dev2-tf3_2-priority-0",
+      "tightness": "3/2",
+      "weights": "priority",
+      "seed": "development-v2:3/2:priority:0"
+    },
+    {
+      "name": "dev2-tf3_2-priority-1",
+      "tightness": "3/2",
+      "weights": "priority",
+      "seed": "development-v2:3/2:priority:1"
+    },
+    {
+      "name": "dev2-tf7_4-uniform-0",
+      "tightness": "7/4",
+      "weights": "uniform",
+      "seed": "development-v2:7/4:uniform:0"
+    },
+    {
+      "name": "dev2-tf7_4-uniform-1",
+      "tightness": "7/4",
+      "weights": "uniform",
+      "seed": "development-v2:7/4:uniform:1"
+    },
+    {
+      "name": "dev2-tf7_4-priority-0",
+      "tightness": "7/4",
+      "weights": "priority",
+      "seed": "development-v2:7/4:priority:0"
+    },
+    {
+      "name": "dev2-tf7_4-priority-1",
+      "tightness": "7/4",
+      "weights": "priority",
+      "seed": "development-v2:7/4:priority:1"
+    },
+    {
+      "name": "dev2-tf2-uniform-0",
+      "tightness": "2",
+      "weights": "uniform",
+      "seed": "development-v2:2:uniform:0"
+    },
+    {
+      "name": "dev2-tf2-uniform-1",
+      "tightness": "2",
+      "weights": "uniform",
+      "seed": "development-v2:2:uniform:1"
+    },
+    {
+      "name": "dev2-tf2-priority-0",
+      "tightness": "2",
+      "weights": "priority",
+      "seed": "development-v2:2:priority:0"
+    },
+    {
+      "name": "dev2-tf2-priority-1",
+      "tightness": "2",
+      "weights": "priority",
+      "seed": "development-v2:2:priority:1"
+    }
+  ],
+  "external_deadline_seconds": 300,
+  "internal_seconds": {
+    "egrasp": 290,
+    "frozen-v2": 290
+  },
+  "executions_per_solver_case": 1,
+  "seed_v2": 0,
+  "seed_egrasp": "undocumented; not seed-matched",
+  "cpu_limit": 1,
+  "memory": "512m",
+  "capture_poll_seconds": 0.01,
+  "rationale": "Harder development distribution after eight zero ties; fixed 290s internal and 300s external budgets, all failures and zeros retained",
+  "final_holdout_generated": false,
+  "python_version": "3.13.14",
+  "weights_priority": "Exactly six uniformly sampled jobs of30 have weight10; others1",
+  "due_dates": "release + ceil(TF times own processing sum); exact rational TF3/2,7/4,2",
+  "release_dates": "uniform integers0..floor(total processing/(2n))",
+  "provenance": "LiSA handbook p70 equations7.1/7.2 motivate time formulas; other parameters are custom design",
+  "decision_gate": {
+    "min_positive_pairs": 8,
+    "min_positive_pairs_per_stratum": 1,
+    "min_valid_per_solver": 11,
+    "expected_cases": 12,
+    "expected_executions": 24,
+    "semantics": "No unresolved validation or input discrepancies",
+    "selection": "Winner counts do not affect acceptance",
+    "failure": "Do not launch final study unchanged if any gate fails"
+  },
+  "timing_canary": {
+    "pid": 11725,
+    "state": "complete",
+    "evidence": "evidence/egrasp-timing-canary-1791445771115218000",
+    "experiment_id": "03b2638f-b5b2-4d28-8319-6bf4eb20d5ce",
+    "container": "frontieror-timing-canary-1791445771139341000",
+    "container_id": "8819d8fc735594028e053bf048a6b5b5c6dd65762219dc4427bccd9ee359a6ac",
+    "started_unix": 1791445772.543427,
+    "passed": true,
+    "belief_id": "fab8803c-15f3-4a78-ac91-f6fd37e8b1c4",
+    "finished_unix": 1791446063.107381
+  },
+  "host_concurrency": "Sagent research continues separately; one CPU quota does not isolate the host",
+  "timing_claim": "Equal external deadlines and nominal internal requests, not identical CPU effort",
+  "source_sha256": {
+    "synthetic_instances_v2.py": "5380a909867986a146378ea9213e922d6de337dce2ec85a3a7e99c7534f8fa29",
+    "development_comparison_v2.py": "17324de6763fa5537ee2dc75a7fdb3ab636dacf8df8e306cbfd4e1a871126f2f",
+    "development_gate.py": "30de6d38bac06c0bfc5f7fb70ef08f97cedbb25a477f63a59bcf633cc1d5ce98",
+    "comparator_timing_calibration.py": "e2324058a5824169cc67f1c9ed3b6bc3121095338813f773915abbbba03c1339",
+    "timed_solver.py": "8760c22f9a04a7d402650d04de75a373364a36676a32244fe3af7cec27f5bacb",
+    "lisa_adapter.py": "b8fdfb18e4ee002b12da35b292ed85c02f697a3db6d743e02e3b8f27c733ac3c",
+    "audit_schedule.py": "dc05abc0c68e074c91ccfecc910819a262a834e8efba0b34a832fff49c03ff22"
+  },
+  "official_checker_sha256": "d60bcdfc6c25b56bd25af8104ec05514609b7682976d2be972ef7f01fee1a3b3",
+  "solver_sha256": {
+    "egrasp": "c928be36ef87fc376ebb3a4adc4dfcdea791cc195e9893bca21a8d849032bc2e",
+    "frozen-v2.cpp": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+    "frozen-v2": "8b1dbef6e83755e6932dd8f8097d301794e24a0029e4cdfe988d47bb51242756"
+  }
+}

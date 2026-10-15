@@ -1,0 +1,14 @@
+{
+  "objective_value": "<float> Total cost of the distribution plan, equal to the sum of all vehicle travel costs and end-of-period holding costs at the depot and all customers across the planning horizon.",
+  "routes": {
+    "{period}": {
+      "{vehicle}": {
+        "route": "<list[int]> Ordered sequence of location indices traversed by this vehicle in this period, starting and ending at the depot (index 0).",
+        "deliveries": "<dict, key: '{customer}'> Quantity of the commodity delivered by this vehicle to each customer it visits in this period."
+      }
+    }
+  },
+  "inventories": {
+    "{location}": "<dict, key: '{period}'> Inventory on hand at this location (depot or customer) at the end of each period."
+  }
+}

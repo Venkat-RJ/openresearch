@@ -1,0 +1,30 @@
+{
+  "num_patients_P": "<int> Total number of patients to be scheduled in the session.",
+  "num_colonoscopy_C": "<int> Number of patients receiving a colonoscopy procedure.",
+  "num_upper_endoscopy_colonoscopy_UC": "<int> Number of patients receiving a combined upper endoscopy and colonoscopy procedure.",
+  "provider_service_hours_L_minutes": "<int> Total length of the provider's session in minutes.",
+  "procedure_types": "<list[str], length num_patients_P> Type of procedure for each patient, either colonoscopy ('C') or combined upper endoscopy and colonoscopy ('UC').",
+  "cost_structures": {
+    "{cost_structure_name}": {
+      "c_w": "<float> Per-minute cost of patient waiting time before their procedure begins.",
+      "c_g": "<float> Per-minute cost of provider idle time between consecutive procedures.",
+      "c_o": "<float> Per-minute cost of provider overtime beyond the scheduled session length."
+    }
+  },
+  "patients": [
+    {
+      "patient_index": "<int> One-based identifier for the patient.",
+      "procedure_type": "<str> Type of procedure for this patient, either colonoscopy ('C') or combined upper endoscopy and colonoscopy ('UC').",
+      "mean_duration_adequate_prep": "<float> Mean procedure duration in minutes when the patient has adequate bowel preparation.",
+      "mean_duration_inadequate_prep": "<float> Mean procedure duration in minutes when the patient has inadequate bowel preparation.",
+      "lower_bound_duration_adequate_prep": "<float> Lower support bound on procedure duration in minutes with adequate bowel preparation.",
+      "upper_bound_duration_adequate_prep": "<float> Upper support bound on procedure duration in minutes with adequate bowel preparation.",
+      "lower_bound_duration_inadequate_prep": "<float> Lower support bound on procedure duration in minutes with inadequate bowel preparation.",
+      "upper_bound_duration_inadequate_prep": "<float> Upper support bound on procedure duration in minutes with inadequate bowel preparation.",
+      "mean_prep_adequacy": "<float> Probability that the patient has adequate bowel preparation.",
+      "mean_arrival_time_deviation": "<float> Mean deviation in minutes of the patient's actual arrival time from their scheduled time.",
+      "lower_bound_arrival_time_deviation": "<float> Lower support bound on the patient's arrival time deviation in minutes.",
+      "upper_bound_arrival_time_deviation": "<float> Upper support bound on the patient's arrival time deviation in minutes."
+    }
+  ]
+}

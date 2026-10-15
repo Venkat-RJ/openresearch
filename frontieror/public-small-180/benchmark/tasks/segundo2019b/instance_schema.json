@@ -1,0 +1,9 @@
+{
+  "graph": {
+    "num_vertices": "<int> Total number of vertices in the graph.",
+    "num_edges": "<int> Total number of edges in the graph.",
+    "vertices": "<list[int], length num_vertices> List of all vertex identifiers in the graph.",
+    "edges": "<list[list[int]], shape [num_edges][2]> Each entry is a pair [u, v] representing an undirected edge between vertex u and vertex v."
+  },
+  "vertex_weights": "<list[int], length num_vertices> Weight assigned to each vertex, where the i-th entry is the weight of vertex i."
+}

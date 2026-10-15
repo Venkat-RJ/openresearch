@@ -1,0 +1,150 @@
+{
+  "problem_name": "roberti2021",
+  "paper_reference": "Roberti and Ruthmair (2021)",
+  "num_customers": 5,
+  "num_nodes": 6,
+  "alpha": 1,
+  "grid_size": 50,
+  "seed": 1042,
+  "objective": "minimize total completion time",
+  "truck_metric": "Manhattan (taxicab): floor(|xi-xj| + |yi-yj|)",
+  "drone_metric": "Euclidean / alpha: floor(sqrt((xi-xj)^2+(yi-yj)^2) / 1)",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "depot",
+      "x": 15,
+      "y": 9
+    },
+    {
+      "id": 1,
+      "label": "customer_1",
+      "x": 22,
+      "y": 3
+    },
+    {
+      "id": 2,
+      "label": "customer_2",
+      "x": 21,
+      "y": 19
+    },
+    {
+      "id": 3,
+      "label": "customer_3",
+      "x": 31,
+      "y": 25
+    },
+    {
+      "id": 4,
+      "label": "customer_4",
+      "x": 18,
+      "y": 48
+    },
+    {
+      "id": 5,
+      "label": "customer_5",
+      "x": 10,
+      "y": 30
+    }
+  ],
+  "truck_travel_times": [
+    [
+      0,
+      13,
+      16,
+      32,
+      42,
+      26
+    ],
+    [
+      13,
+      0,
+      17,
+      31,
+      49,
+      39
+    ],
+    [
+      16,
+      17,
+      0,
+      16,
+      32,
+      22
+    ],
+    [
+      32,
+      31,
+      16,
+      0,
+      36,
+      26
+    ],
+    [
+      42,
+      49,
+      32,
+      36,
+      0,
+      26
+    ],
+    [
+      26,
+      39,
+      22,
+      26,
+      26,
+      0
+    ]
+  ],
+  "drone_travel_times": [
+    [
+      0,
+      9,
+      11,
+      22,
+      39,
+      21
+    ],
+    [
+      9,
+      0,
+      16,
+      23,
+      45,
+      29
+    ],
+    [
+      11,
+      16,
+      0,
+      11,
+      29,
+      15
+    ],
+    [
+      22,
+      23,
+      11,
+      0,
+      26,
+      21
+    ],
+    [
+      39,
+      45,
+      29,
+      26,
+      0,
+      19
+    ],
+    [
+      21,
+      29,
+      15,
+      21,
+      19,
+      0
+    ]
+  ]
+}

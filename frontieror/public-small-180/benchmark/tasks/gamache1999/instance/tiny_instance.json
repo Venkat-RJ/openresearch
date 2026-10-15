@@ -1,0 +1,1066 @@
+{
+  "instance_id": 1,
+  "problem_type": "Aircrew Rostering Problem",
+  "reference": "Gamache, Soumis, Marquis, Desrosiers (1999)",
+  "generation_seed": 19990247,
+  "generation_attempt": 1,
+  "planning_horizon_days": 30,
+  "num_crew_members": 20,
+  "num_mother_pairings": 40,
+  "num_daughter_pairings": 40,
+  "num_aircraft_types": 1,
+  "crew_type": "CC",
+  "network_stats": {
+    "num_nodes": 111,
+    "num_arcs_estimate": 2961
+  },
+  "work_rules": {
+    "weekly_rest_period_hours": 48,
+    "monthly_rest_additional_hours": 48,
+    "max_spread_between_breaks_days": 8,
+    "monthly_flight_limit_hours": 77,
+    "rolling_flight_limit_hours": 85,
+    "rolling_flight_period_description": "16th of preceding month to 15th of current month",
+    "max_consecutive_early_departures_before_8am": 2,
+    "max_cross_pairings_per_month": 1,
+    "week_definition": "Monday 00:00 to Sunday 24:00",
+    "weekly_rest_latest_start_on_sunday_hour": 6
+  },
+  "objective": {
+    "type": "minimize",
+    "description": "Minimize total duration (in minutes) of uncovered pairings"
+  },
+  "pairings": [
+    {
+      "id": 0,
+      "start_day": 25,
+      "duration_days": 3,
+      "departure_hour": 5.53,
+      "return_hour": 18.1,
+      "flight_hours": 16.5,
+      "duration_minutes": 3634,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 1,
+      "start_day": 17,
+      "duration_days": 2,
+      "departure_hour": 6.99,
+      "return_hour": 14.52,
+      "flight_hours": 8.9,
+      "duration_minutes": 1892,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 2,
+      "start_day": 12,
+      "duration_days": 3,
+      "departure_hour": 19.15,
+      "return_hour": 8.5,
+      "flight_hours": 14.0,
+      "duration_minutes": 2241,
+      "aircraft_type": 0,
+      "is_cross_pairing": true,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 3,
+      "start_day": 21,
+      "duration_days": 3,
+      "departure_hour": 17.85,
+      "return_hour": 20.2,
+      "flight_hours": 16.6,
+      "duration_minutes": 3021,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 4,
+      "start_day": 0,
+      "duration_days": 4,
+      "departure_hour": 10.25,
+      "return_hour": 18.65,
+      "flight_hours": 20.0,
+      "duration_minutes": 4824,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 5,
+      "start_day": 28,
+      "duration_days": 2,
+      "departure_hour": 17.13,
+      "return_hour": 15.53,
+      "flight_hours": 9.7,
+      "duration_minutes": 1344,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 6,
+      "start_day": 0,
+      "duration_days": 2,
+      "departure_hour": 20.98,
+      "return_hour": 8.66,
+      "flight_hours": 9.3,
+      "duration_minutes": 701,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 7,
+      "start_day": 18,
+      "duration_days": 4,
+      "departure_hour": 10.44,
+      "return_hour": 23.17,
+      "flight_hours": 17.2,
+      "duration_minutes": 5084,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 8,
+      "start_day": 22,
+      "duration_days": 3,
+      "departure_hour": 9.37,
+      "return_hour": 8.14,
+      "flight_hours": 23.1,
+      "duration_minutes": 2806,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 9,
+      "start_day": 4,
+      "duration_days": 4,
+      "departure_hour": 11.37,
+      "return_hour": 11.24,
+      "flight_hours": 26.4,
+      "duration_minutes": 4312,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 10,
+      "start_day": 9,
+      "duration_days": 3,
+      "departure_hour": 9.66,
+      "return_hour": 9.74,
+      "flight_hours": 22.7,
+      "duration_minutes": 2885,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 11,
+      "start_day": 3,
+      "duration_days": 4,
+      "departure_hour": 10.4,
+      "return_hour": 10.16,
+      "flight_hours": 22.8,
+      "duration_minutes": 4306,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 12,
+      "start_day": 12,
+      "duration_days": 3,
+      "departure_hour": 16.91,
+      "return_hour": 12.13,
+      "flight_hours": 12.9,
+      "duration_minutes": 2593,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 13,
+      "start_day": 11,
+      "duration_days": 4,
+      "departure_hour": 5.45,
+      "return_hour": 22.96,
+      "flight_hours": 26.9,
+      "duration_minutes": 5371,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 14,
+      "start_day": 28,
+      "duration_days": 2,
+      "departure_hour": 16.31,
+      "return_hour": 12.91,
+      "flight_hours": 12.5,
+      "duration_minutes": 1236,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 15,
+      "start_day": 26,
+      "duration_days": 3,
+      "departure_hour": 7.36,
+      "return_hour": 21.14,
+      "flight_hours": 22.7,
+      "duration_minutes": 3707,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 16,
+      "start_day": 2,
+      "duration_days": 3,
+      "departure_hour": 20.91,
+      "return_hour": 12.59,
+      "flight_hours": 12.9,
+      "duration_minutes": 2381,
+      "aircraft_type": 0,
+      "is_cross_pairing": true,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 17,
+      "start_day": 14,
+      "duration_days": 2,
+      "departure_hour": 14.6,
+      "return_hour": 15.48,
+      "flight_hours": 11.2,
+      "duration_minutes": 1493,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 18,
+      "start_day": 24,
+      "duration_days": 4,
+      "departure_hour": 20.05,
+      "return_hour": 14.89,
+      "flight_hours": 31.2,
+      "duration_minutes": 4010,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 19,
+      "start_day": 5,
+      "duration_days": 3,
+      "departure_hour": 8.49,
+      "return_hour": 20.04,
+      "flight_hours": 20.0,
+      "duration_minutes": 3573,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 20,
+      "start_day": 20,
+      "duration_days": 2,
+      "departure_hour": 20.12,
+      "return_hour": 9.92,
+      "flight_hours": 10.2,
+      "duration_minutes": 828,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 21,
+      "start_day": 16,
+      "duration_days": 3,
+      "departure_hour": 13.86,
+      "return_hour": 13.07,
+      "flight_hours": 20.9,
+      "duration_minutes": 2833,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 22,
+      "start_day": 15,
+      "duration_days": 4,
+      "departure_hour": 19.53,
+      "return_hour": 18.69,
+      "flight_hours": 24.2,
+      "duration_minutes": 4270,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 23,
+      "start_day": 24,
+      "duration_days": 2,
+      "departure_hour": 13.04,
+      "return_hour": 16.04,
+      "flight_hours": 10.7,
+      "duration_minutes": 1620,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 24,
+      "start_day": 10,
+      "duration_days": 3,
+      "departure_hour": 8.03,
+      "return_hour": 17.4,
+      "flight_hours": 17.3,
+      "duration_minutes": 3442,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 25,
+      "start_day": 19,
+      "duration_days": 3,
+      "departure_hour": 13.88,
+      "return_hour": 19.72,
+      "flight_hours": 23.5,
+      "duration_minutes": 3230,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 26,
+      "start_day": 26,
+      "duration_days": 3,
+      "departure_hour": 5.28,
+      "return_hour": 17.4,
+      "flight_hours": 12.0,
+      "duration_minutes": 3607,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 27,
+      "start_day": 11,
+      "duration_days": 2,
+      "departure_hour": 14.46,
+      "return_hour": 15.41,
+      "flight_hours": 11.2,
+      "duration_minutes": 1497,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 28,
+      "start_day": 10,
+      "duration_days": 4,
+      "departure_hour": 19.01,
+      "return_hour": 15.95,
+      "flight_hours": 21.5,
+      "duration_minutes": 4136,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 29,
+      "start_day": 21,
+      "duration_days": 3,
+      "departure_hour": 6.64,
+      "return_hour": 22.78,
+      "flight_hours": 15.4,
+      "duration_minutes": 3848,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 30,
+      "start_day": 20,
+      "duration_days": 2,
+      "departure_hour": 16.51,
+      "return_hour": 21.85,
+      "flight_hours": 13.0,
+      "duration_minutes": 1760,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 31,
+      "start_day": 0,
+      "duration_days": 3,
+      "departure_hour": 14.93,
+      "return_hour": 13.58,
+      "flight_hours": 21.1,
+      "duration_minutes": 2799,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 32,
+      "start_day": 6,
+      "duration_days": 3,
+      "departure_hour": 11.23,
+      "return_hour": 21.46,
+      "flight_hours": 17.2,
+      "duration_minutes": 3494,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 33,
+      "start_day": 23,
+      "duration_days": 2,
+      "departure_hour": 16.39,
+      "return_hour": 21.17,
+      "flight_hours": 14.1,
+      "duration_minutes": 1727,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 34,
+      "start_day": 25,
+      "duration_days": 2,
+      "departure_hour": 12.84,
+      "return_hour": 9.88,
+      "flight_hours": 10.1,
+      "duration_minutes": 1262,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 35,
+      "start_day": 8,
+      "duration_days": 2,
+      "departure_hour": 20.93,
+      "return_hour": 9.49,
+      "flight_hours": 10.0,
+      "duration_minutes": 754,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 36,
+      "start_day": 23,
+      "duration_days": 4,
+      "departure_hour": 10.31,
+      "return_hour": 20.36,
+      "flight_hours": 24.8,
+      "duration_minutes": 4923,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 37,
+      "start_day": 17,
+      "duration_days": 3,
+      "departure_hour": 13.12,
+      "return_hour": 23.46,
+      "flight_hours": 13.4,
+      "duration_minutes": 3500,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 38,
+      "start_day": 10,
+      "duration_days": 1,
+      "departure_hour": 16.84,
+      "return_hour": 17.84,
+      "flight_hours": 6.7,
+      "duration_minutes": 60,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    },
+    {
+      "id": 39,
+      "start_day": 11,
+      "duration_days": 1,
+      "departure_hour": 10.97,
+      "return_hour": 15.56,
+      "flight_hours": 4.5,
+      "duration_minutes": 275,
+      "aircraft_type": 0,
+      "is_cross_pairing": false,
+      "coverage_requirement": 1
+    }
+  ],
+  "crew_members": [
+    {
+      "id": 0,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        14,
+        15,
+        16
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 14,
+          "end_day": 16,
+          "duration_days": 3,
+          "type": "reserve_block"
+        }
+      ],
+      "flight_hours_previous_15_days": 28.1
+    },
+    {
+      "id": 1,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 10,
+          "end_day": 13,
+          "duration_days": 4,
+          "type": "medical"
+        }
+      ],
+      "flight_hours_previous_15_days": 25.4
+    },
+    {
+      "id": 2,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        6,
+        7,
+        8,
+        9,
+        27,
+        28,
+        29
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 6,
+          "end_day": 6,
+          "duration_days": 1,
+          "type": "reserve_block"
+        },
+        {
+          "start_day": 7,
+          "end_day": 9,
+          "duration_days": 3,
+          "type": "reserve_block"
+        },
+        {
+          "start_day": 27,
+          "end_day": 29,
+          "duration_days": 3,
+          "type": "transition"
+        }
+      ],
+      "flight_hours_previous_15_days": 35.9
+    },
+    {
+      "id": 3,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        0,
+        1
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 0,
+          "end_day": 1,
+          "duration_days": 2,
+          "type": "annual_leave"
+        }
+      ],
+      "flight_hours_previous_15_days": 16.5
+    },
+    {
+      "id": 4,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        13,
+        15,
+        16
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 3,
+          "end_day": 5,
+          "duration_days": 3,
+          "type": "reserve_block"
+        },
+        {
+          "start_day": 6,
+          "end_day": 8,
+          "duration_days": 3,
+          "type": "training"
+        },
+        {
+          "start_day": 13,
+          "end_day": 13,
+          "duration_days": 1,
+          "type": "training"
+        },
+        {
+          "start_day": 15,
+          "end_day": 16,
+          "duration_days": 2,
+          "type": "training"
+        }
+      ],
+      "flight_hours_previous_15_days": 16.2
+    },
+    {
+      "id": 5,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        14
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 14,
+          "end_day": 14,
+          "duration_days": 1,
+          "type": "reserve_block"
+        }
+      ],
+      "flight_hours_previous_15_days": 27.7
+    },
+    {
+      "id": 6,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        17,
+        20,
+        21,
+        22
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 17,
+          "end_day": 17,
+          "duration_days": 1,
+          "type": "transition"
+        },
+        {
+          "start_day": 20,
+          "end_day": 22,
+          "duration_days": 3,
+          "type": "training"
+        }
+      ],
+      "flight_hours_previous_15_days": 28.0
+    },
+    {
+      "id": 7,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        12
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 12,
+          "end_day": 12,
+          "duration_days": 1,
+          "type": "medical"
+        }
+      ],
+      "flight_hours_previous_15_days": 28.4
+    },
+    {
+      "id": 8,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        5
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 5,
+          "end_day": 5,
+          "duration_days": 1,
+          "type": "transition"
+        }
+      ],
+      "flight_hours_previous_15_days": 0.4
+    },
+    {
+      "id": 9,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        3,
+        13
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 3,
+          "end_day": 3,
+          "duration_days": 1,
+          "type": "medical"
+        },
+        {
+          "start_day": 13,
+          "end_day": 13,
+          "duration_days": 1,
+          "type": "transition"
+        }
+      ],
+      "flight_hours_previous_15_days": 24.5
+    },
+    {
+      "id": 10,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        11
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 11,
+          "end_day": 11,
+          "duration_days": 1,
+          "type": "training"
+        }
+      ],
+      "flight_hours_previous_15_days": 29.0
+    },
+    {
+      "id": 11,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        4,
+        5
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 4,
+          "end_day": 5,
+          "duration_days": 2,
+          "type": "annual_leave"
+        }
+      ],
+      "flight_hours_previous_15_days": 20.6
+    },
+    {
+      "id": 12,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        17,
+        18,
+        27
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 17,
+          "end_day": 18,
+          "duration_days": 2,
+          "type": "annual_leave"
+        },
+        {
+          "start_day": 27,
+          "end_day": 27,
+          "duration_days": 1,
+          "type": "reserve_block"
+        }
+      ],
+      "flight_hours_previous_15_days": 26.8
+    },
+    {
+      "id": 13,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        6,
+        18,
+        19,
+        23,
+        24
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 6,
+          "end_day": 6,
+          "duration_days": 1,
+          "type": "transition"
+        },
+        {
+          "start_day": 18,
+          "end_day": 19,
+          "duration_days": 2,
+          "type": "training"
+        },
+        {
+          "start_day": 23,
+          "end_day": 24,
+          "duration_days": 2,
+          "type": "reserve_block"
+        }
+      ],
+      "flight_hours_previous_15_days": 18.0
+    },
+    {
+      "id": 14,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        2,
+        18,
+        20,
+        21,
+        22,
+        23
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 2,
+          "end_day": 2,
+          "duration_days": 1,
+          "type": "training"
+        },
+        {
+          "start_day": 18,
+          "end_day": 18,
+          "duration_days": 1,
+          "type": "transition"
+        },
+        {
+          "start_day": 20,
+          "end_day": 23,
+          "duration_days": 4,
+          "type": "annual_leave"
+        }
+      ],
+      "flight_hours_previous_15_days": 20.7
+    },
+    {
+      "id": 15,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        6,
+        11,
+        12,
+        22
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 6,
+          "end_day": 6,
+          "duration_days": 1,
+          "type": "reserve_block"
+        },
+        {
+          "start_day": 11,
+          "end_day": 12,
+          "duration_days": 2,
+          "type": "training"
+        },
+        {
+          "start_day": 22,
+          "end_day": 22,
+          "duration_days": 1,
+          "type": "reserve_block"
+        }
+      ],
+      "flight_hours_previous_15_days": 17.5
+    },
+    {
+      "id": 16,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        3,
+        15,
+        16,
+        26,
+        29
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 3,
+          "end_day": 3,
+          "duration_days": 1,
+          "type": "transition"
+        },
+        {
+          "start_day": 15,
+          "end_day": 16,
+          "duration_days": 2,
+          "type": "training"
+        },
+        {
+          "start_day": 26,
+          "end_day": 26,
+          "duration_days": 1,
+          "type": "training"
+        },
+        {
+          "start_day": 29,
+          "end_day": 29,
+          "duration_days": 1,
+          "type": "transition"
+        }
+      ],
+      "flight_hours_previous_15_days": 30.4
+    },
+    {
+      "id": 17,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 26,
+          "end_day": 29,
+          "duration_days": 4,
+          "type": "reserve_block"
+        }
+      ],
+      "flight_hours_previous_15_days": 11.9
+    },
+    {
+      "id": 18,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        7,
+        8,
+        16,
+        17,
+        21,
+        28
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 7,
+          "end_day": 8,
+          "duration_days": 2,
+          "type": "reserve_block"
+        },
+        {
+          "start_day": 16,
+          "end_day": 17,
+          "duration_days": 2,
+          "type": "transition"
+        },
+        {
+          "start_day": 21,
+          "end_day": 21,
+          "duration_days": 1,
+          "type": "medical"
+        },
+        {
+          "start_day": 28,
+          "end_day": 28,
+          "duration_days": 1,
+          "type": "reserve_block"
+        }
+      ],
+      "flight_hours_previous_15_days": 32.6
+    },
+    {
+      "id": 19,
+      "qualifications": [
+        0
+      ],
+      "pre_assigned_days": [
+        3,
+        4,
+        19,
+        20,
+        26,
+        27,
+        28
+      ],
+      "pre_assigned_activities": [
+        {
+          "start_day": 3,
+          "end_day": 4,
+          "duration_days": 2,
+          "type": "desiderata"
+        },
+        {
+          "start_day": 19,
+          "end_day": 20,
+          "duration_days": 2,
+          "type": "transition"
+        },
+        {
+          "start_day": 26,
+          "end_day": 28,
+          "duration_days": 3,
+          "type": "reserve_block"
+        }
+      ],
+      "flight_hours_previous_15_days": 24.7
+    }
+  ]
+}

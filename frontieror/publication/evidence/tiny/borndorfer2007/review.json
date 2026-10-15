@@ -1,0 +1,9710 @@
+{
+  "task": "borndorfer2007",
+  "review_date": "2026-10-12",
+  "review_kind": "Separate Codex agent arithmetic and graph semantic review of saved artifacts; not external replication",
+  "validator_provenance": {
+    "path": "ARTICLE_ROOT/authoring/reviews/borndorfer/independent_review.py",
+    "sha256": "f696c77fa55f03d93f753e53a2547a790d5e6322c594f0e1b5c8556226ebc5da",
+    "reference_source_shortlist_setting_lines": [
+      351,
+      352,
+      353
+    ],
+    "formulation_unweighted_objective_lines": [
+      55,
+      56
+    ]
+  },
+  "constraints_reviewed": [
+    "legal terminal-to-terminal simple lines",
+    "mode and edge/node consistency",
+    "maximum line length",
+    "nonnegative finite frequencies",
+    "frequency upper bound and active-line linking",
+    "edge frequency capacities",
+    "directed simple passenger path validity",
+    "nonnegative finite passenger flows",
+    "exact OD demand satisfaction",
+    "per-OD node flow conservation",
+    "arc passenger capacity",
+    "decision-derived weighted objective"
+  ],
+  "candidate_audit": {
+    "passed": true,
+    "issues": [],
+    "absolute_tolerance": 1e-08,
+    "fixed_cost": 20000.0,
+    "operating_cost": 1119.9999999999986,
+    "line_cost": 21120.0,
+    "total_passenger_travel_seconds": 42129.32,
+    "weighted_line_cost": 21073.536,
+    "weighted_passenger_travel_cost": 92.684504,
+    "recomputed_objective": 21166.220503999997,
+    "reported_objective": 21166.220504,
+    "objective_residual": 1.436832e-12,
+    "lines": [
+      {
+        "line_index": 0,
+        "mode": "bus",
+        "nodes": [
+          0,
+          10,
+          16,
+          17,
+          19
+        ],
+        "edges": [
+          4,
+          38,
+          56,
+          58
+        ],
+        "frequency": 1.2375,
+        "fixed_cost": 10000,
+        "operating_cost": 495.0,
+        "arc_capacity_each_direction": 99.0
+      },
+      {
+        "line_index": 214,
+        "mode": "bus",
+        "nodes": [
+          4,
+          3,
+          8,
+          14,
+          19
+        ],
+        "edges": [
+          14,
+          16,
+          32,
+          53
+        ],
+        "frequency": 1.5624999999999964,
+        "fixed_cost": 10000,
+        "operating_cost": 624.9999999999985,
+        "arc_capacity_each_direction": 124.99999999999972
+      }
+    ],
+    "paths": [
+      {
+        "origin": 0,
+        "destination": 10,
+        "arcs": [
+          8
+        ],
+        "flow": 19,
+        "nodes": [
+          0,
+          10
+        ],
+        "edges": [
+          4
+        ],
+        "travel_time_seconds": 61.52
+      },
+      {
+        "origin": 3,
+        "destination": 8,
+        "arcs": [
+          32
+        ],
+        "flow": 87,
+        "nodes": [
+          3,
+          8
+        ],
+        "edges": [
+          16
+        ],
+        "travel_time_seconds": 24.38
+      },
+      {
+        "origin": 3,
+        "destination": 17,
+        "arcs": [
+          32,
+          64,
+          106,
+          117
+        ],
+        "flow": 20,
+        "nodes": [
+          3,
+          8,
+          14,
+          19,
+          17
+        ],
+        "edges": [
+          16,
+          32,
+          53,
+          58
+        ],
+        "travel_time_seconds": 160.27
+      },
+      {
+        "origin": 3,
+        "destination": 10,
+        "arcs": [
+          32,
+          64,
+          106,
+          117,
+          113,
+          77
+        ],
+        "flow": 18,
+        "nodes": [
+          3,
+          8,
+          14,
+          19,
+          17,
+          16,
+          10
+        ],
+        "edges": [
+          16,
+          32,
+          53,
+          58,
+          56,
+          38
+        ],
+        "travel_time_seconds": 229.12
+      },
+      {
+        "origin": 8,
+        "destination": 3,
+        "arcs": [
+          33
+        ],
+        "flow": 87,
+        "nodes": [
+          8,
+          3
+        ],
+        "edges": [
+          16
+        ],
+        "travel_time_seconds": 24.38
+      },
+      {
+        "origin": 8,
+        "destination": 17,
+        "arcs": [
+          64,
+          106,
+          117
+        ],
+        "flow": 31,
+        "nodes": [
+          8,
+          14,
+          19,
+          17
+        ],
+        "edges": [
+          32,
+          53,
+          58
+        ],
+        "travel_time_seconds": 135.89
+      },
+      {
+        "origin": 8,
+        "destination": 10,
+        "arcs": [
+          64,
+          106,
+          117,
+          113,
+          77
+        ],
+        "flow": 20,
+        "nodes": [
+          8,
+          14,
+          19,
+          17,
+          16,
+          10
+        ],
+        "edges": [
+          32,
+          53,
+          58,
+          56,
+          38
+        ],
+        "travel_time_seconds": 204.74
+      },
+      {
+        "origin": 10,
+        "destination": 17,
+        "arcs": [
+          76,
+          112
+        ],
+        "flow": 61,
+        "nodes": [
+          10,
+          16,
+          17
+        ],
+        "edges": [
+          38,
+          56
+        ],
+        "travel_time_seconds": 68.85
+      },
+      {
+        "origin": 10,
+        "destination": 8,
+        "arcs": [
+          76,
+          112,
+          116,
+          107,
+          65
+        ],
+        "flow": 20,
+        "nodes": [
+          10,
+          16,
+          17,
+          19,
+          14,
+          8
+        ],
+        "edges": [
+          38,
+          56,
+          58,
+          53,
+          32
+        ],
+        "travel_time_seconds": 204.74
+      },
+      {
+        "origin": 10,
+        "destination": 0,
+        "arcs": [
+          9
+        ],
+        "flow": 19,
+        "nodes": [
+          10,
+          0
+        ],
+        "edges": [
+          4
+        ],
+        "travel_time_seconds": 61.52
+      },
+      {
+        "origin": 17,
+        "destination": 10,
+        "arcs": [
+          113,
+          77
+        ],
+        "flow": 61,
+        "nodes": [
+          17,
+          16,
+          10
+        ],
+        "edges": [
+          56,
+          38
+        ],
+        "travel_time_seconds": 68.85
+      },
+      {
+        "origin": 17,
+        "destination": 8,
+        "arcs": [
+          116,
+          107,
+          65
+        ],
+        "flow": 31,
+        "nodes": [
+          17,
+          19,
+          14,
+          8
+        ],
+        "edges": [
+          58,
+          53,
+          32
+        ],
+        "travel_time_seconds": 135.89
+      },
+      {
+        "origin": 17,
+        "destination": 3,
+        "arcs": [
+          116,
+          107,
+          65,
+          33
+        ],
+        "flow": 20,
+        "nodes": [
+          17,
+          19,
+          14,
+          8,
+          3
+        ],
+        "edges": [
+          58,
+          53,
+          32,
+          16
+        ],
+        "travel_time_seconds": 160.27
+      }
+    ],
+    "od_demands": [
+      {
+        "origin": 3,
+        "destination": 8,
+        "demand": 87.0,
+        "served": 87.0
+      },
+      {
+        "origin": 8,
+        "destination": 3,
+        "demand": 87.0,
+        "served": 87.0
+      },
+      {
+        "origin": 10,
+        "destination": 17,
+        "demand": 61.0,
+        "served": 61.0
+      },
+      {
+        "origin": 17,
+        "destination": 10,
+        "demand": 61.0,
+        "served": 61.0
+      },
+      {
+        "origin": 8,
+        "destination": 17,
+        "demand": 31.0,
+        "served": 31.0
+      },
+      {
+        "origin": 17,
+        "destination": 8,
+        "demand": 31.0,
+        "served": 31.0
+      },
+      {
+        "origin": 3,
+        "destination": 17,
+        "demand": 20.0,
+        "served": 20.0
+      },
+      {
+        "origin": 17,
+        "destination": 3,
+        "demand": 20.0,
+        "served": 20.0
+      },
+      {
+        "origin": 8,
+        "destination": 10,
+        "demand": 20.0,
+        "served": 20.0
+      },
+      {
+        "origin": 10,
+        "destination": 8,
+        "demand": 20.0,
+        "served": 20.0
+      },
+      {
+        "origin": 0,
+        "destination": 10,
+        "demand": 19.0,
+        "served": 19.0
+      },
+      {
+        "origin": 10,
+        "destination": 0,
+        "demand": 19.0,
+        "served": 19.0
+      },
+      {
+        "origin": 3,
+        "destination": 10,
+        "demand": 18.0,
+        "served": 18.0
+      }
+    ],
+    "arc_loads": [
+      {
+        "id": 0,
+        "from": 0,
+        "to": 1,
+        "edge_id": 0,
+        "travel_time": 27.54,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 1,
+        "from": 1,
+        "to": 0,
+        "edge_id": 0,
+        "travel_time": 27.54,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 2,
+        "from": 0,
+        "to": 2,
+        "edge_id": 1,
+        "travel_time": 61.6,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 3,
+        "from": 2,
+        "to": 0,
+        "edge_id": 1,
+        "travel_time": 61.6,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 4,
+        "from": 0,
+        "to": 5,
+        "edge_id": 2,
+        "travel_time": 26.21,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 5,
+        "from": 5,
+        "to": 0,
+        "edge_id": 2,
+        "travel_time": 26.21,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 6,
+        "from": 0,
+        "to": 6,
+        "edge_id": 3,
+        "travel_time": 36.66,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 7,
+        "from": 6,
+        "to": 0,
+        "edge_id": 3,
+        "travel_time": 36.66,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 8,
+        "from": 0,
+        "to": 10,
+        "edge_id": 4,
+        "travel_time": 61.52,
+        "flow": 19.0,
+        "capacity": 99.0,
+        "slack": 80.0
+      },
+      {
+        "id": 9,
+        "from": 10,
+        "to": 0,
+        "edge_id": 4,
+        "travel_time": 61.52,
+        "flow": 19.0,
+        "capacity": 99.0,
+        "slack": 80.0
+      },
+      {
+        "id": 10,
+        "from": 1,
+        "to": 2,
+        "edge_id": 5,
+        "travel_time": 34.15,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 11,
+        "from": 2,
+        "to": 1,
+        "edge_id": 5,
+        "travel_time": 34.15,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 12,
+        "from": 1,
+        "to": 5,
+        "edge_id": 6,
+        "travel_time": 38.84,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 13,
+        "from": 5,
+        "to": 1,
+        "edge_id": 6,
+        "travel_time": 38.84,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 14,
+        "from": 1,
+        "to": 6,
+        "edge_id": 7,
+        "travel_time": 25.74,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 15,
+        "from": 6,
+        "to": 1,
+        "edge_id": 7,
+        "travel_time": 25.74,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 16,
+        "from": 1,
+        "to": 7,
+        "edge_id": 8,
+        "travel_time": 45.44,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 17,
+        "from": 7,
+        "to": 1,
+        "edge_id": 8,
+        "travel_time": 45.44,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 18,
+        "from": 2,
+        "to": 3,
+        "edge_id": 9,
+        "travel_time": 24.73,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 19,
+        "from": 3,
+        "to": 2,
+        "edge_id": 9,
+        "travel_time": 24.73,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 20,
+        "from": 2,
+        "to": 4,
+        "edge_id": 10,
+        "travel_time": 54.22,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 21,
+        "from": 4,
+        "to": 2,
+        "edge_id": 10,
+        "travel_time": 54.22,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 22,
+        "from": 2,
+        "to": 6,
+        "edge_id": 11,
+        "travel_time": 41.64,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 23,
+        "from": 6,
+        "to": 2,
+        "edge_id": 11,
+        "travel_time": 41.64,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 24,
+        "from": 2,
+        "to": 7,
+        "edge_id": 12,
+        "travel_time": 29.24,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 25,
+        "from": 7,
+        "to": 2,
+        "edge_id": 12,
+        "travel_time": 29.24,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 26,
+        "from": 2,
+        "to": 8,
+        "edge_id": 13,
+        "travel_time": 38.68,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 27,
+        "from": 8,
+        "to": 2,
+        "edge_id": 13,
+        "travel_time": 38.68,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 28,
+        "from": 3,
+        "to": 4,
+        "edge_id": 14,
+        "travel_time": 29.7,
+        "flow": 0.0,
+        "capacity": 124.99999999999972,
+        "slack": 124.99999999999972
+      },
+      {
+        "id": 29,
+        "from": 4,
+        "to": 3,
+        "edge_id": 14,
+        "travel_time": 29.7,
+        "flow": 0.0,
+        "capacity": 124.99999999999972,
+        "slack": 124.99999999999972
+      },
+      {
+        "id": 30,
+        "from": 3,
+        "to": 7,
+        "edge_id": 15,
+        "travel_time": 37.99,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 31,
+        "from": 7,
+        "to": 3,
+        "edge_id": 15,
+        "travel_time": 37.99,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 32,
+        "from": 3,
+        "to": 8,
+        "edge_id": 16,
+        "travel_time": 24.38,
+        "flow": 125.0,
+        "capacity": 124.99999999999972,
+        "slack": -2.88e-13
+      },
+      {
+        "id": 33,
+        "from": 8,
+        "to": 3,
+        "edge_id": 16,
+        "travel_time": 24.38,
+        "flow": 107.0,
+        "capacity": 124.99999999999972,
+        "slack": 17.999999999999712
+      },
+      {
+        "id": 34,
+        "from": 3,
+        "to": 9,
+        "edge_id": 17,
+        "travel_time": 41.39,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 35,
+        "from": 9,
+        "to": 3,
+        "edge_id": 17,
+        "travel_time": 41.39,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 36,
+        "from": 4,
+        "to": 8,
+        "edge_id": 18,
+        "travel_time": 37.13,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 37,
+        "from": 8,
+        "to": 4,
+        "edge_id": 18,
+        "travel_time": 37.13,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 38,
+        "from": 4,
+        "to": 9,
+        "edge_id": 19,
+        "travel_time": 32.79,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 39,
+        "from": 9,
+        "to": 4,
+        "edge_id": 19,
+        "travel_time": 32.79,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 40,
+        "from": 4,
+        "to": 14,
+        "edge_id": 20,
+        "travel_time": 63.27,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 41,
+        "from": 14,
+        "to": 4,
+        "edge_id": 20,
+        "travel_time": 63.27,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 42,
+        "from": 5,
+        "to": 6,
+        "edge_id": 21,
+        "travel_time": 27.3,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 43,
+        "from": 6,
+        "to": 5,
+        "edge_id": 21,
+        "travel_time": 27.3,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 44,
+        "from": 5,
+        "to": 10,
+        "edge_id": 22,
+        "travel_time": 35.33,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 45,
+        "from": 10,
+        "to": 5,
+        "edge_id": 22,
+        "travel_time": 35.33,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 46,
+        "from": 5,
+        "to": 11,
+        "edge_id": 23,
+        "travel_time": 41.08,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 47,
+        "from": 11,
+        "to": 5,
+        "edge_id": 23,
+        "travel_time": 41.08,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 48,
+        "from": 6,
+        "to": 7,
+        "edge_id": 24,
+        "travel_time": 33.59,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 49,
+        "from": 7,
+        "to": 6,
+        "edge_id": 24,
+        "travel_time": 33.59,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 50,
+        "from": 6,
+        "to": 10,
+        "edge_id": 25,
+        "travel_time": 44.95,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 51,
+        "from": 10,
+        "to": 6,
+        "edge_id": 25,
+        "travel_time": 44.95,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 52,
+        "from": 6,
+        "to": 11,
+        "edge_id": 26,
+        "travel_time": 32.83,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 53,
+        "from": 11,
+        "to": 6,
+        "edge_id": 26,
+        "travel_time": 32.83,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 54,
+        "from": 7,
+        "to": 8,
+        "edge_id": 27,
+        "travel_time": 30.64,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 55,
+        "from": 8,
+        "to": 7,
+        "edge_id": 27,
+        "travel_time": 30.64,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 56,
+        "from": 7,
+        "to": 12,
+        "edge_id": 28,
+        "travel_time": 32.82,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 57,
+        "from": 12,
+        "to": 7,
+        "edge_id": 28,
+        "travel_time": 32.82,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 58,
+        "from": 7,
+        "to": 13,
+        "edge_id": 29,
+        "travel_time": 36.03,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 59,
+        "from": 13,
+        "to": 7,
+        "edge_id": 29,
+        "travel_time": 36.03,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 60,
+        "from": 8,
+        "to": 9,
+        "edge_id": 30,
+        "travel_time": 25.32,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 61,
+        "from": 9,
+        "to": 8,
+        "edge_id": 30,
+        "travel_time": 25.32,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 62,
+        "from": 8,
+        "to": 13,
+        "edge_id": 31,
+        "travel_time": 29.19,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 63,
+        "from": 13,
+        "to": 8,
+        "edge_id": 31,
+        "travel_time": 29.19,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 64,
+        "from": 8,
+        "to": 14,
+        "edge_id": 32,
+        "travel_time": 46.07,
+        "flow": 89.0,
+        "capacity": 124.99999999999972,
+        "slack": 35.99999999999971
+      },
+      {
+        "id": 65,
+        "from": 14,
+        "to": 8,
+        "edge_id": 32,
+        "travel_time": 46.07,
+        "flow": 71.0,
+        "capacity": 124.99999999999972,
+        "slack": 53.99999999999971
+      },
+      {
+        "id": 66,
+        "from": 9,
+        "to": 13,
+        "edge_id": 33,
+        "travel_time": 37.5,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 67,
+        "from": 13,
+        "to": 9,
+        "edge_id": 33,
+        "travel_time": 37.5,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 68,
+        "from": 9,
+        "to": 14,
+        "edge_id": 34,
+        "travel_time": 30.67,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 69,
+        "from": 14,
+        "to": 9,
+        "edge_id": 34,
+        "travel_time": 30.67,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 70,
+        "from": 9,
+        "to": 19,
+        "edge_id": 35,
+        "travel_time": 60.63,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 71,
+        "from": 19,
+        "to": 9,
+        "edge_id": 35,
+        "travel_time": 60.63,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 72,
+        "from": 10,
+        "to": 11,
+        "edge_id": 36,
+        "travel_time": 25.46,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 73,
+        "from": 11,
+        "to": 10,
+        "edge_id": 36,
+        "travel_time": 25.46,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 74,
+        "from": 10,
+        "to": 15,
+        "edge_id": 37,
+        "travel_time": 30.01,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 75,
+        "from": 15,
+        "to": 10,
+        "edge_id": 37,
+        "travel_time": 30.01,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 76,
+        "from": 10,
+        "to": 16,
+        "edge_id": 38,
+        "travel_time": 42.6,
+        "flow": 81.0,
+        "capacity": 99.0,
+        "slack": 18.0
+      },
+      {
+        "id": 77,
+        "from": 16,
+        "to": 10,
+        "edge_id": 38,
+        "travel_time": 42.6,
+        "flow": 99.0,
+        "capacity": 99.0,
+        "slack": 0.0
+      },
+      {
+        "id": 78,
+        "from": 11,
+        "to": 12,
+        "edge_id": 39,
+        "travel_time": 32.11,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 79,
+        "from": 12,
+        "to": 11,
+        "edge_id": 39,
+        "travel_time": 32.11,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 80,
+        "from": 11,
+        "to": 15,
+        "edge_id": 40,
+        "travel_time": 42.27,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 81,
+        "from": 15,
+        "to": 11,
+        "edge_id": 40,
+        "travel_time": 42.27,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 82,
+        "from": 11,
+        "to": 16,
+        "edge_id": 41,
+        "travel_time": 32.61,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 83,
+        "from": 16,
+        "to": 11,
+        "edge_id": 41,
+        "travel_time": 32.61,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 84,
+        "from": 11,
+        "to": 17,
+        "edge_id": 42,
+        "travel_time": 45.25,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 85,
+        "from": 17,
+        "to": 11,
+        "edge_id": 42,
+        "travel_time": 45.25,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 86,
+        "from": 12,
+        "to": 13,
+        "edge_id": 43,
+        "travel_time": 28.91,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 87,
+        "from": 13,
+        "to": 12,
+        "edge_id": 43,
+        "travel_time": 28.91,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 88,
+        "from": 12,
+        "to": 15,
+        "edge_id": 44,
+        "travel_time": 63.31,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 89,
+        "from": 15,
+        "to": 12,
+        "edge_id": 44,
+        "travel_time": 63.31,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 90,
+        "from": 12,
+        "to": 16,
+        "edge_id": 45,
+        "travel_time": 35.72,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 91,
+        "from": 16,
+        "to": 12,
+        "edge_id": 45,
+        "travel_time": 35.72,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 92,
+        "from": 12,
+        "to": 17,
+        "edge_id": 46,
+        "travel_time": 24.87,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 93,
+        "from": 17,
+        "to": 12,
+        "edge_id": 46,
+        "travel_time": 24.87,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 94,
+        "from": 12,
+        "to": 18,
+        "edge_id": 47,
+        "travel_time": 43.49,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 95,
+        "from": 18,
+        "to": 12,
+        "edge_id": 47,
+        "travel_time": 43.49,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 96,
+        "from": 13,
+        "to": 14,
+        "edge_id": 48,
+        "travel_time": 34.31,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 97,
+        "from": 14,
+        "to": 13,
+        "edge_id": 48,
+        "travel_time": 34.31,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 98,
+        "from": 13,
+        "to": 17,
+        "edge_id": 49,
+        "travel_time": 41.62,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 99,
+        "from": 17,
+        "to": 13,
+        "edge_id": 49,
+        "travel_time": 41.62,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 100,
+        "from": 13,
+        "to": 18,
+        "edge_id": 50,
+        "travel_time": 36.93,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 101,
+        "from": 18,
+        "to": 13,
+        "edge_id": 50,
+        "travel_time": 36.93,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 102,
+        "from": 13,
+        "to": 19,
+        "edge_id": 51,
+        "travel_time": 49.94,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 103,
+        "from": 19,
+        "to": 13,
+        "edge_id": 51,
+        "travel_time": 49.94,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 104,
+        "from": 14,
+        "to": 18,
+        "edge_id": 52,
+        "travel_time": 41.56,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 105,
+        "from": 18,
+        "to": 14,
+        "edge_id": 52,
+        "travel_time": 41.56,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 106,
+        "from": 14,
+        "to": 19,
+        "edge_id": 53,
+        "travel_time": 30.13,
+        "flow": 89.0,
+        "capacity": 124.99999999999972,
+        "slack": 35.99999999999971
+      },
+      {
+        "id": 107,
+        "from": 19,
+        "to": 14,
+        "edge_id": 53,
+        "travel_time": 30.13,
+        "flow": 71.0,
+        "capacity": 124.99999999999972,
+        "slack": 53.99999999999971
+      },
+      {
+        "id": 108,
+        "from": 15,
+        "to": 16,
+        "edge_id": 54,
+        "travel_time": 32.28,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 109,
+        "from": 16,
+        "to": 15,
+        "edge_id": 54,
+        "travel_time": 32.28,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 110,
+        "from": 15,
+        "to": 17,
+        "edge_id": 55,
+        "travel_time": 58.53,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 111,
+        "from": 17,
+        "to": 15,
+        "edge_id": 55,
+        "travel_time": 58.53,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 112,
+        "from": 16,
+        "to": 17,
+        "edge_id": 56,
+        "travel_time": 26.25,
+        "flow": 81.0,
+        "capacity": 99.0,
+        "slack": 18.0
+      },
+      {
+        "id": 113,
+        "from": 17,
+        "to": 16,
+        "edge_id": 56,
+        "travel_time": 26.25,
+        "flow": 99.0,
+        "capacity": 99.0,
+        "slack": 0.0
+      },
+      {
+        "id": 114,
+        "from": 17,
+        "to": 18,
+        "edge_id": 57,
+        "travel_time": 30.87,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 115,
+        "from": 18,
+        "to": 17,
+        "edge_id": 57,
+        "travel_time": 30.87,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 116,
+        "from": 17,
+        "to": 19,
+        "edge_id": 58,
+        "travel_time": 59.69,
+        "flow": 71.0,
+        "capacity": 99.0,
+        "slack": 28.0
+      },
+      {
+        "id": 117,
+        "from": 19,
+        "to": 17,
+        "edge_id": 58,
+        "travel_time": 59.69,
+        "flow": 89.0,
+        "capacity": 99.0,
+        "slack": 10.0
+      },
+      {
+        "id": 118,
+        "from": 18,
+        "to": 19,
+        "edge_id": 59,
+        "travel_time": 28.93,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 119,
+        "from": 19,
+        "to": 18,
+        "edge_id": 59,
+        "travel_time": 28.93,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      }
+    ],
+    "edge_frequencies": [
+      {
+        "edge_id": 0,
+        "frequency": 0.0,
+        "limit": 4.4,
+        "slack": 4.4
+      },
+      {
+        "edge_id": 1,
+        "frequency": 0.0,
+        "limit": 5.3,
+        "slack": 5.3
+      },
+      {
+        "edge_id": 2,
+        "frequency": 0.0,
+        "limit": 4.2,
+        "slack": 4.2
+      },
+      {
+        "edge_id": 3,
+        "frequency": 0.0,
+        "limit": 5.0,
+        "slack": 5.0
+      },
+      {
+        "edge_id": 4,
+        "frequency": 1.2375,
+        "limit": 4.7,
+        "slack": 3.4625
+      },
+      {
+        "edge_id": 5,
+        "frequency": 0.0,
+        "limit": 5.6,
+        "slack": 5.6
+      },
+      {
+        "edge_id": 6,
+        "frequency": 0.0,
+        "limit": 5.0,
+        "slack": 5.0
+      },
+      {
+        "edge_id": 7,
+        "frequency": 0.0,
+        "limit": 5.7,
+        "slack": 5.7
+      },
+      {
+        "edge_id": 8,
+        "frequency": 0.0,
+        "limit": 6.6,
+        "slack": 6.6
+      },
+      {
+        "edge_id": 9,
+        "frequency": 0.0,
+        "limit": 5.8,
+        "slack": 5.8
+      },
+      {
+        "edge_id": 10,
+        "frequency": 0.0,
+        "limit": 5.2,
+        "slack": 5.2
+      },
+      {
+        "edge_id": 11,
+        "frequency": 0.0,
+        "limit": 6.5,
+        "slack": 6.5
+      },
+      {
+        "edge_id": 12,
+        "frequency": 0.0,
+        "limit": 6.9,
+        "slack": 6.9
+      },
+      {
+        "edge_id": 13,
+        "frequency": 0.0,
+        "limit": 6.5,
+        "slack": 6.5
+      },
+      {
+        "edge_id": 14,
+        "frequency": 1.5624999999999964,
+        "limit": 4.7,
+        "slack": 3.1375000000000037
+      },
+      {
+        "edge_id": 15,
+        "frequency": 0.0,
+        "limit": 6.7,
+        "slack": 6.7
+      },
+      {
+        "edge_id": 16,
+        "frequency": 1.5624999999999964,
+        "limit": 6.0,
+        "slack": 4.4375000000000036
+      },
+      {
+        "edge_id": 17,
+        "frequency": 0.0,
+        "limit": 5.4,
+        "slack": 5.4
+      },
+      {
+        "edge_id": 18,
+        "frequency": 0.0,
+        "limit": 5.1,
+        "slack": 5.1
+      },
+      {
+        "edge_id": 19,
+        "frequency": 0.0,
+        "limit": 4.5,
+        "slack": 4.5
+      },
+      {
+        "edge_id": 20,
+        "frequency": 0.0,
+        "limit": 4.7,
+        "slack": 4.7
+      },
+      {
+        "edge_id": 21,
+        "frequency": 0.0,
+        "limit": 5.5,
+        "slack": 5.5
+      },
+      {
+        "edge_id": 22,
+        "frequency": 0.0,
+        "limit": 4.8,
+        "slack": 4.8
+      },
+      {
+        "edge_id": 23,
+        "frequency": 0.0,
+        "limit": 5.7,
+        "slack": 5.7
+      },
+      {
+        "edge_id": 24,
+        "frequency": 0.0,
+        "limit": 7.3,
+        "slack": 7.3
+      },
+      {
+        "edge_id": 25,
+        "frequency": 0.0,
+        "limit": 5.8,
+        "slack": 5.8
+      },
+      {
+        "edge_id": 26,
+        "frequency": 0.0,
+        "limit": 6.7,
+        "slack": 6.7
+      },
+      {
+        "edge_id": 27,
+        "frequency": 0.0,
+        "limit": 7.4,
+        "slack": 7.4
+      },
+      {
+        "edge_id": 28,
+        "frequency": 0.0,
+        "limit": 8.9,
+        "slack": 8.9
+      },
+      {
+        "edge_id": 29,
+        "frequency": 0.0,
+        "limit": 8.0,
+        "slack": 8.0
+      },
+      {
+        "edge_id": 30,
+        "frequency": 0.0,
+        "limit": 5.7,
+        "slack": 5.7
+      },
+      {
+        "edge_id": 31,
+        "frequency": 0.0,
+        "limit": 6.9,
+        "slack": 6.9
+      },
+      {
+        "edge_id": 32,
+        "frequency": 1.5624999999999964,
+        "limit": 5.7,
+        "slack": 4.137500000000004
+      },
+      {
+        "edge_id": 33,
+        "frequency": 0.0,
+        "limit": 6.0,
+        "slack": 6.0
+      },
+      {
+        "edge_id": 34,
+        "frequency": 0.0,
+        "limit": 4.8,
+        "slack": 4.8
+      },
+      {
+        "edge_id": 35,
+        "frequency": 0.0,
+        "limit": 4.6,
+        "slack": 4.6
+      },
+      {
+        "edge_id": 36,
+        "frequency": 0.0,
+        "limit": 5.6,
+        "slack": 5.6
+      },
+      {
+        "edge_id": 37,
+        "frequency": 0.0,
+        "limit": 4.3,
+        "slack": 4.3
+      },
+      {
+        "edge_id": 38,
+        "frequency": 1.2375,
+        "limit": 5.3,
+        "slack": 4.0625
+      },
+      {
+        "edge_id": 39,
+        "frequency": 0.0,
+        "limit": 7.4,
+        "slack": 7.4
+      },
+      {
+        "edge_id": 40,
+        "frequency": 0.0,
+        "limit": 5.1,
+        "slack": 5.1
+      },
+      {
+        "edge_id": 41,
+        "frequency": 0.0,
+        "limit": 6.1,
+        "slack": 6.1
+      },
+      {
+        "edge_id": 42,
+        "frequency": 0.0,
+        "limit": 6.7,
+        "slack": 6.7
+      },
+      {
+        "edge_id": 43,
+        "frequency": 0.0,
+        "limit": 7.6,
+        "slack": 7.6
+      },
+      {
+        "edge_id": 44,
+        "frequency": 0.0,
+        "limit": 5.9,
+        "slack": 5.9
+      },
+      {
+        "edge_id": 45,
+        "frequency": 0.0,
+        "limit": 6.6,
+        "slack": 6.6
+      },
+      {
+        "edge_id": 46,
+        "frequency": 0.0,
+        "limit": 6.8,
+        "slack": 6.8
+      },
+      {
+        "edge_id": 47,
+        "frequency": 0.0,
+        "limit": 6.4,
+        "slack": 6.4
+      },
+      {
+        "edge_id": 48,
+        "frequency": 0.0,
+        "limit": 5.7,
+        "slack": 5.7
+      },
+      {
+        "edge_id": 49,
+        "frequency": 0.0,
+        "limit": 6.8,
+        "slack": 6.8
+      },
+      {
+        "edge_id": 50,
+        "frequency": 0.0,
+        "limit": 6.1,
+        "slack": 6.1
+      },
+      {
+        "edge_id": 51,
+        "frequency": 0.0,
+        "limit": 5.2,
+        "slack": 5.2
+      },
+      {
+        "edge_id": 52,
+        "frequency": 0.0,
+        "limit": 5.0,
+        "slack": 5.0
+      },
+      {
+        "edge_id": 53,
+        "frequency": 1.5624999999999964,
+        "limit": 4.1,
+        "slack": 2.5375000000000036
+      },
+      {
+        "edge_id": 54,
+        "frequency": 0.0,
+        "limit": 4.6,
+        "slack": 4.6
+      },
+      {
+        "edge_id": 55,
+        "frequency": 0.0,
+        "limit": 5.2,
+        "slack": 5.2
+      },
+      {
+        "edge_id": 56,
+        "frequency": 1.2375,
+        "limit": 5.8,
+        "slack": 4.5625
+      },
+      {
+        "edge_id": 57,
+        "frequency": 0.0,
+        "limit": 5.6,
+        "slack": 5.6
+      },
+      {
+        "edge_id": 58,
+        "frequency": 1.2375,
+        "limit": 5.1,
+        "slack": 3.8625
+      },
+      {
+        "edge_id": 59,
+        "frequency": 0.0,
+        "limit": 4.3,
+        "slack": 4.3
+      }
+    ]
+  },
+  "reference_audit": {
+    "passed": true,
+    "issues": [],
+    "absolute_tolerance": 1e-08,
+    "fixed_cost": 40000.0,
+    "operating_cost": 888.75,
+    "line_cost": 40888.75,
+    "total_passenger_travel_seconds": 39551.24,
+    "weighted_line_cost": 40798.79475,
+    "weighted_passenger_travel_cost": 87.012728,
+    "recomputed_objective": 40885.807478,
+    "reported_objective": 40885.807478,
+    "objective_residual": 0.0,
+    "lines": [
+      {
+        "line_index": 24,
+        "mode": "bus",
+        "nodes": [
+          0,
+          6,
+          10,
+          15
+        ],
+        "edges": [
+          3,
+          25,
+          37
+        ],
+        "frequency": 0.7625,
+        "fixed_cost": 10000,
+        "operating_cost": 228.75,
+        "arc_capacity_each_direction": 61.0
+      },
+      {
+        "line_index": 128,
+        "mode": "bus",
+        "nodes": [
+          0,
+          6,
+          2,
+          3,
+          4
+        ],
+        "edges": [
+          3,
+          11,
+          9,
+          14
+        ],
+        "frequency": 0.475,
+        "fixed_cost": 10000,
+        "operating_cost": 190.0,
+        "arc_capacity_each_direction": 38.0
+      },
+      {
+        "line_index": 150,
+        "mode": "bus",
+        "nodes": [
+          0,
+          2,
+          8,
+          3,
+          4
+        ],
+        "edges": [
+          1,
+          13,
+          16,
+          14
+        ],
+        "frequency": 0.4125,
+        "fixed_cost": 10000,
+        "operating_cost": 165.0,
+        "arc_capacity_each_direction": 33.0
+      },
+      {
+        "line_index": 232,
+        "mode": "bus",
+        "nodes": [
+          4,
+          8,
+          13,
+          17,
+          15
+        ],
+        "edges": [
+          18,
+          31,
+          49,
+          55
+        ],
+        "frequency": 0.7625,
+        "fixed_cost": 10000,
+        "operating_cost": 305.0,
+        "arc_capacity_each_direction": 61.0
+      }
+    ],
+    "paths": [
+      {
+        "origin": 3,
+        "destination": 8,
+        "arcs": [
+          32
+        ],
+        "flow": 13.0,
+        "nodes": [
+          3,
+          8
+        ],
+        "edges": [
+          16
+        ],
+        "travel_time_seconds": 24.38
+      },
+      {
+        "origin": 3,
+        "destination": 8,
+        "arcs": [
+          19,
+          26
+        ],
+        "flow": 13.0,
+        "nodes": [
+          3,
+          2,
+          8
+        ],
+        "edges": [
+          9,
+          13
+        ],
+        "travel_time_seconds": 63.41
+      },
+      {
+        "origin": 3,
+        "destination": 8,
+        "arcs": [
+          28,
+          36
+        ],
+        "flow": 61.0,
+        "nodes": [
+          3,
+          4,
+          8
+        ],
+        "edges": [
+          14,
+          18
+        ],
+        "travel_time_seconds": 66.83
+      },
+      {
+        "origin": 8,
+        "destination": 3,
+        "arcs": [
+          33
+        ],
+        "flow": 13.0,
+        "nodes": [
+          8,
+          3
+        ],
+        "edges": [
+          16
+        ],
+        "travel_time_seconds": 24.38
+      },
+      {
+        "origin": 8,
+        "destination": 3,
+        "arcs": [
+          27,
+          18
+        ],
+        "flow": 13.0,
+        "nodes": [
+          8,
+          2,
+          3
+        ],
+        "edges": [
+          13,
+          9
+        ],
+        "travel_time_seconds": 63.41
+      },
+      {
+        "origin": 8,
+        "destination": 3,
+        "arcs": [
+          37,
+          29
+        ],
+        "flow": 61.0,
+        "nodes": [
+          8,
+          4,
+          3
+        ],
+        "edges": [
+          18,
+          14
+        ],
+        "travel_time_seconds": 66.83
+      },
+      {
+        "origin": 10,
+        "destination": 17,
+        "arcs": [
+          74,
+          110
+        ],
+        "flow": 61.0,
+        "nodes": [
+          10,
+          15,
+          17
+        ],
+        "edges": [
+          37,
+          55
+        ],
+        "travel_time_seconds": 88.54
+      },
+      {
+        "origin": 17,
+        "destination": 10,
+        "arcs": [
+          111,
+          75
+        ],
+        "flow": 61.0,
+        "nodes": [
+          17,
+          15,
+          10
+        ],
+        "edges": [
+          55,
+          37
+        ],
+        "travel_time_seconds": 88.54
+      },
+      {
+        "origin": 8,
+        "destination": 17,
+        "arcs": [
+          62,
+          98
+        ],
+        "flow": 31.0,
+        "nodes": [
+          8,
+          13,
+          17
+        ],
+        "edges": [
+          31,
+          49
+        ],
+        "travel_time_seconds": 70.81
+      },
+      {
+        "origin": 17,
+        "destination": 8,
+        "arcs": [
+          99,
+          63
+        ],
+        "flow": 31.0,
+        "nodes": [
+          17,
+          13,
+          8
+        ],
+        "edges": [
+          49,
+          31
+        ],
+        "travel_time_seconds": 70.81
+      },
+      {
+        "origin": 3,
+        "destination": 17,
+        "arcs": [
+          32,
+          62,
+          98
+        ],
+        "flow": 20.0,
+        "nodes": [
+          3,
+          8,
+          13,
+          17
+        ],
+        "edges": [
+          16,
+          31,
+          49
+        ],
+        "travel_time_seconds": 95.19
+      },
+      {
+        "origin": 17,
+        "destination": 3,
+        "arcs": [
+          99,
+          63,
+          33
+        ],
+        "flow": 20.0,
+        "nodes": [
+          17,
+          13,
+          8,
+          3
+        ],
+        "edges": [
+          49,
+          31,
+          16
+        ],
+        "travel_time_seconds": 95.19
+      },
+      {
+        "origin": 8,
+        "destination": 10,
+        "arcs": [
+          27,
+          22,
+          50
+        ],
+        "flow": 20.0,
+        "nodes": [
+          8,
+          2,
+          6,
+          10
+        ],
+        "edges": [
+          13,
+          11,
+          25
+        ],
+        "travel_time_seconds": 125.27
+      },
+      {
+        "origin": 10,
+        "destination": 8,
+        "arcs": [
+          51,
+          23,
+          26
+        ],
+        "flow": 20.0,
+        "nodes": [
+          10,
+          6,
+          2,
+          8
+        ],
+        "edges": [
+          25,
+          11,
+          13
+        ],
+        "travel_time_seconds": 125.27
+      },
+      {
+        "origin": 0,
+        "destination": 10,
+        "arcs": [
+          6,
+          50
+        ],
+        "flow": 19.0,
+        "nodes": [
+          0,
+          6,
+          10
+        ],
+        "edges": [
+          3,
+          25
+        ],
+        "travel_time_seconds": 81.61
+      },
+      {
+        "origin": 10,
+        "destination": 0,
+        "arcs": [
+          51,
+          7
+        ],
+        "flow": 19.0,
+        "nodes": [
+          10,
+          6,
+          0
+        ],
+        "edges": [
+          25,
+          3
+        ],
+        "travel_time_seconds": 81.61
+      },
+      {
+        "origin": 3,
+        "destination": 10,
+        "arcs": [
+          19,
+          22,
+          50
+        ],
+        "flow": 18.0,
+        "nodes": [
+          3,
+          2,
+          6,
+          10
+        ],
+        "edges": [
+          9,
+          11,
+          25
+        ],
+        "travel_time_seconds": 111.32
+      }
+    ],
+    "od_demands": [
+      {
+        "origin": 3,
+        "destination": 8,
+        "demand": 87.0,
+        "served": 87.0
+      },
+      {
+        "origin": 8,
+        "destination": 3,
+        "demand": 87.0,
+        "served": 87.0
+      },
+      {
+        "origin": 10,
+        "destination": 17,
+        "demand": 61.0,
+        "served": 61.0
+      },
+      {
+        "origin": 17,
+        "destination": 10,
+        "demand": 61.0,
+        "served": 61.0
+      },
+      {
+        "origin": 8,
+        "destination": 17,
+        "demand": 31.0,
+        "served": 31.0
+      },
+      {
+        "origin": 17,
+        "destination": 8,
+        "demand": 31.0,
+        "served": 31.0
+      },
+      {
+        "origin": 3,
+        "destination": 17,
+        "demand": 20.0,
+        "served": 20.0
+      },
+      {
+        "origin": 17,
+        "destination": 3,
+        "demand": 20.0,
+        "served": 20.0
+      },
+      {
+        "origin": 8,
+        "destination": 10,
+        "demand": 20.0,
+        "served": 20.0
+      },
+      {
+        "origin": 10,
+        "destination": 8,
+        "demand": 20.0,
+        "served": 20.0
+      },
+      {
+        "origin": 0,
+        "destination": 10,
+        "demand": 19.0,
+        "served": 19.0
+      },
+      {
+        "origin": 10,
+        "destination": 0,
+        "demand": 19.0,
+        "served": 19.0
+      },
+      {
+        "origin": 3,
+        "destination": 10,
+        "demand": 18.0,
+        "served": 18.0
+      }
+    ],
+    "arc_loads": [
+      {
+        "id": 0,
+        "from": 0,
+        "to": 1,
+        "edge_id": 0,
+        "travel_time": 27.54,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 1,
+        "from": 1,
+        "to": 0,
+        "edge_id": 0,
+        "travel_time": 27.54,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 2,
+        "from": 0,
+        "to": 2,
+        "edge_id": 1,
+        "travel_time": 61.6,
+        "flow": 0.0,
+        "capacity": 33.0,
+        "slack": 33.0
+      },
+      {
+        "id": 3,
+        "from": 2,
+        "to": 0,
+        "edge_id": 1,
+        "travel_time": 61.6,
+        "flow": 0.0,
+        "capacity": 33.0,
+        "slack": 33.0
+      },
+      {
+        "id": 4,
+        "from": 0,
+        "to": 5,
+        "edge_id": 2,
+        "travel_time": 26.21,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 5,
+        "from": 5,
+        "to": 0,
+        "edge_id": 2,
+        "travel_time": 26.21,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 6,
+        "from": 0,
+        "to": 6,
+        "edge_id": 3,
+        "travel_time": 36.66,
+        "flow": 19.0,
+        "capacity": 99.0,
+        "slack": 80.0
+      },
+      {
+        "id": 7,
+        "from": 6,
+        "to": 0,
+        "edge_id": 3,
+        "travel_time": 36.66,
+        "flow": 19.0,
+        "capacity": 99.0,
+        "slack": 80.0
+      },
+      {
+        "id": 8,
+        "from": 0,
+        "to": 10,
+        "edge_id": 4,
+        "travel_time": 61.52,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 9,
+        "from": 10,
+        "to": 0,
+        "edge_id": 4,
+        "travel_time": 61.52,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 10,
+        "from": 1,
+        "to": 2,
+        "edge_id": 5,
+        "travel_time": 34.15,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 11,
+        "from": 2,
+        "to": 1,
+        "edge_id": 5,
+        "travel_time": 34.15,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 12,
+        "from": 1,
+        "to": 5,
+        "edge_id": 6,
+        "travel_time": 38.84,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 13,
+        "from": 5,
+        "to": 1,
+        "edge_id": 6,
+        "travel_time": 38.84,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 14,
+        "from": 1,
+        "to": 6,
+        "edge_id": 7,
+        "travel_time": 25.74,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 15,
+        "from": 6,
+        "to": 1,
+        "edge_id": 7,
+        "travel_time": 25.74,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 16,
+        "from": 1,
+        "to": 7,
+        "edge_id": 8,
+        "travel_time": 45.44,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 17,
+        "from": 7,
+        "to": 1,
+        "edge_id": 8,
+        "travel_time": 45.44,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 18,
+        "from": 2,
+        "to": 3,
+        "edge_id": 9,
+        "travel_time": 24.73,
+        "flow": 13.0,
+        "capacity": 38.0,
+        "slack": 25.0
+      },
+      {
+        "id": 19,
+        "from": 3,
+        "to": 2,
+        "edge_id": 9,
+        "travel_time": 24.73,
+        "flow": 31.0,
+        "capacity": 38.0,
+        "slack": 7.0
+      },
+      {
+        "id": 20,
+        "from": 2,
+        "to": 4,
+        "edge_id": 10,
+        "travel_time": 54.22,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 21,
+        "from": 4,
+        "to": 2,
+        "edge_id": 10,
+        "travel_time": 54.22,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 22,
+        "from": 2,
+        "to": 6,
+        "edge_id": 11,
+        "travel_time": 41.64,
+        "flow": 38.0,
+        "capacity": 38.0,
+        "slack": 0.0
+      },
+      {
+        "id": 23,
+        "from": 6,
+        "to": 2,
+        "edge_id": 11,
+        "travel_time": 41.64,
+        "flow": 20.0,
+        "capacity": 38.0,
+        "slack": 18.0
+      },
+      {
+        "id": 24,
+        "from": 2,
+        "to": 7,
+        "edge_id": 12,
+        "travel_time": 29.24,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 25,
+        "from": 7,
+        "to": 2,
+        "edge_id": 12,
+        "travel_time": 29.24,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 26,
+        "from": 2,
+        "to": 8,
+        "edge_id": 13,
+        "travel_time": 38.68,
+        "flow": 33.0,
+        "capacity": 33.0,
+        "slack": 0.0
+      },
+      {
+        "id": 27,
+        "from": 8,
+        "to": 2,
+        "edge_id": 13,
+        "travel_time": 38.68,
+        "flow": 33.0,
+        "capacity": 33.0,
+        "slack": 0.0
+      },
+      {
+        "id": 28,
+        "from": 3,
+        "to": 4,
+        "edge_id": 14,
+        "travel_time": 29.7,
+        "flow": 61.0,
+        "capacity": 71.0,
+        "slack": 10.0
+      },
+      {
+        "id": 29,
+        "from": 4,
+        "to": 3,
+        "edge_id": 14,
+        "travel_time": 29.7,
+        "flow": 61.0,
+        "capacity": 71.0,
+        "slack": 10.0
+      },
+      {
+        "id": 30,
+        "from": 3,
+        "to": 7,
+        "edge_id": 15,
+        "travel_time": 37.99,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 31,
+        "from": 7,
+        "to": 3,
+        "edge_id": 15,
+        "travel_time": 37.99,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 32,
+        "from": 3,
+        "to": 8,
+        "edge_id": 16,
+        "travel_time": 24.38,
+        "flow": 33.0,
+        "capacity": 33.0,
+        "slack": 0.0
+      },
+      {
+        "id": 33,
+        "from": 8,
+        "to": 3,
+        "edge_id": 16,
+        "travel_time": 24.38,
+        "flow": 33.0,
+        "capacity": 33.0,
+        "slack": 0.0
+      },
+      {
+        "id": 34,
+        "from": 3,
+        "to": 9,
+        "edge_id": 17,
+        "travel_time": 41.39,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 35,
+        "from": 9,
+        "to": 3,
+        "edge_id": 17,
+        "travel_time": 41.39,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 36,
+        "from": 4,
+        "to": 8,
+        "edge_id": 18,
+        "travel_time": 37.13,
+        "flow": 61.0,
+        "capacity": 61.0,
+        "slack": 0.0
+      },
+      {
+        "id": 37,
+        "from": 8,
+        "to": 4,
+        "edge_id": 18,
+        "travel_time": 37.13,
+        "flow": 61.0,
+        "capacity": 61.0,
+        "slack": 0.0
+      },
+      {
+        "id": 38,
+        "from": 4,
+        "to": 9,
+        "edge_id": 19,
+        "travel_time": 32.79,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 39,
+        "from": 9,
+        "to": 4,
+        "edge_id": 19,
+        "travel_time": 32.79,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 40,
+        "from": 4,
+        "to": 14,
+        "edge_id": 20,
+        "travel_time": 63.27,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 41,
+        "from": 14,
+        "to": 4,
+        "edge_id": 20,
+        "travel_time": 63.27,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 42,
+        "from": 5,
+        "to": 6,
+        "edge_id": 21,
+        "travel_time": 27.3,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 43,
+        "from": 6,
+        "to": 5,
+        "edge_id": 21,
+        "travel_time": 27.3,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 44,
+        "from": 5,
+        "to": 10,
+        "edge_id": 22,
+        "travel_time": 35.33,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 45,
+        "from": 10,
+        "to": 5,
+        "edge_id": 22,
+        "travel_time": 35.33,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 46,
+        "from": 5,
+        "to": 11,
+        "edge_id": 23,
+        "travel_time": 41.08,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 47,
+        "from": 11,
+        "to": 5,
+        "edge_id": 23,
+        "travel_time": 41.08,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 48,
+        "from": 6,
+        "to": 7,
+        "edge_id": 24,
+        "travel_time": 33.59,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 49,
+        "from": 7,
+        "to": 6,
+        "edge_id": 24,
+        "travel_time": 33.59,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 50,
+        "from": 6,
+        "to": 10,
+        "edge_id": 25,
+        "travel_time": 44.95,
+        "flow": 57.0,
+        "capacity": 61.0,
+        "slack": 4.0
+      },
+      {
+        "id": 51,
+        "from": 10,
+        "to": 6,
+        "edge_id": 25,
+        "travel_time": 44.95,
+        "flow": 39.0,
+        "capacity": 61.0,
+        "slack": 22.0
+      },
+      {
+        "id": 52,
+        "from": 6,
+        "to": 11,
+        "edge_id": 26,
+        "travel_time": 32.83,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 53,
+        "from": 11,
+        "to": 6,
+        "edge_id": 26,
+        "travel_time": 32.83,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 54,
+        "from": 7,
+        "to": 8,
+        "edge_id": 27,
+        "travel_time": 30.64,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 55,
+        "from": 8,
+        "to": 7,
+        "edge_id": 27,
+        "travel_time": 30.64,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 56,
+        "from": 7,
+        "to": 12,
+        "edge_id": 28,
+        "travel_time": 32.82,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 57,
+        "from": 12,
+        "to": 7,
+        "edge_id": 28,
+        "travel_time": 32.82,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 58,
+        "from": 7,
+        "to": 13,
+        "edge_id": 29,
+        "travel_time": 36.03,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 59,
+        "from": 13,
+        "to": 7,
+        "edge_id": 29,
+        "travel_time": 36.03,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 60,
+        "from": 8,
+        "to": 9,
+        "edge_id": 30,
+        "travel_time": 25.32,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 61,
+        "from": 9,
+        "to": 8,
+        "edge_id": 30,
+        "travel_time": 25.32,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 62,
+        "from": 8,
+        "to": 13,
+        "edge_id": 31,
+        "travel_time": 29.19,
+        "flow": 51.0,
+        "capacity": 61.0,
+        "slack": 10.0
+      },
+      {
+        "id": 63,
+        "from": 13,
+        "to": 8,
+        "edge_id": 31,
+        "travel_time": 29.19,
+        "flow": 51.0,
+        "capacity": 61.0,
+        "slack": 10.0
+      },
+      {
+        "id": 64,
+        "from": 8,
+        "to": 14,
+        "edge_id": 32,
+        "travel_time": 46.07,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 65,
+        "from": 14,
+        "to": 8,
+        "edge_id": 32,
+        "travel_time": 46.07,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 66,
+        "from": 9,
+        "to": 13,
+        "edge_id": 33,
+        "travel_time": 37.5,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 67,
+        "from": 13,
+        "to": 9,
+        "edge_id": 33,
+        "travel_time": 37.5,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 68,
+        "from": 9,
+        "to": 14,
+        "edge_id": 34,
+        "travel_time": 30.67,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 69,
+        "from": 14,
+        "to": 9,
+        "edge_id": 34,
+        "travel_time": 30.67,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 70,
+        "from": 9,
+        "to": 19,
+        "edge_id": 35,
+        "travel_time": 60.63,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 71,
+        "from": 19,
+        "to": 9,
+        "edge_id": 35,
+        "travel_time": 60.63,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 72,
+        "from": 10,
+        "to": 11,
+        "edge_id": 36,
+        "travel_time": 25.46,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 73,
+        "from": 11,
+        "to": 10,
+        "edge_id": 36,
+        "travel_time": 25.46,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 74,
+        "from": 10,
+        "to": 15,
+        "edge_id": 37,
+        "travel_time": 30.01,
+        "flow": 61.0,
+        "capacity": 61.0,
+        "slack": 0.0
+      },
+      {
+        "id": 75,
+        "from": 15,
+        "to": 10,
+        "edge_id": 37,
+        "travel_time": 30.01,
+        "flow": 61.0,
+        "capacity": 61.0,
+        "slack": 0.0
+      },
+      {
+        "id": 76,
+        "from": 10,
+        "to": 16,
+        "edge_id": 38,
+        "travel_time": 42.6,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 77,
+        "from": 16,
+        "to": 10,
+        "edge_id": 38,
+        "travel_time": 42.6,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 78,
+        "from": 11,
+        "to": 12,
+        "edge_id": 39,
+        "travel_time": 32.11,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 79,
+        "from": 12,
+        "to": 11,
+        "edge_id": 39,
+        "travel_time": 32.11,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 80,
+        "from": 11,
+        "to": 15,
+        "edge_id": 40,
+        "travel_time": 42.27,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 81,
+        "from": 15,
+        "to": 11,
+        "edge_id": 40,
+        "travel_time": 42.27,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 82,
+        "from": 11,
+        "to": 16,
+        "edge_id": 41,
+        "travel_time": 32.61,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 83,
+        "from": 16,
+        "to": 11,
+        "edge_id": 41,
+        "travel_time": 32.61,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 84,
+        "from": 11,
+        "to": 17,
+        "edge_id": 42,
+        "travel_time": 45.25,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 85,
+        "from": 17,
+        "to": 11,
+        "edge_id": 42,
+        "travel_time": 45.25,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 86,
+        "from": 12,
+        "to": 13,
+        "edge_id": 43,
+        "travel_time": 28.91,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 87,
+        "from": 13,
+        "to": 12,
+        "edge_id": 43,
+        "travel_time": 28.91,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 88,
+        "from": 12,
+        "to": 15,
+        "edge_id": 44,
+        "travel_time": 63.31,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 89,
+        "from": 15,
+        "to": 12,
+        "edge_id": 44,
+        "travel_time": 63.31,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 90,
+        "from": 12,
+        "to": 16,
+        "edge_id": 45,
+        "travel_time": 35.72,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 91,
+        "from": 16,
+        "to": 12,
+        "edge_id": 45,
+        "travel_time": 35.72,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 92,
+        "from": 12,
+        "to": 17,
+        "edge_id": 46,
+        "travel_time": 24.87,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 93,
+        "from": 17,
+        "to": 12,
+        "edge_id": 46,
+        "travel_time": 24.87,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 94,
+        "from": 12,
+        "to": 18,
+        "edge_id": 47,
+        "travel_time": 43.49,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 95,
+        "from": 18,
+        "to": 12,
+        "edge_id": 47,
+        "travel_time": 43.49,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 96,
+        "from": 13,
+        "to": 14,
+        "edge_id": 48,
+        "travel_time": 34.31,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 97,
+        "from": 14,
+        "to": 13,
+        "edge_id": 48,
+        "travel_time": 34.31,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 98,
+        "from": 13,
+        "to": 17,
+        "edge_id": 49,
+        "travel_time": 41.62,
+        "flow": 51.0,
+        "capacity": 61.0,
+        "slack": 10.0
+      },
+      {
+        "id": 99,
+        "from": 17,
+        "to": 13,
+        "edge_id": 49,
+        "travel_time": 41.62,
+        "flow": 51.0,
+        "capacity": 61.0,
+        "slack": 10.0
+      },
+      {
+        "id": 100,
+        "from": 13,
+        "to": 18,
+        "edge_id": 50,
+        "travel_time": 36.93,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 101,
+        "from": 18,
+        "to": 13,
+        "edge_id": 50,
+        "travel_time": 36.93,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 102,
+        "from": 13,
+        "to": 19,
+        "edge_id": 51,
+        "travel_time": 49.94,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 103,
+        "from": 19,
+        "to": 13,
+        "edge_id": 51,
+        "travel_time": 49.94,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 104,
+        "from": 14,
+        "to": 18,
+        "edge_id": 52,
+        "travel_time": 41.56,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 105,
+        "from": 18,
+        "to": 14,
+        "edge_id": 52,
+        "travel_time": 41.56,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 106,
+        "from": 14,
+        "to": 19,
+        "edge_id": 53,
+        "travel_time": 30.13,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 107,
+        "from": 19,
+        "to": 14,
+        "edge_id": 53,
+        "travel_time": 30.13,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 108,
+        "from": 15,
+        "to": 16,
+        "edge_id": 54,
+        "travel_time": 32.28,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 109,
+        "from": 16,
+        "to": 15,
+        "edge_id": 54,
+        "travel_time": 32.28,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 110,
+        "from": 15,
+        "to": 17,
+        "edge_id": 55,
+        "travel_time": 58.53,
+        "flow": 61.0,
+        "capacity": 61.0,
+        "slack": 0.0
+      },
+      {
+        "id": 111,
+        "from": 17,
+        "to": 15,
+        "edge_id": 55,
+        "travel_time": 58.53,
+        "flow": 61.0,
+        "capacity": 61.0,
+        "slack": 0.0
+      },
+      {
+        "id": 112,
+        "from": 16,
+        "to": 17,
+        "edge_id": 56,
+        "travel_time": 26.25,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 113,
+        "from": 17,
+        "to": 16,
+        "edge_id": 56,
+        "travel_time": 26.25,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 114,
+        "from": 17,
+        "to": 18,
+        "edge_id": 57,
+        "travel_time": 30.87,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 115,
+        "from": 18,
+        "to": 17,
+        "edge_id": 57,
+        "travel_time": 30.87,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 116,
+        "from": 17,
+        "to": 19,
+        "edge_id": 58,
+        "travel_time": 59.69,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 117,
+        "from": 19,
+        "to": 17,
+        "edge_id": 58,
+        "travel_time": 59.69,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 118,
+        "from": 18,
+        "to": 19,
+        "edge_id": 59,
+        "travel_time": 28.93,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      },
+      {
+        "id": 119,
+        "from": 19,
+        "to": 18,
+        "edge_id": 59,
+        "travel_time": 28.93,
+        "flow": 0.0,
+        "capacity": 0.0,
+        "slack": 0.0
+      }
+    ],
+    "edge_frequencies": [
+      {
+        "edge_id": 0,
+        "frequency": 0.0,
+        "limit": 4.4,
+        "slack": 4.4
+      },
+      {
+        "edge_id": 1,
+        "frequency": 0.4125,
+        "limit": 5.3,
+        "slack": 4.8875
+      },
+      {
+        "edge_id": 2,
+        "frequency": 0.0,
+        "limit": 4.2,
+        "slack": 4.2
+      },
+      {
+        "edge_id": 3,
+        "frequency": 1.2375,
+        "limit": 5.0,
+        "slack": 3.7625
+      },
+      {
+        "edge_id": 4,
+        "frequency": 0.0,
+        "limit": 4.7,
+        "slack": 4.7
+      },
+      {
+        "edge_id": 5,
+        "frequency": 0.0,
+        "limit": 5.6,
+        "slack": 5.6
+      },
+      {
+        "edge_id": 6,
+        "frequency": 0.0,
+        "limit": 5.0,
+        "slack": 5.0
+      },
+      {
+        "edge_id": 7,
+        "frequency": 0.0,
+        "limit": 5.7,
+        "slack": 5.7
+      },
+      {
+        "edge_id": 8,
+        "frequency": 0.0,
+        "limit": 6.6,
+        "slack": 6.6
+      },
+      {
+        "edge_id": 9,
+        "frequency": 0.475,
+        "limit": 5.8,
+        "slack": 5.325
+      },
+      {
+        "edge_id": 10,
+        "frequency": 0.0,
+        "limit": 5.2,
+        "slack": 5.2
+      },
+      {
+        "edge_id": 11,
+        "frequency": 0.475,
+        "limit": 6.5,
+        "slack": 6.025
+      },
+      {
+        "edge_id": 12,
+        "frequency": 0.0,
+        "limit": 6.9,
+        "slack": 6.9
+      },
+      {
+        "edge_id": 13,
+        "frequency": 0.4125,
+        "limit": 6.5,
+        "slack": 6.0875
+      },
+      {
+        "edge_id": 14,
+        "frequency": 0.8875,
+        "limit": 4.7,
+        "slack": 3.8125
+      },
+      {
+        "edge_id": 15,
+        "frequency": 0.0,
+        "limit": 6.7,
+        "slack": 6.7
+      },
+      {
+        "edge_id": 16,
+        "frequency": 0.4125,
+        "limit": 6.0,
+        "slack": 5.5875
+      },
+      {
+        "edge_id": 17,
+        "frequency": 0.0,
+        "limit": 5.4,
+        "slack": 5.4
+      },
+      {
+        "edge_id": 18,
+        "frequency": 0.7625,
+        "limit": 5.1,
+        "slack": 4.3375
+      },
+      {
+        "edge_id": 19,
+        "frequency": 0.0,
+        "limit": 4.5,
+        "slack": 4.5
+      },
+      {
+        "edge_id": 20,
+        "frequency": 0.0,
+        "limit": 4.7,
+        "slack": 4.7
+      },
+      {
+        "edge_id": 21,
+        "frequency": 0.0,
+        "limit": 5.5,
+        "slack": 5.5
+      },
+      {
+        "edge_id": 22,
+        "frequency": 0.0,
+        "limit": 4.8,
+        "slack": 4.8
+      },
+      {
+        "edge_id": 23,
+        "frequency": 0.0,
+        "limit": 5.7,
+        "slack": 5.7
+      },
+      {
+        "edge_id": 24,
+        "frequency": 0.0,
+        "limit": 7.3,
+        "slack": 7.3
+      },
+      {
+        "edge_id": 25,
+        "frequency": 0.7625,
+        "limit": 5.8,
+        "slack": 5.0375
+      },
+      {
+        "edge_id": 26,
+        "frequency": 0.0,
+        "limit": 6.7,
+        "slack": 6.7
+      },
+      {
+        "edge_id": 27,
+        "frequency": 0.0,
+        "limit": 7.4,
+        "slack": 7.4
+      },
+      {
+        "edge_id": 28,
+        "frequency": 0.0,
+        "limit": 8.9,
+        "slack": 8.9
+      },
+      {
+        "edge_id": 29,
+        "frequency": 0.0,
+        "limit": 8.0,
+        "slack": 8.0
+      },
+      {
+        "edge_id": 30,
+        "frequency": 0.0,
+        "limit": 5.7,
+        "slack": 5.7
+      },
+      {
+        "edge_id": 31,
+        "frequency": 0.7625,
+        "limit": 6.9,
+        "slack": 6.1375
+      },
+      {
+        "edge_id": 32,
+        "frequency": 0.0,
+        "limit": 5.7,
+        "slack": 5.7
+      },
+      {
+        "edge_id": 33,
+        "frequency": 0.0,
+        "limit": 6.0,
+        "slack": 6.0
+      },
+      {
+        "edge_id": 34,
+        "frequency": 0.0,
+        "limit": 4.8,
+        "slack": 4.8
+      },
+      {
+        "edge_id": 35,
+        "frequency": 0.0,
+        "limit": 4.6,
+        "slack": 4.6
+      },
+      {
+        "edge_id": 36,
+        "frequency": 0.0,
+        "limit": 5.6,
+        "slack": 5.6
+      },
+      {
+        "edge_id": 37,
+        "frequency": 0.7625,
+        "limit": 4.3,
+        "slack": 3.5375
+      },
+      {
+        "edge_id": 38,
+        "frequency": 0.0,
+        "limit": 5.3,
+        "slack": 5.3
+      },
+      {
+        "edge_id": 39,
+        "frequency": 0.0,
+        "limit": 7.4,
+        "slack": 7.4
+      },
+      {
+        "edge_id": 40,
+        "frequency": 0.0,
+        "limit": 5.1,
+        "slack": 5.1
+      },
+      {
+        "edge_id": 41,
+        "frequency": 0.0,
+        "limit": 6.1,
+        "slack": 6.1
+      },
+      {
+        "edge_id": 42,
+        "frequency": 0.0,
+        "limit": 6.7,
+        "slack": 6.7
+      },
+      {
+        "edge_id": 43,
+        "frequency": 0.0,
+        "limit": 7.6,
+        "slack": 7.6
+      },
+      {
+        "edge_id": 44,
+        "frequency": 0.0,
+        "limit": 5.9,
+        "slack": 5.9
+      },
+      {
+        "edge_id": 45,
+        "frequency": 0.0,
+        "limit": 6.6,
+        "slack": 6.6
+      },
+      {
+        "edge_id": 46,
+        "frequency": 0.0,
+        "limit": 6.8,
+        "slack": 6.8
+      },
+      {
+        "edge_id": 47,
+        "frequency": 0.0,
+        "limit": 6.4,
+        "slack": 6.4
+      },
+      {
+        "edge_id": 48,
+        "frequency": 0.0,
+        "limit": 5.7,
+        "slack": 5.7
+      },
+      {
+        "edge_id": 49,
+        "frequency": 0.7625,
+        "limit": 6.8,
+        "slack": 6.0375
+      },
+      {
+        "edge_id": 50,
+        "frequency": 0.0,
+        "limit": 6.1,
+        "slack": 6.1
+      },
+      {
+        "edge_id": 51,
+        "frequency": 0.0,
+        "limit": 5.2,
+        "slack": 5.2
+      },
+      {
+        "edge_id": 52,
+        "frequency": 0.0,
+        "limit": 5.0,
+        "slack": 5.0
+      },
+      {
+        "edge_id": 53,
+        "frequency": 0.0,
+        "limit": 4.1,
+        "slack": 4.1
+      },
+      {
+        "edge_id": 54,
+        "frequency": 0.0,
+        "limit": 4.6,
+        "slack": 4.6
+      },
+      {
+        "edge_id": 55,
+        "frequency": 0.7625,
+        "limit": 5.2,
+        "slack": 4.4375
+      },
+      {
+        "edge_id": 56,
+        "frequency": 0.0,
+        "limit": 5.8,
+        "slack": 5.8
+      },
+      {
+        "edge_id": 57,
+        "frequency": 0.0,
+        "limit": 5.6,
+        "slack": 5.6
+      },
+      {
+        "edge_id": 58,
+        "frequency": 0.0,
+        "limit": 5.1,
+        "slack": 5.1
+      },
+      {
+        "edge_id": 59,
+        "frequency": 0.0,
+        "limit": 4.3,
+        "slack": 4.3
+      }
+    ]
+  },
+  "reference_shortlist_k": 10,
+  "shortlists": [
+    {
+      "origin": 3,
+      "destination": 8,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            32
+          ],
+          "nodes": [
+            3,
+            8
+          ],
+          "travel_time_seconds": 24.38
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            19,
+            26
+          ],
+          "nodes": [
+            3,
+            2,
+            8
+          ],
+          "travel_time_seconds": 63.41
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            34,
+            61
+          ],
+          "nodes": [
+            3,
+            9,
+            8
+          ],
+          "travel_time_seconds": 66.71
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            28,
+            36
+          ],
+          "nodes": [
+            3,
+            4,
+            8
+          ],
+          "travel_time_seconds": 66.83
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            30,
+            54
+          ],
+          "nodes": [
+            3,
+            7,
+            8
+          ],
+          "travel_time_seconds": 68.63
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            19,
+            24,
+            54
+          ],
+          "nodes": [
+            3,
+            2,
+            7,
+            8
+          ],
+          "travel_time_seconds": 84.61
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            28,
+            38,
+            61
+          ],
+          "nodes": [
+            3,
+            4,
+            9,
+            8
+          ],
+          "travel_time_seconds": 87.81
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            30,
+            58,
+            63
+          ],
+          "nodes": [
+            3,
+            7,
+            13,
+            8
+          ],
+          "travel_time_seconds": 103.21
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            30,
+            25,
+            26
+          ],
+          "nodes": [
+            3,
+            7,
+            2,
+            8
+          ],
+          "travel_time_seconds": 105.91
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            34,
+            66,
+            63
+          ],
+          "nodes": [
+            3,
+            9,
+            13,
+            8
+          ],
+          "travel_time_seconds": 108.08
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            32
+          ],
+          "nodes": [
+            3,
+            8
+          ],
+          "travel_time_seconds": 24.38
+        },
+        {
+          "arcs": [
+            19,
+            26
+          ],
+          "nodes": [
+            3,
+            2,
+            8
+          ],
+          "travel_time_seconds": 63.41
+        },
+        {
+          "arcs": [
+            34,
+            61
+          ],
+          "nodes": [
+            3,
+            9,
+            8
+          ],
+          "travel_time_seconds": 66.71
+        },
+        {
+          "arcs": [
+            28,
+            36
+          ],
+          "nodes": [
+            3,
+            4,
+            8
+          ],
+          "travel_time_seconds": 66.83
+        },
+        {
+          "arcs": [
+            30,
+            54
+          ],
+          "nodes": [
+            3,
+            7,
+            8
+          ],
+          "travel_time_seconds": 68.63
+        },
+        {
+          "arcs": [
+            19,
+            24,
+            54
+          ],
+          "nodes": [
+            3,
+            2,
+            7,
+            8
+          ],
+          "travel_time_seconds": 84.61
+        },
+        {
+          "arcs": [
+            28,
+            38,
+            61
+          ],
+          "nodes": [
+            3,
+            4,
+            9,
+            8
+          ],
+          "travel_time_seconds": 87.81
+        },
+        {
+          "arcs": [
+            30,
+            58,
+            63
+          ],
+          "nodes": [
+            3,
+            7,
+            13,
+            8
+          ],
+          "travel_time_seconds": 103.21
+        },
+        {
+          "arcs": [
+            30,
+            25,
+            26
+          ],
+          "nodes": [
+            3,
+            7,
+            2,
+            8
+          ],
+          "travel_time_seconds": 105.91
+        },
+        {
+          "arcs": [
+            34,
+            66,
+            63
+          ],
+          "nodes": [
+            3,
+            9,
+            13,
+            8
+          ],
+          "travel_time_seconds": 108.08
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 59
+    },
+    {
+      "origin": 8,
+      "destination": 3,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            33
+          ],
+          "nodes": [
+            8,
+            3
+          ],
+          "travel_time_seconds": 24.38
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            27,
+            18
+          ],
+          "nodes": [
+            8,
+            2,
+            3
+          ],
+          "travel_time_seconds": 63.41
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            60,
+            35
+          ],
+          "nodes": [
+            8,
+            9,
+            3
+          ],
+          "travel_time_seconds": 66.71
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            37,
+            29
+          ],
+          "nodes": [
+            8,
+            4,
+            3
+          ],
+          "travel_time_seconds": 66.83
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            55,
+            31
+          ],
+          "nodes": [
+            8,
+            7,
+            3
+          ],
+          "travel_time_seconds": 68.63
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            55,
+            25,
+            18
+          ],
+          "nodes": [
+            8,
+            7,
+            2,
+            3
+          ],
+          "travel_time_seconds": 84.61
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            60,
+            39,
+            29
+          ],
+          "nodes": [
+            8,
+            9,
+            4,
+            3
+          ],
+          "travel_time_seconds": 87.81
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            62,
+            59,
+            31
+          ],
+          "nodes": [
+            8,
+            13,
+            7,
+            3
+          ],
+          "travel_time_seconds": 103.21
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            27,
+            24,
+            31
+          ],
+          "nodes": [
+            8,
+            2,
+            7,
+            3
+          ],
+          "travel_time_seconds": 105.91
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            62,
+            67,
+            35
+          ],
+          "nodes": [
+            8,
+            13,
+            9,
+            3
+          ],
+          "travel_time_seconds": 108.08
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            33
+          ],
+          "nodes": [
+            8,
+            3
+          ],
+          "travel_time_seconds": 24.38
+        },
+        {
+          "arcs": [
+            27,
+            18
+          ],
+          "nodes": [
+            8,
+            2,
+            3
+          ],
+          "travel_time_seconds": 63.41
+        },
+        {
+          "arcs": [
+            60,
+            35
+          ],
+          "nodes": [
+            8,
+            9,
+            3
+          ],
+          "travel_time_seconds": 66.71
+        },
+        {
+          "arcs": [
+            37,
+            29
+          ],
+          "nodes": [
+            8,
+            4,
+            3
+          ],
+          "travel_time_seconds": 66.83
+        },
+        {
+          "arcs": [
+            55,
+            31
+          ],
+          "nodes": [
+            8,
+            7,
+            3
+          ],
+          "travel_time_seconds": 68.63
+        },
+        {
+          "arcs": [
+            55,
+            25,
+            18
+          ],
+          "nodes": [
+            8,
+            7,
+            2,
+            3
+          ],
+          "travel_time_seconds": 84.61
+        },
+        {
+          "arcs": [
+            60,
+            39,
+            29
+          ],
+          "nodes": [
+            8,
+            9,
+            4,
+            3
+          ],
+          "travel_time_seconds": 87.81
+        },
+        {
+          "arcs": [
+            62,
+            59,
+            31
+          ],
+          "nodes": [
+            8,
+            13,
+            7,
+            3
+          ],
+          "travel_time_seconds": 103.21
+        },
+        {
+          "arcs": [
+            27,
+            24,
+            31
+          ],
+          "nodes": [
+            8,
+            2,
+            7,
+            3
+          ],
+          "travel_time_seconds": 105.91
+        },
+        {
+          "arcs": [
+            62,
+            67,
+            35
+          ],
+          "nodes": [
+            8,
+            13,
+            9,
+            3
+          ],
+          "travel_time_seconds": 108.08
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 101
+    },
+    {
+      "origin": 10,
+      "destination": 17,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            76,
+            112
+          ],
+          "nodes": [
+            10,
+            16,
+            17
+          ],
+          "travel_time_seconds": 68.85
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            72,
+            84
+          ],
+          "nodes": [
+            10,
+            11,
+            17
+          ],
+          "travel_time_seconds": 70.71
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            72,
+            78,
+            92
+          ],
+          "nodes": [
+            10,
+            11,
+            12,
+            17
+          ],
+          "travel_time_seconds": 82.44
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            72,
+            82,
+            112
+          ],
+          "nodes": [
+            10,
+            11,
+            16,
+            17
+          ],
+          "travel_time_seconds": 84.32
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            74,
+            110
+          ],
+          "nodes": [
+            10,
+            15,
+            17
+          ],
+          "travel_time_seconds": 88.54
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            74,
+            108,
+            112
+          ],
+          "nodes": [
+            10,
+            15,
+            16,
+            17
+          ],
+          "travel_time_seconds": 88.54
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            76,
+            91,
+            92
+          ],
+          "nodes": [
+            10,
+            16,
+            12,
+            17
+          ],
+          "travel_time_seconds": 103.19
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            74,
+            81,
+            84
+          ],
+          "nodes": [
+            10,
+            15,
+            11,
+            17
+          ],
+          "travel_time_seconds": 117.53
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            74,
+            89,
+            92
+          ],
+          "nodes": [
+            10,
+            15,
+            12,
+            17
+          ],
+          "travel_time_seconds": 118.19
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            72,
+            82,
+            91,
+            92
+          ],
+          "nodes": [
+            10,
+            11,
+            16,
+            12,
+            17
+          ],
+          "travel_time_seconds": 118.66
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            76,
+            112
+          ],
+          "nodes": [
+            10,
+            16,
+            17
+          ],
+          "travel_time_seconds": 68.85
+        },
+        {
+          "arcs": [
+            72,
+            84
+          ],
+          "nodes": [
+            10,
+            11,
+            17
+          ],
+          "travel_time_seconds": 70.71
+        },
+        {
+          "arcs": [
+            72,
+            78,
+            92
+          ],
+          "nodes": [
+            10,
+            11,
+            12,
+            17
+          ],
+          "travel_time_seconds": 82.44
+        },
+        {
+          "arcs": [
+            72,
+            82,
+            112
+          ],
+          "nodes": [
+            10,
+            11,
+            16,
+            17
+          ],
+          "travel_time_seconds": 84.32
+        },
+        {
+          "arcs": [
+            74,
+            108,
+            112
+          ],
+          "nodes": [
+            10,
+            15,
+            16,
+            17
+          ],
+          "travel_time_seconds": 88.54
+        },
+        {
+          "arcs": [
+            74,
+            110
+          ],
+          "nodes": [
+            10,
+            15,
+            17
+          ],
+          "travel_time_seconds": 88.54
+        },
+        {
+          "arcs": [
+            76,
+            91,
+            92
+          ],
+          "nodes": [
+            10,
+            16,
+            12,
+            17
+          ],
+          "travel_time_seconds": 103.19
+        },
+        {
+          "arcs": [
+            74,
+            81,
+            84
+          ],
+          "nodes": [
+            10,
+            15,
+            11,
+            17
+          ],
+          "travel_time_seconds": 117.53
+        },
+        {
+          "arcs": [
+            74,
+            89,
+            92
+          ],
+          "nodes": [
+            10,
+            15,
+            12,
+            17
+          ],
+          "travel_time_seconds": 118.19
+        },
+        {
+          "arcs": [
+            72,
+            82,
+            91,
+            92
+          ],
+          "nodes": [
+            10,
+            11,
+            16,
+            12,
+            17
+          ],
+          "travel_time_seconds": 118.66
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 109
+    },
+    {
+      "origin": 17,
+      "destination": 10,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            113,
+            77
+          ],
+          "nodes": [
+            17,
+            16,
+            10
+          ],
+          "travel_time_seconds": 68.85
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            85,
+            73
+          ],
+          "nodes": [
+            17,
+            11,
+            10
+          ],
+          "travel_time_seconds": 70.71
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            93,
+            79,
+            73
+          ],
+          "nodes": [
+            17,
+            12,
+            11,
+            10
+          ],
+          "travel_time_seconds": 82.44
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            113,
+            83,
+            73
+          ],
+          "nodes": [
+            17,
+            16,
+            11,
+            10
+          ],
+          "travel_time_seconds": 84.32
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            111,
+            75
+          ],
+          "nodes": [
+            17,
+            15,
+            10
+          ],
+          "travel_time_seconds": 88.54
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            113,
+            109,
+            75
+          ],
+          "nodes": [
+            17,
+            16,
+            15,
+            10
+          ],
+          "travel_time_seconds": 88.54
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            93,
+            90,
+            77
+          ],
+          "nodes": [
+            17,
+            12,
+            16,
+            10
+          ],
+          "travel_time_seconds": 103.19
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            85,
+            80,
+            75
+          ],
+          "nodes": [
+            17,
+            11,
+            15,
+            10
+          ],
+          "travel_time_seconds": 117.53
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            93,
+            88,
+            75
+          ],
+          "nodes": [
+            17,
+            12,
+            15,
+            10
+          ],
+          "travel_time_seconds": 118.19
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            93,
+            90,
+            83,
+            73
+          ],
+          "nodes": [
+            17,
+            12,
+            16,
+            11,
+            10
+          ],
+          "travel_time_seconds": 118.66
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            113,
+            77
+          ],
+          "nodes": [
+            17,
+            16,
+            10
+          ],
+          "travel_time_seconds": 68.85
+        },
+        {
+          "arcs": [
+            85,
+            73
+          ],
+          "nodes": [
+            17,
+            11,
+            10
+          ],
+          "travel_time_seconds": 70.71
+        },
+        {
+          "arcs": [
+            93,
+            79,
+            73
+          ],
+          "nodes": [
+            17,
+            12,
+            11,
+            10
+          ],
+          "travel_time_seconds": 82.44
+        },
+        {
+          "arcs": [
+            113,
+            83,
+            73
+          ],
+          "nodes": [
+            17,
+            16,
+            11,
+            10
+          ],
+          "travel_time_seconds": 84.32
+        },
+        {
+          "arcs": [
+            111,
+            75
+          ],
+          "nodes": [
+            17,
+            15,
+            10
+          ],
+          "travel_time_seconds": 88.54
+        },
+        {
+          "arcs": [
+            113,
+            109,
+            75
+          ],
+          "nodes": [
+            17,
+            16,
+            15,
+            10
+          ],
+          "travel_time_seconds": 88.54
+        },
+        {
+          "arcs": [
+            93,
+            90,
+            77
+          ],
+          "nodes": [
+            17,
+            12,
+            16,
+            10
+          ],
+          "travel_time_seconds": 103.19
+        },
+        {
+          "arcs": [
+            85,
+            80,
+            75
+          ],
+          "nodes": [
+            17,
+            11,
+            15,
+            10
+          ],
+          "travel_time_seconds": 117.53
+        },
+        {
+          "arcs": [
+            93,
+            88,
+            75
+          ],
+          "nodes": [
+            17,
+            12,
+            15,
+            10
+          ],
+          "travel_time_seconds": 118.19
+        },
+        {
+          "arcs": [
+            93,
+            90,
+            83,
+            73
+          ],
+          "nodes": [
+            17,
+            12,
+            16,
+            11,
+            10
+          ],
+          "travel_time_seconds": 118.66
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 141
+    },
+    {
+      "origin": 8,
+      "destination": 17,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            62,
+            98
+          ],
+          "nodes": [
+            8,
+            13,
+            17
+          ],
+          "travel_time_seconds": 70.81
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            62,
+            87,
+            92
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 82.97
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            55,
+            56,
+            92
+          ],
+          "nodes": [
+            8,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 88.33
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            62,
+            100,
+            115
+          ],
+          "nodes": [
+            8,
+            13,
+            18,
+            17
+          ],
+          "travel_time_seconds": 96.99
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            60,
+            66,
+            98
+          ],
+          "nodes": [
+            8,
+            9,
+            13,
+            17
+          ],
+          "travel_time_seconds": 104.44
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            55,
+            58,
+            98
+          ],
+          "nodes": [
+            8,
+            7,
+            13,
+            17
+          ],
+          "travel_time_seconds": 108.29
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            60,
+            66,
+            87,
+            92
+          ],
+          "nodes": [
+            8,
+            9,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 116.6
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            64,
+            104,
+            115
+          ],
+          "nodes": [
+            8,
+            14,
+            18,
+            17
+          ],
+          "travel_time_seconds": 118.5
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            33,
+            30,
+            56,
+            92
+          ],
+          "nodes": [
+            8,
+            3,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 120.06
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            62,
+            87,
+            90,
+            112
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            16,
+            17
+          ],
+          "travel_time_seconds": 120.07
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            62,
+            98
+          ],
+          "nodes": [
+            8,
+            13,
+            17
+          ],
+          "travel_time_seconds": 70.81
+        },
+        {
+          "arcs": [
+            62,
+            87,
+            92
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 82.97
+        },
+        {
+          "arcs": [
+            55,
+            56,
+            92
+          ],
+          "nodes": [
+            8,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 88.33
+        },
+        {
+          "arcs": [
+            62,
+            100,
+            115
+          ],
+          "nodes": [
+            8,
+            13,
+            18,
+            17
+          ],
+          "travel_time_seconds": 96.99
+        },
+        {
+          "arcs": [
+            60,
+            66,
+            98
+          ],
+          "nodes": [
+            8,
+            9,
+            13,
+            17
+          ],
+          "travel_time_seconds": 104.44
+        },
+        {
+          "arcs": [
+            55,
+            58,
+            98
+          ],
+          "nodes": [
+            8,
+            7,
+            13,
+            17
+          ],
+          "travel_time_seconds": 108.29
+        },
+        {
+          "arcs": [
+            60,
+            66,
+            87,
+            92
+          ],
+          "nodes": [
+            8,
+            9,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 116.6
+        },
+        {
+          "arcs": [
+            64,
+            104,
+            115
+          ],
+          "nodes": [
+            8,
+            14,
+            18,
+            17
+          ],
+          "travel_time_seconds": 118.5
+        },
+        {
+          "arcs": [
+            33,
+            30,
+            56,
+            92
+          ],
+          "nodes": [
+            8,
+            3,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 120.06
+        },
+        {
+          "arcs": [
+            62,
+            87,
+            90,
+            112
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            16,
+            17
+          ],
+          "travel_time_seconds": 120.07
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 182
+    },
+    {
+      "origin": 17,
+      "destination": 8,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            99,
+            63
+          ],
+          "nodes": [
+            17,
+            13,
+            8
+          ],
+          "travel_time_seconds": 70.81
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            93,
+            86,
+            63
+          ],
+          "nodes": [
+            17,
+            12,
+            13,
+            8
+          ],
+          "travel_time_seconds": 82.97
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            93,
+            57,
+            54
+          ],
+          "nodes": [
+            17,
+            12,
+            7,
+            8
+          ],
+          "travel_time_seconds": 88.33
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            114,
+            101,
+            63
+          ],
+          "nodes": [
+            17,
+            18,
+            13,
+            8
+          ],
+          "travel_time_seconds": 96.99
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            99,
+            67,
+            61
+          ],
+          "nodes": [
+            17,
+            13,
+            9,
+            8
+          ],
+          "travel_time_seconds": 104.44
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            99,
+            59,
+            54
+          ],
+          "nodes": [
+            17,
+            13,
+            7,
+            8
+          ],
+          "travel_time_seconds": 108.29
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            93,
+            86,
+            67,
+            61
+          ],
+          "nodes": [
+            17,
+            12,
+            13,
+            9,
+            8
+          ],
+          "travel_time_seconds": 116.6
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            114,
+            105,
+            65
+          ],
+          "nodes": [
+            17,
+            18,
+            14,
+            8
+          ],
+          "travel_time_seconds": 118.5
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            93,
+            57,
+            31,
+            32
+          ],
+          "nodes": [
+            17,
+            12,
+            7,
+            3,
+            8
+          ],
+          "travel_time_seconds": 120.06
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            113,
+            91,
+            86,
+            63
+          ],
+          "nodes": [
+            17,
+            16,
+            12,
+            13,
+            8
+          ],
+          "travel_time_seconds": 120.07
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            99,
+            63
+          ],
+          "nodes": [
+            17,
+            13,
+            8
+          ],
+          "travel_time_seconds": 70.81
+        },
+        {
+          "arcs": [
+            93,
+            86,
+            63
+          ],
+          "nodes": [
+            17,
+            12,
+            13,
+            8
+          ],
+          "travel_time_seconds": 82.97
+        },
+        {
+          "arcs": [
+            93,
+            57,
+            54
+          ],
+          "nodes": [
+            17,
+            12,
+            7,
+            8
+          ],
+          "travel_time_seconds": 88.33
+        },
+        {
+          "arcs": [
+            114,
+            101,
+            63
+          ],
+          "nodes": [
+            17,
+            18,
+            13,
+            8
+          ],
+          "travel_time_seconds": 96.99
+        },
+        {
+          "arcs": [
+            99,
+            67,
+            61
+          ],
+          "nodes": [
+            17,
+            13,
+            9,
+            8
+          ],
+          "travel_time_seconds": 104.44
+        },
+        {
+          "arcs": [
+            99,
+            59,
+            54
+          ],
+          "nodes": [
+            17,
+            13,
+            7,
+            8
+          ],
+          "travel_time_seconds": 108.29
+        },
+        {
+          "arcs": [
+            93,
+            86,
+            67,
+            61
+          ],
+          "nodes": [
+            17,
+            12,
+            13,
+            9,
+            8
+          ],
+          "travel_time_seconds": 116.6
+        },
+        {
+          "arcs": [
+            114,
+            105,
+            65
+          ],
+          "nodes": [
+            17,
+            18,
+            14,
+            8
+          ],
+          "travel_time_seconds": 118.5
+        },
+        {
+          "arcs": [
+            93,
+            57,
+            31,
+            32
+          ],
+          "nodes": [
+            17,
+            12,
+            7,
+            3,
+            8
+          ],
+          "travel_time_seconds": 120.06
+        },
+        {
+          "arcs": [
+            113,
+            91,
+            86,
+            63
+          ],
+          "nodes": [
+            17,
+            16,
+            12,
+            13,
+            8
+          ],
+          "travel_time_seconds": 120.07
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 153
+    },
+    {
+      "origin": 3,
+      "destination": 17,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            32,
+            62,
+            98
+          ],
+          "nodes": [
+            3,
+            8,
+            13,
+            17
+          ],
+          "travel_time_seconds": 95.19
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            30,
+            56,
+            92
+          ],
+          "nodes": [
+            3,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 95.68
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            32,
+            62,
+            87,
+            92
+          ],
+          "nodes": [
+            3,
+            8,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 107.35
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            19,
+            24,
+            56,
+            92
+          ],
+          "nodes": [
+            3,
+            2,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 111.66
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            32,
+            55,
+            56,
+            92
+          ],
+          "nodes": [
+            3,
+            8,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 112.71
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            30,
+            58,
+            98
+          ],
+          "nodes": [
+            3,
+            7,
+            13,
+            17
+          ],
+          "travel_time_seconds": 115.64
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            34,
+            66,
+            98
+          ],
+          "nodes": [
+            3,
+            9,
+            13,
+            17
+          ],
+          "travel_time_seconds": 120.51
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            32,
+            62,
+            100,
+            115
+          ],
+          "nodes": [
+            3,
+            8,
+            13,
+            18,
+            17
+          ],
+          "travel_time_seconds": 121.37
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            30,
+            58,
+            87,
+            92
+          ],
+          "nodes": [
+            3,
+            7,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 127.8
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            32,
+            60,
+            66,
+            98
+          ],
+          "nodes": [
+            3,
+            8,
+            9,
+            13,
+            17
+          ],
+          "travel_time_seconds": 128.82
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            32,
+            62,
+            98
+          ],
+          "nodes": [
+            3,
+            8,
+            13,
+            17
+          ],
+          "travel_time_seconds": 95.19
+        },
+        {
+          "arcs": [
+            30,
+            56,
+            92
+          ],
+          "nodes": [
+            3,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 95.68
+        },
+        {
+          "arcs": [
+            32,
+            62,
+            87,
+            92
+          ],
+          "nodes": [
+            3,
+            8,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 107.35
+        },
+        {
+          "arcs": [
+            19,
+            24,
+            56,
+            92
+          ],
+          "nodes": [
+            3,
+            2,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 111.66
+        },
+        {
+          "arcs": [
+            32,
+            55,
+            56,
+            92
+          ],
+          "nodes": [
+            3,
+            8,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 112.71
+        },
+        {
+          "arcs": [
+            30,
+            58,
+            98
+          ],
+          "nodes": [
+            3,
+            7,
+            13,
+            17
+          ],
+          "travel_time_seconds": 115.64
+        },
+        {
+          "arcs": [
+            34,
+            66,
+            98
+          ],
+          "nodes": [
+            3,
+            9,
+            13,
+            17
+          ],
+          "travel_time_seconds": 120.51
+        },
+        {
+          "arcs": [
+            32,
+            62,
+            100,
+            115
+          ],
+          "nodes": [
+            3,
+            8,
+            13,
+            18,
+            17
+          ],
+          "travel_time_seconds": 121.37
+        },
+        {
+          "arcs": [
+            30,
+            58,
+            87,
+            92
+          ],
+          "nodes": [
+            3,
+            7,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 127.8
+        },
+        {
+          "arcs": [
+            32,
+            60,
+            66,
+            98
+          ],
+          "nodes": [
+            3,
+            8,
+            9,
+            13,
+            17
+          ],
+          "travel_time_seconds": 128.82
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 250
+    },
+    {
+      "origin": 17,
+      "destination": 3,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            99,
+            63,
+            33
+          ],
+          "nodes": [
+            17,
+            13,
+            8,
+            3
+          ],
+          "travel_time_seconds": 95.19
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            93,
+            57,
+            31
+          ],
+          "nodes": [
+            17,
+            12,
+            7,
+            3
+          ],
+          "travel_time_seconds": 95.68
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            93,
+            86,
+            63,
+            33
+          ],
+          "nodes": [
+            17,
+            12,
+            13,
+            8,
+            3
+          ],
+          "travel_time_seconds": 107.35
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            93,
+            57,
+            25,
+            18
+          ],
+          "nodes": [
+            17,
+            12,
+            7,
+            2,
+            3
+          ],
+          "travel_time_seconds": 111.66
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            93,
+            57,
+            54,
+            33
+          ],
+          "nodes": [
+            17,
+            12,
+            7,
+            8,
+            3
+          ],
+          "travel_time_seconds": 112.71
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            99,
+            59,
+            31
+          ],
+          "nodes": [
+            17,
+            13,
+            7,
+            3
+          ],
+          "travel_time_seconds": 115.64
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            99,
+            67,
+            35
+          ],
+          "nodes": [
+            17,
+            13,
+            9,
+            3
+          ],
+          "travel_time_seconds": 120.51
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            114,
+            101,
+            63,
+            33
+          ],
+          "nodes": [
+            17,
+            18,
+            13,
+            8,
+            3
+          ],
+          "travel_time_seconds": 121.37
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            93,
+            86,
+            59,
+            31
+          ],
+          "nodes": [
+            17,
+            12,
+            13,
+            7,
+            3
+          ],
+          "travel_time_seconds": 127.8
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            99,
+            67,
+            61,
+            33
+          ],
+          "nodes": [
+            17,
+            13,
+            9,
+            8,
+            3
+          ],
+          "travel_time_seconds": 128.82
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            99,
+            63,
+            33
+          ],
+          "nodes": [
+            17,
+            13,
+            8,
+            3
+          ],
+          "travel_time_seconds": 95.19
+        },
+        {
+          "arcs": [
+            93,
+            57,
+            31
+          ],
+          "nodes": [
+            17,
+            12,
+            7,
+            3
+          ],
+          "travel_time_seconds": 95.68
+        },
+        {
+          "arcs": [
+            93,
+            86,
+            63,
+            33
+          ],
+          "nodes": [
+            17,
+            12,
+            13,
+            8,
+            3
+          ],
+          "travel_time_seconds": 107.35
+        },
+        {
+          "arcs": [
+            93,
+            57,
+            25,
+            18
+          ],
+          "nodes": [
+            17,
+            12,
+            7,
+            2,
+            3
+          ],
+          "travel_time_seconds": 111.66
+        },
+        {
+          "arcs": [
+            93,
+            57,
+            54,
+            33
+          ],
+          "nodes": [
+            17,
+            12,
+            7,
+            8,
+            3
+          ],
+          "travel_time_seconds": 112.71
+        },
+        {
+          "arcs": [
+            99,
+            59,
+            31
+          ],
+          "nodes": [
+            17,
+            13,
+            7,
+            3
+          ],
+          "travel_time_seconds": 115.64
+        },
+        {
+          "arcs": [
+            99,
+            67,
+            35
+          ],
+          "nodes": [
+            17,
+            13,
+            9,
+            3
+          ],
+          "travel_time_seconds": 120.51
+        },
+        {
+          "arcs": [
+            114,
+            101,
+            63,
+            33
+          ],
+          "nodes": [
+            17,
+            18,
+            13,
+            8,
+            3
+          ],
+          "travel_time_seconds": 121.37
+        },
+        {
+          "arcs": [
+            93,
+            86,
+            59,
+            31
+          ],
+          "nodes": [
+            17,
+            12,
+            13,
+            7,
+            3
+          ],
+          "travel_time_seconds": 127.8
+        },
+        {
+          "arcs": [
+            99,
+            67,
+            61,
+            33
+          ],
+          "nodes": [
+            17,
+            13,
+            9,
+            8,
+            3
+          ],
+          "travel_time_seconds": 128.82
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 242
+    },
+    {
+      "origin": 8,
+      "destination": 10,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            55,
+            49,
+            50
+          ],
+          "nodes": [
+            8,
+            7,
+            6,
+            10
+          ],
+          "travel_time_seconds": 109.18
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            62,
+            87,
+            79,
+            73
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            11,
+            10
+          ],
+          "travel_time_seconds": 115.67
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            55,
+            56,
+            79,
+            73
+          ],
+          "nodes": [
+            8,
+            7,
+            12,
+            11,
+            10
+          ],
+          "travel_time_seconds": 121.03
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            55,
+            49,
+            52,
+            73
+          ],
+          "nodes": [
+            8,
+            7,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 122.52
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            27,
+            22,
+            50
+          ],
+          "nodes": [
+            8,
+            2,
+            6,
+            10
+          ],
+          "travel_time_seconds": 125.27
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            55,
+            49,
+            43,
+            44
+          ],
+          "nodes": [
+            8,
+            7,
+            6,
+            5,
+            10
+          ],
+          "travel_time_seconds": 126.86
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            33,
+            19,
+            22,
+            50
+          ],
+          "nodes": [
+            8,
+            3,
+            2,
+            6,
+            10
+          ],
+          "travel_time_seconds": 135.7
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            62,
+            87,
+            90,
+            77
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            16,
+            10
+          ],
+          "travel_time_seconds": 136.42
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            27,
+            22,
+            52,
+            73
+          ],
+          "nodes": [
+            8,
+            2,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 138.61
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            62,
+            98,
+            113,
+            77
+          ],
+          "nodes": [
+            8,
+            13,
+            17,
+            16,
+            10
+          ],
+          "travel_time_seconds": 139.66
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            55,
+            49,
+            50
+          ],
+          "nodes": [
+            8,
+            7,
+            6,
+            10
+          ],
+          "travel_time_seconds": 109.18
+        },
+        {
+          "arcs": [
+            62,
+            87,
+            79,
+            73
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            11,
+            10
+          ],
+          "travel_time_seconds": 115.67
+        },
+        {
+          "arcs": [
+            55,
+            56,
+            79,
+            73
+          ],
+          "nodes": [
+            8,
+            7,
+            12,
+            11,
+            10
+          ],
+          "travel_time_seconds": 121.03
+        },
+        {
+          "arcs": [
+            55,
+            49,
+            52,
+            73
+          ],
+          "nodes": [
+            8,
+            7,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 122.52
+        },
+        {
+          "arcs": [
+            27,
+            22,
+            50
+          ],
+          "nodes": [
+            8,
+            2,
+            6,
+            10
+          ],
+          "travel_time_seconds": 125.27
+        },
+        {
+          "arcs": [
+            55,
+            49,
+            43,
+            44
+          ],
+          "nodes": [
+            8,
+            7,
+            6,
+            5,
+            10
+          ],
+          "travel_time_seconds": 126.86
+        },
+        {
+          "arcs": [
+            33,
+            19,
+            22,
+            50
+          ],
+          "nodes": [
+            8,
+            3,
+            2,
+            6,
+            10
+          ],
+          "travel_time_seconds": 135.7
+        },
+        {
+          "arcs": [
+            62,
+            87,
+            90,
+            77
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            16,
+            10
+          ],
+          "travel_time_seconds": 136.42
+        },
+        {
+          "arcs": [
+            27,
+            22,
+            52,
+            73
+          ],
+          "nodes": [
+            8,
+            2,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 138.61
+        },
+        {
+          "arcs": [
+            62,
+            98,
+            113,
+            77
+          ],
+          "nodes": [
+            8,
+            13,
+            17,
+            16,
+            10
+          ],
+          "travel_time_seconds": 139.66
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 447
+    },
+    {
+      "origin": 10,
+      "destination": 8,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            51,
+            48,
+            54
+          ],
+          "nodes": [
+            10,
+            6,
+            7,
+            8
+          ],
+          "travel_time_seconds": 109.18
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            72,
+            78,
+            86,
+            63
+          ],
+          "nodes": [
+            10,
+            11,
+            12,
+            13,
+            8
+          ],
+          "travel_time_seconds": 115.67
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            72,
+            78,
+            57,
+            54
+          ],
+          "nodes": [
+            10,
+            11,
+            12,
+            7,
+            8
+          ],
+          "travel_time_seconds": 121.03
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            72,
+            53,
+            48,
+            54
+          ],
+          "nodes": [
+            10,
+            11,
+            6,
+            7,
+            8
+          ],
+          "travel_time_seconds": 122.52
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            51,
+            23,
+            26
+          ],
+          "nodes": [
+            10,
+            6,
+            2,
+            8
+          ],
+          "travel_time_seconds": 125.27
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            45,
+            42,
+            48,
+            54
+          ],
+          "nodes": [
+            10,
+            5,
+            6,
+            7,
+            8
+          ],
+          "travel_time_seconds": 126.86
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            51,
+            23,
+            18,
+            32
+          ],
+          "nodes": [
+            10,
+            6,
+            2,
+            3,
+            8
+          ],
+          "travel_time_seconds": 135.7
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            76,
+            91,
+            86,
+            63
+          ],
+          "nodes": [
+            10,
+            16,
+            12,
+            13,
+            8
+          ],
+          "travel_time_seconds": 136.42
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            72,
+            53,
+            23,
+            26
+          ],
+          "nodes": [
+            10,
+            11,
+            6,
+            2,
+            8
+          ],
+          "travel_time_seconds": 138.61
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            76,
+            112,
+            99,
+            63
+          ],
+          "nodes": [
+            10,
+            16,
+            17,
+            13,
+            8
+          ],
+          "travel_time_seconds": 139.66
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            51,
+            48,
+            54
+          ],
+          "nodes": [
+            10,
+            6,
+            7,
+            8
+          ],
+          "travel_time_seconds": 109.18
+        },
+        {
+          "arcs": [
+            72,
+            78,
+            86,
+            63
+          ],
+          "nodes": [
+            10,
+            11,
+            12,
+            13,
+            8
+          ],
+          "travel_time_seconds": 115.67
+        },
+        {
+          "arcs": [
+            72,
+            78,
+            57,
+            54
+          ],
+          "nodes": [
+            10,
+            11,
+            12,
+            7,
+            8
+          ],
+          "travel_time_seconds": 121.03
+        },
+        {
+          "arcs": [
+            72,
+            53,
+            48,
+            54
+          ],
+          "nodes": [
+            10,
+            11,
+            6,
+            7,
+            8
+          ],
+          "travel_time_seconds": 122.52
+        },
+        {
+          "arcs": [
+            51,
+            23,
+            26
+          ],
+          "nodes": [
+            10,
+            6,
+            2,
+            8
+          ],
+          "travel_time_seconds": 125.27
+        },
+        {
+          "arcs": [
+            45,
+            42,
+            48,
+            54
+          ],
+          "nodes": [
+            10,
+            5,
+            6,
+            7,
+            8
+          ],
+          "travel_time_seconds": 126.86
+        },
+        {
+          "arcs": [
+            51,
+            23,
+            18,
+            32
+          ],
+          "nodes": [
+            10,
+            6,
+            2,
+            3,
+            8
+          ],
+          "travel_time_seconds": 135.7
+        },
+        {
+          "arcs": [
+            76,
+            91,
+            86,
+            63
+          ],
+          "nodes": [
+            10,
+            16,
+            12,
+            13,
+            8
+          ],
+          "travel_time_seconds": 136.42
+        },
+        {
+          "arcs": [
+            72,
+            53,
+            23,
+            26
+          ],
+          "nodes": [
+            10,
+            11,
+            6,
+            2,
+            8
+          ],
+          "travel_time_seconds": 138.61
+        },
+        {
+          "arcs": [
+            76,
+            112,
+            99,
+            63
+          ],
+          "nodes": [
+            10,
+            16,
+            17,
+            13,
+            8
+          ],
+          "travel_time_seconds": 139.66
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 295
+    },
+    {
+      "origin": 0,
+      "destination": 10,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            8
+          ],
+          "nodes": [
+            0,
+            10
+          ],
+          "travel_time_seconds": 61.52
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            4,
+            44
+          ],
+          "nodes": [
+            0,
+            5,
+            10
+          ],
+          "travel_time_seconds": 61.54
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            6,
+            50
+          ],
+          "nodes": [
+            0,
+            6,
+            10
+          ],
+          "travel_time_seconds": 81.61
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            4,
+            46,
+            73
+          ],
+          "nodes": [
+            0,
+            5,
+            11,
+            10
+          ],
+          "travel_time_seconds": 92.75
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            6,
+            52,
+            73
+          ],
+          "nodes": [
+            0,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 94.95
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            0,
+            14,
+            50
+          ],
+          "nodes": [
+            0,
+            1,
+            6,
+            10
+          ],
+          "travel_time_seconds": 98.23
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            4,
+            42,
+            50
+          ],
+          "nodes": [
+            0,
+            5,
+            6,
+            10
+          ],
+          "travel_time_seconds": 98.46
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            6,
+            43,
+            44
+          ],
+          "nodes": [
+            0,
+            6,
+            5,
+            10
+          ],
+          "travel_time_seconds": 99.29
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            0,
+            12,
+            44
+          ],
+          "nodes": [
+            0,
+            1,
+            5,
+            10
+          ],
+          "travel_time_seconds": 101.71
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            0,
+            14,
+            52,
+            73
+          ],
+          "nodes": [
+            0,
+            1,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 111.57
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            8
+          ],
+          "nodes": [
+            0,
+            10
+          ],
+          "travel_time_seconds": 61.52
+        },
+        {
+          "arcs": [
+            4,
+            44
+          ],
+          "nodes": [
+            0,
+            5,
+            10
+          ],
+          "travel_time_seconds": 61.54
+        },
+        {
+          "arcs": [
+            6,
+            50
+          ],
+          "nodes": [
+            0,
+            6,
+            10
+          ],
+          "travel_time_seconds": 81.61
+        },
+        {
+          "arcs": [
+            4,
+            46,
+            73
+          ],
+          "nodes": [
+            0,
+            5,
+            11,
+            10
+          ],
+          "travel_time_seconds": 92.75
+        },
+        {
+          "arcs": [
+            6,
+            52,
+            73
+          ],
+          "nodes": [
+            0,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 94.95
+        },
+        {
+          "arcs": [
+            0,
+            14,
+            50
+          ],
+          "nodes": [
+            0,
+            1,
+            6,
+            10
+          ],
+          "travel_time_seconds": 98.23
+        },
+        {
+          "arcs": [
+            4,
+            42,
+            50
+          ],
+          "nodes": [
+            0,
+            5,
+            6,
+            10
+          ],
+          "travel_time_seconds": 98.46
+        },
+        {
+          "arcs": [
+            6,
+            43,
+            44
+          ],
+          "nodes": [
+            0,
+            6,
+            5,
+            10
+          ],
+          "travel_time_seconds": 99.29
+        },
+        {
+          "arcs": [
+            0,
+            12,
+            44
+          ],
+          "nodes": [
+            0,
+            1,
+            5,
+            10
+          ],
+          "travel_time_seconds": 101.71
+        },
+        {
+          "arcs": [
+            0,
+            14,
+            52,
+            73
+          ],
+          "nodes": [
+            0,
+            1,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 111.57
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 76
+    },
+    {
+      "origin": 10,
+      "destination": 0,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            9
+          ],
+          "nodes": [
+            10,
+            0
+          ],
+          "travel_time_seconds": 61.52
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            45,
+            5
+          ],
+          "nodes": [
+            10,
+            5,
+            0
+          ],
+          "travel_time_seconds": 61.54
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            51,
+            7
+          ],
+          "nodes": [
+            10,
+            6,
+            0
+          ],
+          "travel_time_seconds": 81.61
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            72,
+            47,
+            5
+          ],
+          "nodes": [
+            10,
+            11,
+            5,
+            0
+          ],
+          "travel_time_seconds": 92.75
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            72,
+            53,
+            7
+          ],
+          "nodes": [
+            10,
+            11,
+            6,
+            0
+          ],
+          "travel_time_seconds": 94.95
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            51,
+            15,
+            1
+          ],
+          "nodes": [
+            10,
+            6,
+            1,
+            0
+          ],
+          "travel_time_seconds": 98.23
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            51,
+            43,
+            5
+          ],
+          "nodes": [
+            10,
+            6,
+            5,
+            0
+          ],
+          "travel_time_seconds": 98.46
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            45,
+            42,
+            7
+          ],
+          "nodes": [
+            10,
+            5,
+            6,
+            0
+          ],
+          "travel_time_seconds": 99.29
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            45,
+            13,
+            1
+          ],
+          "nodes": [
+            10,
+            5,
+            1,
+            0
+          ],
+          "travel_time_seconds": 101.71
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            72,
+            53,
+            15,
+            1
+          ],
+          "nodes": [
+            10,
+            11,
+            6,
+            1,
+            0
+          ],
+          "travel_time_seconds": 111.57
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            9
+          ],
+          "nodes": [
+            10,
+            0
+          ],
+          "travel_time_seconds": 61.52
+        },
+        {
+          "arcs": [
+            45,
+            5
+          ],
+          "nodes": [
+            10,
+            5,
+            0
+          ],
+          "travel_time_seconds": 61.54
+        },
+        {
+          "arcs": [
+            51,
+            7
+          ],
+          "nodes": [
+            10,
+            6,
+            0
+          ],
+          "travel_time_seconds": 81.61
+        },
+        {
+          "arcs": [
+            72,
+            47,
+            5
+          ],
+          "nodes": [
+            10,
+            11,
+            5,
+            0
+          ],
+          "travel_time_seconds": 92.75
+        },
+        {
+          "arcs": [
+            72,
+            53,
+            7
+          ],
+          "nodes": [
+            10,
+            11,
+            6,
+            0
+          ],
+          "travel_time_seconds": 94.95
+        },
+        {
+          "arcs": [
+            51,
+            15,
+            1
+          ],
+          "nodes": [
+            10,
+            6,
+            1,
+            0
+          ],
+          "travel_time_seconds": 98.23
+        },
+        {
+          "arcs": [
+            51,
+            43,
+            5
+          ],
+          "nodes": [
+            10,
+            6,
+            5,
+            0
+          ],
+          "travel_time_seconds": 98.46
+        },
+        {
+          "arcs": [
+            45,
+            42,
+            7
+          ],
+          "nodes": [
+            10,
+            5,
+            6,
+            0
+          ],
+          "travel_time_seconds": 99.29
+        },
+        {
+          "arcs": [
+            45,
+            13,
+            1
+          ],
+          "nodes": [
+            10,
+            5,
+            1,
+            0
+          ],
+          "travel_time_seconds": 101.71
+        },
+        {
+          "arcs": [
+            72,
+            53,
+            15,
+            1
+          ],
+          "nodes": [
+            10,
+            11,
+            6,
+            1,
+            0
+          ],
+          "travel_time_seconds": 111.57
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 91
+    },
+    {
+      "origin": 3,
+      "destination": 10,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            19,
+            22,
+            50
+          ],
+          "nodes": [
+            3,
+            2,
+            6,
+            10
+          ],
+          "travel_time_seconds": 111.32
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            30,
+            49,
+            50
+          ],
+          "nodes": [
+            3,
+            7,
+            6,
+            10
+          ],
+          "travel_time_seconds": 116.53
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            19,
+            22,
+            52,
+            73
+          ],
+          "nodes": [
+            3,
+            2,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 124.66
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            30,
+            56,
+            79,
+            73
+          ],
+          "nodes": [
+            3,
+            7,
+            12,
+            11,
+            10
+          ],
+          "travel_time_seconds": 128.38
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            19,
+            22,
+            43,
+            44
+          ],
+          "nodes": [
+            3,
+            2,
+            6,
+            5,
+            10
+          ],
+          "travel_time_seconds": 129.0
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            19,
+            11,
+            14,
+            50
+          ],
+          "nodes": [
+            3,
+            2,
+            1,
+            6,
+            10
+          ],
+          "travel_time_seconds": 129.57
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            30,
+            49,
+            52,
+            73
+          ],
+          "nodes": [
+            3,
+            7,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 129.87
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            19,
+            24,
+            49,
+            50
+          ],
+          "nodes": [
+            3,
+            2,
+            7,
+            6,
+            10
+          ],
+          "travel_time_seconds": 132.51
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            19,
+            11,
+            12,
+            44
+          ],
+          "nodes": [
+            3,
+            2,
+            1,
+            5,
+            10
+          ],
+          "travel_time_seconds": 133.05
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            32,
+            55,
+            49,
+            50
+          ],
+          "nodes": [
+            3,
+            8,
+            7,
+            6,
+            10
+          ],
+          "travel_time_seconds": 133.56
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            19,
+            22,
+            50
+          ],
+          "nodes": [
+            3,
+            2,
+            6,
+            10
+          ],
+          "travel_time_seconds": 111.32
+        },
+        {
+          "arcs": [
+            30,
+            49,
+            50
+          ],
+          "nodes": [
+            3,
+            7,
+            6,
+            10
+          ],
+          "travel_time_seconds": 116.53
+        },
+        {
+          "arcs": [
+            19,
+            22,
+            52,
+            73
+          ],
+          "nodes": [
+            3,
+            2,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 124.66
+        },
+        {
+          "arcs": [
+            30,
+            56,
+            79,
+            73
+          ],
+          "nodes": [
+            3,
+            7,
+            12,
+            11,
+            10
+          ],
+          "travel_time_seconds": 128.38
+        },
+        {
+          "arcs": [
+            19,
+            22,
+            43,
+            44
+          ],
+          "nodes": [
+            3,
+            2,
+            6,
+            5,
+            10
+          ],
+          "travel_time_seconds": 129.0
+        },
+        {
+          "arcs": [
+            19,
+            11,
+            14,
+            50
+          ],
+          "nodes": [
+            3,
+            2,
+            1,
+            6,
+            10
+          ],
+          "travel_time_seconds": 129.57
+        },
+        {
+          "arcs": [
+            30,
+            49,
+            52,
+            73
+          ],
+          "nodes": [
+            3,
+            7,
+            6,
+            11,
+            10
+          ],
+          "travel_time_seconds": 129.87
+        },
+        {
+          "arcs": [
+            19,
+            24,
+            49,
+            50
+          ],
+          "nodes": [
+            3,
+            2,
+            7,
+            6,
+            10
+          ],
+          "travel_time_seconds": 132.51
+        },
+        {
+          "arcs": [
+            19,
+            11,
+            12,
+            44
+          ],
+          "nodes": [
+            3,
+            2,
+            1,
+            5,
+            10
+          ],
+          "travel_time_seconds": 133.05
+        },
+        {
+          "arcs": [
+            32,
+            55,
+            49,
+            50
+          ],
+          "nodes": [
+            3,
+            8,
+            7,
+            6,
+            10
+          ],
+          "travel_time_seconds": 133.56
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 315
+    }
+  ],
+  "candidate_paths_outside_reference_shortlists": [
+    {
+      "origin": 8,
+      "destination": 17,
+      "arcs": [
+        64,
+        106,
+        117
+      ],
+      "flow": 31,
+      "nodes": [
+        8,
+        14,
+        19,
+        17
+      ],
+      "edges": [
+        32,
+        53,
+        58
+      ],
+      "travel_time_seconds": 135.89,
+      "tenth_shortest_time_seconds": 120.07,
+      "strictly_longer_than_tenth": true
+    },
+    {
+      "origin": 17,
+      "destination": 8,
+      "arcs": [
+        116,
+        107,
+        65
+      ],
+      "flow": 31,
+      "nodes": [
+        17,
+        19,
+        14,
+        8
+      ],
+      "edges": [
+        58,
+        53,
+        32
+      ],
+      "travel_time_seconds": 135.89,
+      "tenth_shortest_time_seconds": 120.07,
+      "strictly_longer_than_tenth": true
+    },
+    {
+      "origin": 3,
+      "destination": 17,
+      "arcs": [
+        32,
+        64,
+        106,
+        117
+      ],
+      "flow": 20,
+      "nodes": [
+        3,
+        8,
+        14,
+        19,
+        17
+      ],
+      "edges": [
+        16,
+        32,
+        53,
+        58
+      ],
+      "travel_time_seconds": 160.27,
+      "tenth_shortest_time_seconds": 128.82,
+      "strictly_longer_than_tenth": true
+    },
+    {
+      "origin": 17,
+      "destination": 3,
+      "arcs": [
+        116,
+        107,
+        65,
+        33
+      ],
+      "flow": 20,
+      "nodes": [
+        17,
+        19,
+        14,
+        8,
+        3
+      ],
+      "edges": [
+        58,
+        53,
+        32,
+        16
+      ],
+      "travel_time_seconds": 160.27,
+      "tenth_shortest_time_seconds": 128.82,
+      "strictly_longer_than_tenth": true
+    },
+    {
+      "origin": 8,
+      "destination": 10,
+      "arcs": [
+        64,
+        106,
+        117,
+        113,
+        77
+      ],
+      "flow": 20,
+      "nodes": [
+        8,
+        14,
+        19,
+        17,
+        16,
+        10
+      ],
+      "edges": [
+        32,
+        53,
+        58,
+        56,
+        38
+      ],
+      "travel_time_seconds": 204.74,
+      "tenth_shortest_time_seconds": 139.66,
+      "strictly_longer_than_tenth": true
+    },
+    {
+      "origin": 10,
+      "destination": 8,
+      "arcs": [
+        76,
+        112,
+        116,
+        107,
+        65
+      ],
+      "flow": 20,
+      "nodes": [
+        10,
+        16,
+        17,
+        19,
+        14,
+        8
+      ],
+      "edges": [
+        38,
+        56,
+        58,
+        53,
+        32
+      ],
+      "travel_time_seconds": 204.74,
+      "tenth_shortest_time_seconds": 139.66,
+      "strictly_longer_than_tenth": true
+    },
+    {
+      "origin": 3,
+      "destination": 10,
+      "arcs": [
+        32,
+        64,
+        106,
+        117,
+        113,
+        77
+      ],
+      "flow": 18,
+      "nodes": [
+        3,
+        8,
+        14,
+        19,
+        17,
+        16,
+        10
+      ],
+      "edges": [
+        16,
+        32,
+        53,
+        58,
+        56,
+        38
+      ],
+      "travel_time_seconds": 229.12,
+      "tenth_shortest_time_seconds": 133.56,
+      "strictly_longer_than_tenth": true
+    }
+  ],
+  "comparison": {
+    "absolute_objective_reduction": 19719.586974,
+    "percentage_objective_reduction": 48.23088545973024,
+    "reference_optimal_status_scope": "Recorded optimal status is for the restricted path-based model, not unrestricted passenger paths"
+  },
+  "manifest_entry": {
+    "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+    "batch": "final300",
+    "phase": "published-budget final verification",
+    "task_id": "borndorfer2007",
+    "instance": "tiny",
+    "time_limit": 300,
+    "exec_mode": "docker",
+    "anti_hack": false,
+    "cpus": 1,
+    "memory": "2G",
+    "code_sha256": "ed575e7828fd7bcfedb005101c666b39da3fb266205b9bf7903fefe60861bfe4",
+    "frozen_code": "FROZEN_CAMPAIGN/results/final300/code/borndorfer2007/gpt-5.6-sol/code.py",
+    "results_csv": "FROZEN_CAMPAIGN/results/final300/results.csv",
+    "image": "sha256:6bd6f194a15bbcc8f4adfc621197e2849e8279b0372896cc8fff18d9dd0b72ca",
+    "evaluator_revision": "9bd047c9271d3048eff91dd0639941d0bc182d86",
+    "dataset_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+    "group": 1
+  },
+  "hashes": [
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/borndorfer2007/instance/tiny_instance.json",
+      "sha256": "ef0d55a3e5726cd01dfd24d07b4f8e1a6e49cee5a37fb324b52f563d289b70be",
+      "pinned_download_check": {
+        "download_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+        "download_etag": "ef0d55a3e5726cd01dfd24d07b4f8e1a6e49cee5a37fb324b52f563d289b70be",
+        "content_matches_etag": true,
+        "revision_matches_manifest": true
+      }
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/results/final300/raw_outputs/borndorfer2007/solution_tiny.json",
+      "sha256": "38887ead040dff005cf830a8aec2b3e5fc2a1e0b86b8a0b81ada98431128c899",
+      "pinned_download_check": null
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/borndorfer2007/gurobi_solution/tiny_solution.json",
+      "sha256": "fc360b7e98b97582f643b388120caf6a8220152c9173039408dbe4f0f9d25cdd",
+      "pinned_download_check": {
+        "download_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+        "download_etag": "fc360b7e98b97582f643b388120caf6a8220152c9173039408dbe4f0f9d25cdd",
+        "content_matches_etag": true,
+        "revision_matches_manifest": true
+      }
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/borndorfer2007/gurobi_code.py",
+      "sha256": "5a9a25dc09b93df84d57f4a11cd4645c75fc718dd19687982e3508adae75c98e",
+      "pinned_download_check": {
+        "download_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+        "download_etag": "d0a8d741d28257f6ac0d5ecd05a1418d5c3067cc",
+        "content_matches_etag": true,
+        "revision_matches_manifest": true
+      }
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/borndorfer2007/mathematical_formulation.md",
+      "sha256": "700743f88c94b089164abd6d4ccf38aecd8c986e323b483533fd74398ca3f224",
+      "pinned_download_check": {
+        "download_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+        "download_etag": "495849ed1fb4864197b5f768837840f1f5e41fc4",
+        "content_matches_etag": true,
+        "revision_matches_manifest": true
+      }
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/borndorfer2007/problem_description.txt",
+      "sha256": "77e137062efffd682b909665d6becc49a7e8938b0daf091fc2367982d2bd55ab",
+      "pinned_download_check": {
+        "download_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+        "download_etag": "96908728116042d87c83f19ecfe2433e615f18b1",
+        "content_matches_etag": true,
+        "revision_matches_manifest": true
+      }
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/borndorfer2007/feasibility_check.py",
+      "sha256": "02ea464d66cf73c5200dace1f9d7b5f748c11dec5358c788760d2abab1b437d6",
+      "pinned_download_check": {
+        "download_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+        "download_etag": "2d2eb6bf6ed66cba993e1db2371737f149ea6c69",
+        "content_matches_etag": true,
+        "revision_matches_manifest": true
+      }
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/borndorfer2007/solution_schema.json",
+      "sha256": "e7af4940510bb7d4b392cb81ee626e55bd5127fd7656b2d54243ed757f6efc76",
+      "pinned_download_check": {
+        "download_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+        "download_etag": "3ce24ca513546f9c66e0e8b9fd2fdf76651a2f18",
+        "content_matches_etag": true,
+        "revision_matches_manifest": true
+      }
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/results/final300/code/borndorfer2007/gpt-5.6-sol/code.py",
+      "sha256": "ed575e7828fd7bcfedb005101c666b39da3fb266205b9bf7903fefe60861bfe4",
+      "pinned_download_check": null
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/results/final300/manifest.json",
+      "sha256": "5c5d2fa93b389852dc0585f2cb83d56230948bb957ba31934d169f8c021447f4",
+      "pinned_download_check": null
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/results/final300/raw_outputs/borndorfer2007/feasi_result_tiny.json",
+      "sha256": "3269392edcbb7720882e77caadb88b4a9cf2fda04cf482cebd23baace4a531fd",
+      "pinned_download_check": null
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/metadata/gurobi_references.csv.gz",
+      "sha256": "afdfe2e39f03919e338ce076b0048236bda7d4dc4e5e66af048a7fb9bd6bcd37",
+      "pinned_download_check": {
+        "download_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+        "download_etag": "d7e7fa44443e03a763b53962afa455fec3dfa5fd",
+        "content_matches_etag": true,
+        "revision_matches_manifest": true
+      }
+    }
+  ],
+  "figure_data": {
+    "provenance": "Coordinates, stations and all edges from the pinned tiny input; lines and highlighted passenger path from saved final witness",
+    "coordinates_unit": "km",
+    "nodes": [
+      {
+        "id": 0,
+        "x": 0.0105,
+        "y": 0,
+        "is_od_node": true
+      },
+      {
+        "id": 1,
+        "x": 0,
+        "y": 0.2292,
+        "is_od_node": false
+      },
+      {
+        "id": 2,
+        "x": 0.0177,
+        "y": 0.5133,
+        "is_od_node": false
+      },
+      {
+        "id": 3,
+        "x": 0.0294,
+        "y": 0.719,
+        "is_od_node": true
+      },
+      {
+        "id": 4,
+        "x": 0,
+        "y": 0.9647,
+        "is_od_node": false
+      },
+      {
+        "id": 5,
+        "x": 0.2289,
+        "y": 0.0004,
+        "is_od_node": false
+      },
+      {
+        "id": 6,
+        "x": 0.2145,
+        "y": 0.2274,
+        "is_od_node": false
+      },
+      {
+        "id": 7,
+        "x": 0.2612,
+        "y": 0.5034,
+        "is_od_node": false
+      },
+      {
+        "id": 8,
+        "x": 0.229,
+        "y": 0.7567,
+        "is_od_node": true
+      },
+      {
+        "id": 9,
+        "x": 0.2732,
+        "y": 0.963,
+        "is_od_node": false
+      },
+      {
+        "id": 10,
+        "x": 0.5229,
+        "y": 0.0149,
+        "is_od_node": true
+      },
+      {
+        "id": 11,
+        "x": 0.488,
+        "y": 0.2242,
+        "is_od_node": false
+      },
+      {
+        "id": 12,
+        "x": 0.5343,
+        "y": 0.4877,
+        "is_od_node": false
+      },
+      {
+        "id": 13,
+        "x": 0.4695,
+        "y": 0.7198,
+        "is_od_node": false
+      },
+      {
+        "id": 14,
+        "x": 0.5261,
+        "y": 1.0,
+        "is_od_node": false
+      },
+      {
+        "id": 15,
+        "x": 0.773,
+        "y": 0.0172,
+        "is_od_node": false
+      },
+      {
+        "id": 16,
+        "x": 0.7527,
+        "y": 0.2855,
+        "is_od_node": false
+      },
+      {
+        "id": 17,
+        "x": 0.7409,
+        "y": 0.5039,
+        "is_od_node": true
+      },
+      {
+        "id": 18,
+        "x": 0.7747,
+        "y": 0.7589,
+        "is_od_node": false
+      },
+      {
+        "id": 19,
+        "x": 0.7771,
+        "y": 1.0,
+        "is_od_node": false
+      }
+    ],
+    "edges": [
+      {
+        "id": 0,
+        "endpoints": [
+          0,
+          1
+        ],
+        "traveling_time_seconds": 27.54,
+        "edge_capacity": 4.4,
+        "operating_cost": 100,
+        "length_km": 0.2295
+      },
+      {
+        "id": 1,
+        "endpoints": [
+          0,
+          2
+        ],
+        "traveling_time_seconds": 61.6,
+        "edge_capacity": 5.3,
+        "operating_cost": 100,
+        "length_km": 0.5133
+      },
+      {
+        "id": 2,
+        "endpoints": [
+          0,
+          5
+        ],
+        "traveling_time_seconds": 26.21,
+        "edge_capacity": 4.2,
+        "operating_cost": 100,
+        "length_km": 0.2184
+      },
+      {
+        "id": 3,
+        "endpoints": [
+          0,
+          6
+        ],
+        "traveling_time_seconds": 36.66,
+        "edge_capacity": 5.0,
+        "operating_cost": 100,
+        "length_km": 0.3055
+      },
+      {
+        "id": 4,
+        "endpoints": [
+          0,
+          10
+        ],
+        "traveling_time_seconds": 61.52,
+        "edge_capacity": 4.7,
+        "operating_cost": 100,
+        "length_km": 0.5127
+      },
+      {
+        "id": 5,
+        "endpoints": [
+          1,
+          2
+        ],
+        "traveling_time_seconds": 34.15,
+        "edge_capacity": 5.6,
+        "operating_cost": 100,
+        "length_km": 0.2846
+      },
+      {
+        "id": 6,
+        "endpoints": [
+          1,
+          5
+        ],
+        "traveling_time_seconds": 38.84,
+        "edge_capacity": 5.0,
+        "operating_cost": 100,
+        "length_km": 0.3237
+      },
+      {
+        "id": 7,
+        "endpoints": [
+          1,
+          6
+        ],
+        "traveling_time_seconds": 25.74,
+        "edge_capacity": 5.7,
+        "operating_cost": 100,
+        "length_km": 0.2145
+      },
+      {
+        "id": 8,
+        "endpoints": [
+          1,
+          7
+        ],
+        "traveling_time_seconds": 45.44,
+        "edge_capacity": 6.6,
+        "operating_cost": 100,
+        "length_km": 0.3787
+      },
+      {
+        "id": 9,
+        "endpoints": [
+          2,
+          3
+        ],
+        "traveling_time_seconds": 24.73,
+        "edge_capacity": 5.8,
+        "operating_cost": 100,
+        "length_km": 0.2061
+      },
+      {
+        "id": 10,
+        "endpoints": [
+          2,
+          4
+        ],
+        "traveling_time_seconds": 54.22,
+        "edge_capacity": 5.2,
+        "operating_cost": 100,
+        "length_km": 0.4518
+      },
+      {
+        "id": 11,
+        "endpoints": [
+          2,
+          6
+        ],
+        "traveling_time_seconds": 41.64,
+        "edge_capacity": 6.5,
+        "operating_cost": 100,
+        "length_km": 0.347
+      },
+      {
+        "id": 12,
+        "endpoints": [
+          2,
+          7
+        ],
+        "traveling_time_seconds": 29.24,
+        "edge_capacity": 6.9,
+        "operating_cost": 100,
+        "length_km": 0.2437
+      },
+      {
+        "id": 13,
+        "endpoints": [
+          2,
+          8
+        ],
+        "traveling_time_seconds": 38.68,
+        "edge_capacity": 6.5,
+        "operating_cost": 100,
+        "length_km": 0.3224
+      },
+      {
+        "id": 14,
+        "endpoints": [
+          3,
+          4
+        ],
+        "traveling_time_seconds": 29.7,
+        "edge_capacity": 4.7,
+        "operating_cost": 100,
+        "length_km": 0.2475
+      },
+      {
+        "id": 15,
+        "endpoints": [
+          3,
+          7
+        ],
+        "traveling_time_seconds": 37.99,
+        "edge_capacity": 6.7,
+        "operating_cost": 100,
+        "length_km": 0.3166
+      },
+      {
+        "id": 16,
+        "endpoints": [
+          3,
+          8
+        ],
+        "traveling_time_seconds": 24.38,
+        "edge_capacity": 6.0,
+        "operating_cost": 100,
+        "length_km": 0.2031
+      },
+      {
+        "id": 17,
+        "endpoints": [
+          3,
+          9
+        ],
+        "traveling_time_seconds": 41.39,
+        "edge_capacity": 5.4,
+        "operating_cost": 100,
+        "length_km": 0.3449
+      },
+      {
+        "id": 18,
+        "endpoints": [
+          4,
+          8
+        ],
+        "traveling_time_seconds": 37.13,
+        "edge_capacity": 5.1,
+        "operating_cost": 100,
+        "length_km": 0.3094
+      },
+      {
+        "id": 19,
+        "endpoints": [
+          4,
+          9
+        ],
+        "traveling_time_seconds": 32.79,
+        "edge_capacity": 4.5,
+        "operating_cost": 100,
+        "length_km": 0.2732
+      },
+      {
+        "id": 20,
+        "endpoints": [
+          4,
+          14
+        ],
+        "traveling_time_seconds": 63.27,
+        "edge_capacity": 4.7,
+        "operating_cost": 100,
+        "length_km": 0.5272
+      },
+      {
+        "id": 21,
+        "endpoints": [
+          5,
+          6
+        ],
+        "traveling_time_seconds": 27.3,
+        "edge_capacity": 5.5,
+        "operating_cost": 100,
+        "length_km": 0.2275
+      },
+      {
+        "id": 22,
+        "endpoints": [
+          5,
+          10
+        ],
+        "traveling_time_seconds": 35.33,
+        "edge_capacity": 4.8,
+        "operating_cost": 100,
+        "length_km": 0.2944
+      },
+      {
+        "id": 23,
+        "endpoints": [
+          5,
+          11
+        ],
+        "traveling_time_seconds": 41.08,
+        "edge_capacity": 5.7,
+        "operating_cost": 100,
+        "length_km": 0.3424
+      },
+      {
+        "id": 24,
+        "endpoints": [
+          6,
+          7
+        ],
+        "traveling_time_seconds": 33.59,
+        "edge_capacity": 7.3,
+        "operating_cost": 100,
+        "length_km": 0.2799
+      },
+      {
+        "id": 25,
+        "endpoints": [
+          6,
+          10
+        ],
+        "traveling_time_seconds": 44.95,
+        "edge_capacity": 5.8,
+        "operating_cost": 100,
+        "length_km": 0.3746
+      },
+      {
+        "id": 26,
+        "endpoints": [
+          6,
+          11
+        ],
+        "traveling_time_seconds": 32.83,
+        "edge_capacity": 6.7,
+        "operating_cost": 100,
+        "length_km": 0.2735
+      },
+      {
+        "id": 27,
+        "endpoints": [
+          7,
+          8
+        ],
+        "traveling_time_seconds": 30.64,
+        "edge_capacity": 7.4,
+        "operating_cost": 100,
+        "length_km": 0.2554
+      },
+      {
+        "id": 28,
+        "endpoints": [
+          7,
+          12
+        ],
+        "traveling_time_seconds": 32.82,
+        "edge_capacity": 8.9,
+        "operating_cost": 100,
+        "length_km": 0.2735
+      },
+      {
+        "id": 29,
+        "endpoints": [
+          7,
+          13
+        ],
+        "traveling_time_seconds": 36.03,
+        "edge_capacity": 8.0,
+        "operating_cost": 100,
+        "length_km": 0.3003
+      },
+      {
+        "id": 30,
+        "endpoints": [
+          8,
+          9
+        ],
+        "traveling_time_seconds": 25.32,
+        "edge_capacity": 5.7,
+        "operating_cost": 100,
+        "length_km": 0.211
+      },
+      {
+        "id": 31,
+        "endpoints": [
+          8,
+          13
+        ],
+        "traveling_time_seconds": 29.19,
+        "edge_capacity": 6.9,
+        "operating_cost": 100,
+        "length_km": 0.2432
+      },
+      {
+        "id": 32,
+        "endpoints": [
+          8,
+          14
+        ],
+        "traveling_time_seconds": 46.07,
+        "edge_capacity": 5.7,
+        "operating_cost": 100,
+        "length_km": 0.384
+      },
+      {
+        "id": 33,
+        "endpoints": [
+          9,
+          13
+        ],
+        "traveling_time_seconds": 37.5,
+        "edge_capacity": 6.0,
+        "operating_cost": 100,
+        "length_km": 0.3125
+      },
+      {
+        "id": 34,
+        "endpoints": [
+          9,
+          14
+        ],
+        "traveling_time_seconds": 30.67,
+        "edge_capacity": 4.8,
+        "operating_cost": 100,
+        "length_km": 0.2555
+      },
+      {
+        "id": 35,
+        "endpoints": [
+          9,
+          19
+        ],
+        "traveling_time_seconds": 60.63,
+        "edge_capacity": 4.6,
+        "operating_cost": 100,
+        "length_km": 0.5053
+      },
+      {
+        "id": 36,
+        "endpoints": [
+          10,
+          11
+        ],
+        "traveling_time_seconds": 25.46,
+        "edge_capacity": 5.6,
+        "operating_cost": 100,
+        "length_km": 0.2122
+      },
+      {
+        "id": 37,
+        "endpoints": [
+          10,
+          15
+        ],
+        "traveling_time_seconds": 30.01,
+        "edge_capacity": 4.3,
+        "operating_cost": 100,
+        "length_km": 0.2501
+      },
+      {
+        "id": 38,
+        "endpoints": [
+          10,
+          16
+        ],
+        "traveling_time_seconds": 42.6,
+        "edge_capacity": 5.3,
+        "operating_cost": 100,
+        "length_km": 0.355
+      },
+      {
+        "id": 39,
+        "endpoints": [
+          11,
+          12
+        ],
+        "traveling_time_seconds": 32.11,
+        "edge_capacity": 7.4,
+        "operating_cost": 100,
+        "length_km": 0.2676
+      },
+      {
+        "id": 40,
+        "endpoints": [
+          11,
+          15
+        ],
+        "traveling_time_seconds": 42.27,
+        "edge_capacity": 5.1,
+        "operating_cost": 100,
+        "length_km": 0.3522
+      },
+      {
+        "id": 41,
+        "endpoints": [
+          11,
+          16
+        ],
+        "traveling_time_seconds": 32.61,
+        "edge_capacity": 6.1,
+        "operating_cost": 100,
+        "length_km": 0.2717
+      },
+      {
+        "id": 42,
+        "endpoints": [
+          11,
+          17
+        ],
+        "traveling_time_seconds": 45.25,
+        "edge_capacity": 6.7,
+        "operating_cost": 100,
+        "length_km": 0.3771
+      },
+      {
+        "id": 43,
+        "endpoints": [
+          12,
+          13
+        ],
+        "traveling_time_seconds": 28.91,
+        "edge_capacity": 7.6,
+        "operating_cost": 100,
+        "length_km": 0.2409
+      },
+      {
+        "id": 44,
+        "endpoints": [
+          12,
+          15
+        ],
+        "traveling_time_seconds": 63.31,
+        "edge_capacity": 5.9,
+        "operating_cost": 100,
+        "length_km": 0.5276
+      },
+      {
+        "id": 45,
+        "endpoints": [
+          12,
+          16
+        ],
+        "traveling_time_seconds": 35.72,
+        "edge_capacity": 6.6,
+        "operating_cost": 100,
+        "length_km": 0.2977
+      },
+      {
+        "id": 46,
+        "endpoints": [
+          12,
+          17
+        ],
+        "traveling_time_seconds": 24.87,
+        "edge_capacity": 6.8,
+        "operating_cost": 100,
+        "length_km": 0.2072
+      },
+      {
+        "id": 47,
+        "endpoints": [
+          12,
+          18
+        ],
+        "traveling_time_seconds": 43.49,
+        "edge_capacity": 6.4,
+        "operating_cost": 100,
+        "length_km": 0.3624
+      },
+      {
+        "id": 48,
+        "endpoints": [
+          13,
+          14
+        ],
+        "traveling_time_seconds": 34.31,
+        "edge_capacity": 5.7,
+        "operating_cost": 100,
+        "length_km": 0.2859
+      },
+      {
+        "id": 49,
+        "endpoints": [
+          13,
+          17
+        ],
+        "traveling_time_seconds": 41.62,
+        "edge_capacity": 6.8,
+        "operating_cost": 100,
+        "length_km": 0.3468
+      },
+      {
+        "id": 50,
+        "endpoints": [
+          13,
+          18
+        ],
+        "traveling_time_seconds": 36.93,
+        "edge_capacity": 6.1,
+        "operating_cost": 100,
+        "length_km": 0.3077
+      },
+      {
+        "id": 51,
+        "endpoints": [
+          13,
+          19
+        ],
+        "traveling_time_seconds": 49.94,
+        "edge_capacity": 5.2,
+        "operating_cost": 100,
+        "length_km": 0.4162
+      },
+      {
+        "id": 52,
+        "endpoints": [
+          14,
+          18
+        ],
+        "traveling_time_seconds": 41.56,
+        "edge_capacity": 5.0,
+        "operating_cost": 100,
+        "length_km": 0.3463
+      },
+      {
+        "id": 53,
+        "endpoints": [
+          14,
+          19
+        ],
+        "traveling_time_seconds": 30.13,
+        "edge_capacity": 4.1,
+        "operating_cost": 100,
+        "length_km": 0.2511
+      },
+      {
+        "id": 54,
+        "endpoints": [
+          15,
+          16
+        ],
+        "traveling_time_seconds": 32.28,
+        "edge_capacity": 4.6,
+        "operating_cost": 100,
+        "length_km": 0.269
+      },
+      {
+        "id": 55,
+        "endpoints": [
+          15,
+          17
+        ],
+        "traveling_time_seconds": 58.53,
+        "edge_capacity": 5.2,
+        "operating_cost": 100,
+        "length_km": 0.4877
+      },
+      {
+        "id": 56,
+        "endpoints": [
+          16,
+          17
+        ],
+        "traveling_time_seconds": 26.25,
+        "edge_capacity": 5.8,
+        "operating_cost": 100,
+        "length_km": 0.2187
+      },
+      {
+        "id": 57,
+        "endpoints": [
+          17,
+          18
+        ],
+        "traveling_time_seconds": 30.87,
+        "edge_capacity": 5.6,
+        "operating_cost": 100,
+        "length_km": 0.2572
+      },
+      {
+        "id": 58,
+        "endpoints": [
+          17,
+          19
+        ],
+        "traveling_time_seconds": 59.69,
+        "edge_capacity": 5.1,
+        "operating_cost": 100,
+        "length_km": 0.4974
+      },
+      {
+        "id": 59,
+        "endpoints": [
+          18,
+          19
+        ],
+        "traveling_time_seconds": 28.93,
+        "edge_capacity": 4.3,
+        "operating_cost": 100,
+        "length_km": 0.2411
+      }
+    ],
+    "candidate_active_lines": [
+      {
+        "line_index": 0,
+        "mode": "bus",
+        "nodes": [
+          0,
+          10,
+          16,
+          17,
+          19
+        ],
+        "edges": [
+          4,
+          38,
+          56,
+          58
+        ],
+        "frequency": 1.2375,
+        "fixed_cost": 10000,
+        "operating_cost": 495.0,
+        "arc_capacity_each_direction": 99.0
+      },
+      {
+        "line_index": 214,
+        "mode": "bus",
+        "nodes": [
+          4,
+          3,
+          8,
+          14,
+          19
+        ],
+        "edges": [
+          14,
+          16,
+          32,
+          53
+        ],
+        "frequency": 1.5624999999999964,
+        "fixed_cost": 10000,
+        "operating_cost": 624.9999999999985,
+        "arc_capacity_each_direction": 124.99999999999972
+      }
+    ],
+    "reference_active_lines": [
+      {
+        "line_index": 24,
+        "mode": "bus",
+        "nodes": [
+          0,
+          6,
+          10,
+          15
+        ],
+        "edges": [
+          3,
+          25,
+          37
+        ],
+        "frequency": 0.7625,
+        "fixed_cost": 10000,
+        "operating_cost": 228.75,
+        "arc_capacity_each_direction": 61.0
+      },
+      {
+        "line_index": 128,
+        "mode": "bus",
+        "nodes": [
+          0,
+          6,
+          2,
+          3,
+          4
+        ],
+        "edges": [
+          3,
+          11,
+          9,
+          14
+        ],
+        "frequency": 0.475,
+        "fixed_cost": 10000,
+        "operating_cost": 190.0,
+        "arc_capacity_each_direction": 38.0
+      },
+      {
+        "line_index": 150,
+        "mode": "bus",
+        "nodes": [
+          0,
+          2,
+          8,
+          3,
+          4
+        ],
+        "edges": [
+          1,
+          13,
+          16,
+          14
+        ],
+        "frequency": 0.4125,
+        "fixed_cost": 10000,
+        "operating_cost": 165.0,
+        "arc_capacity_each_direction": 33.0
+      },
+      {
+        "line_index": 232,
+        "mode": "bus",
+        "nodes": [
+          4,
+          8,
+          13,
+          17,
+          15
+        ],
+        "edges": [
+          18,
+          31,
+          49,
+          55
+        ],
+        "frequency": 0.7625,
+        "fixed_cost": 10000,
+        "operating_cost": 305.0,
+        "arc_capacity_each_direction": 61.0
+      }
+    ],
+    "selected_excluded_path": {
+      "origin": 8,
+      "destination": 17,
+      "arcs": [
+        64,
+        106,
+        117
+      ],
+      "flow": 31,
+      "nodes": [
+        8,
+        14,
+        19,
+        17
+      ],
+      "edges": [
+        32,
+        53,
+        58
+      ],
+      "travel_time_seconds": 135.89,
+      "tenth_shortest_time_seconds": 120.07,
+      "strictly_longer_than_tenth": true
+    },
+    "reference_saved_path_same_od": {
+      "origin": 8,
+      "destination": 17,
+      "arcs": [
+        62,
+        98
+      ],
+      "flow": 31.0,
+      "nodes": [
+        8,
+        13,
+        17
+      ],
+      "edges": [
+        31,
+        49
+      ],
+      "travel_time_seconds": 70.81
+    },
+    "selected_od_reference_shortlist": {
+      "origin": 8,
+      "destination": 17,
+      "reference_reconstruction": [
+        {
+          "rank": 1,
+          "arcs": [
+            62,
+            98
+          ],
+          "nodes": [
+            8,
+            13,
+            17
+          ],
+          "travel_time_seconds": 70.81
+        },
+        {
+          "rank": 2,
+          "arcs": [
+            62,
+            87,
+            92
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 82.97
+        },
+        {
+          "rank": 3,
+          "arcs": [
+            55,
+            56,
+            92
+          ],
+          "nodes": [
+            8,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 88.33
+        },
+        {
+          "rank": 4,
+          "arcs": [
+            62,
+            100,
+            115
+          ],
+          "nodes": [
+            8,
+            13,
+            18,
+            17
+          ],
+          "travel_time_seconds": 96.99
+        },
+        {
+          "rank": 5,
+          "arcs": [
+            60,
+            66,
+            98
+          ],
+          "nodes": [
+            8,
+            9,
+            13,
+            17
+          ],
+          "travel_time_seconds": 104.44
+        },
+        {
+          "rank": 6,
+          "arcs": [
+            55,
+            58,
+            98
+          ],
+          "nodes": [
+            8,
+            7,
+            13,
+            17
+          ],
+          "travel_time_seconds": 108.29
+        },
+        {
+          "rank": 7,
+          "arcs": [
+            60,
+            66,
+            87,
+            92
+          ],
+          "nodes": [
+            8,
+            9,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 116.6
+        },
+        {
+          "rank": 8,
+          "arcs": [
+            64,
+            104,
+            115
+          ],
+          "nodes": [
+            8,
+            14,
+            18,
+            17
+          ],
+          "travel_time_seconds": 118.5
+        },
+        {
+          "rank": 9,
+          "arcs": [
+            33,
+            30,
+            56,
+            92
+          ],
+          "nodes": [
+            8,
+            3,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 120.06
+        },
+        {
+          "rank": 10,
+          "arcs": [
+            62,
+            87,
+            90,
+            112
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            16,
+            17
+          ],
+          "travel_time_seconds": 120.07
+        }
+      ],
+      "independent_first_ten": [
+        {
+          "arcs": [
+            62,
+            98
+          ],
+          "nodes": [
+            8,
+            13,
+            17
+          ],
+          "travel_time_seconds": 70.81
+        },
+        {
+          "arcs": [
+            62,
+            87,
+            92
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 82.97
+        },
+        {
+          "arcs": [
+            55,
+            56,
+            92
+          ],
+          "nodes": [
+            8,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 88.33
+        },
+        {
+          "arcs": [
+            62,
+            100,
+            115
+          ],
+          "nodes": [
+            8,
+            13,
+            18,
+            17
+          ],
+          "travel_time_seconds": 96.99
+        },
+        {
+          "arcs": [
+            60,
+            66,
+            98
+          ],
+          "nodes": [
+            8,
+            9,
+            13,
+            17
+          ],
+          "travel_time_seconds": 104.44
+        },
+        {
+          "arcs": [
+            55,
+            58,
+            98
+          ],
+          "nodes": [
+            8,
+            7,
+            13,
+            17
+          ],
+          "travel_time_seconds": 108.29
+        },
+        {
+          "arcs": [
+            60,
+            66,
+            87,
+            92
+          ],
+          "nodes": [
+            8,
+            9,
+            13,
+            12,
+            17
+          ],
+          "travel_time_seconds": 116.6
+        },
+        {
+          "arcs": [
+            64,
+            104,
+            115
+          ],
+          "nodes": [
+            8,
+            14,
+            18,
+            17
+          ],
+          "travel_time_seconds": 118.5
+        },
+        {
+          "arcs": [
+            33,
+            30,
+            56,
+            92
+          ],
+          "nodes": [
+            8,
+            3,
+            7,
+            12,
+            17
+          ],
+          "travel_time_seconds": 120.06
+        },
+        {
+          "arcs": [
+            62,
+            87,
+            90,
+            112
+          ],
+          "nodes": [
+            8,
+            13,
+            12,
+            16,
+            17
+          ],
+          "travel_time_seconds": 120.07
+        }
+      ],
+      "sets_equal": true,
+      "independent_partial_paths_popped": 182
+    },
+    "selected_path_arc_loads": [
+      {
+        "id": 64,
+        "from": 8,
+        "to": 14,
+        "edge_id": 32,
+        "travel_time": 46.07,
+        "flow": 89.0,
+        "capacity": 124.99999999999972,
+        "slack": 35.99999999999971
+      },
+      {
+        "id": 106,
+        "from": 14,
+        "to": 19,
+        "edge_id": 53,
+        "travel_time": 30.13,
+        "flow": 89.0,
+        "capacity": 124.99999999999972,
+        "slack": 35.99999999999971
+      },
+      {
+        "id": 117,
+        "from": 19,
+        "to": 17,
+        "edge_id": 58,
+        "travel_time": 59.69,
+        "flow": 89.0,
+        "capacity": 99.0,
+        "slack": 10.0
+      }
+    ],
+    "drawing_notes": [
+      "Use actual x/y coordinates, possibly invert y consistently for the display.",
+      "Draw candidate line 214 from 4 through 3,8,14 to 19 and line 0 from 0 through 10,16,17 to 19.",
+      "Passenger route 8,14,19,17 uses line 214 then line 0 in reverse, meeting at station 19.",
+      "The released model permits passenger transfers through arc capacities and contains no transfer penalty.",
+      "The reference saved passenger route 8,13,17 is faster. The candidate accepts longer travel and operates two lines instead of four.",
+      "Do not label a longer excluded route a shortcut or attribute the entire gain solely to this one route."
+    ]
+  },
+  "limitations": [
+    "No optimization solver, official evaluator or official checker was executed.",
+    "A separate Codex review is an internal artifact audit, not an independent outside replication.",
+    "The arithmetic establishes feasibility and the saved objective, not global optimality of the candidate.",
+    "Reconstruction establishes the current pinned reference source shortlist, not a retained execution trace of its path pool.",
+    "Exclusion identifies a concrete model restriction that rules out the saved candidate witness; it does not quantify the isolated causal effect of relaxing only that restriction.",
+    "No large instance, campaign rerun or live Trackinizer access was performed.",
+    "The benchmark formulation file prints an unweighted objective, while problem description, global lambda, reference and checker consistently implement the weighted objective; this audit uses the released weighted contract.",
+    "line_index is implementation-specific; physical mode, node and edge paths are checked independently of that label."
+  ]
+}

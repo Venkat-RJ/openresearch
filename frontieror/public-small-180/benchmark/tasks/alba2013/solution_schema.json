@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total routing distance traveled across the pickup tour and the delivery tour combined.",
+  "pickup_tour": "<list[int], length num_pickup_vertices> Ordered sequence of pickup-region vertices visited by the vehicle, starting and ending at the pickup depot.",
+  "delivery_tour": "<list[int], length num_delivery_vertices> Ordered sequence of delivery-region vertices visited by the vehicle, starting and ending at the delivery depot."
+}

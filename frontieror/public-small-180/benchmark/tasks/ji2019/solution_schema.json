@@ -1,0 +1,13 @@
+{
+  "objective_value": "<float> Total cost combining lock-mode ship delays, transshipment-mode ship delays, and transshipment penalties.",
+  "modes": "<dict, key: '{ship}'> Mode chosen for each ship, with 1 indicating transshipment at a berth and 0 indicating passage through the lock.",
+  "completion_times": "<dict, key: '{ship}'> Departure time of each ship.",
+  "lockage_assignments": "<dict, key: '{ship}'> Index of the lockage that transfers each lock-mode ship.",
+  "lockage_completion_times": "<dict, key: '{lockage}'> Completion time of each used lockage.",
+  "berth_assignments": {
+    "{ship}": {
+      "berth": "<int> Berth at which the transshipment-mode ship is served.",
+      "order": "<int> Service order position of the ship at its assigned berth."
+    }
+  }
+}

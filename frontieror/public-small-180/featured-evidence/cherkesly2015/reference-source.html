@@ -1,0 +1,460 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Released delivery reference source | FrontierOR notebook</title><style>body{max-width:1100px;margin:36px auto;padding:0 20px;font:16px/1.6 system-ui;background:#fafaf7;color:#202723}a{color:#285d47}pre{overflow-x:auto;border:1px solid #d9ded5;padding:18px;font:13px/1.65 ui-monospace,monospace}.source-line{display:block;scroll-margin-top:24px}.source-line:target{background:#e4ece3}.source-line a{display:inline-block;width:4ch;color:#6b736c;text-align:right;text-decoration:none}code{overflow-wrap:anywhere}</style></head><body><a href="../../../../notebook.html#reference-fleet-constraints">Back to the notebook</a><h1>Released delivery reference source</h1><p>Unmodified benchmark reference, with line anchors added for reading. <a href="reference.py">Download the original Python file</a>.</p><p>SHA-256: <code>94051e8c26224f152721c1fd185eb5bc2146323b1c991bd2664631cb2a3171a1</code></p><pre><span class="source-line" id="L1"><a href="#L1">1</a> &quot;&quot;&quot;</span>
+<span class="source-line" id="L2"><a href="#L2">2</a> Gurobi implementation of the PDPTWL (Pickup and Delivery Problem with Time Windows</span>
+<span class="source-line" id="L3"><a href="#L3">3</a> and LIFO Loading) compact three-index formulation.</span>
+<span class="source-line" id="L4"><a href="#L4">4</a> </span>
+<span class="source-line" id="L5"><a href="#L5">5</a> Based on: Cherkesly, Desaulniers, and Laporte (2015), Transportation Science.</span>
+<span class="source-line" id="L6"><a href="#L6">6</a> Formulation: Constraints (1)-(13) from the paper.</span>
+<span class="source-line" id="L7"><a href="#L7">7</a> </span>
+<span class="source-line" id="L8"><a href="#L8">8</a> Assumptions (inferred):</span>
+<span class="source-line" id="L9"><a href="#L9">9</a>   - Travel costs c_{ij} = Euclidean distance (NOT SPECIFIED IN PAPER whether rounded).</span>
+<span class="source-line" id="L10"><a href="#L10">10</a>     We use the costs provided in the instance JSON directly.</span>
+<span class="source-line" id="L11"><a href="#L11">11</a>   - Travel times t_{ij} provided in the instance JSON directly.</span>
+<span class="source-line" id="L12"><a href="#L12">12</a>   - Vehicle fixed cost is included in c_{0,j} arcs (already in instance data).</span>
+<span class="source-line" id="L13"><a href="#L13">13</a>   - Big-M linearization used for constraints (8) and (10).</span>
+<span class="source-line" id="L14"><a href="#L14">14</a> </span>
+<span class="source-line" id="L15"><a href="#L15">15</a> Full LIFO is enforced by exact lazy separation of every incumbent route that</span>
+<span class="source-line" id="L16"><a href="#L16">16</a> contains a pickup/pickup/delivery pattern inconsistent with stack order.</span>
+<span class="source-line" id="L17"><a href="#L17">17</a> &quot;&quot;&quot;</span>
+<span class="source-line" id="L18"><a href="#L18">18</a> </span>
+<span class="source-line" id="L19"><a href="#L19">19</a> import argparse</span>
+<span class="source-line" id="L20"><a href="#L20">20</a> import json</span>
+<span class="source-line" id="L21"><a href="#L21">21</a> import math</span>
+<span class="source-line" id="L22"><a href="#L22">22</a> import time</span>
+<span class="source-line" id="L23"><a href="#L23">23</a> from itertools import combinations</span>
+<span class="source-line" id="L24"><a href="#L24">24</a> </span>
+<span class="source-line" id="L25"><a href="#L25">25</a> import gurobipy as gp</span>
+<span class="source-line" id="L26"><a href="#L26">26</a> from gurobipy import GRB</span>
+<span class="source-line" id="L27"><a href="#L27">27</a> import os as _os, sys as _sys</span>
+<span class="source-line" id="L28"><a href="#L28">28</a> # Walk up from this file&#x27;s directory to find repo root (containing scripts/).</span>
+<span class="source-line" id="L29"><a href="#L29">29</a> _GUROBI_CODE_START_TIME = time.time()</span>
+<span class="source-line" id="L30"><a href="#L30">30</a> _repo = _os.path.dirname(_os.path.abspath(__file__))</span>
+<span class="source-line" id="L31"><a href="#L31">31</a> while _repo != _os.path.dirname(_repo) and not _os.path.isdir(_os.path.join(_repo, &#x27;scripts&#x27;, &#x27;utils&#x27;)):</span>
+<span class="source-line" id="L32"><a href="#L32">32</a>     _repo = _os.path.dirname(_repo)</span>
+<span class="source-line" id="L33"><a href="#L33">33</a> if _os.path.isdir(_os.path.join(_repo, &#x27;scripts&#x27;, &#x27;utils&#x27;)):</span>
+<span class="source-line" id="L34"><a href="#L34">34</a>     _sys.path.insert(0, _repo)</span>
+<span class="source-line" id="L35"><a href="#L35">35</a> try:</span>
+<span class="source-line" id="L36"><a href="#L36">36</a>     from scripts.utils.gurobi_log_helper import install_gurobi_logger</span>
+<span class="source-line" id="L37"><a href="#L37">37</a> except ImportError:</span>
+<span class="source-line" id="L38"><a href="#L38">38</a>     def install_gurobi_logger(log_path):  # no-op fallback when scripts/ unavailable</span>
+<span class="source-line" id="L39"><a href="#L39">39</a>         pass</span>
+<span class="source-line" id="L40"><a href="#L40">40</a> </span>
+<span class="source-line" id="L41"><a href="#L41">41</a> </span>
+<span class="source-line" id="L42"><a href="#L42">42</a> def load_instance(path):</span>
+<span class="source-line" id="L43"><a href="#L43">43</a>     &quot;&quot;&quot;Load problem instance from JSON file.&quot;&quot;&quot;</span>
+<span class="source-line" id="L44"><a href="#L44">44</a>     with open(path, &quot;r&quot;) as f:</span>
+<span class="source-line" id="L45"><a href="#L45">45</a>         data = json.load(f)</span>
+<span class="source-line" id="L46"><a href="#L46">46</a>     return data</span>
+<span class="source-line" id="L47"><a href="#L47">47</a> </span>
+<span class="source-line" id="L48"><a href="#L48">48</a> </span>
+<span class="source-line" id="L49"><a href="#L49">49</a> def lifo_lazy_callback(model, where):</span>
+<span class="source-line" id="L50"><a href="#L50">50</a>     &quot;&quot;&quot;Separate a minimal infeasible path for every observed LIFO violation.&quot;&quot;&quot;</span>
+<span class="source-line" id="L51"><a href="#L51">51</a>     if where != GRB.Callback.MIPSOL:</span>
+<span class="source-line" id="L52"><a href="#L52">52</a>         return</span>
+<span class="source-line" id="L53"><a href="#L53">53</a>     values = model.cbGetSolution(model._lifo_x)</span>
+<span class="source-line" id="L54"><a href="#L54">54</a>     for vehicle in model._lifo_vehicles:</span>
+<span class="source-line" id="L55"><a href="#L55">55</a>         successor = {</span>
+<span class="source-line" id="L56"><a href="#L56">56</a>             i: j</span>
+<span class="source-line" id="L57"><a href="#L57">57</a>             for (i, j) in model._lifo_arcs</span>
+<span class="source-line" id="L58"><a href="#L58">58</a>             if values[vehicle, i, j] &gt; 0.5</span>
+<span class="source-line" id="L59"><a href="#L59">59</a>         }</span>
+<span class="source-line" id="L60"><a href="#L60">60</a>         sequence = [model._lifo_origin]</span>
+<span class="source-line" id="L61"><a href="#L61">61</a>         while sequence[-1] in successor and len(sequence) &lt;= model._lifo_node_count:</span>
+<span class="source-line" id="L62"><a href="#L62">62</a>             sequence.append(successor[sequence[-1]])</span>
+<span class="source-line" id="L63"><a href="#L63">63</a>             if sequence[-1] == model._lifo_destination:</span>
+<span class="source-line" id="L64"><a href="#L64">64</a>                 break</span>
+<span class="source-line" id="L65"><a href="#L65">65</a>         stack = []</span>
+<span class="source-line" id="L66"><a href="#L66">66</a>         pickup_position = {}</span>
+<span class="source-line" id="L67"><a href="#L67">67</a>         for position, node in enumerate(sequence):</span>
+<span class="source-line" id="L68"><a href="#L68">68</a>             if 1 &lt;= node &lt;= model._lifo_request_count:</span>
+<span class="source-line" id="L69"><a href="#L69">69</a>                 stack.append(node)</span>
+<span class="source-line" id="L70"><a href="#L70">70</a>                 pickup_position[node] = position</span>
+<span class="source-line" id="L71"><a href="#L71">71</a>                 continue</span>
+<span class="source-line" id="L72"><a href="#L72">72</a>             if not (model._lifo_request_count &lt; node &lt;= 2 * model._lifo_request_count):</span>
+<span class="source-line" id="L73"><a href="#L73">73</a>                 continue</span>
+<span class="source-line" id="L74"><a href="#L74">74</a>             request = node - model._lifo_request_count</span>
+<span class="source-line" id="L75"><a href="#L75">75</a>             if request not in stack:</span>
+<span class="source-line" id="L76"><a href="#L76">76</a>                 continue</span>
+<span class="source-line" id="L77"><a href="#L77">77</a>             if stack[-1] != request:</span>
+<span class="source-line" id="L78"><a href="#L78">78</a>                 first = pickup_position[request]</span>
+<span class="source-line" id="L79"><a href="#L79">79</a>                 path = list(zip(sequence[first:position], sequence[first + 1:position + 1]))</span>
+<span class="source-line" id="L80"><a href="#L80">80</a>                 model.cbLazy(</span>
+<span class="source-line" id="L81"><a href="#L81">81</a>                     gp.quicksum(model._lifo_x[vehicle, i, j] for i, j in path)</span>
+<span class="source-line" id="L82"><a href="#L82">82</a>                     &lt;= len(path) - 1</span>
+<span class="source-line" id="L83"><a href="#L83">83</a>                 )</span>
+<span class="source-line" id="L84"><a href="#L84">84</a>             stack.remove(request)</span>
+<span class="source-line" id="L85"><a href="#L85">85</a> </span>
+<span class="source-line" id="L86"><a href="#L86">86</a> </span>
+<span class="source-line" id="L87"><a href="#L87">87</a> def build_model(data, time_limit):</span>
+<span class="source-line" id="L88"><a href="#L88">88</a>     &quot;&quot;&quot;Build the PDPTWL compact formulation Gurobi model.&quot;&quot;&quot;</span>
+<span class="source-line" id="L89"><a href="#L89">89</a> </span>
+<span class="source-line" id="L90"><a href="#L90">90</a>     n = data[&quot;n_requests&quot;]</span>
+<span class="source-line" id="L91"><a href="#L91">91</a>     n_nodes = data[&quot;n_nodes&quot;]  # 2n + 2</span>
+<span class="source-line" id="L92"><a href="#L92">92</a>     Q = data[&quot;vehicle_capacity&quot;]</span>
+<span class="source-line" id="L93"><a href="#L93">93</a>     planning_horizon = data[&quot;planning_horizon&quot;]</span>
+<span class="source-line" id="L94"><a href="#L94">94</a> </span>
+<span class="source-line" id="L95"><a href="#L95">95</a>     # Build node data</span>
+<span class="source-line" id="L96"><a href="#L96">96</a>     nodes = {}</span>
+<span class="source-line" id="L97"><a href="#L97">97</a>     for node_data in data[&quot;nodes&quot;]:</span>
+<span class="source-line" id="L98"><a href="#L98">98</a>         nid = node_data[&quot;node_id&quot;]</span>
+<span class="source-line" id="L99"><a href="#L99">99</a>         nodes[nid] = node_data</span>
+<span class="source-line" id="L100"><a href="#L100">100</a> </span>
+<span class="source-line" id="L101"><a href="#L101">101</a>     P = list(range(1, n + 1))           # Pickup nodes</span>
+<span class="source-line" id="L102"><a href="#L102">102</a>     D = list(range(n + 1, 2 * n + 1))   # Delivery nodes</span>
+<span class="source-line" id="L103"><a href="#L103">103</a>     depot_o = 0</span>
+<span class="source-line" id="L104"><a href="#L104">104</a>     depot_d = 2 * n + 1</span>
+<span class="source-line" id="L105"><a href="#L105">105</a>     N = list(range(n_nodes))             # All nodes</span>
+<span class="source-line" id="L106"><a href="#L106">106</a> </span>
+<span class="source-line" id="L107"><a href="#L107">107</a>     # Build arc set from instance data</span>
+<span class="source-line" id="L108"><a href="#L108">108</a>     arc_set = set()</span>
+<span class="source-line" id="L109"><a href="#L109">109</a>     arc_cost = {}</span>
+<span class="source-line" id="L110"><a href="#L110">110</a>     arc_time = {}</span>
+<span class="source-line" id="L111"><a href="#L111">111</a>     for arc in data[&quot;arcs&quot;]:</span>
+<span class="source-line" id="L112"><a href="#L112">112</a>         i, j = arc[&quot;from&quot;], arc[&quot;to&quot;]</span>
+<span class="source-line" id="L113"><a href="#L113">113</a>         arc_set.add((i, j))</span>
+<span class="source-line" id="L114"><a href="#L114">114</a>         arc_cost[(i, j)] = arc[&quot;cost&quot;]</span>
+<span class="source-line" id="L115"><a href="#L115">115</a>         arc_time[(i, j)] = arc[&quot;travel_time&quot;]</span>
+<span class="source-line" id="L116"><a href="#L116">116</a> </span>
+<span class="source-line" id="L117"><a href="#L117">117</a>     A = list(arc_set)</span>
+<span class="source-line" id="L118"><a href="#L118">118</a> </span>
+<span class="source-line" id="L119"><a href="#L119">119</a>     # Determine number of vehicles K (upper bound: n vehicles)</span>
+<span class="source-line" id="L120"><a href="#L120">120</a>     # The paper says K is unrestricted; we use n as an upper bound</span>
+<span class="source-line" id="L121"><a href="#L121">121</a>     K_size = n</span>
+<span class="source-line" id="L122"><a href="#L122">122</a>     K = list(range(K_size))</span>
+<span class="source-line" id="L123"><a href="#L123">123</a> </span>
+<span class="source-line" id="L124"><a href="#L124">124</a>     # Big-M values for linearization</span>
+<span class="source-line" id="L125"><a href="#L125">125</a>     M_time = planning_horizon[1] + max(</span>
+<span class="source-line" id="L126"><a href="#L126">126</a>         node[&quot;service_time&quot;] for node in data[&quot;nodes&quot;]</span>
+<span class="source-line" id="L127"><a href="#L127">127</a>     ) + max(arc[&quot;travel_time&quot;] for arc in data[&quot;arcs&quot;])</span>
+<span class="source-line" id="L128"><a href="#L128">128</a>     M_load = Q</span>
+<span class="source-line" id="L129"><a href="#L129">129</a> </span>
+<span class="source-line" id="L130"><a href="#L130">130</a>     # --- Create model ---</span>
+<span class="source-line" id="L131"><a href="#L131">131</a>     model = gp.Model(&quot;PDPTWL&quot;)</span>
+<span class="source-line" id="L132"><a href="#L132">132</a>     model.setParam(&quot;Threads&quot;, 1)</span>
+<span class="source-line" id="L133"><a href="#L133">133</a>     model.setParam(&quot;TimeLimit&quot;, time_limit)</span>
+<span class="source-line" id="L134"><a href="#L134">134</a>     model.setParam(&quot;OutputFlag&quot;, 1)</span>
+<span class="source-line" id="L135"><a href="#L135">135</a>     model.setParam(&quot;LazyConstraints&quot;, 1)</span>
+<span class="source-line" id="L136"><a href="#L136">136</a> </span>
+<span class="source-line" id="L137"><a href="#L137">137</a>     # --- Decision variables ---</span>
+<span class="source-line" id="L138"><a href="#L138">138</a>     # x[k,i,j] binary: vehicle k uses arc (i,j)</span>
+<span class="source-line" id="L139"><a href="#L139">139</a>     x = {}</span>
+<span class="source-line" id="L140"><a href="#L140">140</a>     for k in K:</span>
+<span class="source-line" id="L141"><a href="#L141">141</a>         for (i, j) in A:</span>
+<span class="source-line" id="L142"><a href="#L142">142</a>             x[k, i, j] = model.addVar(vtype=GRB.BINARY, name=f&quot;x_{k}_{i}_{j}&quot;)</span>
+<span class="source-line" id="L143"><a href="#L143">143</a> </span>
+<span class="source-line" id="L144"><a href="#L144">144</a>     # T[k,i] continuous: service start time at node i for vehicle k</span>
+<span class="source-line" id="L145"><a href="#L145">145</a>     T = {}</span>
+<span class="source-line" id="L146"><a href="#L146">146</a>     for k in K:</span>
+<span class="source-line" id="L147"><a href="#L147">147</a>         for i in N:</span>
+<span class="source-line" id="L148"><a href="#L148">148</a>             lb = nodes[i][&quot;tw_early&quot;]</span>
+<span class="source-line" id="L149"><a href="#L149">149</a>             ub = nodes[i][&quot;tw_late&quot;]</span>
+<span class="source-line" id="L150"><a href="#L150">150</a>             T[k, i] = model.addVar(lb=lb, ub=ub, vtype=GRB.CONTINUOUS,</span>
+<span class="source-line" id="L151"><a href="#L151">151</a>                                    name=f&quot;T_{k}_{i}&quot;)</span>
+<span class="source-line" id="L152"><a href="#L152">152</a> </span>
+<span class="source-line" id="L153"><a href="#L153">153</a>     # Q_var[k,i] continuous: load of vehicle k upon leaving node i</span>
+<span class="source-line" id="L154"><a href="#L154">154</a>     Q_var = {}</span>
+<span class="source-line" id="L155"><a href="#L155">155</a>     for k in K:</span>
+<span class="source-line" id="L156"><a href="#L156">156</a>         for i in N:</span>
+<span class="source-line" id="L157"><a href="#L157">157</a>             q_i = nodes[i][&quot;load&quot;]</span>
+<span class="source-line" id="L158"><a href="#L158">158</a>             lb = max(0, q_i)</span>
+<span class="source-line" id="L159"><a href="#L159">159</a>             ub = min(Q, Q + q_i)</span>
+<span class="source-line" id="L160"><a href="#L160">160</a>             Q_var[k, i] = model.addVar(lb=lb, ub=ub, vtype=GRB.CONTINUOUS,</span>
+<span class="source-line" id="L161"><a href="#L161">161</a>                                        name=f&quot;Q_{k}_{i}&quot;)</span>
+<span class="source-line" id="L162"><a href="#L162">162</a> </span>
+<span class="source-line" id="L163"><a href="#L163">163</a>     model.update()</span>
+<span class="source-line" id="L164"><a href="#L164">164</a> </span>
+<span class="source-line" id="L165"><a href="#L165">165</a>     # --- Objective (1): minimize total cost ---</span>
+<span class="source-line" id="L166"><a href="#L166">166</a>     model.setObjective(</span>
+<span class="source-line" id="L167"><a href="#L167">167</a>         gp.quicksum(arc_cost[(i, j)] * x[k, i, j]</span>
+<span class="source-line" id="L168"><a href="#L168">168</a>                     for k in K for (i, j) in A),</span>
+<span class="source-line" id="L169"><a href="#L169">169</a>         GRB.MINIMIZE</span>
+<span class="source-line" id="L170"><a href="#L170">170</a>     )</span>
+<span class="source-line" id="L171"><a href="#L171">171</a> </span>
+<span class="source-line" id="L172"><a href="#L172">172</a>     # --- Constraints ---</span>
+<span class="source-line" id="L173"><a href="#L173">173</a> </span>
+<span class="source-line" id="L174"><a href="#L174">174</a>     # (2) Each pickup visited exactly once</span>
+<span class="source-line" id="L175"><a href="#L175">175</a>     for i in P:</span>
+<span class="source-line" id="L176"><a href="#L176">176</a>         outgoing = [(i, j) for (ii, j) in A if ii == i]</span>
+<span class="source-line" id="L177"><a href="#L177">177</a>         model.addConstr(</span>
+<span class="source-line" id="L178"><a href="#L178">178</a>             gp.quicksum(x[k, i, j] for k in K for (_, j) in outgoing) == 1,</span>
+<span class="source-line" id="L179"><a href="#L179">179</a>             name=f&quot;visit_{i}&quot;</span>
+<span class="source-line" id="L180"><a href="#L180">180</a>         )</span>
+<span class="source-line" id="L181"><a href="#L181">181</a> </span>
+<span class="source-line" id="L182"><a href="#L182">182</a>     # (3) Pairing: if vehicle k visits pickup i, it must visit delivery n+i</span>
+<span class="source-line" id="L183"><a href="#L183">183</a>     for i in P:</span>
+<span class="source-line" id="L184"><a href="#L184">184</a>         ni = n + i  # delivery node for request i</span>
+<span class="source-line" id="L185"><a href="#L185">185</a>         for k in K:</span>
+<span class="source-line" id="L186"><a href="#L186">186</a>             out_pickup = [(i, j) for (ii, j) in A if ii == i]</span>
+<span class="source-line" id="L187"><a href="#L187">187</a>             out_delivery = [(ni, j) for (ii, j) in A if ii == ni]</span>
+<span class="source-line" id="L188"><a href="#L188">188</a>             model.addConstr(</span>
+<span class="source-line" id="L189"><a href="#L189">189</a>                 gp.quicksum(x[k, i, j] for (_, j) in out_pickup)</span>
+<span class="source-line" id="L190"><a href="#L190">190</a>                 - gp.quicksum(x[k, ni, j] for (_, j) in out_delivery) == 0,</span>
+<span class="source-line" id="L191"><a href="#L191">191</a>                 name=f&quot;pair_{i}_{k}&quot;</span>
+<span class="source-line" id="L192"><a href="#L192">192</a>             )</span>
+<span class="source-line" id="L193"><a href="#L193">193</a> </span>
+<span class="source-line" id="L194"><a href="#L194">194</a>     # (4) Each vehicle leaves origin depot exactly once</span>
+<span class="source-line" id="L195"><a href="#L195">195</a>     out_depot = [(depot_o, j) for (ii, j) in A if ii == depot_o]</span>
+<span class="source-line" id="L196"><a href="#L196">196</a>     for k in K:</span>
+<span class="source-line" id="L197"><a href="#L197">197</a>         model.addConstr(</span>
+<span class="source-line" id="L198"><a href="#L198">198</a>             gp.quicksum(x[k, depot_o, j] for (_, j) in out_depot) == 1,</span>
+<span class="source-line" id="L199"><a href="#L199">199</a>             name=f&quot;depot_out_{k}&quot;</span>
+<span class="source-line" id="L200"><a href="#L200">200</a>         )</span>
+<span class="source-line" id="L201"><a href="#L201">201</a> </span>
+<span class="source-line" id="L202"><a href="#L202">202</a>     # (5) Flow conservation at pickup and delivery nodes</span>
+<span class="source-line" id="L203"><a href="#L203">203</a>     for i in P + D:</span>
+<span class="source-line" id="L204"><a href="#L204">204</a>         in_arcs = [(ii, i) for (ii, jj) in A if jj == i]</span>
+<span class="source-line" id="L205"><a href="#L205">205</a>         out_arcs = [(i, j) for (ii, j) in A if ii == i]</span>
+<span class="source-line" id="L206"><a href="#L206">206</a>         for k in K:</span>
+<span class="source-line" id="L207"><a href="#L207">207</a>             model.addConstr(</span>
+<span class="source-line" id="L208"><a href="#L208">208</a>                 gp.quicksum(x[k, ii, i] for (ii, _) in in_arcs)</span>
+<span class="source-line" id="L209"><a href="#L209">209</a>                 - gp.quicksum(x[k, i, j] for (_, j) in out_arcs) == 0,</span>
+<span class="source-line" id="L210"><a href="#L210">210</a>                 name=f&quot;flow_{i}_{k}&quot;</span>
+<span class="source-line" id="L211"><a href="#L211">211</a>             )</span>
+<span class="source-line" id="L212"><a href="#L212">212</a> </span>
+<span class="source-line" id="L213"><a href="#L213">213</a>     # (6) Each vehicle arrives at destination depot exactly once</span>
+<span class="source-line" id="L214"><a href="#L214">214</a>     in_depot = [(i, depot_d) for (i, jj) in A if jj == depot_d]</span>
+<span class="source-line" id="L215"><a href="#L215">215</a>     for k in K:</span>
+<span class="source-line" id="L216"><a href="#L216">216</a>         model.addConstr(</span>
+<span class="source-line" id="L217"><a href="#L217">217</a>             gp.quicksum(x[k, i, depot_d] for (i, _) in in_depot) == 1,</span>
+<span class="source-line" id="L218"><a href="#L218">218</a>             name=f&quot;depot_in_{k}&quot;</span>
+<span class="source-line" id="L219"><a href="#L219">219</a>         )</span>
+<span class="source-line" id="L220"><a href="#L220">220</a> </span>
+<span class="source-line" id="L221"><a href="#L221">221</a>     # (8) Load constraints (linearized with big-M)</span>
+<span class="source-line" id="L222"><a href="#L222">222</a>     # Q_var[k,j] &gt;= Q_var[k,i] + q_j - M*(1 - x[k,i,j])</span>
+<span class="source-line" id="L223"><a href="#L223">223</a>     for k in K:</span>
+<span class="source-line" id="L224"><a href="#L224">224</a>         for (i, j) in A:</span>
+<span class="source-line" id="L225"><a href="#L225">225</a>             q_j = nodes[j][&quot;load&quot;]</span>
+<span class="source-line" id="L226"><a href="#L226">226</a>             model.addConstr(</span>
+<span class="source-line" id="L227"><a href="#L227">227</a>                 Q_var[k, j] &gt;= Q_var[k, i] + q_j - M_load * (1 - x[k, i, j]),</span>
+<span class="source-line" id="L228"><a href="#L228">228</a>                 name=f&quot;load_{k}_{i}_{j}&quot;</span>
+<span class="source-line" id="L229"><a href="#L229">229</a>             )</span>
+<span class="source-line" id="L230"><a href="#L230">230</a> </span>
+<span class="source-line" id="L231"><a href="#L231">231</a>     # (9) Load bounds are set via variable bounds already</span>
+<span class="source-line" id="L232"><a href="#L232">232</a> </span>
+<span class="source-line" id="L233"><a href="#L233">233</a>     # (10) Time constraints (linearized with big-M)</span>
+<span class="source-line" id="L234"><a href="#L234">234</a>     # T[k,j] &gt;= T[k,i] + s_i + t_{ij} - M*(1 - x[k,i,j])</span>
+<span class="source-line" id="L235"><a href="#L235">235</a>     for k in K:</span>
+<span class="source-line" id="L236"><a href="#L236">236</a>         for (i, j) in A:</span>
+<span class="source-line" id="L237"><a href="#L237">237</a>             s_i = nodes[i][&quot;service_time&quot;]</span>
+<span class="source-line" id="L238"><a href="#L238">238</a>             t_ij = arc_time[(i, j)]</span>
+<span class="source-line" id="L239"><a href="#L239">239</a>             model.addConstr(</span>
+<span class="source-line" id="L240"><a href="#L240">240</a>                 T[k, j] &gt;= T[k, i] + s_i + t_ij - M_time * (1 - x[k, i, j]),</span>
+<span class="source-line" id="L241"><a href="#L241">241</a>                 name=f&quot;time_{k}_{i}_{j}&quot;</span>
+<span class="source-line" id="L242"><a href="#L242">242</a>             )</span>
+<span class="source-line" id="L243"><a href="#L243">243</a> </span>
+<span class="source-line" id="L244"><a href="#L244">244</a>     # (11) Time window bounds are set via variable bounds already</span>
+<span class="source-line" id="L245"><a href="#L245">245</a> </span>
+<span class="source-line" id="L246"><a href="#L246">246</a>     # (12) Precedence: T[k,i] + s_i + t_{i,n+i} &lt;= T[k,n+i]</span>
+<span class="source-line" id="L247"><a href="#L247">247</a>     for i in P:</span>
+<span class="source-line" id="L248"><a href="#L248">248</a>         ni = n + i</span>
+<span class="source-line" id="L249"><a href="#L249">249</a>         s_i = nodes[i][&quot;service_time&quot;]</span>
+<span class="source-line" id="L250"><a href="#L250">250</a>         if (i, ni) in arc_time:</span>
+<span class="source-line" id="L251"><a href="#L251">251</a>             t_i_ni = arc_time[(i, ni)]</span>
+<span class="source-line" id="L252"><a href="#L252">252</a>         else:</span>
+<span class="source-line" id="L253"><a href="#L253">253</a>             # Compute Euclidean distance if arc not in set</span>
+<span class="source-line" id="L254"><a href="#L254">254</a>             # INFERRED ASSUMPTION: direct travel time between pickup and delivery</span>
+<span class="source-line" id="L255"><a href="#L255">255</a>             xi, yi = nodes[i][&quot;x&quot;], nodes[i][&quot;y&quot;]</span>
+<span class="source-line" id="L256"><a href="#L256">256</a>             xni, yni = nodes[ni][&quot;x&quot;], nodes[ni][&quot;y&quot;]</span>
+<span class="source-line" id="L257"><a href="#L257">257</a>             t_i_ni = math.sqrt((xi - xni) ** 2 + (yi - yni) ** 2)</span>
+<span class="source-line" id="L258"><a href="#L258">258</a>         for k in K:</span>
+<span class="source-line" id="L259"><a href="#L259">259</a>             model.addConstr(</span>
+<span class="source-line" id="L260"><a href="#L260">260</a>                 T[k, i] + s_i + t_i_ni &lt;= T[k, ni],</span>
+<span class="source-line" id="L261"><a href="#L261">261</a>                 name=f&quot;prec_{i}_{k}&quot;</span>
+<span class="source-line" id="L262"><a href="#L262">262</a>             )</span>
+<span class="source-line" id="L263"><a href="#L263">263</a> </span>
+<span class="source-line" id="L264"><a href="#L264">264</a>     # --- LIFO constraints (7) ---</span>
+<span class="source-line" id="L265"><a href="#L265">265</a>     # We add LIFO constraints via infeasible path inequalities.</span>
+<span class="source-line" id="L266"><a href="#L266">266</a>     # For a compact formulation, we enumerate short LIFO-violating patterns.</span>
+<span class="source-line" id="L267"><a href="#L267">267</a>     # A LIFO violation occurs when pickup i is visited before pickup j,</span>
+<span class="source-line" id="L268"><a href="#L268">268</a>     # but delivery n+j is visited before delivery n+i (i.e., j is delivered</span>
+<span class="source-line" id="L269"><a href="#L269">269</a>     # before i, violating the &quot;last picked up, first delivered&quot; rule).</span>
+<span class="source-line" id="L270"><a href="#L270">270</a>     #</span>
+<span class="source-line" id="L271"><a href="#L271">271</a>     # For each pair (i, j) in P x P with i != j, the LIFO constraint says:</span>
+<span class="source-line" id="L272"><a href="#L272">272</a>     # If vehicle k picks up i then j (in that order), it must deliver j before i.</span>
+<span class="source-line" id="L273"><a href="#L273">273</a>     #</span>
+<span class="source-line" id="L274"><a href="#L274">274</a>     # We enforce: for each vehicle k, for each pair i,j in P:</span>
+<span class="source-line" id="L275"><a href="#L275">275</a>     #   x[k,i,j] = 1 implies n+j must be delivered before n+i</span>
+<span class="source-line" id="L276"><a href="#L276">276</a>     #   This is implicitly handled by the arc structure (no arcs from pickup i</span>
+<span class="source-line" id="L277"><a href="#L277">277</a>     #   to delivery n+j for j != i), but we add explicit LIFO ordering constraints.</span>
+<span class="source-line" id="L278"><a href="#L278">278</a>     #</span>
+<span class="source-line" id="L279"><a href="#L279">279</a>     # The arc set already excludes (i, n+j) for i in P, j in P, j != i,</span>
+<span class="source-line" id="L280"><a href="#L280">280</a>     # which handles direct pickup-to-wrong-delivery violations.</span>
+<span class="source-line" id="L281"><a href="#L281">281</a>     # For indirect violations, we add constraints for delivery ordering:</span>
+<span class="source-line" id="L282"><a href="#L282">282</a>     # If both i and j are onboard (picked up), then n+j must come before n+i</span>
+<span class="source-line" id="L283"><a href="#L283">283</a>     # if j was picked up after i. We model this with time-based constraints:</span>
+<span class="source-line" id="L284"><a href="#L284">284</a>     # T[k,n+j] &lt;= T[k,n+i] + M*(2 - x[k,i,j] - (sum of x indicating j picked after i))</span>
+<span class="source-line" id="L285"><a href="#L285">285</a>     #</span>
+<span class="source-line" id="L286"><a href="#L286">286</a>     # INFERRED ASSUMPTION: The arc structure already restricts most LIFO violations.</span>
+<span class="source-line" id="L287"><a href="#L287">287</a>     # For the compact formulation, the paper notes that the explicit LIFO</span>
+<span class="source-line" id="L288"><a href="#L288">288</a>     # constraints (7) involve exponentially many subsets. We add pairwise</span>
+<span class="source-line" id="L289"><a href="#L289">289</a>     # LIFO constraints as a practical compromise for the compact model.</span>
+<span class="source-line" id="L290"><a href="#L290">290</a>     for i in P:</span>
+<span class="source-line" id="L291"><a href="#L291">291</a>         for j in P:</span>
+<span class="source-line" id="L292"><a href="#L292">292</a>             if i == j:</span>
+<span class="source-line" id="L293"><a href="#L293">293</a>                 continue</span>
+<span class="source-line" id="L294"><a href="#L294">294</a>             ni = n + i</span>
+<span class="source-line" id="L295"><a href="#L295">295</a>             nj = n + j</span>
+<span class="source-line" id="L296"><a href="#L296">296</a>             # If arc (i,j) exists (pickup i then pickup j), then delivery j</span>
+<span class="source-line" id="L297"><a href="#L297">297</a>             # must happen before delivery i: T[k,nj] &lt;= T[k,ni]</span>
+<span class="source-line" id="L298"><a href="#L298">298</a>             if (i, j) in arc_set:</span>
+<span class="source-line" id="L299"><a href="#L299">299</a>                 for k in K:</span>
+<span class="source-line" id="L300"><a href="#L300">300</a>                     model.addConstr(</span>
+<span class="source-line" id="L301"><a href="#L301">301</a>                         T[k, nj] &lt;= T[k, ni] + M_time * (1 - x[k, i, j]),</span>
+<span class="source-line" id="L302"><a href="#L302">302</a>                         name=f&quot;lifo_{i}_{j}_{k}&quot;</span>
+<span class="source-line" id="L303"><a href="#L303">303</a>                     )</span>
+<span class="source-line" id="L304"><a href="#L304">304</a> </span>
+<span class="source-line" id="L305"><a href="#L305">305</a>     # --- Symmetry breaking ---</span>
+<span class="source-line" id="L306"><a href="#L306">306</a>     # Break symmetry between identical vehicles by ordering their first pickup</span>
+<span class="source-line" id="L307"><a href="#L307">307</a>     # INFERRED ASSUMPTION: Standard symmetry-breaking technique</span>
+<span class="source-line" id="L308"><a href="#L308">308</a>     for k in range(len(K) - 1):</span>
+<span class="source-line" id="L309"><a href="#L309">309</a>         # Vehicle k&#x27;s departure time from depot &lt;= vehicle k+1&#x27;s departure time</span>
+<span class="source-line" id="L310"><a href="#L310">310</a>         model.addConstr(</span>
+<span class="source-line" id="L311"><a href="#L311">311</a>             T[k, depot_o] &lt;= T[k + 1, depot_o],</span>
+<span class="source-line" id="L312"><a href="#L312">312</a>             name=f&quot;sym_{k}&quot;</span>
+<span class="source-line" id="L313"><a href="#L313">313</a>         )</span>
+<span class="source-line" id="L314"><a href="#L314">314</a> </span>
+<span class="source-line" id="L315"><a href="#L315">315</a>     model.update()</span>
+<span class="source-line" id="L316"><a href="#L316">316</a>     model._lifo_x = gp.tupledict(x)</span>
+<span class="source-line" id="L317"><a href="#L317">317</a>     model._lifo_arcs = A</span>
+<span class="source-line" id="L318"><a href="#L318">318</a>     model._lifo_vehicles = K</span>
+<span class="source-line" id="L319"><a href="#L319">319</a>     model._lifo_origin = depot_o</span>
+<span class="source-line" id="L320"><a href="#L320">320</a>     model._lifo_destination = depot_d</span>
+<span class="source-line" id="L321"><a href="#L321">321</a>     model._lifo_request_count = n</span>
+<span class="source-line" id="L322"><a href="#L322">322</a>     model._lifo_node_count = len(N)</span>
+<span class="source-line" id="L323"><a href="#L323">323</a>     return model, x, T, Q_var, A, K, N, P, D, n, depot_o, depot_d, nodes</span>
+<span class="source-line" id="L324"><a href="#L324">324</a> </span>
+<span class="source-line" id="L325"><a href="#L325">325</a> </span>
+<span class="source-line" id="L326"><a href="#L326">326</a> def extract_solution(model, x, T, Q_var, A, K, N, P, D, n, depot_o, depot_d, nodes):</span>
+<span class="source-line" id="L327"><a href="#L327">327</a>     &quot;&quot;&quot;Extract solution from solved model.&quot;&quot;&quot;</span>
+<span class="source-line" id="L328"><a href="#L328">328</a>     if model.SolCount == 0:</span>
+<span class="source-line" id="L329"><a href="#L329">329</a>         return None</span>
+<span class="source-line" id="L330"><a href="#L330">330</a> </span>
+<span class="source-line" id="L331"><a href="#L331">331</a>     obj_val = model.ObjVal</span>
+<span class="source-line" id="L332"><a href="#L332">332</a> </span>
+<span class="source-line" id="L333"><a href="#L333">333</a>     routes = []</span>
+<span class="source-line" id="L334"><a href="#L334">334</a>     for k in K:</span>
+<span class="source-line" id="L335"><a href="#L335">335</a>         route_arcs = []</span>
+<span class="source-line" id="L336"><a href="#L336">336</a>         for (i, j) in A:</span>
+<span class="source-line" id="L337"><a href="#L337">337</a>             if x[k, i, j].X &gt; 0.5:</span>
+<span class="source-line" id="L338"><a href="#L338">338</a>                 route_arcs.append((i, j))</span>
+<span class="source-line" id="L339"><a href="#L339">339</a> </span>
+<span class="source-line" id="L340"><a href="#L340">340</a>         if not route_arcs:</span>
+<span class="source-line" id="L341"><a href="#L341">341</a>             continue</span>
+<span class="source-line" id="L342"><a href="#L342">342</a> </span>
+<span class="source-line" id="L343"><a href="#L343">343</a>         # Build route sequence from arcs</span>
+<span class="source-line" id="L344"><a href="#L344">344</a>         # Check if this is a non-empty route (not just depot-&gt;depot path)</span>
+<span class="source-line" id="L345"><a href="#L345">345</a>         visits_customer = any(i in P or i in D or j in P or j in D</span>
+<span class="source-line" id="L346"><a href="#L346">346</a>                               for (i, j) in route_arcs)</span>
+<span class="source-line" id="L347"><a href="#L347">347</a>         if not visits_customer:</span>
+<span class="source-line" id="L348"><a href="#L348">348</a>             continue</span>
+<span class="source-line" id="L349"><a href="#L349">349</a> </span>
+<span class="source-line" id="L350"><a href="#L350">350</a>         # Build adjacency</span>
+<span class="source-line" id="L351"><a href="#L351">351</a>         adj = {}</span>
+<span class="source-line" id="L352"><a href="#L352">352</a>         for (i, j) in route_arcs:</span>
+<span class="source-line" id="L353"><a href="#L353">353</a>             adj[i] = j</span>
+<span class="source-line" id="L354"><a href="#L354">354</a> </span>
+<span class="source-line" id="L355"><a href="#L355">355</a>         # Trace route from depot_o</span>
+<span class="source-line" id="L356"><a href="#L356">356</a>         route = [depot_o]</span>
+<span class="source-line" id="L357"><a href="#L357">357</a>         current = depot_o</span>
+<span class="source-line" id="L358"><a href="#L358">358</a>         visited_count = 0</span>
+<span class="source-line" id="L359"><a href="#L359">359</a>         while current in adj and visited_count &lt; len(N):</span>
+<span class="source-line" id="L360"><a href="#L360">360</a>             nxt = adj[current]</span>
+<span class="source-line" id="L361"><a href="#L361">361</a>             route.append(nxt)</span>
+<span class="source-line" id="L362"><a href="#L362">362</a>             current = nxt</span>
+<span class="source-line" id="L363"><a href="#L363">363</a>             visited_count += 1</span>
+<span class="source-line" id="L364"><a href="#L364">364</a>             if current == depot_d:</span>
+<span class="source-line" id="L365"><a href="#L365">365</a>                 break</span>
+<span class="source-line" id="L366"><a href="#L366">366</a> </span>
+<span class="source-line" id="L367"><a href="#L367">367</a>         # Get timing and load info</span>
+<span class="source-line" id="L368"><a href="#L368">368</a>         route_detail = []</span>
+<span class="source-line" id="L369"><a href="#L369">369</a>         for node_id in route:</span>
+<span class="source-line" id="L370"><a href="#L370">370</a>             detail = {</span>
+<span class="source-line" id="L371"><a href="#L371">371</a>                 &quot;node_id&quot;: node_id,</span>
+<span class="source-line" id="L372"><a href="#L372">372</a>                 &quot;arrival_time&quot;: round(T[k, node_id].X, 2),</span>
+<span class="source-line" id="L373"><a href="#L373">373</a>                 &quot;load_after&quot;: round(Q_var[k, node_id].X, 2)</span>
+<span class="source-line" id="L374"><a href="#L374">374</a>             }</span>
+<span class="source-line" id="L375"><a href="#L375">375</a>             route_detail.append(detail)</span>
+<span class="source-line" id="L376"><a href="#L376">376</a> </span>
+<span class="source-line" id="L377"><a href="#L377">377</a>         route_cost = sum(</span>
+<span class="source-line" id="L378"><a href="#L378">378</a>             model.getAttr(&quot;Obj&quot;, [x[k, i, j]])[0] * x[k, i, j].X</span>
+<span class="source-line" id="L379"><a href="#L379">379</a>             for (i, j) in route_arcs</span>
+<span class="source-line" id="L380"><a href="#L380">380</a>         )</span>
+<span class="source-line" id="L381"><a href="#L381">381</a> </span>
+<span class="source-line" id="L382"><a href="#L382">382</a>         routes.append({</span>
+<span class="source-line" id="L383"><a href="#L383">383</a>             &quot;vehicle_id&quot;: k,</span>
+<span class="source-line" id="L384"><a href="#L384">384</a>             &quot;route_sequence&quot;: route,</span>
+<span class="source-line" id="L385"><a href="#L385">385</a>             &quot;route_details&quot;: route_detail,</span>
+<span class="source-line" id="L386"><a href="#L386">386</a>         })</span>
+<span class="source-line" id="L387"><a href="#L387">387</a> </span>
+<span class="source-line" id="L388"><a href="#L388">388</a>     solution = {</span>
+<span class="source-line" id="L389"><a href="#L389">389</a>         &quot;objective_value&quot;: round(obj_val, 2),</span>
+<span class="source-line" id="L390"><a href="#L390">390</a>         &quot;num_vehicles&quot;: len(routes),</span>
+<span class="source-line" id="L391"><a href="#L391">391</a>         &quot;status&quot;: model.Status,</span>
+<span class="source-line" id="L392"><a href="#L392">392</a>         &quot;status_description&quot;: {</span>
+<span class="source-line" id="L393"><a href="#L393">393</a>             GRB.OPTIMAL: &quot;optimal&quot;,</span>
+<span class="source-line" id="L394"><a href="#L394">394</a>             GRB.TIME_LIMIT: &quot;time_limit&quot;,</span>
+<span class="source-line" id="L395"><a href="#L395">395</a>             GRB.INFEASIBLE: &quot;infeasible&quot;,</span>
+<span class="source-line" id="L396"><a href="#L396">396</a>             GRB.INF_OR_UNBD: &quot;infeasible_or_unbounded&quot;,</span>
+<span class="source-line" id="L397"><a href="#L397">397</a>         }.get(model.Status, f&quot;other_{model.Status}&quot;),</span>
+<span class="source-line" id="L398"><a href="#L398">398</a>         &quot;mip_gap&quot;: model.MIPGap if model.SolCount &gt; 0 else None,</span>
+<span class="source-line" id="L399"><a href="#L399">399</a>         &quot;best_bound&quot;: model.ObjBound if model.SolCount &gt; 0 else None,</span>
+<span class="source-line" id="L400"><a href="#L400">400</a>         &quot;lifo_enforcement&quot;: &quot;exact_lazy_infeasible_path_separation&quot;,</span>
+<span class="source-line" id="L401"><a href="#L401">401</a>         &quot;solve_time&quot;: model.Runtime,</span>
+<span class="source-line" id="L402"><a href="#L402">402</a>         &quot;routes&quot;: routes,</span>
+<span class="source-line" id="L403"><a href="#L403">403</a>     }</span>
+<span class="source-line" id="L404"><a href="#L404">404</a>     return solution</span>
+<span class="source-line" id="L405"><a href="#L405">405</a> </span>
+<span class="source-line" id="L406"><a href="#L406">406</a> </span>
+<span class="source-line" id="L407"><a href="#L407">407</a> def main():</span>
+<span class="source-line" id="L408"><a href="#L408">408</a>     parser = argparse.ArgumentParser(</span>
+<span class="source-line" id="L409"><a href="#L409">409</a>         description=&quot;PDPTWL Gurobi compact formulation solver&quot;</span>
+<span class="source-line" id="L410"><a href="#L410">410</a>     )</span>
+<span class="source-line" id="L411"><a href="#L411">411</a>     parser.add_argument(&quot;--instance_path&quot;, type=str, required=True,</span>
+<span class="source-line" id="L412"><a href="#L412">412</a>                         help=&quot;Path to the instance JSON file&quot;)</span>
+<span class="source-line" id="L413"><a href="#L413">413</a>     parser.add_argument(&quot;--solution_path&quot;, type=str, required=True,</span>
+<span class="source-line" id="L414"><a href="#L414">414</a>                         help=&quot;Path for the output solution JSON file&quot;)</span>
+<span class="source-line" id="L415"><a href="#L415">415</a>     parser.add_argument(&quot;--time_limit&quot;, type=int, required=True,</span>
+<span class="source-line" id="L416"><a href="#L416">416</a>                         help=&quot;Maximum solver runtime in seconds&quot;)</span>
+<span class="source-line" id="L417"><a href="#L417">417</a>     parser.add_argument(&quot;--log_path&quot;, type=str, default=None, help=&quot;Path to log incumbent solutions&quot;)</span>
+<span class="source-line" id="L418"><a href="#L418">418</a>     args = parser.parse_args()</span>
+<span class="source-line" id="L419"><a href="#L419">419</a>     install_gurobi_logger(args.log_path)</span>
+<span class="source-line" id="L420"><a href="#L420">420</a> </span>
+<span class="source-line" id="L421"><a href="#L421">421</a>     print(f&quot;Loading instance from: {args.instance_path}&quot;)</span>
+<span class="source-line" id="L422"><a href="#L422">422</a>     data = load_instance(args.instance_path)</span>
+<span class="source-line" id="L423"><a href="#L423">423</a> </span>
+<span class="source-line" id="L424"><a href="#L424">424</a>     print(f&quot;Building model for {data[&#x27;n_requests&#x27;]} requests...&quot;)</span>
+<span class="source-line" id="L425"><a href="#L425">425</a>     model, x, T, Q_var, A, K, N, P, D, n, depot_o, depot_d, nodes = \</span>
+<span class="source-line" id="L426"><a href="#L426">426</a>         build_model(data, args.time_limit)</span>
+<span class="source-line" id="L427"><a href="#L427">427</a> </span>
+<span class="source-line" id="L428"><a href="#L428">428</a>     print(f&quot;Solving with time limit = {args.time_limit}s...&quot;)</span>
+<span class="source-line" id="L429"><a href="#L429">429</a>     model.optimize(lifo_lazy_callback)</span>
+<span class="source-line" id="L430"><a href="#L430">430</a> </span>
+<span class="source-line" id="L431"><a href="#L431">431</a>     print(f&quot;Status: {model.Status}, Solutions found: {model.SolCount}&quot;)</span>
+<span class="source-line" id="L432"><a href="#L432">432</a> </span>
+<span class="source-line" id="L433"><a href="#L433">433</a>     if model.SolCount &gt; 0:</span>
+<span class="source-line" id="L434"><a href="#L434">434</a>         solution = extract_solution(</span>
+<span class="source-line" id="L435"><a href="#L435">435</a>             model, x, T, Q_var, A, K, N, P, D, n, depot_o, depot_d, nodes</span>
+<span class="source-line" id="L436"><a href="#L436">436</a>         )</span>
+<span class="source-line" id="L437"><a href="#L437">437</a>         print(f&quot;Objective value: {solution[&#x27;objective_value&#x27;]}&quot;)</span>
+<span class="source-line" id="L438"><a href="#L438">438</a>         print(f&quot;Number of vehicles: {solution[&#x27;num_vehicles&#x27;]}&quot;)</span>
+<span class="source-line" id="L439"><a href="#L439">439</a>     else:</span>
+<span class="source-line" id="L440"><a href="#L440">440</a>         solution = {</span>
+<span class="source-line" id="L441"><a href="#L441">441</a>             &quot;objective_value&quot;: None,</span>
+<span class="source-line" id="L442"><a href="#L442">442</a>             &quot;num_vehicles&quot;: None,</span>
+<span class="source-line" id="L443"><a href="#L443">443</a>             &quot;status&quot;: model.Status,</span>
+<span class="source-line" id="L444"><a href="#L444">444</a>             &quot;status_description&quot;: &quot;no_solution_found&quot;,</span>
+<span class="source-line" id="L445"><a href="#L445">445</a>             &quot;mip_gap&quot;: None,</span>
+<span class="source-line" id="L446"><a href="#L446">446</a>             &quot;best_bound&quot;: None,</span>
+<span class="source-line" id="L447"><a href="#L447">447</a>             &quot;lifo_enforcement&quot;: &quot;exact_lazy_infeasible_path_separation&quot;,</span>
+<span class="source-line" id="L448"><a href="#L448">448</a>             &quot;solve_time&quot;: model.Runtime,</span>
+<span class="source-line" id="L449"><a href="#L449">449</a>             &quot;routes&quot;: [],</span>
+<span class="source-line" id="L450"><a href="#L450">450</a>         }</span>
+<span class="source-line" id="L451"><a href="#L451">451</a>         print(&quot;No feasible solution found.&quot;)</span>
+<span class="source-line" id="L452"><a href="#L452">452</a> </span>
+<span class="source-line" id="L453"><a href="#L453">453</a>     with open(args.solution_path, &quot;w&quot;) as f:</span>
+<span class="source-line" id="L454"><a href="#L454">454</a>         solution[&quot;runtime&quot;] = time.time() - _GUROBI_CODE_START_TIME</span>
+<span class="source-line" id="L455"><a href="#L455">455</a>         json.dump(solution, f, indent=2)</span>
+<span class="source-line" id="L456"><a href="#L456">456</a>     print(f&quot;Solution saved to: {args.solution_path}&quot;)</span>
+<span class="source-line" id="L457"><a href="#L457">457</a> </span>
+<span class="source-line" id="L458"><a href="#L458">458</a> </span>
+<span class="source-line" id="L459"><a href="#L459">459</a> if __name__ == &quot;__main__&quot;:</span>
+<span class="source-line" id="L460"><a href="#L460">460</a>     main()</span></pre></body></html>

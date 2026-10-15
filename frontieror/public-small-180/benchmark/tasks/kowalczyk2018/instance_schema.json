@@ -1,0 +1,11 @@
+{
+  "n": "<int> Total number of independent jobs to be processed.",
+  "m": "<int> Number of identical parallel machines available for processing.",
+  "jobs": [
+    {
+      "j": "<int> One-based index of the job, ordered by nonincreasing weight-to-processing-time ratio.",
+      "p": "<int> Processing time required to complete the job on any machine.",
+      "w": "<int> Weight representing the priority or importance of the job."
+    }
+  ]
+}

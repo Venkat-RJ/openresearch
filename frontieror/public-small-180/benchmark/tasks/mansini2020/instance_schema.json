@@ -1,0 +1,21 @@
+{
+  "parameters": {
+    "n_groups": "<int> Number of disjoint groups from which exactly one item must be selected.",
+    "m_resources": "<int> Number of shared resources, each with a limited capacity.",
+    "n_items_per_group": "<int> Number of candidate items available within each group.",
+    "n_bar_total_items": "<int> Total number of candidate items across all groups."
+  },
+  "capacities": "<list[int], length m_resources> Maximum available amount of each shared resource.",
+  "groups": [
+    {
+      "group_id": "<int> Zero-based identifier of this group.",
+      "items": [
+        {
+          "item_id": "<int> Zero-based identifier of this item within its group.",
+          "profit": "<int> Reward earned when this item is selected.",
+          "weights": "<list[int], length m_resources> Amount of each shared resource consumed by this item."
+        }
+      ]
+    }
+  ]
+}

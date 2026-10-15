@@ -1,0 +1,22 @@
+{
+  "problem": "<str> Short identifier for the optimization problem.",
+  "description": "<str> Brief natural-language summary of the problem setting.",
+  "dimensions": {
+    "num_items": "<int> Total number of distinct items to be produced.",
+    "num_periods": "<int> Number of discrete time periods in the planning horizon.",
+    "num_plants": "<int> Number of candidate manufacturing plants.",
+    "num_customers": "<int> Number of customers placing orders."
+  },
+  "plant_capabilities": "<list[list[int]], length num_items> For each item, the list of plant indices capable of producing that item.",
+  "customer_item_demands": "<list[list[int]], length num_customers> For each customer, the list of item indices ordered by that customer.",
+  "demand": "<list[list[list[int]]], shape [num_items][num_customers][num_periods]> Quantity of each item demanded by each customer in each period.",
+  "setup_cost": "<list[list[list[int]]], shape [num_items][num_plants][num_periods]> Fixed cost incurred when initiating a production lot for an item at a plant in a period.",
+  "production_cost": "<list[list[list[int]]], shape [num_items][num_plants][num_periods]> Per-unit cost of producing an item at a plant in a period.",
+  "holding_cost": "<list[list[list[int]]], shape [num_items][num_plants][num_periods]> Per-unit per-period cost of holding inventory of an item at a plant in a period.",
+  "setup_time": "<list[list[list[int]]], shape [num_items][num_plants][num_periods]> Time consumed to set up production of an item at a plant in a period.",
+  "production_time": "<list[list[list[int]]], shape [num_items][num_plants][num_periods]> Per-unit time consumed to produce an item at a plant in a period.",
+  "capacity": "<list[list[int]], shape [num_plants][num_periods]> Available production time at each plant in each period.",
+  "plant_opening_cost": "<list[int], length num_plants> Total cost over the entire horizon to open each plant.",
+  "plant_opening_cost_per_period": "<list[list[int]], shape [num_plants][num_periods]> Portion of each plant's opening cost attributed to each period.",
+  "transportation_cost": "<list[list[list[list[int]]]], shape [num_items][num_customers][num_plants][num_periods]> Per-unit cost of shipping an item from a plant to a customer in a period."
+}

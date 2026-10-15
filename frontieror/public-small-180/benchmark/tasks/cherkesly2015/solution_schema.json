@@ -1,0 +1,16 @@
+{
+  "objective_value": "<float> Total travel cost across all vehicles, including the per-vehicle fixed cost embedded in arcs leaving the origin depot.",
+  "routes": [
+    {
+      "vehicle_id": "<int> Identifier of the vehicle performing this route.",
+      "route_sequence": "<list[int]> Ordered sequence of nodes visited by the vehicle, starting at the origin depot and ending at the destination depot.",
+      "route_details": [
+        {
+          "node_id": "<int> Node visited at this step of the route.",
+          "arrival_time": "<float> Time at which the vehicle begins service at this node.",
+          "load_after": "<float> Quantity of goods on board the vehicle upon departing this node."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "instance_id": 42,
+  "description": "VRPTW instance 42: 20 customers, C-type distribution, narrow time windows (tiny smoke-test instance, s tier x 0.1975 scale-down)",
+  "problem_type": "VRPTW",
+  "generation_parameters": {
+    "n_customers": 20,
+    "customer_distribution": "C",
+    "time_window_type": "narrow",
+    "vehicle_capacity": 200,
+    "planning_horizon": 1230,
+    "service_time_per_customer": 10,
+    "depot_x": 50.0,
+    "depot_y": 50.0,
+    "generation_seed": 420000,
+    "scale": "small"
+  },
+  "problem_parameters": {
+    "n_nodes": 22,
+    "n_customers": 20,
+    "vehicle_capacity": 200,
+    "planning_horizon": 1230,
+    "travel_cost_type": "euclidean",
+    "travel_time_type": "euclidean"
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "type": "depot_source",
+      "x": 50.0,
+      "y": 50.0,
+      "demand": 0,
+      "service_time": 0,
+      "time_window_open": 0.0,
+      "time_window_close": 1230.0
+    },
+    {
+      "id": 1,
+      "type": "customer",
+      "x": 70.8,
+      "y": 28.8,
+      "demand": 7,
+      "service_time": 10,
+      "time_window_open": 33.3,
+      "time_window_close": 80.6
+    },
+    {
+      "id": 2,
+      "type": "customer",
+      "x": 53.9,
+      "y": 45.1,
+      "demand": 14,
+      "service_time": 10,
+      "time_window_open": 30.6,
+      "time_window_close": 88.0
+    },
+    {
+      "id": 3,
+      "type": "customer",
+      "x": 51.6,
+      "y": 12.8,
+      "demand": 38,
+      "service_time": 10,
+      "time_window_open": 44.7,
+      "time_window_close": 95.7
+    },
+    {
+      "id": 4,
+      "type": "customer",
+      "x": 68.2,
+      "y": 54.8,
+      "demand": 20,
+      "service_time": 10,
+      "time_window_open": 33.5,
+      "time_window_close": 65.6
+    },
+    {
+      "id": 5,
+      "type": "customer",
+      "x": 31.0,
+      "y": 26.6,
+      "demand": 28,
+      "service_time": 10,
+      "time_window_open": 40.2,
+      "time_window_close": 86.6
+    },
+    {
+      "id": 6,
+      "type": "customer",
+      "x": 50.5,
+      "y": 18.4,
+      "demand": 20,
+      "service_time": 10,
+      "time_window_open": 36.1,
+      "time_window_close": 82.8
+    },
+    {
+      "id": 7,
+      "type": "customer",
+      "x": 64.6,
+      "y": 51.7,
+      "demand": 5,
+      "service_time": 10,
+      "time_window_open": 29.0,
+      "time_window_close": 80.6
+    },
+    {
+      "id": 8,
+      "type": "customer",
+      "x": 29.6,
+      "y": 36.8,
+      "demand": 39,
+      "service_time": 10,
+      "time_window_open": 49.4,
+      "time_window_close": 99.1
+    },
+    {
+      "id": 9,
+      "type": "customer",
+      "x": 55.8,
+      "y": 57.7,
+      "demand": 32,
+      "service_time": 10,
+      "time_window_open": 29.3,
+      "time_window_close": 69.9
+    },
+    {
+      "id": 10,
+      "type": "customer",
+      "x": 38.9,
+      "y": 31.1,
+      "demand": 2,
+      "service_time": 10,
+      "time_window_open": 39.4,
+      "time_window_close": 74.7
+    },
+    {
+      "id": 11,
+      "type": "customer",
+      "x": 17.9,
+      "y": 16.9,
+      "demand": 27,
+      "service_time": 10,
+      "time_window_open": 69.1,
+      "time_window_close": 113.3
+    },
+    {
+      "id": 12,
+      "type": "customer",
+      "x": 27.6,
+      "y": 35.9,
+      "demand": 17,
+      "service_time": 10,
+      "time_window_open": 43.5,
+      "time_window_close": 102.1
+    },
+    {
+      "id": 13,
+      "type": "customer",
+      "x": 44.2,
+      "y": 27.5,
+      "demand": 21,
+      "service_time": 10,
+      "time_window_open": 39.5,
+      "time_window_close": 85.9
+    },
+    {
+      "id": 14,
+      "type": "customer",
+      "x": 65.4,
+      "y": 51.5,
+      "demand": 27,
+      "service_time": 10,
+      "time_window_open": 15.6,
+      "time_window_close": 50.8
+    },
+    {
+      "id": 15,
+      "type": "customer",
+      "x": 80.4,
+      "y": 54.3,
+      "demand": 38,
+      "service_time": 10,
+      "time_window_open": 49.3,
+      "time_window_close": 104.1
+    },
+    {
+      "id": 16,
+      "type": "customer",
+      "x": 35.5,
+      "y": 35.2,
+      "demand": 14,
+      "service_time": 10,
+      "time_window_open": 48.5,
+      "time_window_close": 91.3
+    },
+    {
+      "id": 17,
+      "type": "customer",
+      "x": 51.6,
+      "y": 38.5,
+      "demand": 22,
+      "service_time": 10,
+      "time_window_open": 13.3,
+      "time_window_close": 58.9
+    },
+    {
+      "id": 18,
+      "type": "customer",
+      "x": 31.7,
+      "y": 32.9,
+      "demand": 10,
+      "service_time": 10,
+      "time_window_open": 53.1,
+      "time_window_close": 93.2
+    },
+    {
+      "id": 19,
+      "type": "customer",
+      "x": 52.4,
+      "y": 16.6,
+      "demand": 31,
+      "service_time": 10,
+      "time_window_open": 57.6,
+      "time_window_close": 104.4
+    },
+    {
+      "id": 20,
+      "type": "customer",
+      "x": 78.1,
+      "y": 58.8,
+      "demand": 24,
+      "service_time": 10,
+      "time_window_open": 47.9,
+      "time_window_close": 102.4
+    },
+    {
+      "id": 21,
+      "type": "depot_sink",
+      "x": 50.0,
+      "y": 50.0,
+      "demand": 0,
+      "service_time": 0,
+      "time_window_open": 0.0,
+      "time_window_close": 1230.0
+    }
+  ]
+}

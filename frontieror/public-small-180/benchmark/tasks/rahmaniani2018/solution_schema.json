@@ -1,0 +1,34 @@
+{
+  "objective_value": "<float> Total annual system cost represented by the complete submitted witness.",
+  "model_variables": "<dict, key: canonical variable name> Sparse complete witness; omitted variables are zero. Use underscore-separated names exactly as specified by model_variable_name_patterns, not descriptive aliases.",
+  "investment_decisions": [
+    {
+      "generator_id": "<int> Identifier of the generator cluster this entry refers to.",
+      "resource_type": "<str> Technology label of the generator cluster (e.g. onshore_wind, ng_cc, battery_4hr, hydro).",
+      "zone": "<int> Zone in which the generator cluster is located.",
+      "y_P_new": "<float> Number of new power-capacity units built for this generator cluster, in whole-unit increments of its capacity size.",
+      "y_P_ret": "<float> Number of existing power-capacity units retired for this generator cluster, in whole-unit increments of its capacity size.",
+      "y_P_total_MW": "<float> Total installed power capacity of this generator cluster in MW after additions and retirements.",
+      "y_E_new": "<float, storage only> Number of new energy-capacity units built for this storage cluster, in whole-unit increments of its energy capacity size.",
+      "y_E_ret": "<float, storage only> Number of existing energy-capacity units retired for this storage cluster, in whole-unit increments of its energy capacity size.",
+      "y_E_total_MWh": "<float, storage only> Total installed energy storage capacity of this storage cluster in MWh after additions and retirements."
+    }
+  ],
+  "transmission_decisions": [
+    {
+      "line_id": "<int> Identifier of the transmission line this entry refers to.",
+      "y_F_new_MW": "<float> New transmission capacity added to this line in MW.",
+      "total_capacity_MW": "<float> Total line capacity in MW equal to existing capacity plus new capacity."
+    }
+  ],
+  "model_variable_name_patterns": {
+    "yPnew_{i}, yPret_{i}, yP_{i}": "generator investment/retirement/total capacity",
+    "yEnew_{i}, yEret_{i}, yE_{i}": "storage-energy investment variables",
+    "yFnew_{l}": "transmission investment",
+    "xinj_{i}_{t}, xwdw_{i}_{t}, xsoc_{i}_{t}, xhydro_{i}_{t}": "operations",
+    "xflow_{l}_{t}": "transmission flow",
+    "xnse_{s}_{z}_{t}": "non-served energy",
+    "xcommit_{i}_{t}, xstart_{i}_{t}, xshut_{i}_{t}": "unit commitment",
+    "xRPS_{w}, xCO2_{w}": "policy slack variables"
+  }
+}

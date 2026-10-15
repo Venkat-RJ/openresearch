@@ -1,0 +1,25 @@
+{
+  "num_retailers": "<int> Number of retailers to be served by the supplier.",
+  "time_horizon": "<int> Number of discrete periods over which deliveries can be scheduled.",
+  "supplier": {
+    "id": "<int> Identifier for the supplier node in the distance matrix.",
+    "x": "<int> Horizontal coordinate of the supplier location.",
+    "y": "<int> Vertical coordinate of the supplier location.",
+    "starting_inventory": "<int> Amount of product available at the supplier at the beginning of the planning horizon.",
+    "production_rate": "<int> Quantity of product produced at the supplier in each period.",
+    "inventory_cost": "<float> Per-unit cost of holding one unit of product at the supplier for one period."
+  },
+  "retailers": [
+    {
+      "id": "<int> Identifier for this retailer node in the distance matrix.",
+      "x": "<int> Horizontal coordinate of this retailer's location.",
+      "y": "<int> Vertical coordinate of this retailer's location.",
+      "demand": "<int> Quantity of product consumed by this retailer in each period.",
+      "max_inventory": "<int> Maximum amount of product this retailer can store at any time.",
+      "starting_inventory": "<int> Amount of product available at this retailer at the beginning of the planning horizon.",
+      "inventory_cost": "<float> Per-unit cost of holding one unit of product at this retailer for one period."
+    }
+  ],
+  "vehicle_capacity": "<int> Maximum total quantity of product the delivery vehicle can carry in a single period.",
+  "distance_matrix": "<list[list[int]], shape [num_retailers+1][num_retailers+1]> Symmetric transportation cost between each pair of locations, where row and column 0 is the supplier and rows and columns 1 through num_retailers are the retailers."
+}

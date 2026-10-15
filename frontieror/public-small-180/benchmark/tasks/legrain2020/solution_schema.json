@@ -1,0 +1,16 @@
+{
+  "objective_value": "<float> Total weighted penalty summed across all soft-constraint violations.",
+  "schedule": [
+    {
+      "nurse_id": "<int> Identifier of the nurse this schedule belongs to.",
+      "nurse_name": "<str> Display name of the nurse this schedule belongs to.",
+      "assignments": [
+        {
+          "day": "<int> Day index (0-based) on which the nurse works.",
+          "shift": "<str> Name of the shift the nurse works on this day.",
+          "skill": "<str> Skill the nurse performs on this assignment."
+        }
+      ]
+    }
+  ]
+}

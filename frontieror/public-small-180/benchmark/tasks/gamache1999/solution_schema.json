@@ -1,0 +1,17 @@
+{
+  "objective_value": "<float> Total duration, in minutes, of pairings that are left uncovered by the roster assignments.",
+  "rosters": {
+    "<key: '{crew_member_id}'>": {
+      "roster_index": "<int> Index of the chosen feasible monthly roster within this crew member's enumerated roster set.",
+      "pairings": "<list[int]> Identifiers of the pairings assigned to this crew member during the planning month.",
+      "unproductive_time": "<int> Minutes of the planning month during which this crew member is neither on a pairing nor on a pre-assigned activity."
+    }
+  },
+  "uncovered_pairings": [
+    {
+      "pairing_id": "<int> Identifier of a pairing that no crew member is assigned to cover.",
+      "uncovered_count": "<int> Number of unfilled crew slots remaining on this pairing after roster assignment.",
+      "duration_minutes": "<int> Total elapsed minutes of this uncovered pairing from departure to return."
+    }
+  ]
+}

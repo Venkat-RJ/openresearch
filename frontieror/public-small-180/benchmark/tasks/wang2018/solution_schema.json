@@ -1,0 +1,23 @@
+{
+  "objective_value": "<float> Total cost combining service time deviation penalties, loading transportation costs, and unloading transportation costs.",
+  "vessels": [
+    {
+      "vessel_id": "<int> Unique identifier for the vessel, matching the instance data.",
+      "alpha": "<int> Time step at which handling begins for the vessel.",
+      "beta": "<int> Time step at which handling ends for the vessel.",
+      "berth": "<int> Index of the berth assigned to the vessel.",
+      "profile": "<int> Index of the selected quay crane profile from the vessel's candidate set.",
+      "subblocks": "<list[int], length reserved_subblocks> Indices of the yard subblocks reserved for the vessel's containers.",
+      "handling_time": "<int> Number of consecutive time steps required to complete handling under the chosen profile.",
+      "qc_per_timestep": "<list[int], length handling_time> Number of quay cranes assigned at each successive time step under the chosen profile."
+    }
+  ],
+  "berths": [
+    {
+      "berth": "<int> Index of the berth.",
+      "rho": "<int> Earliest handling start time step among all vessels assigned to this berth.",
+      "varsigma": "<int> Latest handling end time step among all vessels assigned to this berth."
+    }
+  ],
+  "qc_usage": "<dict, key: '{time_step}'> Total number of quay cranes in use at each time step that has nonzero crane usage."
+}

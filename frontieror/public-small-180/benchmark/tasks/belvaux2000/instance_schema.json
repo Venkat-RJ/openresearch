@@ -1,0 +1,22 @@
+{
+  "parameters": {
+    "NI": "<int> Number of distinct items to be produced.",
+    "NK": "<int> Number of machines available for production.",
+    "NT": "<int> Number of discrete time periods in the planning horizon."
+  },
+  "costs": {
+    "setup_cost_f": "<int> Fixed cost incurred each period a machine is set up for any item, uniform across all items and machines.",
+    "startup_cost_g": "<int> Fixed cost incurred each time a machine starts up for an item it was not set up for in the previous period, uniform across all items and machines.",
+    "holding_cost_h": "<list[int], length NI> Per-unit cost of holding one unit of each item in inventory at the end of a period.",
+    "backlogging_cost_e": "<list[int], length NI> Per-unit penalty cost for each unit of unmet demand (backlog) for each item at the end of a period."
+  },
+  "machine_data": {
+    "capacity_C": "<list[int], length NK> Maximum production quantity each machine can produce in any single period.",
+    "startup_time_sigma": "<list[int], length NK> Amount of production capacity consumed on each machine when a startup occurs in a period."
+  },
+  "demand": "<list[list[int]], shape [NI][NT]> Quantity of each item required by customers in each period.",
+  "initial_conditions": {
+    "initial_stock_s0": "<list[int], length NI> Inventory on hand for each item at the start of the planning horizon.",
+    "initial_backlog_r0": "<list[int], length NI> Unfulfilled demand for each item carried into the start of the planning horizon."
+  }
+}

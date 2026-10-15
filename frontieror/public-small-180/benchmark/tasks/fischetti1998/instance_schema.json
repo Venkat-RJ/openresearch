@@ -1,0 +1,7 @@
+{
+  "n": "<int> Total number of cities, including the depot.",
+  "depot": "<int> City designated as the vehicle's home base, where the tour must start and end.",
+  "t0": "<int> Maximum total travel time allowed for the tour.",
+  "prizes": "<dict, key: '{city}'> Prize value collected when each city is visited.",
+  "travel_times": "<dict, key: '({city_i},{city_j})' with city_i < city_j> Symmetric travel time between each pair of cities."
+}

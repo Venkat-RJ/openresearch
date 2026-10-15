@@ -1,0 +1,63 @@
+{
+  "objective_value": 17530,
+  "truck_route": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      11
+    ]
+  ],
+  "drone_assignments": [
+    {
+      "drone": 0,
+      "dispatch_node": 1,
+      "delivery_node": 3
+    },
+    {
+      "drone": 0,
+      "dispatch_node": 1,
+      "delivery_node": 4
+    },
+    {
+      "drone": 0,
+      "dispatch_node": 9,
+      "delivery_node": 5
+    },
+    {
+      "drone": 1,
+      "dispatch_node": 1,
+      "delivery_node": 2
+    },
+    {
+      "drone": 1,
+      "dispatch_node": 1,
+      "delivery_node": 8
+    },
+    {
+      "drone": 1,
+      "dispatch_node": 9,
+      "delivery_node": 6
+    },
+    {
+      "drone": 1,
+      "dispatch_node": 9,
+      "delivery_node": 7
+    }
+  ],
+  "waiting_times": {
+    "1": 2912,
+    "9": 2094
+  },
+  "runtime": 0.16608437499996853
+}

@@ -1,0 +1,22 @@
+{
+  "parameters": {
+    "num_stacks_s": "<int> Number of stacks in the vehicle's loading area.",
+    "stack_height_l": "<int> Maximum number of items each stack can hold.",
+    "num_requests_n": "<int> Number of customer requests to be served.",
+    "num_pickup_vertices": "<int> Total number of vertices in the pickup region, including the depot.",
+    "num_delivery_vertices": "<int> Total number of vertices in the delivery region, including the depot.",
+    "coordinate_range": "<list[int], length 2> Minimum and maximum coordinate values for vertex locations.",
+    "distance_metric": "<str> Method used to compute travel distances between vertices."
+  },
+  "pickup_region": {
+    "depot_index": "<int> Index of the depot vertex in the pickup region.",
+    "coordinates": "<list[dict], length num_pickup_vertices> Location of each vertex in the pickup region, with fields vertex_id (int), x (int), and y (int).",
+    "distance_matrix": "<list[list[int]], shape [num_pickup_vertices][num_pickup_vertices]> Travel cost between each pair of vertices in the pickup region."
+  },
+  "delivery_region": {
+    "depot_index": "<int> Index of the depot vertex in the delivery region.",
+    "coordinates": "<list[dict], length num_delivery_vertices> Location of each vertex in the delivery region, with fields vertex_id (int), x (int), and y (int).",
+    "distance_matrix": "<list[list[int]], shape [num_delivery_vertices][num_delivery_vertices]> Travel cost between each pair of vertices in the delivery region."
+  },
+  "requests": "<list[dict], length num_requests_n> Each customer request specifying request_id (int), pickup_vertex (int), delivery_vertex (int), and item_size (int)."
+}

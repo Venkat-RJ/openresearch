@@ -1,0 +1,9 @@
+{
+  "graph": {
+    "num_vertices": "<int> Total number of vertices in the graph.",
+    "num_edges": "<int> Total number of undirected edges in the graph.",
+    "max_degree": "<int> Highest number of neighbors any single vertex has.",
+    "avg_degree": "<float> Average number of neighbors per vertex across the entire graph.",
+    "adjacency_list": "<dict, key: '{vertex}'> For each vertex, the sorted list of vertices it is directly connected to by an edge."
+  }
+}

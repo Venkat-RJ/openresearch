@@ -1,0 +1,36 @@
+{
+  "id": "c5c4c5bb-b8ed-40d5-888b-1c472cac3a72",
+  "seq": 827,
+  "owner": "[private field removed]",
+  "account": "[private field removed]",
+  "status": "complete",
+  "title": "Final300 active Docker resource controls measured",
+  "description": null,
+  "labels": [
+    "frontieror-fresh",
+    "final300",
+    "resources"
+  ],
+  "marginal_cost": {
+    "agent_usd": 0.0,
+    "resource_usd": 0.0
+  },
+  "subscribers": "[private field removed]",
+  "superseded_by": [],
+  "supersedes": [],
+  "produces": [],
+  "produced_by": [],
+  "created": "2026-10-11T10:57:50.846000+00:00",
+  "modified": "2026-10-11T10:57:50.847000+00:00",
+  "proves": [],
+  "favors": [],
+  "codechanges": null,
+  "outcome": "{\"hardened_hidden_protocol\": false, \"observations\": [{\"CpusetCpus\": \"14\", \"Memory\": 2147483648, \"NanoCpus\": 1000000000, \"NetworkMode\": \"none\", \"container\": \"1348a6a6c715a01b02777c5a7d159950fc7de159bb826e86d976db25702dc72c\"}, {\"CpusetCpus\": \"13\", \"Memory\": 2147483648, \"NanoCpus\": 1000000000, \"NetworkMode\": \"none\", \"container\": \"f637f3c1545f6a5b0882a7036205c01626a1446a82e6e94d9804b4cee9bab9bc\"}, {\"CpusetCpus\": \"8\", \"Memory\": 2147483648, \"NanoCpus\": 1000000000, \"NetworkMode\": \"none\", \"container\": \"96c4b18f5d729ce9254eaa225faf9fe777d35a0560a47f83df884323c7718ef1\"}], \"observed_epoch\": 1791716270.8049338, \"scope\": \"Direct measurement of these3 currently active final candidates; not measured historical thread counts or all180 individual runtime containers\", \"standard_Docker\": true}",
+  "config": {
+    "artifact": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/final300/resource-observation.json",
+    "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397"
+  },
+  "proved_by": [],
+  "favored_by": [],
+  "kind": "Experiment"
+}

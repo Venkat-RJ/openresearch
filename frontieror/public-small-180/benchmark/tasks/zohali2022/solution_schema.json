@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Minimum cycle time of the assembly line, equal to the largest per-station cycle time across all stations.",
+  "assignment": "<dict, key: '{task_index}'> The 1-based station index that performs each task.",
+  "station_sequences": "<dict, key: '{station_index}'> The ordered list of 1-based task indices performed at the station within one cycle, given in execution order.",
+  "cycle_time": "<float> The chosen line cycle time, equal to the largest sum of processing times, forward setup times between consecutive tasks, and the backward setup time from the last task to the first task at any station."
+}

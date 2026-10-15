@@ -1,0 +1,114 @@
+{
+  "problem_name": "VMIR-OU",
+  "problem_description": "Vendor-Managed Inventory Routing with Order-Up-to level policy",
+  "num_retailers": 5,
+  "time_horizon": 3,
+  "supplier": {
+    "id": 0,
+    "x": 63,
+    "y": 368,
+    "starting_inventory": 531,
+    "production_rate": 201,
+    "inventory_cost": 0.03
+  },
+  "retailers": [
+    {
+      "id": 1,
+      "x": 10,
+      "y": 132,
+      "demand": 67,
+      "max_inventory": 201,
+      "starting_inventory": 134,
+      "inventory_cost": 0.037136
+    },
+    {
+      "id": 2,
+      "x": 191,
+      "y": 186,
+      "demand": 37,
+      "max_inventory": 74,
+      "starting_inventory": 37,
+      "inventory_cost": 0.013158
+    },
+    {
+      "id": 3,
+      "x": 396,
+      "y": 436,
+      "demand": 23,
+      "max_inventory": 69,
+      "starting_inventory": 46,
+      "inventory_cost": 0.040639
+    },
+    {
+      "id": 4,
+      "x": 164,
+      "y": 74,
+      "demand": 39,
+      "max_inventory": 117,
+      "starting_inventory": 78,
+      "inventory_cost": 0.023837
+    },
+    {
+      "id": 5,
+      "x": 79,
+      "y": 65,
+      "demand": 35,
+      "max_inventory": 70,
+      "starting_inventory": 35,
+      "inventory_cost": 0.013306
+    }
+  ],
+  "vehicle_capacity": 301,
+  "distance_matrix": [
+    [
+      0,
+      241,
+      222,
+      339,
+      310,
+      303
+    ],
+    [
+      241,
+      0,
+      188,
+      491,
+      164,
+      96
+    ],
+    [
+      222,
+      188,
+      0,
+      323,
+      115,
+      164
+    ],
+    [
+      339,
+      491,
+      323,
+      0,
+      429,
+      487
+    ],
+    [
+      310,
+      164,
+      115,
+      429,
+      0,
+      85
+    ],
+    [
+      303,
+      96,
+      164,
+      487,
+      85,
+      0
+    ]
+  ],
+  "cost_config": "low",
+  "seed": 43
+}

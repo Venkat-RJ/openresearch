@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> For TSP, the total closed-tour distance (minimize). For MaxCut, the number or total weight of cut edges (maximize).",
+  "solution": "<dict> Dense binary decision vector. For TSP use every key 'x_{city}_{time_step}' (or every flat index) for all n_cities squared variables. For MaxCut use every key 'x_{node}' (or every flat node index), where 0/1 identifies the side of the cut.",
+  "tour": "<list[int], condition: problem_type == 'TSP'> Required only for TSP: the length-n_cities permutation derived from the one-hot solution variables. Omit for MaxCut."
+}

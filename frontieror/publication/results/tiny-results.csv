@@ -1,0 +1,181 @@
+task_id,classification,candidate_full_precision,reference_full_precision,direction,checker_feasible,native_gate_status,runtime_seconds,reported_method
+adulyasak2015,exact_serialized_reference_tie,1395.7593777311158,1395.7593777311158,min,True,pass,32.2,Exact32 route subsets per period and optimal subset tours;10-group Benders with reusable51-variable scenario LP and complete100-scenario witness
+alba2013,exact_serialized_reference_tie,6025,6025.0,min,True,pass,1.89,"Two directed tour arc MIPs with lazy subtours, stack-compatibility DFS and incompatible-tour-pair cuts; own reverse-delivery seed"
+alfieri2020,exact_serialized_reference_tie,4,4.0,min,True,pass,1.85,Seeded randomized DSATUR coloring;80 restarts and heap-based saturation updates
+amaldi2013,exact_serialized_reference_tie,3,3.0,min,True,pass,1.51,"SVD hyperplane candidates and randomized greedy point covering;100 restarts,200 candidates per step; no generating-hyperplane metadata"
+araujo2015,exact_serialized_reference_tie,24517.0,24517.0,min,True,pass,0.31,Compact full lot-sizing MIP; production/setup/initial-stock variables and cumulative inventory expressions; own all-stock seed
+araujo2020,exact_serialized_reference_tie,3,3.0,min,True,pass,0.25,"Feasible-mode MIP, topological serial schedule generation and reduced pulse scheduling without occupancy variables; own schedule fallback above1900 variables"
+archetti2007,exact_serialized_reference_tie,1750.321712,1750.321712,min,True,pass,0.25,"Order-up-to inventory-routing MIP with undirected route edges, lazy connectivity cuts and exactH+1 inventory timing"
+armbruster2012,exact_serialized_reference_tie,58,58.0,min,True,pass,22.69,"Weighted bisection MIP with node-side and edge-XOR binaries; weighted balance bounds, signed weights and node0 symmetry fixing"
+arslan2021,exact_serialized_reference_tie,-8385.740244468132,-8385.740244468132,min,True,pass,0.26,"Released LP-relaxed robust-knapsack contract; binary selection, continuous recourse, fixed-selection LP objective polishing"
+bard2002,exact_serialized_reference_tie,2,2.0,min,True,pass,0.25,Compact VRPTW arc/time/load MIP with checker-compatible inactive-arc big-M and singleton route seed; explicit depot-return routes
+barnhart2000,exact_serialized_reference_tie,64,64.0,min,True,pass,0.27,"Capacity-pruned unsplittable commodity-flow/rejection MIP, all-rejected seed and actual-arc-ID simple-path extraction"
+bayani2024,exact_serialized_reference_tie,8362.747785,8362.747785,min,True,pass,0.33,Quadratic semi-assignment pair linearization matching canonical first-occurrence coefficients; cheapest linear assignment seed
+belhoul2014,small_numerical_shortfall,-0.658210611095153,-0.6582106552528312,min,True,pass,0.21,Assignment MIP with Tchebychev compromise epigraph and identity-permutation seed; matrix and permutation witness
+belvaux2000,exact_serialized_reference_tie,6025.0,6025.0,min,True,pass,0.26,Small-bucket lot-sizing MIP eliminating stock variables; original startup/backlog/linking constraints and no-production backlog seed
+bentert2022,small_numerical_shortfall,81.99999999829932,81.99999994632454,min,True,pass,0.21,"Kruskal MST seed, per-vertex minimum-edge lower bound, upper-bound edge pruning and lazy connectivity; nearest-edge pool fallback"
+bergman2019,exact_serialized_reference_tie,2244,2244.0,max,True,pass,0.54,"Signed quadratic multiple-knapsack pair linearization, with feasible needed pairs only and zero assignment seed"
+bertsimas2022,audited_numerical_polish_improvement,-0.006301244882818533,-0.006301244601083195,min,True,pass,0.27,"Sparse factor-portfolio MIQP; full original x/objective MIPSOL snapshots, fixed-support QP polish and best complete incumbent retention"
+bertsimas2024,feasible_worse,12015.624556314378,12007.403032416889,min,True,pass,1.88,"Scenario-local congestion OA/Benders with tangent reset, nearby-cut pruning,160 refinements, Farkas feasibility cuts and complete10-scenario actual-cost witness"
+bettinelli2017,exact_serialized_reference_tie,293,293.0,max,True,pass,0.22,Conflict-knapsack MIP with greedy clique cover and compatible profit/weight seed
+bierwirth2017,exact_serialized_reference_tie,2197.0,2197.0,min,True,pass,2.45,"Job-shop weighted-tardiness MIP with operation starts, machine-pair disjunctions and due-date/weight serial seed"
+bode2012,exact_serialized_reference_tie,300,300.0,min,True,pass,0.78,Capacitated arc-routing service/deadhead/parity MIP with lazy depot-connectivity cuts and complete serviced/deadheaded route witness
+bodur2017,exact_serialized_reference_tie,74706.08988139468,74706.08988139468,min,True,pass,0.65,Stochastic facility-location10-group Benders master; reusable1250-variable transportation LP and full250-scenario shipment witness
+boland2019,exact_serialized_reference_tie,4910.0,4910.0,min,True,pass,2.24,"Exact tiny bi-objective single-source capacitated facility-location MIP; lexicographic objectives and epsilon sweep, nondominated-front witness"
+bollapragada2001,floating_point_near_tie_not_strict_tie,1673.999504482,1673.9995044819998,min,True,pass,0.26,"Discrete-area truss MIP with signed structural matrix, equilibrium, disaggregated compatibility, Hooke/stress links and complete force/displacement witness"
+borndorfer2007,audited_substantive_published_score_improvement,21166.220504,40885.807478,min,True,pass,18.59,"Legal simple terminal line enumeration, line-frequency master and origin-aggregated directed passenger flows; explicit simple OD path decomposition"
+bragin2022,exact_serialized_reference_tie,8126,8126.0,min,True,pass,2.22,Capacity-pruned generalized-assignment MIP and own regret-ordered feasible greedy seed
+brandao2016,exact_serialized_reference_tie,24,24.0,min,True,pass,1.59,Best-fit-decreasing own packing seed and type-count/bin-slot MIP with volume lower bound and ordered open-bin/load symmetry
+bront2009,floating_point_near_tie_not_strict_tie,7900.0,7899.999999999999,max,True,pass,0.2,Enumerate255 nonempty offer sets and solve exact choice-based deterministic LP with segment arrival probabilities included
+buchheim2018,exact_serialized_reference_tie,1472,1472.0,min,True,pass,3.06,Direct180-binary quadratic shortest-path MIP on tiny directed grid DAG with own linear-cost Dijkstra seed and full ordered-pair objective recomputation
+byeon2022,small_numerical_shortfall,27454.240548766895,27454.240535827164,min,True,pass,0.26,Compact integrated-primal UCGNA MISOCP eliminating reconstructible dispatch/flow/gas variables and exporting complete primary keys including zeros
+caprara1999,exact_serialized_reference_tie,1781.0,1781.0,max,True,pass,0.36,Tiny quadratic knapsack exhaustive subset DFS; directly evaluate x^T P x
+carosi2019,exact_serialized_reference_tie,24254.0,24254.0,min,True,pass,2.35,Restricted integrated timetable path and vehicle path-cover MIPs; independent assignment warmstart; trip activation eliminated through timetable flow
+carvalho1999,exact_serialized_reference_tie,20,20.0,min,True,pass,0.25,Enumerate exact-fill width triples; integer pattern-count master satisfies each width multiplicity; volume bound20 attained
+carvalho2022,exact_serialized_reference_tie,8210.0,8210.0,min,True,pass,6.37,"Aggregate production/inventory and repeated integer setup multigraph; lazy connectivity, original before/after and carryover minimum-lot inequalities; FIFO full production allocation"
+castro2021,audited_numerical_polish_improvement,553065.0,553065.0083355707,min,True,pass,0.21,Transportation LP/QP; complete positive-flow witness and independently recomputed linear/quadratic objective; tiny quadratic coefficients zero
+chebil2015,exact_serialized_reference_tie,11516,11516.0,max,True,pass,2.04,Exact sparse family-aware capacity DP; setup weight/profit applied once per activated class; Pareto prune
+chebil2019,exact_serialized_reference_tie,11443,11443.0,max,True,pass,1.64,Exact sparse family-aware capacity DP; setup capacity/cost applied once; reconstruct item/family selections
+chen1999,small_numerical_shortfall,14925,14924.999797,min,True,pass,1.25,Compact machine-assignment MILP with pairwise Smith-order conditional sequencing costs
+cherkesly2015,audited_substantive_published_score_improvement,102616.4,303868.0,min,True,pass,298.22,LIFO pickup/delivery paired insertion and multistart destroy/repair; route-time/load/stack validity; fixed vehicle cost in depot-origin arcs
+colombi2017,exact_serialized_reference_tie,2844,2844.0,max,True,pass,0.21,"Integer traversal, profitable service binaries and single-commodity connectivity; incompatibility penalties; valid empty initial witness"
+contreras2011,exact_serialized_reference_tie,263399.94606568536,263399.94606568536,min,True,pass,0.27,Exact n^3 origin-hub-hub aggregated flow replacing n^4; original routing objective recomputed from hub assignment
+cordeau2006,exact_serialized_reference_tie,313.18494346405316,313.18494346405316,min,True,pass,2.67,"Time-window-filtered vehicle arcs, shared customer time/load, depot times, same-vehicle pickup/dropoff and ride/route duration limits"
+cordeau2014,exact_serialized_reference_tie,15.295322596030568,15.295322596030568,min,True,pass,0.65,"FIFO earliest-arrival Held-Karp DP, exact integrated piecewise travel speeds and predecessor-tour reconstruction"
+cordeau2019,exact_serialized_reference_tie,5,5.0,min,True,pass,298.29,101-variable facility master with exact lazy submodular coverage upper bounds; greedy independent complete witness for declared variants
+cote2018,exact_serialized_reference_tie,8,8.0,min,True,pass,0.2,Bounded subset-sum normal-pattern arc-flow integer packing; sparse x_p_q and z trusted solverless certificate
+cote2019,feasible_worse,695,670.0,min,True,pass,193.98,"Bidirectional all-scenario robust unloading/2D packing; 2-opt,destroy/reinsert,insertion-column pool and1900-column route partition master; zero recourse restriction retained"
+cunha2021,floating_point_near_tie_not_strict_tie,184504.4103,184504.41030000002,min,True,pass,4.27,Inventory variables eliminated by affine cumulative flow balances;1680 production/setup variables and reconstructed all9 schema arrays
+damcikurt2016,floating_point_near_tie_not_strict_tie,1628.7900882812494,1628.7900882812503,max,True,pass,0.44,Scenario-tree commitment-age/integer-generation DP; nonanticipative policy reconstruction and objective recomputation; avoids oversized MIP
+dayarian2019,audited_substantive_published_score_improvement,333.065,388.095,min,True,pass,0.38,Feasible trip enumeration and two-trip route columns; joint route/production/staffing MILP with released aggregate minimum-paid staffing contract
+degraeve2007,checker_bound_tolerance_artifact_not_exact_improvement,46597.339999653,46597.34,min,True,pass,1.87,Production/setup/inventory and initial inventory MILP; capacity includes setup and variable processing; complete variable witness
+delage2022,exact_serialized_reference_tie,59,59.0,min,True,pass,9.05,"Binary configuration bits times integer repetitions exact linearization; pattern quantities eliminated, symmetry and extra-piece constraints"
+delorme2020,exact_serialized_reference_tie,30,30.0,min,True,pass,0.7,"Best-fit initial bin witness, volume lower-bound early exit, otherwise exact item/bin MILP with independent warmstart"
+desaulniers2010,exact_serialized_reference_tie,1100.3,1100.3,min,True,pass,0.27,Capacity/time-window elementary full-delivery route DFS; cheapest subset route retained; restricted1800-column set partition with singleton warmstart
+desaulniers2014,small_numerical_shortfall,2669.1000000000004,2669.0998530725683,min,True,pass,0.43,"Exact cheapest subset tours plus route-period binary delivery/inventory master; vehicle, customer visitation and preconsumption capacity bounds"
+desaulniers2016,exact_serialized_reference_tie,3018.5,3018.5,min,True,pass,0.27,Exact cheapest subset tours and route-period inventory-routing MILP; complete deliveries and inventories
+dienstknecht2024,exact_serialized_reference_tie,0,0.0,min,True,pass,0.27,Binary trade/container/period assignment and change flags; lazy forbidden subsets enforce adjacency-component dispersion
+earl2005,exact_serialized_reference_tie,0.0,0.0,min,True,pass,0.26,Exact affine defender trajectory elimination preserving attacker dynamics/state-machine and polygon interception/obstacle indicators
+eiselt2009,floating_point_near_tie_not_strict_tie,298578.3661310979,298578.36613110115,max,True,pass,0.26,"Exhaustive p-hub combinations; exact directed OD utility precomputation, best two-hub order and directly recomputed sum-of-ratios capture"
+elci2022,exact_serialized_reference_tie,61.0,61.0,min,True,pass,0.31,Time-indexed cumulative scheduling with sum_t z=x aggregate assignment links; independently generated greedy witness bounds scenario horizon
+engineer2012,feasible_worse,-639.1999999999998,-919.23,min,True,fail,81.5,Immediate unused-vessel sink and demand-prefix early-exit voyages; structured two-supply/two-demand pool capped190 paths/vessel; exact shared cargo/transfer/operation/inventory master with path draft ceilings
+fischetti1997,exact_serialized_reference_tie,1083,1083.0,min,True,pass,4.09,"GTSP representative descent, 2-opt, nearest-cluster initialization and seeded perturbations"
+fischetti1998,exact_serialized_reference_tie,287,287.0,max,True,pass,296.23,"Orienteering prize-density insertion, 2-opt, ruin/recreate; n25 tiny uses heuristic"
+fischetti2017,audited_numerical_polish_improvement,180.0971233764788,180.09712492931288,min,True,pass,0.27,Exhaustive1023 facility subsets with analytic inverse-cost quadratic allocations
+fleszar2022b,exact_serialized_reference_tie,2397,2397.0,max,True,pass,0.32,QMKP marginal add/drop/move warm start and tiny linearized MILP
+forrest2006,floating_point_near_tie_not_strict_tie,17.122,17.122000000000003,max,True,pass,0.26,Color-constrained slab assignment/color/opening MILP
+fragkos2016,exact_serialized_reference_tie,8504.651195279992,8504.651195279992,min,True,pass,0.25,Owned upstream capacitated lot-sizing MILP with mandatory parameters
+fragkos2021,exact_serialized_reference_tie,774228.6679196148,774228.6679196148,min,True,pass,0.3,Reliable-facility-location Benders/lazy master; logs actual expected upper bound
+freeman2018,exact_serialized_reference_tie,27763260.0,27763260.0,max,True,pass,1.07,Enumerate site routes and event schedules with real gravity-model profits
+freling2003,exact_serialized_reference_tie,2085.089084,2085.089084,min,True,pass,0.22,Owned upstream multiperiod single-sourcing assignment/inventory MILP
+frey2017,exact_serialized_reference_tie,0,0.0,min,True,pass,0.26,Flight/station/carousel timing patterns with genuine belt/storage simulation
+furini2016,audited_substantive_published_score_improvement,1600,1592.0,max,True,pass,0.25,Integer-dimension guillotine pattern DP with reconstructed cut/plate witness
+furini2017,exact_serialized_reference_tie,4,4.0,min,True,pass,0.25,Multistart DSATUR and color-symmetry exact improvement search
+furini2019,exact_serialized_reference_tie,3,3.0,max,True,pass,0.2,Bitset maximum-clique branch-and-bound with greedy coloring bounds
+furini2021,exact_serialized_reference_tie,2,2.0,min,True,pass,0.22,Enumerate tiny edge-deletion budget sets with exact surviving clique search
+gamache1999,exact_serialized_reference_tie,0.0,0.0,min,True,pass,5.96,Resource-valid crew roster enumeration and restricted exact-cover MILP
+gangammanavar2020,exact_serialized_reference_tie,29.19018612878519,29.19018612878519,min,True,pass,0.26,Stochastic-transshipment extensive-form LP with actual stock lower bounds
+garcia2011,exact_serialized_reference_tie,167268,167268.0,min,True,pass,297.36,"p-median greedy addition, vectorized one-swap descent and ruin/recreate"
+gruson2021,floating_point_near_tie_not_strict_tie,179645.653626,179645.65362599993,min,True,pass,296.2,Exact retailer-calendar DP conditional on upstream setups +upstream search
+gschwind2021,exact_serialized_reference_tie,11,11.0,min,True,pass,297.23,"Connected s-plex construction, merging and small-group elimination"
+gualandi2012,exact_serialized_reference_tie,5,5.0,min,True,pass,0.21,Multistart DSATUR and exact color improvement search
+guo2021,floating_point_near_tie_not_strict_tie,-38094.0,-38093.99999999999,min,True,pass,0.55,Hospital OR stochastic MILP with actual scenario-performed z witness
+hadjar2006,audited_substantive_published_score_improvement,232286.38999999998,232291.78,min,True,pass,0.56,Depot-specific reduced-cost DAG route pricing +1900-column MIP
+hassannayebi2016,exact_serialized_reference_tie,323.3333333333333,323.3333333333333,min,True,pass,0.53,Tiny PWL arrivals and nonconvex waiting-cost timetable model
+he2020,floating_point_near_tie_not_strict_tie,1102.698,1102.6980000000003,min,True,pass,0.27,Compact routing MILP with lazy quadratic tangent OA and fixed-route QP
+hewitt2024,exact_serialized_reference_tie,3963357.2509966986,3963357.2509966986,max,True,pass,0.32,Endogenous-distribution production MILP with selected-yield revenue linearization
+hoffman1993,exact_serialized_reference_tie,16.0,16.0,min,True,pass,0.26,Rotation set-partitioning MILP with optional base constraints
+hosseinian2020,exact_serialized_reference_tie,939.0,939.0,max,True,pass,0.21,Maximum edge-weight clique MILP with vertex/nonedge linking
+huisman2005,feasible_worse,42,37.0,min,True,fail,10.63,Endpoint-diverse near-zero integrated full-duty/long-arc pricing +restricted MIP
+ji2019,feasible_worse,2745.6000000000004,2613.0000000000005,min,True,pass,0.26,"Conservative integer right-wall/sibling packing, FCFS lock enumeration and berth DP"
+juvin2023,exact_serialized_reference_tie,8.0,8.0,min,True,pass,0.2,Time-indexed preemptive non-migratory flexible job-shop MILP
+kang2021,exact_serialized_reference_tie,17530,17530.0,min,True,pass,0.39,Own truck/drone multistart incumbent then exact tiny MTZ dispatch/battery/waiting MILP
+klose2005,exact_serialized_reference_tie,6153.257932206539,6153.257932206539,min,True,pass,299.23,18-nearest sparse capacitated facility MILP and frozen-outside allocation neighborhoods; complete MIPSOL allocation
+knueven2020,no_checker_accepted_solution,,8406667.52327599,min,False,fail,299.14,Initial-obligation/ramp-envelope constant-commitment master followed by overlapping12-period power LPs retaining6; no full witness obtained
+kobayashi2021,audited_numerical_polish_improvement,-1.7071530563342476,-1.7071527034697254,min,True,pass,11.46,Cardinality CVaR portfolio cutting planes with exact quadratic regularization and full-scenario real-CVaR MIPSOL witness
+kobeaga2024,exact_serialized_reference_tie,5.0,5.0,max,True,pass,0.22,"Prize-density orienteering insertion,2-opt and seeded destroy/repair"
+kowalczyk2018,exact_serialized_reference_tie,19179,19179.0,min,True,pass,0.36,SWPT order and exact two-machine assignment redistribution DP within multistart partitions
+kowalczyk2024,exact_serialized_reference_tie,322,322.0,min,True,pass,299.18,"ATC construction, horizon-valid machine partitions and weighted-tardiness insertion descent"
+kress2019,exact_serialized_reference_tie,22,22.0,min,True,pass,2.79,Concurrent collision-safe time-indexed crane trajectories with enumerated internal-target cooperative handovers
+kreter2018,exact_serialized_reference_tie,57.0,57.0,min,True,pass,299.25,Precedence-feasible activity shifts minimizing true peak resource cost with energy tie-break
+lai2021,exact_serialized_reference_tie,2242.763031,2242.763031,max,True,pass,299.22,"Capacity-feasible diverse grouping with incremental contribution matrix, swaps and single-item moves"
+laporte2003,exact_serialized_reference_tie,18,18.0,min,True,pass,0.53,"Own-bound group rebuilding, equal-price-group purchase MILP with connected-tour lazy cuts; same released missing-price-zero semantics"
+lee1996,exact_serialized_reference_tie,9756.478577000002,9756.478577000002,min,True,pass,299.22,Active Steiner-set add/drop/perturbation search with exact nearest assignments and Prim MST per set
+legrain2020,exact_serialized_reference_tie,990,990.0,min,True,pass,299.22,Daily hard-cover initialization and3-nurse full-horizon MILP neighborhoods with1900-size fallback; complete outside-frozen callback witness
+legrain2024,exact_serialized_reference_tie,10,10.0,min,True,pass,0.21,Compact exact personalized nurse MILP; complete MIPSOL roster/skills with true original schedule/coverage penalties
+letelier2022,exact_serialized_reference_tie,8,8.0,min,True,pass,0.21,Longest-path period windows and exact compact bin-period treatment MILP
+levin2017,no_checker_accepted_solution,2320.0,640.0,min,False,fail,0.2,Physical SAV shortest-path passenger/fleet construction with explicit cumulative road counts; semantic-blocked diagnostic
+li2020,floating_point_near_tie_not_strict_tie,64110554.710739315,64110554.71073932,max,True,pass,0.21,Exact tiny budget-feasible interdiction pattern enumeration with reused defender flow LP
+liao2020,floating_point_near_tie_not_strict_tie,1263.6012102399986,1263.60121024,min,True,pass,0.27,Exact tiny DRO appointment reformulation with MIPSOL all indexed auxiliaries and linked decisions; original linear objective
+lozano2017,exact_serialized_reference_tie,300,300.0,max,True,pass,0.22,Bilevel leader MILP with exact follower solves and follower-value feasibility disjunction cuts
+luo2017,feasible_worse,58185.100000000006,57787.4,min,True,pass,0.56,"Loaded split-delivery singleton initialization, feasible route merging and exact permutations through6 visits"
+mansini2020,exact_serialized_reference_tie,5143,5143.0,max,True,pass,0.21,Exact multiple-choice multidimensional knapsack MILP
+martello1999,exact_serialized_reference_tie,20189,20189.0,max,True,pass,0.27,Exact capacity-indexed0-1 knapsack DP; complete subset traceback at each strict global improvement
+martin-iradi2024,floating_point_near_tie_not_strict_tie,181866.84100000004,181866.841,min,True,pass,0.21,Exact multiport berth/speed MILP with spatial-time disjunctions and exact absolute handling deviation
+mehrotra1996,exact_serialized_reference_tie,5,5.0,min,True,pass,0.21,Greedy DSATUR incumbent and color-symmetry exact branch-and-bound
+mingozzi1999,exact_serialized_reference_tie,657,657.0,min,True,pass,0.32,"Exact compact VRPB arc MILP with linehaul-before-backhaul, MTZ order and phase loads"
+morrison2016,exact_serialized_reference_tie,2,2.0,min,True,pass,0.22,Exact DSATUR branch-and-bound and color-class expansion to required maximal independent sets
+muter2010,exact_serialized_reference_tie,1101.794830754819,1101.794830754819,min,True,pass,0.32,"Exact compact VRPTW arc MILP with9fleet cap, time-window and capacity implications; complete route MIPSOL witness"
+nagy2015,exact_serialized_reference_tie,948,948.0,min,True,pass,0.43,Exact expanded delivery/pickup two-commodity arc MILP with capacity and disconnected-cycle lazy cuts
+oliveira2020,exact_serialized_reference_tie,78,78.0,min,True,pass,0.44,Exact parallel-machine weighted-tardiness disjunctive MILP with shared pair-order variables
+ozturk2020,exact_serialized_reference_tie,27,27.0,min,True,pass,1.81,Exact original job/batch/machine tiny MILP; complete reindexed nonempty-batch MIPSOL witness
+pecin2017,exact_serialized_reference_tie,349.6749216011134,349.6749216011134,min,True,pass,6.27,Cheapest insertion and seeded tight arc-flow MIP; exact branch threshold30
+pedersen2024,exact_serialized_reference_tie,58.6944,58.6944,min,True,pass,0.27,Multisource quota-tree Dijkstra and directed-flow refinement
+pessoa2021,exact_serialized_reference_tie,380,380.0,min,True,pass,0.32,Gamma robust savings/local search and tiny route set partitioning
+pettersson2020,exact_serialized_reference_tie,1,1.0,min,True,pass,0.21,Nonnegative coefficients imply zero vector dominates
+pinnoi1997,exact_serialized_reference_tie,4,4.0,min,True,pass,0.2,Bounds-restricted station assignment and worst idle MIP
+potthoff2010,exact_serialized_reference_tie,626900,626900.0,min,True,pass,0.2,Canonical relief-point completion cover MIP
+rahimian2017,exact_serialized_reference_tie,80,80.0,min,True,pass,0.22,Nurse rostering with auxiliary-free request objective
+rahmaniani2017,floating_point_near_tie_not_strict_tie,147053.72896816232,147053.7289681623,min,True,pass,299.98,Multistart hub add/drop/swap exact commodity recourse scoring
+rahmaniani2018,no_checker_accepted_solution,,1524152091.78372,min,False,fail,0.67,"Original integer cluster investments, identical thermal aggregation, constant relaxed commitment, six-hour nonbalancer dispatch, hourly residual balancing group; full proportional original witness; deferred hourly constraints capped1850"
+rahmaniani2020,exact_serialized_reference_tie,6251.751,6251.751,min,True,pass,0.26,Tiny full-space stochastic facility opening and shipment MIP
+rahmaniani2022,feasible_worse,10791723615.346888,9638644595.031485,min,True,fail,1.2,"Original integer cluster investments, identical thermal aggregation, constant relaxed commitment, six-hour nonbalancer dispatch, hourly residual balancing group; full proportional original witness; deferred hourly constraints capped1850"
+reihaneh2019,exact_serialized_reference_tie,534.0064,534.0064,min,True,pass,0.21,Delivery-site subset tours and customer allocations
+reinhardt2016,floating_point_near_tie_not_strict_tie,369.3,369.29999999999995,min,True,pass,0.27,Vehicle-free paid-edge VRPTW
+ribeiro1994,exact_serialized_reference_tie,110314,110314.0,min,True,pass,0.21,Binary compatible-arc multidepot scheduling
+riley2025,floating_point_near_tie_not_strict_tie,367596.5481017363,367596.5481017368,min,True,pass,1.61,Sampled purchase master; per-period recourse and zero-cost depot moves
+roberti2015,exact_serialized_reference_tie,4959.0,4959.0,min,True,pass,0.35,Capacity-tight fixed-charge transportation and cover inequalities
+roberti2018,exact_serialized_reference_tie,839.9422924874023,839.9422924874023,min,True,pass,0.78,First-echelon patterns and group-aggregated second flow
+roberti2021,exact_serialized_reference_tie,93.0,93.0,min,True,pass,0.22,Truck/drone timing MIP bounded by own combined tour
+ropke2009,exact_serialized_reference_tie,485.5779854924557,485.5779854924557,min,True,pass,0.29,"Vehicle-free pickup-delivery, route labels and exact loads"
+roshanaei2017,floating_point_near_tie_not_strict_tie,4435.474766666666,4435.474766666668,min,True,pass,299.93,Beam64 mandatory/optional physical surgery scheduling
+rostami2021,floating_point_near_tie_not_strict_tie,2032.9899999999998,2032.9900000000002,min,True,pass,2.38,Hubset lower bounds and scenario fixed-hub MIQP
+rothenbacher2018,floating_point_near_tie_not_strict_tie,345.84599999999995,345.846,min,True,pass,0.33,Truck/trailer subset patterns with one parking excursion
+rothenbacher2019,floating_point_near_tie_not_strict_tie,1072.0332108486161,1072.033210848616,min,True,pass,0.31,Daywise periodic route pools linked to schedule parts
+ruiz2007,exact_serialized_reference_tie,1097,1097.0,min,True,pass,299.23,"Exact completion recurrence, NEH and iterated greedy"
+sadykov2013,exact_serialized_reference_tie,23,23.0,min,True,pass,0.27,Conflict-feasible bin patterns and restricted cover MIP
+salemi2022,feasible_worse,457723.21008200006,457720.7146759997,min,True,pass,0.65,"Robust commitment master, exact q and per-scenario dispatch LPs"
+samarghandi2017,exact_serialized_reference_tie,683,683.0,min,True,pass,0.45,No-wait lags and due-date successor MIP
+sansegundo2016,exact_serialized_reference_tie,4,4.0,max,True,pass,0.22,Bitset clique and coloring exact branch-and-bound
+sansegundo2023,exact_serialized_reference_tie,17,17.0,max,True,pass,0.62,Bitset clique and coloring exact branch-and-bound
+savelsbergh1997,exact_serialized_reference_tie,374,374.0,max,True,pass,0.21,Restricted generalized assignment MIP
+schwerdfeger2016,exact_serialized_reference_tie,0.31633605673949555,0.31633605673949555,min,True,pass,0.22,LPT workload construction; improving single-job moves and pairwise swaps
+segundo2019,exact_serialized_reference_tie,1614,1614.0,max,True,pass,299.24,Edge-weighted clique multistart greedy construction and destroy/repair
+segundo2019b,exact_serialized_reference_tie,1644,1644.0,max,True,pass,5.32,Vertex-weighted clique bitset branch-and-bound with weighted independent-set coloring bounds
+seker2021,exact_serialized_reference_tie,1,1.0,min,True,pass,0.22,"Cluster representative selection, greedy coloring and local representative/color changes"
+song2021,floating_point_near_tie_not_strict_tie,49.69047619047615,49.690476190467294,min,True,pass,3.45,Initial interval/intensity greedy coordinate descent; alternative exact reduced pulse MILP
+spliet2015,floating_point_near_tie_not_strict_tie,17.153333333333332,17.153333333333336,min,True,pass,2.23,Shared-window feasible insertion; restricted exact tiny common-window arc-flow model
+taninmis2022,floating_point_near_tie_not_strict_tie,15127466.337623341,15127466.33762311,min,True,pass,3.61,Initial existing-only hourly dispatch; alternative line investments and decomposed 24-hour unit commitment
+tran2018,exact_serialized_reference_tie,6497155.84,6497155.84,max,True,pass,0.51,"Service-set bitsets, redundant-set elimination, exact tiny station subset enumeration"
+vidal2011,exact_serialized_reference_tie,5113.6304286212735,5113.6304286212735,min,True,pass,299.21,"Joint depot/pattern/route insertion, randomized multistart, within-route two-opt"
+walteros2020,exact_serialized_reference_tie,7,7.0,max,True,pass,0.19,Bitset maximum clique greedy starts and coloring branch-and-bound
+wang2018,floating_point_near_tie_not_strict_tie,87.95266686507937,87.95266686507938,min,True,pass,0.27,"Reduced berth/profile master, integral fixed-berth yard transportation LP and Lagrangian cuts"
+wang2019,exact_serialized_reference_tie,4113.0,4113.0,min,True,pass,0.38,Compact exact commodity arc-flow and fleet-design MILP
+wang2025,exact_serialized_reference_tie,19.756310541331167,19.756310541331167,max,True,pass,0.28,Greedy marginal gains followed by exact tiny cardinality subset enumeration
+wangk2020,exact_serialized_reference_tie,0.0,0.0,min,True,pass,0.27,Connection-aware first-stage schedule and greedy recourse respecting released indicator-drop convention
+wangy2020,exact_serialized_reference_tie,423031,423031.0,min,True,pass,296.21,"Parametric LAP starts, exact swap-delta descent, perturbation and gradient LAP; pre-import monotonic deadline repair"
+watermeyer2020,exact_serialized_reference_tie,34,34.0,min,True,pass,0.21,Temporal bound propagation/earliest witness and exact one-hot scheduling MILP
+watermeyer2022,exact_serialized_reference_tie,64,64.0,min,True,pass,0.21,Temporal bound propagation/earliest witness and exact one-hot scheduling MILP
+watermeyer2023,exact_serialized_reference_tie,17,17.0,min,True,pass,0.23,Temporal bound propagation/earliest witness and exact one-hot scheduling MILP
+wei2020,exact_serialized_reference_tie,29,29.0,min,True,pass,0.26,Conflict-aware best-fit decreasing plus compact exact item/bin MILP
+wei2020b,exact_serialized_reference_tie,2,2.0,min,True,pass,0.22,Vector best-fit decreasing plus compact exact two-capacity packing MILP
+wu2018,floating_point_near_tie_not_strict_tie,3363.072340805871,3363.0723408058716,min,True,pass,0.25,Compact exact production/setup/inventory lot-sizing MILP with demand/capacity setup bounds
+wu2022,exact_serialized_reference_tie,15938.0,15938.0,min,True,pass,1.83,Single-sourcing/setup/plant MILP followed by optimal fixed-discrete network-flow completion LP
+wu2023,floating_point_near_tie_not_strict_tie,1.0,1.0000000000000058,max,True,pass,1.98,Exact all-K two-stage scenario subsets plus one-stage convex aggregate assignment MIPs
+xie2019,exact_serialized_reference_tie,1000,1000.0,min,True,pass,0.5,"Deterministic profile reproduction, dominance pruning, constructive multistart and restricted plan MILP"
+xu2024,floating_point_near_tie_not_strict_tie,0.0002101547985383408,0.00021015479853834075,min,True,pass,0.61,Exact tiny cardinality support enumeration with analytical SPD/KKT variance solutions allowing short selling
+yang2013,exact_serialized_reference_tie,49686,49686.0,max,True,pass,45.47,Marginal-density/swap/ruin-repair construction plus exact aggregated-product MILP
+zetina2019,feasible_worse,11162,10477.0,min,True,pass,4.23,"Yen-path pool compact MIP incumbent plus LP shortest-path column pricing, selected commodity/arc links, and binary arc master with original shortest-path witness recovery"
+zetina2020,exact_serialized_reference_tie,2.5749612824,2.5749612824,min,True,pass,0.2,Nearest-neighbor TSP baseline and anchored permutation enumeration
+zhang2025,exact_serialized_reference_tie,8.0,8.0,min,True,pass,0.22,"Duplicate-duty cost dominance, exact-cover construction and exact set-partitioning MILP"
+zohali2022,exact_serialized_reference_tie,61,61.0,min,True,pass,0.27,"Topological contiguous partition baseline, exact station sequence subset DP and ordered-ideal minimax partition DP"

@@ -1,0 +1,38 @@
+{
+  "generator": {
+    "G": "<int> Number of generators owned by the power producer.",
+    "C_lower_MW": "<int> Minimum generation output in megawatts when the generator is running.",
+    "C_upper_MW": "<int> Maximum generation output in megawatts when the generator is running.",
+    "V_plus_MW_per_h": "<int> Maximum increase in generation level allowed between consecutive time periods, in megawatts per period.",
+    "V_minus_MW_per_h": "<int> Maximum decrease in generation level allowed between consecutive time periods, in megawatts per period.",
+    "U_bar_startup_cost_dollars": "<int> Fixed cost in dollars incurred each time the generator is turned on.",
+    "U_lower_shutdown_cost_dollars": "<int> Fixed cost in dollars incurred each time the generator is turned off.",
+    "fuel_cost_type": "<str> Type of fuel cost function used to model operating costs.",
+    "fuel_cost_formula": "<str> Mathematical formula expressing the fuel cost as a function of generation level.",
+    "fuel_a_dollars_per_h": "<float> Fixed hourly operating cost in dollars incurred whenever the generator is running.",
+    "fuel_b_dollars_per_MWh": "<float> Variable operating cost in dollars per megawatt-hour of electricity produced.",
+    "fuel_cost_note": "<str> Explanatory note about the fuel cost approximation used."
+  },
+  "scenario_tree": {
+    "T_num_periods": "<int> Total number of time periods in the planning horizon.",
+    "K_branches_per_node": "<int> Number of child nodes branching from each non-leaf node in the scenario tree.",
+    "L_min_up_time": "<int> Minimum number of consecutive periods the generator must remain on after being started.",
+    "ell_min_down_time": "<int> Minimum number of consecutive periods the generator must remain off after being shut down.",
+    "total_nodes": "<int> Total number of nodes in the scenario tree.",
+    "num_leaf_nodes": "<int> Number of leaf nodes representing final-period outcomes in the scenario tree.",
+    "num_scenarios": "<int> Total number of distinct root-to-leaf paths in the scenario tree.",
+    "initial_generator_status_y0": "<int> On/off status of the generator immediately before the first period (1 = on, 0 = off).",
+    "initial_generation_x0_MW": "<float> Generation level in megawatts immediately before the first period.",
+    "electricity_price_range_dollars_per_MWh": "<list[float], length 2> Lower and upper bounds of the electricity price distribution in dollars per megawatt-hour.",
+    "electricity_price_distribution": "<str> Probability distribution from which electricity prices at each node are drawn.",
+    "nodes": "<list[object], length total_nodes> List of all nodes in the scenario tree, each containing the fields below.",
+    "nodes[*]": {
+      "id": "<int> Unique identifier for this node in the scenario tree.",
+      "time": "<int> Time period associated with this node, starting from 1.",
+      "parent_id": "<int or null> Identifier of this node's parent node, or null for the root node.",
+      "children_ids": "<list[int]> Identifiers of all child nodes branching from this node.",
+      "probability": "<float> Probability of reaching this node from the root of the scenario tree.",
+      "electricity_price_dollars_per_MWh": "<float> Electricity market price at this node in dollars per megawatt-hour."
+    }
+  }
+}

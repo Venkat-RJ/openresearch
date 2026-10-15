@@ -1,0 +1,27 @@
+{
+  "num_customers": "<int> Total number of customers to be served.",
+  "num_vehicles": "<int> Maximum number of vehicles available in the fleet.",
+  "vehicle_capacity": "<int> Maximum total demand that a single vehicle can carry on its route.",
+  "num_edge_sets": "<int> Number of edge sets in the road network partition.",
+  "schedule_horizon": "<int> End of the scheduling window within which all vehicles must return to the depot.",
+  "nodes": [
+    {
+      "id": "<int> Unique identifier for this node, where 0 is the depot and 1 through num_customers are customers.",
+      "x": "<int> Horizontal coordinate of this node's location.",
+      "y": "<int> Vertical coordinate of this node's location.",
+      "demand": "<int> Quantity of goods to be delivered to this node (0 for the depot).",
+      "time_window_start": "<int> Earliest time at which service may begin at this node.",
+      "time_window_end": "<int> Latest time at which service may begin at this node.",
+      "service_time": "<int> Time a vehicle must spend at this node before departing."
+    }
+  ],
+  "edge_sets": [
+    {
+      "id": "<int> Unique identifier for this edge set.",
+      "access_cost": "<float> Fixed cost the company must pay to use any edge in this set.",
+      "edges": "<list[list[int]], length varies> Pairs of node identifiers representing undirected edges belonging to this set."
+    }
+  ],
+  "free_edges": "<list[list[int]], length varies> Pairs of node identifiers representing undirected edges that can be traversed without paying any access cost.",
+  "distance_matrix": "<list[list[float]], shape [num_customers+1][num_customers+1]> Euclidean distance between each pair of nodes, used as both traversal cost and travel time."
+}

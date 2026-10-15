@@ -1,0 +1,7 @@
+# Problem Description
+
+A collection of items is available, and a single knapsack with a given capacity is used to carry a subset of them. The capacity is a non-negative integer. Each item has a known weight that is a non-negative integer. A symmetric profit matrix of non-negative integers is provided, where the entry for any given pair of items is the same regardless of the order in which the two items are listed. The diagonal entry for each item represents the standalone profit earned by selecting that item alone, while each off-diagonal entry for a pair of distinct items represents an additional interaction profit that is earned only when both items in that pair are selected together.
+
+The task is to choose which items to place in the knapsack. Each item is either fully included or excluded. The total weight of all selected items must not exceed the knapsack capacity. The goal is to maximize the total profit, which is the sum of all standalone profits for selected items plus the sum of all pairwise interaction profits for every pair of selected items. Each unordered pair of distinct selected items contributes its interaction profit exactly once, and each selected item contributes its diagonal standalone profit exactly once.
+
+The input data specifies the number of items, the knapsack capacity, the weight of each item, and the full symmetric profit matrix. The density of the profit matrix, meaning the fraction of off-diagonal entries that are nonzero, characterizes how many item pairs have positive interaction profits.

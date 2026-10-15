@@ -1,0 +1,15 @@
+{
+  "objective_value": "<float> Total cost of the routing plan, combining service costs on required edges and travel costs on deadheaded edges across all vehicles.",
+  "routes": [
+    {
+      "vehicle": "<int> Identifier of the vehicle performing this route.",
+      "serviced_edges": "<list[int]> Identifiers of the required edges that this vehicle services during its route.",
+      "deadheaded_edges": [
+        {
+          "edge_id": "<int> Identifier of an edge traversed by this vehicle without servicing it.",
+          "times": "<int> Number of times this vehicle traverses the edge as deadheading."
+        }
+      ]
+    }
+  ]
+}

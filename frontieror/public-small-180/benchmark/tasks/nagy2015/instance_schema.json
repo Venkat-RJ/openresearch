@@ -1,0 +1,19 @@
+{
+  "num_customers": "<int> Number of original customers to be served.",
+  "vehicle_capacity": "<int> Maximum combined delivery and pickup load a single vehicle can carry at any time.",
+  "depot": {
+    "id": "<int> Identifier for the depot node (always 0).",
+    "x": "<int> Horizontal coordinate of the depot.",
+    "y": "<int> Vertical coordinate of the depot."
+  },
+  "customers": [
+    {
+      "id": "<int> Unique identifier for the customer (1-indexed).",
+      "x": "<int> Horizontal coordinate of the customer location.",
+      "y": "<int> Vertical coordinate of the customer location.",
+      "delivery_demand": "<int> Quantity of goods to be delivered from the depot to this customer.",
+      "pickup_demand": "<int> Quantity of goods to be picked up from this customer and returned to the depot."
+    }
+  ],
+  "distance_matrix": "<list[list[int]], shape [num_customers+1][num_customers+1]> Rounded Euclidean distance between each pair of locations, where row/column 0 is the depot and rows/columns 1 through num_customers are the customers."
+}

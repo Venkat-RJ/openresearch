@@ -1,0 +1,71 @@
+{
+  "slot": "final-tf2-uniform-4-r1-egrasp",
+  "instance": "final-tf2-uniform-4",
+  "solver": "egrasp",
+  "repeat": 1,
+  "block": 61,
+  "seed": null,
+  "stratum": "tf2-uniform",
+  "status": "VALID_IN_TIME",
+  "objective": 28194,
+  "measurement": {
+    "argv": [
+      "./egrasp",
+      "/work/runs/final-tf2-uniform-4-r1-egrasp/input.xml",
+      "/work/runs/final-tf2-uniform-4-r1-egrasp/output.xml",
+      "s",
+      "290"
+    ],
+    "pid": 887,
+    "started_unix": 1791489355.3185546,
+    "external_deadline_seconds": 300.0,
+    "elapsed_seconds": 290.7083459239948,
+    "user_cpu_seconds": 288.075675,
+    "system_cpu_seconds": 0.0049949999999999994,
+    "returncode": 1,
+    "timed_out": false,
+    "samples": [
+      {
+        "observed_seconds": 290.691804131995,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "parseable": false,
+        "parse_error": "ParseError"
+      },
+      {
+        "observed_seconds": 290.704982215997,
+        "sha256": "6112ba931c9d37369ba37143d621bc00cd54e1fc2130b83f328602cdab20dc8a",
+        "bytes": 7168,
+        "parseable": true,
+        "parse_error": null,
+        "snapshot": "snapshot-0001.xml"
+      }
+    ],
+    "validation_status": "Pending both schedule validators; parseable is not feasible",
+    "timing_scope": "Process startup and execution; excludes container startup and preconversion"
+  },
+  "checks": [
+    {
+      "snapshot": "snapshot-0001.xml",
+      "observed_seconds": 290.704982215997,
+      "sha256": "6112ba931c9d37369ba37143d621bc00cd54e1fc2130b83f328602cdab20dc8a",
+      "audit": {
+        "feasible": true,
+        "recomputed_objective": 28194,
+        "jobs_checked": 30,
+        "operations_checked": 300,
+        "errors": []
+      },
+      "official": {
+        "feasible": true,
+        "violated_constraints": [],
+        "violations": [],
+        "violation_magnitudes": []
+      },
+      "objective": 28194,
+      "valid": true
+    }
+  ],
+  "report_matches_snapshot": true,
+  "reported": 28194.0
+}

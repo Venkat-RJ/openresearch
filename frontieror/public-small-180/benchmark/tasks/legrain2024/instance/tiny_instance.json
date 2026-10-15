@@ -1,0 +1,282 @@
+{
+  "instance_metadata": {
+    "instance_index": 1,
+    "scale": "small",
+    "generation_seed": 43,
+    "num_nurses": 8,
+    "num_days": 14,
+    "num_weeks": 2,
+    "num_shifts": 2,
+    "num_skills": 1
+  },
+  "shifts": [
+    "Early",
+    "Night"
+  ],
+  "skills": [
+    "Skill_1"
+  ],
+  "nurses": [
+    {
+      "id": "Nurse_1",
+      "skills": [
+        "Skill_1"
+      ],
+      "preferences": []
+    },
+    {
+      "id": "Nurse_2",
+      "skills": [
+        "Skill_1"
+      ],
+      "preferences": []
+    },
+    {
+      "id": "Nurse_3",
+      "skills": [
+        "Skill_1"
+      ],
+      "preferences": []
+    },
+    {
+      "id": "Nurse_4",
+      "skills": [
+        "Skill_1"
+      ],
+      "preferences": []
+    },
+    {
+      "id": "Nurse_5",
+      "skills": [
+        "Skill_1"
+      ],
+      "preferences": []
+    },
+    {
+      "id": "Nurse_6",
+      "skills": [
+        "Skill_1"
+      ],
+      "preferences": [
+        {
+          "day": 11,
+          "type": "day_off",
+          "shift": "None",
+          "penalty": 10
+        },
+        {
+          "day": 14,
+          "type": "day_off",
+          "shift": "None",
+          "penalty": 10
+        }
+      ]
+    },
+    {
+      "id": "Nurse_7",
+      "skills": [
+        "Skill_1"
+      ],
+      "preferences": []
+    },
+    {
+      "id": "Nurse_8",
+      "skills": [
+        "Skill_1"
+      ],
+      "preferences": [
+        {
+          "day": 13,
+          "type": "day_off",
+          "shift": "None",
+          "penalty": 10
+        }
+      ]
+    }
+  ],
+  "weekend_definition": "Saturday-Sunday",
+  "weekends": [
+    {
+      "week": 1,
+      "saturday": 6,
+      "sunday": 7
+    },
+    {
+      "week": 2,
+      "saturday": 13,
+      "sunday": 14
+    }
+  ],
+  "demand": {
+    "day_1": {
+      "Early": {
+        "Skill_1": 1
+      },
+      "Night": {
+        "Skill_1": 2
+      }
+    },
+    "day_2": {
+      "Early": {
+        "Skill_1": 2
+      },
+      "Night": {
+        "Skill_1": 3
+      }
+    },
+    "day_3": {
+      "Early": {
+        "Skill_1": 2
+      },
+      "Night": {
+        "Skill_1": 1
+      }
+    },
+    "day_4": {
+      "Early": {
+        "Skill_1": 3
+      },
+      "Night": {
+        "Skill_1": 3
+      }
+    },
+    "day_5": {
+      "Early": {
+        "Skill_1": 1
+      },
+      "Night": {
+        "Skill_1": 3
+      }
+    },
+    "day_6": {
+      "Early": {
+        "Skill_1": 1
+      },
+      "Night": {
+        "Skill_1": 2
+      }
+    },
+    "day_7": {
+      "Early": {
+        "Skill_1": 2
+      },
+      "Night": {
+        "Skill_1": 1
+      }
+    },
+    "day_8": {
+      "Early": {
+        "Skill_1": 1
+      },
+      "Night": {
+        "Skill_1": 1
+      }
+    },
+    "day_9": {
+      "Early": {
+        "Skill_1": 1
+      },
+      "Night": {
+        "Skill_1": 3
+      }
+    },
+    "day_10": {
+      "Early": {
+        "Skill_1": 2
+      },
+      "Night": {
+        "Skill_1": 1
+      }
+    },
+    "day_11": {
+      "Early": {
+        "Skill_1": 2
+      },
+      "Night": {
+        "Skill_1": 3
+      }
+    },
+    "day_12": {
+      "Early": {
+        "Skill_1": 2
+      },
+      "Night": {
+        "Skill_1": 3
+      }
+    },
+    "day_13": {
+      "Early": {
+        "Skill_1": 1
+      },
+      "Night": {
+        "Skill_1": 1
+      }
+    },
+    "day_14": {
+      "Early": {
+        "Skill_1": 2
+      },
+      "Night": {
+        "Skill_1": 1
+      }
+    }
+  },
+  "constraints": {
+    "hard_constraints": {
+      "forbidden_patterns": [
+        {
+          "pattern": [
+            [
+              "AnyDay",
+              "Night"
+            ],
+            [
+              "AnyDay",
+              "Early"
+            ]
+          ],
+          "description": "Night shift followed by Early shift is forbidden"
+        }
+      ],
+      "skill_requirement": true,
+      "single_assignment_per_day": true
+    },
+    "soft_constraints": {
+      "total_working_days": {
+        "min": 5,
+        "max": 9,
+        "penalty_under": 20,
+        "penalty_over": 20
+      },
+      "total_worked_weekends": {
+        "max": 1,
+        "penalty": 30
+      },
+      "consecutive_working_days": {
+        "min": 2,
+        "max": 5,
+        "penalty_under": 30,
+        "penalty_over": 30
+      },
+      "consecutive_days_off": {
+        "min": 1,
+        "max": 3,
+        "penalty_under": 30,
+        "penalty_over": 30
+      },
+      "consecutive_same_shift": {
+        "max": 4,
+        "penalty": 15
+      },
+      "consecutive_worked_weekends": {
+        "max": 2,
+        "penalty": 30
+      },
+      "identical_weekend": {
+        "enabled": true,
+        "penalty": 30
+      }
+    }
+  },
+  "unsatisfied_demand_penalty": 1000
+}

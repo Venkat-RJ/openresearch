@@ -1,0 +1,2555 @@
+{
+  "problem": "Nurse Scheduling Problem (INRC-II static)",
+  "instance_id": 1,
+  "num_nurses": 30,
+  "num_weeks": 4,
+  "num_days": 28,
+  "num_shifts": 3,
+  "num_skills": 2,
+  "seed": 1000,
+  "skills": [
+    "HeadNurse",
+    "Nurse"
+  ],
+  "shifts": [
+    {
+      "name": "Early",
+      "CS_minus": 1,
+      "CS_plus": 4
+    },
+    {
+      "name": "Day",
+      "CS_minus": 2,
+      "CS_plus": 3
+    },
+    {
+      "name": "Late",
+      "CS_minus": 2,
+      "CS_plus": 3
+    }
+  ],
+  "forbidden_shift_successions": [
+    [
+      "Late",
+      "Early"
+    ]
+  ],
+  "penalty_weights": {
+    "c_S1": 30,
+    "c_S2a": 30,
+    "c_S2b": 15,
+    "c_S3": 30,
+    "c_S4": 10,
+    "c_S5": 30,
+    "c_S6": 20,
+    "c_S7": 30
+  },
+  "nurses": [
+    {
+      "id": 0,
+      "name": "Nurse_0",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 10,
+        "L_plus": 18,
+        "CD_minus": 2,
+        "CD_plus": 5,
+        "CR_minus": 2,
+        "CR_plus": 3,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 1,
+          "shift": "Late"
+        },
+        {
+          "day": 4,
+          "shift": "Early"
+        },
+        {
+          "day": 8,
+          "shift": "Early"
+        },
+        {
+          "day": 8,
+          "shift": "Day"
+        },
+        {
+          "day": 9,
+          "shift": "Early"
+        },
+        {
+          "day": 11,
+          "shift": "Day"
+        },
+        {
+          "day": 14,
+          "shift": "Early"
+        },
+        {
+          "day": 14,
+          "shift": "Day"
+        },
+        {
+          "day": 17,
+          "shift": "Early"
+        },
+        {
+          "day": 23,
+          "shift": "Early"
+        },
+        {
+          "day": 26,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Nurse_1",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 15,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 7,
+        "CR_minus": 1,
+        "CR_plus": 3,
+        "WE_plus": 2
+      },
+      "preferences": [
+        {
+          "day": 1,
+          "shift": "Early"
+        },
+        {
+          "day": 3,
+          "shift": "Late"
+        },
+        {
+          "day": 7,
+          "shift": "Early"
+        },
+        {
+          "day": 8,
+          "shift": "Day"
+        },
+        {
+          "day": 9,
+          "shift": "Late"
+        },
+        {
+          "day": 15,
+          "shift": "Day"
+        },
+        {
+          "day": 21,
+          "shift": "Day"
+        },
+        {
+          "day": 21,
+          "shift": "Late"
+        },
+        {
+          "day": 25,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Nurse_2",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 13,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 5,
+        "CR_minus": 1,
+        "CR_plus": 4,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 1,
+          "shift": "Early"
+        },
+        {
+          "day": 5,
+          "shift": "Late"
+        },
+        {
+          "day": 11,
+          "shift": "Day"
+        },
+        {
+          "day": 17,
+          "shift": "Early"
+        },
+        {
+          "day": 24,
+          "shift": "Early"
+        },
+        {
+          "day": 24,
+          "shift": "Day"
+        },
+        {
+          "day": 26,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Nurse_3",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 10,
+        "L_plus": 18,
+        "CD_minus": 2,
+        "CD_plus": 5,
+        "CR_minus": 2,
+        "CR_plus": 3,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 2,
+          "shift": "Day"
+        },
+        {
+          "day": 6,
+          "shift": "Early"
+        },
+        {
+          "day": 8,
+          "shift": "Early"
+        },
+        {
+          "day": 9,
+          "shift": "Early"
+        },
+        {
+          "day": 11,
+          "shift": "Early"
+        },
+        {
+          "day": 12,
+          "shift": "Day"
+        },
+        {
+          "day": 13,
+          "shift": "Day"
+        },
+        {
+          "day": 16,
+          "shift": "Day"
+        },
+        {
+          "day": 19,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Nurse_4",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 15,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 7,
+        "CR_minus": 1,
+        "CR_plus": 3,
+        "WE_plus": 2
+      },
+      "preferences": [
+        {
+          "day": 2,
+          "shift": "Day"
+        },
+        {
+          "day": 7,
+          "shift": "Late"
+        },
+        {
+          "day": 14,
+          "shift": "Late"
+        },
+        {
+          "day": 15,
+          "shift": "Day"
+        },
+        {
+          "day": 21,
+          "shift": "Day"
+        },
+        {
+          "day": 24,
+          "shift": "Day"
+        },
+        {
+          "day": 26,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Nurse_5",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 13,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 5,
+        "CR_minus": 1,
+        "CR_plus": 4,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 0,
+          "shift": "Day"
+        },
+        {
+          "day": 21,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Nurse_6",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 10,
+        "L_plus": 18,
+        "CD_minus": 2,
+        "CD_plus": 5,
+        "CR_minus": 2,
+        "CR_plus": 3,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 0,
+          "shift": "Early"
+        },
+        {
+          "day": 0,
+          "shift": "Late"
+        },
+        {
+          "day": 8,
+          "shift": "Early"
+        },
+        {
+          "day": 9,
+          "shift": "Late"
+        },
+        {
+          "day": 11,
+          "shift": "Day"
+        },
+        {
+          "day": 18,
+          "shift": "Day"
+        },
+        {
+          "day": 20,
+          "shift": "Early"
+        },
+        {
+          "day": 21,
+          "shift": "Early"
+        },
+        {
+          "day": 22,
+          "shift": "Late"
+        },
+        {
+          "day": 23,
+          "shift": "Late"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Nurse_7",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 15,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 7,
+        "CR_minus": 1,
+        "CR_plus": 3,
+        "WE_plus": 2
+      },
+      "preferences": [
+        {
+          "day": 2,
+          "shift": "Late"
+        },
+        {
+          "day": 11,
+          "shift": "Late"
+        },
+        {
+          "day": 17,
+          "shift": "Day"
+        },
+        {
+          "day": 22,
+          "shift": "Early"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Nurse_8",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 13,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 5,
+        "CR_minus": 1,
+        "CR_plus": 4,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 0,
+          "shift": "Early"
+        },
+        {
+          "day": 1,
+          "shift": "Late"
+        },
+        {
+          "day": 11,
+          "shift": "Day"
+        },
+        {
+          "day": 12,
+          "shift": "Late"
+        },
+        {
+          "day": 15,
+          "shift": "Day"
+        },
+        {
+          "day": 16,
+          "shift": "Late"
+        },
+        {
+          "day": 20,
+          "shift": "Early"
+        },
+        {
+          "day": 25,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Nurse_9",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 10,
+        "L_plus": 18,
+        "CD_minus": 2,
+        "CD_plus": 5,
+        "CR_minus": 2,
+        "CR_plus": 3,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 3,
+          "shift": "Early"
+        },
+        {
+          "day": 4,
+          "shift": "Day"
+        },
+        {
+          "day": 5,
+          "shift": "Early"
+        },
+        {
+          "day": 5,
+          "shift": "Day"
+        },
+        {
+          "day": 13,
+          "shift": "Day"
+        },
+        {
+          "day": 23,
+          "shift": "Late"
+        },
+        {
+          "day": 25,
+          "shift": "Early"
+        },
+        {
+          "day": 25,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Nurse_10",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 15,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 7,
+        "CR_minus": 1,
+        "CR_plus": 3,
+        "WE_plus": 2
+      },
+      "preferences": [
+        {
+          "day": 4,
+          "shift": "Late"
+        },
+        {
+          "day": 5,
+          "shift": "Late"
+        },
+        {
+          "day": 7,
+          "shift": "Day"
+        },
+        {
+          "day": 7,
+          "shift": "Late"
+        },
+        {
+          "day": 14,
+          "shift": "Day"
+        },
+        {
+          "day": 15,
+          "shift": "Late"
+        },
+        {
+          "day": 23,
+          "shift": "Early"
+        },
+        {
+          "day": 27,
+          "shift": "Early"
+        },
+        {
+          "day": 27,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Nurse_11",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 13,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 5,
+        "CR_minus": 1,
+        "CR_plus": 4,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 0,
+          "shift": "Late"
+        },
+        {
+          "day": 3,
+          "shift": "Late"
+        },
+        {
+          "day": 4,
+          "shift": "Early"
+        },
+        {
+          "day": 5,
+          "shift": "Late"
+        },
+        {
+          "day": 10,
+          "shift": "Early"
+        },
+        {
+          "day": 12,
+          "shift": "Day"
+        },
+        {
+          "day": 18,
+          "shift": "Day"
+        },
+        {
+          "day": 24,
+          "shift": "Early"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Nurse_12",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 10,
+        "L_plus": 18,
+        "CD_minus": 2,
+        "CD_plus": 5,
+        "CR_minus": 2,
+        "CR_plus": 3,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 1,
+          "shift": "Day"
+        },
+        {
+          "day": 4,
+          "shift": "Late"
+        },
+        {
+          "day": 9,
+          "shift": "Late"
+        },
+        {
+          "day": 10,
+          "shift": "Late"
+        },
+        {
+          "day": 12,
+          "shift": "Early"
+        },
+        {
+          "day": 14,
+          "shift": "Day"
+        },
+        {
+          "day": 16,
+          "shift": "Early"
+        },
+        {
+          "day": 18,
+          "shift": "Early"
+        },
+        {
+          "day": 19,
+          "shift": "Early"
+        },
+        {
+          "day": 23,
+          "shift": "Late"
+        },
+        {
+          "day": 24,
+          "shift": "Early"
+        },
+        {
+          "day": 24,
+          "shift": "Day"
+        },
+        {
+          "day": 26,
+          "shift": "Early"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Nurse_13",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 15,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 7,
+        "CR_minus": 1,
+        "CR_plus": 3,
+        "WE_plus": 2
+      },
+      "preferences": [
+        {
+          "day": 3,
+          "shift": "Late"
+        },
+        {
+          "day": 4,
+          "shift": "Day"
+        },
+        {
+          "day": 5,
+          "shift": "Late"
+        },
+        {
+          "day": 15,
+          "shift": "Early"
+        },
+        {
+          "day": 18,
+          "shift": "Day"
+        },
+        {
+          "day": 23,
+          "shift": "Late"
+        },
+        {
+          "day": 26,
+          "shift": "Late"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Nurse_14",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 13,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 5,
+        "CR_minus": 1,
+        "CR_plus": 4,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 4,
+          "shift": "Day"
+        },
+        {
+          "day": 5,
+          "shift": "Day"
+        },
+        {
+          "day": 5,
+          "shift": "Late"
+        },
+        {
+          "day": 12,
+          "shift": "Early"
+        },
+        {
+          "day": 15,
+          "shift": "Day"
+        },
+        {
+          "day": 18,
+          "shift": "Late"
+        },
+        {
+          "day": 20,
+          "shift": "Early"
+        },
+        {
+          "day": 22,
+          "shift": "Day"
+        },
+        {
+          "day": 26,
+          "shift": "Late"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Nurse_15",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 10,
+        "L_plus": 18,
+        "CD_minus": 2,
+        "CD_plus": 5,
+        "CR_minus": 2,
+        "CR_plus": 3,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 2,
+          "shift": "Day"
+        },
+        {
+          "day": 7,
+          "shift": "Day"
+        },
+        {
+          "day": 9,
+          "shift": "Day"
+        },
+        {
+          "day": 14,
+          "shift": "Day"
+        },
+        {
+          "day": 14,
+          "shift": "Late"
+        },
+        {
+          "day": 15,
+          "shift": "Day"
+        },
+        {
+          "day": 21,
+          "shift": "Late"
+        },
+        {
+          "day": 24,
+          "shift": "Early"
+        },
+        {
+          "day": 25,
+          "shift": "Day"
+        },
+        {
+          "day": 26,
+          "shift": "Early"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Nurse_16",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 15,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 7,
+        "CR_minus": 1,
+        "CR_plus": 3,
+        "WE_plus": 2
+      },
+      "preferences": [
+        {
+          "day": 2,
+          "shift": "Early"
+        },
+        {
+          "day": 2,
+          "shift": "Day"
+        },
+        {
+          "day": 8,
+          "shift": "Day"
+        },
+        {
+          "day": 8,
+          "shift": "Late"
+        },
+        {
+          "day": 11,
+          "shift": "Day"
+        },
+        {
+          "day": 11,
+          "shift": "Late"
+        },
+        {
+          "day": 12,
+          "shift": "Day"
+        },
+        {
+          "day": 18,
+          "shift": "Early"
+        },
+        {
+          "day": 18,
+          "shift": "Late"
+        },
+        {
+          "day": 19,
+          "shift": "Early"
+        },
+        {
+          "day": 21,
+          "shift": "Early"
+        },
+        {
+          "day": 27,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Nurse_17",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 13,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 5,
+        "CR_minus": 1,
+        "CR_plus": 4,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 1,
+          "shift": "Early"
+        },
+        {
+          "day": 4,
+          "shift": "Early"
+        },
+        {
+          "day": 8,
+          "shift": "Early"
+        },
+        {
+          "day": 9,
+          "shift": "Day"
+        },
+        {
+          "day": 11,
+          "shift": "Early"
+        },
+        {
+          "day": 16,
+          "shift": "Late"
+        },
+        {
+          "day": 17,
+          "shift": "Late"
+        },
+        {
+          "day": 21,
+          "shift": "Day"
+        },
+        {
+          "day": 22,
+          "shift": "Late"
+        },
+        {
+          "day": 27,
+          "shift": "Early"
+        },
+        {
+          "day": 27,
+          "shift": "Late"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Nurse_18",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 10,
+        "L_plus": 18,
+        "CD_minus": 2,
+        "CD_plus": 5,
+        "CR_minus": 2,
+        "CR_plus": 3,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 1,
+          "shift": "Early"
+        },
+        {
+          "day": 3,
+          "shift": "Day"
+        },
+        {
+          "day": 6,
+          "shift": "Day"
+        },
+        {
+          "day": 9,
+          "shift": "Late"
+        },
+        {
+          "day": 18,
+          "shift": "Early"
+        },
+        {
+          "day": 20,
+          "shift": "Early"
+        },
+        {
+          "day": 21,
+          "shift": "Day"
+        },
+        {
+          "day": 23,
+          "shift": "Early"
+        },
+        {
+          "day": 24,
+          "shift": "Late"
+        },
+        {
+          "day": 26,
+          "shift": "Early"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Nurse_19",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 15,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 7,
+        "CR_minus": 1,
+        "CR_plus": 3,
+        "WE_plus": 2
+      },
+      "preferences": [
+        {
+          "day": 2,
+          "shift": "Day"
+        },
+        {
+          "day": 5,
+          "shift": "Day"
+        },
+        {
+          "day": 11,
+          "shift": "Day"
+        },
+        {
+          "day": 13,
+          "shift": "Day"
+        },
+        {
+          "day": 17,
+          "shift": "Early"
+        },
+        {
+          "day": 25,
+          "shift": "Late"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Nurse_20",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 13,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 5,
+        "CR_minus": 1,
+        "CR_plus": 4,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 4,
+          "shift": "Late"
+        },
+        {
+          "day": 5,
+          "shift": "Day"
+        },
+        {
+          "day": 7,
+          "shift": "Early"
+        },
+        {
+          "day": 8,
+          "shift": "Early"
+        },
+        {
+          "day": 10,
+          "shift": "Late"
+        },
+        {
+          "day": 13,
+          "shift": "Early"
+        },
+        {
+          "day": 19,
+          "shift": "Early"
+        },
+        {
+          "day": 23,
+          "shift": "Day"
+        },
+        {
+          "day": 25,
+          "shift": "Early"
+        },
+        {
+          "day": 25,
+          "shift": "Late"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Nurse_21",
+      "skills": [
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 10,
+        "L_plus": 18,
+        "CD_minus": 2,
+        "CD_plus": 5,
+        "CR_minus": 2,
+        "CR_plus": 3,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 0,
+          "shift": "Day"
+        },
+        {
+          "day": 1,
+          "shift": "Late"
+        },
+        {
+          "day": 4,
+          "shift": "Day"
+        },
+        {
+          "day": 8,
+          "shift": "Late"
+        },
+        {
+          "day": 13,
+          "shift": "Day"
+        },
+        {
+          "day": 24,
+          "shift": "Late"
+        },
+        {
+          "day": 26,
+          "shift": "Early"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Nurse_22",
+      "skills": [
+        "HeadNurse",
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 15,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 7,
+        "CR_minus": 1,
+        "CR_plus": 3,
+        "WE_plus": 2
+      },
+      "preferences": [
+        {
+          "day": 5,
+          "shift": "Early"
+        },
+        {
+          "day": 12,
+          "shift": "Late"
+        },
+        {
+          "day": 14,
+          "shift": "Late"
+        },
+        {
+          "day": 23,
+          "shift": "Day"
+        },
+        {
+          "day": 24,
+          "shift": "Day"
+        },
+        {
+          "day": 27,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Nurse_23",
+      "skills": [
+        "HeadNurse",
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 13,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 5,
+        "CR_minus": 1,
+        "CR_plus": 4,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 2,
+          "shift": "Early"
+        },
+        {
+          "day": 4,
+          "shift": "Early"
+        },
+        {
+          "day": 5,
+          "shift": "Day"
+        },
+        {
+          "day": 8,
+          "shift": "Late"
+        },
+        {
+          "day": 14,
+          "shift": "Early"
+        },
+        {
+          "day": 15,
+          "shift": "Day"
+        },
+        {
+          "day": 16,
+          "shift": "Early"
+        },
+        {
+          "day": 16,
+          "shift": "Day"
+        },
+        {
+          "day": 17,
+          "shift": "Late"
+        },
+        {
+          "day": 19,
+          "shift": "Day"
+        },
+        {
+          "day": 21,
+          "shift": "Late"
+        },
+        {
+          "day": 22,
+          "shift": "Early"
+        },
+        {
+          "day": 26,
+          "shift": "Day"
+        },
+        {
+          "day": 27,
+          "shift": "Early"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Nurse_24",
+      "skills": [
+        "HeadNurse"
+      ],
+      "contract": {
+        "L_minus": 10,
+        "L_plus": 18,
+        "CD_minus": 2,
+        "CD_plus": 5,
+        "CR_minus": 2,
+        "CR_plus": 3,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 3,
+          "shift": "Early"
+        },
+        {
+          "day": 3,
+          "shift": "Late"
+        },
+        {
+          "day": 4,
+          "shift": "Late"
+        },
+        {
+          "day": 7,
+          "shift": "Late"
+        },
+        {
+          "day": 8,
+          "shift": "Early"
+        },
+        {
+          "day": 9,
+          "shift": "Early"
+        },
+        {
+          "day": 9,
+          "shift": "Day"
+        },
+        {
+          "day": 9,
+          "shift": "Late"
+        },
+        {
+          "day": 10,
+          "shift": "Early"
+        },
+        {
+          "day": 15,
+          "shift": "Early"
+        },
+        {
+          "day": 16,
+          "shift": "Late"
+        },
+        {
+          "day": 17,
+          "shift": "Day"
+        },
+        {
+          "day": 19,
+          "shift": "Early"
+        },
+        {
+          "day": 19,
+          "shift": "Day"
+        },
+        {
+          "day": 21,
+          "shift": "Early"
+        },
+        {
+          "day": 22,
+          "shift": "Late"
+        },
+        {
+          "day": 26,
+          "shift": "Early"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Nurse_25",
+      "skills": [
+        "HeadNurse"
+      ],
+      "contract": {
+        "L_minus": 15,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 7,
+        "CR_minus": 1,
+        "CR_plus": 3,
+        "WE_plus": 2
+      },
+      "preferences": [
+        {
+          "day": 1,
+          "shift": "Day"
+        },
+        {
+          "day": 1,
+          "shift": "Late"
+        },
+        {
+          "day": 9,
+          "shift": "Late"
+        },
+        {
+          "day": 13,
+          "shift": "Early"
+        },
+        {
+          "day": 14,
+          "shift": "Early"
+        },
+        {
+          "day": 21,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Nurse_26",
+      "skills": [
+        "HeadNurse"
+      ],
+      "contract": {
+        "L_minus": 13,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 5,
+        "CR_minus": 1,
+        "CR_plus": 4,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 0,
+          "shift": "Early"
+        },
+        {
+          "day": 1,
+          "shift": "Late"
+        },
+        {
+          "day": 11,
+          "shift": "Early"
+        },
+        {
+          "day": 14,
+          "shift": "Day"
+        },
+        {
+          "day": 14,
+          "shift": "Late"
+        },
+        {
+          "day": 15,
+          "shift": "Late"
+        },
+        {
+          "day": 18,
+          "shift": "Day"
+        },
+        {
+          "day": 25,
+          "shift": "Early"
+        },
+        {
+          "day": 25,
+          "shift": "Day"
+        },
+        {
+          "day": 25,
+          "shift": "Late"
+        },
+        {
+          "day": 27,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Nurse_27",
+      "skills": [
+        "HeadNurse",
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 10,
+        "L_plus": 18,
+        "CD_minus": 2,
+        "CD_plus": 5,
+        "CR_minus": 2,
+        "CR_plus": 3,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 4,
+          "shift": "Day"
+        },
+        {
+          "day": 7,
+          "shift": "Early"
+        },
+        {
+          "day": 16,
+          "shift": "Early"
+        },
+        {
+          "day": 20,
+          "shift": "Day"
+        },
+        {
+          "day": 22,
+          "shift": "Late"
+        },
+        {
+          "day": 24,
+          "shift": "Day"
+        },
+        {
+          "day": 26,
+          "shift": "Late"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Nurse_28",
+      "skills": [
+        "HeadNurse",
+        "Nurse"
+      ],
+      "contract": {
+        "L_minus": 15,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 7,
+        "CR_minus": 1,
+        "CR_plus": 3,
+        "WE_plus": 2
+      },
+      "preferences": [
+        {
+          "day": 11,
+          "shift": "Late"
+        },
+        {
+          "day": 13,
+          "shift": "Early"
+        },
+        {
+          "day": 14,
+          "shift": "Day"
+        },
+        {
+          "day": 16,
+          "shift": "Day"
+        },
+        {
+          "day": 16,
+          "shift": "Late"
+        },
+        {
+          "day": 17,
+          "shift": "Early"
+        },
+        {
+          "day": 18,
+          "shift": "Early"
+        },
+        {
+          "day": 18,
+          "shift": "Day"
+        },
+        {
+          "day": 20,
+          "shift": "Early"
+        },
+        {
+          "day": 21,
+          "shift": "Early"
+        },
+        {
+          "day": 24,
+          "shift": "Early"
+        },
+        {
+          "day": 24,
+          "shift": "Day"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Nurse_29",
+      "skills": [
+        "HeadNurse"
+      ],
+      "contract": {
+        "L_minus": 13,
+        "L_plus": 21,
+        "CD_minus": 3,
+        "CD_plus": 5,
+        "CR_minus": 1,
+        "CR_plus": 4,
+        "WE_plus": 1
+      },
+      "preferences": [
+        {
+          "day": 11,
+          "shift": "Late"
+        },
+        {
+          "day": 14,
+          "shift": "Early"
+        },
+        {
+          "day": 16,
+          "shift": "Day"
+        },
+        {
+          "day": 18,
+          "shift": "Late"
+        },
+        {
+          "day": 21,
+          "shift": "Early"
+        },
+        {
+          "day": 26,
+          "shift": "Day"
+        }
+      ]
+    }
+  ],
+  "demand": [
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 6
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 5
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 6
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 6
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 5
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 7
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 7
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 6
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 7
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 6
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 6
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 7
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 6
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 4
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 3
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 2,
+          "optimal": 3
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 4
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 4
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 3
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 2,
+          "optimal": 3
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 5
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 8
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 8
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 5
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 4
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 4
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 8
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 5
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 5
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 7
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 4
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 5
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 5
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 6
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 7
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 4
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 4
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 4
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 5
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 5
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 4
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 2,
+          "optimal": 2
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 7
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 5
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 5
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 4
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 5
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 3
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 7
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 8
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 6
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 4
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 4
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 6
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 5
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 5
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 4
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 5
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 3
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 2,
+          "optimal": 2
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 5
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 4
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 5
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 6
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 6,
+          "optimal": 7
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 5
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 5
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 5
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 7
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 6
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 5
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 5
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 4
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 6
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 3
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 5
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 5,
+          "optimal": 5
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 5
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 2,
+          "optimal": 2
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 4
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 2,
+          "optimal": 2
+        }
+      }
+    },
+    {
+      "Early": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 5
+        }
+      },
+      "Day": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 1
+        },
+        "Nurse": {
+          "minimum": 4,
+          "optimal": 6
+        }
+      },
+      "Late": {
+        "HeadNurse": {
+          "minimum": 1,
+          "optimal": 2
+        },
+        "Nurse": {
+          "minimum": 3,
+          "optimal": 5
+        }
+      }
+    }
+  ]
+}

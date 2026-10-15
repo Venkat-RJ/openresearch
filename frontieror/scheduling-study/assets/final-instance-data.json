@@ -1,0 +1,962 @@
+[
+  {
+    "instance": "final-tf3_2-uniform-0",
+    "stratum": "tf3/2-uniform",
+    "tightness": "3/2",
+    "weights": "uniform",
+    "v2_objectives": [
+      57277,
+      60523,
+      60378
+    ],
+    "egrasp_objectives": [
+      63355,
+      63355,
+      63355
+    ],
+    "v2_mean": 59392.666666666664,
+    "egrasp_mean": 63355,
+    "normalized_advantage": 0.06254176202877966,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf3_2-uniform-0-r0-frozen-v2",
+        "final-tf3_2-uniform-0-r1-frozen-v2",
+        "final-tf3_2-uniform-0-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf3_2-uniform-0-r0-egrasp",
+        "final-tf3_2-uniform-0-r1-egrasp",
+        "final-tf3_2-uniform-0-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf3_2-uniform-1",
+    "stratum": "tf3/2-uniform",
+    "tightness": "3/2",
+    "weights": "uniform",
+    "v2_objectives": [
+      43466,
+      42232,
+      43314
+    ],
+    "egrasp_objectives": [
+      49547,
+      49547,
+      49547
+    ],
+    "v2_mean": 43004,
+    "egrasp_mean": 49547,
+    "normalized_advantage": 0.13205643126728156,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf3_2-uniform-1-r0-frozen-v2",
+        "final-tf3_2-uniform-1-r1-frozen-v2",
+        "final-tf3_2-uniform-1-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf3_2-uniform-1-r0-egrasp",
+        "final-tf3_2-uniform-1-r1-egrasp",
+        "final-tf3_2-uniform-1-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf3_2-uniform-2",
+    "stratum": "tf3/2-uniform",
+    "tightness": "3/2",
+    "weights": "uniform",
+    "v2_objectives": [
+      55539,
+      56450,
+      56870
+    ],
+    "egrasp_objectives": [
+      63559,
+      63559,
+      63559
+    ],
+    "v2_mean": 56286.333333333336,
+    "egrasp_mean": 63559,
+    "normalized_advantage": 0.11442386863648994,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf3_2-uniform-2-r0-frozen-v2",
+        "final-tf3_2-uniform-2-r1-frozen-v2",
+        "final-tf3_2-uniform-2-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf3_2-uniform-2-r0-egrasp",
+        "final-tf3_2-uniform-2-r1-egrasp",
+        "final-tf3_2-uniform-2-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf3_2-uniform-3",
+    "stratum": "tf3/2-uniform",
+    "tightness": "3/2",
+    "weights": "uniform",
+    "v2_objectives": [
+      30584,
+      31055,
+      31943
+    ],
+    "egrasp_objectives": [
+      35141,
+      35141,
+      35141
+    ],
+    "v2_mean": 31194,
+    "egrasp_mean": 35141,
+    "normalized_advantage": 0.11231894368401582,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf3_2-uniform-3-r0-frozen-v2",
+        "final-tf3_2-uniform-3-r1-frozen-v2",
+        "final-tf3_2-uniform-3-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf3_2-uniform-3-r0-egrasp",
+        "final-tf3_2-uniform-3-r1-egrasp",
+        "final-tf3_2-uniform-3-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf3_2-uniform-4",
+    "stratum": "tf3/2-uniform",
+    "tightness": "3/2",
+    "weights": "uniform",
+    "v2_objectives": [
+      40741,
+      40650,
+      39763
+    ],
+    "egrasp_objectives": [
+      45284,
+      45284,
+      45284
+    ],
+    "v2_mean": 40384.666666666664,
+    "egrasp_mean": 45284,
+    "normalized_advantage": 0.10819126696699355,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf3_2-uniform-4-r0-frozen-v2",
+        "final-tf3_2-uniform-4-r1-frozen-v2",
+        "final-tf3_2-uniform-4-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf3_2-uniform-4-r0-egrasp",
+        "final-tf3_2-uniform-4-r1-egrasp",
+        "final-tf3_2-uniform-4-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf3_2-priority-0",
+    "stratum": "tf3/2-priority",
+    "tightness": "3/2",
+    "weights": "priority",
+    "v2_objectives": [
+      14556,
+      14240,
+      14451
+    ],
+    "egrasp_objectives": [
+      15263,
+      15263,
+      15263
+    ],
+    "v2_mean": 14415.666666666666,
+    "egrasp_mean": 15263,
+    "normalized_advantage": 0.055515516827185606,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf3_2-priority-0-r0-frozen-v2",
+        "final-tf3_2-priority-0-r1-frozen-v2",
+        "final-tf3_2-priority-0-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf3_2-priority-0-r0-egrasp",
+        "final-tf3_2-priority-0-r1-egrasp",
+        "final-tf3_2-priority-0-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf3_2-priority-1",
+    "stratum": "tf3/2-priority",
+    "tightness": "3/2",
+    "weights": "priority",
+    "v2_objectives": [
+      14519,
+      14118,
+      14310
+    ],
+    "egrasp_objectives": [
+      14079,
+      14079,
+      14079
+    ],
+    "v2_mean": 14315.666666666666,
+    "egrasp_mean": 14079,
+    "normalized_advantage": -0.016532004563764597,
+    "head_to_head": -1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf3_2-priority-1-r0-frozen-v2",
+        "final-tf3_2-priority-1-r1-frozen-v2",
+        "final-tf3_2-priority-1-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf3_2-priority-1-r0-egrasp",
+        "final-tf3_2-priority-1-r1-egrasp",
+        "final-tf3_2-priority-1-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf3_2-priority-2",
+    "stratum": "tf3/2-priority",
+    "tightness": "3/2",
+    "weights": "priority",
+    "v2_objectives": [
+      14292,
+      14615,
+      13961
+    ],
+    "egrasp_objectives": [
+      15820,
+      15820,
+      15820
+    ],
+    "v2_mean": 14289.333333333334,
+    "egrasp_mean": 15820,
+    "normalized_advantage": 0.09675516224188786,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf3_2-priority-2-r0-frozen-v2",
+        "final-tf3_2-priority-2-r1-frozen-v2",
+        "final-tf3_2-priority-2-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf3_2-priority-2-r0-egrasp",
+        "final-tf3_2-priority-2-r1-egrasp",
+        "final-tf3_2-priority-2-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf3_2-priority-3",
+    "stratum": "tf3/2-priority",
+    "tightness": "3/2",
+    "weights": "priority",
+    "v2_objectives": [
+      13633,
+      13253,
+      13434
+    ],
+    "egrasp_objectives": [
+      14776,
+      14776,
+      14776
+    ],
+    "v2_mean": 13440,
+    "egrasp_mean": 14776,
+    "normalized_advantage": 0.09041689225771521,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf3_2-priority-3-r0-frozen-v2",
+        "final-tf3_2-priority-3-r1-frozen-v2",
+        "final-tf3_2-priority-3-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf3_2-priority-3-r0-egrasp",
+        "final-tf3_2-priority-3-r1-egrasp",
+        "final-tf3_2-priority-3-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf3_2-priority-4",
+    "stratum": "tf3/2-priority",
+    "tightness": "3/2",
+    "weights": "priority",
+    "v2_objectives": [
+      13060,
+      13689,
+      13955
+    ],
+    "egrasp_objectives": [
+      14609,
+      14609,
+      14609
+    ],
+    "v2_mean": 13568,
+    "egrasp_mean": 14609,
+    "normalized_advantage": 0.07125744404134438,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf3_2-priority-4-r0-frozen-v2",
+        "final-tf3_2-priority-4-r1-frozen-v2",
+        "final-tf3_2-priority-4-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf3_2-priority-4-r0-egrasp",
+        "final-tf3_2-priority-4-r1-egrasp",
+        "final-tf3_2-priority-4-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf7_4-uniform-0",
+    "stratum": "tf7/4-uniform",
+    "tightness": "7/4",
+    "weights": "uniform",
+    "v2_objectives": [
+      50156,
+      50753,
+      45312
+    ],
+    "egrasp_objectives": [
+      51777,
+      51777,
+      51777
+    ],
+    "v2_mean": 48740.333333333336,
+    "egrasp_mean": 51777,
+    "normalized_advantage": 0.058648949662333937,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf7_4-uniform-0-r0-frozen-v2",
+        "final-tf7_4-uniform-0-r1-frozen-v2",
+        "final-tf7_4-uniform-0-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf7_4-uniform-0-r0-egrasp",
+        "final-tf7_4-uniform-0-r1-egrasp",
+        "final-tf7_4-uniform-0-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf7_4-uniform-1",
+    "stratum": "tf7/4-uniform",
+    "tightness": "7/4",
+    "weights": "uniform",
+    "v2_objectives": [
+      30692,
+      32452,
+      32643
+    ],
+    "egrasp_objectives": [
+      38209,
+      39705,
+      39705
+    ],
+    "v2_mean": 31929,
+    "egrasp_mean": 39206.333333333336,
+    "normalized_advantage": 0.1856162694802711,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf7_4-uniform-1-r0-frozen-v2",
+        "final-tf7_4-uniform-1-r1-frozen-v2",
+        "final-tf7_4-uniform-1-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf7_4-uniform-1-r0-egrasp",
+        "final-tf7_4-uniform-1-r1-egrasp",
+        "final-tf7_4-uniform-1-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf7_4-uniform-2",
+    "stratum": "tf7/4-uniform",
+    "tightness": "7/4",
+    "weights": "uniform",
+    "v2_objectives": [
+      23552,
+      24151,
+      26641
+    ],
+    "egrasp_objectives": [
+      27604,
+      26892,
+      28137
+    ],
+    "v2_mean": 24781.333333333332,
+    "egrasp_mean": 27544.333333333332,
+    "normalized_advantage": 0.10031101375963598,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf7_4-uniform-2-r0-frozen-v2",
+        "final-tf7_4-uniform-2-r1-frozen-v2",
+        "final-tf7_4-uniform-2-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf7_4-uniform-2-r0-egrasp",
+        "final-tf7_4-uniform-2-r1-egrasp",
+        "final-tf7_4-uniform-2-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf7_4-uniform-3",
+    "stratum": "tf7/4-uniform",
+    "tightness": "7/4",
+    "weights": "uniform",
+    "v2_objectives": [
+      37459,
+      33138,
+      31856
+    ],
+    "egrasp_objectives": [
+      43331,
+      43331,
+      43331
+    ],
+    "v2_mean": 34151,
+    "egrasp_mean": 43331,
+    "normalized_advantage": 0.21185756156100713,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf7_4-uniform-3-r0-frozen-v2",
+        "final-tf7_4-uniform-3-r1-frozen-v2",
+        "final-tf7_4-uniform-3-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf7_4-uniform-3-r0-egrasp",
+        "final-tf7_4-uniform-3-r1-egrasp",
+        "final-tf7_4-uniform-3-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf7_4-uniform-4",
+    "stratum": "tf7/4-uniform",
+    "tightness": "7/4",
+    "weights": "uniform",
+    "v2_objectives": [
+      38943,
+      39355,
+      38365
+    ],
+    "egrasp_objectives": [
+      43686,
+      43686,
+      43686
+    ],
+    "v2_mean": 38887.666666666664,
+    "egrasp_mean": 43686,
+    "normalized_advantage": 0.10983686612034373,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf7_4-uniform-4-r0-frozen-v2",
+        "final-tf7_4-uniform-4-r1-frozen-v2",
+        "final-tf7_4-uniform-4-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf7_4-uniform-4-r0-egrasp",
+        "final-tf7_4-uniform-4-r1-egrasp",
+        "final-tf7_4-uniform-4-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf7_4-priority-0",
+    "stratum": "tf7/4-priority",
+    "tightness": "7/4",
+    "weights": "priority",
+    "v2_objectives": [
+      10003,
+      10195,
+      10275
+    ],
+    "egrasp_objectives": [
+      10359,
+      10359,
+      10359
+    ],
+    "v2_mean": 10157.666666666666,
+    "egrasp_mean": 10359,
+    "normalized_advantage": 0.01943559545644695,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf7_4-priority-0-r0-frozen-v2",
+        "final-tf7_4-priority-0-r1-frozen-v2",
+        "final-tf7_4-priority-0-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf7_4-priority-0-r0-egrasp",
+        "final-tf7_4-priority-0-r1-egrasp",
+        "final-tf7_4-priority-0-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf7_4-priority-1",
+    "stratum": "tf7/4-priority",
+    "tightness": "7/4",
+    "weights": "priority",
+    "v2_objectives": [
+      10255,
+      10467,
+      10137
+    ],
+    "egrasp_objectives": [
+      10716,
+      10716,
+      10716
+    ],
+    "v2_mean": 10286.333333333334,
+    "egrasp_mean": 10716,
+    "normalized_advantage": 0.040095806893119264,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf7_4-priority-1-r0-frozen-v2",
+        "final-tf7_4-priority-1-r1-frozen-v2",
+        "final-tf7_4-priority-1-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf7_4-priority-1-r0-egrasp",
+        "final-tf7_4-priority-1-r1-egrasp",
+        "final-tf7_4-priority-1-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf7_4-priority-2",
+    "stratum": "tf7/4-priority",
+    "tightness": "7/4",
+    "weights": "priority",
+    "v2_objectives": [
+      10418,
+      10637,
+      9880
+    ],
+    "egrasp_objectives": [
+      10888,
+      10888,
+      10888
+    ],
+    "v2_mean": 10311.666666666666,
+    "egrasp_mean": 10888,
+    "normalized_advantage": 0.052932892481018914,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf7_4-priority-2-r0-frozen-v2",
+        "final-tf7_4-priority-2-r1-frozen-v2",
+        "final-tf7_4-priority-2-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf7_4-priority-2-r0-egrasp",
+        "final-tf7_4-priority-2-r1-egrasp",
+        "final-tf7_4-priority-2-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf7_4-priority-3",
+    "stratum": "tf7/4-priority",
+    "tightness": "7/4",
+    "weights": "priority",
+    "v2_objectives": [
+      9778,
+      10074,
+      10250
+    ],
+    "egrasp_objectives": [
+      11252,
+      11252,
+      11252
+    ],
+    "v2_mean": 10034,
+    "egrasp_mean": 11252,
+    "normalized_advantage": 0.10824742268041238,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf7_4-priority-3-r0-frozen-v2",
+        "final-tf7_4-priority-3-r1-frozen-v2",
+        "final-tf7_4-priority-3-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf7_4-priority-3-r0-egrasp",
+        "final-tf7_4-priority-3-r1-egrasp",
+        "final-tf7_4-priority-3-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf7_4-priority-4",
+    "stratum": "tf7/4-priority",
+    "tightness": "7/4",
+    "weights": "priority",
+    "v2_objectives": [
+      12560,
+      11811,
+      11451
+    ],
+    "egrasp_objectives": [
+      12622,
+      12622,
+      12622
+    ],
+    "v2_mean": 11940.666666666666,
+    "egrasp_mean": 12622,
+    "normalized_advantage": 0.053979823588443505,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf7_4-priority-4-r0-frozen-v2",
+        "final-tf7_4-priority-4-r1-frozen-v2",
+        "final-tf7_4-priority-4-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf7_4-priority-4-r0-egrasp",
+        "final-tf7_4-priority-4-r1-egrasp",
+        "final-tf7_4-priority-4-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf2-uniform-0",
+    "stratum": "tf2-uniform",
+    "tightness": "2",
+    "weights": "uniform",
+    "v2_objectives": [
+      30209,
+      29431,
+      29004
+    ],
+    "egrasp_objectives": [
+      32470,
+      32470,
+      32470
+    ],
+    "v2_mean": 29548,
+    "egrasp_mean": 32470,
+    "normalized_advantage": 0.08999076070218663,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf2-uniform-0-r0-frozen-v2",
+        "final-tf2-uniform-0-r1-frozen-v2",
+        "final-tf2-uniform-0-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf2-uniform-0-r0-egrasp",
+        "final-tf2-uniform-0-r1-egrasp",
+        "final-tf2-uniform-0-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf2-uniform-1",
+    "stratum": "tf2-uniform",
+    "tightness": "2",
+    "weights": "uniform",
+    "v2_objectives": [
+      16214,
+      16200,
+      15306
+    ],
+    "egrasp_objectives": [
+      19341,
+      19341,
+      19341
+    ],
+    "v2_mean": 15906.666666666666,
+    "egrasp_mean": 19341,
+    "normalized_advantage": 0.17756751632973133,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf2-uniform-1-r0-frozen-v2",
+        "final-tf2-uniform-1-r1-frozen-v2",
+        "final-tf2-uniform-1-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf2-uniform-1-r0-egrasp",
+        "final-tf2-uniform-1-r1-egrasp",
+        "final-tf2-uniform-1-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf2-uniform-2",
+    "stratum": "tf2-uniform",
+    "tightness": "2",
+    "weights": "uniform",
+    "v2_objectives": [
+      15546,
+      16607,
+      16484
+    ],
+    "egrasp_objectives": [
+      17630,
+      18401,
+      19135
+    ],
+    "v2_mean": 16212.333333333334,
+    "egrasp_mean": 18388.666666666668,
+    "normalized_advantage": 0.11835188340644602,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf2-uniform-2-r0-frozen-v2",
+        "final-tf2-uniform-2-r1-frozen-v2",
+        "final-tf2-uniform-2-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf2-uniform-2-r0-egrasp",
+        "final-tf2-uniform-2-r1-egrasp",
+        "final-tf2-uniform-2-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf2-uniform-3",
+    "stratum": "tf2-uniform",
+    "tightness": "2",
+    "weights": "uniform",
+    "v2_objectives": [
+      30846,
+      27815,
+      29519
+    ],
+    "egrasp_objectives": [
+      34580,
+      34580,
+      34580
+    ],
+    "v2_mean": 29393.333333333332,
+    "egrasp_mean": 34580,
+    "normalized_advantage": 0.14999036051667633,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf2-uniform-3-r0-frozen-v2",
+        "final-tf2-uniform-3-r1-frozen-v2",
+        "final-tf2-uniform-3-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf2-uniform-3-r0-egrasp",
+        "final-tf2-uniform-3-r1-egrasp",
+        "final-tf2-uniform-3-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf2-uniform-4",
+    "stratum": "tf2-uniform",
+    "tightness": "2",
+    "weights": "uniform",
+    "v2_objectives": [
+      23895,
+      25351,
+      27074
+    ],
+    "egrasp_objectives": [
+      27913,
+      28194,
+      26893
+    ],
+    "v2_mean": 25440,
+    "egrasp_mean": 27666.666666666668,
+    "normalized_advantage": 0.08048192771084342,
+    "head_to_head": 0.7777777777777778,
+    "slots": {
+      "frozen-v2": [
+        "final-tf2-uniform-4-r0-frozen-v2",
+        "final-tf2-uniform-4-r1-frozen-v2",
+        "final-tf2-uniform-4-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf2-uniform-4-r0-egrasp",
+        "final-tf2-uniform-4-r1-egrasp",
+        "final-tf2-uniform-4-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf2-priority-0",
+    "stratum": "tf2-priority",
+    "tightness": "2",
+    "weights": "priority",
+    "v2_objectives": [
+      6971,
+      6807,
+      7211
+    ],
+    "egrasp_objectives": [
+      7753,
+      7753,
+      7753
+    ],
+    "v2_mean": 6996.333333333333,
+    "egrasp_mean": 7753,
+    "normalized_advantage": 0.09759662926179118,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf2-priority-0-r0-frozen-v2",
+        "final-tf2-priority-0-r1-frozen-v2",
+        "final-tf2-priority-0-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf2-priority-0-r0-egrasp",
+        "final-tf2-priority-0-r1-egrasp",
+        "final-tf2-priority-0-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf2-priority-1",
+    "stratum": "tf2-priority",
+    "tightness": "2",
+    "weights": "priority",
+    "v2_objectives": [
+      6054,
+      5955,
+      6155
+    ],
+    "egrasp_objectives": [
+      6726,
+      6726,
+      6638
+    ],
+    "v2_mean": 6054.666666666667,
+    "egrasp_mean": 6696.666666666667,
+    "normalized_advantage": 0.09586859133897462,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf2-priority-1-r0-frozen-v2",
+        "final-tf2-priority-1-r1-frozen-v2",
+        "final-tf2-priority-1-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf2-priority-1-r0-egrasp",
+        "final-tf2-priority-1-r1-egrasp",
+        "final-tf2-priority-1-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf2-priority-2",
+    "stratum": "tf2-priority",
+    "tightness": "2",
+    "weights": "priority",
+    "v2_objectives": [
+      7192,
+      7250,
+      7360
+    ],
+    "egrasp_objectives": [
+      8026,
+      7961,
+      8026
+    ],
+    "v2_mean": 7267.333333333333,
+    "egrasp_mean": 8004.333333333333,
+    "normalized_advantage": 0.09207512597343107,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf2-priority-2-r0-frozen-v2",
+        "final-tf2-priority-2-r1-frozen-v2",
+        "final-tf2-priority-2-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf2-priority-2-r0-egrasp",
+        "final-tf2-priority-2-r1-egrasp",
+        "final-tf2-priority-2-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf2-priority-3",
+    "stratum": "tf2-priority",
+    "tightness": "2",
+    "weights": "priority",
+    "v2_objectives": [
+      6800,
+      6417,
+      6759
+    ],
+    "egrasp_objectives": [
+      7404,
+      7404,
+      7404
+    ],
+    "v2_mean": 6658.666666666667,
+    "egrasp_mean": 7404,
+    "normalized_advantage": 0.10066630650099041,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf2-priority-3-r0-frozen-v2",
+        "final-tf2-priority-3-r1-frozen-v2",
+        "final-tf2-priority-3-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf2-priority-3-r0-egrasp",
+        "final-tf2-priority-3-r1-egrasp",
+        "final-tf2-priority-3-r2-egrasp"
+      ]
+    }
+  },
+  {
+    "instance": "final-tf2-priority-4",
+    "stratum": "tf2-priority",
+    "tightness": "2",
+    "weights": "priority",
+    "v2_objectives": [
+      6008,
+      5071,
+      5638
+    ],
+    "egrasp_objectives": [
+      6392,
+      6392,
+      6392
+    ],
+    "v2_mean": 5572.333333333333,
+    "egrasp_mean": 6392,
+    "normalized_advantage": 0.12823320817688783,
+    "head_to_head": 1,
+    "slots": {
+      "frozen-v2": [
+        "final-tf2-priority-4-r0-frozen-v2",
+        "final-tf2-priority-4-r1-frozen-v2",
+        "final-tf2-priority-4-r2-frozen-v2"
+      ],
+      "egrasp": [
+        "final-tf2-priority-4-r0-egrasp",
+        "final-tf2-priority-4-r1-egrasp",
+        "final-tf2-priority-4-r2-egrasp"
+      ]
+    }
+  }
+]

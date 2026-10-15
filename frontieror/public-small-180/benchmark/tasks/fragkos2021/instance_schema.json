@@ -1,0 +1,16 @@
+{
+  "num_nodes": "<int> Total number of nodes, each serving as both a potential facility location and a customer.",
+  "num_facilities": "<int> Number of potential facility locations that may be opened.",
+  "num_customers": "<int> Number of customers whose demand must be served.",
+  "nodes": [
+    {
+      "id": "<int> Zero-based index identifying this node.",
+      "demand": "<float> Quantity of goods this customer requires to be shipped.",
+      "fixed_setup_cost": "<float> One-time cost incurred to open a facility at this location.",
+      "disruption_probability": "<float> Probability that a facility at this location becomes unavailable due to a disruptive event.",
+      "survival_probability": "<float> Probability that a facility at this location remains operational and available to serve customers."
+    }
+  ],
+  "transportation_cost_matrix": "<list[list[float]], shape [num_customers][num_facilities]> Per-unit shipping cost from each facility to each customer.",
+  "penalty_cost": "<list[float], length num_customers> Per-unit cost incurred when a customer cannot be served by any open and operational facility."
+}

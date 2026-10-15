@@ -1,0 +1,15 @@
+{
+  "classes": [
+    {
+      "class_id": "<int> Identifier of this class, matching the corresponding class in the instance.",
+      "y_i": "<int> Whether this class is activated (1 = activated, 0 = not activated).",
+      "items": [
+        {
+          "item_id": "<int> Identifier of this item within its class, matching the corresponding item in the instance.",
+          "x_ij": "<int> Whether this item is selected for the knapsack (1 = selected, 0 = not selected)."
+        }
+      ]
+    }
+  ],
+  "objective_value": "<float> Total profit from all selected items minus the setup costs of all activated classes."
+}

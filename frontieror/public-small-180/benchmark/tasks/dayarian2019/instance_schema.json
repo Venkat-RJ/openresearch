@@ -1,0 +1,78 @@
+{
+  "num_orders": "<int> Total number of customer orders to be fulfilled during the planning horizon.",
+  "num_products": "<int> Total number of distinct product types that can be produced and delivered.",
+  "depot": {
+    "x": "<float> X-coordinate of the central depot location in the service area.",
+    "y": "<float> Y-coordinate of the central depot location in the service area."
+  },
+  "global_parameters": {
+    "period_length_minutes": "<int> Duration of each period in minutes.",
+    "subperiod_length_minutes": "<int> Duration of each subperiod in minutes.",
+    "subperiods_per_period": "<int> Number of subperiods contained within each period.",
+    "setup_length_minutes": "<int> Time required to set up a workstation before switching to a different product.",
+    "setup_length_subperiods": "<int> Number of subperiods consumed by a single workstation setup operation.",
+    "max_shift_route_length_periods": "<int> Maximum number of periods that a driver shift or vehicle route can span.",
+    "max_shift_route_length_minutes": "<int> Maximum duration in minutes that a driver shift or vehicle route can span.",
+    "min_paid_time_subperiods": "<int> Minimum number of subperiods a driver or employee must be paid for once their shift begins.",
+    "min_paid_time_minutes": "<int> Minimum paid duration in minutes once a driver or employee shift begins.",
+    "driver_salary_per_minute": "<float> Wage rate paid to each driver per minute of their shift.",
+    "employee_salary_per_subperiod": "<float> Wage rate paid to each production employee per subperiod worked.",
+    "setup_cost": "<float> Fixed cost incurred each time a workstation is set up for a different product.",
+    "vehicle_operating_cost_per_minute": "<float> Cost per minute of operating a delivery vehicle while en route.",
+    "preparation_time_minutes": "<int> Time in minutes needed at the depot to load a vehicle before it departs on a trip.",
+    "service_time_minutes": "<int> Time in minutes spent at each customer location during delivery.",
+    "max_trips_per_route": "<int> Maximum number of trips a single vehicle can make within one route (returning to depot between trips).",
+    "horizon_start_minutes": "<int> Start time of the planning horizon expressed as minutes from midnight.",
+    "horizon_end_minutes": "<int> End time of the planning horizon expressed as minutes from midnight.",
+    "num_periods": "<int> Total number of periods spanning the planning horizon.",
+    "num_subperiods": "<int> Total number of subperiods spanning the planning horizon."
+  },
+  "num_workstations": "<int> Number of workstations available for production at the depot.",
+  "num_production_employees": "<int> Number of production employees available to operate workstations.",
+  "num_vehicles": "<int> Number of delivery vehicles available in the fleet.",
+  "num_drivers": "<int> Number of drivers available to operate delivery vehicles.",
+  "vehicle_capacity": "<int> Maximum total space units a single vehicle can carry per trip.",
+  "products": [
+    {
+      "product_id": "<int> Unique identifier for this product type.",
+      "production_rate_per_subperiod": "<float> Maximum units of this product that one employee can produce in a single subperiod.",
+      "life_span_minutes": "<int> Maximum time in minutes allowed between production completion and delivery to the customer."
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "<int> Unique identifier for this customer order.",
+      "x": "<float> X-coordinate of the customer location for this order.",
+      "y": "<float> Y-coordinate of the customer location for this order.",
+      "time_window_start": "<int> Earliest acceptable delivery time in minutes from midnight.",
+      "time_window_end": "<int> Latest acceptable delivery time in minutes from midnight.",
+      "service_time": "<int> Time in minutes required to serve this customer upon arrival.",
+      "demands": "<dict, key: '{product_id}'> Number of units of each product requested by this order.",
+      "space_requirement": "<int> Total space units this order occupies in the delivery vehicle."
+    }
+  ],
+  "travel_time_matrix": "<list[list[float]], shape [num_orders+1][num_orders+1]> Travel time in minutes between each pair of locations, where index 0 is the depot and indices 1 through num_orders correspond to customer order locations.",
+  "production_windows": {
+    "{order_id}": {
+      "{product_id}": {
+        "release_time": "<float> Earliest time in minutes from midnight at which production of this product for this order may begin.",
+        "due_time": "<float> Latest time in minutes from midnight by which production of this product for this order must be completed.",
+        "valid_subperiod_ids": "<list[int]> Subperiod indices during which this product may be produced for this order."
+      }
+    }
+  },
+  "periods": [
+    {
+      "period_id": "<int> Unique identifier for this period.",
+      "start_time": "<int> Start time of this period in minutes from midnight.",
+      "end_time": "<int> End time of this period in minutes from midnight."
+    }
+  ],
+  "subperiods": [
+    {
+      "subperiod_id": "<int> Unique identifier for this subperiod.",
+      "start_time": "<int> Start time of this subperiod in minutes from midnight.",
+      "end_time": "<int> End time of this subperiod in minutes from midnight."
+    }
+  ]
+}

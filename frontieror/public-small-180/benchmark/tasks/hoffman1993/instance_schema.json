@@ -1,0 +1,20 @@
+{
+  "dimensions": {
+    "num_rows": "<int> Number of flight legs that must be covered during the scheduling period.",
+    "num_cols": "<int> Number of candidate crew rotations available for selection."
+  },
+  "cost_vector": "<list[int], length num_cols> Incremental cost of each candidate rotation, including time away from base, per diem, lodging, flying time, and deadheading expenses.",
+  "constraint_matrix_A": {
+    "columns": "<list[list[int]], length num_cols> For each candidate rotation, the sorted list of flight leg indices that the rotation covers."
+  },
+  "has_base_constraints": "<bool> Whether the instance includes crew base constraints enforcing labor utilization rules.",
+  "base_constraints": {
+    "num_bases": "<int> Number of crew bases subject to labor utilization rules.",
+    "num_constraints": "<int> Number of base constraints enforcing crew utilization limits.",
+    "D_matrix": {
+      "rows": "<list[list[float]], shape [num_bases][num_cols]> Hours away from base that each rotation contributes to each crew base."
+    },
+    "lower_bounds_d1": "<list[float], length num_bases> Minimum required weighted hours for crew utilization at each base.",
+    "upper_bounds_d2": "<list[float], length num_bases> Maximum allowed weighted hours for crew utilization at each base."
+  }
+}

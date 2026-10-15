@@ -1,0 +1,35 @@
+{
+  "num_linehaul_customers": "<int> Number of linehaul customers requiring goods delivered from the depot.",
+  "num_backhaul_customers": "<int> Number of backhaul customers with goods to be picked up and returned to the depot.",
+  "num_total_customers": "<int> Total number of customers (linehaul plus backhaul).",
+  "num_vehicles": "<int> Number of identical vehicles available in the fleet.",
+  "vehicle_capacity": "<int> Maximum carrying capacity of each vehicle.",
+  "min_vehicles_linehaul": "<int> Minimum number of vehicles needed to serve all linehaul customers, determined by bin packing.",
+  "min_vehicles_backhaul": "<int> Minimum number of vehicles needed to serve all backhaul customers, determined by bin packing.",
+  "depot": {
+    "index": "<int> Index of the depot in the distance matrix.",
+    "coordinates": "<list[int], length 2> X and Y position of the depot on the grid."
+  },
+  "linehaul_customers": [
+    {
+      "index": "<int> Index of this linehaul customer in the distance matrix.",
+      "coordinates": "<list[int], length 2> X and Y position of this linehaul customer on the grid.",
+      "demand": "<int> Quantity of goods to be delivered from the depot to this linehaul customer."
+    }
+  ],
+  "backhaul_customers": [
+    {
+      "index": "<int> Index of this backhaul customer in the distance matrix.",
+      "coordinates": "<list[int], length 2> X and Y position of this backhaul customer on the grid.",
+      "demand": "<int> Quantity of goods to be picked up from this backhaul customer and returned to the depot."
+    }
+  ],
+  "distance_matrix": "<list[list[int]], shape [num_total_customers+1][num_total_customers+1]> Travel cost between each pair of locations, where row 0 and column 0 correspond to the depot.",
+  "constraints": {
+    "linehaul_before_backhaul": "<bool> Whether all linehaul customers on a route must be served before any backhaul customer on that route.",
+    "backhaul_only_routes_allowed": "<bool> Whether routes serving only backhaul customers with no linehaul customers are permitted.",
+    "separate_capacity_for_linehaul_and_backhaul": "<bool> Whether linehaul and backhaul loads are checked independently against the vehicle capacity.",
+    "each_customer_visited_exactly_once": "<bool> Whether every customer must appear on exactly one route.",
+    "each_route_starts_and_ends_at_depot": "<bool> Whether every route must begin and end at the depot."
+  }
+}

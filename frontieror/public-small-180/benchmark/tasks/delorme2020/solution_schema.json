@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total number of bins used.",
+  "num_bins": "<int> Total number of bins used, rounded to the nearest integer.",
+  "bin_assignments": "<list[list[int]], length num_bins> One inner list per used bin; each inner list holds the integer item widths (weights) packed into that bin. The multiset of widths across all bins must cover every item's demand, and the sum of widths in each bin must not exceed the bin capacity."
+}

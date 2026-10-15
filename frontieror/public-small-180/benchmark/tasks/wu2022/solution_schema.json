@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Total cost of the solution, combining setup, production, holding, transportation, and plant opening costs.",
+  "Z": "<dict, key: '{plant}'> Whether each plant is opened (1 = yes, 0 = no).",
+  "U": "<dict, key: '{item}_{plant}'> Whether each item is assigned to each capable plant for production over the entire horizon (1 = yes, 0 = no).",
+  "Y": "<dict, key: '{item}_{plant}_{period}'> Whether a production setup is performed for each item at each plant in each period (1 = yes, 0 = no)."
+}

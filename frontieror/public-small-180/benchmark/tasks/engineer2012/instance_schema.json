@@ -1,0 +1,49 @@
+{
+  "planning_horizon": "<int> Number of discrete time periods over which the shipping schedule is planned.",
+  "num_vessels": "<int> Number of vessels available in the fleet.",
+  "num_supply_ports": "<int> Number of ports that produce and supply the bulk product.",
+  "num_demand_ports": "<int> Number of ports that consume and receive the bulk product.",
+  "vessels": [
+    {
+      "id": "<str> Unique identifier for the vessel.",
+      "class": "<int> Vessel size class determining its deadweight capacity range.",
+      "capacity": "<int> Maximum cargo the vessel can carry at any time, in kilotons.",
+      "availability_start": "<int> Earliest time period at which the vessel becomes available for operations.",
+      "availability_end": "<int> Latest time period at which the vessel can still operate.",
+      "loading_window_end": "<int> Latest time period by which the vessel's first loading operation should begin.",
+      "transport_cost_per_day": "<float> Cost incurred for each day the vessel spends in transit between ports.",
+      "demurrage_cost_per_day": "<float> Cost incurred for each day the vessel waits idle at a port.",
+      "initial_load": "<int> Amount of cargo already on board the vessel at the start of the planning horizon."
+    }
+  ],
+  "supply_ports": [
+    {
+      "port_id": "<str> Unique identifier for the supply port.",
+      "x": "<float> Horizontal geographic coordinate of the supply port.",
+      "y": "<float> Vertical geographic coordinate of the supply port.",
+      "type": "<str> Port classification, always 'supply' for supply ports.",
+      "initial_inventory": "<int> Amount of product stored at the port at the start of the planning horizon.",
+      "production_rate": "<list[int], length planning_horizon> Amount of product produced at the port during each time period.",
+      "storage_capacity": "<list[int], length planning_horizon> Maximum amount of product the port can store during each time period.",
+      "F_min": "<int> Minimum quantity that must be loaded onto a vessel in a single operation at this port.",
+      "F_max": "<int> Maximum quantity that can be loaded onto a vessel in a single operation at this port.",
+      "unit_procurement_cost": "<float> Cost per unit of product loaded onto a vessel at this port."
+    }
+  ],
+  "demand_ports": [
+    {
+      "port_id": "<str> Unique identifier for the demand port.",
+      "x": "<float> Horizontal geographic coordinate of the demand port.",
+      "y": "<float> Vertical geographic coordinate of the demand port.",
+      "type": "<str> Port classification, always 'demand' for demand ports.",
+      "initial_inventory": "<int> Amount of product stored at the port at the start of the planning horizon.",
+      "consumption_rate": "<list[int], length planning_horizon> Amount of product consumed at the port during each time period.",
+      "storage_capacity": "<list[int], length planning_horizon> Maximum amount of product the port can store during each time period.",
+      "F_min": "<int> Minimum quantity that must be discharged from a vessel in a single operation at this port.",
+      "F_max": "<int> Maximum quantity that can be discharged from a vessel in a single operation at this port.",
+      "unit_supply_revenue": "<float> Revenue earned per unit of product delivered to this port."
+    }
+  ],
+  "travel_times": "<dict, key: '{origin_port}->{destination_port}'> Number of time periods required for a vessel to travel between two ports.",
+  "draft_limits": "<dict, key: '{vessel}->{port}'> Maximum cargo a vessel may carry when entering a specific port, reflecting port draft restrictions."
+}

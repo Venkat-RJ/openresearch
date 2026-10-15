@@ -1,0 +1,16 @@
+{
+  "n": "<int> Number of nodes in the logistics network, each serving as both a potential hub location and a source or destination of commodity flow.",
+  "cost_parameters": {
+    "collection_cost_chi": "<float> Per-unit-distance cost rate for transporting flow from an origin node to its assigned hub.",
+    "transfer_cost_alpha": "<float> Discounted per-unit-distance cost rate for transporting consolidated flow between two hubs.",
+    "distribution_cost_delta": "<float> Per-unit-distance cost rate for transporting flow from a destination's assigned hub to the destination node.",
+    "routing_cost_formula": "<str> Formula expressing the routing cost for sending flow from origin i to destination j via hubs k and m."
+  },
+  "total_flow_D": "<float> Total outgoing flow across all nodes in the network.",
+  "coordinates": "<list[list[float]], shape [n][2]> Geographic x and y coordinates of each node.",
+  "flow_matrix": "<list[list[float]], shape [n][n]> Quantity of commodity flow originating at node i and destined for node j.",
+  "distance_matrix": "<list[list[float]], shape [n][n]> Euclidean distance between each pair of nodes, scaled by a factor of 1/1000.",
+  "outgoing_flow": "<list[float], length n> Total flow originating at each node, summed over all destinations.",
+  "setup_costs": "<list[float], length n> Fixed cost incurred for opening a hub at each node.",
+  "capacities": "<list[float], length n> Maximum total incoming flow that each node can handle if opened as a hub."
+}

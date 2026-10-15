@@ -1,0 +1,4 @@
+{
+  "objective_value": "<float> Total travel cost summed over all arcs traversed across all vehicle routes.",
+  "routes": "<list[list[int]], length n_routes> Ordered sequence of node indices visited on each vehicle route, starting at the depot source and ending at the depot sink."
+}

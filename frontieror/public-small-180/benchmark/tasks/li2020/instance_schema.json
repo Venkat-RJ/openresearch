@@ -1,0 +1,52 @@
+{
+  "global_parameters": {
+    "theta": "<float> Fraction of each customer's total demand that requires type I service.",
+    "sigma": "<float> Fraction of type I demand served at any facility that generates a subsequent referral need for type II service.",
+    "alpha": "<float> Per-unit-demand per-unit-distance cost for shipping type I demand from a customer to a level I facility.",
+    "beta": "<float> Per-unit-demand per-unit-distance cost for shipping type I or type II demand from a customer to a level II facility.",
+    "gamma": "<float> Per-unit-demand per-unit-distance cost for forwarding referral demand from any facility to a level II facility.",
+    "alpha_prime": "<float> Per-unit cost of outsourcing type I demand.",
+    "beta_prime": "<float> Per-unit cost of outsourcing type II demand.",
+    "gamma_prime": "<float> Per-unit cost of outsourcing referral demand.",
+    "R": "<float> Radius of the circular region in which customers are located.",
+    "L": "<float> Side length of the square region in which facilities are placed.",
+    "rho1": "<float> Cost of fully interdicting one level I facility.",
+    "rho2": "<float> Cost of fully interdicting one level II facility."
+  },
+  "instance_parameters": {
+    "num_level1_facilities": "<int> Number of level I facilities that provide only type I service.",
+    "num_level2_facilities": "<int> Number of level II facilities that provide both type I and type II service.",
+    "num_customers": "<int> Number of customers with demand to be served.",
+    "num_interdiction_levels_K": "<int> Total number of interdiction intensity levels available, including level zero (no attack).",
+    "k_max": "<int> Maximum interdiction intensity level that can be assigned to a facility.",
+    "budget_level": "<str> Qualitative label indicating the interdiction budget tier.",
+    "total_interdiction_budget": "<float> Maximum total expenditure the interdictor may spend across all facility attacks."
+  },
+  "interdiction_parameters": {
+    "interdiction_cost_level1_h1": "<dict, key: '{intensity_level}'> Cost incurred by the interdictor for attacking a level I facility at each positive intensity level.",
+    "interdiction_cost_level2_h2": "<dict, key: '{intensity_level}'> Cost incurred by the interdictor for attacking a level II facility at each positive intensity level.",
+    "capacity_reduction_level1_d1": "<dict, key: '{intensity_level}'> Fraction of original type I capacity lost at a level I facility for each positive intensity level.",
+    "capacity_reduction_level2_d2": "<dict, key: '{intensity_level}'> Fraction of original capacity lost at a level II facility for each positive intensity level, applied to both type I and type II capacity."
+  },
+  "customers": {
+    "x_coordinates": "<list[float], length num_customers> Horizontal coordinate of each customer in the two-dimensional plane.",
+    "y_coordinates": "<list[float], length num_customers> Vertical coordinate of each customer in the two-dimensional plane.",
+    "demands": "<list[float], length num_customers> Total service demand of each customer, split between type I and type II according to theta."
+  },
+  "level1_facilities": {
+    "x_coordinates": "<list[float], length num_level1_facilities> Horizontal coordinate of each level I facility.",
+    "y_coordinates": "<list[float], length num_level1_facilities> Vertical coordinate of each level I facility.",
+    "capacity_type1": "<list[float], length num_level1_facilities> Maximum amount of type I demand each level I facility can serve before interdiction."
+  },
+  "level2_facilities": {
+    "x_coordinates": "<list[float], length num_level2_facilities> Horizontal coordinate of each level II facility.",
+    "y_coordinates": "<list[float], length num_level2_facilities> Vertical coordinate of each level II facility.",
+    "capacity_type1": "<list[float], length num_level2_facilities> Maximum amount of type I demand each level II facility can serve before interdiction.",
+    "capacity_type2": "<list[float], length num_level2_facilities> Maximum combined type II and referral demand each level II facility can serve before interdiction."
+  },
+  "distances": {
+    "customer_to_level1_facility": "<list[list[float]], shape [num_customers][num_level1_facilities]> Euclidean distance from each customer to each level I facility.",
+    "customer_to_level2_facility": "<list[list[float]], shape [num_customers][num_level2_facilities]> Euclidean distance from each customer to each level II facility.",
+    "level1_to_level2_facility": "<list[list[float]], shape [num_level1_facilities][num_level2_facilities]> Euclidean distance from each level I facility to each level II facility, used for referral forwarding costs."
+  }
+}

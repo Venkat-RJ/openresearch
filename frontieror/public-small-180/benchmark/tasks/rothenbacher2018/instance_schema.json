@@ -1,0 +1,79 @@
+{
+  "parameters": {
+    "max_route_duration": "<float> Maximum allowed duration for any single route, including all travel, service, and handling times.",
+    "service_time": "<float> Time spent at each customer location to perform the collection service.",
+    "coupling_time": "<float> Time required to reattach a trailer to the truck at a parking location.",
+    "decoupling_time": "<float> Time required to detach the trailer from the truck at a parking location.",
+    "transfer_time": "<float> Time required to transfer load from the truck to the parked trailer at a parking location.",
+    "coupling_cost": "<float> Cost incurred each time a trailer is reattached to the truck.",
+    "decoupling_cost": "<float> Cost incurred each time a trailer is detached from the truck.",
+    "transfer_cost": "<float> Cost incurred each time load is transferred from the truck to the trailer at a parking location.",
+    "planning_horizon": "<list[float], length 2> Earliest and latest times defining the time window within which all routes must start and finish."
+  },
+  "fleet": {
+    "truck_types": [
+      {
+        "id": "<int> Unique identifier for this truck type.",
+        "capacity": "<int> Maximum load the truck can carry.",
+        "fixed_cost": "<float> Cost incurred whenever a truck of this type is deployed on a route.",
+        "cost_factor": "<float> Multiplier applied to travel distance to compute the truck's distance-based travel cost.",
+        "num_available": "<int> Number of trucks of this type available in the fleet."
+      }
+    ],
+    "trailer_types": [
+      {
+        "id": "<int> Unique identifier for this trailer type.",
+        "capacity": "<int> Maximum load the trailer can carry.",
+        "towing_cost_multiplier": "<float> Additional multiplier applied to travel distance when this trailer is attached to a truck.",
+        "num_available": "<int> Number of trailers of this type available in the fleet."
+      }
+    ],
+    "vehicle_classes": [
+      {
+        "class_id": "<int> Unique identifier for this vehicle class.",
+        "truck_type_id": "<int> Identifier of the truck type used in this class.",
+        "trailer_type_id": "<int> Identifier of the trailer type paired with the truck, or 0 if the truck operates solo.",
+        "truck_capacity": "<int> Load capacity of the truck in this class.",
+        "trailer_capacity": "<int> Load capacity of the trailer in this class, or 0 if no trailer.",
+        "total_capacity": "<int> Combined load capacity of the truck and trailer in this class.",
+        "truck_fixed_cost": "<float> Fixed cost for deploying the truck in this class.",
+        "truck_cost_factor": "<float> Distance-based cost multiplier for the truck in this class.",
+        "trailer_towing_cost_multiplier": "<float> Additional distance-based cost multiplier when the trailer is attached, or 0 if no trailer.",
+        "num_available": "<int> Number of vehicles of this class available for deployment.",
+        "description": "<str> Human-readable label describing the truck and trailer pairing."
+      }
+    ]
+  },
+  "depot": {
+    "id": "<int> Location identifier for the depot.",
+    "x": "<float> Horizontal coordinate of the depot.",
+    "y": "<float> Vertical coordinate of the depot."
+  },
+  "truck_customers": [
+    {
+      "id": "<int> Unique identifier for this truck customer.",
+      "x": "<float> Horizontal coordinate of this customer.",
+      "y": "<float> Vertical coordinate of this customer.",
+      "supply": "<int> Quantity of goods to be collected from this customer.",
+      "service_time": "<float> Time spent at this customer to perform collection."
+    }
+  ],
+  "trailer_customers": [
+    {
+      "id": "<int> Unique identifier for this trailer customer.",
+      "x": "<float> Horizontal coordinate of this customer.",
+      "y": "<float> Vertical coordinate of this customer.",
+      "supply": "<int> Quantity of goods to be collected from this customer.",
+      "service_time": "<float> Time spent at this customer to perform collection."
+    }
+  ],
+  "transshipment_locations": [
+    {
+      "id": "<int> Unique identifier for this transshipment location.",
+      "x": "<float> Horizontal coordinate of this transshipment location.",
+      "y": "<float> Vertical coordinate of this transshipment location."
+    }
+  ],
+  "distance_matrix": "<list[list[float]], shape [num_locations][num_locations]> Travel distance between each pair of locations, indexed by location identifier.",
+  "travel_time_matrix": "<list[list[float]], shape [num_locations][num_locations]> Travel time between each pair of locations, indexed by location identifier."
+}

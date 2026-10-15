@@ -1,0 +1,11 @@
+# Problem Description
+
+A facility has a set of jobs and a set of identical parallel machines. Each job has a positive integer processing time, a due date, and a positive weight representing its priority. The planner must assign every job to exactly one machine and determine the order in which jobs are processed on each machine. Jobs are processed non-preemptively: once a job starts on a machine, it runs to completion without interruption, and each machine processes at most one job at a time.
+
+There is no idle time between consecutive jobs on any machine, so each machine processes its assigned jobs back-to-back starting from time zero. The start time of a job on its assigned machine equals the sum of the processing times of all jobs that precede it on that machine, and its completion time equals its start time plus its own processing time.
+
+The tardiness of a job is the amount by which its completion time exceeds its due date, or zero if it finishes on or before its due date. The weighted tardiness of a job is its weight multiplied by its tardiness.
+
+The input data for each instance specifies the number of jobs, the number of machines, and for each job its integer processing time, its due date, and its weight.
+
+The objective is to minimize the total weighted tardiness, i.e. the sum of the weighted tardiness values across all jobs.

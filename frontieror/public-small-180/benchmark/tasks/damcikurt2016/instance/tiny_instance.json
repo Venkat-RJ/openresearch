@@ -1,0 +1,4892 @@
+{
+  "problem_type": "MSS",
+  "description": "Multistage Stochastic Self-Scheduling Unit Commitment",
+  "reference": "Pan & Guan (2016), Operations Research 64(6):1482-1498",
+  "instance_id": 1,
+  "scale": "small",
+  "generator": {
+    "G": 1,
+    "C_lower_MW": 35,
+    "C_upper_MW": 160,
+    "V_plus_MW_per_h": 38,
+    "V_minus_MW_per_h": 38,
+    "U_bar_startup_cost_dollars": 80,
+    "U_lower_shutdown_cost_dollars": 80,
+    "fuel_cost_type": "linear_approximation",
+    "fuel_cost_formula": "f(x) = fuel_a + fuel_b * x  [dollars/h]",
+    "fuel_a_dollars_per_h": 213.0,
+    "fuel_b_dollars_per_MWh": 19.2,
+    "fuel_cost_note": "Exact piecewise linear parameters not given in paper. Linear approximation used; breakeven variable cost ~ fuel_b $/MWh."
+  },
+  "scenario_tree": {
+    "T_num_periods": 9,
+    "K_branches_per_node": 2,
+    "L_min_up_time": 4,
+    "ell_min_down_time": 4,
+    "total_nodes": 511,
+    "num_leaf_nodes": 256,
+    "num_scenarios": 256,
+    "initial_generator_status_y0": 0,
+    "initial_generation_x0_MW": 0.0,
+    "electricity_price_range_dollars_per_MWh": [
+      1.0,
+      31.0
+    ],
+    "electricity_price_distribution": "Uniform[1, 31] per Section 6.1",
+    "nodes": [
+      {
+        "id": 0,
+        "time": 1,
+        "parent_id": null,
+        "children_ids": [
+          1,
+          2
+        ],
+        "probability": 1.0,
+        "electricity_price_dollars_per_MWh": 8.4853
+      },
+      {
+        "id": 1,
+        "time": 2,
+        "parent_id": 0,
+        "children_ids": [
+          3,
+          4
+        ],
+        "probability": 0.5,
+        "electricity_price_dollars_per_MWh": 11.6548
+      },
+      {
+        "id": 2,
+        "time": 2,
+        "parent_id": 0,
+        "children_ids": [
+          5,
+          6
+        ],
+        "probability": 0.5,
+        "electricity_price_dollars_per_MWh": 29.0535
+      },
+      {
+        "id": 3,
+        "time": 3,
+        "parent_id": 1,
+        "children_ids": [
+          7,
+          8
+        ],
+        "probability": 0.25,
+        "electricity_price_dollars_per_MWh": 27.5397
+      },
+      {
+        "id": 4,
+        "time": 3,
+        "parent_id": 1,
+        "children_ids": [
+          9,
+          10
+        ],
+        "probability": 0.25,
+        "electricity_price_dollars_per_MWh": 15.6789
+      },
+      {
+        "id": 5,
+        "time": 3,
+        "parent_id": 2,
+        "children_ids": [
+          11,
+          12
+        ],
+        "probability": 0.25,
+        "electricity_price_dollars_per_MWh": 30.9119
+      },
+      {
+        "id": 6,
+        "time": 3,
+        "parent_id": 2,
+        "children_ids": [
+          13,
+          14
+        ],
+        "probability": 0.25,
+        "electricity_price_dollars_per_MWh": 23.78
+      },
+      {
+        "id": 7,
+        "time": 4,
+        "parent_id": 3,
+        "children_ids": [
+          15,
+          16
+        ],
+        "probability": 0.125,
+        "electricity_price_dollars_per_MWh": 15.4325
+      },
+      {
+        "id": 8,
+        "time": 4,
+        "parent_id": 3,
+        "children_ids": [
+          17,
+          18
+        ],
+        "probability": 0.125,
+        "electricity_price_dollars_per_MWh": 6.1419
+      },
+      {
+        "id": 9,
+        "time": 4,
+        "parent_id": 4,
+        "children_ids": [
+          19,
+          20
+        ],
+        "probability": 0.125,
+        "electricity_price_dollars_per_MWh": 19.7862
+      },
+      {
+        "id": 10,
+        "time": 4,
+        "parent_id": 4,
+        "children_ids": [
+          21,
+          22
+        ],
+        "probability": 0.125,
+        "electricity_price_dollars_per_MWh": 23.1281
+      },
+      {
+        "id": 11,
+        "time": 4,
+        "parent_id": 5,
+        "children_ids": [
+          23,
+          24
+        ],
+        "probability": 0.125,
+        "electricity_price_dollars_per_MWh": 27.3748
+      },
+      {
+        "id": 12,
+        "time": 4,
+        "parent_id": 5,
+        "children_ids": [
+          25,
+          26
+        ],
+        "probability": 0.125,
+        "electricity_price_dollars_per_MWh": 9.4191
+      },
+      {
+        "id": 13,
+        "time": 4,
+        "parent_id": 6,
+        "children_ids": [
+          27,
+          28
+        ],
+        "probability": 0.125,
+        "electricity_price_dollars_per_MWh": 27.2105
+      },
+      {
+        "id": 14,
+        "time": 4,
+        "parent_id": 6,
+        "children_ids": [
+          29,
+          30
+        ],
+        "probability": 0.125,
+        "electricity_price_dollars_per_MWh": 11.7248
+      },
+      {
+        "id": 15,
+        "time": 5,
+        "parent_id": 7,
+        "children_ids": [
+          31,
+          32
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 23.9065
+      },
+      {
+        "id": 16,
+        "time": 5,
+        "parent_id": 7,
+        "children_ids": [
+          33,
+          34
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 26.4682
+      },
+      {
+        "id": 17,
+        "time": 5,
+        "parent_id": 8,
+        "children_ids": [
+          35,
+          36
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 22.4326
+      },
+      {
+        "id": 18,
+        "time": 5,
+        "parent_id": 8,
+        "children_ids": [
+          37,
+          38
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 29.2771
+      },
+      {
+        "id": 19,
+        "time": 5,
+        "parent_id": 9,
+        "children_ids": [
+          39,
+          40
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 16.5073
+      },
+      {
+        "id": 20,
+        "time": 5,
+        "parent_id": 9,
+        "children_ids": [
+          41,
+          42
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 23.8817
+      },
+      {
+        "id": 21,
+        "time": 5,
+        "parent_id": 10,
+        "children_ids": [
+          43,
+          44
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 7.096
+      },
+      {
+        "id": 22,
+        "time": 5,
+        "parent_id": 10,
+        "children_ids": [
+          45,
+          46
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 4.1365
+      },
+      {
+        "id": 23,
+        "time": 5,
+        "parent_id": 11,
+        "children_ids": [
+          47,
+          48
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 1.7823
+      },
+      {
+        "id": 24,
+        "time": 5,
+        "parent_id": 11,
+        "children_ids": [
+          49,
+          50
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 30.2318
+      },
+      {
+        "id": 25,
+        "time": 5,
+        "parent_id": 12,
+        "children_ids": [
+          51,
+          52
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 17.2893
+      },
+      {
+        "id": 26,
+        "time": 5,
+        "parent_id": 12,
+        "children_ids": [
+          53,
+          54
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 16.9377
+      },
+      {
+        "id": 27,
+        "time": 5,
+        "parent_id": 13,
+        "children_ids": [
+          55,
+          56
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 6.2271
+      },
+      {
+        "id": 28,
+        "time": 5,
+        "parent_id": 13,
+        "children_ids": [
+          57,
+          58
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 30.1215
+      },
+      {
+        "id": 29,
+        "time": 5,
+        "parent_id": 14,
+        "children_ids": [
+          59,
+          60
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 28.7244
+      },
+      {
+        "id": 30,
+        "time": 5,
+        "parent_id": 14,
+        "children_ids": [
+          61,
+          62
+        ],
+        "probability": 0.0625,
+        "electricity_price_dollars_per_MWh": 13.5024
+      },
+      {
+        "id": 31,
+        "time": 6,
+        "parent_id": 15,
+        "children_ids": [
+          63,
+          64
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 1.7452
+      },
+      {
+        "id": 32,
+        "time": 6,
+        "parent_id": 15,
+        "children_ids": [
+          65,
+          66
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 2.4005
+      },
+      {
+        "id": 33,
+        "time": 6,
+        "parent_id": 16,
+        "children_ids": [
+          67,
+          68
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 21.7649
+      },
+      {
+        "id": 34,
+        "time": 6,
+        "parent_id": 16,
+        "children_ids": [
+          69,
+          70
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 28.8736
+      },
+      {
+        "id": 35,
+        "time": 6,
+        "parent_id": 17,
+        "children_ids": [
+          71,
+          72
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 12.1653
+      },
+      {
+        "id": 36,
+        "time": 6,
+        "parent_id": 17,
+        "children_ids": [
+          73,
+          74
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 19.3443
+      },
+      {
+        "id": 37,
+        "time": 6,
+        "parent_id": 18,
+        "children_ids": [
+          75,
+          76
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 4.7363
+      },
+      {
+        "id": 38,
+        "time": 6,
+        "parent_id": 18,
+        "children_ids": [
+          77,
+          78
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 25.3729
+      },
+      {
+        "id": 39,
+        "time": 6,
+        "parent_id": 19,
+        "children_ids": [
+          79,
+          80
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 1.8072
+      },
+      {
+        "id": 40,
+        "time": 6,
+        "parent_id": 19,
+        "children_ids": [
+          81,
+          82
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 22.1805
+      },
+      {
+        "id": 41,
+        "time": 6,
+        "parent_id": 20,
+        "children_ids": [
+          83,
+          84
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 2.4547
+      },
+      {
+        "id": 42,
+        "time": 6,
+        "parent_id": 20,
+        "children_ids": [
+          85,
+          86
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 23.642
+      },
+      {
+        "id": 43,
+        "time": 6,
+        "parent_id": 21,
+        "children_ids": [
+          87,
+          88
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 7.2098
+      },
+      {
+        "id": 44,
+        "time": 6,
+        "parent_id": 21,
+        "children_ids": [
+          89,
+          90
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 21.5814
+      },
+      {
+        "id": 45,
+        "time": 6,
+        "parent_id": 22,
+        "children_ids": [
+          91,
+          92
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 17.2068
+      },
+      {
+        "id": 46,
+        "time": 6,
+        "parent_id": 22,
+        "children_ids": [
+          93,
+          94
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 28.6324
+      },
+      {
+        "id": 47,
+        "time": 6,
+        "parent_id": 23,
+        "children_ids": [
+          95,
+          96
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 6.8058
+      },
+      {
+        "id": 48,
+        "time": 6,
+        "parent_id": 23,
+        "children_ids": [
+          97,
+          98
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 23.7892
+      },
+      {
+        "id": 49,
+        "time": 6,
+        "parent_id": 24,
+        "children_ids": [
+          99,
+          100
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 14.6354
+      },
+      {
+        "id": 50,
+        "time": 6,
+        "parent_id": 24,
+        "children_ids": [
+          101,
+          102
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 22.4518
+      },
+      {
+        "id": 51,
+        "time": 6,
+        "parent_id": 25,
+        "children_ids": [
+          103,
+          104
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 29.1161
+      },
+      {
+        "id": 52,
+        "time": 6,
+        "parent_id": 25,
+        "children_ids": [
+          105,
+          106
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 2.3629
+      },
+      {
+        "id": 53,
+        "time": 6,
+        "parent_id": 26,
+        "children_ids": [
+          107,
+          108
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 28.8094
+      },
+      {
+        "id": 54,
+        "time": 6,
+        "parent_id": 26,
+        "children_ids": [
+          109,
+          110
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 5.8058
+      },
+      {
+        "id": 55,
+        "time": 6,
+        "parent_id": 27,
+        "children_ids": [
+          111,
+          112
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 9.6707
+      },
+      {
+        "id": 56,
+        "time": 6,
+        "parent_id": 27,
+        "children_ids": [
+          113,
+          114
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 17.2305
+      },
+      {
+        "id": 57,
+        "time": 6,
+        "parent_id": 28,
+        "children_ids": [
+          115,
+          116
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 14.7482
+      },
+      {
+        "id": 58,
+        "time": 6,
+        "parent_id": 28,
+        "children_ids": [
+          117,
+          118
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 27.6949
+      },
+      {
+        "id": 59,
+        "time": 6,
+        "parent_id": 29,
+        "children_ids": [
+          119,
+          120
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 8.7723
+      },
+      {
+        "id": 60,
+        "time": 6,
+        "parent_id": 29,
+        "children_ids": [
+          121,
+          122
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 9.6685
+      },
+      {
+        "id": 61,
+        "time": 6,
+        "parent_id": 30,
+        "children_ids": [
+          123,
+          124
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 12.1886
+      },
+      {
+        "id": 62,
+        "time": 6,
+        "parent_id": 30,
+        "children_ids": [
+          125,
+          126
+        ],
+        "probability": 0.03125,
+        "electricity_price_dollars_per_MWh": 28.491
+      },
+      {
+        "id": 63,
+        "time": 7,
+        "parent_id": 31,
+        "children_ids": [
+          127,
+          128
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 12.7568
+      },
+      {
+        "id": 64,
+        "time": 7,
+        "parent_id": 31,
+        "children_ids": [
+          129,
+          130
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 12.8636
+      },
+      {
+        "id": 65,
+        "time": 7,
+        "parent_id": 32,
+        "children_ids": [
+          131,
+          132
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 11.4351
+      },
+      {
+        "id": 66,
+        "time": 7,
+        "parent_id": 32,
+        "children_ids": [
+          133,
+          134
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 18.0405
+      },
+      {
+        "id": 67,
+        "time": 7,
+        "parent_id": 33,
+        "children_ids": [
+          135,
+          136
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 19.883
+      },
+      {
+        "id": 68,
+        "time": 7,
+        "parent_id": 33,
+        "children_ids": [
+          137,
+          138
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 30.8968
+      },
+      {
+        "id": 69,
+        "time": 7,
+        "parent_id": 34,
+        "children_ids": [
+          139,
+          140
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 29.3253
+      },
+      {
+        "id": 70,
+        "time": 7,
+        "parent_id": 34,
+        "children_ids": [
+          141,
+          142
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 25.9176
+      },
+      {
+        "id": 71,
+        "time": 7,
+        "parent_id": 35,
+        "children_ids": [
+          143,
+          144
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 26.2188
+      },
+      {
+        "id": 72,
+        "time": 7,
+        "parent_id": 35,
+        "children_ids": [
+          145,
+          146
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 11.1086
+      },
+      {
+        "id": 73,
+        "time": 7,
+        "parent_id": 36,
+        "children_ids": [
+          147,
+          148
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 6.7534
+      },
+      {
+        "id": 74,
+        "time": 7,
+        "parent_id": 36,
+        "children_ids": [
+          149,
+          150
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 7.0071
+      },
+      {
+        "id": 75,
+        "time": 7,
+        "parent_id": 37,
+        "children_ids": [
+          151,
+          152
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 6.2271
+      },
+      {
+        "id": 76,
+        "time": 7,
+        "parent_id": 37,
+        "children_ids": [
+          153,
+          154
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 28.2847
+      },
+      {
+        "id": 77,
+        "time": 7,
+        "parent_id": 38,
+        "children_ids": [
+          155,
+          156
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 11.0285
+      },
+      {
+        "id": 78,
+        "time": 7,
+        "parent_id": 38,
+        "children_ids": [
+          157,
+          158
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 20.7406
+      },
+      {
+        "id": 79,
+        "time": 7,
+        "parent_id": 39,
+        "children_ids": [
+          159,
+          160
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 23.3888
+      },
+      {
+        "id": 80,
+        "time": 7,
+        "parent_id": 39,
+        "children_ids": [
+          161,
+          162
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 11.6867
+      },
+      {
+        "id": 81,
+        "time": 7,
+        "parent_id": 40,
+        "children_ids": [
+          163,
+          164
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 15.4241
+      },
+      {
+        "id": 82,
+        "time": 7,
+        "parent_id": 40,
+        "children_ids": [
+          165,
+          166
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 22.8005
+      },
+      {
+        "id": 83,
+        "time": 7,
+        "parent_id": 41,
+        "children_ids": [
+          167,
+          168
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 29.5305
+      },
+      {
+        "id": 84,
+        "time": 7,
+        "parent_id": 41,
+        "children_ids": [
+          169,
+          170
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 1.0298
+      },
+      {
+        "id": 85,
+        "time": 7,
+        "parent_id": 42,
+        "children_ids": [
+          171,
+          172
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 16.1992
+      },
+      {
+        "id": 86,
+        "time": 7,
+        "parent_id": 42,
+        "children_ids": [
+          173,
+          174
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 13.6197
+      },
+      {
+        "id": 87,
+        "time": 7,
+        "parent_id": 43,
+        "children_ids": [
+          175,
+          176
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 2.6428
+      },
+      {
+        "id": 88,
+        "time": 7,
+        "parent_id": 43,
+        "children_ids": [
+          177,
+          178
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 22.9945
+      },
+      {
+        "id": 89,
+        "time": 7,
+        "parent_id": 44,
+        "children_ids": [
+          179,
+          180
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 7.6209
+      },
+      {
+        "id": 90,
+        "time": 7,
+        "parent_id": 44,
+        "children_ids": [
+          181,
+          182
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 16.2017
+      },
+      {
+        "id": 91,
+        "time": 7,
+        "parent_id": 45,
+        "children_ids": [
+          183,
+          184
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 3.3522
+      },
+      {
+        "id": 92,
+        "time": 7,
+        "parent_id": 45,
+        "children_ids": [
+          185,
+          186
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 17.1553
+      },
+      {
+        "id": 93,
+        "time": 7,
+        "parent_id": 46,
+        "children_ids": [
+          187,
+          188
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 14.2034
+      },
+      {
+        "id": 94,
+        "time": 7,
+        "parent_id": 46,
+        "children_ids": [
+          189,
+          190
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 12.4514
+      },
+      {
+        "id": 95,
+        "time": 7,
+        "parent_id": 47,
+        "children_ids": [
+          191,
+          192
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 8.2292
+      },
+      {
+        "id": 96,
+        "time": 7,
+        "parent_id": 47,
+        "children_ids": [
+          193,
+          194
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 8.7205
+      },
+      {
+        "id": 97,
+        "time": 7,
+        "parent_id": 48,
+        "children_ids": [
+          195,
+          196
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 28.4169
+      },
+      {
+        "id": 98,
+        "time": 7,
+        "parent_id": 48,
+        "children_ids": [
+          197,
+          198
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 2.9374
+      },
+      {
+        "id": 99,
+        "time": 7,
+        "parent_id": 49,
+        "children_ids": [
+          199,
+          200
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 12.0109
+      },
+      {
+        "id": 100,
+        "time": 7,
+        "parent_id": 49,
+        "children_ids": [
+          201,
+          202
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 17.9656
+      },
+      {
+        "id": 101,
+        "time": 7,
+        "parent_id": 50,
+        "children_ids": [
+          203,
+          204
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 2.0296
+      },
+      {
+        "id": 102,
+        "time": 7,
+        "parent_id": 50,
+        "children_ids": [
+          205,
+          206
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 8.6791
+      },
+      {
+        "id": 103,
+        "time": 7,
+        "parent_id": 51,
+        "children_ids": [
+          207,
+          208
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 16.5345
+      },
+      {
+        "id": 104,
+        "time": 7,
+        "parent_id": 51,
+        "children_ids": [
+          209,
+          210
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 6.2626
+      },
+      {
+        "id": 105,
+        "time": 7,
+        "parent_id": 52,
+        "children_ids": [
+          211,
+          212
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 28.2548
+      },
+      {
+        "id": 106,
+        "time": 7,
+        "parent_id": 52,
+        "children_ids": [
+          213,
+          214
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 21.1748
+      },
+      {
+        "id": 107,
+        "time": 7,
+        "parent_id": 53,
+        "children_ids": [
+          215,
+          216
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 19.496
+      },
+      {
+        "id": 108,
+        "time": 7,
+        "parent_id": 53,
+        "children_ids": [
+          217,
+          218
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 9.7458
+      },
+      {
+        "id": 109,
+        "time": 7,
+        "parent_id": 54,
+        "children_ids": [
+          219,
+          220
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 9.9695
+      },
+      {
+        "id": 110,
+        "time": 7,
+        "parent_id": 54,
+        "children_ids": [
+          221,
+          222
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 9.7774
+      },
+      {
+        "id": 111,
+        "time": 7,
+        "parent_id": 55,
+        "children_ids": [
+          223,
+          224
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 20.4631
+      },
+      {
+        "id": 112,
+        "time": 7,
+        "parent_id": 55,
+        "children_ids": [
+          225,
+          226
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 7.9565
+      },
+      {
+        "id": 113,
+        "time": 7,
+        "parent_id": 56,
+        "children_ids": [
+          227,
+          228
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 20.1209
+      },
+      {
+        "id": 114,
+        "time": 7,
+        "parent_id": 56,
+        "children_ids": [
+          229,
+          230
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 9.1721
+      },
+      {
+        "id": 115,
+        "time": 7,
+        "parent_id": 57,
+        "children_ids": [
+          231,
+          232
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 18.8429
+      },
+      {
+        "id": 116,
+        "time": 7,
+        "parent_id": 57,
+        "children_ids": [
+          233,
+          234
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 27.529
+      },
+      {
+        "id": 117,
+        "time": 7,
+        "parent_id": 58,
+        "children_ids": [
+          235,
+          236
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 9.89
+      },
+      {
+        "id": 118,
+        "time": 7,
+        "parent_id": 58,
+        "children_ids": [
+          237,
+          238
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 20.618
+      },
+      {
+        "id": 119,
+        "time": 7,
+        "parent_id": 59,
+        "children_ids": [
+          239,
+          240
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 14.4651
+      },
+      {
+        "id": 120,
+        "time": 7,
+        "parent_id": 59,
+        "children_ids": [
+          241,
+          242
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 18.6189
+      },
+      {
+        "id": 121,
+        "time": 7,
+        "parent_id": 60,
+        "children_ids": [
+          243,
+          244
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 9.1304
+      },
+      {
+        "id": 122,
+        "time": 7,
+        "parent_id": 60,
+        "children_ids": [
+          245,
+          246
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 13.0145
+      },
+      {
+        "id": 123,
+        "time": 7,
+        "parent_id": 61,
+        "children_ids": [
+          247,
+          248
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 25.2495
+      },
+      {
+        "id": 124,
+        "time": 7,
+        "parent_id": 61,
+        "children_ids": [
+          249,
+          250
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 10.7485
+      },
+      {
+        "id": 125,
+        "time": 7,
+        "parent_id": 62,
+        "children_ids": [
+          251,
+          252
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 21.2949
+      },
+      {
+        "id": 126,
+        "time": 7,
+        "parent_id": 62,
+        "children_ids": [
+          253,
+          254
+        ],
+        "probability": 0.015625,
+        "electricity_price_dollars_per_MWh": 22.4998
+      },
+      {
+        "id": 127,
+        "time": 8,
+        "parent_id": 63,
+        "children_ids": [
+          255,
+          256
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 6.6821
+      },
+      {
+        "id": 128,
+        "time": 8,
+        "parent_id": 63,
+        "children_ids": [
+          257,
+          258
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 21.0681
+      },
+      {
+        "id": 129,
+        "time": 8,
+        "parent_id": 64,
+        "children_ids": [
+          259,
+          260
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 17.3996
+      },
+      {
+        "id": 130,
+        "time": 8,
+        "parent_id": 64,
+        "children_ids": [
+          261,
+          262
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 27.1023
+      },
+      {
+        "id": 131,
+        "time": 8,
+        "parent_id": 65,
+        "children_ids": [
+          263,
+          264
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 18.7442
+      },
+      {
+        "id": 132,
+        "time": 8,
+        "parent_id": 65,
+        "children_ids": [
+          265,
+          266
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 11.7699
+      },
+      {
+        "id": 133,
+        "time": 8,
+        "parent_id": 66,
+        "children_ids": [
+          267,
+          268
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 8.7817
+      },
+      {
+        "id": 134,
+        "time": 8,
+        "parent_id": 66,
+        "children_ids": [
+          269,
+          270
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 19.7865
+      },
+      {
+        "id": 135,
+        "time": 8,
+        "parent_id": 67,
+        "children_ids": [
+          271,
+          272
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 13.5126
+      },
+      {
+        "id": 136,
+        "time": 8,
+        "parent_id": 67,
+        "children_ids": [
+          273,
+          274
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 30.3718
+      },
+      {
+        "id": 137,
+        "time": 8,
+        "parent_id": 68,
+        "children_ids": [
+          275,
+          276
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 22.3128
+      },
+      {
+        "id": 138,
+        "time": 8,
+        "parent_id": 68,
+        "children_ids": [
+          277,
+          278
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 15.2166
+      },
+      {
+        "id": 139,
+        "time": 8,
+        "parent_id": 69,
+        "children_ids": [
+          279,
+          280
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 8.6503
+      },
+      {
+        "id": 140,
+        "time": 8,
+        "parent_id": 69,
+        "children_ids": [
+          281,
+          282
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 28.3532
+      },
+      {
+        "id": 141,
+        "time": 8,
+        "parent_id": 70,
+        "children_ids": [
+          283,
+          284
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 29.7446
+      },
+      {
+        "id": 142,
+        "time": 8,
+        "parent_id": 70,
+        "children_ids": [
+          285,
+          286
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 22.6913
+      },
+      {
+        "id": 143,
+        "time": 8,
+        "parent_id": 71,
+        "children_ids": [
+          287,
+          288
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 11.1225
+      },
+      {
+        "id": 144,
+        "time": 8,
+        "parent_id": 71,
+        "children_ids": [
+          289,
+          290
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 14.0382
+      },
+      {
+        "id": 145,
+        "time": 8,
+        "parent_id": 72,
+        "children_ids": [
+          291,
+          292
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 4.4113
+      },
+      {
+        "id": 146,
+        "time": 8,
+        "parent_id": 72,
+        "children_ids": [
+          293,
+          294
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 12.2218
+      },
+      {
+        "id": 147,
+        "time": 8,
+        "parent_id": 73,
+        "children_ids": [
+          295,
+          296
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 6.4022
+      },
+      {
+        "id": 148,
+        "time": 8,
+        "parent_id": 73,
+        "children_ids": [
+          297,
+          298
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 11.6009
+      },
+      {
+        "id": 149,
+        "time": 8,
+        "parent_id": 74,
+        "children_ids": [
+          299,
+          300
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 1.3173
+      },
+      {
+        "id": 150,
+        "time": 8,
+        "parent_id": 74,
+        "children_ids": [
+          301,
+          302
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 15.0999
+      },
+      {
+        "id": 151,
+        "time": 8,
+        "parent_id": 75,
+        "children_ids": [
+          303,
+          304
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 27.3636
+      },
+      {
+        "id": 152,
+        "time": 8,
+        "parent_id": 75,
+        "children_ids": [
+          305,
+          306
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 21.5944
+      },
+      {
+        "id": 153,
+        "time": 8,
+        "parent_id": 76,
+        "children_ids": [
+          307,
+          308
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 15.8013
+      },
+      {
+        "id": 154,
+        "time": 8,
+        "parent_id": 76,
+        "children_ids": [
+          309,
+          310
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 10.0956
+      },
+      {
+        "id": 155,
+        "time": 8,
+        "parent_id": 77,
+        "children_ids": [
+          311,
+          312
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 4.1847
+      },
+      {
+        "id": 156,
+        "time": 8,
+        "parent_id": 77,
+        "children_ids": [
+          313,
+          314
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 24.72
+      },
+      {
+        "id": 157,
+        "time": 8,
+        "parent_id": 78,
+        "children_ids": [
+          315,
+          316
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 3.6428
+      },
+      {
+        "id": 158,
+        "time": 8,
+        "parent_id": 78,
+        "children_ids": [
+          317,
+          318
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 30.0269
+      },
+      {
+        "id": 159,
+        "time": 8,
+        "parent_id": 79,
+        "children_ids": [
+          319,
+          320
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 1.6325
+      },
+      {
+        "id": 160,
+        "time": 8,
+        "parent_id": 79,
+        "children_ids": [
+          321,
+          322
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 21.6238
+      },
+      {
+        "id": 161,
+        "time": 8,
+        "parent_id": 80,
+        "children_ids": [
+          323,
+          324
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 15.7327
+      },
+      {
+        "id": 162,
+        "time": 8,
+        "parent_id": 80,
+        "children_ids": [
+          325,
+          326
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 6.7262
+      },
+      {
+        "id": 163,
+        "time": 8,
+        "parent_id": 81,
+        "children_ids": [
+          327,
+          328
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 25.4548
+      },
+      {
+        "id": 164,
+        "time": 8,
+        "parent_id": 81,
+        "children_ids": [
+          329,
+          330
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 30.7249
+      },
+      {
+        "id": 165,
+        "time": 8,
+        "parent_id": 82,
+        "children_ids": [
+          331,
+          332
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 13.2566
+      },
+      {
+        "id": 166,
+        "time": 8,
+        "parent_id": 82,
+        "children_ids": [
+          333,
+          334
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 17.6687
+      },
+      {
+        "id": 167,
+        "time": 8,
+        "parent_id": 83,
+        "children_ids": [
+          335,
+          336
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 23.8644
+      },
+      {
+        "id": 168,
+        "time": 8,
+        "parent_id": 83,
+        "children_ids": [
+          337,
+          338
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 27.4142
+      },
+      {
+        "id": 169,
+        "time": 8,
+        "parent_id": 84,
+        "children_ids": [
+          339,
+          340
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 1.3527
+      },
+      {
+        "id": 170,
+        "time": 8,
+        "parent_id": 84,
+        "children_ids": [
+          341,
+          342
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 18.5686
+      },
+      {
+        "id": 171,
+        "time": 8,
+        "parent_id": 85,
+        "children_ids": [
+          343,
+          344
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 7.3157
+      },
+      {
+        "id": 172,
+        "time": 8,
+        "parent_id": 85,
+        "children_ids": [
+          345,
+          346
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 27.9922
+      },
+      {
+        "id": 173,
+        "time": 8,
+        "parent_id": 86,
+        "children_ids": [
+          347,
+          348
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 24.927
+      },
+      {
+        "id": 174,
+        "time": 8,
+        "parent_id": 86,
+        "children_ids": [
+          349,
+          350
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 21.0351
+      },
+      {
+        "id": 175,
+        "time": 8,
+        "parent_id": 87,
+        "children_ids": [
+          351,
+          352
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 25.614
+      },
+      {
+        "id": 176,
+        "time": 8,
+        "parent_id": 87,
+        "children_ids": [
+          353,
+          354
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 23.7843
+      },
+      {
+        "id": 177,
+        "time": 8,
+        "parent_id": 88,
+        "children_ids": [
+          355,
+          356
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 29.1976
+      },
+      {
+        "id": 178,
+        "time": 8,
+        "parent_id": 88,
+        "children_ids": [
+          357,
+          358
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 7.1227
+      },
+      {
+        "id": 179,
+        "time": 8,
+        "parent_id": 89,
+        "children_ids": [
+          359,
+          360
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 13.3389
+      },
+      {
+        "id": 180,
+        "time": 8,
+        "parent_id": 89,
+        "children_ids": [
+          361,
+          362
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 28.1154
+      },
+      {
+        "id": 181,
+        "time": 8,
+        "parent_id": 90,
+        "children_ids": [
+          363,
+          364
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 17.6877
+      },
+      {
+        "id": 182,
+        "time": 8,
+        "parent_id": 90,
+        "children_ids": [
+          365,
+          366
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 5.5977
+      },
+      {
+        "id": 183,
+        "time": 8,
+        "parent_id": 91,
+        "children_ids": [
+          367,
+          368
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 15.4644
+      },
+      {
+        "id": 184,
+        "time": 8,
+        "parent_id": 91,
+        "children_ids": [
+          369,
+          370
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 11.4143
+      },
+      {
+        "id": 185,
+        "time": 8,
+        "parent_id": 92,
+        "children_ids": [
+          371,
+          372
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 9.0261
+      },
+      {
+        "id": 186,
+        "time": 8,
+        "parent_id": 92,
+        "children_ids": [
+          373,
+          374
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 27.7598
+      },
+      {
+        "id": 187,
+        "time": 8,
+        "parent_id": 93,
+        "children_ids": [
+          375,
+          376
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 30.4046
+      },
+      {
+        "id": 188,
+        "time": 8,
+        "parent_id": 93,
+        "children_ids": [
+          377,
+          378
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 6.4123
+      },
+      {
+        "id": 189,
+        "time": 8,
+        "parent_id": 94,
+        "children_ids": [
+          379,
+          380
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 15.9897
+      },
+      {
+        "id": 190,
+        "time": 8,
+        "parent_id": 94,
+        "children_ids": [
+          381,
+          382
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 4.8553
+      },
+      {
+        "id": 191,
+        "time": 8,
+        "parent_id": 95,
+        "children_ids": [
+          383,
+          384
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 14.0484
+      },
+      {
+        "id": 192,
+        "time": 8,
+        "parent_id": 95,
+        "children_ids": [
+          385,
+          386
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 1.9781
+      },
+      {
+        "id": 193,
+        "time": 8,
+        "parent_id": 96,
+        "children_ids": [
+          387,
+          388
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 24.4765
+      },
+      {
+        "id": 194,
+        "time": 8,
+        "parent_id": 96,
+        "children_ids": [
+          389,
+          390
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 19.3427
+      },
+      {
+        "id": 195,
+        "time": 8,
+        "parent_id": 97,
+        "children_ids": [
+          391,
+          392
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 4.2075
+      },
+      {
+        "id": 196,
+        "time": 8,
+        "parent_id": 97,
+        "children_ids": [
+          393,
+          394
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 22.1881
+      },
+      {
+        "id": 197,
+        "time": 8,
+        "parent_id": 98,
+        "children_ids": [
+          395,
+          396
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 19.4173
+      },
+      {
+        "id": 198,
+        "time": 8,
+        "parent_id": 98,
+        "children_ids": [
+          397,
+          398
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 23.7197
+      },
+      {
+        "id": 199,
+        "time": 8,
+        "parent_id": 99,
+        "children_ids": [
+          399,
+          400
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 18.3186
+      },
+      {
+        "id": 200,
+        "time": 8,
+        "parent_id": 99,
+        "children_ids": [
+          401,
+          402
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 24.9319
+      },
+      {
+        "id": 201,
+        "time": 8,
+        "parent_id": 100,
+        "children_ids": [
+          403,
+          404
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 16.4535
+      },
+      {
+        "id": 202,
+        "time": 8,
+        "parent_id": 100,
+        "children_ids": [
+          405,
+          406
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 7.4263
+      },
+      {
+        "id": 203,
+        "time": 8,
+        "parent_id": 101,
+        "children_ids": [
+          407,
+          408
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 15.7866
+      },
+      {
+        "id": 204,
+        "time": 8,
+        "parent_id": 101,
+        "children_ids": [
+          409,
+          410
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 25.7964
+      },
+      {
+        "id": 205,
+        "time": 8,
+        "parent_id": 102,
+        "children_ids": [
+          411,
+          412
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 3.6484
+      },
+      {
+        "id": 206,
+        "time": 8,
+        "parent_id": 102,
+        "children_ids": [
+          413,
+          414
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 27.755
+      },
+      {
+        "id": 207,
+        "time": 8,
+        "parent_id": 103,
+        "children_ids": [
+          415,
+          416
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 15.6981
+      },
+      {
+        "id": 208,
+        "time": 8,
+        "parent_id": 103,
+        "children_ids": [
+          417,
+          418
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 11.8547
+      },
+      {
+        "id": 209,
+        "time": 8,
+        "parent_id": 104,
+        "children_ids": [
+          419,
+          420
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 1.0346
+      },
+      {
+        "id": 210,
+        "time": 8,
+        "parent_id": 104,
+        "children_ids": [
+          421,
+          422
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 19.4712
+      },
+      {
+        "id": 211,
+        "time": 8,
+        "parent_id": 105,
+        "children_ids": [
+          423,
+          424
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 22.565
+      },
+      {
+        "id": 212,
+        "time": 8,
+        "parent_id": 105,
+        "children_ids": [
+          425,
+          426
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 11.8866
+      },
+      {
+        "id": 213,
+        "time": 8,
+        "parent_id": 106,
+        "children_ids": [
+          427,
+          428
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 28.6378
+      },
+      {
+        "id": 214,
+        "time": 8,
+        "parent_id": 106,
+        "children_ids": [
+          429,
+          430
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 9.3767
+      },
+      {
+        "id": 215,
+        "time": 8,
+        "parent_id": 107,
+        "children_ids": [
+          431,
+          432
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 16.9667
+      },
+      {
+        "id": 216,
+        "time": 8,
+        "parent_id": 107,
+        "children_ids": [
+          433,
+          434
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 21.4491
+      },
+      {
+        "id": 217,
+        "time": 8,
+        "parent_id": 108,
+        "children_ids": [
+          435,
+          436
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 2.0342
+      },
+      {
+        "id": 218,
+        "time": 8,
+        "parent_id": 108,
+        "children_ids": [
+          437,
+          438
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 6.9184
+      },
+      {
+        "id": 219,
+        "time": 8,
+        "parent_id": 109,
+        "children_ids": [
+          439,
+          440
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 30.0219
+      },
+      {
+        "id": 220,
+        "time": 8,
+        "parent_id": 109,
+        "children_ids": [
+          441,
+          442
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 20.4989
+      },
+      {
+        "id": 221,
+        "time": 8,
+        "parent_id": 110,
+        "children_ids": [
+          443,
+          444
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 26.9668
+      },
+      {
+        "id": 222,
+        "time": 8,
+        "parent_id": 110,
+        "children_ids": [
+          445,
+          446
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 16.0233
+      },
+      {
+        "id": 223,
+        "time": 8,
+        "parent_id": 111,
+        "children_ids": [
+          447,
+          448
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 21.5361
+      },
+      {
+        "id": 224,
+        "time": 8,
+        "parent_id": 111,
+        "children_ids": [
+          449,
+          450
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 25.2609
+      },
+      {
+        "id": 225,
+        "time": 8,
+        "parent_id": 112,
+        "children_ids": [
+          451,
+          452
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 6.6804
+      },
+      {
+        "id": 226,
+        "time": 8,
+        "parent_id": 112,
+        "children_ids": [
+          453,
+          454
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 19.629
+      },
+      {
+        "id": 227,
+        "time": 8,
+        "parent_id": 113,
+        "children_ids": [
+          455,
+          456
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 11.6437
+      },
+      {
+        "id": 228,
+        "time": 8,
+        "parent_id": 113,
+        "children_ids": [
+          457,
+          458
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 11.7599
+      },
+      {
+        "id": 229,
+        "time": 8,
+        "parent_id": 114,
+        "children_ids": [
+          459,
+          460
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 15.5703
+      },
+      {
+        "id": 230,
+        "time": 8,
+        "parent_id": 114,
+        "children_ids": [
+          461,
+          462
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 19.5584
+      },
+      {
+        "id": 231,
+        "time": 8,
+        "parent_id": 115,
+        "children_ids": [
+          463,
+          464
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 16.9224
+      },
+      {
+        "id": 232,
+        "time": 8,
+        "parent_id": 115,
+        "children_ids": [
+          465,
+          466
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 9.0107
+      },
+      {
+        "id": 233,
+        "time": 8,
+        "parent_id": 116,
+        "children_ids": [
+          467,
+          468
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 27.5258
+      },
+      {
+        "id": 234,
+        "time": 8,
+        "parent_id": 116,
+        "children_ids": [
+          469,
+          470
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 2.6782
+      },
+      {
+        "id": 235,
+        "time": 8,
+        "parent_id": 117,
+        "children_ids": [
+          471,
+          472
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 14.0216
+      },
+      {
+        "id": 236,
+        "time": 8,
+        "parent_id": 117,
+        "children_ids": [
+          473,
+          474
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 13.5925
+      },
+      {
+        "id": 237,
+        "time": 8,
+        "parent_id": 118,
+        "children_ids": [
+          475,
+          476
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 18.5349
+      },
+      {
+        "id": 238,
+        "time": 8,
+        "parent_id": 118,
+        "children_ids": [
+          477,
+          478
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 10.0301
+      },
+      {
+        "id": 239,
+        "time": 8,
+        "parent_id": 119,
+        "children_ids": [
+          479,
+          480
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 27.9476
+      },
+      {
+        "id": 240,
+        "time": 8,
+        "parent_id": 119,
+        "children_ids": [
+          481,
+          482
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 22.0732
+      },
+      {
+        "id": 241,
+        "time": 8,
+        "parent_id": 120,
+        "children_ids": [
+          483,
+          484
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 20.3657
+      },
+      {
+        "id": 242,
+        "time": 8,
+        "parent_id": 120,
+        "children_ids": [
+          485,
+          486
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 20.3138
+      },
+      {
+        "id": 243,
+        "time": 8,
+        "parent_id": 121,
+        "children_ids": [
+          487,
+          488
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 29.0392
+      },
+      {
+        "id": 244,
+        "time": 8,
+        "parent_id": 121,
+        "children_ids": [
+          489,
+          490
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 4.2235
+      },
+      {
+        "id": 245,
+        "time": 8,
+        "parent_id": 122,
+        "children_ids": [
+          491,
+          492
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 27.8602
+      },
+      {
+        "id": 246,
+        "time": 8,
+        "parent_id": 122,
+        "children_ids": [
+          493,
+          494
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 5.2023
+      },
+      {
+        "id": 247,
+        "time": 8,
+        "parent_id": 123,
+        "children_ids": [
+          495,
+          496
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 2.9582
+      },
+      {
+        "id": 248,
+        "time": 8,
+        "parent_id": 123,
+        "children_ids": [
+          497,
+          498
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 27.4026
+      },
+      {
+        "id": 249,
+        "time": 8,
+        "parent_id": 124,
+        "children_ids": [
+          499,
+          500
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 27.7675
+      },
+      {
+        "id": 250,
+        "time": 8,
+        "parent_id": 124,
+        "children_ids": [
+          501,
+          502
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 24.3407
+      },
+      {
+        "id": 251,
+        "time": 8,
+        "parent_id": 125,
+        "children_ids": [
+          503,
+          504
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 12.8396
+      },
+      {
+        "id": 252,
+        "time": 8,
+        "parent_id": 125,
+        "children_ids": [
+          505,
+          506
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 18.8418
+      },
+      {
+        "id": 253,
+        "time": 8,
+        "parent_id": 126,
+        "children_ids": [
+          507,
+          508
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 26.1941
+      },
+      {
+        "id": 254,
+        "time": 8,
+        "parent_id": 126,
+        "children_ids": [
+          509,
+          510
+        ],
+        "probability": 0.0078125,
+        "electricity_price_dollars_per_MWh": 26.4336
+      },
+      {
+        "id": 255,
+        "time": 9,
+        "parent_id": 127,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 27.7361
+      },
+      {
+        "id": 256,
+        "time": 9,
+        "parent_id": 127,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 15.5409
+      },
+      {
+        "id": 257,
+        "time": 9,
+        "parent_id": 128,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 21.7327
+      },
+      {
+        "id": 258,
+        "time": 9,
+        "parent_id": 128,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 14.6628
+      },
+      {
+        "id": 259,
+        "time": 9,
+        "parent_id": 129,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 29.6966
+      },
+      {
+        "id": 260,
+        "time": 9,
+        "parent_id": 129,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 23.7836
+      },
+      {
+        "id": 261,
+        "time": 9,
+        "parent_id": 130,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 10.2335
+      },
+      {
+        "id": 262,
+        "time": 9,
+        "parent_id": 130,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 30.8052
+      },
+      {
+        "id": 263,
+        "time": 9,
+        "parent_id": 131,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 6.056
+      },
+      {
+        "id": 264,
+        "time": 9,
+        "parent_id": 131,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 11.4305
+      },
+      {
+        "id": 265,
+        "time": 9,
+        "parent_id": 132,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 9.1772
+      },
+      {
+        "id": 266,
+        "time": 9,
+        "parent_id": 132,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 23.2698
+      },
+      {
+        "id": 267,
+        "time": 9,
+        "parent_id": 133,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 21.1707
+      },
+      {
+        "id": 268,
+        "time": 9,
+        "parent_id": 133,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 15.7453
+      },
+      {
+        "id": 269,
+        "time": 9,
+        "parent_id": 134,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 23.6773
+      },
+      {
+        "id": 270,
+        "time": 9,
+        "parent_id": 134,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 14.5072
+      },
+      {
+        "id": 271,
+        "time": 9,
+        "parent_id": 135,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 8.971
+      },
+      {
+        "id": 272,
+        "time": 9,
+        "parent_id": 135,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 5.1506
+      },
+      {
+        "id": 273,
+        "time": 9,
+        "parent_id": 136,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 6.6859
+      },
+      {
+        "id": 274,
+        "time": 9,
+        "parent_id": 136,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.4461
+      },
+      {
+        "id": 275,
+        "time": 9,
+        "parent_id": 137,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 27.117
+      },
+      {
+        "id": 276,
+        "time": 9,
+        "parent_id": 137,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 27.3489
+      },
+      {
+        "id": 277,
+        "time": 9,
+        "parent_id": 138,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 29.0998
+      },
+      {
+        "id": 278,
+        "time": 9,
+        "parent_id": 138,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 28.6491
+      },
+      {
+        "id": 279,
+        "time": 9,
+        "parent_id": 139,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 28.0207
+      },
+      {
+        "id": 280,
+        "time": 9,
+        "parent_id": 139,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 13.965
+      },
+      {
+        "id": 281,
+        "time": 9,
+        "parent_id": 140,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 22.3495
+      },
+      {
+        "id": 282,
+        "time": 9,
+        "parent_id": 140,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 26.8104
+      },
+      {
+        "id": 283,
+        "time": 9,
+        "parent_id": 141,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.6127
+      },
+      {
+        "id": 284,
+        "time": 9,
+        "parent_id": 141,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 17.2349
+      },
+      {
+        "id": 285,
+        "time": 9,
+        "parent_id": 142,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.2112
+      },
+      {
+        "id": 286,
+        "time": 9,
+        "parent_id": 142,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.4391
+      },
+      {
+        "id": 287,
+        "time": 9,
+        "parent_id": 143,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 30.9331
+      },
+      {
+        "id": 288,
+        "time": 9,
+        "parent_id": 143,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 28.2674
+      },
+      {
+        "id": 289,
+        "time": 9,
+        "parent_id": 144,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 29.3323
+      },
+      {
+        "id": 290,
+        "time": 9,
+        "parent_id": 144,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.1164
+      },
+      {
+        "id": 291,
+        "time": 9,
+        "parent_id": 145,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 28.034
+      },
+      {
+        "id": 292,
+        "time": 9,
+        "parent_id": 145,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 14.038
+      },
+      {
+        "id": 293,
+        "time": 9,
+        "parent_id": 146,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 24.8203
+      },
+      {
+        "id": 294,
+        "time": 9,
+        "parent_id": 146,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 12.8364
+      },
+      {
+        "id": 295,
+        "time": 9,
+        "parent_id": 147,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 8.9187
+      },
+      {
+        "id": 296,
+        "time": 9,
+        "parent_id": 147,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 3.5672
+      },
+      {
+        "id": 297,
+        "time": 9,
+        "parent_id": 148,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 1.5034
+      },
+      {
+        "id": 298,
+        "time": 9,
+        "parent_id": 148,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.1948
+      },
+      {
+        "id": 299,
+        "time": 9,
+        "parent_id": 149,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 12.4627
+      },
+      {
+        "id": 300,
+        "time": 9,
+        "parent_id": 149,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 18.6989
+      },
+      {
+        "id": 301,
+        "time": 9,
+        "parent_id": 150,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 5.7634
+      },
+      {
+        "id": 302,
+        "time": 9,
+        "parent_id": 150,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 29.8464
+      },
+      {
+        "id": 303,
+        "time": 9,
+        "parent_id": 151,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 8.7045
+      },
+      {
+        "id": 304,
+        "time": 9,
+        "parent_id": 151,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 30.5582
+      },
+      {
+        "id": 305,
+        "time": 9,
+        "parent_id": 152,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 1.8711
+      },
+      {
+        "id": 306,
+        "time": 9,
+        "parent_id": 152,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 30.3184
+      },
+      {
+        "id": 307,
+        "time": 9,
+        "parent_id": 153,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.8477
+      },
+      {
+        "id": 308,
+        "time": 9,
+        "parent_id": 153,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 15.375
+      },
+      {
+        "id": 309,
+        "time": 9,
+        "parent_id": 154,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 3.8197
+      },
+      {
+        "id": 310,
+        "time": 9,
+        "parent_id": 154,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.1474
+      },
+      {
+        "id": 311,
+        "time": 9,
+        "parent_id": 155,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 28.3678
+      },
+      {
+        "id": 312,
+        "time": 9,
+        "parent_id": 155,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 24.527
+      },
+      {
+        "id": 313,
+        "time": 9,
+        "parent_id": 156,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 26.5181
+      },
+      {
+        "id": 314,
+        "time": 9,
+        "parent_id": 156,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 3.8552
+      },
+      {
+        "id": 315,
+        "time": 9,
+        "parent_id": 157,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 17.6439
+      },
+      {
+        "id": 316,
+        "time": 9,
+        "parent_id": 157,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 27.6639
+      },
+      {
+        "id": 317,
+        "time": 9,
+        "parent_id": 158,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 8.973
+      },
+      {
+        "id": 318,
+        "time": 9,
+        "parent_id": 158,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 5.2473
+      },
+      {
+        "id": 319,
+        "time": 9,
+        "parent_id": 159,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 15.7213
+      },
+      {
+        "id": 320,
+        "time": 9,
+        "parent_id": 159,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.7526
+      },
+      {
+        "id": 321,
+        "time": 9,
+        "parent_id": 160,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.9784
+      },
+      {
+        "id": 322,
+        "time": 9,
+        "parent_id": 160,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 3.7192
+      },
+      {
+        "id": 323,
+        "time": 9,
+        "parent_id": 161,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.3327
+      },
+      {
+        "id": 324,
+        "time": 9,
+        "parent_id": 161,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 7.733
+      },
+      {
+        "id": 325,
+        "time": 9,
+        "parent_id": 162,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 18.9408
+      },
+      {
+        "id": 326,
+        "time": 9,
+        "parent_id": 162,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.5871
+      },
+      {
+        "id": 327,
+        "time": 9,
+        "parent_id": 163,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 5.0838
+      },
+      {
+        "id": 328,
+        "time": 9,
+        "parent_id": 163,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 12.1446
+      },
+      {
+        "id": 329,
+        "time": 9,
+        "parent_id": 164,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.1188
+      },
+      {
+        "id": 330,
+        "time": 9,
+        "parent_id": 164,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 28.2645
+      },
+      {
+        "id": 331,
+        "time": 9,
+        "parent_id": 165,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.5721
+      },
+      {
+        "id": 332,
+        "time": 9,
+        "parent_id": 165,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 7.8989
+      },
+      {
+        "id": 333,
+        "time": 9,
+        "parent_id": 166,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 23.0164
+      },
+      {
+        "id": 334,
+        "time": 9,
+        "parent_id": 166,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 17.736
+      },
+      {
+        "id": 335,
+        "time": 9,
+        "parent_id": 167,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 29.3599
+      },
+      {
+        "id": 336,
+        "time": 9,
+        "parent_id": 167,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 21.9828
+      },
+      {
+        "id": 337,
+        "time": 9,
+        "parent_id": 168,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 10.8736
+      },
+      {
+        "id": 338,
+        "time": 9,
+        "parent_id": 168,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 11.2845
+      },
+      {
+        "id": 339,
+        "time": 9,
+        "parent_id": 169,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 11.9896
+      },
+      {
+        "id": 340,
+        "time": 9,
+        "parent_id": 169,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 13.1888
+      },
+      {
+        "id": 341,
+        "time": 9,
+        "parent_id": 170,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 10.2256
+      },
+      {
+        "id": 342,
+        "time": 9,
+        "parent_id": 170,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.3383
+      },
+      {
+        "id": 343,
+        "time": 9,
+        "parent_id": 171,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 10.8253
+      },
+      {
+        "id": 344,
+        "time": 9,
+        "parent_id": 171,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 6.4657
+      },
+      {
+        "id": 345,
+        "time": 9,
+        "parent_id": 172,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 21.7723
+      },
+      {
+        "id": 346,
+        "time": 9,
+        "parent_id": 172,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 24.8981
+      },
+      {
+        "id": 347,
+        "time": 9,
+        "parent_id": 173,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 13.8111
+      },
+      {
+        "id": 348,
+        "time": 9,
+        "parent_id": 173,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 1.8014
+      },
+      {
+        "id": 349,
+        "time": 9,
+        "parent_id": 174,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 18.0375
+      },
+      {
+        "id": 350,
+        "time": 9,
+        "parent_id": 174,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 17.8711
+      },
+      {
+        "id": 351,
+        "time": 9,
+        "parent_id": 175,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.7221
+      },
+      {
+        "id": 352,
+        "time": 9,
+        "parent_id": 175,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 28.2796
+      },
+      {
+        "id": 353,
+        "time": 9,
+        "parent_id": 176,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 11.8165
+      },
+      {
+        "id": 354,
+        "time": 9,
+        "parent_id": 176,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 27.1143
+      },
+      {
+        "id": 355,
+        "time": 9,
+        "parent_id": 177,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 9.9568
+      },
+      {
+        "id": 356,
+        "time": 9,
+        "parent_id": 177,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 4.4865
+      },
+      {
+        "id": 357,
+        "time": 9,
+        "parent_id": 178,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 10.8102
+      },
+      {
+        "id": 358,
+        "time": 9,
+        "parent_id": 178,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 1.0674
+      },
+      {
+        "id": 359,
+        "time": 9,
+        "parent_id": 179,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 28.3018
+      },
+      {
+        "id": 360,
+        "time": 9,
+        "parent_id": 179,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 23.2569
+      },
+      {
+        "id": 361,
+        "time": 9,
+        "parent_id": 180,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 28.4552
+      },
+      {
+        "id": 362,
+        "time": 9,
+        "parent_id": 180,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.5735
+      },
+      {
+        "id": 363,
+        "time": 9,
+        "parent_id": 181,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 9.0411
+      },
+      {
+        "id": 364,
+        "time": 9,
+        "parent_id": 181,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.6498
+      },
+      {
+        "id": 365,
+        "time": 9,
+        "parent_id": 182,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 15.4353
+      },
+      {
+        "id": 366,
+        "time": 9,
+        "parent_id": 182,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 1.0378
+      },
+      {
+        "id": 367,
+        "time": 9,
+        "parent_id": 183,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 4.6078
+      },
+      {
+        "id": 368,
+        "time": 9,
+        "parent_id": 183,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 22.4733
+      },
+      {
+        "id": 369,
+        "time": 9,
+        "parent_id": 184,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 1.3549
+      },
+      {
+        "id": 370,
+        "time": 9,
+        "parent_id": 184,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 6.1008
+      },
+      {
+        "id": 371,
+        "time": 9,
+        "parent_id": 185,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 3.59
+      },
+      {
+        "id": 372,
+        "time": 9,
+        "parent_id": 185,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.8805
+      },
+      {
+        "id": 373,
+        "time": 9,
+        "parent_id": 186,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 8.3611
+      },
+      {
+        "id": 374,
+        "time": 9,
+        "parent_id": 186,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.0423
+      },
+      {
+        "id": 375,
+        "time": 9,
+        "parent_id": 187,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 4.359
+      },
+      {
+        "id": 376,
+        "time": 9,
+        "parent_id": 187,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 12.5556
+      },
+      {
+        "id": 377,
+        "time": 9,
+        "parent_id": 188,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.5138
+      },
+      {
+        "id": 378,
+        "time": 9,
+        "parent_id": 188,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 4.1135
+      },
+      {
+        "id": 379,
+        "time": 9,
+        "parent_id": 189,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 2.9309
+      },
+      {
+        "id": 380,
+        "time": 9,
+        "parent_id": 189,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 12.3977
+      },
+      {
+        "id": 381,
+        "time": 9,
+        "parent_id": 190,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 28.7036
+      },
+      {
+        "id": 382,
+        "time": 9,
+        "parent_id": 190,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 3.5675
+      },
+      {
+        "id": 383,
+        "time": 9,
+        "parent_id": 191,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.7964
+      },
+      {
+        "id": 384,
+        "time": 9,
+        "parent_id": 191,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 24.0374
+      },
+      {
+        "id": 385,
+        "time": 9,
+        "parent_id": 192,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 12.0975
+      },
+      {
+        "id": 386,
+        "time": 9,
+        "parent_id": 192,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 13.3973
+      },
+      {
+        "id": 387,
+        "time": 9,
+        "parent_id": 193,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 2.6417
+      },
+      {
+        "id": 388,
+        "time": 9,
+        "parent_id": 193,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 29.5982
+      },
+      {
+        "id": 389,
+        "time": 9,
+        "parent_id": 194,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 6.2838
+      },
+      {
+        "id": 390,
+        "time": 9,
+        "parent_id": 194,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.44
+      },
+      {
+        "id": 391,
+        "time": 9,
+        "parent_id": 195,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 21.9249
+      },
+      {
+        "id": 392,
+        "time": 9,
+        "parent_id": 195,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 12.6714
+      },
+      {
+        "id": 393,
+        "time": 9,
+        "parent_id": 196,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 10.3276
+      },
+      {
+        "id": 394,
+        "time": 9,
+        "parent_id": 196,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 11.3668
+      },
+      {
+        "id": 395,
+        "time": 9,
+        "parent_id": 197,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 25.3398
+      },
+      {
+        "id": 396,
+        "time": 9,
+        "parent_id": 197,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 3.543
+      },
+      {
+        "id": 397,
+        "time": 9,
+        "parent_id": 198,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 30.1037
+      },
+      {
+        "id": 398,
+        "time": 9,
+        "parent_id": 198,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 17.5274
+      },
+      {
+        "id": 399,
+        "time": 9,
+        "parent_id": 199,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 15.5161
+      },
+      {
+        "id": 400,
+        "time": 9,
+        "parent_id": 199,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 7.8562
+      },
+      {
+        "id": 401,
+        "time": 9,
+        "parent_id": 200,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 26.5201
+      },
+      {
+        "id": 402,
+        "time": 9,
+        "parent_id": 200,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 23.9051
+      },
+      {
+        "id": 403,
+        "time": 9,
+        "parent_id": 201,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.6555
+      },
+      {
+        "id": 404,
+        "time": 9,
+        "parent_id": 201,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 1.1997
+      },
+      {
+        "id": 405,
+        "time": 9,
+        "parent_id": 202,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 23.4655
+      },
+      {
+        "id": 406,
+        "time": 9,
+        "parent_id": 202,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.6366
+      },
+      {
+        "id": 407,
+        "time": 9,
+        "parent_id": 203,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 30.295
+      },
+      {
+        "id": 408,
+        "time": 9,
+        "parent_id": 203,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 11.72
+      },
+      {
+        "id": 409,
+        "time": 9,
+        "parent_id": 204,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 27.723
+      },
+      {
+        "id": 410,
+        "time": 9,
+        "parent_id": 204,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 8.522
+      },
+      {
+        "id": 411,
+        "time": 9,
+        "parent_id": 205,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 11.0169
+      },
+      {
+        "id": 412,
+        "time": 9,
+        "parent_id": 205,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 11.051
+      },
+      {
+        "id": 413,
+        "time": 9,
+        "parent_id": 206,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 5.5882
+      },
+      {
+        "id": 414,
+        "time": 9,
+        "parent_id": 206,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 6.7825
+      },
+      {
+        "id": 415,
+        "time": 9,
+        "parent_id": 207,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 4.314
+      },
+      {
+        "id": 416,
+        "time": 9,
+        "parent_id": 207,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 2.5828
+      },
+      {
+        "id": 417,
+        "time": 9,
+        "parent_id": 208,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.7177
+      },
+      {
+        "id": 418,
+        "time": 9,
+        "parent_id": 208,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 2.8327
+      },
+      {
+        "id": 419,
+        "time": 9,
+        "parent_id": 209,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 26.1313
+      },
+      {
+        "id": 420,
+        "time": 9,
+        "parent_id": 209,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 21.0796
+      },
+      {
+        "id": 421,
+        "time": 9,
+        "parent_id": 210,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.9216
+      },
+      {
+        "id": 422,
+        "time": 9,
+        "parent_id": 210,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 27.8746
+      },
+      {
+        "id": 423,
+        "time": 9,
+        "parent_id": 211,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.9979
+      },
+      {
+        "id": 424,
+        "time": 9,
+        "parent_id": 211,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 5.1766
+      },
+      {
+        "id": 425,
+        "time": 9,
+        "parent_id": 212,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 15.6521
+      },
+      {
+        "id": 426,
+        "time": 9,
+        "parent_id": 212,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.2339
+      },
+      {
+        "id": 427,
+        "time": 9,
+        "parent_id": 213,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 12.8029
+      },
+      {
+        "id": 428,
+        "time": 9,
+        "parent_id": 213,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 29.4652
+      },
+      {
+        "id": 429,
+        "time": 9,
+        "parent_id": 214,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.1798
+      },
+      {
+        "id": 430,
+        "time": 9,
+        "parent_id": 214,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 30.9139
+      },
+      {
+        "id": 431,
+        "time": 9,
+        "parent_id": 215,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 13.3129
+      },
+      {
+        "id": 432,
+        "time": 9,
+        "parent_id": 215,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 30.5952
+      },
+      {
+        "id": 433,
+        "time": 9,
+        "parent_id": 216,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.2955
+      },
+      {
+        "id": 434,
+        "time": 9,
+        "parent_id": 216,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 12.6181
+      },
+      {
+        "id": 435,
+        "time": 9,
+        "parent_id": 217,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 25.8373
+      },
+      {
+        "id": 436,
+        "time": 9,
+        "parent_id": 217,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 7.0938
+      },
+      {
+        "id": 437,
+        "time": 9,
+        "parent_id": 218,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 5.7645
+      },
+      {
+        "id": 438,
+        "time": 9,
+        "parent_id": 218,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 12.0019
+      },
+      {
+        "id": 439,
+        "time": 9,
+        "parent_id": 219,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 4.4745
+      },
+      {
+        "id": 440,
+        "time": 9,
+        "parent_id": 219,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 5.78
+      },
+      {
+        "id": 441,
+        "time": 9,
+        "parent_id": 220,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.8391
+      },
+      {
+        "id": 442,
+        "time": 9,
+        "parent_id": 220,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 13.646
+      },
+      {
+        "id": 443,
+        "time": 9,
+        "parent_id": 221,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 2.3521
+      },
+      {
+        "id": 444,
+        "time": 9,
+        "parent_id": 221,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 24.531
+      },
+      {
+        "id": 445,
+        "time": 9,
+        "parent_id": 222,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 2.7878
+      },
+      {
+        "id": 446,
+        "time": 9,
+        "parent_id": 222,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 9.2658
+      },
+      {
+        "id": 447,
+        "time": 9,
+        "parent_id": 223,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 30.2649
+      },
+      {
+        "id": 448,
+        "time": 9,
+        "parent_id": 223,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 7.5428
+      },
+      {
+        "id": 449,
+        "time": 9,
+        "parent_id": 224,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 1.1397
+      },
+      {
+        "id": 450,
+        "time": 9,
+        "parent_id": 224,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.9745
+      },
+      {
+        "id": 451,
+        "time": 9,
+        "parent_id": 225,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 9.3093
+      },
+      {
+        "id": 452,
+        "time": 9,
+        "parent_id": 225,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 1.6013
+      },
+      {
+        "id": 453,
+        "time": 9,
+        "parent_id": 226,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 21.1193
+      },
+      {
+        "id": 454,
+        "time": 9,
+        "parent_id": 226,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 1.3535
+      },
+      {
+        "id": 455,
+        "time": 9,
+        "parent_id": 227,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 29.515
+      },
+      {
+        "id": 456,
+        "time": 9,
+        "parent_id": 227,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 1.6288
+      },
+      {
+        "id": 457,
+        "time": 9,
+        "parent_id": 228,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 7.2849
+      },
+      {
+        "id": 458,
+        "time": 9,
+        "parent_id": 228,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 4.1351
+      },
+      {
+        "id": 459,
+        "time": 9,
+        "parent_id": 229,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 24.1305
+      },
+      {
+        "id": 460,
+        "time": 9,
+        "parent_id": 229,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 18.4839
+      },
+      {
+        "id": 461,
+        "time": 9,
+        "parent_id": 230,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 17.3688
+      },
+      {
+        "id": 462,
+        "time": 9,
+        "parent_id": 230,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 2.4924
+      },
+      {
+        "id": 463,
+        "time": 9,
+        "parent_id": 231,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.5164
+      },
+      {
+        "id": 464,
+        "time": 9,
+        "parent_id": 231,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 18.872
+      },
+      {
+        "id": 465,
+        "time": 9,
+        "parent_id": 232,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 24.9086
+      },
+      {
+        "id": 466,
+        "time": 9,
+        "parent_id": 232,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.548
+      },
+      {
+        "id": 467,
+        "time": 9,
+        "parent_id": 233,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.1122
+      },
+      {
+        "id": 468,
+        "time": 9,
+        "parent_id": 233,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 7.555
+      },
+      {
+        "id": 469,
+        "time": 9,
+        "parent_id": 234,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 10.0394
+      },
+      {
+        "id": 470,
+        "time": 9,
+        "parent_id": 234,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 29.9032
+      },
+      {
+        "id": 471,
+        "time": 9,
+        "parent_id": 235,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 12.9951
+      },
+      {
+        "id": 472,
+        "time": 9,
+        "parent_id": 235,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 7.7684
+      },
+      {
+        "id": 473,
+        "time": 9,
+        "parent_id": 236,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 23.4892
+      },
+      {
+        "id": 474,
+        "time": 9,
+        "parent_id": 236,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 13.95
+      },
+      {
+        "id": 475,
+        "time": 9,
+        "parent_id": 237,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 24.8335
+      },
+      {
+        "id": 476,
+        "time": 9,
+        "parent_id": 237,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 24.9757
+      },
+      {
+        "id": 477,
+        "time": 9,
+        "parent_id": 238,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 22.2028
+      },
+      {
+        "id": 478,
+        "time": 9,
+        "parent_id": 238,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 8.3288
+      },
+      {
+        "id": 479,
+        "time": 9,
+        "parent_id": 239,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 15.6246
+      },
+      {
+        "id": 480,
+        "time": 9,
+        "parent_id": 239,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 30.9668
+      },
+      {
+        "id": 481,
+        "time": 9,
+        "parent_id": 240,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 11.1645
+      },
+      {
+        "id": 482,
+        "time": 9,
+        "parent_id": 240,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 27.0466
+      },
+      {
+        "id": 483,
+        "time": 9,
+        "parent_id": 241,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.5072
+      },
+      {
+        "id": 484,
+        "time": 9,
+        "parent_id": 241,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 18.1075
+      },
+      {
+        "id": 485,
+        "time": 9,
+        "parent_id": 242,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 14.8649
+      },
+      {
+        "id": 486,
+        "time": 9,
+        "parent_id": 242,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 8.9668
+      },
+      {
+        "id": 487,
+        "time": 9,
+        "parent_id": 243,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 24.0945
+      },
+      {
+        "id": 488,
+        "time": 9,
+        "parent_id": 243,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 26.6206
+      },
+      {
+        "id": 489,
+        "time": 9,
+        "parent_id": 244,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 21.742
+      },
+      {
+        "id": 490,
+        "time": 9,
+        "parent_id": 244,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 6.5752
+      },
+      {
+        "id": 491,
+        "time": 9,
+        "parent_id": 245,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 25.4883
+      },
+      {
+        "id": 492,
+        "time": 9,
+        "parent_id": 245,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 17.089
+      },
+      {
+        "id": 493,
+        "time": 9,
+        "parent_id": 246,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 9.7016
+      },
+      {
+        "id": 494,
+        "time": 9,
+        "parent_id": 246,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 18.9357
+      },
+      {
+        "id": 495,
+        "time": 9,
+        "parent_id": 247,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.6916
+      },
+      {
+        "id": 496,
+        "time": 9,
+        "parent_id": 247,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 7.7905
+      },
+      {
+        "id": 497,
+        "time": 9,
+        "parent_id": 248,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 4.6408
+      },
+      {
+        "id": 498,
+        "time": 9,
+        "parent_id": 248,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 14.769
+      },
+      {
+        "id": 499,
+        "time": 9,
+        "parent_id": 249,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 10.3917
+      },
+      {
+        "id": 500,
+        "time": 9,
+        "parent_id": 249,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 11.5606
+      },
+      {
+        "id": 501,
+        "time": 9,
+        "parent_id": 250,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.2667
+      },
+      {
+        "id": 502,
+        "time": 9,
+        "parent_id": 250,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 30.4836
+      },
+      {
+        "id": 503,
+        "time": 9,
+        "parent_id": 251,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 11.6313
+      },
+      {
+        "id": 504,
+        "time": 9,
+        "parent_id": 251,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 20.746
+      },
+      {
+        "id": 505,
+        "time": 9,
+        "parent_id": 252,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 19.6401
+      },
+      {
+        "id": 506,
+        "time": 9,
+        "parent_id": 252,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 6.2468
+      },
+      {
+        "id": 507,
+        "time": 9,
+        "parent_id": 253,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 16.8543
+      },
+      {
+        "id": 508,
+        "time": 9,
+        "parent_id": 253,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 3.4924
+      },
+      {
+        "id": 509,
+        "time": 9,
+        "parent_id": 254,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 13.5703
+      },
+      {
+        "id": 510,
+        "time": 9,
+        "parent_id": 254,
+        "children_ids": [],
+        "probability": 0.00390625,
+        "electricity_price_dollars_per_MWh": 9.2542
+      }
+    ]
+  }
+}

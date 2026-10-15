@@ -1,0 +1,16 @@
+{
+  "objective_value": "<float> Total expected supply chain cost represented by the complete submitted witness.",
+  "model_variables": "<dict, key: canonical variable name> Sparse complete witness; omitted variables are zero. Keys must use Gurobi bracket syntax exactly as specified by model_variable_name_patterns.",
+  "y": "<dict, key: 'y_{module_size_id}_{unit_id}'> Whether each candidate manufacturing unit of a given size is purchased and placed into service (1 = selected, 0 = not selected).",
+  "model_variable_name_patterns": {
+    "y[m,k]": "m=0..num_module_sizes-1, k=0..units_per_module_size-1",
+    "z[m,s]": "module size m, scenario s",
+    "x[i,j,t,s]": "demand site i, production site j, period t, scenario s",
+    "q[i,t,s]": "unmet-demand fraction",
+    "v[j,m,t,s]": "units at production site",
+    "v_depot[m,t,s]": "units at depot",
+    "w[j,jp,m,t,s]": "relocation between distinct production sites j and jp",
+    "w_fd[j,m,t,s]": "depot-to-production-site relocation",
+    "w_td[j,m,t,s]": "production-site-to-depot relocation"
+  }
+}

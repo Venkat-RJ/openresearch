@@ -1,0 +1,15 @@
+{
+  "num_facilities": "<int> Total number of potential facility locations that may be opened.",
+  "num_customers": "<int> Total number of customers to be served.",
+  "budget_B": "<int> Maximum total opening cost allowed when selecting facilities in the Maximal Covering Location Problem.",
+  "covering_demand_fraction": "<float> Fraction of total demand that must be covered in the Partial Set Covering Location Problem.",
+  "covering_demand_D": "<float> Minimum total covered demand required in the Partial Set Covering Location Problem.",
+  "total_demand_D_bar": "<int> Sum of all customer demands across the entire customer set.",
+  "radius_of_coverage": "<float> Maximum Euclidean distance between a facility and a customer for the facility to cover that customer.",
+  "facility_cost": "<list[int], length num_facilities> Cost of opening each facility.",
+  "facility_coordinates": "<list[list[float]], shape [num_facilities][2]> Two-dimensional coordinates (x, y) of each potential facility location.",
+  "customer_coordinates": "<list[list[float]], shape [num_customers][2]> Two-dimensional coordinates (x, y) of each customer location.",
+  "customer_demands": "<list[int], length num_customers> Demand quantity associated with each customer.",
+  "facility_to_customers_coverage": "<dict, key: '{facility_index}'> List of customer indices that each facility can cover, where coverage means the Euclidean distance is within the coverage radius.",
+  "customer_to_facilities_coverage": "<dict, key: '{customer_index}'> List of facility indices that can cover each customer, where coverage means the Euclidean distance is within the coverage radius."
+}

@@ -1,0 +1,14 @@
+{
+  "num_items": "<int> Number of distinct items to be produced.",
+  "num_periods": "<int> Number of discrete time periods in the planning horizon.",
+  "num_machines": "<int> Number of nonidentical machines available in the production facility.",
+  "max_machines_per_item_per_period": "<list[int], length num_items> Maximum number of machines that may simultaneously produce each item within a single period.",
+  "machine_capabilities": "<list[list[int]], length num_items> Set of 1-indexed machine identifiers capable of producing each item.",
+  "demand": "<list[list[int]], shape [num_items][num_periods]> Quantity of each item required in each period.",
+  "production_time": "<dict, key: 'item_{item}_machine_{machine}'> Time consumed per unit produced for each item on each capable machine.",
+  "holding_cost": "<list[float], length num_items> Per-unit cost of carrying one unit of each item in inventory for one period.",
+  "setup_cost": "<dict, key: 'item_{item}_machine_{machine}'> Fixed cost incurred whenever a lot of an item is produced on a capable machine in a period.",
+  "setup_time": "<dict, key: 'item_{item}_machine_{machine}'> Time consumed by performing a setup for each item on each capable machine in a period.",
+  "production_cost": "<dict, key: 'item_{item}_machine_{machine}'> Per-unit cost of producing each item on each capable machine.",
+  "capacity": "<list[list[float]], shape [num_machines][num_periods]> Available production time on each machine in each period."
+}

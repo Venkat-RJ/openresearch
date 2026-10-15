@@ -1,0 +1,8 @@
+{
+  "num_nodes": "<int> Total number of locations in the network, including the depot.",
+  "distance_limitation_d0": "<int> Maximum total travel distance allowed for the round-trip route.",
+  "depot_vertex": "<int> Index of the home depot location where the route must start and end.",
+  "coordinates": "<list[list[int]], shape [num_nodes][2]> Two-dimensional position of each location, used to define the network geography.",
+  "scores": "<list[int], length num_nodes> Reward collected by visiting each location, with the depot always having a score of zero.",
+  "distance_matrix": "<list[list[int]], shape [num_nodes][num_nodes]> Symmetric matrix of rounded Euclidean travel distances between every pair of locations."
+}

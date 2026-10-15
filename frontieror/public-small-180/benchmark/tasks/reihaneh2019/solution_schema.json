@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Total cost of the solution, combining vehicle routing cost across all tours and customer-to-site assignment cost.",
+  "routes": "<dict, key: '{vehicle}'> For each vehicle whose tour is used, an object with 'arcs' (the list of [from_node, to_node] segments traversed between the depot and delivery sites) and 'sequence' (the ordered node IDs visited, starting and ending at the depot).",
+  "assignments": "<dict, key: '{customer}'> Delivery site ID to which each customer is assigned for picking up its demand.",
+  "customer_tours": "<dict, key: '{customer}'> For each customer, an object with 'vehicle' (ID of the vehicle tour serving the customer) and 'site' (ID of the delivery site at which the customer is served)."
+}

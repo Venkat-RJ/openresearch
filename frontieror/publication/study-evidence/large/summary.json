@@ -1,0 +1,120 @@
+{
+  "all_five_current_source_pass_tasks": 110,
+  "all_five_pass_tasks": 111,
+  "authoring_provenance": {
+    "authoring_backend": "inherited-agent",
+    "authoring_model": "sol-6.1",
+    "evaluation_label": "gpt-5.3-codex",
+    "evaluation_label_role": "official harness compatibility alias, not measured GPT generation",
+    "new_solver_tasks": 179,
+    "paid_generation_calls": false,
+    "preserved_wangy_provenance": "original CSV rows and SHA256, separate from new authoring"
+  },
+  "benchmark_process_count": 0,
+  "captured_ist": "2026-10-11T09:24:59.564536+05:30",
+  "captured_utc": "2026-10-11T03:54:59.564536+00:00",
+  "cohorts": {
+    "current_source": 871,
+    "earlier_source": 7,
+    "preserved_pilot": 5
+  },
+  "current_source_large": {
+    "failed": 197,
+    "failures": {
+      "gap_exceeds": 98,
+      "infeasible": 21,
+      "invalid_solution": 3,
+      "runtime_error": 75
+    },
+    "pass": 674,
+    "planned": 871,
+    "recorded": 871,
+    "remaining": 0,
+    "strict": {
+      "better": 207,
+      "equal": 163,
+      "unavailable": 99,
+      "worse": 402
+    },
+    "tolerance": {
+      "better": 181,
+      "numerical_tie": 226,
+      "unavailable": 99,
+      "worse": 365
+    }
+  },
+  "dataset_revision": "d71ca3d78cbc0decf2b211860fdf8708d57cc450",
+  "infrastructure_error_tasks": [],
+  "large": {
+    "failed": 204,
+    "failures": {
+      "gap_exceeds": 98,
+      "infeasible": 23,
+      "invalid_solution": 3,
+      "runtime_error": 80
+    },
+    "pass": 679,
+    "planned": 900,
+    "recorded": 883,
+    "remaining": 17,
+    "strict": {
+      "better": 207,
+      "equal": 168,
+      "unavailable": 106,
+      "worse": 402
+    },
+    "tolerance": {
+      "better": 181,
+      "numerical_tie": 231,
+      "unavailable": 106,
+      "worse": 365
+    }
+  },
+  "manifest_updated_utc": "2026-10-11T03:53:38.651560+00:00",
+  "optimal_reference_beyond_tolerance_flags_large": 29,
+  "optimal_reference_strict_flags_large": 47,
+  "optimal_reference_strict_flags_tiny": 35,
+  "resource_failure_instances": [
+    {
+      "instance": "large_5",
+      "peak_rss_bytes": 4861870080,
+      "task_id": "martello1999"
+    },
+    {
+      "instance": "large_3",
+      "peak_rss_bytes": 5344870400,
+      "task_id": "riley2025"
+    },
+    {
+      "instance": "large_5",
+      "peak_rss_bytes": 2198241280,
+      "task_id": "taninmis2022"
+    }
+  ],
+  "running_cells": [],
+  "stale_tiny_tasks": [],
+  "tiny": {
+    "failed": 1,
+    "failures": {
+      "infeasible": 1
+    },
+    "pass": 179,
+    "planned": 180,
+    "recorded": 180,
+    "remaining": 0,
+    "strict": {
+      "better": 35,
+      "equal": 98,
+      "unavailable": 1,
+      "worse": 46
+    },
+    "tolerance": {
+      "better": 10,
+      "numerical_tie": 144,
+      "unavailable": 1,
+      "worse": 25
+    }
+  },
+  "tiny_current_source_pass": 178,
+  "tiny_current_source_recorded": 179
+}

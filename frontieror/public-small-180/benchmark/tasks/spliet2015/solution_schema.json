@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Expected total travel cost, computed as the probability-weighted sum of route costs across all demand scenarios.",
+  "time_windows": "<dict, key: '{customer_id}'> Assigned narrow delivery time window for each customer as a two-element list [start, end] that is fixed across all scenarios.",
+  "routes": "<dict, key: '{scenario_id}'> Collection of vehicle routes used in each demand scenario; each entry contains 'route' (ordered list of node ids beginning at the start depot, visiting customers, and ending at the end depot), 'arrival_times' (service time at each visited node, keyed by node id as a string), and 'cost' (total travel cost along the route)."
+}

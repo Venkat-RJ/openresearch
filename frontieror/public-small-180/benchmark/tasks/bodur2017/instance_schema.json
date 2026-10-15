@@ -1,0 +1,33 @@
+{
+  "num_facilities": "<int> Number of candidate facility locations.",
+  "num_customers": "<int> Number of customers whose demand must be satisfied.",
+  "num_scenarios": "<int> Number of demand scenarios considered.",
+  "capacity_factor": "<float> Ratio of total facility capacity to total expected demand, controlling how tight capacity is.",
+  "variance_level": "<str> Level of demand variability across scenarios ('normal' or 'high').",
+  "facilities": [
+    {
+      "id": "<int> Zero-based index identifying the facility.",
+      "opening_cost": "<float> Fixed cost incurred if this facility is opened.",
+      "capacity": "<float> Maximum total units this facility can ship across all customers in any scenario.",
+      "location_x": "<float> X-coordinate of the facility location, used to compute transportation costs.",
+      "location_y": "<float> Y-coordinate of the facility location, used to compute transportation costs."
+    }
+  ],
+  "customers": [
+    {
+      "id": "<int> Zero-based index identifying the customer.",
+      "deterministic_demand": "<float> Expected (mean) demand of this customer.",
+      "demand_std_fraction": "<float> Ratio of demand standard deviation to mean demand for this customer.",
+      "location_x": "<float> X-coordinate of the customer location, used to compute transportation costs.",
+      "location_y": "<float> Y-coordinate of the customer location, used to compute transportation costs."
+    }
+  ],
+  "transportation_costs": "<list[list[float]], shape [num_facilities][num_customers]> Per-unit cost of shipping from each facility to each customer, equal to the Euclidean distance between them.",
+  "scenarios": [
+    {
+      "id": "<int> Zero-based index identifying the scenario.",
+      "probability": "<float> Probability of this scenario occurring.",
+      "demands": "<list[float], length num_customers> Realized demand of each customer under this scenario."
+    }
+  ]
+}

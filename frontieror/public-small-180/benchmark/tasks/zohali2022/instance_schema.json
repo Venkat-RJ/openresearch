@@ -1,0 +1,9 @@
+{
+  "num_tasks": "<int> Number of tasks to be assigned and sequenced across the assembly line stations.",
+  "cycle_time": "<int> Upper bound on the maximum total time any single station may use in one production cycle.",
+  "num_stations": "<int> Number of stations on the assembly line to which tasks must be assigned.",
+  "processing_times": "<list[int], length num_tasks> Time required to perform each task.",
+  "precedence_relations": "<list[list[int]], length num_precedence_relations> Pairs [i, j] indicating that task i must be assigned to the same or an earlier station than task j, and must precede task j in sequence if on the same station.",
+  "forward_setup_times": "<list[list[int]], shape [num_tasks][num_tasks]> Time to transition from task i to task j when they are processed consecutively within the same station during a single production cycle.",
+  "backward_setup_times": "<list[list[int]], shape [num_tasks][num_tasks]> Time to transition from the last task processed on a station in one cycle to the first task on that same station in the next cycle."
+}

@@ -1,0 +1,111 @@
+{
+  "objective_value": 300.0,
+  "status": 2,
+  "status_str": "OPTIMAL",
+  "num_vehicles": 2,
+  "vehicle_capacity": 56,
+  "routes": [
+    {
+      "vehicle": 0,
+      "serviced_edges": [
+        1,
+        15,
+        17,
+        24,
+        26,
+        31
+      ],
+      "deadheaded_edges": [
+        {
+          "edge_id": 1,
+          "times": 1
+        },
+        {
+          "edge_id": 14,
+          "times": 1
+        },
+        {
+          "edge_id": 17,
+          "times": 1
+        },
+        {
+          "edge_id": 18,
+          "times": 2
+        },
+        {
+          "edge_id": 25,
+          "times": 2
+        },
+        {
+          "edge_id": 31,
+          "times": 1
+        },
+        {
+          "edge_id": 34,
+          "times": 1
+        }
+      ],
+      "total_demand": 30,
+      "route_cost": 96.0
+    },
+    {
+      "vehicle": 1,
+      "serviced_edges": [
+        4,
+        6,
+        10,
+        12,
+        27,
+        28,
+        29,
+        30,
+        32
+      ],
+      "deadheaded_edges": [
+        {
+          "edge_id": 0,
+          "times": 1
+        },
+        {
+          "edge_id": 1,
+          "times": 1
+        },
+        {
+          "edge_id": 4,
+          "times": 1
+        },
+        {
+          "edge_id": 8,
+          "times": 1
+        },
+        {
+          "edge_id": 18,
+          "times": 1
+        },
+        {
+          "edge_id": 24,
+          "times": 1
+        },
+        {
+          "edge_id": 25,
+          "times": 1
+        },
+        {
+          "edge_id": 27,
+          "times": 1
+        },
+        {
+          "edge_id": 28,
+          "times": 1
+        },
+        {
+          "edge_id": 29,
+          "times": 1
+        }
+      ],
+      "total_demand": 55,
+      "route_cost": 204.0
+    }
+  ],
+  "runtime": 2.19
+}

@@ -1,0 +1,16 @@
+{
+  "objective_value": "<float> Total expected cost represented by the complete submitted two-stage witness.",
+  "model_variables": "<dict, key: canonical variable name> Sparse complete witness; omitted variables are zero. Keys use underscore syntax exactly as specified by model_variable_name_patterns.",
+  "y": "<dict, key: '{period}'> Whether production is set up at the plant in each period (1 = yes, 0 = no).",
+  "z": "<dict, key: '{node}_{vehicle}_{period}'> Whether a node is visited by a vehicle in a given period (1 = yes), where node 0 indicates the vehicle is dispatched from the plant.",
+  "x": "<dict, key: '{node_i}_{node_j}_{vehicle}_{period}'> Number of times the edge between two nodes is traversed by a vehicle in a given period (1 for customer-customer edges, up to 2 for plant-customer edges).",
+  "model_variable_name_patterns": {
+    "y_{t}": "setup in one-based period t",
+    "z_{i}_{k}_{t}": "visit node i by vehicle k in period t",
+    "x_{i}_{j}_{k}_{t}": "edge traversal",
+    "p_{t}_{omega}": "scenario production",
+    "I_{i}_{t}_{omega}": "scenario inventory",
+    "e_{i}_{t}_{omega}": "scenario emergency quantity",
+    "q_{i}_{k}_{t}_{omega}": "scenario delivery quantity"
+  }
+}

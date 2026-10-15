@@ -1,0 +1,7 @@
+# Problem Description
+
+Given a simple undirected graph with a specified number of vertices and a specified set of edges (each edge connecting two distinct vertices, with no self-loops and no repeated edges), every vertex carries a positive weight. The input data consists of the full list of vertices, the full list of edges (each given as a pair of vertex identifiers), and the weight of each vertex, which is computed as the remainder of the vertex index divided by 200, plus one.
+
+A clique in the graph is any subset of vertices such that every pair of vertices in the subset is directly connected by an edge. The task is to select a subset of vertices that forms a clique and whose total weight, defined as the sum of the individual weights of all selected vertices, is as large as possible. The goal is to maximize this total weight.
+
+For every pair of vertices that are not connected by an edge in the original graph, at most one of the two may be selected. Equivalently, the selected set of vertices must be pairwise adjacent: for any two chosen vertices, there must exist an edge between them in the graph. Each vertex is either selected or not, and any number of vertices may be selected provided the clique requirement is satisfied.

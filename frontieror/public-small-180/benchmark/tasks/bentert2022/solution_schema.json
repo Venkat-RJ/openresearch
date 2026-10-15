@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total power cost across all sensors, where each sensor's cost is the maximum weight among its chosen links.",
+  "selected_edges": "<list[list[int]], length num_selected_edges> Pairs of sensor identifiers for each communication link chosen in the spanning subgraph.",
+  "vertex_costs": "<dict, key: '{sensor_id}'> Power cost paid by each sensor, equal to the maximum weight among chosen links incident to that sensor."
+}

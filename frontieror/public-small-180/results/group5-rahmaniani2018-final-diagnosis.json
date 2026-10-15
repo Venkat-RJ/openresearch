@@ -1,0 +1,93 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "task": "rahmaniani2018",
+  "scope": "Read-only frozen-source and native-artifact analysis; no candidate execution or model construction",
+  "frozen_code": "results/final300/code/rahmaniani2018/gpt-5.6-sol/code.py",
+  "code_sha256": "974bd301e5fe92a10b7830be1b655e8152ba646ae47cb74f83ddae07583b59ac",
+  "native_experiment_id": "2ef357a6-4558-438d-be56-3b971f9d3ffc",
+  "native_status": "runtime_error",
+  "native_csv_seconds": 0.56,
+  "native_objective": null,
+  "reference_objective": 1524152091.78372,
+  "incumbent_events": 0,
+  "solution_returned": false,
+  "checker_result_available": false,
+  "observed_failure": "No complete feasible restricted-profile energy witness was published before the active-row loop ended",
+  "evidence": [
+    "results/final300/evaluator.log:3842 records runtime_error at0.56s",
+    "results/final300/evaluator.log:3868-3871 records RuntimeError at frozen source137",
+    "results/final300/code/rahmaniani2018/gpt-5.6-sol/code.py:119-125 rejects any deferred-row violation greater than1e-6 before logging",
+    "results/final300/code/rahmaniani2018/gpt-5.6-sol/code.py:129-137 contains no saved optimizer status or exit reason",
+    "results/final300/raw_outputs/rahmaniani2018/log_tiny.jsonl is empty; no solution/checker file in directory"
+  ],
+  "numeric_optimizer_status": null,
+  "active_row_count_at_exit": null,
+  "last_violated_rows": null,
+  "specific_binding_profile_restriction": "Not established from archived status evidence",
+  "original_instance_infeasibility_claim": false,
+  "license_failure_claim": false,
+  "six_hour_model_static_counts": {
+    "thermal_groups": 8,
+    "hourly_balancing_groups": 2,
+    "nonbalancing_groups": 6,
+    "original_clusters": 62,
+    "storage_clusters": 6,
+    "nonthermal_plain_clusters": 20,
+    "total_hours": 336,
+    "base_variables_excluding_blocks": 176,
+    "base_rows_excluding_block_bounds": 62,
+    "block_variables": 336,
+    "variables": 512,
+    "initial_rows": 734,
+    "active_row_cap": 1850,
+    "additional_row_budget": 1116
+  },
+  "counted_three_hour_options_not_implemented": {
+    "all_six_nonbalancing_groups": {
+      "block_variables": 672,
+      "variables": 848,
+      "initial_rows": 1406,
+      "additional_row_budget_to1850": 444,
+      "licensed_2000_dimension_limits_fit_if_active_cap_retained": true
+    },
+    "one_nonbalancing_group_only": {
+      "variables": 568,
+      "initial_rows": 846,
+      "additional_row_budget_to1850": 1004,
+      "group_selection": "Not selected; requires evidence identifying a binding block equality"
+    },
+    "domain_relaxation": "Allows independent generation in each three-hour half of a six-hour block; constant aggregate commitment remains",
+    "unchanged_restrictions": [
+      "Constant thermal commitments and zero startups/shutdowns",
+      "Zero storage operations",
+      "Fixed hydro and scaled non-UC availability profiles",
+      "Constant transmission flows and NSE fractions"
+    ],
+    "preserved_requirements": [
+      "Original per-cluster integer investment and retirement decisions",
+      "Groups identical in operating, objective and policy coefficients",
+      "Proportional original-cluster injections and unit commitments",
+      "Every original hourly capacity, minimum-output and ramp row checked before publication",
+      "Official logger min_interval0 and early time.time origin",
+      "Seed0, MIPGap1e-4, NumericFocus0, Threads1"
+    ],
+    "recommendation": "Do not present three-hour substitution as a diagnosed fix; binding six-hour equality has not been identified",
+    "execution_status": "Not implemented, not solved, not an evaluated candidate"
+  },
+  "requested_next_evidence": {
+    "requires_root_authorization": true,
+    "same_policy_diagnostic_fields": [
+      "m.Status",
+      "m.SolCount",
+      "m.NumVars",
+      "m.NumConstrs",
+      "active-row iteration count",
+      "loop exit reason",
+      "worst complete-row violation and row category",
+      "number of deferred rows still violated"
+    ],
+    "purpose": "Identify the actual active-row-loop termination before selecting a dispatch-domain refinement",
+    "source_changes_made": false,
+    "candidate_solves_made": false
+  }
+}

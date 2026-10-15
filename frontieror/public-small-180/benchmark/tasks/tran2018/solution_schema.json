@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total round-trip traffic flow volume that is successfully refueled by the chosen stations.",
+  "stations": "<list[int]> Node IDs selected to host a refueling station.",
+  "refueled_od_pairs": "<list[int]> Indices (into the instance's od_pairs list) of origin-destination pairs whose round-trip traffic is refueled by the chosen stations."
+}

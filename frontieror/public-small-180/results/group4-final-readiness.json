@@ -1,0 +1,233 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "group": 4,
+  "scope": "tiny-only; root sole official evaluator; no large executions",
+  "status": "All30 primary plus2followup tiny300 outcomes verified; current live sources compiled/hash-verified; Laporte best18 tie, Knueven no witness, Levin semantic-blocked",
+  "source_check_experiment": "cc62e920-8607-439e-b1fd-d72ad297c61c",
+  "previous_source_check_experiment": "7b32e393-8444-4d59-9094-b3b75c668381",
+  "readback_verified": true,
+  "emission_repair_records": {
+    "legrain2024": {
+      "hypothesis": "19f555bd-71a9-40b3-bd00-a29b9c7f0d82",
+      "experiment": "d8bb96d9-9845-4cdc-9ad3-fff5f6a2c497",
+      "change": "MIPSOL complete roster/skills; true schedule and coverage cost, not epigraph slacks",
+      "status": "primary final300 official feasible, complete terminal full snapshot verified; every internal incumbent completeness not independently certified"
+    },
+    "liao2020": {
+      "hypothesis": "390df683-adf8-4a3f-bff0-47efb66f2eae",
+      "experiment": "c0d35924-ca15-4ea2-9156-76b44e1cfe52",
+      "change": "MIPSOL all indexed auxiliary values, assignment, schedule, patient times; original linear objective",
+      "status": "primary final300 official feasible, complete terminal full snapshot verified; every internal incumbent completeness not independently certified"
+    },
+    "martello1999": {
+      "hypothesis": "42ab2576-4d7f-40a7-b806-102f10750890",
+      "experiment": "d2659bf9-f6e0-4e95-bd13-878547c83dff",
+      "change": "Reconstruct and emit complete subset at each strict global DP improvement; unprocessed items unselected",
+      "status": "primary final300 official feasible, complete terminal full snapshot verified; every internal incumbent completeness not independently certified"
+    }
+  },
+  "audit_qualification": "Static readiness is not complete runtime every-incumbent compliance certification. Source omissions in audits1e5a8b77 and c58db96f repaired only for requested three sources; Other27 unchanged at that checkpoint; Later root-authorized Knueven tracing and Laporte compact-entry followups separately measured299.14s/no witness and0.53s/objective18. Primary frozen outcomes retained.",
+  "controls": {
+    "syntax": "AST parse and compile passed all30",
+    "gurobi_parameters": {
+      "Seed": 0,
+      "Threads": 1,
+      "NumericFocus": 0,
+      "MIPGap": 0.0001
+    },
+    "gurobi_parameter_verification": "AST assignments checked in every owned Gurobi source; non-LP/MIP tasks not applicable",
+    "logger": {
+      "implementation": "official SolutionLogger unchanged",
+      "min_interval": 0,
+      "start_time": "module-entry time.time(), before numerical imports",
+      "callbacks": "preserved"
+    },
+    "time_limit": "argparse type=int; deadline via time.monotonic",
+    "numpy_threads": "OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=OMP_NUM_THREADS=1 before NumPy import where used",
+    "GRB_LICENSE_FILE": "removed only when configured file absent",
+    "upstream_edits": false,
+    "worker_solver_runs": 0
+  },
+  "repairs": {
+    "knueven2020": {
+      "hypothesis": "d7ce31c2-371e-4df4-804a-6f3306cb4165",
+      "experiment": "eadc96f2-2d4b-44c9-aabe-de2f6ae89807",
+      "cause": "All-online first-period ramp lower bound7212 exceeds actual demand6563.93",
+      "change": "Compact constant-commitment master with initial obligations/ramp intervals and all-period reachable envelopes; overlapping12period LP dispatch; complete original objective witness only",
+      "status": "compiled; final300 official runtime failure2.08s, no complete candidate",
+      "official_final300_experiment": "e961129c-708a-4b96-8bfe-4a4e5d842553",
+      "diagnosis_experiment": "23fb0daa-f6d2-44e2-9226-36be17f50dd9",
+      "diagnosis": "No forced-bound or aggregate reachable-envelope contradiction established; exact internal master/dispatch status suppressed. Restricted constant-mask heuristic failed; not original UC infeasibility.",
+      "readback_verified": true,
+      "live_followup": {
+        "source_sha256": "92c8e862a08d2a891ab11414105e90152d6350c509e9b770969f74f0722d2fc1",
+        "static_experiment": "f237371f-884d-4952-811c-3b7acea73228",
+        "preregistration": "3b4be3c5-8f4e-4478-8c2c-845623ec0e47",
+        "status": "complete; measured299.14s,no witness;433fixedmask first12period LPsStatus3 then deadline; not original UC infeasibility",
+        "official_experiment": "bbf55f07-f683-40c5-8685-1f2543f2c84c",
+        "conclusion_experiment": "e0147f89-d478-49e8-a04a-df94aedc32ad"
+      }
+    },
+    "laporte2003": {
+      "hypothesis": "fc8ece2b-0930-40ac-b179-cc19b64b2316",
+      "experiment": "2987fcf4-8f5e-4226-b4ca-884722e71b30",
+      "change": "Exact unlimited-supply equal-price groups linked to market visits, lazy connected-tour MILP; safely prune purchase groups above own incumbent",
+      "size_at_19_bound": {
+        "variables": 1649,
+        "constraints_before_lazy_cuts": 474
+      },
+      "qualification": "Missing purchase keys retain explicit released-upstream zero default; no fabricated price",
+      "status": "primary final300 feasible19; exact branch skipped at1973>1900 guard; separate authorized compact-entry followup18 reference tie verified",
+      "primary_official_experiment": "635ee589-bdc8-4ab2-ae4f-1cd62b5e25f1",
+      "execution_claim_correction": "Prior1649-exact execution claim falsified: initial78 creates1973variables and fallback heuristic ran.1649at19 was hypothetical capacity count, not primary executed model.",
+      "live_followup": {
+        "source_sha256": "ad778c0f1306f064f9418585fcbcb5174235f692bd605de470dac5c2bc2d22aa",
+        "static_experiment": "66fdd6d3-34c1-4ad6-bff2-861f89782159",
+        "preregistration": "db4be2a5-ff2d-4054-80d9-653f5691cbe5",
+        "official_experiment": "0e2af719-91cf-40d7-96a8-02cbcb8cabbb",
+        "conclusion_experiment": "c650b428-16fb-4ec2-8bd1-48b80f5ae923",
+        "status": "complete; objective18,reference18,events24,terminal exact; entry own43 bound1888vars"
+      }
+    },
+    "muter2010": {
+      "hypothesis": "a0370f8a-632c-4e9c-9e53-2454673c36a8",
+      "experiment": "db0dc19d-291e-4487-bf4c-30372cfca111",
+      "change": "Depot departures <=num_vehicles9 for released-reference-comparable VRPTW",
+      "status": "primary final300 verified9routes/all25once;1101.794830754819 exact reference tie",
+      "official_experiment": "22114fa7-b860-4820-be87-61fb708b125d",
+      "audit_experiment": "482c4472-6054-4ae0-8617-bb074cfd1b96"
+    },
+    "levin2017": {
+      "status": "semantic-blocked; not officially feasible",
+      "qualification": "Physical construction rejected by Eq34/Eq35; no exploitation or official checker changes"
+    }
+  },
+  "tasks": [
+    {
+      "task": "kang2021",
+      "sha256": "e0d3746353bb820d94236b5ce4863d69a195e879a3d93c30ddd692207c46964f"
+    },
+    {
+      "task": "klose2005",
+      "sha256": "1a9dc02ceb324150078ba770c1d61f0b8cf9eaa6ff76ad0e5698843e08448ddc"
+    },
+    {
+      "task": "knueven2020",
+      "sha256": "92c8e862a08d2a891ab11414105e90152d6350c509e9b770969f74f0722d2fc1",
+      "followup_readiness": "results/group4-knueven-followup-readiness.json",
+      "followup_preregistration": "3b4be3c5-8f4e-4478-8c2c-845623ec0e47",
+      "status": "authorized followup measured299.14s,no complete witness; original UC infeasibility not claimed"
+    },
+    {
+      "task": "kobayashi2021",
+      "sha256": "405f01557d4a1fb7386be6b3a1ccf7c9ce025d2d3f4278839c32f93a5d2367cc"
+    },
+    {
+      "task": "kobeaga2024",
+      "sha256": "ccd18c901794da2c4c7408069f38591a2b394789adc944d088f5178ba7ed6756"
+    },
+    {
+      "task": "kowalczyk2018",
+      "sha256": "ba7d38b1f55ce9acdae7369b791ac73ecdf7e46fffa7ae8cb9d38d561d93d38c"
+    },
+    {
+      "task": "kowalczyk2024",
+      "sha256": "c941c7b8d24d23006ec2fd596cb59badef0d78e7c50de7cce6eb1ddad86ee8da"
+    },
+    {
+      "task": "kress2019",
+      "sha256": "347bae2311cb7cbab84e0dbab1859520b32147fc2c29f59154c3bb750756045c"
+    },
+    {
+      "task": "kreter2018",
+      "sha256": "90ba61b4bde13f08143c8c3cc6e81c9bb8106099174246f4abbec963c44d773a"
+    },
+    {
+      "task": "lai2021",
+      "sha256": "6dc532f72fc92263d23df660eac3c90ad8de3a76c3f0a7c1422dada4b16d8e57"
+    },
+    {
+      "task": "laporte2003",
+      "sha256": "ad778c0f1306f064f9418585fcbcb5174235f692bd605de470dac5c2bc2d22aa",
+      "followup_readiness": "results/group4-laporte-followup-readiness.json",
+      "followup_preregistration": "db4be2a5-ff2d-4054-80d9-653f5691cbe5",
+      "status": "authorized live-only followup measured18 reference tie; primary19 retained"
+    },
+    {
+      "task": "lee1996",
+      "sha256": "ca6408d0bcf6d45edb1716788ed776782aef1fec20be41d6963e85b91bbdf67c"
+    },
+    {
+      "task": "legrain2020",
+      "sha256": "fba5128d6898d83af49ade6893c91698f1e5e75d9b42375f6501a61c73c62b92"
+    },
+    {
+      "task": "legrain2024",
+      "sha256": "b09fad011f7ebf6a2b267437af114c808ec127d089cad0bc804c4136671e9fa1"
+    },
+    {
+      "task": "letelier2022",
+      "sha256": "ea881c30bf31353aaae82d03c84ebb7e201de987579ff84ecf71f3adee4b6778"
+    },
+    {
+      "task": "levin2017",
+      "sha256": "398494c57ba2eb00931af8b2e34b9585a68ff98c3eef5b901d3b1f8df9d21901"
+    },
+    {
+      "task": "li2020",
+      "sha256": "b92fd4b089c01e362b4207cfe97c6cffd0a345d2125987484f97992ce492ef6d"
+    },
+    {
+      "task": "liao2020",
+      "sha256": "4bdda0d62229726c3a03f144913ca713017ab11afa4ea565b89cb03ac2828829"
+    },
+    {
+      "task": "lozano2017",
+      "sha256": "16a2da084b277afd0f80f9aed7716c7aee62c35263d6087dbc34f8ae17703a3a"
+    },
+    {
+      "task": "luo2017",
+      "sha256": "981301564c2a791ff38080cf75e31335e1f546e72136e3872eb60f0380854d8f"
+    },
+    {
+      "task": "mansini2020",
+      "sha256": "5f9f68e0a60dbb20ba0091d0fe3af01dd8637ca523ee137ac37bf12f7ffb0088"
+    },
+    {
+      "task": "martello1999",
+      "sha256": "30ddbf3d092cc177378c6922d56f8ab95382234d7566ebebd8970491bd581219"
+    },
+    {
+      "task": "martin-iradi2024",
+      "sha256": "5a1aef575eccc2220191c5638c41ed087eb264517cf1ec9cf4fe73afdbbc704f"
+    },
+    {
+      "task": "mehrotra1996",
+      "sha256": "edd341d5e38136207e49fcc335b9ad690eb6ed4c839ea5a25345c22a1c461aa4"
+    },
+    {
+      "task": "mingozzi1999",
+      "sha256": "198ee25a935c7a4cccbb072cfae3cc51022427bc7ccf19b8a02e3b79b4d359e4"
+    },
+    {
+      "task": "morrison2016",
+      "sha256": "4dd974ffde09c47b13b79871432af939af8a66879e9fa7705f2042f925a508f5"
+    },
+    {
+      "task": "muter2010",
+      "sha256": "8daf3944bb19b20119a9e3aec3feae8f0fddde8a0db514a65dff709cf98cda7e"
+    },
+    {
+      "task": "nagy2015",
+      "sha256": "b022f79f6829eccce5a9a20fa8d9f482cacd77823dba5a238eda0c63f0471687"
+    },
+    {
+      "task": "oliveira2020",
+      "sha256": "e4cec369f275ec5dac530ba1c81a835f6ec6561fdb367dc88e0cc72f7e1d9008"
+    },
+    {
+      "task": "ozturk2020",
+      "sha256": "2c3d2461d362992d32c8e1b715d0fa0c93b158c0ffe8dea01b8b06b737ac60ce"
+    }
+  ]
+}

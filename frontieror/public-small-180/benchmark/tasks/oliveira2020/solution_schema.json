@@ -1,0 +1,4 @@
+{
+  "objective_value": "<float> Total weighted tardiness of the schedule, summed over all jobs.",
+  "schedule": "<list[dict], length n> One entry per job. 'machine_id' is an integer in 0..m-1; 'prev_job' is the id of the immediately preceding job on that machine (0 for the first); 'job' is the job id; 'start_time' and 'completion_time' are integer times; and 'weighted_tardiness' is this job's exact objective contribution."
+}

@@ -1,0 +1,29 @@
+{
+  "observed_epoch": 1791716270.8049338,
+  "observations": [
+    {
+      "container": "1348a6a6c715a01b02777c5a7d159950fc7de159bb826e86d976db25702dc72c",
+      "NanoCpus": 1000000000,
+      "CpusetCpus": "14",
+      "Memory": 2147483648,
+      "NetworkMode": "none"
+    },
+    {
+      "container": "f637f3c1545f6a5b0882a7036205c01626a1446a82e6e94d9804b4cee9bab9bc",
+      "NanoCpus": 1000000000,
+      "CpusetCpus": "13",
+      "Memory": 2147483648,
+      "NetworkMode": "none"
+    },
+    {
+      "container": "96c4b18f5d729ce9254eaa225faf9fe777d35a0560a47f83df884323c7718ef1",
+      "NanoCpus": 1000000000,
+      "CpusetCpus": "8",
+      "Memory": 2147483648,
+      "NetworkMode": "none"
+    }
+  ],
+  "scope": "Direct measurement of these3 currently active final candidates; not measured historical thread counts or all180 individual runtime containers",
+  "standard_Docker": true,
+  "hardened_hidden_protocol": false
+}

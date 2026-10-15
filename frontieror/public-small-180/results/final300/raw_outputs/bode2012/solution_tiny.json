@@ -1,0 +1,99 @@
+{
+  "objective_value": 300,
+  "routes": [
+    {
+      "vehicle": 0,
+      "serviced_edges": [
+        1,
+        4,
+        6,
+        17,
+        26,
+        31
+      ],
+      "deadheaded_edges": [
+        {
+          "edge_id": 0,
+          "times": 1
+        },
+        {
+          "edge_id": 4,
+          "times": 1
+        },
+        {
+          "edge_id": 17,
+          "times": 1
+        },
+        {
+          "edge_id": 18,
+          "times": 1
+        },
+        {
+          "edge_id": 25,
+          "times": 1
+        },
+        {
+          "edge_id": 31,
+          "times": 1
+        }
+      ]
+    },
+    {
+      "vehicle": 1,
+      "serviced_edges": [
+        10,
+        12,
+        15,
+        24,
+        27,
+        28,
+        29,
+        30,
+        32
+      ],
+      "deadheaded_edges": [
+        {
+          "edge_id": 1,
+          "times": 2
+        },
+        {
+          "edge_id": 8,
+          "times": 1
+        },
+        {
+          "edge_id": 14,
+          "times": 1
+        },
+        {
+          "edge_id": 18,
+          "times": 2
+        },
+        {
+          "edge_id": 24,
+          "times": 1
+        },
+        {
+          "edge_id": 25,
+          "times": 2
+        },
+        {
+          "edge_id": 27,
+          "times": 1
+        },
+        {
+          "edge_id": 28,
+          "times": 1
+        },
+        {
+          "edge_id": 29,
+          "times": 1
+        },
+        {
+          "edge_id": 34,
+          "times": 1
+        }
+      ]
+    }
+  ],
+  "runtime": 0.551257291999999
+}

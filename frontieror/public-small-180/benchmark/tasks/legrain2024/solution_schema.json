@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total penalty cost summed over roster-rule violations, nurse-skill mismatches, unmet preferences, and unsatisfied demand.",
+  "schedule": "<dict[dict[str]], outer key: '{nurse_id}', inner key: 'day_{day}'> Shift assigned to each nurse on each day of the horizon, taking a work-shift name or 'None' for a day off.",
+  "skill_assignments": "<dict[dict[str]], outer key: '{nurse_id}', inner key: 'day_{day}'> Complete skill witness parallel to schedule: one skill name on every worked day and 'None' on every day off."
+}

@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Value of the leader's objective achieved by the chosen leader and follower variable values.",
+  "x": "<list[float], length n1> Value chosen by the leader for each of its variables.",
+  "y": "<list[float], length n2> Complete submitted follower response to the leader's choice.",
+  "follower_objective_value": "<float> Value d2*y computed from the complete submitted follower vector."
+}

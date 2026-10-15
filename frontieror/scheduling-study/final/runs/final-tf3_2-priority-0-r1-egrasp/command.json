@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "docker",
+    "exec",
+    "frontieror-final-1791453882568582000",
+    "python3",
+    "timed_solver.py",
+    "--output",
+    "/work/runs/final-tf3_2-priority-0-r1-egrasp/output.xml",
+    "--directory",
+    "/work/runs/final-tf3_2-priority-0-r1-egrasp/timing",
+    "--deadline",
+    "300",
+    "--",
+    "./egrasp",
+    "/work/runs/final-tf3_2-priority-0-r1-egrasp/input.xml",
+    "/work/runs/final-tf3_2-priority-0-r1-egrasp/output.xml",
+    "s",
+    "290"
+  ],
+  "started_unix": 1791501273.4467268
+}

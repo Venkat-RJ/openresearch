@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Makespan, the earliest time by which all jobs have completed all of their operations.",
+  "assignment": "<dict, key: '({job_id},{operation_id})'> Zero-based index of the machine assigned to process each operation.",
+  "schedule": "<dict, key: '({job_id},{operation_id})'> One-based time periods during which each operation is actively being processed."
+}

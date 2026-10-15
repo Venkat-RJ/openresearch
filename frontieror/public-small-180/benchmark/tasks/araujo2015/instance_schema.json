@@ -1,0 +1,12 @@
+{
+  "num_items": "<int> Number of items produced on the machine.",
+  "num_periods": "<int> Number of discrete time periods in the planning horizon.",
+  "demand": "<list[list[int]], shape [num_items][num_periods]> Quantity of each item required by customers in each period.",
+  "setup_cost": "<list[int], length num_items> Fixed cost incurred each time the machine is set up to produce each item in a period.",
+  "holding_cost": "<list[int], length num_items> Per-unit cost for storing each item in inventory at the end of a period.",
+  "variable_cost": "<list[int], length num_items> Per-unit cost of producing each item.",
+  "setup_time": "<list[int], length num_items> Time consumed from the period's capacity each time the machine is set up to produce each item.",
+  "variable_time": "<list[float], length num_items> Time consumed from the period's capacity to produce one unit of each item.",
+  "capacity": "<list[int], length num_periods> Total available production time on the machine in each period.",
+  "initial_inventory_cost": "<list[int], length num_items> Per-unit cost of initial stock available for each item at the start of the first period."
+}

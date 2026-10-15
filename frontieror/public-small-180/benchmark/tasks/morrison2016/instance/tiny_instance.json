@@ -1,0 +1,62 @@
+{
+  "instance_id": 1,
+  "problem": "graph_coloring",
+  "description": "Graph coloring instance 1 with 11 vertices, 10 edges, density 0.19",
+  "graph": {
+    "num_vertices": 11,
+    "num_edges": 10,
+    "edge_density": 0.1818,
+    "edges": [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        8,
+        9
+      ]
+    ]
+  },
+  "bounds": {
+    "clique_lower_bound": 2,
+    "greedy_upper_bound": 3
+  },
+  "generation_info": {
+    "method": "Erdos-Renyi G(n,p)",
+    "target_density": 0.19,
+    "seed": 100100006,
+    "attempt": 6
+  }
+}

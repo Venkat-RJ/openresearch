@@ -1,0 +1,80 @@
+{
+  "topology": {
+    "terminals": "<list[str], length num_terminals> Named terminals served by the bus line.",
+    "depot": "<str> Identifier for the central depot where all vehicles are stored.",
+    "num_terminals": "<int> Number of terminals on the bus line.",
+    "scheme_length": "<int> Number of departure/arrival patterns per direction in the service scheme."
+  },
+  "planning_horizon": {
+    "start_minutes": "<int> Start of the service day in minutes from midnight.",
+    "end_minutes": "<int> End of the service day in minutes from midnight.",
+    "duration_minutes": "<int> Total length of the service day in minutes."
+  },
+  "directions": [
+    {
+      "pattern_id": "<str> Unique identifier for this service pattern.",
+      "direction": "<str> Whether this pattern runs outbound or inbound.",
+      "start_terminal": "<str> Terminal where trips of this pattern depart.",
+      "end_terminal": "<str> Terminal where trips of this pattern arrive.",
+      "trip_duration_minutes": "<int> Travel time in minutes for a single trip on this pattern."
+    }
+  ],
+  "time_windows": [
+    {
+      "index": "<int> Zero-based index identifying this time window within the planning horizon.",
+      "start_minutes": "<int> Start of this time window in minutes from midnight.",
+      "end_minutes": "<int> End of this time window in minutes from midnight.",
+      "ideal_headway_seconds": "<int> Target time separation in seconds between consecutive trips passing the main stop.",
+      "min_headway_seconds": "<int> Shortest allowable time separation in seconds between consecutive trips at the main stop.",
+      "max_headway_seconds": "<int> Longest allowable time separation in seconds between consecutive trips at the main stop."
+    }
+  ],
+  "stopping_times": {
+    "{terminal}": [
+      {
+        "time_window_index": "<int> Index of the time window to which these stopping limits apply.",
+        "min_stopping_time_minutes": "<int> Minimum dwell time in minutes a vehicle must wait at this terminal between consecutive trips.",
+        "max_stopping_time_minutes": "<int> Maximum dwell time in minutes a vehicle may wait at this terminal between consecutive trips."
+      }
+    ]
+  },
+  "pull_in_out_times": {
+    "{terminal}": [
+      {
+        "time_window_index": "<int> Index of the time window to which these travel times apply.",
+        "pull_out_time_minutes": "<int> Travel time in minutes from the depot to this terminal when starting service.",
+        "pull_in_time_minutes": "<int> Travel time in minutes from this terminal back to the depot when ending service."
+      }
+    ]
+  },
+  "initial_trip_time_windows": {
+    "{pattern_id}": "<int> Time window index from which the first trip of the timetable must be selected for this pattern."
+  },
+  "final_trip_time_windows": {
+    "{pattern_id}": "<int> Time window index from which the last trip of the timetable must be selected for this pattern."
+  },
+  "penalty_function": {
+    "type": "<str> Form of the penalty applied to headway deviations.",
+    "description": "<str> Formula describing how the penalty grows as actual headway deviates from the ideal."
+  },
+  "objective_function": {
+    "type": "<str> Structure of the overall objective being minimized.",
+    "description": "<str> Formula combining vehicle scheduling costs and timetable quality costs.",
+    "alpha": "<float> Weight applied to vehicle scheduling costs relative to timetable quality costs.",
+    "vs_cost_components": "<list[str], length 3> Named components contributing to the vehicle scheduling cost.",
+    "tt_cost_components": "<list[str], length 1> Named components contributing to the timetable quality cost."
+  },
+  "potential_trips": [
+    {
+      "id": "<int> Unique identifier for this candidate trip.",
+      "pattern_id": "<str> Service pattern to which this trip belongs.",
+      "direction": "<str> Whether this trip runs outbound or inbound.",
+      "start_terminal": "<str> Terminal where this trip departs.",
+      "end_terminal": "<str> Terminal where this trip arrives.",
+      "departure_time_minutes": "<int> Scheduled departure time from the start terminal in minutes from midnight.",
+      "arrival_time_minutes": "<int> Scheduled arrival time at the end terminal in minutes from midnight.",
+      "main_stop_arrival_time_minutes": "<int> Scheduled arrival time at the main headway-measurement stop in minutes from midnight.",
+      "time_window_index": "<int> Index of the time window in which this trip falls."
+    }
+  ]
+}

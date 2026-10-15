@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Total routing cost across all vehicles, computed as the sum of Euclidean distances of all arcs traversed.",
+  "routes": "<dict, key: '{vehicle}'> Ordered sequence of node identifiers visited by each vehicle, starting at the origin depot (node 0) and ending at the destination depot (node 2 * num_users + 1).",
+  "service_times": "<dict, key: '{node}' or 'depot_start_{vehicle}' or 'depot_end_{vehicle}'> Time at which service begins at each pickup or drop-off node, and the departure and return times at the depot for each vehicle.",
+  "ride_times": "<dict, key: '{user}'> Time each user spends aboard the vehicle from the end of pickup service to the beginning of drop-off service."
+}

@@ -1,0 +1,724 @@
+[
+  {
+    "key": "v1_300_s0",
+    "experiment_id": "6f38b210-3141-4371-a778-652084c3bd12",
+    "config": {
+      "candidate": {
+        "candidate_id": "2bbdb0c6-20dd-477a-85c9-818cefba6252",
+        "title": "Critical-path insertion tabu C++ v1 buildable",
+        "hypothesis": "Correct the original elite-pool dimensionality compile error in portable v1, with search logic unchanged. Establish valid DAG decoding and actual critical-path insertion tabu quality before tuning.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "cd59394b64979c674e04aad5fd9af9c2b6c647375a8b747a47d05c3d9fe8658a",
+        "codechange_id": "e8c36383-36ee-4fce-a977-af5eaa85d1e4"
+      },
+      "instances": [
+        "large-1",
+        "large-2",
+        "large-3",
+        "large-4",
+        "large-5"
+      ],
+      "requested_seconds": 300,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "b743814a-0517-456c-a647-d425e3d5e4d3",
+      "71ec4fe6-bc97-4890-9763-62cf4ab3d663"
+    ]
+  },
+  {
+    "key": "v1_300_s1",
+    "experiment_id": "0bb8fe54-9c72-4a69-819c-b0ff4f43264e",
+    "config": {
+      "candidate": {
+        "candidate_id": "2bbdb0c6-20dd-477a-85c9-818cefba6252",
+        "title": "Critical-path insertion tabu C++ v1 buildable",
+        "hypothesis": "Correct the original elite-pool dimensionality compile error in portable v1, with search logic unchanged. Establish valid DAG decoding and actual critical-path insertion tabu quality before tuning.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "cd59394b64979c674e04aad5fd9af9c2b6c647375a8b747a47d05c3d9fe8658a",
+        "codechange_id": "e8c36383-36ee-4fce-a977-af5eaa85d1e4"
+      },
+      "instances": [
+        "large-1",
+        "large-2",
+        "large-3",
+        "large-4",
+        "large-5"
+      ],
+      "requested_seconds": 300,
+      "process_grace_seconds": 3,
+      "seed": 1,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "ddd473ef-bd4c-4c35-8102-5b5fe870f7ce",
+      "842cfb38-b747-4a48-b45b-4ff070092692"
+    ]
+  },
+  {
+    "key": "v1_1200_s0",
+    "experiment_id": "7cfe084e-f5cb-4d55-b14c-0cd510b1cb1a",
+    "config": {
+      "candidate": {
+        "candidate_id": "2bbdb0c6-20dd-477a-85c9-818cefba6252",
+        "title": "Critical-path insertion tabu C++ v1 buildable",
+        "hypothesis": "Correct the original elite-pool dimensionality compile error in portable v1, with search logic unchanged. Establish valid DAG decoding and actual critical-path insertion tabu quality before tuning.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "cd59394b64979c674e04aad5fd9af9c2b6c647375a8b747a47d05c3d9fe8658a",
+        "codechange_id": "e8c36383-36ee-4fce-a977-af5eaa85d1e4"
+      },
+      "instances": [
+        "large-1",
+        "large-4"
+      ],
+      "requested_seconds": 1200,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "97732a73-2253-46e6-8469-f4d8aba19ac9",
+      "76406518-3021-4238-af7d-6cad043acfee"
+    ]
+  },
+  {
+    "key": "v1_3600_s0",
+    "experiment_id": "919d2029-f188-432e-896b-1241f2e11057",
+    "config": {
+      "candidate": {
+        "candidate_id": "2bbdb0c6-20dd-477a-85c9-818cefba6252",
+        "title": "Critical-path insertion tabu C++ v1 buildable",
+        "hypothesis": "Correct the original elite-pool dimensionality compile error in portable v1, with search logic unchanged. Establish valid DAG decoding and actual critical-path insertion tabu quality before tuning.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "cd59394b64979c674e04aad5fd9af9c2b6c647375a8b747a47d05c3d9fe8658a",
+        "codechange_id": "e8c36383-36ee-4fce-a977-af5eaa85d1e4"
+      },
+      "instances": [
+        "large-4"
+      ],
+      "requested_seconds": 3600,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "3fc82d4d-3187-414a-a93a-6cbbf8422d33",
+      "8bfd16ed-5af4-4b6d-9e49-8387c58efa11"
+    ]
+  },
+  {
+    "key": "v1_3600_s1",
+    "experiment_id": "00747a59-eb1c-4164-89f7-4919db09785d",
+    "config": {
+      "candidate": {
+        "candidate_id": "2bbdb0c6-20dd-477a-85c9-818cefba6252",
+        "title": "Critical-path insertion tabu C++ v1 buildable",
+        "hypothesis": "Correct the original elite-pool dimensionality compile error in portable v1, with search logic unchanged. Establish valid DAG decoding and actual critical-path insertion tabu quality before tuning.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "cd59394b64979c674e04aad5fd9af9c2b6c647375a8b747a47d05c3d9fe8658a",
+        "codechange_id": "e8c36383-36ee-4fce-a977-af5eaa85d1e4"
+      },
+      "instances": [
+        "large-1",
+        "large-2",
+        "large-3",
+        "large-4",
+        "large-5"
+      ],
+      "requested_seconds": 3600,
+      "process_grace_seconds": 3,
+      "seed": 1,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "03f89679-3fbd-4a66-8bcf-2c287f8a4f1a",
+      "04725c73-0c14-42bc-833f-d8b3288fafef"
+    ]
+  },
+  {
+    "key": "v2_300_s0",
+    "experiment_id": "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+    "config": {
+      "candidate": {
+        "candidate_id": "fac927a1-eb67-441c-8f44-ad2c6828ca8b",
+        "title": "Incremental-link bounded DAG tabu with evolving elites v2",
+        "hypothesis": "Move beyond time scaling. v1 rebuilds every machine arc for every neighbor and uses only dispatch-generated elites. v2 updates links only on the moved row, memoized DFS computes exact earliest starts with cycle detection and safe nonnegative tardiness partial-sum cutoffs, fixes aspiration ordering, randomizes machine traversal, and learns diverse local-search elites for restarts. Same weighted tardiness objective and tiny-flow tie break. Adaptation of generic critical-path tabu and elite diversification ideas, not a reproduction of published GRASP or shifting bottleneck. Equal-budget comparison to v1 at 300s on public inspected cases, then cross-seed confirmation.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+        "codechange_id": "3320aab5-d27f-4d1a-a8dc-d8999b7146ca"
+      },
+      "instances": [
+        "tiny",
+        "large-1",
+        "large-2",
+        "large-3",
+        "large-4",
+        "large-5"
+      ],
+      "requested_seconds": 300,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "28c85f03-d6ed-427e-b960-bd1461cea71f",
+      "73b95dd4-3437-4ce9-bf71-00139315f2b7",
+      "918b3601-bc10-4f5b-b9a6-322655044b99"
+    ]
+  },
+  {
+    "key": "v2_300_s1",
+    "experiment_id": "16ee170b-9e44-4f40-8710-ba553db28de8",
+    "config": {
+      "candidate": {
+        "candidate_id": "fac927a1-eb67-441c-8f44-ad2c6828ca8b",
+        "title": "Incremental-link bounded DAG tabu with evolving elites v2",
+        "hypothesis": "Move beyond time scaling. v1 rebuilds every machine arc for every neighbor and uses only dispatch-generated elites. v2 updates links only on the moved row, memoized DFS computes exact earliest starts with cycle detection and safe nonnegative tardiness partial-sum cutoffs, fixes aspiration ordering, randomizes machine traversal, and learns diverse local-search elites for restarts. Same weighted tardiness objective and tiny-flow tie break. Adaptation of generic critical-path tabu and elite diversification ideas, not a reproduction of published GRASP or shifting bottleneck. Equal-budget comparison to v1 at 300s on public inspected cases, then cross-seed confirmation.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+        "codechange_id": "3320aab5-d27f-4d1a-a8dc-d8999b7146ca"
+      },
+      "instances": [
+        "large-1",
+        "large-2",
+        "large-3",
+        "large-4",
+        "large-5"
+      ],
+      "requested_seconds": 300,
+      "process_grace_seconds": 3,
+      "seed": 1,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "3c9feb99-4a16-4e30-85bb-a22b782d6dea",
+      "112286f2-4ab7-49d0-8765-04b72fb2b5b1",
+      "6dcd4110-15e3-4fbc-bb53-e9b4aabc995e"
+    ]
+  },
+  {
+    "key": "v2_1200_s0",
+    "experiment_id": "e42d9b87-4843-4ebf-9ef3-7d6826ccae75",
+    "config": {
+      "candidate": {
+        "candidate_id": "fac927a1-eb67-441c-8f44-ad2c6828ca8b",
+        "title": "Incremental-link bounded DAG tabu with evolving elites v2",
+        "hypothesis": "Move beyond time scaling. v1 rebuilds every machine arc for every neighbor and uses only dispatch-generated elites. v2 updates links only on the moved row, memoized DFS computes exact earliest starts with cycle detection and safe nonnegative tardiness partial-sum cutoffs, fixes aspiration ordering, randomizes machine traversal, and learns diverse local-search elites for restarts. Same weighted tardiness objective and tiny-flow tie break. Adaptation of generic critical-path tabu and elite diversification ideas, not a reproduction of published GRASP or shifting bottleneck. Equal-budget comparison to v1 at 300s on public inspected cases, then cross-seed confirmation.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+        "codechange_id": "3320aab5-d27f-4d1a-a8dc-d8999b7146ca"
+      },
+      "instances": [
+        "large-1",
+        "large-2",
+        "large-3",
+        "large-4",
+        "large-5"
+      ],
+      "requested_seconds": 1200,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "42c965d7-9a5e-45bc-b4ce-3745fbecb251",
+      "57426417-1429-41eb-8680-668da8dbdbc7",
+      "c6e0aef1-d75d-43aa-b217-aa53e69ce1d7"
+    ]
+  },
+  {
+    "key": "v2_1200_s1_resumed",
+    "experiment_id": "f7c592ac-b6a0-4c42-97c8-726f0a2551ec",
+    "config": {
+      "candidate": {
+        "candidate_id": "fac927a1-eb67-441c-8f44-ad2c6828ca8b",
+        "title": "Incremental-link bounded DAG tabu with evolving elites v2",
+        "hypothesis": "Move beyond time scaling. v1 rebuilds every machine arc for every neighbor and uses only dispatch-generated elites. v2 updates links only on the moved row, memoized DFS computes exact earliest starts with cycle detection and safe nonnegative tardiness partial-sum cutoffs, fixes aspiration ordering, randomizes machine traversal, and learns diverse local-search elites for restarts. Same weighted tardiness objective and tiny-flow tie break. Adaptation of generic critical-path tabu and elite diversification ideas, not a reproduction of published GRASP or shifting bottleneck. Equal-budget comparison to v1 at 300s on public inspected cases, then cross-seed confirmation.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e",
+        "codechange_id": "3320aab5-d27f-4d1a-a8dc-d8999b7146ca"
+      },
+      "instances": [
+        "large-4",
+        "large-5"
+      ],
+      "requested_seconds": 1200,
+      "process_grace_seconds": 3,
+      "seed": 1,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "3507ce4c-67ac-44e8-a46a-4deb88eb22df",
+      "f7f33b8b-e8a8-4ff3-81f4-a81089a4e417",
+      "b6ac9297-8351-436a-9b55-51ad3288ad81"
+    ]
+  },
+  {
+    "key": "lns_300_s0",
+    "experiment_id": "36bc726a-32e5-4860-b61c-8ceb6090511c",
+    "config": {
+      "candidate": {
+        "candidate_id": "d89664e3-b82f-4f6b-9391-5d5473c2e7f2",
+        "title": "Independent CP-SAT destroy-and-repair LNS repaired",
+        "hypothesis": "Repair startup unpack error from3b6ff083 and intended window-size modulo expression. Same ATC construction, bounded Python critical insertion tabu and CP-SAT variable-time machine/job/window neighborhoods. Failed predecessor provided no quality evidence; first correctness diagnostic60s tiny/large1, then matched300s comparison withv2. Independent implementation, not full published-method reproduction.",
+        "language": "python",
+        "filename": "solver.py",
+        "sha256": "f940d60e6dd626c2ee5dee118ccdc773ea137fdfa10bfd753ebf0a0299e4a06a",
+        "codechange_id": "69c73f99-aae3-4e95-8bab-6d809bd35f96"
+      },
+      "instances": [
+        "large-1",
+        "large-2",
+        "large-3",
+        "large-4",
+        "large-5"
+      ],
+      "requested_seconds": 300,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "f268c957-9001-4fdc-b788-9a7036c07ede",
+      "5cc8758d-f897-460e-9fc3-25b8b324af4f",
+      "918b3601-bc10-4f5b-b9a6-322655044b99"
+    ]
+  },
+  {
+    "key": "lns_300_s1",
+    "experiment_id": "7268c738-ea35-49e6-a8c6-236e163cc372",
+    "config": {
+      "candidate": {
+        "candidate_id": "d89664e3-b82f-4f6b-9391-5d5473c2e7f2",
+        "title": "Independent CP-SAT destroy-and-repair LNS repaired",
+        "hypothesis": "Repair startup unpack error from3b6ff083 and intended window-size modulo expression. Same ATC construction, bounded Python critical insertion tabu and CP-SAT variable-time machine/job/window neighborhoods. Failed predecessor provided no quality evidence; first correctness diagnostic60s tiny/large1, then matched300s comparison withv2. Independent implementation, not full published-method reproduction.",
+        "language": "python",
+        "filename": "solver.py",
+        "sha256": "f940d60e6dd626c2ee5dee118ccdc773ea137fdfa10bfd753ebf0a0299e4a06a",
+        "codechange_id": "69c73f99-aae3-4e95-8bab-6d809bd35f96"
+      },
+      "instances": [
+        "large-1",
+        "large-2",
+        "large-3",
+        "large-4",
+        "large-5"
+      ],
+      "requested_seconds": 300,
+      "process_grace_seconds": 3,
+      "seed": 1,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "65f662d7-ebfc-469a-b5f5-fc6b65fdcc2c",
+      "1f28e9c0-a74f-4766-a195-87552610dc29",
+      "6dcd4110-15e3-4fbc-bb53-e9b4aabc995e"
+    ]
+  },
+  {
+    "key": "lns_1200_s0",
+    "experiment_id": "993311ac-aaee-4b30-a8db-783a8862bd9b",
+    "config": {
+      "candidate": {
+        "candidate_id": "d89664e3-b82f-4f6b-9391-5d5473c2e7f2",
+        "title": "Independent CP-SAT destroy-and-repair LNS repaired",
+        "hypothesis": "Repair startup unpack error from3b6ff083 and intended window-size modulo expression. Same ATC construction, bounded Python critical insertion tabu and CP-SAT variable-time machine/job/window neighborhoods. Failed predecessor provided no quality evidence; first correctness diagnostic60s tiny/large1, then matched300s comparison withv2. Independent implementation, not full published-method reproduction.",
+        "language": "python",
+        "filename": "solver.py",
+        "sha256": "f940d60e6dd626c2ee5dee118ccdc773ea137fdfa10bfd753ebf0a0299e4a06a",
+        "codechange_id": "69c73f99-aae3-4e95-8bab-6d809bd35f96"
+      },
+      "instances": [
+        "large-1",
+        "large-2",
+        "large-3",
+        "large-4",
+        "large-5"
+      ],
+      "requested_seconds": 1200,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "conclusions": [
+      "d158b09d-72db-4829-834f-cec9ebfa17b0",
+      "852a2995-1e53-473c-a9a3-3e15a2d97dcc",
+      "c6e0aef1-d75d-43aa-b217-aa53e69ce1d7"
+    ]
+  },
+  {
+    "key": "eval-20261007T180413-993c12",
+    "experiment_id": "c4ddc572-773c-4891-9c3f-83f9513cebcf",
+    "config": {
+      "candidate": {
+        "candidate_id": "b0022101-aba3-425a-82b4-726f1f4344ca",
+        "title": "Critical-path insertion tabu C++ v1",
+        "hypothesis": "Replace short Python hint plus CP-SAT with standalone high-throughput disjunctive machine-order tabu search. Earliest-start DAG decoding evaluates total weighted tardiness exactly. Tight paths from tardy completions guide insertion neighborhoods; tabu relative-order attributes, weighted-completion tie breaking, perturbations and randomized ATC dispatch restarts escape local minima. Inspired by neighborhood research (Kuhpfahl and Bierwirth 2015, DOI 10.1016/j.cor.2015.07.011), not a reproduction. Test correctness and ability to close published gap with a longer single-worker search.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "0d48c21d72e28a74a388c518f77c50b851736041417dc648f4600261abd10e28",
+        "codechange_id": "d860e2bc-9e3d-45db-b0e9-6c5bce7a7f47"
+      },
+      "instances": [
+        "tiny",
+        "large-1"
+      ],
+      "requested_seconds": 60,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "results": [
+      {
+        "feasible": false,
+        "error": "RuntimeError: campaign/objective-research/candidates/b0022101-aba3-425a-82b4-726f1f4344ca/solver.cpp:1:10: fatal error: 'bits/stdc++.h' file not found\n    1 | #include <bits/stdc++.h>\n      |          ^~~~~~~~~~~~~~~\n1 error generated.\n"
+      }
+    ]
+  },
+  {
+    "key": "eval-20261007T180743-92cb40",
+    "experiment_id": "2cf29c95-2be7-4a59-a0cd-a4d8fb01ccc2",
+    "config": {
+      "candidate": {
+        "candidate_id": "3ae7ee55-0b33-4b60-80fa-fce51d0fed2d",
+        "title": "Critical-path insertion tabu C++ v1 portable",
+        "hypothesis": "Portability-only repair of b0022101: replace GNU bits header with explicit C++17 standard headers. Test algorithm unchanged now SDK repaired. DAG decoding, critical-path insertions, tabu and dispatch restarts should improve substantially over short Python baseline. Single worker required.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "f0299725ad08b2536a88ca404ee0ea684bfb1338842d19d224a3db7f79ced430",
+        "codechange_id": "d61fc1c1-cc13-4a12-8634-e409926acd11"
+      },
+      "instances": [
+        "tiny",
+        "large-1"
+      ],
+      "requested_seconds": 60,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "results": [
+      {
+        "feasible": false,
+        "error": "RuntimeError: campaign/objective-research/candidates/3ae7ee55-0b33-4b60-80fa-fce51d0fed2d/solver.cpp:46:89: error: no matching member function for call to 'push_back'\n   46 |   for(int k=0;k<128&&!timeup();k++){auto o=dispatch(k);ll val;decode(o,val,true);elites.push_back(o);ev.push_back(val);}\n      |                                                                                  ~~~~~~~^~~~~~~~~\n/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/vector.h:455:60: note: candidate function not viable: no known conversion from 'vector<vector<int>, allocator<std::vector<int>>>' to 'const vector<int, allocator<int>>' for 1st argument\n  455 |   _LIBCPP_CONSTEXPR_SINCE_CXX20 _LIBCPP_HIDE_FROM_ABI void push_back(const_reference __x) { emplace_back(__x); }\n      |                                                            ^         ~~~~~~~~~~~~~~~~~~~\n/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/vector.h:457:60: note: candidate function not viable: no known conversion from 'vector<vector<int>, allocator<std::vector<int>>>' to 'vector<int, allocator<int>>' for 1st argument\n  457 |   _LIBCPP_CONSTEXPR_SINCE_CXX20 _LIBCPP_HIDE_FROM_ABI void push_back(value_type&& __x) { emplace_back(std::move(__x)); }\n      |                                                            ^         ~~~~~~~~~~~~~~~~\ncampaign/objective-research/candidates/3ae7ee55-0b33-4b60-80fa-fce51d0fed2d/solver.cpp:81:93: error: no viable overloaded '='\n   81 |     epoch++; if(epoch%5==0)order=dispatch(2+epoch);else if(epoch%3==0&&!sorted.empty())order=elites[sorted[rng()%min((int)sorted.size(),12)]];else order=best;\n      |                                                                                        ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/vector.h:273:63: note: candidate function not viable: no known conversion from 'vector<int, allocator<int>>' to 'const vector<std::vector<int>, allocator<std::vector<int>>>' for 1st argument\n  273 |   _LIBCPP_CONSTEXPR_SINCE_CXX20 _LIBCPP_HIDE_FROM_ABI vector& operator=(const vector& __x);\n      |                                                               ^         ~~~~~~~~~~~~~~~~~\n/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/vector.h:286:63: note: candidate function not viable: no known conversion from 'value_type' (aka 'std::vector<int>') to 'initializer_list<value_type>' (aka 'initializer_list<std::vector<int, std::allocator<int>>>') for 1st argument\n  286 |   _LIBCPP_CONSTEXPR_SINCE_CXX20 _LIBCPP_HIDE_FROM_ABI vector& operator=(initializer_list<value_type> __il) {\n      |                                                               ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/vector.h:301:63: note: candidate function not viable: no known conversion from 'vector<int, allocator<int>>' to 'vector<std::vector<int>, allocator<std::vector<int>>>' for 1st argument\n  301 |   _LIBCPP_CONSTEXPR_SINCE_CXX20 _LIBCPP_HIDE_FROM_ABI vector& operator=(vector&& __x)\n      |                                                               ^         ~~~~~~~~~~~~\n2 errors generated.\n"
+      }
+    ]
+  },
+  {
+    "key": "eval-20261007T180856-5fb35b",
+    "experiment_id": "036961f1-c5f4-46f4-a01c-a82a1b6282d5",
+    "config": {
+      "candidate": {
+        "candidate_id": "2bbdb0c6-20dd-477a-85c9-818cefba6252",
+        "title": "Critical-path insertion tabu C++ v1 buildable",
+        "hypothesis": "Correct the original elite-pool dimensionality compile error in portable v1, with search logic unchanged. Establish valid DAG decoding and actual critical-path insertion tabu quality before tuning.",
+        "language": "cpp",
+        "filename": "solver.cpp",
+        "sha256": "cd59394b64979c674e04aad5fd9af9c2b6c647375a8b747a47d05c3d9fe8658a",
+        "codechange_id": "e8c36383-36ee-4fce-a977-af5eaa85d1e4"
+      },
+      "instances": [
+        "tiny",
+        "large-1"
+      ],
+      "requested_seconds": 60,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "results": [
+      {
+        "instance": "tiny",
+        "seed": 0,
+        "workers": 1,
+        "seconds": 60,
+        "elapsed_seconds": 60.32584500312805,
+        "returncode": 0,
+        "timed_out": false,
+        "feasible": true,
+        "reference": 2197,
+        "official": {
+          "feasible": true,
+          "violated_constraints": [],
+          "violations": [],
+          "violation_magnitudes": []
+        },
+        "audit": {
+          "feasible": true,
+          "recomputed_objective": 2197,
+          "jobs_checked": 10,
+          "operations_checked": 30,
+          "errors": []
+        },
+        "objective": 2197,
+        "reference_reduction_percent": 0.0
+      },
+      {
+        "instance": "large-1",
+        "seed": 0,
+        "workers": 1,
+        "seconds": 60,
+        "elapsed_seconds": 59.888468980789185,
+        "returncode": 0,
+        "timed_out": false,
+        "feasible": true,
+        "reference": 30880,
+        "official": {
+          "feasible": true,
+          "violated_constraints": [],
+          "violations": [],
+          "violation_magnitudes": []
+        },
+        "audit": {
+          "feasible": true,
+          "recomputed_objective": 34029,
+          "jobs_checked": 30,
+          "operations_checked": 300,
+          "errors": []
+        },
+        "objective": 34029,
+        "reference_reduction_percent": -10.197538860103627
+      }
+    ]
+  },
+  {
+    "key": "eval-20261008T062044-00791c",
+    "experiment_id": "1ab00b31-f033-4648-a2d9-4b3c96932e8e",
+    "config": {
+      "candidate": {
+        "candidate_id": "3b6ff083-6525-4a19-8099-9864a06ec3ee",
+        "title": "Independent CP-SAT machine/job/window destroy-and-repair LNS",
+        "hypothesis": "Establish a stronger non-tabu comparator and explore exact multi-operation repair. Build input-derived randomized ATC schedules, improve with bounded Python critical-path insertion search, then CP-SAT repeatedly frees entire machines, selected jobs or time windows while retaining the relative order of other operations, with occasional full-model search. Unlike fixed-start neighborhoods, every operation may shift in time. Full intervals, release/precedence and weighted tardiness objective. This adapts generic destroy-and-repair and shifting-bottleneck ideas, not a reproduction of the published complete methods. Test matched300-second quality against frozen C++v2 on the inspected public cases. Independent implementation, no saved schedules or source/workspace access.",
+        "language": "python",
+        "filename": "solver.py",
+        "sha256": "b1937916d931efece5ffba4be94fc56db8f14fd9083ade1b3d0d3360d814e9c1",
+        "codechange_id": "6a6cf0e3-6554-44f2-8df1-a51c9804b713"
+      },
+      "instances": [
+        "tiny",
+        "large-1",
+        "large-2",
+        "large-3",
+        "large-4",
+        "large-5"
+      ],
+      "requested_seconds": 300,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "results": [
+      {
+        "instance": "tiny",
+        "seed": 0,
+        "workers": 1,
+        "seconds": 300,
+        "elapsed_seconds": 0.9346640110015869,
+        "returncode": 1,
+        "timed_out": false,
+        "feasible": false,
+        "reference": 2197,
+        "error": "Traceback (most recent call last):\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/tiny/invoke.py\", line 5, in <module>\n    result=solve(instance,max(.01,300-time.monotonic()+start-.1),0,1)\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/tiny/solver.py\", line 14, in solve\n    p, machine, owner, pre, nxt, nodes, last, release, due, weight = [], [], [], [], [], [], [], [], [], [], []\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: too many values to unpack (expected 10)\n"
+      },
+      {
+        "instance": "large-1",
+        "seed": 0,
+        "workers": 1,
+        "seconds": 300,
+        "elapsed_seconds": 0.2613050937652588,
+        "returncode": 1,
+        "timed_out": false,
+        "feasible": false,
+        "reference": 30880,
+        "error": "Traceback (most recent call last):\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/large-1/invoke.py\", line 5, in <module>\n    result=solve(instance,max(.01,300-time.monotonic()+start-.1),0,1)\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/large-1/solver.py\", line 14, in solve\n    p, machine, owner, pre, nxt, nodes, last, release, due, weight = [], [], [], [], [], [], [], [], [], [], []\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: too many values to unpack (expected 10)\n"
+      },
+      {
+        "instance": "large-2",
+        "seed": 0,
+        "workers": 1,
+        "seconds": 300,
+        "elapsed_seconds": 0.25728321075439453,
+        "returncode": 1,
+        "timed_out": false,
+        "feasible": false,
+        "reference": 31916,
+        "error": "Traceback (most recent call last):\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/large-2/invoke.py\", line 5, in <module>\n    result=solve(instance,max(.01,300-time.monotonic()+start-.1),0,1)\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/large-2/solver.py\", line 14, in solve\n    p, machine, owner, pre, nxt, nodes, last, release, due, weight = [], [], [], [], [], [], [], [], [], [], []\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: too many values to unpack (expected 10)\n"
+      },
+      {
+        "instance": "large-3",
+        "seed": 0,
+        "workers": 1,
+        "seconds": 300,
+        "elapsed_seconds": 0.2591071128845215,
+        "returncode": 1,
+        "timed_out": false,
+        "feasible": false,
+        "reference": 31805,
+        "error": "Traceback (most recent call last):\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/large-3/invoke.py\", line 5, in <module>\n    result=solve(instance,max(.01,300-time.monotonic()+start-.1),0,1)\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/large-3/solver.py\", line 14, in solve\n    p, machine, owner, pre, nxt, nodes, last, release, due, weight = [], [], [], [], [], [], [], [], [], [], []\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: too many values to unpack (expected 10)\n"
+      },
+      {
+        "instance": "large-4",
+        "seed": 0,
+        "workers": 1,
+        "seconds": 300,
+        "elapsed_seconds": 0.23464179039001465,
+        "returncode": 1,
+        "timed_out": false,
+        "feasible": false,
+        "reference": 30402,
+        "error": "Traceback (most recent call last):\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/large-4/invoke.py\", line 5, in <module>\n    result=solve(instance,max(.01,300-time.monotonic()+start-.1),0,1)\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/large-4/solver.py\", line 14, in solve\n    p, machine, owner, pre, nxt, nodes, last, release, due, weight = [], [], [], [], [], [], [], [], [], [], []\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: too many values to unpack (expected 10)\n"
+      },
+      {
+        "instance": "large-5",
+        "seed": 0,
+        "workers": 1,
+        "seconds": 300,
+        "elapsed_seconds": 0.2651379108428955,
+        "returncode": 1,
+        "timed_out": false,
+        "feasible": false,
+        "reference": 28244,
+        "error": "Traceback (most recent call last):\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/large-5/invoke.py\", line 5, in <module>\n    result=solve(instance,max(.01,300-time.monotonic()+start-.1),0,1)\n  File \"campaign/objective-research/evaluations/eval-20261008T062044-00791c/large-5/solver.py\", line 14, in solve\n    p, machine, owner, pre, nxt, nodes, last, release, due, weight = [], [], [], [], [], [], [], [], [], [], []\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: too many values to unpack (expected 10)\n"
+      }
+    ]
+  },
+  {
+    "key": "eval-20261008T062213-c8a1ef",
+    "experiment_id": "b3e0b6df-1825-448a-8230-33a423deed28",
+    "config": {
+      "candidate": {
+        "candidate_id": "d89664e3-b82f-4f6b-9391-5d5473c2e7f2",
+        "title": "Independent CP-SAT destroy-and-repair LNS repaired",
+        "hypothesis": "Repair startup unpack error from3b6ff083 and intended window-size modulo expression. Same ATC construction, bounded Python critical insertion tabu and CP-SAT variable-time machine/job/window neighborhoods. Failed predecessor provided no quality evidence; first correctness diagnostic60s tiny/large1, then matched300s comparison withv2. Independent implementation, not full published-method reproduction.",
+        "language": "python",
+        "filename": "solver.py",
+        "sha256": "f940d60e6dd626c2ee5dee118ccdc773ea137fdfa10bfd753ebf0a0299e4a06a",
+        "codechange_id": "69c73f99-aae3-4e95-8bab-6d809bd35f96"
+      },
+      "instances": [
+        "tiny",
+        "large-1"
+      ],
+      "requested_seconds": 60,
+      "process_grace_seconds": 3,
+      "seed": 0,
+      "workers": 1,
+      "cpu_affinity": false,
+      "memory_sandbox": false,
+      "comparison": "Quality against published reference; speed across different hardware is not established"
+    },
+    "results": [
+      {
+        "instance": "tiny",
+        "seed": 0,
+        "workers": 1,
+        "seconds": 60,
+        "elapsed_seconds": 59.60196399688721,
+        "returncode": 0,
+        "timed_out": false,
+        "feasible": true,
+        "reference": 2197,
+        "official": {
+          "feasible": true,
+          "violated_constraints": [],
+          "violations": [],
+          "violation_magnitudes": []
+        },
+        "audit": {
+          "feasible": true,
+          "recomputed_objective": 2197,
+          "jobs_checked": 10,
+          "operations_checked": 30,
+          "errors": []
+        },
+        "objective": 2197,
+        "reference_reduction_percent": 0.0
+      },
+      {
+        "instance": "large-1",
+        "seed": 0,
+        "workers": 1,
+        "seconds": 60,
+        "elapsed_seconds": 59.602283000946045,
+        "returncode": 0,
+        "timed_out": false,
+        "feasible": true,
+        "reference": 30880,
+        "official": {
+          "feasible": true,
+          "violated_constraints": [],
+          "violations": [],
+          "violation_magnitudes": []
+        },
+        "audit": {
+          "feasible": true,
+          "recomputed_objective": 33030,
+          "jobs_checked": 30,
+          "operations_checked": 300,
+          "errors": []
+        },
+        "objective": 33030,
+        "reference_reduction_percent": -6.962435233160622
+      }
+    ]
+  }
+]

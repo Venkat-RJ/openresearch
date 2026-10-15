@@ -1,0 +1,21 @@
+{
+  "problem_type": "<str> One of 'open_ended_cscp', 'closed_ended_cscp', or 'cscp_with_knife_dependent_setups'.",
+  "machine_length": "<int> Length of the cutting machine in which patterns are configured.",
+  "num_products": "<int> Number of distinct product types to be cut.",
+  "num_patterns": "<int> Number of available cutting pattern slots.",
+  "num_groups": "<int> Number of product groups, where products sharing the same maximum pieces per pattern belong to the same group.",
+  "cost_setup_pattern": "<int> Time cost incurred once for each cutting pattern that is used.",
+  "cost_repetition": "<int> Time cost incurred for each repetition of any cutting pattern.",
+  "cost_knife_setup": "<number, optional> Additional setup time per knife; required only for cscp_with_knife_dependent_setups.",
+  "x_i_forced_zero": "<bool, optional> True for closed_ended_cscp, where all extra-piece quantities must be zero.",
+  "M": "<int> Upper bound on the number of repetitions any single pattern may have, equal to the maximum demand among all products.",
+  "products": [
+    {
+      "id": "<int> Unique identifier of the product type.",
+      "length": "<int> Length of one piece of this product type.",
+      "demand": "<int> Number of pieces of this product type that must be produced.",
+      "N_i": "<int> Maximum number of pieces of this product type that can fit within a single cutting pattern."
+    }
+  ],
+  "groups": "<dict, key: '{N_i_value}'> List of product IDs that share the same maximum pieces per pattern value, grouping products with identical fitting capacity."
+}

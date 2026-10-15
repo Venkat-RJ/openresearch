@@ -1,0 +1,25 @@
+{
+  "graph": {
+    "num_nodes": "<int> Number of nodes in the undirected network.",
+    "num_edges": "<int> Number of edges in the undirected network.",
+    "type": "<str> Indicates the network is undirected."
+  },
+  "depot": "<int> Node where all vehicles start and end their routes.",
+  "fleet": {
+    "num_vehicles": "<int> Number of identical vehicles available in the fleet.",
+    "vehicle_capacity": "<int> Maximum total demand that a single vehicle can service on its route.",
+    "type": "<str> Indicates all vehicles are identical."
+  },
+  "num_required_edges": "<int> Number of edges that must be serviced.",
+  "total_demand": "<int> Sum of demands across all required edges.",
+  "edges": [
+    {
+      "edge_id": "<int> Unique identifier for this edge.",
+      "endpoints": "<list[int], length 2> The two nodes connected by this edge.",
+      "cost": "<int> Cost incurred each time a vehicle traverses this edge without servicing it.",
+      "is_required": "<bool> Whether this edge must be serviced by exactly one vehicle.",
+      "demand": "<int> Amount of capacity consumed when a vehicle services this edge (0 if not required).",
+      "service_cost": "<int> Cost incurred when a vehicle services this edge (0 if not required)."
+    }
+  ]
+}

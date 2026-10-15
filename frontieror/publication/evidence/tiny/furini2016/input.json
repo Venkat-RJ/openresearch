@@ -1,0 +1,63 @@
+{
+  "instance_name": "instance_1",
+  "problem_type": "G2KP",
+  "problem_description": "Guillotine Two-Dimensional Knapsack Problem (G2KP): maximize total profit of items packed into the rectangular panel using general guillotine cuts (unrestricted number of stages).",
+  "panel": {
+    "length": 40,
+    "width": 40
+  },
+  "n": 5,
+  "n_tilde": 624,
+  "rho": 4.0,
+  "items": [
+    {
+      "id": 1,
+      "length": 1,
+      "width": 4,
+      "profit": 4,
+      "copies": 400
+    },
+    {
+      "id": 2,
+      "length": 2,
+      "width": 9,
+      "profit": 18,
+      "copies": 88
+    },
+    {
+      "id": 3,
+      "length": 7,
+      "width": 3,
+      "profit": 21,
+      "copies": 76
+    },
+    {
+      "id": 4,
+      "length": 7,
+      "width": 6,
+      "profit": 42,
+      "copies": 38
+    },
+    {
+      "id": 5,
+      "length": 10,
+      "width": 7,
+      "profit": 70,
+      "copies": 22
+    }
+  ],
+  "generation_metadata": {
+    "generator": "generate_multiple_instances.py",
+    "reference": "Furini, Malaguti, Thomopulos (2016), INFORMS JoC 28(4):736-751",
+    "instance_style": "gcut-type (unweighted, area-based profits)",
+    "base_seed": 1001,
+    "actual_seed": 1001,
+    "seed_iteration": 0,
+    "max_item_length": 10,
+    "max_item_width": 10,
+    "max_item_frac": 0.25,
+    "profit_rule": "p_i = l_i * w_i (unweighted: profit equals area)",
+    "copies_rule": "u_i = max(1, floor(L * W / (l_i * w_i)))",
+    "feasibility_verified": true
+  }
+}

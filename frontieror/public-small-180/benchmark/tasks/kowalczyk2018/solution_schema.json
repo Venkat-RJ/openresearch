@@ -1,0 +1,16 @@
+{
+  "objective_value": "<float> Total weighted completion time summed across all jobs and machines.",
+  "machines": [
+    {
+      "schedule_cost": "<int> Weighted completion time summed over all jobs assigned to this machine.",
+      "jobs": [
+        {
+          "j_orig": "<int> One-based index of the job from the input instance.",
+          "p": "<int> Processing time of the job.",
+          "w": "<int> Weight of the job.",
+          "C_j": "<int> Completion time of the job on this machine."
+        }
+      ]
+    }
+  ]
+}

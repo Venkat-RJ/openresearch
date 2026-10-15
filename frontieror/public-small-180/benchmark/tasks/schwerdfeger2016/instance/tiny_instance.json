@@ -1,0 +1,23 @@
+{
+  "instance_id": 1,
+  "description": "SMALL: m=3, n=5 — smallest size from Section 5.1",
+  "problem": "P || NSSWD",
+  "num_machines": 3,
+  "num_jobs": 5,
+  "processing_time_range": [
+    1,
+    300
+  ],
+  "processing_time_distribution": "discrete uniform",
+  "total_processing_time": 1136,
+  "average_machine_completion_time": 378.6666666666667,
+  "processing_times": [
+    281,
+    280,
+    269,
+    154,
+    152
+  ],
+  "generation_seed": 42100,
+  "generation_iteration": 0
+}

@@ -1,0 +1,14 @@
+{
+  "parameters": {
+    "n": "<int> Total number of items to be packed across all bins.",
+    "m": "<int> Number of distinct item types.",
+    "W": "<int> Maximum weight capacity of each bin."
+  },
+  "items": [
+    {
+      "item_type": "<int> Unique identifier for this item type, starting from 1.",
+      "weight": "<int> Weight of one copy of this item type.",
+      "demand": "<int> Number of copies of this item type that must be packed."
+    }
+  ]
+}

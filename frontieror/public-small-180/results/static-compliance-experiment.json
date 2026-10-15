@@ -1,0 +1,39 @@
+{
+  "id": "42b16b1f-7551-4857-9f2f-073495389ef2",
+  "seq": 261,
+  "owner": "[private field removed]",
+  "account": "[private field removed]",
+  "status": "complete",
+  "title": "Static mandatory-control audit of128 frozen tiny candidates",
+  "description": "AST verifies --time_limit type=int; string presence checks explicit Seed/MIPGap/NumericFocus/Threads on sources importing Gurobi. This is limited static verification, not proof of parameter values, feasibility, runtime or logging completeness.",
+  "labels": [
+    "frontieror-fresh",
+    "static-compliance"
+  ],
+  "marginal_cost": {
+    "agent_usd": 0.0,
+    "resource_usd": 0.0
+  },
+  "subscribers": "[private field removed]",
+  "superseded_by": [],
+  "supersedes": [],
+  "produces": [],
+  "produced_by": [],
+  "created": "2026-10-11T10:01:19.064000+00:00",
+  "modified": "2026-10-11T10:01:19.066000+00:00",
+  "proves": [],
+  "favors": [],
+  "codechanges": null,
+  "outcome": "{\"count\": 128, \"findings\": []}",
+  "config": {
+    "batches": [
+      "batch001",
+      "batch003",
+      "batch004"
+    ],
+    "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397"
+  },
+  "proved_by": [],
+  "favored_by": [],
+  "kind": "Experiment"
+}

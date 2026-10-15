@@ -1,0 +1,9 @@
+{
+  "objective_value": "<float> Total completion time, comprising the truck's travel time along its route plus all waiting times at visited nodes.",
+  "truck_route": "<list[list[int]], shape [num_arcs][2]> Selected truck arcs. The start depot is depot_index, but the return depot is represented by the virtual sink node num_nodes. The virtual sink has the same physical location and travel data as depot_index. Exactly one arc must enter num_nodes; do not encode the return arc as ending at depot_index. The list is an arc set and need not be path ordered.",
+  "drone_assignments": "<list[dict]> Drone-to-customer delivery assignments, where each entry specifies which drone delivers to which customer from which node on the truck's route.",
+  "drone_assignments[*].drone": "<int> Index of the drone performing this delivery.",
+  "drone_assignments[*].dispatch_node": "<int> Node on the truck's route from which the drone is launched for this delivery.",
+  "drone_assignments[*].delivery_node": "<int> Customer node served by the drone on this delivery.",
+  "waiting_times": "<dict, key: '{node}'> Time the truck waits at each visited node for all dispatched drones to return."
+}

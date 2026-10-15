@@ -1,0 +1,27 @@
+{
+  "num_real_activities": "<int> Number of real activities in the project, excluding the fictitious start and end activities.",
+  "num_activities_total": "<int> Total number of activities including the fictitious project-start (activity 0) and project-end (activity num_real_activities+1) activities.",
+  "num_resources": "<int> Number of partially renewable resources available in the project.",
+  "max_project_duration": "<int> Maximum allowed project duration, serving as the deadline by which the project-end activity must start.",
+  "activities": [
+    {
+      "id": "<int> Unique identifier of the activity, where 0 is the project-start and num_real_activities+1 is the project-end.",
+      "processing_time": "<int> Number of consecutive time periods required to complete the activity once it starts."
+    }
+  ],
+  "temporal_constraints": [
+    {
+      "from_activity": "<int> Identifier of the first activity in the constrained pair.",
+      "to_activity": "<int> Identifier of the second activity in the constrained pair.",
+      "time_lag": "<int> Minimum required difference between the start time of to_activity and the start time of from_activity, where negative values impose a maximum separation."
+    }
+  ],
+  "resources": [
+    {
+      "resource_id": "<int> Unique identifier of the partially renewable resource.",
+      "Pi_k": "<list[int], length varies> Designated subset of time periods from the planning horizon during which this resource tracks consumption.",
+      "capacity": "<int> Maximum total consumption allowed for this resource across all activities over its designated period subset.",
+      "demands": "<dict, key: '{activity_id}'> Per-period resource consumption of each activity for this resource during periods in the designated subset."
+    }
+  ]
+}

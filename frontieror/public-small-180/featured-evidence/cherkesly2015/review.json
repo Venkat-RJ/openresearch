@@ -1,0 +1,5027 @@
+{
+  "task_id": "cherkesly2015",
+  "instance": "tiny",
+  "review_type": "separate Codex agent saved-witness review",
+  "review_date": "2026-10-12",
+  "not_external_researcher_replication": true,
+  "solver_or_official_evaluator_executed": false,
+  "dataset_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+  "evaluator_revision": "9bd047c9271d3048eff91dd0639941d0bc182d86",
+  "public_source_hash_verification": {
+    "date": "2026-10-12",
+    "method": "HTTPS GET of pinned Hugging Face resolve URLs, then SHA-256 comparison with local bytes; performed separately from this arithmetic replay",
+    "all_five_matched": true,
+    "files": [
+      "instance/tiny_instance.json",
+      "gurobi_code.py",
+      "mathematical_formulation.md",
+      "feasibility_check.py",
+      "gurobi_solution/tiny_solution.json"
+    ]
+  },
+  "original_paper_url": "https://doi.org/10.1287/trsc.2014.0535",
+  "stack_model": "single linear stack; no multi-stack count or assignments in pinned instance/schema/formulation",
+  "candidate": {
+    "feasible_for_checked_conditions": true,
+    "violations": [],
+    "reported_objective": 102616.4,
+    "recomputed_objective": 102616.4,
+    "recomputed_objective_decimal": "102616.4",
+    "fixed_cost": 100000.0,
+    "remaining_travel_cost": 2616.4,
+    "route_count": 10,
+    "requests_checked": 30,
+    "request_node_visits": 60,
+    "saved_detail_rows_checked": 80,
+    "maximum_load": 8.0,
+    "maximum_stack_depth": 2,
+    "routes": [
+      {
+        "vehicle_id": 0,
+        "route_sequence": [
+          0,
+          18,
+          48,
+          17,
+          47,
+          15,
+          45,
+          3,
+          33,
+          61
+        ],
+        "route_cost": 10315.6,
+        "requests": [
+          18,
+          17,
+          15,
+          3
+        ],
+        "return_time": 524.3,
+        "maximum_load": 6.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 18.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 18,
+            "action": "pickup",
+            "request_id": 18,
+            "x": 37,
+            "y": 38,
+            "service_start": 36.0,
+            "saved_service_start": 36.0,
+            "time_window": [
+              36,
+              96
+            ],
+            "load_after": 5.0,
+            "single_stack_bottom_to_top": [
+              18
+            ]
+          },
+          {
+            "node_id": 48,
+            "action": "delivery",
+            "request_id": 18,
+            "x": 97,
+            "y": 3,
+            "service_start": 116.0,
+            "saved_service_start": 116.0,
+            "time_window": [
+              116,
+              141
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 17,
+            "action": "pickup",
+            "request_id": 17,
+            "x": 77,
+            "y": 30,
+            "service_start": 159.6,
+            "saved_service_start": 159.6,
+            "time_window": [
+              121,
+              181
+            ],
+            "load_after": 6.0,
+            "single_stack_bottom_to_top": [
+              17
+            ]
+          },
+          {
+            "node_id": 47,
+            "action": "delivery",
+            "request_id": 17,
+            "x": 90,
+            "y": 20,
+            "service_start": 186.0,
+            "saved_service_start": 186.0,
+            "time_window": [
+              166,
+              226
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 15,
+            "action": "pickup",
+            "request_id": 15,
+            "x": 79,
+            "y": 42,
+            "service_start": 286.0,
+            "saved_service_start": 286.0,
+            "time_window": [
+              286,
+              346
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              15
+            ]
+          },
+          {
+            "node_id": 45,
+            "action": "delivery",
+            "request_id": 15,
+            "x": 14,
+            "y": 1,
+            "service_start": 373.0,
+            "saved_service_start": 373.0,
+            "time_window": [
+              373,
+              391
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 3,
+            "action": "pickup",
+            "request_id": 3,
+            "x": 3,
+            "y": 10,
+            "service_start": 441.0,
+            "saved_service_start": 441.0,
+            "time_window": [
+              441,
+              501
+            ],
+            "load_after": 3.0,
+            "single_stack_bottom_to_top": [
+              3
+            ]
+          },
+          {
+            "node_id": 33,
+            "action": "delivery",
+            "request_id": 3,
+            "x": 48,
+            "y": 44,
+            "service_start": 508.0,
+            "saved_service_start": 508.0,
+            "time_window": [
+              508,
+              546
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 524.3,
+            "saved_service_start": 524.3,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 1,
+        "route_sequence": [
+          0,
+          21,
+          51,
+          61
+        ],
+        "route_cost": 10119.1,
+        "requests": [
+          21
+        ],
+        "return_time": 299.8,
+        "maximum_load": 6.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 37.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 21,
+            "action": "pickup",
+            "request_id": 21,
+            "x": 13,
+            "y": 40,
+            "service_start": 199.0,
+            "saved_service_start": 199.0,
+            "time_window": [
+              199,
+              259
+            ],
+            "load_after": 6.0,
+            "single_stack_bottom_to_top": [
+              21
+            ]
+          },
+          {
+            "node_id": 51,
+            "action": "delivery",
+            "request_id": 21,
+            "x": 71,
+            "y": 41,
+            "service_start": 267.0,
+            "saved_service_start": 267.0,
+            "time_window": [
+              267,
+              304
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 299.8,
+            "saved_service_start": 299.8,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 2,
+        "route_sequence": [
+          0,
+          2,
+          32,
+          22,
+          52,
+          14,
+          44,
+          29,
+          59,
+          20,
+          50,
+          61
+        ],
+        "route_cost": 10364.1,
+        "requests": [
+          2,
+          22,
+          14,
+          29,
+          20
+        ],
+        "return_time": 505.6,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 14.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 2,
+            "action": "pickup",
+            "request_id": 2,
+            "x": 91,
+            "y": 18,
+            "service_start": 79.0,
+            "saved_service_start": 79.0,
+            "time_window": [
+              79,
+              139
+            ],
+            "load_after": 3.0,
+            "single_stack_bottom_to_top": [
+              2
+            ]
+          },
+          {
+            "node_id": 32,
+            "action": "delivery",
+            "request_id": 2,
+            "x": 76,
+            "y": 47,
+            "service_start": 124.0,
+            "saved_service_start": 124.0,
+            "time_window": [
+              124,
+              184
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 22,
+            "action": "pickup",
+            "request_id": 22,
+            "x": 75,
+            "y": 64,
+            "service_start": 156.0,
+            "saved_service_start": 156.0,
+            "time_window": [
+              156,
+              216
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              22
+            ]
+          },
+          {
+            "node_id": 52,
+            "action": "delivery",
+            "request_id": 22,
+            "x": 9,
+            "y": 18,
+            "service_start": 247.0,
+            "saved_service_start": 247.0,
+            "time_window": [
+              247,
+              261
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 14,
+            "action": "pickup",
+            "request_id": 14,
+            "x": 16,
+            "y": 29,
+            "service_start": 270.0,
+            "saved_service_start": 270.0,
+            "time_window": [
+              244,
+              304
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              14
+            ]
+          },
+          {
+            "node_id": 44,
+            "action": "delivery",
+            "request_id": 14,
+            "x": 64,
+            "y": 22,
+            "service_start": 328.5,
+            "saved_service_start": 328.5,
+            "time_window": [
+              303,
+              349
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 29,
+            "action": "pickup",
+            "request_id": 29,
+            "x": 59,
+            "y": 34,
+            "service_start": 351.5,
+            "saved_service_start": 351.5,
+            "time_window": [
+              310,
+              370
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              29
+            ]
+          },
+          {
+            "node_id": 59,
+            "action": "delivery",
+            "request_id": 29,
+            "x": 87,
+            "y": 31,
+            "service_start": 389.7,
+            "saved_service_start": 389.7,
+            "time_window": [
+              355,
+              415
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 20,
+            "action": "pickup",
+            "request_id": 20,
+            "x": 67,
+            "y": 42,
+            "service_start": 428.0,
+            "saved_service_start": 428.0,
+            "time_window": [
+              428,
+              488
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              20
+            ]
+          },
+          {
+            "node_id": 50,
+            "action": "delivery",
+            "request_id": 20,
+            "x": 34,
+            "y": 34,
+            "service_start": 473.0,
+            "saved_service_start": 473.0,
+            "time_window": [
+              473,
+              533
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 505.6,
+            "saved_service_start": 505.6,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 3,
+        "route_sequence": [
+          0,
+          11,
+          41,
+          24,
+          54,
+          7,
+          37,
+          61
+        ],
+        "route_cost": 10289.9,
+        "requests": [
+          11,
+          24,
+          7
+        ],
+        "return_time": 543.1,
+        "maximum_load": 4.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 4.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 11,
+            "action": "pickup",
+            "request_id": 11,
+            "x": 10,
+            "y": 53,
+            "service_start": 82.0,
+            "saved_service_start": 82.0,
+            "time_window": [
+              82,
+              142
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              11
+            ]
+          },
+          {
+            "node_id": 41,
+            "action": "delivery",
+            "request_id": 11,
+            "x": 88,
+            "y": 57,
+            "service_start": 171.0,
+            "saved_service_start": 171.0,
+            "time_window": [
+              171,
+              187
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 24,
+            "action": "pickup",
+            "request_id": 24,
+            "x": 90,
+            "y": 49,
+            "service_start": 213.0,
+            "saved_service_start": 213.0,
+            "time_window": [
+              213,
+              273
+            ],
+            "load_after": 1.0,
+            "single_stack_bottom_to_top": [
+              24
+            ]
+          },
+          {
+            "node_id": 54,
+            "action": "delivery",
+            "request_id": 24,
+            "x": 3,
+            "y": 24,
+            "service_start": 314.0,
+            "saved_service_start": 314.0,
+            "time_window": [
+              314,
+              318
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 7,
+            "action": "pickup",
+            "request_id": 7,
+            "x": 13,
+            "y": 34,
+            "service_start": 444.0,
+            "saved_service_start": 444.0,
+            "time_window": [
+              444,
+              504
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              7
+            ]
+          },
+          {
+            "node_id": 37,
+            "action": "delivery",
+            "request_id": 7,
+            "x": 6,
+            "y": 47,
+            "service_start": 489.0,
+            "saved_service_start": 489.0,
+            "time_window": [
+              489,
+              545
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 543.1,
+            "saved_service_start": 543.1,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 4,
+        "route_sequence": [
+          0,
+          8,
+          38,
+          13,
+          43,
+          61
+        ],
+        "route_cost": 10239.0,
+        "requests": [
+          8,
+          13
+        ],
+        "return_time": 309.0,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 23.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 8,
+            "action": "pickup",
+            "request_id": 8,
+            "x": 96,
+            "y": 22,
+            "service_start": 83.0,
+            "saved_service_start": 83.0,
+            "time_window": [
+              83,
+              143
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              8
+            ]
+          },
+          {
+            "node_id": 38,
+            "action": "delivery",
+            "request_id": 8,
+            "x": 25,
+            "y": 25,
+            "service_start": 165.0,
+            "saved_service_start": 165.0,
+            "time_window": [
+              165,
+              188
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 13,
+            "action": "pickup",
+            "request_id": 13,
+            "x": 21,
+            "y": 25,
+            "service_start": 179.0,
+            "saved_service_start": 179.0,
+            "time_window": [
+              178,
+              238
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              13
+            ]
+          },
+          {
+            "node_id": 43,
+            "action": "delivery",
+            "request_id": 13,
+            "x": 86,
+            "y": 23,
+            "service_start": 254.0,
+            "saved_service_start": 254.0,
+            "time_window": [
+              253,
+              283
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 309.0,
+            "saved_service_start": 309.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 5,
+        "route_sequence": [
+          0,
+          28,
+          58,
+          30,
+          60,
+          5,
+          4,
+          34,
+          35,
+          61
+        ],
+        "route_cost": 10293.7,
+        "requests": [
+          28,
+          30,
+          5,
+          4
+        ],
+        "return_time": 571.9,
+        "maximum_load": 8.0,
+        "maximum_stack_depth": 2,
+        "minimum_time_window_slack": 18.3,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 28,
+            "action": "pickup",
+            "request_id": 28,
+            "x": 8,
+            "y": 78,
+            "service_start": 72.0,
+            "saved_service_start": 72.0,
+            "time_window": [
+              72,
+              132
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              28
+            ]
+          },
+          {
+            "node_id": 58,
+            "action": "delivery",
+            "request_id": 28,
+            "x": 78,
+            "y": 59,
+            "service_start": 155.0,
+            "saved_service_start": 155.0,
+            "time_window": [
+              155,
+              177
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 30,
+            "action": "pickup",
+            "request_id": 30,
+            "x": 42,
+            "y": 69,
+            "service_start": 202.4,
+            "saved_service_start": 202.4,
+            "time_window": [
+              171,
+              231
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              30
+            ]
+          },
+          {
+            "node_id": 60,
+            "action": "delivery",
+            "request_id": 30,
+            "x": 35,
+            "y": 80,
+            "service_start": 225.4,
+            "saved_service_start": 225.4,
+            "time_window": [
+              216,
+              276
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 5,
+            "action": "pickup",
+            "request_id": 5,
+            "x": 30,
+            "y": 52,
+            "service_start": 440.0,
+            "saved_service_start": 440.0,
+            "time_window": [
+              440,
+              500
+            ],
+            "load_after": 1.0,
+            "single_stack_bottom_to_top": [
+              5
+            ]
+          },
+          {
+            "node_id": 4,
+            "action": "pickup",
+            "request_id": 4,
+            "x": 12,
+            "y": 73,
+            "service_start": 477.7,
+            "saved_service_start": 477.7,
+            "time_window": [
+              436,
+              496
+            ],
+            "load_after": 8.0,
+            "single_stack_bottom_to_top": [
+              5,
+              4
+            ]
+          },
+          {
+            "node_id": 34,
+            "action": "delivery",
+            "request_id": 4,
+            "x": 5,
+            "y": 73,
+            "service_start": 494.7,
+            "saved_service_start": 494.7,
+            "time_window": [
+              481,
+              539
+            ],
+            "load_after": 1.0,
+            "single_stack_bottom_to_top": [
+              5
+            ]
+          },
+          {
+            "node_id": 35,
+            "action": "delivery",
+            "request_id": 5,
+            "x": 4,
+            "y": 64,
+            "service_start": 513.8,
+            "saved_service_start": 513.8,
+            "time_window": [
+              485,
+              541
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 571.9,
+            "saved_service_start": 571.9,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 6,
+        "route_sequence": [
+          0,
+          1,
+          31,
+          19,
+          49,
+          6,
+          36,
+          61
+        ],
+        "route_cost": 10271.4,
+        "requests": [
+          1,
+          19,
+          6
+        ],
+        "return_time": 382.3,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 1.2,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 1,
+            "action": "pickup",
+            "request_id": 1,
+            "x": 93,
+            "y": 98,
+            "service_start": 91.0,
+            "saved_service_start": 91.0,
+            "time_window": [
+              91,
+              151
+            ],
+            "load_after": 6.0,
+            "single_stack_bottom_to_top": [
+              1
+            ]
+          },
+          {
+            "node_id": 31,
+            "action": "delivery",
+            "request_id": 1,
+            "x": 67,
+            "y": 81,
+            "service_start": 136.0,
+            "saved_service_start": 136.0,
+            "time_window": [
+              136,
+              196
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 19,
+            "action": "pickup",
+            "request_id": 19,
+            "x": 87,
+            "y": 75,
+            "service_start": 166.9,
+            "saved_service_start": 166.9,
+            "time_window": [
+              125,
+              185
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              19
+            ]
+          },
+          {
+            "node_id": 49,
+            "action": "delivery",
+            "request_id": 19,
+            "x": 37,
+            "y": 89,
+            "service_start": 228.8,
+            "saved_service_start": 228.8,
+            "time_window": [
+              187,
+              230
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 6,
+            "action": "pickup",
+            "request_id": 6,
+            "x": 4,
+            "y": 67,
+            "service_start": 298.0,
+            "saved_service_start": 298.0,
+            "time_window": [
+              298,
+              358
+            ],
+            "load_after": 2.0,
+            "single_stack_bottom_to_top": [
+              6
+            ]
+          },
+          {
+            "node_id": 36,
+            "action": "delivery",
+            "request_id": 6,
+            "x": 53,
+            "y": 64,
+            "service_start": 358.0,
+            "saved_service_start": 358.0,
+            "time_window": [
+              358,
+              403
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 382.3,
+            "saved_service_start": 382.3,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 7,
+        "route_sequence": [
+          0,
+          27,
+          57,
+          26,
+          56,
+          61
+        ],
+        "route_cost": 10231.3,
+        "requests": [
+          27,
+          26
+        ],
+        "return_time": 486.0,
+        "maximum_load": 4.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 13.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 27,
+            "action": "pickup",
+            "request_id": 27,
+            "x": 78,
+            "y": 86,
+            "service_start": 141.0,
+            "saved_service_start": 141.0,
+            "time_window": [
+              141,
+              201
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              27
+            ]
+          },
+          {
+            "node_id": 57,
+            "action": "delivery",
+            "request_id": 27,
+            "x": 88,
+            "y": 5,
+            "service_start": 233.0,
+            "saved_service_start": 233.0,
+            "time_window": [
+              233,
+              246
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 26,
+            "action": "pickup",
+            "request_id": 26,
+            "x": 68,
+            "y": 16,
+            "service_start": 384.0,
+            "saved_service_start": 384.0,
+            "time_window": [
+              384,
+              444
+            ],
+            "load_after": 1.0,
+            "single_stack_bottom_to_top": [
+              26
+            ]
+          },
+          {
+            "node_id": 56,
+            "action": "delivery",
+            "request_id": 26,
+            "x": 90,
+            "y": 51,
+            "service_start": 436.0,
+            "saved_service_start": 436.0,
+            "time_window": [
+              436,
+              489
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 486.0,
+            "saved_service_start": 486.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 8,
+        "route_sequence": [
+          0,
+          25,
+          55,
+          23,
+          53,
+          10,
+          40,
+          61
+        ],
+        "route_cost": 10268.8,
+        "requests": [
+          25,
+          23,
+          10
+        ],
+        "return_time": 406.8,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 1.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 25,
+            "action": "pickup",
+            "request_id": 25,
+            "x": 36,
+            "y": 51,
+            "service_start": 89.0,
+            "saved_service_start": 89.0,
+            "time_window": [
+              89,
+              149
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              25
+            ]
+          },
+          {
+            "node_id": 55,
+            "action": "delivery",
+            "request_id": 25,
+            "x": 13,
+            "y": 96,
+            "service_start": 150.0,
+            "saved_service_start": 150.0,
+            "time_window": [
+              150,
+              194
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 23,
+            "action": "pickup",
+            "request_id": 23,
+            "x": 31,
+            "y": 88,
+            "service_start": 182.0,
+            "saved_service_start": 182.0,
+            "time_window": [
+              182,
+              242
+            ],
+            "load_after": 2.0,
+            "single_stack_bottom_to_top": [
+              23
+            ]
+          },
+          {
+            "node_id": 53,
+            "action": "delivery",
+            "request_id": 23,
+            "x": 66,
+            "y": 1,
+            "service_start": 286.0,
+            "saved_service_start": 286.0,
+            "time_window": [
+              286,
+              287
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 10,
+            "action": "pickup",
+            "request_id": 10,
+            "x": 28,
+            "y": 2,
+            "service_start": 334.0,
+            "saved_service_start": 334.0,
+            "time_window": [
+              293,
+              353
+            ],
+            "load_after": 3.0,
+            "single_stack_bottom_to_top": [
+              10
+            ]
+          },
+          {
+            "node_id": 40,
+            "action": "delivery",
+            "request_id": 10,
+            "x": 42,
+            "y": 33,
+            "service_start": 378.0,
+            "saved_service_start": 378.0,
+            "time_window": [
+              338,
+              398
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 406.8,
+            "saved_service_start": 406.8,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 9,
+        "route_sequence": [
+          0,
+          9,
+          39,
+          16,
+          46,
+          12,
+          42,
+          61
+        ],
+        "route_cost": 10223.5,
+        "requests": [
+          9,
+          16,
+          12
+        ],
+        "return_time": 479.1,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 5.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 9,
+            "action": "pickup",
+            "request_id": 9,
+            "x": 42,
+            "y": 58,
+            "service_start": 87.0,
+            "saved_service_start": 87.0,
+            "time_window": [
+              87,
+              147
+            ],
+            "load_after": 6.0,
+            "single_stack_bottom_to_top": [
+              9
+            ]
+          },
+          {
+            "node_id": 39,
+            "action": "delivery",
+            "request_id": 9,
+            "x": 15,
+            "y": 84,
+            "service_start": 135.0,
+            "saved_service_start": 135.0,
+            "time_window": [
+              135,
+              192
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 16,
+            "action": "pickup",
+            "request_id": 16,
+            "x": 10,
+            "y": 64,
+            "service_start": 192.0,
+            "saved_service_start": 192.0,
+            "time_window": [
+              192,
+              252
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              16
+            ]
+          },
+          {
+            "node_id": 46,
+            "action": "delivery",
+            "request_id": 16,
+            "x": 96,
+            "y": 89,
+            "service_start": 292.0,
+            "saved_service_start": 292.0,
+            "time_window": [
+              292,
+              297
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 12,
+            "action": "pickup",
+            "request_id": 12,
+            "x": 84,
+            "y": 74,
+            "service_start": 388.0,
+            "saved_service_start": 388.0,
+            "time_window": [
+              388,
+              448
+            ],
+            "load_after": 6.0,
+            "single_stack_bottom_to_top": [
+              12
+            ]
+          },
+          {
+            "node_id": 42,
+            "action": "delivery",
+            "request_id": 12,
+            "x": 75,
+            "y": 76,
+            "service_start": 433.0,
+            "saved_service_start": 433.0,
+            "time_window": [
+              433,
+              493
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 479.1,
+            "saved_service_start": 479.1,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "feasible_for_checked_conditions": true,
+    "violations": [],
+    "reported_objective": 303868.0,
+    "recomputed_objective": 303868.0,
+    "recomputed_objective_decimal": "303868.0",
+    "fixed_cost": 300000.0,
+    "remaining_travel_cost": 3868.0,
+    "route_count": 30,
+    "requests_checked": 30,
+    "request_node_visits": 60,
+    "saved_detail_rows_checked": 120,
+    "maximum_load": 7.0,
+    "maximum_stack_depth": 1,
+    "routes": [
+      {
+        "vehicle_id": 0,
+        "route_sequence": [
+          0,
+          14,
+          44,
+          61
+        ],
+        "route_cost": 10119.8,
+        "requests": [
+          14
+        ],
+        "return_time": 344.3,
+        "maximum_load": 4.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 46.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 14,
+            "action": "pickup",
+            "request_id": 14,
+            "x": 16,
+            "y": 29,
+            "service_start": 244.0,
+            "saved_service_start": 244.0,
+            "time_window": [
+              244,
+              304
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              14
+            ]
+          },
+          {
+            "node_id": 44,
+            "action": "delivery",
+            "request_id": 14,
+            "x": 64,
+            "y": 22,
+            "service_start": 303.0,
+            "saved_service_start": 303.0,
+            "time_window": [
+              303,
+              349
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 344.3,
+            "saved_service_start": 344.3,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 1,
+        "route_sequence": [
+          0,
+          5,
+          35,
+          61
+        ],
+        "route_cost": 10096.8,
+        "requests": [
+          5
+        ],
+        "return_time": 543.1,
+        "maximum_load": 1.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 56.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 5,
+            "action": "pickup",
+            "request_id": 5,
+            "x": 30,
+            "y": 52,
+            "service_start": 440.0,
+            "saved_service_start": 440.0,
+            "time_window": [
+              440,
+              500
+            ],
+            "load_after": 1.0,
+            "single_stack_bottom_to_top": [
+              5
+            ]
+          },
+          {
+            "node_id": 35,
+            "action": "delivery",
+            "request_id": 5,
+            "x": 4,
+            "y": 64,
+            "service_start": 485.0,
+            "saved_service_start": 485.0,
+            "time_window": [
+              485,
+              541
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 543.1,
+            "saved_service_start": 543.1,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 2,
+        "route_sequence": [
+          0,
+          20,
+          50,
+          61
+        ],
+        "route_cost": 10075.4,
+        "requests": [
+          20
+        ],
+        "return_time": 505.6,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 60.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 20,
+            "action": "pickup",
+            "request_id": 20,
+            "x": 67,
+            "y": 42,
+            "service_start": 428.0,
+            "saved_service_start": 428.0,
+            "time_window": [
+              428,
+              488
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              20
+            ]
+          },
+          {
+            "node_id": 50,
+            "action": "delivery",
+            "request_id": 20,
+            "x": 34,
+            "y": 34,
+            "service_start": 473.0,
+            "saved_service_start": 473.0,
+            "time_window": [
+              473,
+              533
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 505.6,
+            "saved_service_start": 505.6,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 3,
+        "route_sequence": [
+          0,
+          7,
+          37,
+          61
+        ],
+        "route_cost": 10099.2,
+        "requests": [
+          7
+        ],
+        "return_time": 543.1,
+        "maximum_load": 4.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 56.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 7,
+            "action": "pickup",
+            "request_id": 7,
+            "x": 13,
+            "y": 34,
+            "service_start": 444.0,
+            "saved_service_start": 444.0,
+            "time_window": [
+              444,
+              504
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              7
+            ]
+          },
+          {
+            "node_id": 37,
+            "action": "delivery",
+            "request_id": 7,
+            "x": 6,
+            "y": 47,
+            "service_start": 489.0,
+            "saved_service_start": 489.0,
+            "time_window": [
+              489,
+              545
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 543.1,
+            "saved_service_start": 543.1,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 4,
+        "route_sequence": [
+          0,
+          28,
+          58,
+          61
+        ],
+        "route_cost": 10152.4,
+        "requests": [
+          28
+        ],
+        "return_time": 194.4,
+        "maximum_load": 4.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 22.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 28,
+            "action": "pickup",
+            "request_id": 28,
+            "x": 8,
+            "y": 78,
+            "service_start": 72.0,
+            "saved_service_start": 94.5,
+            "time_window": [
+              72,
+              132
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              28
+            ]
+          },
+          {
+            "node_id": 58,
+            "action": "delivery",
+            "request_id": 28,
+            "x": 78,
+            "y": 59,
+            "service_start": 155.0,
+            "saved_service_start": 177.0,
+            "time_window": [
+              155,
+              177
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 194.4,
+            "saved_service_start": 216.4,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 5,
+        "route_sequence": [
+          0,
+          23,
+          53,
+          61
+        ],
+        "route_cost": 10187.8,
+        "requests": [
+          23
+        ],
+        "return_time": 347.5,
+        "maximum_load": 2.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 1.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 23,
+            "action": "pickup",
+            "request_id": 23,
+            "x": 31,
+            "y": 88,
+            "service_start": 182.0,
+            "saved_service_start": 182.0,
+            "time_window": [
+              182,
+              242
+            ],
+            "load_after": 2.0,
+            "single_stack_bottom_to_top": [
+              23
+            ]
+          },
+          {
+            "node_id": 53,
+            "action": "delivery",
+            "request_id": 23,
+            "x": 66,
+            "y": 1,
+            "service_start": 286.0,
+            "saved_service_start": 286.0,
+            "time_window": [
+              286,
+              287
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 347.5,
+            "saved_service_start": 347.5,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 6,
+        "route_sequence": [
+          0,
+          8,
+          38,
+          61
+        ],
+        "route_cost": 10160.4,
+        "requests": [
+          8
+        ],
+        "return_time": 210.4,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 23.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 8,
+            "action": "pickup",
+            "request_id": 8,
+            "x": 96,
+            "y": 22,
+            "service_start": 83.0,
+            "saved_service_start": 83.0,
+            "time_window": [
+              83,
+              143
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              8
+            ]
+          },
+          {
+            "node_id": 38,
+            "action": "delivery",
+            "request_id": 8,
+            "x": 25,
+            "y": 25,
+            "service_start": 165.0,
+            "saved_service_start": 165.0,
+            "time_window": [
+              165,
+              188
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 210.4,
+            "saved_service_start": 210.4,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 7,
+        "route_sequence": [
+          0,
+          30,
+          60,
+          61
+        ],
+        "route_cost": 10067.1,
+        "requests": [
+          30
+        ],
+        "return_time": 259.5,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 60.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 30,
+            "action": "pickup",
+            "request_id": 30,
+            "x": 42,
+            "y": 69,
+            "service_start": 171.0,
+            "saved_service_start": 171.0,
+            "time_window": [
+              171,
+              231
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              30
+            ]
+          },
+          {
+            "node_id": 60,
+            "action": "delivery",
+            "request_id": 30,
+            "x": 35,
+            "y": 80,
+            "service_start": 216.0,
+            "saved_service_start": 216.0,
+            "time_window": [
+              216,
+              276
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 259.5,
+            "saved_service_start": 259.5,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 8,
+        "route_sequence": [
+          0,
+          27,
+          57,
+          61
+        ],
+        "route_cost": 10186.1,
+        "requests": [
+          27
+        ],
+        "return_time": 301.9,
+        "maximum_load": 4.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 13.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 27,
+            "action": "pickup",
+            "request_id": 27,
+            "x": 78,
+            "y": 86,
+            "service_start": 141.0,
+            "saved_service_start": 141.0,
+            "time_window": [
+              141,
+              201
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              27
+            ]
+          },
+          {
+            "node_id": 57,
+            "action": "delivery",
+            "request_id": 27,
+            "x": 88,
+            "y": 5,
+            "service_start": 233.0,
+            "saved_service_start": 233.0,
+            "time_window": [
+              233,
+              246
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 301.9,
+            "saved_service_start": 301.9,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 9,
+        "route_sequence": [
+          0,
+          21,
+          51,
+          61
+        ],
+        "route_cost": 10119.1,
+        "requests": [
+          21
+        ],
+        "return_time": 299.8,
+        "maximum_load": 6.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 37.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 21,
+            "action": "pickup",
+            "request_id": 21,
+            "x": 13,
+            "y": 40,
+            "service_start": 199.0,
+            "saved_service_start": 199.0,
+            "time_window": [
+              199,
+              259
+            ],
+            "load_after": 6.0,
+            "single_stack_bottom_to_top": [
+              21
+            ]
+          },
+          {
+            "node_id": 51,
+            "action": "delivery",
+            "request_id": 21,
+            "x": 71,
+            "y": 41,
+            "service_start": 267.0,
+            "saved_service_start": 267.0,
+            "time_window": [
+              267,
+              304
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 299.8,
+            "saved_service_start": 299.8,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 10,
+        "route_sequence": [
+          0,
+          25,
+          55,
+          61
+        ],
+        "route_cost": 10123.5,
+        "requests": [
+          25
+        ],
+        "return_time": 219.0,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 44.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 25,
+            "action": "pickup",
+            "request_id": 25,
+            "x": 36,
+            "y": 51,
+            "service_start": 89.0,
+            "saved_service_start": 89.0,
+            "time_window": [
+              89,
+              149
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              25
+            ]
+          },
+          {
+            "node_id": 55,
+            "action": "delivery",
+            "request_id": 25,
+            "x": 13,
+            "y": 96,
+            "service_start": 150.0,
+            "saved_service_start": 150.0,
+            "time_window": [
+              150,
+              194
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 219.0,
+            "saved_service_start": 219.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 11,
+        "route_sequence": [
+          0,
+          26,
+          56,
+          61
+        ],
+        "route_cost": 10119.8,
+        "requests": [
+          26
+        ],
+        "return_time": 486.0,
+        "maximum_load": 1.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 53.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 26,
+            "action": "pickup",
+            "request_id": 26,
+            "x": 68,
+            "y": 16,
+            "service_start": 384.0,
+            "saved_service_start": 384.0,
+            "time_window": [
+              384,
+              444
+            ],
+            "load_after": 1.0,
+            "single_stack_bottom_to_top": [
+              26
+            ]
+          },
+          {
+            "node_id": 56,
+            "action": "delivery",
+            "request_id": 26,
+            "x": 90,
+            "y": 51,
+            "service_start": 436.0,
+            "saved_service_start": 436.0,
+            "time_window": [
+              436,
+              489
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 486.0,
+            "saved_service_start": 486.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 12,
+        "route_sequence": [
+          0,
+          19,
+          49,
+          61
+        ],
+        "route_cost": 10137.7,
+        "requests": [
+          19
+        ],
+        "return_time": 238.1,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 43.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 19,
+            "action": "pickup",
+            "request_id": 19,
+            "x": 87,
+            "y": 75,
+            "service_start": 125.0,
+            "saved_service_start": 125.0,
+            "time_window": [
+              125,
+              185
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              19
+            ]
+          },
+          {
+            "node_id": 49,
+            "action": "delivery",
+            "request_id": 19,
+            "x": 37,
+            "y": 89,
+            "service_start": 187.0,
+            "saved_service_start": 187.0,
+            "time_window": [
+              187,
+              230
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 238.1,
+            "saved_service_start": 238.1,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 13,
+        "route_sequence": [
+          0,
+          24,
+          54,
+          61
+        ],
+        "route_cost": 10184.2,
+        "requests": [
+          24
+        ],
+        "return_time": 377.7,
+        "maximum_load": 1.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 4.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 24,
+            "action": "pickup",
+            "request_id": 24,
+            "x": 90,
+            "y": 49,
+            "service_start": 213.0,
+            "saved_service_start": 213.0,
+            "time_window": [
+              213,
+              273
+            ],
+            "load_after": 1.0,
+            "single_stack_bottom_to_top": [
+              24
+            ]
+          },
+          {
+            "node_id": 54,
+            "action": "delivery",
+            "request_id": 24,
+            "x": 3,
+            "y": 24,
+            "service_start": 314.0,
+            "saved_service_start": 314.0,
+            "time_window": [
+              314,
+              318
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 377.7,
+            "saved_service_start": 377.7,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 14,
+        "route_sequence": [
+          0,
+          29,
+          59,
+          61
+        ],
+        "route_cost": 10088.2,
+        "requests": [
+          29
+        ],
+        "return_time": 406.6,
+        "maximum_load": 4.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 60.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 29,
+            "action": "pickup",
+            "request_id": 29,
+            "x": 59,
+            "y": 34,
+            "service_start": 310.0,
+            "saved_service_start": 310.0,
+            "time_window": [
+              310,
+              370
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              29
+            ]
+          },
+          {
+            "node_id": 59,
+            "action": "delivery",
+            "request_id": 29,
+            "x": 87,
+            "y": 31,
+            "service_start": 355.0,
+            "saved_service_start": 355.0,
+            "time_window": [
+              355,
+              415
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 406.6,
+            "saved_service_start": 406.6,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 15,
+        "route_sequence": [
+          0,
+          1,
+          31,
+          61
+        ],
+        "route_cost": 10130.9,
+        "requests": [
+          1
+        ],
+        "return_time": 181.4,
+        "maximum_load": 6.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 60.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 1,
+            "action": "pickup",
+            "request_id": 1,
+            "x": 93,
+            "y": 98,
+            "service_start": 91.0,
+            "saved_service_start": 91.0,
+            "time_window": [
+              91,
+              151
+            ],
+            "load_after": 6.0,
+            "single_stack_bottom_to_top": [
+              1
+            ]
+          },
+          {
+            "node_id": 31,
+            "action": "delivery",
+            "request_id": 1,
+            "x": 67,
+            "y": 81,
+            "service_start": 136.0,
+            "saved_service_start": 136.0,
+            "time_window": [
+              136,
+              196
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 181.4,
+            "saved_service_start": 181.4,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 16,
+        "route_sequence": [
+          0,
+          22,
+          52,
+          61
+        ],
+        "route_cost": 10161.1,
+        "requests": [
+          22
+        ],
+        "return_time": 309.0,
+        "maximum_load": 4.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 14.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 22,
+            "action": "pickup",
+            "request_id": 22,
+            "x": 75,
+            "y": 64,
+            "service_start": 156.0,
+            "saved_service_start": 156.0,
+            "time_window": [
+              156,
+              216
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              22
+            ]
+          },
+          {
+            "node_id": 52,
+            "action": "delivery",
+            "request_id": 22,
+            "x": 9,
+            "y": 18,
+            "service_start": 247.0,
+            "saved_service_start": 247.0,
+            "time_window": [
+              247,
+              261
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 309.0,
+            "saved_service_start": 309.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 17,
+        "route_sequence": [
+          0,
+          9,
+          39,
+          61
+        ],
+        "route_cost": 10097.6,
+        "requests": [
+          9
+        ],
+        "return_time": 193.8,
+        "maximum_load": 6.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 57.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 9,
+            "action": "pickup",
+            "request_id": 9,
+            "x": 42,
+            "y": 58,
+            "service_start": 87.0,
+            "saved_service_start": 87.0,
+            "time_window": [
+              87,
+              147
+            ],
+            "load_after": 6.0,
+            "single_stack_bottom_to_top": [
+              9
+            ]
+          },
+          {
+            "node_id": 39,
+            "action": "delivery",
+            "request_id": 9,
+            "x": 15,
+            "y": 84,
+            "service_start": 135.0,
+            "saved_service_start": 135.0,
+            "time_window": [
+              135,
+              192
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 193.8,
+            "saved_service_start": 193.8,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 18,
+        "route_sequence": [
+          0,
+          10,
+          40,
+          61
+        ],
+        "route_cost": 10105.6,
+        "requests": [
+          10
+        ],
+        "return_time": 366.8,
+        "maximum_load": 3.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 60.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 10,
+            "action": "pickup",
+            "request_id": 10,
+            "x": 28,
+            "y": 2,
+            "service_start": 293.0,
+            "saved_service_start": 293.0,
+            "time_window": [
+              293,
+              353
+            ],
+            "load_after": 3.0,
+            "single_stack_bottom_to_top": [
+              10
+            ]
+          },
+          {
+            "node_id": 40,
+            "action": "delivery",
+            "request_id": 10,
+            "x": 42,
+            "y": 33,
+            "service_start": 338.0,
+            "saved_service_start": 338.0,
+            "time_window": [
+              338,
+              398
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 366.8,
+            "saved_service_start": 366.8,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 19,
+        "route_sequence": [
+          0,
+          18,
+          48,
+          61
+        ],
+        "route_cost": 10153.7,
+        "requests": [
+          18
+        ],
+        "return_time": 192.5,
+        "maximum_load": 5.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 25.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 18,
+            "action": "pickup",
+            "request_id": 18,
+            "x": 37,
+            "y": 38,
+            "service_start": 36.0,
+            "saved_service_start": 36.0,
+            "time_window": [
+              36,
+              96
+            ],
+            "load_after": 5.0,
+            "single_stack_bottom_to_top": [
+              18
+            ]
+          },
+          {
+            "node_id": 48,
+            "action": "delivery",
+            "request_id": 18,
+            "x": 97,
+            "y": 3,
+            "service_start": 116.0,
+            "saved_service_start": 116.0,
+            "time_window": [
+              116,
+              141
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 192.5,
+            "saved_service_start": 192.5,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 20,
+        "route_sequence": [
+          0,
+          3,
+          33,
+          61
+        ],
+        "route_cost": 10124.4,
+        "requests": [
+          3
+        ],
+        "return_time": 524.3,
+        "maximum_load": 3.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 38.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 3,
+            "action": "pickup",
+            "request_id": 3,
+            "x": 3,
+            "y": 10,
+            "service_start": 441.0,
+            "saved_service_start": 441.0,
+            "time_window": [
+              441,
+              501
+            ],
+            "load_after": 3.0,
+            "single_stack_bottom_to_top": [
+              3
+            ]
+          },
+          {
+            "node_id": 33,
+            "action": "delivery",
+            "request_id": 3,
+            "x": 48,
+            "y": 44,
+            "service_start": 508.0,
+            "saved_service_start": 508.0,
+            "time_window": [
+              508,
+              546
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 524.3,
+            "saved_service_start": 524.3,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 21,
+        "route_sequence": [
+          0,
+          15,
+          45,
+          61
+        ],
+        "route_cost": 10167.8,
+        "requests": [
+          15
+        ],
+        "return_time": 443.8,
+        "maximum_load": 4.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 18.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 15,
+            "action": "pickup",
+            "request_id": 15,
+            "x": 79,
+            "y": 42,
+            "service_start": 286.0,
+            "saved_service_start": 286.0,
+            "time_window": [
+              286,
+              346
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              15
+            ]
+          },
+          {
+            "node_id": 45,
+            "action": "delivery",
+            "request_id": 15,
+            "x": 14,
+            "y": 1,
+            "service_start": 373.0,
+            "saved_service_start": 391.0,
+            "time_window": [
+              373,
+              391
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 443.8,
+            "saved_service_start": 600.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 22,
+        "route_sequence": [
+          0,
+          11,
+          41,
+          61
+        ],
+        "route_cost": 10156.8,
+        "requests": [
+          11
+        ],
+        "return_time": 219.6,
+        "maximum_load": 4.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 16.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 11,
+            "action": "pickup",
+            "request_id": 11,
+            "x": 10,
+            "y": 53,
+            "service_start": 82.0,
+            "saved_service_start": 82.0,
+            "time_window": [
+              82,
+              142
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              11
+            ]
+          },
+          {
+            "node_id": 41,
+            "action": "delivery",
+            "request_id": 11,
+            "x": 88,
+            "y": 57,
+            "service_start": 171.0,
+            "saved_service_start": 171.0,
+            "time_window": [
+              171,
+              187
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 219.6,
+            "saved_service_start": 600.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 23,
+        "route_sequence": [
+          0,
+          12,
+          42,
+          61
+        ],
+        "route_cost": 10086.9,
+        "requests": [
+          12
+        ],
+        "return_time": 479.1,
+        "maximum_load": 6.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 60.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 12,
+            "action": "pickup",
+            "request_id": 12,
+            "x": 84,
+            "y": 74,
+            "service_start": 388.0,
+            "saved_service_start": 388.0,
+            "time_window": [
+              388,
+              448
+            ],
+            "load_after": 6.0,
+            "single_stack_bottom_to_top": [
+              12
+            ]
+          },
+          {
+            "node_id": 42,
+            "action": "delivery",
+            "request_id": 12,
+            "x": 75,
+            "y": 76,
+            "service_start": 433.0,
+            "saved_service_start": 493.0,
+            "time_window": [
+              433,
+              493
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 479.1,
+            "saved_service_start": 600.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 24,
+        "route_sequence": [
+          0,
+          13,
+          43,
+          61
+        ],
+        "route_cost": 10148.3,
+        "requests": [
+          13
+        ],
+        "return_time": 308.0,
+        "maximum_load": 4.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 30.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 13,
+            "action": "pickup",
+            "request_id": 13,
+            "x": 21,
+            "y": 25,
+            "service_start": 178.0,
+            "saved_service_start": 178.0,
+            "time_window": [
+              178,
+              238
+            ],
+            "load_after": 4.0,
+            "single_stack_bottom_to_top": [
+              13
+            ]
+          },
+          {
+            "node_id": 43,
+            "action": "delivery",
+            "request_id": 13,
+            "x": 86,
+            "y": 23,
+            "service_start": 253.0,
+            "saved_service_start": 253.0,
+            "time_window": [
+              253,
+              283
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 308.0,
+            "saved_service_start": 600.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 25,
+        "route_sequence": [
+          0,
+          17,
+          47,
+          61
+        ],
+        "route_cost": 10100.0,
+        "requests": [
+          17
+        ],
+        "return_time": 226.0,
+        "maximum_load": 6.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 60.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 17,
+            "action": "pickup",
+            "request_id": 17,
+            "x": 77,
+            "y": 30,
+            "service_start": 121.0,
+            "saved_service_start": 121.0,
+            "time_window": [
+              121,
+              181
+            ],
+            "load_after": 6.0,
+            "single_stack_bottom_to_top": [
+              17
+            ]
+          },
+          {
+            "node_id": 47,
+            "action": "delivery",
+            "request_id": 17,
+            "x": 90,
+            "y": 20,
+            "service_start": 166.0,
+            "saved_service_start": 166.0,
+            "time_window": [
+              166,
+              226
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 226.0,
+            "saved_service_start": 226.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 26,
+        "route_sequence": [
+          0,
+          6,
+          36,
+          61
+        ],
+        "route_cost": 10112.4,
+        "requests": [
+          6
+        ],
+        "return_time": 382.3,
+        "maximum_load": 2.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 45.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 6,
+            "action": "pickup",
+            "request_id": 6,
+            "x": 4,
+            "y": 67,
+            "service_start": 298.0,
+            "saved_service_start": 298.0,
+            "time_window": [
+              298,
+              358
+            ],
+            "load_after": 2.0,
+            "single_stack_bottom_to_top": [
+              6
+            ]
+          },
+          {
+            "node_id": 36,
+            "action": "delivery",
+            "request_id": 6,
+            "x": 53,
+            "y": 64,
+            "service_start": 358.0,
+            "saved_service_start": 358.0,
+            "time_window": [
+              358,
+              403
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 382.3,
+            "saved_service_start": 600.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 27,
+        "route_sequence": [
+          0,
+          2,
+          32,
+          61
+        ],
+        "route_cost": 10110.8,
+        "requests": [
+          2
+        ],
+        "return_time": 160.2,
+        "maximum_load": 3.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 60.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 2,
+            "action": "pickup",
+            "request_id": 2,
+            "x": 91,
+            "y": 18,
+            "service_start": 79.0,
+            "saved_service_start": 79.0,
+            "time_window": [
+              79,
+              139
+            ],
+            "load_after": 3.0,
+            "single_stack_bottom_to_top": [
+              2
+            ]
+          },
+          {
+            "node_id": 32,
+            "action": "delivery",
+            "request_id": 2,
+            "x": 76,
+            "y": 47,
+            "service_start": 124.0,
+            "saved_service_start": 124.0,
+            "time_window": [
+              124,
+              184
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 160.2,
+            "saved_service_start": 600.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 28,
+        "route_sequence": [
+          0,
+          4,
+          34,
+          61
+        ],
+        "route_cost": 10101.9,
+        "requests": [
+          4
+        ],
+        "return_time": 541.5,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 58.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 4,
+            "action": "pickup",
+            "request_id": 4,
+            "x": 12,
+            "y": 73,
+            "service_start": 436.0,
+            "saved_service_start": 436.0,
+            "time_window": [
+              436,
+              496
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              4
+            ]
+          },
+          {
+            "node_id": 34,
+            "action": "delivery",
+            "request_id": 4,
+            "x": 5,
+            "y": 73,
+            "service_start": 481.0,
+            "saved_service_start": 481.0,
+            "time_window": [
+              481,
+              539
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 541.5,
+            "saved_service_start": 541.5,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      },
+      {
+        "vehicle_id": 29,
+        "route_sequence": [
+          0,
+          16,
+          46,
+          61
+        ],
+        "route_cost": 10192.3,
+        "requests": [
+          16
+        ],
+        "return_time": 362.3,
+        "maximum_load": 7.0,
+        "maximum_stack_depth": 1,
+        "minimum_time_window_slack": 5.0,
+        "events": [
+          {
+            "node_id": 0,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 0.0,
+            "saved_service_start": 0.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 16,
+            "action": "pickup",
+            "request_id": 16,
+            "x": 10,
+            "y": 64,
+            "service_start": 192.0,
+            "saved_service_start": 192.0,
+            "time_window": [
+              192,
+              252
+            ],
+            "load_after": 7.0,
+            "single_stack_bottom_to_top": [
+              16
+            ]
+          },
+          {
+            "node_id": 46,
+            "action": "delivery",
+            "request_id": 16,
+            "x": 96,
+            "y": 89,
+            "service_start": 292.0,
+            "saved_service_start": 297.0,
+            "time_window": [
+              292,
+              297
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          },
+          {
+            "node_id": 61,
+            "action": "depot",
+            "request_id": null,
+            "x": 50,
+            "y": 50,
+            "service_start": 362.3,
+            "saved_service_start": 600.0,
+            "time_window": [
+              0,
+              600
+            ],
+            "load_after": 0.0,
+            "single_stack_bottom_to_top": []
+          }
+        ]
+      }
+    ]
+  },
+  "comparison": {
+    "absolute_cost_reduction": 201251.6,
+    "percent_reduction": 66.22994194847763,
+    "fixed_cost_reduction": 200000.0,
+    "remaining_travel_cost_reduction": 1251.6
+  },
+  "reference_restriction": {
+    "K_size": 30,
+    "all_modeled_vehicles_forced_to_depart_and_return": true,
+    "direct_origin_destination_arc_available": false,
+    "source_lines": {
+      "K_size": [
+        119,
+        122
+      ],
+      "departure_equality": [
+        194,
+        200
+      ],
+      "return_equality": [
+        213,
+        219
+      ]
+    },
+    "saved_reference_all_single_request_routes": true
+  },
+  "constraints_checked": [
+    "unique vehicle IDs",
+    "exactly one visit per pickup and delivery",
+    "depot endpoints with no internal depot",
+    "all traversed arcs in pinned arc set",
+    "paired pickup and delivery on same route",
+    "delivery only after pickup",
+    "single-stack LIFO at every delivery",
+    "exact cumulative load",
+    "capacity and node-specific load bounds",
+    "empty load/stack on return",
+    "earliest feasible service-start replay",
+    "service duration plus pinned travel-time propagation",
+    "node time windows",
+    "pickup-to-delivery direct-travel precedence",
+    "saved detail load/time consistency",
+    "full arc-cost objective recomputation using Decimal"
+  ],
+  "limitations": [
+    "No optimization solver or benchmark evaluator was run.",
+    "No optimality proof for the ten-route candidate was produced.",
+    "This is a separate Codex agent review, not replication by an outside researcher.",
+    "The pinned benchmark description, formulation and checker permit a chosen number of used routes, but the reference source fixes 30 and forces them all to operate.",
+    "The handwritten mathematical formulation has ambiguous/nonstandard displayed load/time activation expressions; the validator checked the physical route semantics described in the task and implemented by the pinned checker.",
+    "No multi-stack condition was checked because this pinned task defines a single linear stack.",
+    "No claim is made about outperforming the original paper algorithms or all FrontierOR instances."
+  ],
+  "figure_data": {
+    "coordinate_system": "pinned instance abstract x/y coordinates, not a real-world basemap",
+    "all_nodes": [
+      {
+        "node_id": 0,
+        "node_type": "depot_origin",
+        "request_id": null,
+        "x": 50,
+        "y": 50,
+        "load": 0,
+        "service_time": 0,
+        "tw_early": 0,
+        "tw_late": 600
+      },
+      {
+        "node_id": 1,
+        "node_type": "pickup",
+        "request_id": 1,
+        "x": 93,
+        "y": 98,
+        "load": 6,
+        "service_time": 10,
+        "tw_early": 91,
+        "tw_late": 151
+      },
+      {
+        "node_id": 2,
+        "node_type": "pickup",
+        "request_id": 2,
+        "x": 91,
+        "y": 18,
+        "load": 3,
+        "service_time": 10,
+        "tw_early": 79,
+        "tw_late": 139
+      },
+      {
+        "node_id": 3,
+        "node_type": "pickup",
+        "request_id": 3,
+        "x": 3,
+        "y": 10,
+        "load": 3,
+        "service_time": 10,
+        "tw_early": 441,
+        "tw_late": 501
+      },
+      {
+        "node_id": 4,
+        "node_type": "pickup",
+        "request_id": 4,
+        "x": 12,
+        "y": 73,
+        "load": 7,
+        "service_time": 10,
+        "tw_early": 436,
+        "tw_late": 496
+      },
+      {
+        "node_id": 5,
+        "node_type": "pickup",
+        "request_id": 5,
+        "x": 30,
+        "y": 52,
+        "load": 1,
+        "service_time": 10,
+        "tw_early": 440,
+        "tw_late": 500
+      },
+      {
+        "node_id": 6,
+        "node_type": "pickup",
+        "request_id": 6,
+        "x": 4,
+        "y": 67,
+        "load": 2,
+        "service_time": 10,
+        "tw_early": 298,
+        "tw_late": 358
+      },
+      {
+        "node_id": 7,
+        "node_type": "pickup",
+        "request_id": 7,
+        "x": 13,
+        "y": 34,
+        "load": 4,
+        "service_time": 10,
+        "tw_early": 444,
+        "tw_late": 504
+      },
+      {
+        "node_id": 8,
+        "node_type": "pickup",
+        "request_id": 8,
+        "x": 96,
+        "y": 22,
+        "load": 7,
+        "service_time": 10,
+        "tw_early": 83,
+        "tw_late": 143
+      },
+      {
+        "node_id": 9,
+        "node_type": "pickup",
+        "request_id": 9,
+        "x": 42,
+        "y": 58,
+        "load": 6,
+        "service_time": 10,
+        "tw_early": 87,
+        "tw_late": 147
+      },
+      {
+        "node_id": 10,
+        "node_type": "pickup",
+        "request_id": 10,
+        "x": 28,
+        "y": 2,
+        "load": 3,
+        "service_time": 10,
+        "tw_early": 293,
+        "tw_late": 353
+      },
+      {
+        "node_id": 11,
+        "node_type": "pickup",
+        "request_id": 11,
+        "x": 10,
+        "y": 53,
+        "load": 4,
+        "service_time": 10,
+        "tw_early": 82,
+        "tw_late": 142
+      },
+      {
+        "node_id": 12,
+        "node_type": "pickup",
+        "request_id": 12,
+        "x": 84,
+        "y": 74,
+        "load": 6,
+        "service_time": 10,
+        "tw_early": 388,
+        "tw_late": 448
+      },
+      {
+        "node_id": 13,
+        "node_type": "pickup",
+        "request_id": 13,
+        "x": 21,
+        "y": 25,
+        "load": 4,
+        "service_time": 10,
+        "tw_early": 178,
+        "tw_late": 238
+      },
+      {
+        "node_id": 14,
+        "node_type": "pickup",
+        "request_id": 14,
+        "x": 16,
+        "y": 29,
+        "load": 4,
+        "service_time": 10,
+        "tw_early": 244,
+        "tw_late": 304
+      },
+      {
+        "node_id": 15,
+        "node_type": "pickup",
+        "request_id": 15,
+        "x": 79,
+        "y": 42,
+        "load": 4,
+        "service_time": 10,
+        "tw_early": 286,
+        "tw_late": 346
+      },
+      {
+        "node_id": 16,
+        "node_type": "pickup",
+        "request_id": 16,
+        "x": 10,
+        "y": 64,
+        "load": 7,
+        "service_time": 10,
+        "tw_early": 192,
+        "tw_late": 252
+      },
+      {
+        "node_id": 17,
+        "node_type": "pickup",
+        "request_id": 17,
+        "x": 77,
+        "y": 30,
+        "load": 6,
+        "service_time": 10,
+        "tw_early": 121,
+        "tw_late": 181
+      },
+      {
+        "node_id": 18,
+        "node_type": "pickup",
+        "request_id": 18,
+        "x": 37,
+        "y": 38,
+        "load": 5,
+        "service_time": 10,
+        "tw_early": 36,
+        "tw_late": 96
+      },
+      {
+        "node_id": 19,
+        "node_type": "pickup",
+        "request_id": 19,
+        "x": 87,
+        "y": 75,
+        "load": 7,
+        "service_time": 10,
+        "tw_early": 125,
+        "tw_late": 185
+      },
+      {
+        "node_id": 20,
+        "node_type": "pickup",
+        "request_id": 20,
+        "x": 67,
+        "y": 42,
+        "load": 7,
+        "service_time": 10,
+        "tw_early": 428,
+        "tw_late": 488
+      },
+      {
+        "node_id": 21,
+        "node_type": "pickup",
+        "request_id": 21,
+        "x": 13,
+        "y": 40,
+        "load": 6,
+        "service_time": 10,
+        "tw_early": 199,
+        "tw_late": 259
+      },
+      {
+        "node_id": 22,
+        "node_type": "pickup",
+        "request_id": 22,
+        "x": 75,
+        "y": 64,
+        "load": 4,
+        "service_time": 10,
+        "tw_early": 156,
+        "tw_late": 216
+      },
+      {
+        "node_id": 23,
+        "node_type": "pickup",
+        "request_id": 23,
+        "x": 31,
+        "y": 88,
+        "load": 2,
+        "service_time": 10,
+        "tw_early": 182,
+        "tw_late": 242
+      },
+      {
+        "node_id": 24,
+        "node_type": "pickup",
+        "request_id": 24,
+        "x": 90,
+        "y": 49,
+        "load": 1,
+        "service_time": 10,
+        "tw_early": 213,
+        "tw_late": 273
+      },
+      {
+        "node_id": 25,
+        "node_type": "pickup",
+        "request_id": 25,
+        "x": 36,
+        "y": 51,
+        "load": 7,
+        "service_time": 10,
+        "tw_early": 89,
+        "tw_late": 149
+      },
+      {
+        "node_id": 26,
+        "node_type": "pickup",
+        "request_id": 26,
+        "x": 68,
+        "y": 16,
+        "load": 1,
+        "service_time": 10,
+        "tw_early": 384,
+        "tw_late": 444
+      },
+      {
+        "node_id": 27,
+        "node_type": "pickup",
+        "request_id": 27,
+        "x": 78,
+        "y": 86,
+        "load": 4,
+        "service_time": 10,
+        "tw_early": 141,
+        "tw_late": 201
+      },
+      {
+        "node_id": 28,
+        "node_type": "pickup",
+        "request_id": 28,
+        "x": 8,
+        "y": 78,
+        "load": 4,
+        "service_time": 10,
+        "tw_early": 72,
+        "tw_late": 132
+      },
+      {
+        "node_id": 29,
+        "node_type": "pickup",
+        "request_id": 29,
+        "x": 59,
+        "y": 34,
+        "load": 4,
+        "service_time": 10,
+        "tw_early": 310,
+        "tw_late": 370
+      },
+      {
+        "node_id": 30,
+        "node_type": "pickup",
+        "request_id": 30,
+        "x": 42,
+        "y": 69,
+        "load": 7,
+        "service_time": 10,
+        "tw_early": 171,
+        "tw_late": 231
+      },
+      {
+        "node_id": 31,
+        "node_type": "delivery",
+        "request_id": 1,
+        "x": 67,
+        "y": 81,
+        "load": -6,
+        "service_time": 10,
+        "tw_early": 136,
+        "tw_late": 196
+      },
+      {
+        "node_id": 32,
+        "node_type": "delivery",
+        "request_id": 2,
+        "x": 76,
+        "y": 47,
+        "load": -3,
+        "service_time": 10,
+        "tw_early": 124,
+        "tw_late": 184
+      },
+      {
+        "node_id": 33,
+        "node_type": "delivery",
+        "request_id": 3,
+        "x": 48,
+        "y": 44,
+        "load": -3,
+        "service_time": 10,
+        "tw_early": 508,
+        "tw_late": 546
+      },
+      {
+        "node_id": 34,
+        "node_type": "delivery",
+        "request_id": 4,
+        "x": 5,
+        "y": 73,
+        "load": -7,
+        "service_time": 10,
+        "tw_early": 481,
+        "tw_late": 539
+      },
+      {
+        "node_id": 35,
+        "node_type": "delivery",
+        "request_id": 5,
+        "x": 4,
+        "y": 64,
+        "load": -1,
+        "service_time": 10,
+        "tw_early": 485,
+        "tw_late": 541
+      },
+      {
+        "node_id": 36,
+        "node_type": "delivery",
+        "request_id": 6,
+        "x": 53,
+        "y": 64,
+        "load": -2,
+        "service_time": 10,
+        "tw_early": 358,
+        "tw_late": 403
+      },
+      {
+        "node_id": 37,
+        "node_type": "delivery",
+        "request_id": 7,
+        "x": 6,
+        "y": 47,
+        "load": -4,
+        "service_time": 10,
+        "tw_early": 489,
+        "tw_late": 545
+      },
+      {
+        "node_id": 38,
+        "node_type": "delivery",
+        "request_id": 8,
+        "x": 25,
+        "y": 25,
+        "load": -7,
+        "service_time": 10,
+        "tw_early": 165,
+        "tw_late": 188
+      },
+      {
+        "node_id": 39,
+        "node_type": "delivery",
+        "request_id": 9,
+        "x": 15,
+        "y": 84,
+        "load": -6,
+        "service_time": 10,
+        "tw_early": 135,
+        "tw_late": 192
+      },
+      {
+        "node_id": 40,
+        "node_type": "delivery",
+        "request_id": 10,
+        "x": 42,
+        "y": 33,
+        "load": -3,
+        "service_time": 10,
+        "tw_early": 338,
+        "tw_late": 398
+      },
+      {
+        "node_id": 41,
+        "node_type": "delivery",
+        "request_id": 11,
+        "x": 88,
+        "y": 57,
+        "load": -4,
+        "service_time": 10,
+        "tw_early": 171,
+        "tw_late": 187
+      },
+      {
+        "node_id": 42,
+        "node_type": "delivery",
+        "request_id": 12,
+        "x": 75,
+        "y": 76,
+        "load": -6,
+        "service_time": 10,
+        "tw_early": 433,
+        "tw_late": 493
+      },
+      {
+        "node_id": 43,
+        "node_type": "delivery",
+        "request_id": 13,
+        "x": 86,
+        "y": 23,
+        "load": -4,
+        "service_time": 10,
+        "tw_early": 253,
+        "tw_late": 283
+      },
+      {
+        "node_id": 44,
+        "node_type": "delivery",
+        "request_id": 14,
+        "x": 64,
+        "y": 22,
+        "load": -4,
+        "service_time": 10,
+        "tw_early": 303,
+        "tw_late": 349
+      },
+      {
+        "node_id": 45,
+        "node_type": "delivery",
+        "request_id": 15,
+        "x": 14,
+        "y": 1,
+        "load": -4,
+        "service_time": 10,
+        "tw_early": 373,
+        "tw_late": 391
+      },
+      {
+        "node_id": 46,
+        "node_type": "delivery",
+        "request_id": 16,
+        "x": 96,
+        "y": 89,
+        "load": -7,
+        "service_time": 10,
+        "tw_early": 292,
+        "tw_late": 297
+      },
+      {
+        "node_id": 47,
+        "node_type": "delivery",
+        "request_id": 17,
+        "x": 90,
+        "y": 20,
+        "load": -6,
+        "service_time": 10,
+        "tw_early": 166,
+        "tw_late": 226
+      },
+      {
+        "node_id": 48,
+        "node_type": "delivery",
+        "request_id": 18,
+        "x": 97,
+        "y": 3,
+        "load": -5,
+        "service_time": 10,
+        "tw_early": 116,
+        "tw_late": 141
+      },
+      {
+        "node_id": 49,
+        "node_type": "delivery",
+        "request_id": 19,
+        "x": 37,
+        "y": 89,
+        "load": -7,
+        "service_time": 10,
+        "tw_early": 187,
+        "tw_late": 230
+      },
+      {
+        "node_id": 50,
+        "node_type": "delivery",
+        "request_id": 20,
+        "x": 34,
+        "y": 34,
+        "load": -7,
+        "service_time": 10,
+        "tw_early": 473,
+        "tw_late": 533
+      },
+      {
+        "node_id": 51,
+        "node_type": "delivery",
+        "request_id": 21,
+        "x": 71,
+        "y": 41,
+        "load": -6,
+        "service_time": 10,
+        "tw_early": 267,
+        "tw_late": 304
+      },
+      {
+        "node_id": 52,
+        "node_type": "delivery",
+        "request_id": 22,
+        "x": 9,
+        "y": 18,
+        "load": -4,
+        "service_time": 10,
+        "tw_early": 247,
+        "tw_late": 261
+      },
+      {
+        "node_id": 53,
+        "node_type": "delivery",
+        "request_id": 23,
+        "x": 66,
+        "y": 1,
+        "load": -2,
+        "service_time": 10,
+        "tw_early": 286,
+        "tw_late": 287
+      },
+      {
+        "node_id": 54,
+        "node_type": "delivery",
+        "request_id": 24,
+        "x": 3,
+        "y": 24,
+        "load": -1,
+        "service_time": 10,
+        "tw_early": 314,
+        "tw_late": 318
+      },
+      {
+        "node_id": 55,
+        "node_type": "delivery",
+        "request_id": 25,
+        "x": 13,
+        "y": 96,
+        "load": -7,
+        "service_time": 10,
+        "tw_early": 150,
+        "tw_late": 194
+      },
+      {
+        "node_id": 56,
+        "node_type": "delivery",
+        "request_id": 26,
+        "x": 90,
+        "y": 51,
+        "load": -1,
+        "service_time": 10,
+        "tw_early": 436,
+        "tw_late": 489
+      },
+      {
+        "node_id": 57,
+        "node_type": "delivery",
+        "request_id": 27,
+        "x": 88,
+        "y": 5,
+        "load": -4,
+        "service_time": 10,
+        "tw_early": 233,
+        "tw_late": 246
+      },
+      {
+        "node_id": 58,
+        "node_type": "delivery",
+        "request_id": 28,
+        "x": 78,
+        "y": 59,
+        "load": -4,
+        "service_time": 10,
+        "tw_early": 155,
+        "tw_late": 177
+      },
+      {
+        "node_id": 59,
+        "node_type": "delivery",
+        "request_id": 29,
+        "x": 87,
+        "y": 31,
+        "load": -4,
+        "service_time": 10,
+        "tw_early": 355,
+        "tw_late": 415
+      },
+      {
+        "node_id": 60,
+        "node_type": "delivery",
+        "request_id": 30,
+        "x": 35,
+        "y": 80,
+        "load": -7,
+        "service_time": 10,
+        "tw_early": 216,
+        "tw_late": 276
+      },
+      {
+        "node_id": 61,
+        "node_type": "depot_destination",
+        "request_id": null,
+        "x": 50,
+        "y": 50,
+        "load": 0,
+        "service_time": 0,
+        "tw_early": 0,
+        "tw_late": 600
+      }
+    ],
+    "recommended_route_vehicle_id": 5,
+    "recommended_route": {
+      "vehicle_id": 5,
+      "route_sequence": [
+        0,
+        28,
+        58,
+        30,
+        60,
+        5,
+        4,
+        34,
+        35,
+        61
+      ],
+      "route_cost": 10293.7,
+      "requests": [
+        28,
+        30,
+        5,
+        4
+      ],
+      "return_time": 571.9,
+      "maximum_load": 8.0,
+      "maximum_stack_depth": 2,
+      "minimum_time_window_slack": 18.3,
+      "events": [
+        {
+          "node_id": 0,
+          "action": "depot",
+          "request_id": null,
+          "x": 50,
+          "y": 50,
+          "service_start": 0.0,
+          "saved_service_start": 0.0,
+          "time_window": [
+            0,
+            600
+          ],
+          "load_after": 0.0,
+          "single_stack_bottom_to_top": []
+        },
+        {
+          "node_id": 28,
+          "action": "pickup",
+          "request_id": 28,
+          "x": 8,
+          "y": 78,
+          "service_start": 72.0,
+          "saved_service_start": 72.0,
+          "time_window": [
+            72,
+            132
+          ],
+          "load_after": 4.0,
+          "single_stack_bottom_to_top": [
+            28
+          ]
+        },
+        {
+          "node_id": 58,
+          "action": "delivery",
+          "request_id": 28,
+          "x": 78,
+          "y": 59,
+          "service_start": 155.0,
+          "saved_service_start": 155.0,
+          "time_window": [
+            155,
+            177
+          ],
+          "load_after": 0.0,
+          "single_stack_bottom_to_top": []
+        },
+        {
+          "node_id": 30,
+          "action": "pickup",
+          "request_id": 30,
+          "x": 42,
+          "y": 69,
+          "service_start": 202.4,
+          "saved_service_start": 202.4,
+          "time_window": [
+            171,
+            231
+          ],
+          "load_after": 7.0,
+          "single_stack_bottom_to_top": [
+            30
+          ]
+        },
+        {
+          "node_id": 60,
+          "action": "delivery",
+          "request_id": 30,
+          "x": 35,
+          "y": 80,
+          "service_start": 225.4,
+          "saved_service_start": 225.4,
+          "time_window": [
+            216,
+            276
+          ],
+          "load_after": 0.0,
+          "single_stack_bottom_to_top": []
+        },
+        {
+          "node_id": 5,
+          "action": "pickup",
+          "request_id": 5,
+          "x": 30,
+          "y": 52,
+          "service_start": 440.0,
+          "saved_service_start": 440.0,
+          "time_window": [
+            440,
+            500
+          ],
+          "load_after": 1.0,
+          "single_stack_bottom_to_top": [
+            5
+          ]
+        },
+        {
+          "node_id": 4,
+          "action": "pickup",
+          "request_id": 4,
+          "x": 12,
+          "y": 73,
+          "service_start": 477.7,
+          "saved_service_start": 477.7,
+          "time_window": [
+            436,
+            496
+          ],
+          "load_after": 8.0,
+          "single_stack_bottom_to_top": [
+            5,
+            4
+          ]
+        },
+        {
+          "node_id": 34,
+          "action": "delivery",
+          "request_id": 4,
+          "x": 5,
+          "y": 73,
+          "service_start": 494.7,
+          "saved_service_start": 494.7,
+          "time_window": [
+            481,
+            539
+          ],
+          "load_after": 1.0,
+          "single_stack_bottom_to_top": [
+            5
+          ]
+        },
+        {
+          "node_id": 35,
+          "action": "delivery",
+          "request_id": 5,
+          "x": 4,
+          "y": 64,
+          "service_start": 513.8,
+          "saved_service_start": 513.8,
+          "time_window": [
+            485,
+            541
+          ],
+          "load_after": 0.0,
+          "single_stack_bottom_to_top": []
+        },
+        {
+          "node_id": 61,
+          "action": "depot",
+          "request_id": null,
+          "x": 50,
+          "y": 50,
+          "service_start": 571.9,
+          "saved_service_start": 571.9,
+          "time_window": [
+            0,
+            600
+          ],
+          "load_after": 0.0,
+          "single_stack_bottom_to_top": []
+        }
+      ]
+    },
+    "nesting_excerpt_nodes": [
+      5,
+      4,
+      34,
+      35
+    ],
+    "nesting_excerpt_explanation": "Pick up request 5, pick up request 4 on top, deliver request 4 at node 34, then deliver request 5 at node 35.",
+    "stack_assignment": "one stack per vehicle, inferred uniquely by route replay; no assignment field is stored in the witness",
+    "caption": "One saved ten-route candidate shown in pinned instance coordinates. The highlighted route picks up request 5 before request 4 and delivers request 4 first, so the last parcel loaded is the first unloaded. The separate reference code forces all 30 vehicles to operate."
+  },
+  "sources": [
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/cherkesly2015/instance/tiny_instance.json",
+      "sha256": "a2f90d7f68bdc84e641876537644336549dc866ce434eb6a9a7d48dd4741747d",
+      "cache_metadata_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+      "cache_metadata_etag": "a2f90d7f68bdc84e641876537644336549dc866ce434eb6a9a7d48dd4741747d",
+      "public_revision_url": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/cherkesly2015/instance/tiny_instance.json"
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/cherkesly2015/problem_description.txt",
+      "sha256": "962e5df0c147cb7b610eee02cc54ac7abae97828304c6e28b56bb9b90a9fee23",
+      "cache_metadata_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+      "cache_metadata_etag": "2719f932bc535b34bac17158d6552d67ffc9abce",
+      "public_revision_url": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/cherkesly2015/problem_description.txt"
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/cherkesly2015/mathematical_formulation.md",
+      "sha256": "f73b2061c75113681d8a55495bbd45c48a469c08a55b4c4ebce419ec31e358dc",
+      "cache_metadata_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+      "cache_metadata_etag": "d55d1f0400093d8719f53c0582c05bded4dc66c4",
+      "public_revision_url": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/cherkesly2015/mathematical_formulation.md"
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/cherkesly2015/instance_schema.json",
+      "sha256": "00b6f75498fcb006c1b896b1f753d6d85743c9f6fef3b5cd369534d3eca30331",
+      "cache_metadata_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+      "cache_metadata_etag": "f85f1925eee039a54d5c99a2c108ee7267eca814",
+      "public_revision_url": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/cherkesly2015/instance_schema.json"
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/cherkesly2015/solution_schema.json",
+      "sha256": "e68b24224d2e935dbaa4aa1e2441663ab0d1544308d3adf18b1930ba2ea1e5e4",
+      "cache_metadata_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+      "cache_metadata_etag": "fea86bcd6e1ae0a4da704645d364a78b9a8556af",
+      "public_revision_url": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/cherkesly2015/solution_schema.json"
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/cherkesly2015/feasibility_check.py",
+      "sha256": "a8dbdaa34677a290aab242616e5b9e5f5d4b98fcac9181bdfef601d159078567",
+      "cache_metadata_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+      "cache_metadata_etag": "090ec7097d1bb9bd02b7d70ea2397219e7d63bf0",
+      "public_revision_url": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/cherkesly2015/feasibility_check.py"
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/cherkesly2015/gurobi_code.py",
+      "sha256": "94051e8c26224f152721c1fd185eb5bc2146323b1c991bd2664631cb2a3171a1",
+      "cache_metadata_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+      "cache_metadata_etag": "903ca4b253e6afaacbd94c0812ed8bd8292168cb",
+      "public_revision_url": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/cherkesly2015/gurobi_code.py"
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/cherkesly2015/gurobi_solution/tiny_solution.json",
+      "sha256": "99c0a308375334c116bc1aa7ed0d042cb8ca22baf8dbac0ff9facf60776d88e1",
+      "cache_metadata_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+      "cache_metadata_etag": "99c0a308375334c116bc1aa7ed0d042cb8ca22baf8dbac0ff9facf60776d88e1",
+      "public_revision_url": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/cherkesly2015/gurobi_solution/tiny_solution.json"
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/cherkesly2015/gurobi_feasi_result/tiny_feasi_result.json",
+      "sha256": "3269392edcbb7720882e77caadb88b4a9cf2fda04cf482cebd23baace4a531fd",
+      "cache_metadata_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+      "cache_metadata_etag": "3269392edcbb7720882e77caadb88b4a9cf2fda04cf482cebd23baace4a531fd",
+      "public_revision_url": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/cherkesly2015/gurobi_feasi_result/tiny_feasi_result.json"
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/results/final300/raw_outputs/cherkesly2015/solution_tiny.json",
+      "sha256": "363a3a31865cbc337fa2cdec61b68e3736977c819a26205aa458b9a84cb33bd0",
+      "public_revision_url": null
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/results/final300/raw_outputs/cherkesly2015/feasi_result_tiny.json",
+      "sha256": "3269392edcbb7720882e77caadb88b4a9cf2fda04cf482cebd23baace4a531fd",
+      "public_revision_url": null
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/results/final300/code/cherkesly2015/gpt-5.6-sol/code.py",
+      "sha256": "bd4b573e5065b25be0bed3694fe8fc049553b2553890532e7a508aa6fc0d2683",
+      "public_revision_url": null
+    },
+    {
+      "path": "FROZEN_CAMPAIGN/results/final300/manifest.json",
+      "sha256": "5c5d2fa93b389852dc0585f2cb83d56230948bb957ba31934d169f8c021447f4",
+      "public_revision_url": null
+    }
+  ],
+  "validator_path": "ARTICLE_ROOT/authoring/reviews/cherkesly/independent_validate.py",
+  "validator_sha256": "6ffb0ba1a396f6b9d69226cee9c557371b4c32d551167b1c38e1660990f14a83"
+}

@@ -1,0 +1,2858 @@
+{
+  "instance_id": 1,
+  "problem_type": "MDVSP",
+  "paper_reference": "Ribeiro & Soumis (1994)",
+  "generation_seed": 10042,
+  "generation_attempt": 1,
+  "parameters": {
+    "n_trips": 30,
+    "m_depots": 2,
+    "class_type": "A",
+    "square_size": 60.0,
+    "n_relief_points": 12
+  },
+  "relief_points": [
+    [
+      38.4086,
+      55.4396
+    ],
+    [
+      21.63,
+      24.4445
+    ],
+    [
+      18.0074,
+      30.2024
+    ],
+    [
+      6.3277,
+      10.5347
+    ],
+    [
+      10.2102,
+      59.1602
+    ],
+    [
+      28.1593,
+      54.9684
+    ],
+    [
+      37.2692,
+      28.3868
+    ],
+    [
+      4.2284,
+      20.3442
+    ],
+    [
+      16.767,
+      48.8616
+    ],
+    [
+      10.2677,
+      25.2099
+    ],
+    [
+      56.1583,
+      34.3442
+    ],
+    [
+      10.7425,
+      31.1864
+    ]
+  ],
+  "depots": [
+    [
+      39.5284,
+      44.493
+    ],
+    [
+      15.1711,
+      45.8416
+    ]
+  ],
+  "vehicle_capacities": [
+    10,
+    10
+  ],
+  "trips": [
+    {
+      "trip_id": 1,
+      "trip_type": "long",
+      "start_relief_point_index": 2,
+      "end_relief_point_index": 2,
+      "start_time": 396,
+      "end_time": 577,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 2,
+      "trip_type": "long",
+      "start_relief_point_index": 7,
+      "end_relief_point_index": 7,
+      "start_time": 568,
+      "end_time": 810,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 3,
+      "trip_type": "long",
+      "start_relief_point_index": 3,
+      "end_relief_point_index": 3,
+      "start_time": 549,
+      "end_time": 795,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 4,
+      "trip_type": "short",
+      "start_relief_point_index": 0,
+      "end_relief_point_index": 7,
+      "start_time": 546,
+      "end_time": 632,
+      "travel_time_within_trip": 48.9895
+    },
+    {
+      "trip_id": 5,
+      "trip_type": "short",
+      "start_relief_point_index": 5,
+      "end_relief_point_index": 7,
+      "start_time": 1034,
+      "end_time": 1114,
+      "travel_time_within_trip": 42.0895
+    },
+    {
+      "trip_id": 6,
+      "trip_type": "short",
+      "start_relief_point_index": 6,
+      "end_relief_point_index": 9,
+      "start_time": 1044,
+      "end_time": 1087,
+      "travel_time_within_trip": 27.1877
+    },
+    {
+      "trip_id": 7,
+      "trip_type": "short",
+      "start_relief_point_index": 10,
+      "end_relief_point_index": 10,
+      "start_time": 743,
+      "end_time": 755,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 8,
+      "trip_type": "long",
+      "start_relief_point_index": 2,
+      "end_relief_point_index": 2,
+      "start_time": 435,
+      "end_time": 675,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 9,
+      "trip_type": "short",
+      "start_relief_point_index": 1,
+      "end_relief_point_index": 2,
+      "start_time": 1058,
+      "end_time": 1074,
+      "travel_time_within_trip": 6.8027
+    },
+    {
+      "trip_id": 10,
+      "trip_type": "short",
+      "start_relief_point_index": 5,
+      "end_relief_point_index": 11,
+      "start_time": 781,
+      "end_time": 822,
+      "travel_time_within_trip": 29.4776
+    },
+    {
+      "trip_id": 11,
+      "trip_type": "short",
+      "start_relief_point_index": 11,
+      "end_relief_point_index": 10,
+      "start_time": 1025,
+      "end_time": 1080,
+      "travel_time_within_trip": 45.5254
+    },
+    {
+      "trip_id": 12,
+      "trip_type": "long",
+      "start_relief_point_index": 9,
+      "end_relief_point_index": 9,
+      "start_time": 920,
+      "end_time": 1138,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 13,
+      "trip_type": "long",
+      "start_relief_point_index": 5,
+      "end_relief_point_index": 5,
+      "start_time": 828,
+      "end_time": 1009,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 14,
+      "trip_type": "short",
+      "start_relief_point_index": 2,
+      "end_relief_point_index": 11,
+      "start_time": 477,
+      "end_time": 492,
+      "travel_time_within_trip": 7.3312
+    },
+    {
+      "trip_id": 15,
+      "trip_type": "short",
+      "start_relief_point_index": 6,
+      "end_relief_point_index": 10,
+      "start_time": 451,
+      "end_time": 499,
+      "travel_time_within_trip": 19.8063
+    },
+    {
+      "trip_id": 16,
+      "trip_type": "long",
+      "start_relief_point_index": 7,
+      "end_relief_point_index": 7,
+      "start_time": 368,
+      "end_time": 556,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 17,
+      "trip_type": "short",
+      "start_relief_point_index": 1,
+      "end_relief_point_index": 11,
+      "start_time": 1059,
+      "end_time": 1100,
+      "travel_time_within_trip": 12.8059
+    },
+    {
+      "trip_id": 18,
+      "trip_type": "long",
+      "start_relief_point_index": 2,
+      "end_relief_point_index": 2,
+      "start_time": 1094,
+      "end_time": 1302,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 19,
+      "trip_type": "long",
+      "start_relief_point_index": 7,
+      "end_relief_point_index": 7,
+      "start_time": 1045,
+      "end_time": 1236,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 20,
+      "trip_type": "short",
+      "start_relief_point_index": 1,
+      "end_relief_point_index": 4,
+      "start_time": 663,
+      "end_time": 733,
+      "travel_time_within_trip": 36.5457
+    },
+    {
+      "trip_id": 21,
+      "trip_type": "short",
+      "start_relief_point_index": 7,
+      "end_relief_point_index": 9,
+      "start_time": 714,
+      "end_time": 746,
+      "travel_time_within_trip": 7.7555
+    },
+    {
+      "trip_id": 22,
+      "trip_type": "long",
+      "start_relief_point_index": 0,
+      "end_relief_point_index": 0,
+      "start_time": 1180,
+      "end_time": 1418,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 23,
+      "trip_type": "short",
+      "start_relief_point_index": 11,
+      "end_relief_point_index": 4,
+      "start_time": 466,
+      "end_time": 504,
+      "travel_time_within_trip": 27.9789
+    },
+    {
+      "trip_id": 24,
+      "trip_type": "long",
+      "start_relief_point_index": 8,
+      "end_relief_point_index": 8,
+      "start_time": 796,
+      "end_time": 1002,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 25,
+      "trip_type": "short",
+      "start_relief_point_index": 1,
+      "end_relief_point_index": 1,
+      "start_time": 470,
+      "end_time": 502,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 26,
+      "trip_type": "long",
+      "start_relief_point_index": 5,
+      "end_relief_point_index": 5,
+      "start_time": 789,
+      "end_time": 1087,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 27,
+      "trip_type": "short",
+      "start_relief_point_index": 1,
+      "end_relief_point_index": 3,
+      "start_time": 952,
+      "end_time": 979,
+      "travel_time_within_trip": 20.6795
+    },
+    {
+      "trip_id": 28,
+      "trip_type": "long",
+      "start_relief_point_index": 2,
+      "end_relief_point_index": 2,
+      "start_time": 793,
+      "end_time": 1088,
+      "travel_time_within_trip": 0.0
+    },
+    {
+      "trip_id": 29,
+      "trip_type": "short",
+      "start_relief_point_index": 10,
+      "end_relief_point_index": 3,
+      "start_time": 446,
+      "end_time": 530,
+      "travel_time_within_trip": 55.2266
+    },
+    {
+      "trip_id": 30,
+      "trip_type": "short",
+      "start_relief_point_index": 4,
+      "end_relief_point_index": 2,
+      "start_time": 1065,
+      "end_time": 1130,
+      "travel_time_within_trip": 29.9892
+    }
+  ],
+  "compatible_arcs": [
+    {
+      "from_trip": 1,
+      "to_trip": 5,
+      "travel_time": 26.7659,
+      "cost": 1128
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 6,
+      "travel_time": 19.3472,
+      "cost": 1088
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 7,
+      "travel_time": 38.3751,
+      "cost": 639
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 9,
+      "travel_time": 6.8027,
+      "cost": 1016
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 10,
+      "travel_time": 26.7659,
+      "cost": 622
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 11,
+      "travel_time": 7.3312,
+      "cost": 954
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 12,
+      "travel_time": 9.2102,
+      "cost": 759
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 13,
+      "travel_time": 26.7659,
+      "cost": 716
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 17,
+      "travel_time": 6.8027,
+      "cost": 1018
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 18,
+      "travel_time": 0.0,
+      "cost": 1034
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 19,
+      "travel_time": 16.9424,
+      "cost": 1071
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 20,
+      "travel_time": 6.8027,
+      "cost": 226
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 21,
+      "travel_time": 16.9424,
+      "cost": 409
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 22,
+      "travel_time": 32.4519,
+      "cost": 1465
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 24,
+      "travel_time": 18.7004,
+      "cost": 587
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 26,
+      "travel_time": 26.7659,
+      "cost": 638
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 27,
+      "travel_time": 6.8027,
+      "cost": 804
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 28,
+      "travel_time": 0.0,
+      "cost": 432
+    },
+    {
+      "from_trip": 1,
+      "to_trip": 30,
+      "travel_time": 29.9892,
+      "cost": 1215
+    },
+    {
+      "from_trip": 2,
+      "to_trip": 5,
+      "travel_time": 42.0895,
+      "cost": 784
+    },
+    {
+      "from_trip": 2,
+      "to_trip": 6,
+      "travel_time": 34.0056,
+      "cost": 740
+    },
+    {
+      "from_trip": 2,
+      "to_trip": 9,
+      "travel_time": 17.8781,
+      "cost": 639
+    },
+    {
+      "from_trip": 2,
+      "to_trip": 11,
+      "travel_time": 12.6486,
+      "cost": 531
+    },
+    {
+      "from_trip": 2,
+      "to_trip": 12,
+      "travel_time": 7.7555,
+      "cost": 282
+    },
+    {
+      "from_trip": 2,
+      "to_trip": 17,
+      "travel_time": 17.8781,
+      "cost": 641
+    },
+    {
+      "from_trip": 2,
+      "to_trip": 18,
+      "travel_time": 16.9424,
+      "cost": 703
+    },
+    {
+      "from_trip": 2,
+      "to_trip": 19,
+      "travel_time": 0.0,
+      "cost": 470
+    },
+    {
+      "from_trip": 2,
+      "to_trip": 22,
+      "travel_time": 48.9895,
+      "cost": 1131
+    },
+    {
+      "from_trip": 2,
+      "to_trip": 27,
+      "travel_time": 17.8781,
+      "cost": 427
+    },
+    {
+      "from_trip": 2,
+      "to_trip": 30,
+      "travel_time": 39.2742,
+      "cost": 824
+    },
+    {
+      "from_trip": 3,
+      "to_trip": 5,
+      "travel_time": 49.5073,
+      "cost": 874
+    },
+    {
+      "from_trip": 3,
+      "to_trip": 6,
+      "travel_time": 35.7222,
+      "cost": 783
+    },
+    {
+      "from_trip": 3,
+      "to_trip": 9,
+      "travel_time": 20.6795,
+      "cost": 691
+    },
+    {
+      "from_trip": 3,
+      "to_trip": 11,
+      "travel_time": 21.1183,
+      "cost": 628
+    },
+    {
+      "from_trip": 3,
+      "to_trip": 12,
+      "travel_time": 15.1949,
+      "cost": 371
+    },
+    {
+      "from_trip": 3,
+      "to_trip": 17,
+      "travel_time": 20.6795,
+      "cost": 693
+    },
+    {
+      "from_trip": 3,
+      "to_trip": 18,
+      "travel_time": 22.8743,
+      "cost": 780
+    },
+    {
+      "from_trip": 3,
+      "to_trip": 19,
+      "travel_time": 10.0316,
+      "cost": 580
+    },
+    {
+      "from_trip": 3,
+      "to_trip": 22,
+      "travel_time": 55.1873,
+      "cost": 1211
+    },
+    {
+      "from_trip": 3,
+      "to_trip": 27,
+      "travel_time": 20.6795,
+      "cost": 479
+    },
+    {
+      "from_trip": 3,
+      "to_trip": 30,
+      "travel_time": 48.7803,
+      "cost": 930
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 5,
+      "travel_time": 42.0895,
+      "cost": 1140
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 6,
+      "travel_time": 34.0056,
+      "cost": 1096
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 7,
+      "travel_time": 53.784,
+      "cost": 652
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 9,
+      "travel_time": 17.8781,
+      "cost": 995
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 10,
+      "travel_time": 42.0895,
+      "cost": 634
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 11,
+      "travel_time": 12.6486,
+      "cost": 887
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 12,
+      "travel_time": 7.7555,
+      "cost": 638
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 13,
+      "travel_time": 42.0895,
+      "cost": 728
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 17,
+      "travel_time": 17.8781,
+      "cost": 997
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 18,
+      "travel_time": 16.9424,
+      "cost": 1059
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 19,
+      "travel_time": 0.0,
+      "cost": 826
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 20,
+      "travel_time": 17.8781,
+      "cost": 205
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 21,
+      "travel_time": 0.0,
+      "cost": 164
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 22,
+      "travel_time": 48.9895,
+      "cost": 1487
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 24,
+      "travel_time": 31.1522,
+      "cost": 577
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 26,
+      "travel_time": 42.0895,
+      "cost": 650
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 27,
+      "travel_time": 17.8781,
+      "cost": 783
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 28,
+      "travel_time": 16.9424,
+      "cost": 457
+    },
+    {
+      "from_trip": 4,
+      "to_trip": 30,
+      "travel_time": 39.2742,
+      "cost": 1180
+    },
+    {
+      "from_trip": 5,
+      "to_trip": 22,
+      "travel_time": 48.9895,
+      "cost": 523
+    },
+    {
+      "from_trip": 6,
+      "to_trip": 22,
+      "travel_time": 41.3007,
+      "cost": 516
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 5,
+      "travel_time": 34.775,
+      "cost": 836
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 6,
+      "travel_time": 19.8063,
+      "cost": 736
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 9,
+      "travel_time": 35.9195,
+      "cost": 893
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 11,
+      "travel_time": 45.5254,
+      "cost": 904
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 12,
+      "travel_time": 46.7908,
+      "cost": 704
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 13,
+      "travel_time": 34.775,
+      "cost": 424
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 17,
+      "travel_time": 35.9195,
+      "cost": 895
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 18,
+      "travel_time": 38.3751,
+      "cost": 985
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 19,
+      "travel_time": 53.784,
+      "cost": 1010
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 22,
+      "travel_time": 27.5693,
+      "cost": 1070
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 27,
+      "travel_time": 35.9195,
+      "cost": 681
+    },
+    {
+      "from_trip": 7,
+      "to_trip": 30,
+      "travel_time": 52.2213,
+      "cost": 1037
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 5,
+      "travel_time": 26.7659,
+      "cost": 932
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 6,
+      "travel_time": 19.3472,
+      "cost": 892
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 7,
+      "travel_time": 38.3751,
+      "cost": 443
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 9,
+      "travel_time": 6.8027,
+      "cost": 820
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 10,
+      "travel_time": 26.7659,
+      "cost": 426
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 11,
+      "travel_time": 7.3312,
+      "cost": 758
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 12,
+      "travel_time": 9.2102,
+      "cost": 563
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 13,
+      "travel_time": 26.7659,
+      "cost": 520
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 17,
+      "travel_time": 6.8027,
+      "cost": 822
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 18,
+      "travel_time": 0.0,
+      "cost": 838
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 19,
+      "travel_time": 16.9424,
+      "cost": 875
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 21,
+      "travel_time": 16.9424,
+      "cost": 213
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 22,
+      "travel_time": 32.4519,
+      "cost": 1269
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 24,
+      "travel_time": 18.7004,
+      "cost": 391
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 26,
+      "travel_time": 26.7659,
+      "cost": 442
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 27,
+      "travel_time": 6.8027,
+      "cost": 608
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 28,
+      "travel_time": 0.0,
+      "cost": 236
+    },
+    {
+      "from_trip": 8,
+      "to_trip": 30,
+      "travel_time": 29.9892,
+      "cost": 1019
+    },
+    {
+      "from_trip": 9,
+      "to_trip": 18,
+      "travel_time": 0.0,
+      "cost": 40
+    },
+    {
+      "from_trip": 9,
+      "to_trip": 22,
+      "travel_time": 32.4519,
+      "cost": 471
+    },
+    {
+      "from_trip": 10,
+      "to_trip": 5,
+      "travel_time": 29.4776,
+      "cost": 659
+    },
+    {
+      "from_trip": 10,
+      "to_trip": 6,
+      "travel_time": 26.674,
+      "cost": 657
+    },
+    {
+      "from_trip": 10,
+      "to_trip": 9,
+      "travel_time": 12.8059,
+      "cost": 574
+    },
+    {
+      "from_trip": 10,
+      "to_trip": 11,
+      "travel_time": 0.0,
+      "cost": 406
+    },
+    {
+      "from_trip": 10,
+      "to_trip": 12,
+      "travel_time": 5.9953,
+      "cost": 243
+    },
+    {
+      "from_trip": 10,
+      "to_trip": 17,
+      "travel_time": 12.8059,
+      "cost": 576
+    },
+    {
+      "from_trip": 10,
+      "to_trip": 18,
+      "travel_time": 7.3312,
+      "cost": 602
+    },
+    {
+      "from_trip": 10,
+      "to_trip": 19,
+      "travel_time": 12.6486,
+      "cost": 547
+    },
+    {
+      "from_trip": 10,
+      "to_trip": 22,
+      "travel_time": 36.7917,
+      "cost": 1010
+    },
+    {
+      "from_trip": 10,
+      "to_trip": 27,
+      "travel_time": 12.8059,
+      "cost": 362
+    },
+    {
+      "from_trip": 10,
+      "to_trip": 30,
+      "travel_time": 27.9789,
+      "cost": 709
+    },
+    {
+      "from_trip": 11,
+      "to_trip": 22,
+      "travel_time": 27.5693,
+      "cost": 420
+    },
+    {
+      "from_trip": 12,
+      "to_trip": 22,
+      "travel_time": 41.3007,
+      "cost": 414
+    },
+    {
+      "from_trip": 13,
+      "to_trip": 5,
+      "travel_time": 0.0,
+      "cost": 50
+    },
+    {
+      "from_trip": 13,
+      "to_trip": 6,
+      "travel_time": 28.0993,
+      "cost": 294
+    },
+    {
+      "from_trip": 13,
+      "to_trip": 9,
+      "travel_time": 31.2144,
+      "cost": 347
+    },
+    {
+      "from_trip": 13,
+      "to_trip": 17,
+      "travel_time": 31.2144,
+      "cost": 349
+    },
+    {
+      "from_trip": 13,
+      "to_trip": 18,
+      "travel_time": 26.7659,
+      "cost": 384
+    },
+    {
+      "from_trip": 13,
+      "to_trip": 22,
+      "travel_time": 10.2601,
+      "cost": 424
+    },
+    {
+      "from_trip": 13,
+      "to_trip": 30,
+      "travel_time": 18.4321,
+      "cost": 259
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 2,
+      "travel_time": 12.6486,
+      "cost": 253
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 3,
+      "travel_time": 21.1183,
+      "cost": 282
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 4,
+      "travel_time": 36.7917,
+      "cost": 402
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 5,
+      "travel_time": 29.4776,
+      "cost": 1319
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 6,
+      "travel_time": 26.674,
+      "cost": 1317
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 7,
+      "travel_time": 45.5254,
+      "cost": 866
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 9,
+      "travel_time": 12.8059,
+      "cost": 1234
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 10,
+      "travel_time": 29.4776,
+      "cost": 813
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 11,
+      "travel_time": 0.0,
+      "cost": 1066
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 12,
+      "travel_time": 5.9953,
+      "cost": 903
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 13,
+      "travel_time": 29.4776,
+      "cost": 907
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 17,
+      "travel_time": 12.8059,
+      "cost": 1236
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 18,
+      "travel_time": 7.3312,
+      "cost": 1262
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 19,
+      "travel_time": 12.6486,
+      "cost": 1207
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 20,
+      "travel_time": 12.8059,
+      "cost": 444
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 21,
+      "travel_time": 12.6486,
+      "cost": 545
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 22,
+      "travel_time": 36.7917,
+      "cost": 1670
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 24,
+      "travel_time": 18.6737,
+      "cost": 757
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 26,
+      "travel_time": 29.4776,
+      "cost": 829
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 27,
+      "travel_time": 12.8059,
+      "cost": 1022
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 28,
+      "travel_time": 7.3312,
+      "cost": 660
+    },
+    {
+      "from_trip": 14,
+      "to_trip": 30,
+      "travel_time": 27.9789,
+      "cost": 1369
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 2,
+      "travel_time": 53.784,
+      "cost": 568
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 4,
+      "travel_time": 27.5693,
+      "cost": 314
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 5,
+      "travel_time": 34.775,
+      "cost": 1348
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 6,
+      "travel_time": 19.8063,
+      "cost": 1248
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 7,
+      "travel_time": 0.0,
+      "cost": 488
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 9,
+      "travel_time": 35.9195,
+      "cost": 1405
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 10,
+      "travel_time": 34.775,
+      "cost": 842
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 11,
+      "travel_time": 45.5254,
+      "cost": 1416
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 12,
+      "travel_time": 46.7908,
+      "cost": 1216
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 13,
+      "travel_time": 34.775,
+      "cost": 936
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 17,
+      "travel_time": 35.9195,
+      "cost": 1407
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 18,
+      "travel_time": 38.3751,
+      "cost": 1497
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 19,
+      "travel_time": 53.784,
+      "cost": 1522
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 20,
+      "travel_time": 35.9195,
+      "cost": 615
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 21,
+      "travel_time": 53.784,
+      "cost": 860
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 22,
+      "travel_time": 27.5693,
+      "cost": 1582
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 24,
+      "travel_time": 41.9813,
+      "cost": 929
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 26,
+      "travel_time": 34.775,
+      "cost": 858
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 27,
+      "travel_time": 35.9195,
+      "cost": 1193
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 28,
+      "travel_time": 38.3751,
+      "cost": 895
+    },
+    {
+      "from_trip": 15,
+      "to_trip": 30,
+      "travel_time": 52.2213,
+      "cost": 1549
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 2,
+      "travel_time": 0.0,
+      "cost": 24
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 5,
+      "travel_time": 42.0895,
+      "cost": 1292
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 6,
+      "travel_time": 34.0056,
+      "cost": 1248
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 7,
+      "travel_time": 53.784,
+      "cost": 804
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 9,
+      "travel_time": 17.8781,
+      "cost": 1147
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 10,
+      "travel_time": 42.0895,
+      "cost": 786
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 11,
+      "travel_time": 12.6486,
+      "cost": 1039
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 12,
+      "travel_time": 7.7555,
+      "cost": 790
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 13,
+      "travel_time": 42.0895,
+      "cost": 880
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 17,
+      "travel_time": 17.8781,
+      "cost": 1149
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 18,
+      "travel_time": 16.9424,
+      "cost": 1211
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 19,
+      "travel_time": 0.0,
+      "cost": 978
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 20,
+      "travel_time": 17.8781,
+      "cost": 357
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 21,
+      "travel_time": 0.0,
+      "cost": 316
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 22,
+      "travel_time": 48.9895,
+      "cost": 1639
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 24,
+      "travel_time": 31.1522,
+      "cost": 729
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 26,
+      "travel_time": 42.0895,
+      "cost": 802
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 27,
+      "travel_time": 17.8781,
+      "cost": 935
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 28,
+      "travel_time": 16.9424,
+      "cost": 609
+    },
+    {
+      "from_trip": 16,
+      "to_trip": 30,
+      "travel_time": 39.2742,
+      "cost": 1332
+    },
+    {
+      "from_trip": 17,
+      "to_trip": 22,
+      "travel_time": 36.7917,
+      "cost": 454
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 5,
+      "travel_time": 18.4321,
+      "cost": 749
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 6,
+      "travel_time": 40.9779,
+      "cost": 949
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 9,
+      "travel_time": 36.5457,
+      "cost": 942
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 10,
+      "travel_time": 18.4321,
+      "cost": 243
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 11,
+      "travel_time": 27.9789,
+      "cost": 807
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 12,
+      "travel_time": 33.9503,
+      "cost": 645
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 13,
+      "travel_time": 18.4321,
+      "cost": 337
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 17,
+      "travel_time": 36.5457,
+      "cost": 944
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 18,
+      "travel_time": 29.9892,
+      "cost": 961
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 19,
+      "travel_time": 39.2742,
+      "cost": 938
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 22,
+      "travel_time": 28.4428,
+      "cost": 1121
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 24,
+      "travel_time": 12.2087,
+      "cost": 223
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 26,
+      "travel_time": 18.4321,
+      "cost": 259
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 27,
+      "travel_time": 36.5457,
+      "cost": 730
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 28,
+      "travel_time": 29.9892,
+      "cost": 359
+    },
+    {
+      "from_trip": 20,
+      "to_trip": 30,
+      "travel_time": 0.0,
+      "cost": 664
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 5,
+      "travel_time": 34.7229,
+      "cost": 853
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 6,
+      "travel_time": 27.1877,
+      "cost": 813
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 9,
+      "travel_time": 11.3881,
+      "cost": 715
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 10,
+      "travel_time": 34.7229,
+      "cost": 347
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 11,
+      "travel_time": 5.9953,
+      "cost": 605
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 12,
+      "travel_time": 0.0,
+      "cost": 348
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 13,
+      "travel_time": 34.7229,
+      "cost": 441
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 17,
+      "travel_time": 11.3881,
+      "cost": 717
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 18,
+      "travel_time": 9.2102,
+      "cost": 769
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 19,
+      "travel_time": 7.7555,
+      "cost": 660
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 22,
+      "travel_time": 41.3007,
+      "cost": 1198
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 24,
+      "travel_time": 24.5284,
+      "cost": 296
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 26,
+      "travel_time": 34.7229,
+      "cost": 363
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 27,
+      "travel_time": 11.3881,
+      "cost": 503
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 28,
+      "travel_time": 9.2102,
+      "cost": 167
+    },
+    {
+      "from_trip": 21,
+      "to_trip": 30,
+      "travel_time": 33.9503,
+      "cost": 909
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 2,
+      "travel_time": 39.2742,
+      "cost": 442
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 4,
+      "travel_time": 28.4428,
+      "cost": 311
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 5,
+      "travel_time": 18.4321,
+      "cost": 1207
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 6,
+      "travel_time": 40.9779,
+      "cost": 1407
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 7,
+      "travel_time": 52.2213,
+      "cost": 895
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 9,
+      "travel_time": 36.5457,
+      "cost": 1400
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 10,
+      "travel_time": 18.4321,
+      "cost": 701
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 11,
+      "travel_time": 27.9789,
+      "cost": 1265
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 12,
+      "travel_time": 33.9503,
+      "cost": 1103
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 13,
+      "travel_time": 18.4321,
+      "cost": 795
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 17,
+      "travel_time": 36.5457,
+      "cost": 1402
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 18,
+      "travel_time": 29.9892,
+      "cost": 1419
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 19,
+      "travel_time": 39.2742,
+      "cost": 1396
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 20,
+      "travel_time": 36.5457,
+      "cost": 610
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 21,
+      "travel_time": 39.2742,
+      "cost": 734
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 22,
+      "travel_time": 28.4428,
+      "cost": 1579
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 24,
+      "travel_time": 12.2087,
+      "cost": 681
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 26,
+      "travel_time": 18.4321,
+      "cost": 717
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 27,
+      "travel_time": 36.5457,
+      "cost": 1188
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 28,
+      "travel_time": 29.9892,
+      "cost": 817
+    },
+    {
+      "from_trip": 23,
+      "to_trip": 30,
+      "travel_time": 0.0,
+      "cost": 1122
+    },
+    {
+      "from_trip": 24,
+      "to_trip": 5,
+      "travel_time": 12.9258,
+      "cost": 167
+    },
+    {
+      "from_trip": 24,
+      "to_trip": 6,
+      "travel_time": 28.9751,
+      "cost": 315
+    },
+    {
+      "from_trip": 24,
+      "to_trip": 9,
+      "travel_time": 24.8967,
+      "cost": 311
+    },
+    {
+      "from_trip": 24,
+      "to_trip": 11,
+      "travel_time": 18.6737,
+      "cost": 195
+    },
+    {
+      "from_trip": 24,
+      "to_trip": 17,
+      "travel_time": 24.8967,
+      "cost": 313
+    },
+    {
+      "from_trip": 24,
+      "to_trip": 18,
+      "travel_time": 18.7004,
+      "cost": 333
+    },
+    {
+      "from_trip": 24,
+      "to_trip": 19,
+      "travel_time": 31.1522,
+      "cost": 335
+    },
+    {
+      "from_trip": 24,
+      "to_trip": 22,
+      "travel_time": 22.6192,
+      "cost": 536
+    },
+    {
+      "from_trip": 24,
+      "to_trip": 30,
+      "travel_time": 12.2087,
+      "cost": 223
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 2,
+      "travel_time": 17.8781,
+      "cost": 275
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 3,
+      "travel_time": 20.6795,
+      "cost": 259
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 4,
+      "travel_time": 35.2451,
+      "cost": 369
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 5,
+      "travel_time": 31.2144,
+      "cost": 1313
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 6,
+      "travel_time": 16.1284,
+      "cost": 1213
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 7,
+      "travel_time": 35.9195,
+      "cost": 769
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 9,
+      "travel_time": 0.0,
+      "cost": 1112
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 10,
+      "travel_time": 31.2144,
+      "cost": 807
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 11,
+      "travel_time": 12.8059,
+      "cost": 1148
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 12,
+      "travel_time": 11.3881,
+      "cost": 927
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 13,
+      "travel_time": 31.2144,
+      "cost": 901
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 17,
+      "travel_time": 0.0,
+      "cost": 1114
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 18,
+      "travel_time": 6.8027,
+      "cost": 1238
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 19,
+      "travel_time": 17.8781,
+      "cost": 1229
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 20,
+      "travel_time": 0.0,
+      "cost": 322
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 21,
+      "travel_time": 17.8781,
+      "cost": 567
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 22,
+      "travel_time": 35.2451,
+      "cost": 1637
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 24,
+      "travel_time": 24.8967,
+      "cost": 787
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 26,
+      "travel_time": 31.2144,
+      "cost": 823
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 27,
+      "travel_time": 0.0,
+      "cost": 900
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 28,
+      "travel_time": 6.8027,
+      "cost": 636
+    },
+    {
+      "from_trip": 25,
+      "to_trip": 30,
+      "travel_time": 36.5457,
+      "cost": 1418
+    },
+    {
+      "from_trip": 26,
+      "to_trip": 22,
+      "travel_time": 10.2601,
+      "cost": 268
+    },
+    {
+      "from_trip": 27,
+      "to_trip": 5,
+      "travel_time": 49.5073,
+      "cost": 506
+    },
+    {
+      "from_trip": 27,
+      "to_trip": 6,
+      "travel_time": 35.7222,
+      "cost": 415
+    },
+    {
+      "from_trip": 27,
+      "to_trip": 9,
+      "travel_time": 20.6795,
+      "cost": 323
+    },
+    {
+      "from_trip": 27,
+      "to_trip": 11,
+      "travel_time": 21.1183,
+      "cost": 260
+    },
+    {
+      "from_trip": 27,
+      "to_trip": 17,
+      "travel_time": 20.6795,
+      "cost": 325
+    },
+    {
+      "from_trip": 27,
+      "to_trip": 18,
+      "travel_time": 22.8743,
+      "cost": 412
+    },
+    {
+      "from_trip": 27,
+      "to_trip": 19,
+      "travel_time": 10.0316,
+      "cost": 212
+    },
+    {
+      "from_trip": 27,
+      "to_trip": 22,
+      "travel_time": 55.1873,
+      "cost": 843
+    },
+    {
+      "from_trip": 27,
+      "to_trip": 30,
+      "travel_time": 48.7803,
+      "cost": 562
+    },
+    {
+      "from_trip": 28,
+      "to_trip": 18,
+      "travel_time": 0.0,
+      "cost": 12
+    },
+    {
+      "from_trip": 28,
+      "to_trip": 22,
+      "travel_time": 32.4519,
+      "cost": 443
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 2,
+      "travel_time": 10.0316,
+      "cost": 156
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 3,
+      "travel_time": 0.0,
+      "cost": 38
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 5,
+      "travel_time": 49.5073,
+      "cost": 1404
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 6,
+      "travel_time": 35.7222,
+      "cost": 1313
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 7,
+      "travel_time": 55.2266,
+      "cost": 867
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 9,
+      "travel_time": 20.6795,
+      "cost": 1221
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 10,
+      "travel_time": 49.5073,
+      "cost": 898
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 11,
+      "travel_time": 21.1183,
+      "cost": 1158
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 12,
+      "travel_time": 15.1949,
+      "cost": 901
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 13,
+      "travel_time": 49.5073,
+      "cost": 992
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 17,
+      "travel_time": 20.6795,
+      "cost": 1223
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 18,
+      "travel_time": 22.8743,
+      "cost": 1310
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 19,
+      "travel_time": 10.0316,
+      "cost": 1110
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 20,
+      "travel_time": 20.6795,
+      "cost": 431
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 21,
+      "travel_time": 10.0316,
+      "cost": 448
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 22,
+      "travel_time": 55.1873,
+      "cost": 1741
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 24,
+      "travel_time": 39.7232,
+      "cost": 849
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 26,
+      "travel_time": 49.5073,
+      "cost": 914
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 27,
+      "travel_time": 20.6795,
+      "cost": 1009
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 28,
+      "travel_time": 22.8743,
+      "cost": 708
+    },
+    {
+      "from_trip": 29,
+      "to_trip": 30,
+      "travel_time": 48.7803,
+      "cost": 1460
+    },
+    {
+      "from_trip": 30,
+      "to_trip": 22,
+      "travel_time": 32.4519,
+      "cost": 359
+    }
+  ],
+  "depot_to_trip_costs": [
+    {
+      "depot": 1,
+      "trip": 1,
+      "distance": 25.8336,
+      "cost": 5258
+    },
+    {
+      "depot": 1,
+      "trip": 2,
+      "distance": 42.7698,
+      "cost": 5427
+    },
+    {
+      "depot": 1,
+      "trip": 3,
+      "distance": 47.4916,
+      "cost": 5474
+    },
+    {
+      "depot": 1,
+      "trip": 4,
+      "distance": 11.0037,
+      "cost": 5110
+    },
+    {
+      "depot": 1,
+      "trip": 5,
+      "distance": 15.4593,
+      "cost": 5154
+    },
+    {
+      "depot": 1,
+      "trip": 6,
+      "distance": 16.2639,
+      "cost": 5162
+    },
+    {
+      "depot": 1,
+      "trip": 7,
+      "distance": 19.4821,
+      "cost": 5194
+    },
+    {
+      "depot": 1,
+      "trip": 8,
+      "distance": 25.8336,
+      "cost": 5258
+    },
+    {
+      "depot": 1,
+      "trip": 9,
+      "distance": 26.8755,
+      "cost": 5268
+    },
+    {
+      "depot": 1,
+      "trip": 10,
+      "distance": 15.4593,
+      "cost": 5154
+    },
+    {
+      "depot": 1,
+      "trip": 11,
+      "distance": 31.7127,
+      "cost": 5317
+    },
+    {
+      "depot": 1,
+      "trip": 12,
+      "distance": 35.0432,
+      "cost": 5350
+    },
+    {
+      "depot": 1,
+      "trip": 13,
+      "distance": 15.4593,
+      "cost": 5154
+    },
+    {
+      "depot": 1,
+      "trip": 14,
+      "distance": 25.8336,
+      "cost": 5258
+    },
+    {
+      "depot": 1,
+      "trip": 15,
+      "distance": 16.2639,
+      "cost": 5162
+    },
+    {
+      "depot": 1,
+      "trip": 16,
+      "distance": 42.7698,
+      "cost": 5427
+    },
+    {
+      "depot": 1,
+      "trip": 17,
+      "distance": 26.8755,
+      "cost": 5268
+    },
+    {
+      "depot": 1,
+      "trip": 18,
+      "distance": 25.8336,
+      "cost": 5258
+    },
+    {
+      "depot": 1,
+      "trip": 19,
+      "distance": 42.7698,
+      "cost": 5427
+    },
+    {
+      "depot": 1,
+      "trip": 20,
+      "distance": 26.8755,
+      "cost": 5268
+    },
+    {
+      "depot": 1,
+      "trip": 21,
+      "distance": 42.7698,
+      "cost": 5427
+    },
+    {
+      "depot": 1,
+      "trip": 22,
+      "distance": 11.0037,
+      "cost": 5110
+    },
+    {
+      "depot": 1,
+      "trip": 23,
+      "distance": 31.7127,
+      "cost": 5317
+    },
+    {
+      "depot": 1,
+      "trip": 24,
+      "distance": 23.1768,
+      "cost": 5231
+    },
+    {
+      "depot": 1,
+      "trip": 25,
+      "distance": 26.8755,
+      "cost": 5268
+    },
+    {
+      "depot": 1,
+      "trip": 26,
+      "distance": 15.4593,
+      "cost": 5154
+    },
+    {
+      "depot": 1,
+      "trip": 27,
+      "distance": 26.8755,
+      "cost": 5268
+    },
+    {
+      "depot": 1,
+      "trip": 28,
+      "distance": 25.8336,
+      "cost": 5258
+    },
+    {
+      "depot": 1,
+      "trip": 29,
+      "distance": 19.4821,
+      "cost": 5194
+    },
+    {
+      "depot": 1,
+      "trip": 30,
+      "distance": 32.7824,
+      "cost": 5327
+    },
+    {
+      "depot": 2,
+      "trip": 1,
+      "distance": 15.8943,
+      "cost": 5158
+    },
+    {
+      "depot": 2,
+      "trip": 2,
+      "distance": 27.7464,
+      "cost": 5277
+    },
+    {
+      "depot": 2,
+      "trip": 3,
+      "distance": 36.3976,
+      "cost": 5363
+    },
+    {
+      "depot": 2,
+      "trip": 4,
+      "distance": 25.1417,
+      "cost": 5251
+    },
+    {
+      "depot": 2,
+      "trip": 5,
+      "distance": 15.8743,
+      "cost": 5158
+    },
+    {
+      "depot": 2,
+      "trip": 6,
+      "distance": 28.1602,
+      "cost": 5281
+    },
+    {
+      "depot": 2,
+      "trip": 7,
+      "distance": 42.5692,
+      "cost": 5425
+    },
+    {
+      "depot": 2,
+      "trip": 8,
+      "distance": 15.8943,
+      "cost": 5158
+    },
+    {
+      "depot": 2,
+      "trip": 9,
+      "distance": 22.3507,
+      "cost": 5223
+    },
+    {
+      "depot": 2,
+      "trip": 10,
+      "distance": 15.8743,
+      "cost": 5158
+    },
+    {
+      "depot": 2,
+      "trip": 11,
+      "distance": 15.3097,
+      "cost": 5153
+    },
+    {
+      "depot": 2,
+      "trip": 12,
+      "distance": 21.2064,
+      "cost": 5212
+    },
+    {
+      "depot": 2,
+      "trip": 13,
+      "distance": 15.8743,
+      "cost": 5158
+    },
+    {
+      "depot": 2,
+      "trip": 14,
+      "distance": 15.8943,
+      "cost": 5158
+    },
+    {
+      "depot": 2,
+      "trip": 15,
+      "distance": 28.1602,
+      "cost": 5281
+    },
+    {
+      "depot": 2,
+      "trip": 16,
+      "distance": 27.7464,
+      "cost": 5277
+    },
+    {
+      "depot": 2,
+      "trip": 17,
+      "distance": 22.3507,
+      "cost": 5223
+    },
+    {
+      "depot": 2,
+      "trip": 18,
+      "distance": 15.8943,
+      "cost": 5158
+    },
+    {
+      "depot": 2,
+      "trip": 19,
+      "distance": 27.7464,
+      "cost": 5277
+    },
+    {
+      "depot": 2,
+      "trip": 20,
+      "distance": 22.3507,
+      "cost": 5223
+    },
+    {
+      "depot": 2,
+      "trip": 21,
+      "distance": 27.7464,
+      "cost": 5277
+    },
+    {
+      "depot": 2,
+      "trip": 22,
+      "distance": 25.1417,
+      "cost": 5251
+    },
+    {
+      "depot": 2,
+      "trip": 23,
+      "distance": 15.3097,
+      "cost": 5153
+    },
+    {
+      "depot": 2,
+      "trip": 24,
+      "distance": 3.4157,
+      "cost": 5034
+    },
+    {
+      "depot": 2,
+      "trip": 25,
+      "distance": 22.3507,
+      "cost": 5223
+    },
+    {
+      "depot": 2,
+      "trip": 26,
+      "distance": 15.8743,
+      "cost": 5158
+    },
+    {
+      "depot": 2,
+      "trip": 27,
+      "distance": 22.3507,
+      "cost": 5223
+    },
+    {
+      "depot": 2,
+      "trip": 28,
+      "distance": 15.8943,
+      "cost": 5158
+    },
+    {
+      "depot": 2,
+      "trip": 29,
+      "distance": 42.5692,
+      "cost": 5425
+    },
+    {
+      "depot": 2,
+      "trip": 30,
+      "distance": 14.2125,
+      "cost": 5142
+    }
+  ],
+  "trip_to_depot_costs": [
+    {
+      "trip": 1,
+      "depot": 1,
+      "distance": 25.8336,
+      "cost": 5258
+    },
+    {
+      "trip": 1,
+      "depot": 2,
+      "distance": 15.8943,
+      "cost": 5158
+    },
+    {
+      "trip": 2,
+      "depot": 1,
+      "distance": 42.7698,
+      "cost": 5427
+    },
+    {
+      "trip": 2,
+      "depot": 2,
+      "distance": 27.7464,
+      "cost": 5277
+    },
+    {
+      "trip": 3,
+      "depot": 1,
+      "distance": 47.4916,
+      "cost": 5474
+    },
+    {
+      "trip": 3,
+      "depot": 2,
+      "distance": 36.3976,
+      "cost": 5363
+    },
+    {
+      "trip": 4,
+      "depot": 1,
+      "distance": 42.7698,
+      "cost": 5427
+    },
+    {
+      "trip": 4,
+      "depot": 2,
+      "distance": 27.7464,
+      "cost": 5277
+    },
+    {
+      "trip": 5,
+      "depot": 1,
+      "distance": 42.7698,
+      "cost": 5427
+    },
+    {
+      "trip": 5,
+      "depot": 2,
+      "distance": 27.7464,
+      "cost": 5277
+    },
+    {
+      "trip": 6,
+      "depot": 1,
+      "distance": 35.0432,
+      "cost": 5350
+    },
+    {
+      "trip": 6,
+      "depot": 2,
+      "distance": 21.2064,
+      "cost": 5212
+    },
+    {
+      "trip": 7,
+      "depot": 1,
+      "distance": 19.4821,
+      "cost": 5194
+    },
+    {
+      "trip": 7,
+      "depot": 2,
+      "distance": 42.5692,
+      "cost": 5425
+    },
+    {
+      "trip": 8,
+      "depot": 1,
+      "distance": 25.8336,
+      "cost": 5258
+    },
+    {
+      "trip": 8,
+      "depot": 2,
+      "distance": 15.8943,
+      "cost": 5158
+    },
+    {
+      "trip": 9,
+      "depot": 1,
+      "distance": 25.8336,
+      "cost": 5258
+    },
+    {
+      "trip": 9,
+      "depot": 2,
+      "distance": 15.8943,
+      "cost": 5158
+    },
+    {
+      "trip": 10,
+      "depot": 1,
+      "distance": 31.7127,
+      "cost": 5317
+    },
+    {
+      "trip": 10,
+      "depot": 2,
+      "distance": 15.3097,
+      "cost": 5153
+    },
+    {
+      "trip": 11,
+      "depot": 1,
+      "distance": 19.4821,
+      "cost": 5194
+    },
+    {
+      "trip": 11,
+      "depot": 2,
+      "distance": 42.5692,
+      "cost": 5425
+    },
+    {
+      "trip": 12,
+      "depot": 1,
+      "distance": 35.0432,
+      "cost": 5350
+    },
+    {
+      "trip": 12,
+      "depot": 2,
+      "distance": 21.2064,
+      "cost": 5212
+    },
+    {
+      "trip": 13,
+      "depot": 1,
+      "distance": 15.4593,
+      "cost": 5154
+    },
+    {
+      "trip": 13,
+      "depot": 2,
+      "distance": 15.8743,
+      "cost": 5158
+    },
+    {
+      "trip": 14,
+      "depot": 1,
+      "distance": 31.7127,
+      "cost": 5317
+    },
+    {
+      "trip": 14,
+      "depot": 2,
+      "distance": 15.3097,
+      "cost": 5153
+    },
+    {
+      "trip": 15,
+      "depot": 1,
+      "distance": 19.4821,
+      "cost": 5194
+    },
+    {
+      "trip": 15,
+      "depot": 2,
+      "distance": 42.5692,
+      "cost": 5425
+    },
+    {
+      "trip": 16,
+      "depot": 1,
+      "distance": 42.7698,
+      "cost": 5427
+    },
+    {
+      "trip": 16,
+      "depot": 2,
+      "distance": 27.7464,
+      "cost": 5277
+    },
+    {
+      "trip": 17,
+      "depot": 1,
+      "distance": 31.7127,
+      "cost": 5317
+    },
+    {
+      "trip": 17,
+      "depot": 2,
+      "distance": 15.3097,
+      "cost": 5153
+    },
+    {
+      "trip": 18,
+      "depot": 1,
+      "distance": 25.8336,
+      "cost": 5258
+    },
+    {
+      "trip": 18,
+      "depot": 2,
+      "distance": 15.8943,
+      "cost": 5158
+    },
+    {
+      "trip": 19,
+      "depot": 1,
+      "distance": 42.7698,
+      "cost": 5427
+    },
+    {
+      "trip": 19,
+      "depot": 2,
+      "distance": 27.7464,
+      "cost": 5277
+    },
+    {
+      "trip": 20,
+      "depot": 1,
+      "distance": 32.7824,
+      "cost": 5327
+    },
+    {
+      "trip": 20,
+      "depot": 2,
+      "distance": 14.2125,
+      "cost": 5142
+    },
+    {
+      "trip": 21,
+      "depot": 1,
+      "distance": 35.0432,
+      "cost": 5350
+    },
+    {
+      "trip": 21,
+      "depot": 2,
+      "distance": 21.2064,
+      "cost": 5212
+    },
+    {
+      "trip": 22,
+      "depot": 1,
+      "distance": 11.0037,
+      "cost": 5110
+    },
+    {
+      "trip": 22,
+      "depot": 2,
+      "distance": 25.1417,
+      "cost": 5251
+    },
+    {
+      "trip": 23,
+      "depot": 1,
+      "distance": 32.7824,
+      "cost": 5327
+    },
+    {
+      "trip": 23,
+      "depot": 2,
+      "distance": 14.2125,
+      "cost": 5142
+    },
+    {
+      "trip": 24,
+      "depot": 1,
+      "distance": 23.1768,
+      "cost": 5231
+    },
+    {
+      "trip": 24,
+      "depot": 2,
+      "distance": 3.4157,
+      "cost": 5034
+    },
+    {
+      "trip": 25,
+      "depot": 1,
+      "distance": 26.8755,
+      "cost": 5268
+    },
+    {
+      "trip": 25,
+      "depot": 2,
+      "distance": 22.3507,
+      "cost": 5223
+    },
+    {
+      "trip": 26,
+      "depot": 1,
+      "distance": 15.4593,
+      "cost": 5154
+    },
+    {
+      "trip": 26,
+      "depot": 2,
+      "distance": 15.8743,
+      "cost": 5158
+    },
+    {
+      "trip": 27,
+      "depot": 1,
+      "distance": 47.4916,
+      "cost": 5474
+    },
+    {
+      "trip": 27,
+      "depot": 2,
+      "distance": 36.3976,
+      "cost": 5363
+    },
+    {
+      "trip": 28,
+      "depot": 1,
+      "distance": 25.8336,
+      "cost": 5258
+    },
+    {
+      "trip": 28,
+      "depot": 2,
+      "distance": 15.8943,
+      "cost": 5158
+    },
+    {
+      "trip": 29,
+      "depot": 1,
+      "distance": 47.4916,
+      "cost": 5474
+    },
+    {
+      "trip": 29,
+      "depot": 2,
+      "distance": 36.3976,
+      "cost": 5363
+    },
+    {
+      "trip": 30,
+      "depot": 1,
+      "distance": 25.8336,
+      "cost": 5258
+    },
+    {
+      "trip": 30,
+      "depot": 2,
+      "distance": 15.8943,
+      "cost": 5158
+    }
+  ],
+  "summary": {
+    "total_vehicles_available": 20,
+    "n_compatible_arcs": 296,
+    "n_short_trips": 17,
+    "n_long_trips": 13
+  }
+}

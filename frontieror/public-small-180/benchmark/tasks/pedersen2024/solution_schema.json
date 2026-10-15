@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Weighted-sum of total financial cost and total scenic impact for the chosen turbines and cables.",
+  "selected_turbines": "<list[int]> Identifiers of the potential turbine sites chosen to be built.",
+  "selected_edges": "<list[dict]> Cable connections included in the wind farm network, each specifying the two node endpoints it links."
+}

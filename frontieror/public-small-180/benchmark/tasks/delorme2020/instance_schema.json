@@ -1,0 +1,7 @@
+{
+  "n": "<int> Total number of items that must be packed into bins.",
+  "m": "<int> Number of distinct item types.",
+  "c": "<int> Capacity of each bin.",
+  "weights": "<list[int], length m> Width of each item type.",
+  "demands": "<list[int], length m> Number of copies required for each item type."
+}

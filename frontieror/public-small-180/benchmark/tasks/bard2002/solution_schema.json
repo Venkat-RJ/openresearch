@@ -1,0 +1,8 @@
+{
+  "objective_value": "<float> Number of vehicles used, which is the primary quantity being minimized.",
+  "num_vehicles": "<int> Number of vehicle routes dispatched from the depot.",
+  "routes": "<list[list[int]], length num_vehicles> Ordered sequence of node identifiers visited on each route, starting and ending at the depot (node 0).",
+  "total_distance": "<float> Sum of Euclidean distances traveled across all routes.",
+  "departure_times": "<dict, key: '{customer}'> Time at which the vehicle departs from each customer.",
+  "loads": "<dict, key: '{customer}'> Cumulative demand aboard the vehicle when it departs from each customer."
+}

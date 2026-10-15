@@ -1,0 +1,30 @@
+{
+  "num_nodes": "<int> Total number of terminals in the service network.",
+  "num_arcs": "<int> Total number of directed service links in the network.",
+  "num_commodities": "<int> Total number of commodities to be transported.",
+  "num_fleet_types": "<int> Total number of distinct vehicle types available.",
+  "nodes": "<list[int], length num_nodes> Set of terminal identifiers in the network.",
+  "arcs": [
+    {
+      "id": "<int> Unique identifier for this arc.",
+      "from": "<int> Origin terminal of this directed service link.",
+      "to": "<int> Destination terminal of this directed service link.",
+      "flow_cost": "<int> Per-unit cost for shipping one unit of any commodity along this arc."
+    }
+  ],
+  "commodities": [
+    {
+      "id": "<int> Unique identifier for this commodity.",
+      "origin": "<int> Terminal where this commodity originates.",
+      "destination": "<int> Terminal where this commodity must be delivered.",
+      "demand": "<int> Quantity of this commodity that must be shipped from origin to destination."
+    }
+  ],
+  "fleet_types": [
+    {
+      "id": "<int> Unique identifier for this vehicle type.",
+      "capacity": "<int> Maximum total flow that one vehicle of this type can carry on an arc.",
+      "fixed_cost": "<int> Cost incurred for deploying one vehicle of this type on any arc."
+    }
+  ]
+}

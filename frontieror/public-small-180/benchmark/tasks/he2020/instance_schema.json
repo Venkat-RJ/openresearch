@@ -1,0 +1,39 @@
+{
+  "num_customers": "<int> Number of customers to be served.",
+  "num_vehicles": "<int> Number of vehicles available in the fleet.",
+  "vehicle_capacity": "<int> Maximum total demand that a single vehicle can carry on one route.",
+  "planning_horizon": "<int> Latest time by which all vehicles must return to the depot.",
+  "service_time": "<int> Time required to complete service at each customer location.",
+  "depot": {
+    "id": "<int> Location index of the depot at the start of each route.",
+    "x": "<int> Horizontal coordinate of the depot.",
+    "y": "<int> Vertical coordinate of the depot.",
+    "time_window": "<list[int], length 2> Earliest and latest times at which vehicles may depart from and return to the depot.",
+    "demand": "<int> Demand at the depot, always zero."
+  },
+  "depot_end": {
+    "id": "<int> Location index of the depot at the end of each route.",
+    "x": "<int> Horizontal coordinate of the return depot.",
+    "y": "<int> Vertical coordinate of the return depot.",
+    "time_window": "<list[int], length 2> Earliest and latest times at which vehicles may arrive back at the depot.",
+    "demand": "<int> Demand at the return depot, always zero."
+  },
+  "customers": [
+    {
+      "id": "<int> Unique index of the customer.",
+      "x": "<int> Horizontal coordinate of the customer location.",
+      "y": "<int> Vertical coordinate of the customer location.",
+      "demand": "<int> Quantity of goods requested by the customer.",
+      "time_window": "<list[int], length 2> Earliest and latest allowable times at which service may begin at this customer.",
+      "service_time": "<int> Time required to complete service at this customer.",
+      "preferred_time": "<float> Preferred service start time for this customer, equal to the midpoint of the time window.",
+      "inconvenience_cost_at_preferred_time": "<float> Inconvenience cost when service begins at the preferred time, always zero."
+    }
+  ],
+  "distance_matrix": "<list[list[float]], shape [num_customers+2][num_customers+2]> Travel time and routing cost between each pair of locations, indexed as depot (0), customers (1 to num_customers), and return depot (num_customers+1).",
+  "inconvenience_cost_function": {
+    "type": "<str> Type of the inconvenience cost function applied to each customer.",
+    "formula": "<str> Mathematical expression for the inconvenience cost as a function of service start time.",
+    "rho": "<float> Scaling factor that controls how steeply inconvenience cost increases as service deviates from the preferred time."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "num_real_activities": "<int> Number of real (non-fictitious) activities in the project.",
+  "num_total_activities": "<int> Total number of activities including the fictitious project start and project end activities.",
+  "num_resource_types": "<int> Number of renewable resource types available for the project.",
+  "max_project_duration": "<int> Absolute deadline by which the project must be completed.",
+  "activities": [
+    {
+      "id": "<int> Unique identifier for the activity.",
+      "duration": "<int> Number of time periods required to complete the activity without interruption.",
+      "resource_requirements": "<list[int], length num_resource_types> Amount of each resource type consumed per period while the activity is in progress."
+    }
+  ],
+  "precedence_relations": "<list[list[int]], shape [num_precedence_relations][2]> Each pair [i, j] indicates that activity j cannot start until activity i has finished.",
+  "resource_costs": "<list[int], length num_resource_types> Per-unit cost of providing each resource type for the entire project duration."
+}

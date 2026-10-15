@@ -1,0 +1,61 @@
+{
+  "num_products": "<int> Number of products the company sources and sells.",
+  "num_facilities": "<int> Number of manufacturing facilities available for production.",
+  "num_production_levels": "<int> Number of production levels available for each product-facility pair.",
+  "num_scenarios_per_distribution": "<int> Number of scenarios in each probability distribution.",
+  "num_yield_distributions_per_product": "<int> Number of yield-and-demand distributions per product, equal to the number of production level combinations across facilities.",
+  "num_total_distributions_per_product": "<int> Total number of distributions per product, including both yield-and-demand and demand-only distributions.",
+  "products": [
+    {
+      "id": "<int> Unique identifier for this product.",
+      "expected_demand": "<float> Expected demand quantity for this product.",
+      "sale_price": "<float> Revenue earned per unit of this product sold at full price to meet demand.",
+      "discounted_price": "<float> Revenue earned per unit of this product sold at a discount when inventory exceeds demand."
+    }
+  ],
+  "facilities": [
+    {
+      "id": "<int> Unique identifier for this facility.",
+      "capacity": "<float> Maximum total volume of raw materials that can be allocated to this facility across all products."
+    }
+  ],
+  "product_facility_data": [
+    {
+      "product_id": "<int> Identifier of the product this entry pertains to.",
+      "facility_id": "<int> Identifier of the facility this entry pertains to.",
+      "manufacturing_cost": "<float> Per-unit cost of allocating raw materials for this product at this facility.",
+      "yield_distribution_type": "<int> Category of yield distribution governing production outcomes for this product at this facility.",
+      "production_levels": [
+        {
+          "level_id": "<int> Identifier of this production level.",
+          "lower_bound": "<float> Minimum volume of raw materials that must be allocated if this production level is selected.",
+          "upper_bound": "<float> Maximum volume of raw materials that may be allocated if this production level is selected.",
+          "yield_mean": "<float> Mean of the yield distribution when this production level is active at this facility.",
+          "yield_std": "<float> Standard deviation of the yield distribution when this production level is active at this facility."
+        }
+      ]
+    }
+  ],
+  "products_distributions": [
+    {
+      "product_id": "<int> Identifier of the product this set of distributions pertains to.",
+      "num_distributions": "<int> Number of distributions available for this product.",
+      "distributions": [
+        {
+          "distribution_id": "<int> Identifier of this distribution.",
+          "type": "<str> Whether this distribution covers both yield and demand ('yield_and_demand') or demand only ('demand_only').",
+          "level_combination": "<list[int], length num_facilities> Production level that must be active at each facility for this distribution to apply, or null for demand-only distributions.",
+          "num_scenarios": "<int> Number of scenarios in this distribution.",
+          "scenarios": [
+            {
+              "scenario_id": "<int> Identifier of this scenario within the distribution.",
+              "probability": "<float> Probability weight assigned to this scenario.",
+              "yields": "<dict, key: '{facility_id}'> Fraction of allocated raw materials that becomes usable finished goods at each facility in this scenario; present only for yield_and_demand distributions.",
+              "demand": "<float> Realized customer demand for this product in this scenario."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

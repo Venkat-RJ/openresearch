@@ -1,0 +1,60 @@
+{
+  "objective_value": 287.0,
+  "visited_nodes": [
+    1,
+    4,
+    5,
+    6,
+    9,
+    18,
+    20
+  ],
+  "edges": [
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      4,
+      20
+    ],
+    [
+      5,
+      18
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      6,
+      18
+    ],
+    [
+      9,
+      20
+    ]
+  ],
+  "tour": [
+    1,
+    4,
+    20,
+    9,
+    6,
+    18,
+    5,
+    1
+  ],
+  "total_travel_time": 44,
+  "total_prize": 287,
+  "status": "optimal",
+  "solver_time_seconds": 0.102,
+  "mip_gap": 0.0,
+  "best_bound": 287.0,
+  "node_count": 94,
+  "runtime": 0.21
+}

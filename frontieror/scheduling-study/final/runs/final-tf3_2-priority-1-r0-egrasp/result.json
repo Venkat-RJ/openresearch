@@ -1,0 +1,64 @@
+{
+  "slot": "final-tf3_2-priority-1-r0-egrasp",
+  "instance": "final-tf3_2-priority-1",
+  "solver": "egrasp",
+  "repeat": 0,
+  "block": 74,
+  "seed": null,
+  "stratum": "tf3/2-priority",
+  "status": "VALID_IN_TIME",
+  "objective": 14079,
+  "measurement": {
+    "argv": [
+      "./egrasp",
+      "/work/runs/final-tf3_2-priority-1-r0-egrasp/input.xml",
+      "/work/runs/final-tf3_2-priority-1-r0-egrasp/output.xml",
+      "s",
+      "290"
+    ],
+    "pid": 1070,
+    "started_unix": 1791496915.7128618,
+    "external_deadline_seconds": 300.0,
+    "elapsed_seconds": 290.3021962999992,
+    "user_cpu_seconds": 288.259686,
+    "system_cpu_seconds": 0.002998,
+    "returncode": 1,
+    "timed_out": false,
+    "samples": [
+      {
+        "observed_seconds": 290.2965031749991,
+        "sha256": "082c7d62c958e62e4bf089e696de6179fae6b9dac25f7b42ddbcc032d7efadbd",
+        "bytes": 7153,
+        "parseable": true,
+        "parse_error": null,
+        "snapshot": "snapshot-0000.xml"
+      }
+    ],
+    "validation_status": "Pending both schedule validators; parseable is not feasible",
+    "timing_scope": "Process startup and execution; excludes container startup and preconversion"
+  },
+  "checks": [
+    {
+      "snapshot": "snapshot-0000.xml",
+      "observed_seconds": 290.2965031749991,
+      "sha256": "082c7d62c958e62e4bf089e696de6179fae6b9dac25f7b42ddbcc032d7efadbd",
+      "audit": {
+        "feasible": true,
+        "recomputed_objective": 14079,
+        "jobs_checked": 30,
+        "operations_checked": 300,
+        "errors": []
+      },
+      "official": {
+        "feasible": true,
+        "violated_constraints": [],
+        "violations": [],
+        "violation_magnitudes": []
+      },
+      "objective": 14079,
+      "valid": true
+    }
+  ],
+  "report_matches_snapshot": true,
+  "reported": 14079.0
+}

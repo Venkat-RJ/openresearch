@@ -1,0 +1,144 @@
+{
+  "released_problem_variant": "<str, fixed='relief_point_completion_v1'> Discriminator for the finite public completion library and its explicit emergency relief-point release fallback.",
+  "network": {
+    "stations": [
+      {
+        "id": "<str> Unique identifier for the station.",
+        "name": "<str> Human-readable name of the station.",
+        "is_relief_point": "<bool> Whether crew members can be relieved at this station.",
+        "is_crew_base": "<bool> Whether duties can start and end at this station.",
+        "has_canteen": "<bool> Whether meal breaks can be taken at this station.",
+        "x": "<float> X coordinate of the station for distance computation.",
+        "y": "<float> Y coordinate of the station for distance computation."
+      }
+    ],
+    "crew_bases": "<list[str], length num_crew_bases> Station IDs where duties can originate and terminate.",
+    "route_segments": [
+      {
+        "from_station": "<str> Station ID at one end of the track segment.",
+        "to_station": "<str> Station ID at the other end of the track segment.",
+        "travel_time_minutes": "<int> Time in minutes to traverse this segment by train.",
+        "distance_km": "<float> Distance in kilometers between the two stations.",
+        "bidirectional": "<bool> Whether trains can travel in both directions on this segment."
+      }
+    ],
+    "taxi_connections": [
+      {
+        "from_station": "<str> Station ID at one end of the taxi connection.",
+        "to_station": "<str> Station ID at the other end of the taxi connection.",
+        "travel_time_minutes": "<int> Time in minutes to travel between stations by taxi.",
+        "bidirectional": "<bool> Whether the taxi connection can be used in both directions."
+      }
+    ]
+  },
+  "train_lines": [
+    {
+      "line_id": "<str> Unique identifier for the train line.",
+      "type": "<str> Service class of the line, either 'intercity' or 'regional'.",
+      "stations": "<list[str]> Ordered sequence of station IDs served by this line.",
+      "segment_travel_times": "<list[int], length len(stations)-1> Travel time in minutes for each consecutive pair of stations on the line.",
+      "frequency_per_hour": "<int> Number of departures per hour on this line."
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "<str> Unique identifier for the task.",
+      "line_id": "<str> Train line on which this task operates.",
+      "departure_station": "<str> Station ID where the task departs.",
+      "arrival_station": "<str> Station ID where the task arrives.",
+      "departure_time": "<str> Scheduled departure time in HH:MM format.",
+      "departure_time_minutes": "<int> Scheduled departure time in minutes from midnight.",
+      "arrival_time": "<str> Scheduled arrival time in HH:MM format.",
+      "arrival_time_minutes": "<int> Scheduled arrival time in minutes from midnight.",
+      "task_type": "<str> Whether the task travels between two different stations ('A_to_B') or returns to the same station ('A_to_A').",
+      "direction": "<str> Direction of travel along the line, either 'forward' or 'backward'.",
+      "rolling_stock_type": "<str> Type of rolling stock required to operate this task."
+    }
+  ],
+  "active_duties": [
+    {
+      "duty_id": "<str> Unique identifier for the duty.",
+      "duty_type": "<str> Classification of the duty as 'active'.",
+      "crew_base": "<str> Station ID where the duty originates and must terminate.",
+      "start_time": "<str> Scheduled duty start time in HH:MM format.",
+      "start_time_minutes": "<int> Scheduled duty start time in minutes from midnight.",
+      "end_time": "<str> Scheduled duty end time in HH:MM format.",
+      "end_time_minutes": "<int> Scheduled duty end time in minutes from midnight.",
+      "tasks": "<list[str]> Post-disruption task IDs originally assigned to this duty that need to be rescheduled.",
+      "pre_disruption_tasks": "<list[str]> Task IDs that were completed or in progress before the disruption occurred.",
+      "task_details": [
+        {
+          "task_id": "<str> Unique identifier for the task.",
+          "departure_station": "<str> Station ID where the task departs.",
+          "arrival_station": "<str> Station ID where the task arrives.",
+          "departure_time": "<str> Scheduled departure time in HH:MM format.",
+          "arrival_time": "<str> Scheduled arrival time in HH:MM format."
+        }
+      ],
+      "route_knowledge": "<list[str]> Station IDs that this driver is licensed to operate through.",
+      "rolling_stock_licenses": "<list[str]> Rolling stock types that this driver is certified to operate.",
+      "has_meal_break": "<bool> Whether this duty requires a meal break.",
+      "meal_break": "<null or object> Details of the scheduled meal break, if any."
+    }
+  ],
+  "reserve_duties": [
+    {
+      "duty_id": "<str> Unique identifier for the reserve duty.",
+      "duty_type": "<str> Classification of the duty as 'reserve'.",
+      "crew_base": "<str> Station ID where the reserve duty is based.",
+      "start_time": "<str> Start time of the standby period in HH:MM format.",
+      "start_time_minutes": "<int> Start time of the standby period in minutes from midnight.",
+      "end_time": "<str> End time of the standby period in HH:MM format.",
+      "end_time_minutes": "<int> End time of the standby period in minutes from midnight.",
+      "standby_station": "<str> Station ID where the reserve driver is waiting.",
+      "tasks": "<list[str]> Post-disruption task IDs assigned to this reserve duty.",
+      "pre_disruption_tasks": "<list[str]> Task IDs completed before the disruption.",
+      "task_details": [
+        {
+          "task_id": "<str> Unique identifier for the task.",
+          "departure_station": "<str> Station ID where the task departs.",
+          "arrival_station": "<str> Station ID where the task arrives.",
+          "departure_time": "<str> Scheduled departure time in HH:MM format.",
+          "arrival_time": "<str> Scheduled arrival time in HH:MM format."
+        }
+      ],
+      "route_knowledge": "<list[str]> Station IDs that this reserve driver is licensed to operate through.",
+      "rolling_stock_licenses": "<list[str]> Rolling stock types that this reserve driver is certified to operate.",
+      "has_meal_break": "<bool> Whether this reserve duty requires a meal break.",
+      "meal_break": "<null or object> Details of the scheduled meal break, if any."
+    }
+  ],
+  "disruption": {
+    "disruption_type": "<str> Type of disruption affecting the network, such as 'two_sided_blockage' or 'reduced_capacity'.",
+    "blocked_segment": {
+      "from_station": "<str> Station ID at one end of the blocked track segment.",
+      "to_station": "<str> Station ID at the other end of the blocked track segment."
+    },
+    "start_time": "<str> Time the disruption begins in HH:MM format.",
+    "start_time_minutes": "<int> Time the disruption begins in minutes from midnight.",
+    "end_time": "<str> Time the disruption ends in HH:MM format.",
+    "end_time_minutes": "<int> Time the disruption ends in minutes from midnight.",
+    "duration_hours": "<int> Duration of the disruption in hours.",
+    "rescheduling_time": "<str> Time at which crew rescheduling decisions take effect in HH:MM format.",
+    "rescheduling_time_minutes": "<int> Time at which crew rescheduling decisions take effect in minutes from midnight.",
+    "canceled_tasks": "<list[str]> Task IDs that are canceled as a direct result of the disruption.",
+    "modified_tasks": "<list[str]> Task IDs whose schedules are modified due to the disruption.",
+    "affected_duty_ids": "<list[str]> Duty IDs whose original task assignments are impacted by the disruption.",
+    "num_affected_duties": "<int> Number of duties affected by the disruption."
+  },
+  "parameters": {
+    "cost_cancel_A_to_B": "<int> Penalty incurred for canceling a task that travels between two different stations.",
+    "cost_cancel_A_to_A": "<int> Penalty incurred for canceling a task that returns to its origin station.",
+    "cost_duty_changed": "<int> Fixed penalty incurred when a duty's completion differs from its original schedule.",
+    "cost_task_reassigned": "<int> Penalty per task assigned to a duty that did not originally include it.",
+    "cost_new_transfer": "<int> Penalty for each new connection between consecutive tasks within a duty.",
+    "cost_taxi": "<int> Penalty incurred when a taxi is used to reposition a driver between stations.",
+    "max_overtime_minutes": "<int> Maximum number of minutes a duty may extend beyond its scheduled end time.",
+    "meal_break_min_minutes": "<int> Minimum duration in minutes required for a meal break.",
+    "max_work_before_break_hours": "<float> Maximum consecutive working hours allowed before a meal break must be taken.",
+    "max_work_after_break_hours": "<float> Maximum consecutive working hours allowed after a meal break.",
+    "min_connection_time_minutes": "<int> Minimum gap in minutes required between consecutive tasks on different rolling stock.",
+    "max_duty_duration_hours": "<int> Maximum total duration of a duty in hours including overtime.",
+    "disruption_duration_hours": "<int> Duration of the disruption period in hours."
+  }
+}

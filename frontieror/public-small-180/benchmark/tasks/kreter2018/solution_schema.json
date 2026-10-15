@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total resource provision cost of the schedule, summing the per-unit cost times the amount provided across all resource types.",
+  "start_times": "<dict, key: '{activity_id}'> Chosen integer start time for each activity in the project.",
+  "resource_amounts": "<dict, key: '{resource_type}'> Amount of each renewable resource type provided for the entire project duration."
+}

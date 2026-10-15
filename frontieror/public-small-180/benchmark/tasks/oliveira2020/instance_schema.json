@@ -1,0 +1,17 @@
+{
+  "time_horizon": "<int> Latest time unit in the discrete planning horizon by which all jobs must finish.",
+  "total_processing_time": "<int> Sum of processing times across all jobs.",
+  "p_max": "<int> Longest processing time among all jobs.",
+  "jobs": [
+    {
+      "id": "<int> Unique identifier for the job (1-indexed).",
+      "processing_time": "<int> Number of time units required to complete the job on a machine.",
+      "weight": "<int> Importance weight of the job, used to penalize late completion.",
+      "due_date": "<int> Time by which the job should ideally be completed to avoid a tardiness penalty."
+    }
+  ],
+  "parameters": {
+    "n": "<int> Number of jobs to be scheduled.",
+    "m": "<int> Number of identical parallel machines available."
+  }
+}

@@ -1,0 +1,11 @@
+# Problem Description
+
+A planner needs to compactly represent a set of scenarios for downstream robust optimization by selecting a smaller subset that approximates the uncertainty captured by the original full set. The original data consists of N scenarios, each describing n cost or parameter values (for example, the per-dimension costs of a robust linear program). The planner must select K < N of these scenarios — a reduced scenario set — such that any robust optimization carried over only the K selected scenarios yields a solution whose true performance on the full N-scenario set is as close as possible to the solution that would be obtained if all N scenarios were used.
+
+The quality of a reduced set is measured by a scaling-factor guarantee: for any original scenario, the ratio between its cost (in any dimension) and the cost of the best-representing scenario from the selected set is at least the scaling factor. The planner chooses the K scenarios to maximize this scaling factor, so the reduced-set optimum is guaranteed to be within a factor of the true optimum across all original scenarios. Each original scenario is represented (assigned) to one of the K selected scenarios; the assignment is chosen optimally to maximize the minimum ratio across all original scenarios.
+
+The inputs specify: N (number of original scenarios), n (cost dimension per scenario), the full N-by-n cost matrix of scenario values (all positive), and the target sizes K for which a reduced set must be constructed (typically K = 1, 2, ..., N-1). The decisions are: for each K, which K scenarios to select and how to assign each original scenario to one of the selected scenarios. The objective is to maximize the scaling-factor guarantee for each K (equivalently, to minimize the worst-case approximation ratio across the original scenario set).
+
+For each one-stage IP-mu result, the solution must report both its complete
+scenario-to-aggregate assignment and the convex-combination weights defining
+every aggregate.  The reported scaling factor is derived from that witness.

@@ -1,0 +1,99 @@
+{
+  "instance_id": 1,
+  "scale": "small",
+  "problem_type": "Small Bucket Lot-Sizing with 1 Set-up per Period (SB-1, Con-NT model)",
+  "source_paper": "Belvaux & Wolsey (2000), Management Science 46(5):724-738",
+  "generation_seed": 42138,
+  "generation_attempt": 2,
+  "parameters": {
+    "NI": 3,
+    "NK": 1,
+    "NT": 8,
+    "num_rows_estimate": 152,
+    "num_integer_variables": 48
+  },
+  "costs": {
+    "setup_cost_f": 126,
+    "startup_cost_g": 78,
+    "holding_cost_h": [
+      4,
+      5,
+      6
+    ],
+    "backlogging_cost_e": [
+      12,
+      15,
+      18
+    ]
+  },
+  "machine_data": {
+    "capacity_C": [
+      125
+    ],
+    "startup_time_sigma": [
+      17
+    ]
+  },
+  "demand": [
+    [
+      34,
+      19,
+      10,
+      25,
+      44,
+      23,
+      42,
+      21
+    ],
+    [
+      48,
+      41,
+      40,
+      19,
+      32,
+      7,
+      46,
+      17
+    ],
+    [
+      20,
+      47,
+      34,
+      21,
+      12,
+      47,
+      28,
+      25
+    ]
+  ],
+  "initial_conditions": {
+    "initial_stock_s0": [
+      0,
+      0,
+      0
+    ],
+    "initial_backlog_r0": [
+      0,
+      0,
+      0
+    ]
+  },
+  "model_description": {
+    "objective": "Minimize total setup + startup + holding + backlogging costs",
+    "variables": {
+      "x_ikt": "Production of item i on machine k in period t (continuous >= 0)",
+      "s_it": "Stock of item i at end of period t (continuous >= 0)",
+      "r_it": "Backlog of item i at end of period t (continuous >= 0)",
+      "y_ikt": "1 if machine k is set up for item i in period t (binary)",
+      "z_ikt": "1 if machine k starts up for item i in period t (binary)"
+    },
+    "constraints": {
+      "flow_balance": "s_{i,t-1} - r_{i,t-1} + sum_k x_{ikt} = d_{it} + s_{it} - r_{it}  for all i,t",
+      "capacity_startup": "x_{ikt} + sigma_k * z_{ikt} <= C_k * y_{ikt}  for all i,k,t",
+      "startup_definition": "z_{ikt} >= y_{ikt} - y_{ik,t-1}  for all i,k,t",
+      "one_item_per_machine": "sum_i y_{ikt} <= 1  for all k,t",
+      "startup_bound": "z_{ikt} <= y_{ikt}  for all i,k,t",
+      "linking": "y_{ik,t-1} + z_{ikt} + sum_{j!=i} (y_{jkt} - z_{jkt}) <= 1  for all i,k,t"
+    }
+  }
+}

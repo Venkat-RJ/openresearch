@@ -1,0 +1,264 @@
+{
+  "instance_id": 1,
+  "num_customers": 7,
+  "seed_used": 42,
+  "generation_attempt": 1,
+  "depot": {
+    "id": 0,
+    "x": 2.5,
+    "y": 2.5,
+    "exogenous_time_window": [
+      6,
+      22
+    ]
+  },
+  "vehicle_capacity": 30,
+  "num_vehicles": "unlimited",
+  "endogenous_time_window_width": 2,
+  "grid_size": 5.0,
+  "demand_mean": 5.0,
+  "demand_variance": 1.5,
+  "tw_proportions": {
+    "tw_10_16": 0.1,
+    "tw_8_18": 0.6,
+    "tw_7_21": 0.3
+  },
+  "customers": [
+    {
+      "id": 1,
+      "x": 1.87,
+      "y": 4.33,
+      "exogenous_time_window": [
+        7,
+        21
+      ],
+      "endogenous_time_window_width": 2,
+      "base_demand": 3
+    },
+    {
+      "id": 2,
+      "x": 4.75,
+      "y": 3.01,
+      "exogenous_time_window": [
+        8,
+        18
+      ],
+      "endogenous_time_window_width": 2,
+      "base_demand": 6
+    },
+    {
+      "id": 3,
+      "x": 3.66,
+      "y": 3.54,
+      "exogenous_time_window": [
+        8,
+        18
+      ],
+      "endogenous_time_window_width": 2,
+      "base_demand": 5
+    },
+    {
+      "id": 4,
+      "x": 2.99,
+      "y": 0.1,
+      "exogenous_time_window": [
+        7,
+        21
+      ],
+      "endogenous_time_window_width": 2,
+      "base_demand": 5
+    },
+    {
+      "id": 5,
+      "x": 0.78,
+      "y": 4.85,
+      "exogenous_time_window": [
+        10,
+        16
+      ],
+      "endogenous_time_window_width": 2,
+      "base_demand": 4
+    },
+    {
+      "id": 6,
+      "x": 0.78,
+      "y": 4.16,
+      "exogenous_time_window": [
+        8,
+        18
+      ],
+      "endogenous_time_window_width": 2,
+      "base_demand": 7
+    },
+    {
+      "id": 7,
+      "x": 0.29,
+      "y": 1.06,
+      "exogenous_time_window": [
+        8,
+        18
+      ],
+      "endogenous_time_window_width": 2,
+      "base_demand": 5
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": 1,
+      "probability": 0.3333333333333333,
+      "demand_type": "low",
+      "multiplier_interval": [
+        0.7,
+        0.8
+      ],
+      "demands": [
+        3,
+        5,
+        4,
+        4,
+        4,
+        6,
+        4
+      ]
+    },
+    {
+      "scenario_id": 2,
+      "probability": 0.3333333333333333,
+      "demand_type": "medium",
+      "multiplier_interval": [
+        0.95,
+        1.05
+      ],
+      "demands": [
+        3,
+        6,
+        5,
+        6,
+        5,
+        8,
+        5
+      ]
+    },
+    {
+      "scenario_id": 3,
+      "probability": 0.3333333333333333,
+      "demand_type": "high",
+      "multiplier_interval": [
+        1.2,
+        1.3
+      ],
+      "demands": [
+        4,
+        8,
+        7,
+        7,
+        5,
+        9,
+        7
+      ]
+    }
+  ],
+  "distance_matrix": [
+    [
+      0.0,
+      1.94,
+      2.31,
+      1.56,
+      2.45,
+      2.91,
+      2.39,
+      2.64,
+      0.0
+    ],
+    [
+      1.94,
+      0.0,
+      3.17,
+      1.96,
+      4.38,
+      1.21,
+      1.1,
+      3.63,
+      1.94
+    ],
+    [
+      2.31,
+      3.17,
+      0.0,
+      1.21,
+      3.4,
+      4.38,
+      4.13,
+      4.87,
+      2.31
+    ],
+    [
+      1.56,
+      1.96,
+      1.21,
+      0.0,
+      3.5,
+      3.16,
+      2.95,
+      4.18,
+      1.56
+    ],
+    [
+      2.45,
+      4.38,
+      3.4,
+      3.5,
+      0.0,
+      5.24,
+      4.62,
+      2.87,
+      2.45
+    ],
+    [
+      2.91,
+      1.21,
+      4.38,
+      3.16,
+      5.24,
+      0.0,
+      0.69,
+      3.82,
+      2.91
+    ],
+    [
+      2.39,
+      1.1,
+      4.13,
+      2.95,
+      4.62,
+      0.69,
+      0.0,
+      3.14,
+      2.39
+    ],
+    [
+      2.64,
+      3.63,
+      4.87,
+      4.18,
+      2.87,
+      3.82,
+      3.14,
+      0.0,
+      2.64
+    ],
+    [
+      0.0,
+      1.94,
+      2.31,
+      1.56,
+      2.45,
+      2.91,
+      2.39,
+      2.64,
+      0.0
+    ]
+  ],
+  "distance_matrix_description": "Row/col 0 = start depot, 1..n = customers, n+1 = end depot. Values are Euclidean distances rounded to 2 decimals.",
+  "description": "spliet2015 tiny smoke-test instance — scale-down iteration (num_customers=7 = s tier 10 x 0.6667 rounded; num_scenarios=3); regenerated with base_seed=42 after the prior tiny (now tiny_instance_2.json, n=10, seed=1001) exceeded the 100s Gurobi smoke-test budget."
+}

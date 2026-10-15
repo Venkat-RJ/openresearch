@@ -1,0 +1,7 @@
+{
+  "objective_value": "<float> Total cost combining suite opening costs, OR opening costs, scheduling benefits, postponement penalties, and expected cancellation costs.",
+  "u": "<dict, key: '{hospital_id},{day_id}'> Whether the surgical suite at a given hospital is open on a given day (1 = open, 0 = closed).",
+  "y": "<dict, key: '{hospital_id},{day_id},{or_index}'> Whether a specific operating room at a given hospital is open on a given day (1 = open, 0 = closed).",
+  "x": "<dict, key: '{hospital_id},{day_id},{patient_id},{or_index}'> Whether a patient is assigned to a specific operating room at a given hospital on a given day (1 = assigned, 0 = not assigned; only non-zero entries are stored).",
+  "w": "<dict, key: '{patient_id}'> Whether a non-mandatory patient is postponed to a future planning horizon (1 = postponed, 0 = scheduled)."
+}

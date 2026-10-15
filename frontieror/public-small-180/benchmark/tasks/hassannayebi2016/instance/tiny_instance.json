@@ -1,0 +1,60 @@
+{
+  "instance_id": 1,
+  "scale": "small",
+  "description": "D=5, single-peak demand (approximated from Fig.2 Example 1, Niu & Zhou 2013). Smallest instance from Table 2. MINLP CPU ~133s, MILP CPU ~31s.",
+  "source_paper": "Hassannayebi & Zegordi (2016), Computers & Operations Research",
+  "parameters": {
+    "T_planning_horizon_minutes": 20,
+    "D_num_train_services": 5,
+    "NT_num_demand_periods": 10,
+    "theta_period_length_minutes": 2,
+    "h_min_minutes": 1,
+    "h_max_minutes": 13,
+    "C_train_capacity_passengers": 5,
+    "demand_profile_type": "single-peak (approximated from Fig. 2, Example 1)",
+    "total_demand_passengers": 70
+  },
+  "demand_periods": [
+    {
+      "period": 1,
+      "lambda_pax_per_min": 3
+    },
+    {
+      "period": 2,
+      "lambda_pax_per_min": 4
+    },
+    {
+      "period": 3,
+      "lambda_pax_per_min": 5
+    },
+    {
+      "period": 4,
+      "lambda_pax_per_min": 3
+    },
+    {
+      "period": 5,
+      "lambda_pax_per_min": 7
+    },
+    {
+      "period": 6,
+      "lambda_pax_per_min": 5
+    },
+    {
+      "period": 7,
+      "lambda_pax_per_min": 4
+    },
+    {
+      "period": 8,
+      "lambda_pax_per_min": 2
+    },
+    {
+      "period": 9,
+      "lambda_pax_per_min": 1
+    },
+    {
+      "period": 10,
+      "lambda_pax_per_min": 1
+    }
+  ],
+  "feasibility_lower_bound_AWT_minutes": 0.5
+}

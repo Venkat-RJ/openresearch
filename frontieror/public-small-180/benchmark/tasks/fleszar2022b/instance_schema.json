@@ -1,0 +1,8 @@
+{
+  "n": "<int> Number of items available to be packed into knapsacks.",
+  "m": "<int> Number of identical knapsacks.",
+  "capacity": "<int> Maximum total weight each knapsack can hold.",
+  "weights": "<list[int], length n> Weight of each item, sorted in non-decreasing order.",
+  "values": "<list[int], length n> Individual value earned when each item is packed into any knapsack.",
+  "pairwise_values": "<list[list[int]], shape [n][n]> Symmetric matrix of bonus values earned when two items are placed in the same knapsack."
+}

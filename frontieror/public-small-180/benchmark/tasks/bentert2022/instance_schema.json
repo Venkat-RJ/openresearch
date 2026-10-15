@@ -1,0 +1,15 @@
+{
+  "n": "<int> Number of sensors in the network.",
+  "m": "<int> Number of communication links between sensors.",
+  "graph_type": "<str> Structure of the graph connecting sensors.",
+  "edge_weight_rule": "<str> Rule used to compute the power cost of each communication link from sensor positions.",
+  "vertices": [
+    {
+      "id": "<int> Unique identifier of the sensor.",
+      "x": "<float> Horizontal coordinate of the sensor.",
+      "y": "<float> Vertical coordinate of the sensor.",
+      "lower_bound": "<float> Minimum link weight among all links incident to this sensor."
+    }
+  ],
+  "c_obligatory_components": "<int> Number of connected components in the obligatory subgraph formed by mutually nearest-neighbor sensor pairs."
+}

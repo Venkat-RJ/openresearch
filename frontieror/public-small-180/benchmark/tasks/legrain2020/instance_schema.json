@@ -1,0 +1,58 @@
+{
+  "num_nurses": "<int> Total number of nurses available for scheduling.",
+  "num_weeks": "<int> Number of weeks in the planning horizon.",
+  "num_days": "<int> Total number of days in the planning horizon (seven times the number of weeks).",
+  "num_shifts": "<int> Number of distinct shift types per day.",
+  "num_skills": "<int> Number of distinct nursing skills.",
+  "skills": "<list[str], length num_skills> Names of the nursing skills that can be performed.",
+  "shifts": [
+    {
+      "name": "<str> Name of the shift.",
+      "CS_minus": "<int> Minimum number of consecutive days a nurse should work this same shift once started.",
+      "CS_plus": "<int> Maximum number of consecutive days a nurse should work this same shift."
+    }
+  ],
+  "forbidden_shift_successions": "<list[list[str]], length varies> Pairs of shifts where a nurse working the first shift on one day may not work the second shift on the following day.",
+  "penalty_weights": {
+    "c_S1": "<int> Per-nurse penalty for each unit of shortfall below optimal staffing coverage.",
+    "c_S2a": "<int> Per-day penalty for each day a consecutive-worked-days stretch deviates from its bounds.",
+    "c_S2b": "<int> Per-day penalty for each day a consecutive-same-shift stretch deviates from its bounds.",
+    "c_S3": "<int> Per-day penalty for each day a consecutive-days-off stretch deviates from its bounds.",
+    "c_S4": "<int> Penalty incurred each time a nurse is assigned to one of their preferred-off day-shift pairs.",
+    "c_S5": "<int> Penalty incurred when a nurse works only one of the two days of a weekend.",
+    "c_S6": "<int> Per-day penalty for each day a nurse's total worked days deviates from the allowed range.",
+    "c_S7": "<int> Per-weekend penalty for each weekend a nurse works beyond the allowed maximum."
+  },
+  "nurses": [
+    {
+      "id": "<int> Unique identifier for the nurse.",
+      "name": "<str> Display name of the nurse.",
+      "skills": "<list[str], length varies> Skills this nurse is qualified to perform.",
+      "contract": {
+        "L_minus": "<int> Minimum total number of days the nurse should work over the planning horizon.",
+        "L_plus": "<int> Maximum total number of days the nurse should work over the planning horizon.",
+        "CD_minus": "<int> Minimum number of consecutive worked days in any uninterrupted work stretch.",
+        "CD_plus": "<int> Maximum number of consecutive worked days in any uninterrupted work stretch.",
+        "CR_minus": "<int> Minimum number of consecutive days off in any rest period.",
+        "CR_plus": "<int> Maximum number of consecutive days off in any rest period.",
+        "WE_plus": "<int> Maximum number of weekends the nurse should work over the planning horizon."
+      },
+      "preferences": [
+        {
+          "day": "<int> Day index (0-based) of the preferred-off assignment.",
+          "shift": "<str> Shift name of the preferred-off assignment."
+        }
+      ]
+    }
+  ],
+  "demand": [
+    {
+      "{shift_name}": {
+        "{skill_name}": {
+          "minimum": "<int> Minimum number of nurses with this skill required on this shift and day (hard constraint).",
+          "optimal": "<int> Desired number of nurses with this skill on this shift and day (shortfalls are penalized)."
+        }
+      }
+    }
+  ]
+}

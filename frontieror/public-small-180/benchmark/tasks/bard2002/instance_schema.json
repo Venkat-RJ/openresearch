@@ -1,0 +1,29 @@
+{
+  "num_customers": "<int> Number of customers to be visited.",
+  "vehicle_capacity": "<int> Maximum total demand that a single vehicle can carry on one route.",
+  "depot": {
+    "id": "<int> Identifier for the depot node.",
+    "x": "<float> Horizontal coordinate of the depot on the Euclidean grid.",
+    "y": "<float> Vertical coordinate of the depot on the Euclidean grid.",
+    "demand": "<int> Goods to be collected at the depot (always zero).",
+    "ready_time": "<int> Earliest time a vehicle may depart from the depot.",
+    "due_date": "<int> Latest time by which all vehicles must return to the depot.",
+    "service_time": "<int> Time spent servicing at the depot (always zero)."
+  },
+  "customers": [
+    {
+      "id": "<int> Unique identifier for the customer, numbered 1 through num_customers.",
+      "x": "<float> Horizontal coordinate of the customer on the Euclidean grid.",
+      "y": "<float> Vertical coordinate of the customer on the Euclidean grid.",
+      "demand": "<int> Quantity of goods to be collected from this customer.",
+      "ready_time": "<int> Earliest time at which a vehicle may depart from this customer.",
+      "due_date": "<int> Latest time by which a vehicle must depart from this customer.",
+      "service_time": "<int> Time a vehicle spends serving this customer before it can depart."
+    }
+  ],
+  "distance_matrix": "<list[list[float]], shape [num_customers+1][num_customers+1]> Euclidean distance between each pair of locations, where row/column 0 is the depot and rows/columns 1 through num_customers correspond to customers.",
+  "scheduling_horizon": "<int> End of the planning period within which all routes must be completed.",
+  "travel_time_includes_service_time": "<bool> Whether the distance matrix already incorporates each customer's service time into outbound travel times.",
+  "primary_objective": "<str> The first-priority goal for the optimization.",
+  "secondary_objective": "<str> The second-priority goal for the optimization, applied as a tiebreaker."
+}

@@ -1,0 +1,9 @@
+{
+  "objective_value": "<float> Total expected cost, combining the fixed operating and start-up costs of all generators across all periods with the average production cost across scenarios.",
+  "x": "<list[list[int]], shape [n_generators][T]> Whether each generator is running in each period (1 = running, 0 = off).",
+  "y": "<list[list[int]], shape [n_generators][T]> Whether each generator is starting up in each period (1 = starting up, 0 = not).",
+  "y_bar": "<list[list[int]], shape [n_generators][T]> Whether each generator is shutting down in each period (1 = shutting down, 0 = not).",
+  "q": "<list[list[float]], shape [n_generators][T]> Start-up cost charged to each generator in each period.",
+  "p": "<list[list[list[float]]], shape [n_generators][n_scenarios][T]> Power produced by each generator in each period under each demand scenario.",
+  "p_bar": "<list[list[list[float]]], shape [n_generators][n_scenarios][T]> Available power capacity of each generator in each period under each demand scenario."
+}

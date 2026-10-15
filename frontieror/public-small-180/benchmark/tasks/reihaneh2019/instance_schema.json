@@ -1,0 +1,28 @@
+{
+  "num_delivery_sites": "<int> Number of candidate delivery sites that may be activated to serve customers.",
+  "num_customers": "<int> Number of customers requiring delivery service.",
+  "vehicle_capacity": "<int> Maximum number of pallets a single vehicle can carry on one tour.",
+  "num_vehicles": "<int> Number of identical vehicles available in the fleet.",
+  "depot": {
+    "id": "<int> Identifier for the central depot node in the routing network.",
+    "x": "<float> X-coordinate of the central depot.",
+    "y": "<float> Y-coordinate of the central depot."
+  },
+  "delivery_sites": [
+    {
+      "id": "<int> Identifier for this delivery site node in the routing network.",
+      "x": "<float> X-coordinate of this delivery site.",
+      "y": "<float> Y-coordinate of this delivery site."
+    }
+  ],
+  "customers": [
+    {
+      "id": "<int> Identifier for this customer.",
+      "x": "<float> X-coordinate of this customer's location.",
+      "y": "<float> Y-coordinate of this customer's location.",
+      "demand": "<int> Number of pallets this customer requires."
+    }
+  ],
+  "routing_cost_matrix": "<list[list[float]], shape [num_delivery_sites+1][num_delivery_sites+1]> Travel cost between each pair of nodes in the routing network, where row and column 0 is the depot and 1 through num_delivery_sites are the delivery sites.",
+  "assignment_cost_matrix": "<list[list[float]], shape [num_customers][num_delivery_sites]> Travel cost for each customer to reach each candidate delivery site for pickup."
+}

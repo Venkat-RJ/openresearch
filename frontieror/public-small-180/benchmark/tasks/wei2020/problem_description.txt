@@ -1,0 +1,7 @@
+# Problem Description
+
+A warehouse operates an unlimited supply of identical bins, each with a fixed positive integer capacity. A collection of items must be packed into these bins, where each item has a known positive integer weight. In some instances, certain pairs of items are incompatible and may not be placed in the same bin; the set of all such incompatible pairs is provided as input.
+
+Every item must be placed into exactly one bin. The total weight of the items placed in any single bin must not exceed the bin capacity, and no bin may contain both items of any incompatible pair.
+
+The input data specifies the number of items, the capacity shared by every bin, and the weight of each individual item. When item incompatibilities are present, the input also specifies the list of incompatible item pairs. The goal is to assign every item to a bin so that all capacity and incompatibility requirements are satisfied while using as few bins as possible.

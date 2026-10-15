@@ -1,0 +1,13 @@
+{
+  "objective_value": "<float> Total cost of opening the chosen hubs plus routing all commodities through them.",
+  "open_hubs": "<list[int]> Node ids selected to be opened as hub facilities.",
+  "assignments": [
+    {
+      "commodity": "<int> Index of the commodity being routed.",
+      "origin": "<int> Origin node id of the commodity.",
+      "destination": "<int> Destination node id of the commodity.",
+      "hub_edge": "<list[int], length 1 or 2> Hub or unordered pair of hubs through which this commodity is routed (length 1 means the commodity passes through a single hub).",
+      "cost": "<float> Transportation cost incurred for routing this commodity through the assigned hub edge."
+    }
+  ]
+}

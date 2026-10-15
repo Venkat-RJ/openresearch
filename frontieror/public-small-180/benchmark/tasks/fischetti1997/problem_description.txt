@@ -1,0 +1,7 @@
+# Problem Description
+
+A salesman must visit a collection of locations organized into clusters and return to the starting point, forming a closed tour of minimum total travel cost. The input specifies a set of n nodes, each with a two-dimensional coordinate, and a partition of these nodes into m non-overlapping clusters that together cover all nodes. Every pair of nodes in different clusters is connected by an undirected link whose travel cost equals the Euclidean distance between the two nodes, rounded to the nearest integer. These costs satisfy the triangle inequality, meaning the direct travel cost between any two nodes never exceeds the cost of traveling between them via a third node.
+
+The salesman must select exactly one node from each cluster to serve as that cluster's representative and then find a closed tour that visits each selected node exactly once. No travel is permitted between two nodes belonging to the same cluster. The tour must form a single connected cycle covering all m selected nodes.
+
+The goal is to minimize the total travel cost of the tour, defined as the sum of the costs of all links used in the closed cycle through the m selected nodes.

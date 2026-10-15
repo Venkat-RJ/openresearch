@@ -1,0 +1,30 @@
+{
+  "task": "hassannayebi2016",
+  "old_frozen_sha256": "41edd54d2b195991a169542ebc8752d6ba467a1aa84d5919c4efe3f52606827a",
+  "live_sha256": "f1fc94f9b5368af0972cb88fe816ab0b901841ef2819a58ff4e514150a43fd54",
+  "scope": "Live-only complete FIFO incumbent logging/retention; no model changes",
+  "syntax": "pass",
+  "official_checker_helper_tests": [
+    {
+      "FIFO": 323.3333333333333,
+      "official_checker_feasible": true
+    },
+    {
+      "FIFO": 412.0,
+      "official_checker_feasible": true
+    },
+    {
+      "FIFO": 392.0,
+      "official_checker_feasible": true
+    }
+  ],
+  "reject_invalid_headway_test": "pass",
+  "callback": "cbGetSolution departures; strict true FIFO objective improvement; complete snapshot; retained disk witness",
+  "terminal": "Same true FIFO retention path; preserves better callback schedule",
+  "mandatory_parameters": "Seed0 MIPGap1e-4 NumericFocus0 Threads1; time_limit int; min_interval0 wall clock",
+  "frozen_native_grade": 323.3333333333333,
+  "numerical_scalar_beat": "not certified",
+  "native_followup": "Root-only300second tiny pending; no local solver executions",
+  "experiment": "07dc634e-68a8-4d53-8d60-13e093289c9e",
+  "hypothesis": "19224701-0b10-4c95-845f-fb7c82d00f41"
+}

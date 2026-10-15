@@ -1,0 +1,12 @@
+{
+  "objective_value": "<float> Total cost of the solution, summing the per-arc traversal costs over all arcs used by all vehicles plus the access costs of every accessed edge set.",
+  "routes": [
+    {
+      "vehicle": "<int> Identifier of the vehicle that performs this route.",
+      "sequence": "<list[int]> Ordered list of node ids visited by the vehicle, starting and ending at the depot.",
+      "arcs": "<list[list[int]]> Directed arcs traversed by the vehicle, each given as an [origin_node, destination_node] pair.",
+      "visit_times": "<dict, key: '{node}'> Time at which the vehicle visits each node, lying within that node's time window."
+    }
+  ],
+  "edge_sets_used": "<list[int]> Identifiers of the edge sets whose access cost is paid so that vehicles may traverse the edges they contain."
+}

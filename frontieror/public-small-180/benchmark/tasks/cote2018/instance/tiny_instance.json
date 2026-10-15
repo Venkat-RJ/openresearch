@@ -1,0 +1,50 @@
+{
+  "instance_id": 1,
+  "problem_type": "Cutting Stock Problem (CSP)",
+  "description": "CSP instance 1: 8 item types, bin capacity 100, 30 total items",
+  "bin_capacity": 100,
+  "num_item_types": 8,
+  "total_num_items": 30,
+  "items": [
+    {
+      "type_id": 1,
+      "width": 3,
+      "demand": 3
+    },
+    {
+      "type_id": 2,
+      "width": 7,
+      "demand": 5
+    },
+    {
+      "type_id": 3,
+      "width": 10,
+      "demand": 6
+    },
+    {
+      "type_id": 4,
+      "width": 19,
+      "demand": 1
+    },
+    {
+      "type_id": 5,
+      "width": 24,
+      "demand": 2
+    },
+    {
+      "type_id": 6,
+      "width": 30,
+      "demand": 2
+    },
+    {
+      "type_id": 7,
+      "width": 43,
+      "demand": 7
+    },
+    {
+      "type_id": 8,
+      "width": 45,
+      "demand": 4
+    }
+  ]
+}

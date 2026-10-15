@@ -1,0 +1,30 @@
+{
+  "num_ships": "<int> Total number of ships arriving at the dam.",
+  "num_berths": "<int> Total number of berths available at the quay.",
+  "num_chambers": "<int> Number of parallel lock chambers at the dam.",
+  "chamber_width_W": "<float> Width of the lock chamber in meters.",
+  "chamber_length_L": "<float> Length of the lock chamber in meters.",
+  "lockage_duration_Du": "<float> Fixed duration in minutes required to complete one lockage operation.",
+  "min_time_between_lockages_MT": "<float> Minimum time in minutes that must elapse between the completion of consecutive lockages.",
+  "lock_start_availability_sc": "<float> Earliest time in minutes at which the lock chamber becomes available for use.",
+  "berth_end_availability_ek": "<float> Latest time in minutes at which all berths cease to be available for service.",
+  "C_max": "<int> Upper bound on the completion time used as a large constant in scheduling constraints.",
+  "ships": [
+    {
+      "id": "<int> Unique identifier of the ship.",
+      "width": "<float> Width of the ship in meters.",
+      "length": "<float> Length of the ship in meters.",
+      "arrival_time": "<float> Time in minutes at which the ship arrives at the coordination point.",
+      "transshipment_penalty": "<int> Extra cost incurred when the ship chooses to unload cargo at the quay instead of passing through the lock.",
+      "mooring_set_MR": "<list[int], length num_ships-1> Other ships to which this ship is allowed to moor inside the lock chamber.",
+      "eligible_berths_B": "<list[int], length num_berths> Berths at which this ship may be served if it chooses the transshipment mode."
+    }
+  ],
+  "berths": [
+    {
+      "id": "<int> Unique identifier of the berth.",
+      "start_availability_sk": "<float> Earliest time in minutes at which the berth becomes available for service."
+    }
+  ],
+  "handling_times": "<list[list[int]], shape [num_ships][num_berths]> Time in minutes required to handle each ship's cargo at each berth."
+}

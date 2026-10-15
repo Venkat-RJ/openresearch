@@ -1,0 +1,437 @@
+[
+  {
+    "id": "00747a59-eb1c-4164-89f7-4919db09785d",
+    "kind": "Experiment",
+    "title": "eval-20261007T204321-1eb094: Critical-path insertion tabu C++ v1 buildable",
+    "status": "complete",
+    "linked_beliefs": [
+      "03f89679-3fbd-4a66-8bcf-2c287f8a4f1a",
+      "04725c73-0c14-42bc-833f-d8b3288fafef"
+    ],
+    "outcome_sha256": "90ad9117c9af72df4fb814dbddfe19a6c6814ce4f540437fcdbab6027bfaa20b"
+  },
+  {
+    "id": "03f89679-3fbd-4a66-8bcf-2c287f8a4f1a",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261007T204321-1eb094",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "04725c73-0c14-42bc-833f-d8b3288fafef",
+    "kind": "Belief",
+    "title": "Sagent decision: 00747a59",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "09e44240-79fb-454f-bd65-50f456454989",
+    "kind": "Experiment",
+    "title": "eval-20261008T103620-22fd26: Incremental-link bounded DAG tabu with evolving elites v2",
+    "status": "complete",
+    "linked_beliefs": [
+      "db6ec8b4-c7a1-4f46-905f-1adf0e95d3cd",
+      "99063d8f-9e1e-44bc-b798-2c3b89db384d"
+    ],
+    "outcome_sha256": "1a9cac43c7def7e98daf9115a906ecbe7a734b2b42d977545f382daa935ec634"
+  },
+  {
+    "id": "0bb8fe54-9c72-4a69-819c-b0ff4f43264e",
+    "kind": "Experiment",
+    "title": "eval-20261007T183705-3bba91: Critical-path insertion tabu C++ v1 buildable",
+    "status": "complete",
+    "linked_beliefs": [
+      "ddd473ef-bd4c-4c35-8102-5b5fe870f7ce",
+      "842cfb38-b747-4a48-b45b-4ff070092692"
+    ],
+    "outcome_sha256": "5371ab5780d0f686dd96b6eedbc40aa43181d562bb2b7b5e71ff5bac3628df57"
+  },
+  {
+    "id": "112286f2-4ab7-49d0-8765-04b72fb2b5b1",
+    "kind": "Belief",
+    "title": "Sagent decision: 16ee170b",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "16ee170b-9e44-4f40-8710-ba553db28de8",
+    "kind": "Experiment",
+    "title": "eval-20261008T021601-cacd61: Incremental-link bounded DAG tabu with evolving elites v2",
+    "status": "complete",
+    "linked_beliefs": [
+      "3c9feb99-4a16-4e30-85bb-a22b782d6dea",
+      "112286f2-4ab7-49d0-8765-04b72fb2b5b1",
+      "6dcd4110-15e3-4fbc-bb53-e9b4aabc995e"
+    ],
+    "outcome_sha256": "44701592493e2bf19bf1b1bdb5c633ea43416c68a9da79fd8e3091f88bbb1d4f"
+  },
+  {
+    "id": "1f28e9c0-a74f-4766-a195-87552610dc29",
+    "kind": "Belief",
+    "title": "Sagent decision: 7268c738",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "28c85f03-d6ed-427e-b960-bd1461cea71f",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261008T014545-af260b",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "300b0271-51db-4cbc-874b-b051341cdd76",
+    "kind": "Experiment",
+    "title": "eval-20261008T085557-4e6b4c: Independent CP-SAT destroy-and-repair LNS repaired",
+    "status": "complete",
+    "linked_beliefs": [
+      "9b4458ed-84ff-4c39-bdd3-95c35fcd30c6",
+      "c61d56b6-ea2d-4f57-b8cc-c09735948829"
+    ],
+    "outcome_sha256": "ba3a39f9dedc284671a8afb4812e526e6803e488589e184fbe4632bc2e725ce0"
+  },
+  {
+    "id": "3507ce4c-67ac-44e8-a46a-4deb88eb22df",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261008T053838-9c23cb",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "36bc726a-32e5-4860-b61c-8ceb6090511c",
+    "kind": "Experiment",
+    "title": "eval-20261008T062435-0b5ed8: Independent CP-SAT destroy-and-repair LNS repaired",
+    "status": "complete",
+    "linked_beliefs": [
+      "f268c957-9001-4fdc-b788-9a7036c07ede",
+      "5cc8758d-f897-460e-9fc3-25b8b324af4f",
+      "918b3601-bc10-4f5b-b9a6-322655044b99"
+    ],
+    "outcome_sha256": "00ede1d8dab9b726f5093f82a861bada6910f9916ac036e324fa707faed9e55b"
+  },
+  {
+    "id": "3c9feb99-4a16-4e30-85bb-a22b782d6dea",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261008T021601-cacd61",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "3fc82d4d-3187-414a-a93a-6cbbf8422d33",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261007T194252-f3661f",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "42c965d7-9a5e-45bc-b4ce-3745fbecb251",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261008T024132-3e331e",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "57426417-1429-41eb-8680-668da8dbdbc7",
+    "kind": "Belief",
+    "title": "Sagent decision: e42d9b87",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "5cc8758d-f897-460e-9fc3-25b8b324af4f",
+    "kind": "Belief",
+    "title": "Sagent decision: 36bc726a",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "651bfdac-5cf7-40d4-b06e-1b2272e73d93",
+    "kind": "Experiment",
+    "title": "Interrupted by host reboot: eval-20261008T042151-fe8f02: Incremental-link bounded DAG tabu with evolving elites v2",
+    "status": "abandoned",
+    "linked_beliefs": [
+      "bd5c475e-e32a-4e16-b8ef-a90fd10224e6",
+      "0d752564-e8ae-4b8c-b801-9c143f500d26",
+      "b6ac9297-8351-436a-9b55-51ad3288ad81"
+    ],
+    "outcome_sha256": "fc0bd4d6da6f917afaa28fec0cf954fd6ce1e02384e5cfd87c839ce951cb2944"
+  },
+  {
+    "id": "65f662d7-ebfc-469a-b5f5-fc6b65fdcc2c",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261008T065001-4170ec",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "6dcd4110-15e3-4fbc-bb53-e9b4aabc995e",
+    "kind": "Belief",
+    "title": "Independent audit: LNS second seed wins one different case against v2",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "6f38b210-3141-4371-a778-652084c3bd12",
+    "kind": "Experiment",
+    "title": "eval-20261007T181119-70a857: Critical-path insertion tabu C++ v1 buildable",
+    "status": "complete",
+    "linked_beliefs": [
+      "b743814a-0517-456c-a647-d425e3d5e4d3",
+      "71ec4fe6-bc97-4890-9763-62cf4ab3d663"
+    ],
+    "outcome_sha256": "f4f4900d140600866aae5c9b9ac251d6652b905d57a3177a52facbef52c6b7b6"
+  },
+  {
+    "id": "70369f29-ec45-4926-8c8e-5fffd15e2aa3",
+    "kind": "Experiment",
+    "title": "eval-20261008T014545-af260b: Incremental-link bounded DAG tabu with evolving elites v2",
+    "status": "complete",
+    "linked_beliefs": [
+      "28c85f03-d6ed-427e-b960-bd1461cea71f",
+      "73b95dd4-3437-4ce9-bf71-00139315f2b7",
+      "918b3601-bc10-4f5b-b9a6-322655044b99"
+    ],
+    "outcome_sha256": "eff8bfd8f535778174e260819b5dff450b271f320d45eedfa4aef1a6a5c5ee36"
+  },
+  {
+    "id": "71ec4fe6-bc97-4890-9763-62cf4ab3d663",
+    "kind": "Belief",
+    "title": "Sagent decision: 6f38b210",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "7268c738-ea35-49e6-a8c6-236e163cc372",
+    "kind": "Experiment",
+    "title": "eval-20261008T065001-4170ec: Independent CP-SAT destroy-and-repair LNS repaired",
+    "status": "complete",
+    "linked_beliefs": [
+      "65f662d7-ebfc-469a-b5f5-fc6b65fdcc2c",
+      "1f28e9c0-a74f-4766-a195-87552610dc29",
+      "6dcd4110-15e3-4fbc-bb53-e9b4aabc995e"
+    ],
+    "outcome_sha256": "35921025abda232abcef87dd4d2a623746757c514b3a3980bc0ae539618d314d"
+  },
+  {
+    "id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "kind": "Experiment",
+    "title": "Frozen v2 versus EGRASP: twelve synthetic development cases at300s",
+    "status": "complete",
+    "linked_beliefs": [
+      "5685aaa7-ddbb-49fa-9539-3bc97dece56b",
+      "98ac15c4-1051-47be-8dbf-0b037caa49f8"
+    ],
+    "outcome_sha256": "fd17531dc5b93157cd7e420bd6d1d62a25dc9857e305306ee8216cc9fd391e05"
+  },
+  {
+    "id": "73b95dd4-3437-4ce9-bf71-00139315f2b7",
+    "kind": "Belief",
+    "title": "Sagent decision: 70369f29",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "76406518-3021-4238-af7d-6cad043acfee",
+    "kind": "Belief",
+    "title": "Sagent decision: 7cfe084e",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "7cfe084e-f5cb-4d55-b14c-0cd510b1cb1a",
+    "kind": "Experiment",
+    "title": "eval-20261007T190232-7d2ce7: Critical-path insertion tabu C++ v1 buildable",
+    "status": "complete",
+    "linked_beliefs": [
+      "97732a73-2253-46e6-8469-f4d8aba19ac9",
+      "76406518-3021-4238-af7d-6cad043acfee"
+    ],
+    "outcome_sha256": "596c53056bb75974f987c49d6238cce372db74a46a7fe44eae688e9d63fcb9dd"
+  },
+  {
+    "id": "842cfb38-b747-4a48-b45b-4ff070092692",
+    "kind": "Belief",
+    "title": "Sagent decision: 0bb8fe54",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "852a2995-1e53-473c-a9a3-3e15a2d97dcc",
+    "kind": "Belief",
+    "title": "Sagent decision: 993311ac",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "8bfd16ed-5af4-4b6d-9e49-8387c58efa11",
+    "kind": "Belief",
+    "title": "Sagent decision: 919d2029",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "918b3601-bc10-4f5b-b9a6-322655044b99",
+    "kind": "Belief",
+    "title": "Independent audit: repaired LNS wins one of five against v2 at300s",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "919d2029-f188-432e-896b-1241f2e11057",
+    "kind": "Experiment",
+    "title": "eval-20261007T194252-f3661f: Critical-path insertion tabu C++ v1 buildable",
+    "status": "complete",
+    "linked_beliefs": [
+      "3fc82d4d-3187-414a-a93a-6cbbf8422d33",
+      "8bfd16ed-5af4-4b6d-9e49-8387c58efa11"
+    ],
+    "outcome_sha256": "b196ee21ed70130c767f672833020892deee53e3ba193e860aad132ee5ad23ff"
+  },
+  {
+    "id": "97732a73-2253-46e6-8469-f4d8aba19ac9",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261007T190232-7d2ce7",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "99063d8f-9e1e-44bc-b798-2c3b89db384d",
+    "kind": "Belief",
+    "title": "Sagent decision: 09e44240",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "993311ac-aaee-4b30-a8db-783a8862bd9b",
+    "kind": "Experiment",
+    "title": "eval-20261008T071519-290929: Independent CP-SAT destroy-and-repair LNS repaired",
+    "status": "complete",
+    "linked_beliefs": [
+      "d158b09d-72db-4829-834f-cec9ebfa17b0",
+      "852a2995-1e53-473c-a9a3-3e15a2d97dcc",
+      "c6e0aef1-d75d-43aa-b217-aa53e69ce1d7"
+    ],
+    "outcome_sha256": "b518d58f9609409d550f0f8402b7d6195905d6a343fb985bf2ab6ec790e8ee11"
+  },
+  {
+    "id": "b6ac9297-8351-436a-9b55-51ad3288ad81",
+    "kind": "Belief",
+    "title": "Independent recheck confirms recovered second-seed public reference milestone",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "b743814a-0517-456c-a647-d425e3d5e4d3",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261007T181119-70a857",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "kind": "Experiment",
+    "title": "Frozen v2 versus EGRASP: second twelve-case development batch, tighter due dates",
+    "status": "complete",
+    "linked_beliefs": [
+      "6fbd7741-3f1b-4c2f-af6d-7d3dd7f00f9d",
+      "1dcc8b0d-769a-4f43-99c2-84e140fa4a95"
+    ],
+    "outcome_sha256": "cc5624e3de7541e82d54c42ea7778760ee36595666c62decb4e4e7e2d97cd596"
+  },
+  {
+    "id": "c61d56b6-ea2d-4f57-b8cc-c09735948829",
+    "kind": "Belief",
+    "title": "Sagent decision: 300b0271",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "c6e0aef1-d75d-43aa-b217-aa53e69ce1d7",
+    "kind": "Belief",
+    "title": "Independent audit of LNS at1200s against frozen v2",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "d158b09d-72db-4829-834f-cec9ebfa17b0",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261008T071519-290929",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "ddd473ef-bd4c-4c35-8102-5b5fe870f7ce",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261007T183705-3bba91",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "e42d9b87-4843-4ebf-9ef3-7d6826ccae75",
+    "kind": "Experiment",
+    "title": "eval-20261008T024132-3e331e: Incremental-link bounded DAG tabu with evolving elites v2",
+    "status": "complete",
+    "linked_beliefs": [
+      "42c965d7-9a5e-45bc-b4ce-3745fbecb251",
+      "57426417-1429-41eb-8680-668da8dbdbc7",
+      "c6e0aef1-d75d-43aa-b217-aa53e69ce1d7"
+    ],
+    "outcome_sha256": "0e2846172bf10e4bf9d1b2e1cd348e8da0ccdf2487a1cafa14c2fe5702ee4c52"
+  },
+  {
+    "id": "f268c957-9001-4fdc-b788-9a7036c07ede",
+    "kind": "Belief",
+    "title": "Measured outcome: eval-20261008T062435-0b5ed8",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "f7c592ac-b6a0-4c42-97c8-726f0a2551ec",
+    "kind": "Experiment",
+    "title": "eval-20261008T053838-9c23cb: Incremental-link bounded DAG tabu with evolving elites v2",
+    "status": "complete",
+    "linked_beliefs": [
+      "3507ce4c-67ac-44e8-a46a-4deb88eb22df",
+      "f7f33b8b-e8a8-4ff3-81f4-a81089a4e417",
+      "b6ac9297-8351-436a-9b55-51ad3288ad81"
+    ],
+    "outcome_sha256": "bf8534f503d7b3830d1cf51f523871a0e9afba579e216121858c436a3a9761c4"
+  },
+  {
+    "id": "f7f33b8b-e8a8-4ff3-81f4-a81089a4e417",
+    "kind": "Belief",
+    "title": "Sagent decision: f7c592ac",
+    "status": "active",
+    "linked_beliefs": [],
+    "outcome_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

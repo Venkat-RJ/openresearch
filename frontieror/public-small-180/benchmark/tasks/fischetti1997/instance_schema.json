@@ -1,0 +1,25 @@
+{
+  "problem_size": {
+    "n": "<int> Total number of nodes (locations) in the network.",
+    "m": "<int> Number of clusters that partition all nodes.",
+    "num_edges": "<int> Total number of undirected edges connecting pairs of nodes."
+  },
+  "nodes": [
+    {
+      "id": "<int> Unique identifier for this node.",
+      "x": "<int> Horizontal coordinate of this node.",
+      "y": "<int> Vertical coordinate of this node.",
+      "cluster": "<int> Cluster to which this node belongs."
+    }
+  ],
+  "clusters": [
+    {
+      "id": "<int> Unique identifier for this cluster.",
+      "node_ids": "<list[int], length varies> Nodes that belong to this cluster.",
+      "size": "<int> Number of nodes in this cluster."
+    }
+  ],
+  "distance_matrix_upper_triangular": {
+    "values": "<list[int], length n*(n-1)/2> Pairwise Euclidean travel costs between all node pairs, stored as a flat upper-triangular matrix in row-major order."
+  }
+}

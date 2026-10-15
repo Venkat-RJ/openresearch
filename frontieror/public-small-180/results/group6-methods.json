@@ -1,0 +1,126 @@
+{
+  "schwerdfeger2016": {
+    "method": "LPT workload construction; improving single-job moves and pairwise swaps",
+    "hypothesis": "aed8f13d-049f-46e4-836f-7c160269f3f4"
+  },
+  "segundo2019": {
+    "method": "Edge-weighted clique multistart greedy construction and destroy/repair",
+    "hypothesis": "d765bc46-d8b3-4d5e-98c3-88a4ab57776b"
+  },
+  "segundo2019b": {
+    "method": "Vertex-weighted clique bitset branch-and-bound with weighted independent-set coloring bounds",
+    "hypothesis": "5351dad2-4d22-4839-9bc4-e4861e81838e"
+  },
+  "seker2021": {
+    "method": "Cluster representative selection, greedy coloring and local representative/color changes",
+    "hypothesis": "98fa59d0-16bd-4500-9268-bb594ebf7500"
+  },
+  "song2021": {
+    "method": "Initial interval/intensity greedy coordinate descent; alternative exact reduced pulse MILP",
+    "hypothesis": "473a0356-c19f-4727-9c58-cf1adb6cf01f",
+    "alternative_hypothesis": "af963a39-622d-43af-94c0-b2e602ed896c"
+  },
+  "spliet2015": {
+    "method": "Shared-window feasible insertion; restricted exact tiny common-window arc-flow model",
+    "hypothesis": "95990062-4951-492d-8651-f4bbf1bbb0a8"
+  },
+  "taninmis2022": {
+    "method": "Initial existing-only hourly dispatch; alternative line investments and decomposed 24-hour unit commitment",
+    "hypothesis": "c8491673-fa3c-4367-9bd4-09a9a3e5a57d",
+    "alternative_hypothesis": "a3424422-0145-4ff1-8c0a-83fe227e28d1"
+  },
+  "tran2018": {
+    "method": "Service-set bitsets, redundant-set elimination, exact tiny station subset enumeration",
+    "hypothesis": "7b3b8ade-3cd5-473f-a899-fb4b72cc5d4d"
+  },
+  "vidal2011": {
+    "method": "Joint depot/pattern/route insertion, randomized multistart, within-route two-opt",
+    "hypothesis": "cf25ef4f-e6a6-4837-b980-d7a4488aa746"
+  },
+  "walteros2020": {
+    "method": "Bitset maximum clique greedy starts and coloring branch-and-bound",
+    "hypothesis": "92e73580-0454-4a85-a2b3-433af9345080"
+  },
+  "wang2018": {
+    "method": "Reduced berth/profile master, integral fixed-berth yard transportation LP and Lagrangian cuts",
+    "hypothesis": "7e9fe50d-5eb1-4bf2-9d13-778094373b5c"
+  },
+  "wang2019": {
+    "method": "Compact exact commodity arc-flow and fleet-design MILP",
+    "hypothesis": "26ceb363-435b-4e3f-9e03-994bbb5c6cfd"
+  },
+  "wang2025": {
+    "method": "Greedy marginal gains followed by exact tiny cardinality subset enumeration",
+    "hypothesis": "816dd1ee-6c59-49c8-8b94-e252a5929ddd"
+  },
+  "wangk2020": {
+    "method": "Connection-aware first-stage schedule and greedy recourse respecting released indicator-drop convention",
+    "hypothesis": "9a86a715-c165-4fab-8ed7-b4b82de656b9"
+  },
+  "wangy2020": {
+    "method": "Parametric LAP starts, exact swap-delta descent, perturbation and gradient LAP; alternative pre-import wall clock",
+    "hypothesis": "a628e89c-1d62-42da-b134-9d2988dd8624",
+    "alternative_hypothesis": "9544ef3e-f7e2-4453-a4ff-38d9b006d8e9"
+  },
+  "watermeyer2020": {
+    "method": "Temporal bound propagation/earliest witness and exact one-hot scheduling MILP",
+    "hypothesis": "513b55f9-4ea0-44ec-b895-e7d33f2f458a"
+  },
+  "watermeyer2022": {
+    "method": "Temporal bound propagation/earliest witness and exact one-hot scheduling MILP",
+    "hypothesis": "e588e950-6d8b-4b29-96ab-458ec77ab008"
+  },
+  "watermeyer2023": {
+    "method": "Temporal bound propagation/earliest witness and exact one-hot scheduling MILP",
+    "hypothesis": "5c4cf45d-c5cf-49a9-8003-37eca70259ec"
+  },
+  "wei2020": {
+    "method": "Conflict-aware best-fit decreasing plus compact exact item/bin MILP",
+    "hypothesis": "a75b97b0-c815-424f-9ea7-9c533e68249a"
+  },
+  "wei2020b": {
+    "method": "Vector best-fit decreasing plus compact exact two-capacity packing MILP",
+    "hypothesis": "0bb7505e-fbd7-4590-b032-af66edff032a"
+  },
+  "wu2018": {
+    "method": "Compact exact production/setup/inventory lot-sizing MILP with demand/capacity setup bounds",
+    "hypothesis": "facd4be1-a401-4970-a6c9-7af0b94000a6"
+  },
+  "wu2022": {
+    "method": "Single-sourcing/setup/plant MILP followed by optimal fixed-discrete network-flow completion LP",
+    "hypothesis": "76c6cdf7-1fac-435b-a068-ebef7d63d9e4"
+  },
+  "wu2023": {
+    "method": "Exact all-K two-stage scenario subsets plus one-stage convex aggregate assignment MIPs",
+    "hypothesis": "d98f5c6a-2af2-40ad-8e8d-9bee38e4cbfe"
+  },
+  "xie2019": {
+    "method": "Deterministic profile reproduction, dominance pruning, constructive multistart and restricted plan MILP",
+    "hypothesis": "be5c195a-8a2a-4026-8810-3e3b7aa581c2"
+  },
+  "xu2024": {
+    "method": "Exact tiny cardinality support enumeration with analytical SPD/KKT variance solutions allowing short selling",
+    "hypothesis": "8f5cd98d-f934-4cb9-9c94-a75367fe68f7"
+  },
+  "yang2013": {
+    "method": "Marginal-density/swap/ruin-repair construction plus exact aggregated-product MILP",
+    "hypothesis": "b4a77ff0-49c4-49a9-b75b-4b57c1d16533"
+  },
+  "zetina2019": {
+    "method": "Initial shortest-path/Benders decomposition; alternative Yen-path pool with compact exact pool-selection/arc-opening MILP",
+    "hypothesis": "c6d0c5e3-5aaa-42c1-a16c-da696a55bfd9",
+    "alternative_hypothesis": "18db699f-56f5-4a8e-b8d3-c71dd4b38120"
+  },
+  "zetina2020": {
+    "method": "Nearest-neighbor TSP baseline and anchored permutation enumeration",
+    "hypothesis": "5b6c3268-57d4-4d9e-9b1e-f8a73e2a5efc"
+  },
+  "zhang2025": {
+    "method": "Duplicate-duty cost dominance, exact-cover construction and exact set-partitioning MILP",
+    "hypothesis": "86cda681-02cc-4188-afbb-80c441268f24"
+  },
+  "zohali2022": {
+    "method": "Topological contiguous partition baseline, exact station sequence subset DP and ordered-ideal minimax partition DP",
+    "hypothesis": "33976e76-7198-4453-9fde-67cedc95f392"
+  }
+}

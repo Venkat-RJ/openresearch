@@ -1,0 +1,65 @@
+{
+  "slot": "final-tf2-priority-4-r2-frozen-v2",
+  "instance": "final-tf2-priority-4",
+  "solver": "frozen-v2",
+  "repeat": 2,
+  "block": 50,
+  "seed": 155921,
+  "stratum": "tf2-priority",
+  "status": "VALID_IN_TIME",
+  "objective": 5638,
+  "measurement": {
+    "argv": [
+      "./frozen-v2",
+      "/work/runs/final-tf2-priority-4-r2-frozen-v2/input.txt",
+      "/work/runs/final-tf2-priority-4-r2-frozen-v2/output.json",
+      "290",
+      "155921",
+      "1"
+    ],
+    "pid": 740,
+    "started_unix": 1791483246.2986073,
+    "external_deadline_seconds": 300.0,
+    "elapsed_seconds": 289.878501297997,
+    "user_cpu_seconds": 288.181862,
+    "system_cpu_seconds": 0.006993,
+    "returncode": 0,
+    "timed_out": false,
+    "samples": [
+      {
+        "observed_seconds": 289.8745609229991,
+        "sha256": "21fa9b454285335782200e205a79912c2fe0f44ecab5e573352eeedbe395c72b",
+        "bytes": 11422,
+        "parseable": true,
+        "parse_error": null,
+        "snapshot": "snapshot-0000.json"
+      }
+    ],
+    "validation_status": "Pending both schedule validators; parseable is not feasible",
+    "timing_scope": "Process startup and execution; excludes container startup and preconversion"
+  },
+  "checks": [
+    {
+      "snapshot": "snapshot-0000.json",
+      "observed_seconds": 289.8745609229991,
+      "sha256": "21fa9b454285335782200e205a79912c2fe0f44ecab5e573352eeedbe395c72b",
+      "audit": {
+        "feasible": true,
+        "recomputed_objective": 5638,
+        "jobs_checked": 30,
+        "operations_checked": 300,
+        "errors": []
+      },
+      "official": {
+        "feasible": true,
+        "violated_constraints": [],
+        "violations": [],
+        "violation_magnitudes": []
+      },
+      "objective": 5638,
+      "valid": true
+    }
+  ],
+  "report_matches_snapshot": true,
+  "reported": null
+}

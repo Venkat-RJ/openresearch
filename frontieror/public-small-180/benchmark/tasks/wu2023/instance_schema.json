@@ -1,0 +1,16 @@
+{
+  "problem_dimension_n": "<int> Number of cost dimensions shared by all scenarios.",
+  "num_scenarios_N": "<int> Total number of scenarios in the original uncertainty set.",
+  "K_values": "<list[int], length num_K> Target sizes for the reduced scenario set to evaluate.",
+  "selection_problem": {
+    "n": "<int> Number of items available for selection.",
+    "p": "<int> Exact number of items that must be chosen in a feasible selection."
+  },
+  "vertex_cover_problem": {
+    "n": "<int> Number of nodes in the graph.",
+    "num_edges": "<int> Total number of undirected edges in the graph.",
+    "edges": "<list[list[int]], shape [num_edges][2]> Pairs of node indices forming each undirected edge in the graph."
+  },
+  "scenarios": "<list[list[int]], shape [num_scenarios_N][problem_dimension_n]> Cost coefficient for each scenario in each cost dimension.",
+  "first_stage_costs": "<list[int], length problem_dimension_n> Deterministic first-stage cost for each dimension in the two-stage formulation."
+}

@@ -1,0 +1,49 @@
+{
+  "num_demand_sites": "<int> Number of customer demand sites in the supply chain network.",
+  "num_production_sites": "<int> Number of production sites where modular manufacturing units can be stationed.",
+  "num_scenarios": "<int> Number of demand scenarios representing possible future realizations of customer demand.",
+  "num_time_periods": "<int> Number of time periods in the planning horizon.",
+  "num_module_sizes": "<int> Number of available manufacturing module sizes.",
+  "units_per_module_size": "<int> Maximum number of individual manufacturing units that can be purchased for each module size.",
+  "u_max": "<float> Global maximum total production allowed at any single production site in any period.",
+  "scenario_probabilities": "<list[float], length num_scenarios> Probability of each demand scenario occurring.",
+  "demand_sites": [
+    {
+      "id": "<int> Zero-based index identifying this demand site.",
+      "x": "<float> Horizontal coordinate of the demand site location.",
+      "y": "<float> Vertical coordinate of the demand site location."
+    }
+  ],
+  "production_sites": [
+    {
+      "id": "<int> Zero-based index identifying this production site.",
+      "x": "<float> Horizontal coordinate of the production site location.",
+      "y": "<float> Vertical coordinate of the production site location."
+    }
+  ],
+  "module_sizes": [
+    {
+      "id": "<int> Zero-based index identifying this module size category.",
+      "name": "<str> Descriptive name of this module size category.",
+      "capacity": "<float> Amount of demand a single unit of this module size can serve per time period when stationed at a production site.",
+      "capital_cost_per_unit": "<float> One-time purchase cost for acquiring a single manufacturing unit of this module size."
+    }
+  ],
+  "module_units": [
+    {
+      "module_size_id": "<int> Module size category this unit belongs to.",
+      "unit_id": "<int> Index of this individual unit within its module size category.",
+      "capital_cost": "<float> One-time purchase cost for acquiring this specific manufacturing unit."
+    }
+  ],
+  "production_costs": "<list[list[float]], shape [num_demand_sites][num_production_sites]> Per-unit cost of serving demand at each demand site from each production site.",
+  "relocation_costs": "<list[list[list[float]]], shape [num_production_sites][num_production_sites][num_module_sizes]> Cost of relocating one manufacturing unit of each module size between each ordered pair of production sites.",
+  "penalty_costs": "<list[list[float]], shape [num_demand_sites][num_time_periods]> Penalty cost per unit of demand left unserved at each demand site in each time period.",
+  "scenarios": [
+    {
+      "id": "<int> Zero-based index identifying this demand scenario.",
+      "probability": "<float> Probability of this demand scenario occurring.",
+      "demands": "<list[list[float]], shape [num_demand_sites][num_time_periods]> Customer demand quantity at each demand site in each time period under this scenario."
+    }
+  ]
+}

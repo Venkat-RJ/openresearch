@@ -1,0 +1,1796 @@
+{
+  "self": {
+    "id": "30259df7-e529-4d91-a667-98dc707a25f9",
+    "status": "active",
+    "created": "2026-10-08T10:04:42.496000+00:00",
+    "modified": "2026-10-08T10:04:44.275000+00:00",
+    "config": {
+      "plan": [
+        {
+          "name": "final-tf3_2-uniform-0",
+          "seed": "final-synthetic-v1:3/2:uniform:0",
+          "weights": "uniform",
+          "tightness": "3/2"
+        },
+        {
+          "name": "final-tf3_2-uniform-1",
+          "seed": "final-synthetic-v1:3/2:uniform:1",
+          "weights": "uniform",
+          "tightness": "3/2"
+        },
+        {
+          "name": "final-tf3_2-uniform-2",
+          "seed": "final-synthetic-v1:3/2:uniform:2",
+          "weights": "uniform",
+          "tightness": "3/2"
+        },
+        {
+          "name": "final-tf3_2-uniform-3",
+          "seed": "final-synthetic-v1:3/2:uniform:3",
+          "weights": "uniform",
+          "tightness": "3/2"
+        },
+        {
+          "name": "final-tf3_2-uniform-4",
+          "seed": "final-synthetic-v1:3/2:uniform:4",
+          "weights": "uniform",
+          "tightness": "3/2"
+        },
+        {
+          "name": "final-tf3_2-priority-0",
+          "seed": "final-synthetic-v1:3/2:priority:0",
+          "weights": "priority",
+          "tightness": "3/2"
+        },
+        {
+          "name": "final-tf3_2-priority-1",
+          "seed": "final-synthetic-v1:3/2:priority:1",
+          "weights": "priority",
+          "tightness": "3/2"
+        },
+        {
+          "name": "final-tf3_2-priority-2",
+          "seed": "final-synthetic-v1:3/2:priority:2",
+          "weights": "priority",
+          "tightness": "3/2"
+        },
+        {
+          "name": "final-tf3_2-priority-3",
+          "seed": "final-synthetic-v1:3/2:priority:3",
+          "weights": "priority",
+          "tightness": "3/2"
+        },
+        {
+          "name": "final-tf3_2-priority-4",
+          "seed": "final-synthetic-v1:3/2:priority:4",
+          "weights": "priority",
+          "tightness": "3/2"
+        },
+        {
+          "name": "final-tf7_4-uniform-0",
+          "seed": "final-synthetic-v1:7/4:uniform:0",
+          "weights": "uniform",
+          "tightness": "7/4"
+        },
+        {
+          "name": "final-tf7_4-uniform-1",
+          "seed": "final-synthetic-v1:7/4:uniform:1",
+          "weights": "uniform",
+          "tightness": "7/4"
+        },
+        {
+          "name": "final-tf7_4-uniform-2",
+          "seed": "final-synthetic-v1:7/4:uniform:2",
+          "weights": "uniform",
+          "tightness": "7/4"
+        },
+        {
+          "name": "final-tf7_4-uniform-3",
+          "seed": "final-synthetic-v1:7/4:uniform:3",
+          "weights": "uniform",
+          "tightness": "7/4"
+        },
+        {
+          "name": "final-tf7_4-uniform-4",
+          "seed": "final-synthetic-v1:7/4:uniform:4",
+          "weights": "uniform",
+          "tightness": "7/4"
+        },
+        {
+          "name": "final-tf7_4-priority-0",
+          "seed": "final-synthetic-v1:7/4:priority:0",
+          "weights": "priority",
+          "tightness": "7/4"
+        },
+        {
+          "name": "final-tf7_4-priority-1",
+          "seed": "final-synthetic-v1:7/4:priority:1",
+          "weights": "priority",
+          "tightness": "7/4"
+        },
+        {
+          "name": "final-tf7_4-priority-2",
+          "seed": "final-synthetic-v1:7/4:priority:2",
+          "weights": "priority",
+          "tightness": "7/4"
+        },
+        {
+          "name": "final-tf7_4-priority-3",
+          "seed": "final-synthetic-v1:7/4:priority:3",
+          "weights": "priority",
+          "tightness": "7/4"
+        },
+        {
+          "name": "final-tf7_4-priority-4",
+          "seed": "final-synthetic-v1:7/4:priority:4",
+          "weights": "priority",
+          "tightness": "7/4"
+        },
+        {
+          "name": "final-tf2-uniform-0",
+          "seed": "final-synthetic-v1:2:uniform:0",
+          "weights": "uniform",
+          "tightness": "2"
+        },
+        {
+          "name": "final-tf2-uniform-1",
+          "seed": "final-synthetic-v1:2:uniform:1",
+          "weights": "uniform",
+          "tightness": "2"
+        },
+        {
+          "name": "final-tf2-uniform-2",
+          "seed": "final-synthetic-v1:2:uniform:2",
+          "weights": "uniform",
+          "tightness": "2"
+        },
+        {
+          "name": "final-tf2-uniform-3",
+          "seed": "final-synthetic-v1:2:uniform:3",
+          "weights": "uniform",
+          "tightness": "2"
+        },
+        {
+          "name": "final-tf2-uniform-4",
+          "seed": "final-synthetic-v1:2:uniform:4",
+          "weights": "uniform",
+          "tightness": "2"
+        },
+        {
+          "name": "final-tf2-priority-0",
+          "seed": "final-synthetic-v1:2:priority:0",
+          "weights": "priority",
+          "tightness": "2"
+        },
+        {
+          "name": "final-tf2-priority-1",
+          "seed": "final-synthetic-v1:2:priority:1",
+          "weights": "priority",
+          "tightness": "2"
+        },
+        {
+          "name": "final-tf2-priority-2",
+          "seed": "final-synthetic-v1:2:priority:2",
+          "weights": "priority",
+          "tightness": "2"
+        },
+        {
+          "name": "final-tf2-priority-3",
+          "seed": "final-synthetic-v1:2:priority:3",
+          "weights": "priority",
+          "tightness": "2"
+        },
+        {
+          "name": "final-tf2-priority-4",
+          "seed": "final-synthetic-v1:2:priority:4",
+          "weights": "priority",
+          "tightness": "2"
+        }
+      ],
+      "image": "sha256:5bf378efea878ad3fba6a3772e7eee8061dcd620d6f738e8dccd27286679c448",
+      "stage": "confirmatory",
+      "memory": "512m",
+      "masking": "Do not feed intermediate scores to Sagent or change the frozen solvers, input plan, schedule or analysis. Trackinizer stores progress and file commitments until completion. Shared host filesystem is not an access-control boundary.",
+      "primary": "Mean of 30 instance-level H values, each averaging nine cross-repetition comparisons. Valid beats failure; both failed tie; lower objective wins.",
+      "decision": "Primary advantage only if two-sided95% stratified instance bootstrap lower bound for H is greater than zero AND candidate valid count >= comparator valid count. Otherwise not established.",
+      "seeds_v2": [
+        104729,
+        130363,
+        155921
+      ],
+      "cpu_limit": 1,
+      "due_dates": "release + ceil(TF times own processing sum); exact rational TF3/2,7/4,2",
+      "rationale": "Final evaluation on a fixed custom distribution selected during development; all zeros and failures retained, no input or implementation changes",
+      "secondary": "Mean (mean E - mean V)/max(1,mean E,mean V). Full-sample numeric analysis only if all180 executions valid; otherwise conditional descriptive comparisons only.",
+      "order_seed": 2026100801,
+      "provenance": "LiSA handbook p70 equations7.1/7.2 motivate time formulas; other parameters are custom design",
+      "claim_scope": "This custom distribution and these frozen implementations under emulation; not algorithmic novelty, optimality, current SOTA or a FrontierOR-wide result",
+      "seed_egrasp": "undocumented; not seed-matched",
+      "timing_claim": "Equal external deadlines and nominal internal requests, not equal CPU work",
+      "release_dates": "uniform integers0..floor(total processing/(2n))",
+      "solver_sha256": {
+        "egrasp": "c928be36ef87fc376ebb3a4adc4dfcdea791cc195e9893bca21a8d849032bc2e",
+        "frozen-v2": "8b1dbef6e83755e6932dd8f8097d301794e24a0029e4cdfe988d47bb51242756",
+        "frozen-v2.cpp": "46ef3565ec8a1aeb9f458a1b13abd8b4c7be6a0b05448b75a818e074e51c0d1e"
+      },
+      "source_sha256": {
+        "lisa_adapter.py": "b8fdfb18e4ee002b12da35b292ed85c02f697a3db6d743e02e3b8f27c733ac3c",
+        "timed_solver.py": "8760c22f9a04a7d402650d04de75a373364a36676a32244fe3af7cec27f5bacb",
+        "audit_schedule.py": "dc05abc0c68e074c91ccfecc910819a262a834e8efba0b34a832fff49c03ff22",
+        "final_protocol.py": "690ecbd4ca53c2ae265e2f0939637b02dcfaee155d7cfe02781adf4253a22250",
+        "final_comparison.py": "bcef035b5d0cda9d9089545c973f6b28ee0d7d2b875f150cf2893f3d3a36c24b",
+        "comparator_analysis.py": "67a243014ec3c6af5ca3ef8b6e545b6ddceaf729151408d22a37b4d17fde22d8",
+        "synthetic_instances_v2.py": "5380a909867986a146378ea9213e922d6de337dce2ec85a3a7e99c7534f8fa29",
+        "comparator_timing_calibration.py": "e2324058a5824169cc67f1c9ed3b6bc3121095338813f773915abbbba03c1339"
+      },
+      "timing_canary": {
+        "pid": 11725,
+        "state": "complete",
+        "passed": true,
+        "evidence": "research-workspace/Documents/ChatGPT/rekursive_tesitng/frontieror-pilot-20261007/evidence/egrasp-timing-canary-1791445771115218000",
+        "belief_id": "fab8803c-15f3-4a78-ac91-f6fd37e8b1c4",
+        "container": "frontieror-timing-canary-1791445771139341000",
+        "container_id": "8819d8fc735594028e053bf048a6b5b5c6dd65762219dc4427bccd9ee359a6ac",
+        "started_unix": 1791445772.543427,
+        "experiment_id": "03b2638f-b5b2-4d28-8319-6bf4eb20d5ce",
+        "finished_unix": 1791446063.107381
+      },
+      "bootstrap_seed": 2026100802,
+      "failure_policy": "Solver failure has no retry. Host/runner interruption or unresolved semantics stops this evaluation and retains every attempt. No automatic replacements; any continuation requires documented review before a completion claim.",
+      "python_version": "3.13.14",
+      "host_concurrency": "Sagent continues separately; one CPU quota does not isolate the host",
+      "internal_seconds": {
+        "egrasp": 290,
+        "frozen-v2": 290
+      },
+      "weights_priority": "Exactly six uniformly sampled jobs of30 have weight10; others1",
+      "development_audit": {
+        "gate": {
+          "checks": {
+            "timing": true,
+            "coverage": true,
+            "integrity": true,
+            "difficulty": true,
+            "correctness": true,
+            "reliability": true
+          },
+          "passed": true,
+          "interpretation": "Development gate only, not a statistical reliability or superiority claim",
+          "positive_pairs": 12,
+          "valid_per_solver": {
+            "egrasp": 12,
+            "frozen-v2": 12
+          },
+          "positive_pairs_by_stratum": {
+            "tf2-uniform": 2,
+            "tf2-priority": 2,
+            "tf3/2-uniform": 2,
+            "tf7/4-uniform": 2,
+            "tf3/2-priority": 2,
+            "tf7/4-priority": 2
+          }
+        },
+        "scope": "Development only; no final-test or superiority claim",
+        "state": "verified",
+        "valid": 24,
+        "scores": [
+          {
+            "v2": 46333,
+            "egrasp": 50224,
+            "instance": "dev2-tf3_2-uniform-0"
+          },
+          {
+            "v2": 50616,
+            "egrasp": 55232,
+            "instance": "dev2-tf3_2-uniform-1"
+          },
+          {
+            "v2": 12452,
+            "egrasp": 13500,
+            "instance": "dev2-tf3_2-priority-0"
+          },
+          {
+            "v2": 14663,
+            "egrasp": 16400,
+            "instance": "dev2-tf3_2-priority-1"
+          },
+          {
+            "v2": 38297,
+            "egrasp": 44061,
+            "instance": "dev2-tf7_4-uniform-0"
+          },
+          {
+            "v2": 28982,
+            "egrasp": 33147,
+            "instance": "dev2-tf7_4-uniform-1"
+          },
+          {
+            "v2": 9485,
+            "egrasp": 10627,
+            "instance": "dev2-tf7_4-priority-0"
+          },
+          {
+            "v2": 9021,
+            "egrasp": 9812,
+            "instance": "dev2-tf7_4-priority-1"
+          },
+          {
+            "v2": 26403,
+            "egrasp": 27368,
+            "instance": "dev2-tf2-uniform-0"
+          },
+          {
+            "v2": 15154,
+            "egrasp": 17611,
+            "instance": "dev2-tf2-uniform-1"
+          },
+          {
+            "v2": 6376,
+            "egrasp": 6697,
+            "instance": "dev2-tf2-priority-0"
+          },
+          {
+            "v2": 6150,
+            "egrasp": 7282,
+            "instance": "dev2-tf2-priority-1"
+          }
+        ],
+        "executions": 24,
+        "audit_belief": "1dcc8b0d-769a-4f43-99c2-84e140fa4a95",
+        "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+        "mean_case_reduction_percent": 9.727496658592095
+      },
+      "generator_version": "custom-jsptwt-development-v0.2",
+      "execution_schedule": [
+        {
+          "seed": 104729,
+          "slot": "final-tf3_2-priority-2-r0-frozen-v2",
+          "block": 0,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-2-r0-egrasp",
+          "block": 0,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-4-r0-egrasp",
+          "block": 1,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-4"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf7_4-priority-4-r0-frozen-v2",
+          "block": 1,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-4"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf2-uniform-2-r0-frozen-v2",
+          "block": 2,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-2-r0-egrasp",
+          "block": 2,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-3-r1-egrasp",
+          "block": 3,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-3"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf7_4-uniform-3-r1-frozen-v2",
+          "block": 3,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-2-r1-egrasp",
+          "block": 4,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-2"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf2-priority-2-r1-frozen-v2",
+          "block": 4,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-2-r2-egrasp",
+          "block": 5,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-2"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf3_2-uniform-2-r2-frozen-v2",
+          "block": 5,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-1-r2-egrasp",
+          "block": 6,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-1"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf2-uniform-1-r2-frozen-v2",
+          "block": 6,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-2-r2-egrasp",
+          "block": 7,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-2"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf3_2-priority-2-r2-frozen-v2",
+          "block": 7,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-2"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf3_2-uniform-0-r2-frozen-v2",
+          "block": 8,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-0-r2-egrasp",
+          "block": 8,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-0-r0-egrasp",
+          "block": 9,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-0"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf3_2-uniform-0-r0-frozen-v2",
+          "block": 9,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-1-r1-egrasp",
+          "block": 10,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-1"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf7_4-uniform-1-r1-frozen-v2",
+          "block": 10,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-1"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf2-uniform-1-r1-frozen-v2",
+          "block": 11,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-1-r1-egrasp",
+          "block": 11,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-1"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf3_2-priority-4-r2-frozen-v2",
+          "block": 12,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-4-r2-egrasp",
+          "block": 12,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-3-r1-egrasp",
+          "block": 13,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-3"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf7_4-priority-3-r1-frozen-v2",
+          "block": 13,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-4-r2-egrasp",
+          "block": 14,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-4"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf2-uniform-4-r2-frozen-v2",
+          "block": 14,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-4"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf7_4-priority-4-r2-frozen-v2",
+          "block": 15,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-4-r2-egrasp",
+          "block": 15,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-4-r1-egrasp",
+          "block": 16,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-4"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf7_4-uniform-4-r1-frozen-v2",
+          "block": 16,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-2-r1-egrasp",
+          "block": 17,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-2"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf2-uniform-2-r1-frozen-v2",
+          "block": 17,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-2"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf3_2-uniform-3-r0-frozen-v2",
+          "block": 18,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-3-r0-egrasp",
+          "block": 18,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-3"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf7_4-uniform-4-r0-frozen-v2",
+          "block": 19,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-4-r0-egrasp",
+          "block": 19,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-4"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf2-priority-4-r1-frozen-v2",
+          "block": 20,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-4-r1-egrasp",
+          "block": 20,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-4"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf3_2-priority-2-r1-frozen-v2",
+          "block": 21,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-2-r1-egrasp",
+          "block": 21,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-2-r2-egrasp",
+          "block": 22,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-2"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf2-uniform-2-r2-frozen-v2",
+          "block": 22,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-3-r2-egrasp",
+          "block": 23,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-3"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf3_2-priority-3-r2-frozen-v2",
+          "block": 23,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-4-r1-egrasp",
+          "block": 24,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-4"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf7_4-priority-4-r1-frozen-v2",
+          "block": 24,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-1-r0-egrasp",
+          "block": 25,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-1"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf2-priority-1-r0-frozen-v2",
+          "block": 25,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-1"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf2-priority-0-r1-frozen-v2",
+          "block": 26,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-0-r1-egrasp",
+          "block": 26,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-4-r2-egrasp",
+          "block": 27,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-4"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf7_4-uniform-4-r2-frozen-v2",
+          "block": 27,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-4"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf2-uniform-3-r1-frozen-v2",
+          "block": 28,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-3-r1-egrasp",
+          "block": 28,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-3"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf3_2-priority-4-r0-frozen-v2",
+          "block": 29,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-4-r0-egrasp",
+          "block": 29,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-1-r2-egrasp",
+          "block": 30,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-1"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf7_4-priority-1-r2-frozen-v2",
+          "block": 30,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-1-r1-egrasp",
+          "block": 31,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-1"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf2-priority-1-r1-frozen-v2",
+          "block": 31,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-1"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf3_2-uniform-0-r1-frozen-v2",
+          "block": 32,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-0-r1-egrasp",
+          "block": 32,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-0"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf2-priority-2-r0-frozen-v2",
+          "block": 33,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-2-r0-egrasp",
+          "block": 33,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-0-r0-egrasp",
+          "block": 34,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-0"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf3_2-priority-0-r0-frozen-v2",
+          "block": 34,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-0-r2-egrasp",
+          "block": 35,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-0"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf7_4-priority-0-r2-frozen-v2",
+          "block": 35,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-0"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf2-uniform-4-r0-frozen-v2",
+          "block": 36,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-4-r0-egrasp",
+          "block": 36,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-4"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf2-uniform-1-r0-frozen-v2",
+          "block": 37,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-1-r0-egrasp",
+          "block": 37,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-2-r1-egrasp",
+          "block": 38,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-2"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf7_4-priority-2-r1-frozen-v2",
+          "block": 38,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-2"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf7_4-priority-3-r2-frozen-v2",
+          "block": 39,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-3-r2-egrasp",
+          "block": 39,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-1-r2-egrasp",
+          "block": 40,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-1"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf7_4-uniform-1-r2-frozen-v2",
+          "block": 40,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-1"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf3_2-priority-0-r2-frozen-v2",
+          "block": 41,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-0-r2-egrasp",
+          "block": 41,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-0"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf3_2-uniform-3-r2-frozen-v2",
+          "block": 42,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-3-r2-egrasp",
+          "block": 42,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-3"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf3_2-priority-3-r0-frozen-v2",
+          "block": 43,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-3-r0-egrasp",
+          "block": 43,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-3"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf3_2-uniform-1-r2-frozen-v2",
+          "block": 44,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-1-r2-egrasp",
+          "block": 44,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-2-r2-egrasp",
+          "block": 45,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-2"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf7_4-priority-2-r2-frozen-v2",
+          "block": 45,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-2-r0-egrasp",
+          "block": 46,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-2"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf7_4-priority-2-r0-frozen-v2",
+          "block": 46,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-0-r1-egrasp",
+          "block": 47,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-0"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf2-uniform-0-r1-frozen-v2",
+          "block": 47,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-0"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf7_4-uniform-3-r2-frozen-v2",
+          "block": 48,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-3-r2-egrasp",
+          "block": 48,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-3"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf7_4-priority-0-r1-frozen-v2",
+          "block": 49,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-0-r1-egrasp",
+          "block": 49,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-4-r2-egrasp",
+          "block": 50,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-4"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf2-priority-4-r2-frozen-v2",
+          "block": 50,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-4-r2-egrasp",
+          "block": 51,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-4"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf3_2-uniform-4-r2-frozen-v2",
+          "block": 51,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-1-r2-egrasp",
+          "block": 52,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-1"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf3_2-priority-1-r2-frozen-v2",
+          "block": 52,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-2-r2-egrasp",
+          "block": 53,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-2"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf7_4-uniform-2-r2-frozen-v2",
+          "block": 53,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-3-r2-egrasp",
+          "block": 54,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-3"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf2-uniform-3-r2-frozen-v2",
+          "block": 54,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-3"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf2-priority-1-r2-frozen-v2",
+          "block": 55,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-1-r2-egrasp",
+          "block": 55,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-2-r2-egrasp",
+          "block": 56,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-2"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf2-priority-2-r2-frozen-v2",
+          "block": 56,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-2"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf3_2-uniform-2-r1-frozen-v2",
+          "block": 57,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-2-r1-egrasp",
+          "block": 57,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-1-r1-egrasp",
+          "block": 58,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-1"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf3_2-uniform-1-r1-frozen-v2",
+          "block": 58,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-0-r0-egrasp",
+          "block": 59,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-0"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf2-priority-0-r0-frozen-v2",
+          "block": 59,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-0"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf2-uniform-0-r0-frozen-v2",
+          "block": 60,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-0-r0-egrasp",
+          "block": 60,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-4-r1-egrasp",
+          "block": 61,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-4"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf2-uniform-4-r1-frozen-v2",
+          "block": 61,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-3-r0-egrasp",
+          "block": 62,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-3"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf7_4-uniform-3-r0-frozen-v2",
+          "block": 62,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-3"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf2-uniform-3-r0-frozen-v2",
+          "block": 63,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-3-r0-egrasp",
+          "block": 63,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-2-r1-egrasp",
+          "block": 64,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-2"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf7_4-uniform-2-r1-frozen-v2",
+          "block": 64,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-2"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf7_4-uniform-0-r1-frozen-v2",
+          "block": 65,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-0-r1-egrasp",
+          "block": 65,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-0-r2-egrasp",
+          "block": 66,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-0"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf7_4-uniform-0-r2-frozen-v2",
+          "block": 66,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-4-r0-egrasp",
+          "block": 67,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-4"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf2-priority-4-r0-frozen-v2",
+          "block": 67,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-4"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf3_2-uniform-4-r1-frozen-v2",
+          "block": 68,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-4-r1-egrasp",
+          "block": 68,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-4"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf7_4-uniform-1-r0-frozen-v2",
+          "block": 69,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-1-r0-egrasp",
+          "block": 69,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-1"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf3_2-uniform-2-r0-frozen-v2",
+          "block": 70,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-2-r0-egrasp",
+          "block": 70,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-2"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf3_2-priority-1-r1-frozen-v2",
+          "block": 71,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-1-r1-egrasp",
+          "block": 71,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-1"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf2-priority-3-r1-frozen-v2",
+          "block": 72,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-3-r1-egrasp",
+          "block": 72,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-3"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf2-uniform-0-r2-frozen-v2",
+          "block": 73,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-uniform-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-uniform-0-r2-egrasp",
+          "block": 73,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf2-uniform-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-1-r0-egrasp",
+          "block": 74,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-1"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf3_2-priority-1-r0-frozen-v2",
+          "block": 74,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-1"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf3_2-uniform-4-r0-frozen-v2",
+          "block": 75,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-4-r0-egrasp",
+          "block": 75,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-4"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf2-priority-3-r0-frozen-v2",
+          "block": 76,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-3-r0-egrasp",
+          "block": 76,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-0-r0-egrasp",
+          "block": 77,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-0"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf7_4-uniform-0-r0-frozen-v2",
+          "block": 77,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-0"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf3_2-priority-3-r1-frozen-v2",
+          "block": 78,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-3-r1-egrasp",
+          "block": 78,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-0-r0-egrasp",
+          "block": 79,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-0"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf7_4-priority-0-r0-frozen-v2",
+          "block": 79,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-1-r1-egrasp",
+          "block": 80,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-1"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf7_4-priority-1-r1-frozen-v2",
+          "block": 80,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-1"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf3_2-priority-0-r1-frozen-v2",
+          "block": 81,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-0-r1-egrasp",
+          "block": 81,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-1-r0-egrasp",
+          "block": 82,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-1"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf3_2-uniform-1-r0-frozen-v2",
+          "block": 82,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-1"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf2-priority-3-r2-frozen-v2",
+          "block": 83,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-3-r2-egrasp",
+          "block": 83,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-3"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf7_4-priority-1-r0-frozen-v2",
+          "block": 84,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-1"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-1-r0-egrasp",
+          "block": 84,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-1"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf3_2-uniform-3-r1-frozen-v2",
+          "block": 85,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-uniform-3"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-uniform-3-r1-egrasp",
+          "block": 85,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-uniform-3"
+        },
+        {
+          "seed": 155921,
+          "slot": "final-tf2-priority-0-r2-frozen-v2",
+          "block": 86,
+          "repeat": 2,
+          "solver": "frozen-v2",
+          "instance": "final-tf2-priority-0"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf2-priority-0-r2-egrasp",
+          "block": 86,
+          "repeat": 2,
+          "solver": "egrasp",
+          "instance": "final-tf2-priority-0"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf7_4-uniform-2-r0-frozen-v2",
+          "block": 87,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-uniform-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-uniform-2-r0-egrasp",
+          "block": 87,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-uniform-2"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf7_4-priority-3-r0-egrasp",
+          "block": 88,
+          "repeat": 0,
+          "solver": "egrasp",
+          "instance": "final-tf7_4-priority-3"
+        },
+        {
+          "seed": 104729,
+          "slot": "final-tf7_4-priority-3-r0-frozen-v2",
+          "block": 88,
+          "repeat": 0,
+          "solver": "frozen-v2",
+          "instance": "final-tf7_4-priority-3"
+        },
+        {
+          "seed": 130363,
+          "slot": "final-tf3_2-priority-4-r1-frozen-v2",
+          "block": 89,
+          "repeat": 1,
+          "solver": "frozen-v2",
+          "instance": "final-tf3_2-priority-4"
+        },
+        {
+          "seed": null,
+          "slot": "final-tf3_2-priority-4-r1-egrasp",
+          "block": 89,
+          "repeat": 1,
+          "solver": "egrasp",
+          "instance": "final-tf3_2-priority-4"
+        }
+      ],
+      "bootstrap_resamples": 10000,
+      "capture_poll_seconds": 0.01,
+      "development_experiment": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+      "official_checker_sha256": "d60bcdfc6c25b56bd25af8104ec05514609b7682976d2be972ef7f01fee1a3b3",
+      "external_deadline_seconds": 300,
+      "executions_per_solver_case": 3,
+      "final_data_generated_at_registration": false
+    },
+    "outcome": "{\"state\": \"running\", \"completed\": 0, \"planned\": 180, \"active_slot\": {\"slot\": \"final-tf3_2-priority-2-r0-frozen-v2\", \"instance\": \"final-tf3_2-priority-2\", \"solver\": \"frozen-v2\", \"repeat\": 0, \"block\": 0, \"seed\": 104729}, \"started_unix\": 1791453884.270423, \"commitments\": []}"
+  }
+}

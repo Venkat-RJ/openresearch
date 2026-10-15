@@ -1,0 +1,106 @@
+{
+  "problem_parameters": {
+    "num_zones": "<int> Number of spatial zones in the power grid.",
+    "num_weeks": "<int> Number of representative subperiods (weeks) in the planning year.",
+    "hours_per_subperiod": "<int> Number of consecutive hours in each subperiod (always 168).",
+    "total_hours": "<int> Total number of hourly time steps across all subperiods.",
+    "num_generator_clusters": "<int> Total number of generation and storage resource clusters across all zones.",
+    "num_UC_generators": "<int> Number of resource clusters subject to unit commitment constraints."
+  },
+  "released_investment_convention": {
+    "uc_power_increment": "<str, fixed value 'generator.capacity_size_MW'> UC investment counts physical generator blocks.",
+    "non_uc_power_increment_MW": "<float, fixed value 1> Non-UC investment counts integer MW increments rather than physical cluster units.",
+    "uc_storage_energy_increment": "<str, fixed value 'generator_parameters.<type>.energy_capacity_size_MWh'> UC storage energy uses its physical energy block.",
+    "non_uc_storage_energy_increment_MWh": "<float, fixed value 1> Non-UC storage energy investment counts integer MWh increments.",
+    "transmission_increment_MW": "<float, fixed value 1> MILP transmission expansion counts integer MW increments.",
+    "transmission_max_capacity_semantics": "<str, fixed value 'total_capacity_after_expansion'> transmission max_capacity_MW bounds final total line capacity.",
+    "milp_investment_variables_are_integer": "<bool, fixed true> All released MILP investment-count variables are integral."
+  },
+  "policy": {
+    "type": "<str> Policy scenario identifier (REF, RPS, or CO2).",
+    "description": "<str> Human-readable description of the active policy scenario.",
+    "RPS_share": "<float> Minimum fraction of total weighted demand that must be met by RPS-qualifying generation.",
+    "CO2_cap_tons_per_MWh": "<float> CO2 emissions cap expressed as tons per MWh of total weighted demand.",
+    "RPS_noncompliance_cost_per_MWh": "<float> Penalty cost per MWh of shortfall below the RPS target.",
+    "CO2_noncompliance_cost_per_ton": "<float> Penalty cost per ton of CO2 emissions exceeding the cap."
+  },
+  "subperiod_weights": "<list[float], length num_weeks> Weight of each subperiod reflecting how many weeks of the year it represents.",
+  "generators": "<list[object], length num_generator_clusters> List of resource cluster definitions, each containing the fields below.",
+  "generators[*]": {
+    "cluster_id": "<int> Unique identifier for this resource cluster.",
+    "zone": "<int> Zone in which this resource cluster is located.",
+    "resource_type": "<str> Technology type of the resource (e.g., natural_gas_CC, solar, battery, hydro).",
+    "is_UC": "<bool> Whether this cluster is subject to unit commitment constraints.",
+    "is_VRE": "<bool> Whether this cluster is a variable renewable energy resource.",
+    "is_storage": "<bool> Whether this cluster is a battery storage resource.",
+    "is_hydro": "<bool> Whether this cluster is a hydropower resource.",
+    "is_RPS_qualifying": "<bool> Whether generation from this cluster counts toward the renewable portfolio standard.",
+    "can_retire": "<bool> Whether existing units in this cluster may be retired.",
+    "capacity_size_MW": "<float> Physical power capacity of one cluster unit in MW; it is the investment block only for UC resources under released_investment_convention."
+  },
+  "generator_parameters": {
+    "<resource_type>": {
+      "capacity_size_MW": "<float> Power capacity of one unit in MW.",
+      "min_output_frac": "<float> Minimum generation output as a fraction of committed capacity.",
+      "ramp_up_rate_pct_per_hr": "<float> Maximum hourly increase in output as a fraction of capacity.",
+      "ramp_down_rate_pct_per_hr": "<float> Maximum hourly decrease in output as a fraction of capacity.",
+      "min_up_time_hr": "<int> Minimum number of consecutive hours a unit must remain online after starting.",
+      "min_down_time_hr": "<int> Minimum number of consecutive hours a unit must remain offline after shutting down.",
+      "variable_cost_per_MWh": "<float> Variable operating cost per MWh of generation.",
+      "fixed_OM_cost_per_MW_yr": "<float> Annual fixed operations and maintenance cost per MW of installed capacity.",
+      "investment_cost_per_MW_yr": "<float> Annualized capital cost per MW for building new capacity.",
+      "start_up_cost": "<float> Cost incurred each time a unit is started up.",
+      "CO2_emission_tons_per_MWh": "<float> CO2 emissions in tons per MWh of generation.",
+      "max_capacity_MW": "<float> Maximum total new capacity in MW that can be built for this resource type per zone."
+    },
+    "battery": {
+      "capacity_size_MW": "<float> Power capacity of one battery unit in MW.",
+      "energy_capacity_size_MWh": "<float> Energy capacity of one battery unit in MWh.",
+      "charging_efficiency": "<float> Fraction of withdrawn energy that is stored when charging.",
+      "discharging_efficiency": "<float> Fraction of stored energy that is delivered when discharging.",
+      "self_discharge_rate_pct": "<float> Fraction of stored energy lost per hour due to self-discharge.",
+      "min_duration_MWh_per_MW": "<float> Minimum ratio of energy capacity to power capacity in MWh per MW.",
+      "max_duration_MWh_per_MW": "<float> Maximum ratio of energy capacity to power capacity in MWh per MW.",
+      "variable_cost_per_MWh": "<float> Variable operating cost per MWh of storage throughput.",
+      "fixed_OM_cost_per_MW_yr": "<float> Annual fixed operations and maintenance cost per MW of installed power capacity.",
+      "investment_cost_per_MW_yr": "<float> Annualized capital cost per MW of new power capacity.",
+      "energy_investment_cost_per_MWh_yr": "<float> Annualized capital cost per MWh of new energy capacity.",
+      "energy_fixed_OM_cost_per_MWh_yr": "<float> Annual fixed energy-side O&M cost per installed MWh; explicitly zero in the released data.",
+      "max_capacity_MW": "<float> Maximum total new power capacity in MW that can be built.",
+      "max_energy_capacity_MWh": "<float> Maximum total new energy capacity in MWh that can be built.",
+      "CO2_emission_tons_per_MWh": "<float> CO2 emissions in tons per MWh of storage throughput."
+    },
+    "hydro": {
+      "capacity_size_MW": "<float> Power capacity of one hydro unit in MW.",
+      "min_output_frac": "<float> Minimum combined generation and spillage as a fraction of power capacity.",
+      "duration_MWh_per_MW": "<float> Fixed ratio of reservoir energy capacity to power capacity in MWh per MW.",
+      "variable_cost_per_MWh": "<float> Variable operating cost per MWh of hydro generation.",
+      "fixed_OM_cost_per_MW_yr": "<float> Annual fixed operations and maintenance cost per MW of installed capacity.",
+      "investment_cost_per_MW_yr": "<float> Annualized capital cost per MW for building new hydro capacity.",
+      "energy_investment_cost_per_MWh_yr": "<float> Hydro reservoir energy investment cost per MWh; explicitly zero in the released data.",
+      "energy_fixed_OM_cost_per_MWh_yr": "<float> Hydro reservoir fixed O&M cost per MWh; explicitly zero in the released data.",
+      "CO2_emission_tons_per_MWh": "<float> CO2 emissions in tons per MWh of hydro generation.",
+      "max_capacity_MW": "<float> Maximum total new hydro capacity in MW that can be built."
+    }
+  },
+  "existing_capacity": "<dict, key: '{cluster_id}'> Pre-existing installed power capacity in MW for each resource cluster.",
+  "demand": "<dict, key: '{zone}'> Hourly electricity demand in MWh for each zone, as a list of length total_hours.",
+  "consumer_segments": "<list[object]> Non-served energy segments defining curtailment tiers per zone.",
+  "consumer_segments[*]": {
+    "segment_id": "<int> Identifier for this curtailment tier.",
+    "zone": "<int> Zone to which this segment applies.",
+    "max_nse_fraction": "<float> Maximum fraction of zonal hourly demand that may go unserved in this tier.",
+    "cost_per_MWh": "<float> Penalty cost per MWh of unserved energy in this tier."
+  },
+  "transmission_lines": "<list[object]> Inter-zonal transmission lines connecting pairs of zones.",
+  "transmission_lines[*]": {
+    "line_id": "<int> Unique identifier for this transmission line.",
+    "from_zone": "<int> Zone at one end of the transmission line.",
+    "to_zone": "<int> Zone at the other end of the transmission line.",
+    "existing_capacity_MW": "<float> Pre-existing transfer capacity of the line in MW.",
+    "max_capacity_MW": "<float> Maximum total capacity the line can reach after expansion in MW.",
+    "investment_cost_per_MW_yr": "<float> Annualized capital cost per MW of new transmission capacity."
+  },
+  "availability": "<dict, key: '{cluster_id}'> Hourly availability factor (0 to 1) for each resource cluster, as a list of length total_hours.",
+  "hydro_inflow": "<dict, key: '{cluster_id}'> Hourly normalized inflow fraction for each hydro cluster, as a list of length total_hours."
+}

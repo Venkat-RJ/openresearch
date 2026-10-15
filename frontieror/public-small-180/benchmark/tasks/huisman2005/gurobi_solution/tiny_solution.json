@@ -1,0 +1,390 @@
+{
+  "objective_value": 37,
+  "num_vehicles": 12,
+  "num_drivers": 25,
+  "gurobi_objective": 2819.0,
+  "solver_status": 2,
+  "solve_time_seconds": 46.97171211242676,
+  "vehicle_schedule": {
+    "depot_1": [
+      [
+        0,
+        12,
+        19,
+        39,
+        51,
+        70,
+        82,
+        89
+      ],
+      [
+        1,
+        23,
+        35,
+        50,
+        62,
+        74,
+        78,
+        93
+      ],
+      [
+        2,
+        9,
+        29,
+        43,
+        48,
+        60,
+        72,
+        80,
+        92
+      ],
+      [
+        3,
+        15,
+        27,
+        49,
+        61,
+        84,
+        88
+      ],
+      [
+        4,
+        8,
+        21,
+        37,
+        44,
+        55,
+        69,
+        81
+      ],
+      [
+        5,
+        17,
+        26,
+        54,
+        58,
+        67,
+        76,
+        94
+      ],
+      [
+        6,
+        20,
+        32,
+        53,
+        65,
+        77,
+        86,
+        98
+      ],
+      [
+        7,
+        16,
+        24,
+        28,
+        34,
+        41,
+        63,
+        75,
+        87,
+        96,
+        99
+      ],
+      [
+        10,
+        22,
+        30,
+        36,
+        40,
+        46,
+        57,
+        66,
+        79,
+        91
+      ],
+      [
+        11,
+        33,
+        38,
+        45,
+        73,
+        85
+      ],
+      [
+        13,
+        25,
+        52,
+        59,
+        71,
+        90
+      ],
+      [
+        14,
+        18,
+        31,
+        42,
+        47,
+        56,
+        64,
+        68,
+        83,
+        95,
+        97
+      ]
+    ],
+    "depot_2": []
+  },
+  "crew_schedule": [
+    {
+      "depot": "depot_1",
+      "type": "tripper",
+      "trips": [
+        0,
+        12,
+        19
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "tripper",
+      "trips": [
+        2,
+        9
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "tripper",
+      "trips": [
+        53,
+        65,
+        77,
+        86
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "tripper",
+      "trips": [
+        73,
+        85
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "tripper",
+      "trips": [
+        84,
+        88
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "tripper",
+      "trips": [
+        90
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "early",
+      "trips": [
+        6,
+        24,
+        28,
+        34,
+        41
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "early",
+      "trips": [
+        1,
+        20,
+        32
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "early",
+      "trips": [
+        3,
+        15,
+        27,
+        40,
+        46
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        7,
+        16,
+        54,
+        58,
+        67,
+        76
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        11,
+        49,
+        61
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        5,
+        17,
+        26,
+        57,
+        66
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        4,
+        8,
+        21,
+        37,
+        44,
+        55
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        13,
+        25,
+        47,
+        56
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        14,
+        18,
+        31,
+        52,
+        59,
+        71
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        10,
+        22,
+        30,
+        36,
+        64,
+        68
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        23,
+        35,
+        69,
+        81
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        42,
+        63,
+        75,
+        87,
+        96
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        33,
+        38,
+        45,
+        74,
+        78
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        29,
+        43,
+        48,
+        70,
+        82,
+        89
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        39,
+        51,
+        94
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        50,
+        62,
+        93
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        60,
+        72,
+        80,
+        92,
+        99
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        79,
+        91,
+        97
+      ]
+    },
+    {
+      "depot": "depot_1",
+      "type": "split",
+      "trips": [
+        83,
+        95,
+        98
+      ]
+    }
+  ],
+  "runtime": 47.12
+}

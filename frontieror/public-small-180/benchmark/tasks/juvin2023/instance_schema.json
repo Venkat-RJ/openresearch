@@ -1,0 +1,18 @@
+{
+  "num_jobs": "<int> Number of jobs to be processed in the facility.",
+  "num_machines": "<int> Number of machines available in the facility.",
+  "preemption_allowed": "<bool> Whether an operation may be interrupted and resumed later on the same machine.",
+  "migration_allowed": "<bool> Whether an interrupted operation may resume on a different machine than the one it was assigned to.",
+  "jobs": [
+    {
+      "job_id": "<int> Zero-based identifier of the job.",
+      "operations": [
+        {
+          "operation_id": "<int> Zero-based position of the operation within its job, defining the required processing order.",
+          "eligible_machines": "<list[int], length num_eligible_machines> Zero-based indices of machines that can perform this operation.",
+          "processing_times": "<dict, key: '{machine_id}'> Time periods required to complete this operation on each eligible machine."
+        }
+      ]
+    }
+  ]
+}

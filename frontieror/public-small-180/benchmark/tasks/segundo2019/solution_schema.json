@@ -1,0 +1,7 @@
+{
+  "objective_value": "<float> Total weight of the chosen clique: sum of edge weights c_e over all edges with both endpoints in the clique.",
+  "clique_vertices": "<list[int]> Sorted list of vertex ids selected into the clique (corresponds to x_v = 1 in the MEWCP formulation).",
+  "clique_edges": [
+    "<list[int, int]> One [u, v] pair per edge whose both endpoints lie in the clique (i.e., y_e = 1). Each pair is given with u < v."
+  ]
+}

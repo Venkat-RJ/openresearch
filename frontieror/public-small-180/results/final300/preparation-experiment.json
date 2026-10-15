@@ -1,0 +1,36 @@
+{
+  "id": "768161c9-6e1b-419e-9f60-3bf66fb470ec",
+  "seq": 789,
+  "owner": "[private field removed]",
+  "account": "[private field removed]",
+  "status": "complete",
+  "title": "Final freeze preparation failure and corrected idempotency contract",
+  "description": null,
+  "labels": [
+    "frontieror-fresh",
+    "final300",
+    "infrastructure"
+  ],
+  "marginal_cost": {
+    "agent_usd": 0.0,
+    "resource_usd": 0.0
+  },
+  "subscribers": "[private field removed]",
+  "superseded_by": [],
+  "supersedes": [],
+  "produces": [],
+  "produced_by": [],
+  "created": "2026-10-11T10:49:50.521000+00:00",
+  "modified": "2026-10-11T10:49:50.522000+00:00",
+  "proves": [],
+  "favors": [],
+  "codechanges": null,
+  "outcome": "{\"failure\": \"First final preregistration rejected HTTP422: idempotency_key must be UUID, not descriptive string\", \"fix\": \"Deterministic uuid5 keys;120+30 registrations and exact config readbacks succeeded\", \"runtime_image_probe\": \"Unqualified docker image inspect name failed; image ls explicitly located frontier-or:latest and frontieror-candidate:1 at pinned fresh sha256\", \"solver_execution\": false}",
+  "config": {
+    "scope": "tiny only",
+    "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397"
+  },
+  "proved_by": [],
+  "favored_by": [],
+  "kind": "Experiment"
+}

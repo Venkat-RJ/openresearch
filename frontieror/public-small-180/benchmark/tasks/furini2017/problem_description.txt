@@ -1,0 +1,3 @@
+# Problem Description
+
+Given an undirected graph specified by a set of vertices and a set of edges connecting pairs of vertices, every vertex must be assigned exactly one color from a shared palette. Two vertices that are directly connected by an edge must receive different colors. The input data provides the total number of vertices, the total number of edges, and the complete list of edges, where each edge is an unordered pair of distinct vertices. The goal is to determine a color assignment for every vertex that satisfies the adjacency requirement while using the fewest distinct colors possible. Equivalently, the vertices must be partitioned into the smallest number of groups such that no group contains two vertices that share an edge.

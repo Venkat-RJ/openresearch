@@ -1,0 +1,54 @@
+{
+  "task": "rahmaniani2018",
+  "live_code": "research-workspace/Personal_experiments/frontieror-fresh-20261011/solvers/rahmaniani2018/gpt-5.6-sol/code.py",
+  "live_code_sha256": "0122a19d1f6ffe7fc55bd258c7dd191905fb9fc716c9e3fd87307c359d0f351b",
+  "immutable_primary_code_sha256": "974bd301e5fe92a10b7830be1b655e8152ba646ae47cb74f83ddae07583b59ac",
+  "primary_preserved": true,
+  "same_policy_AST_exact_after_stripping_only_telemetry": true,
+  "compile_passed": true,
+  "model_dimensions_unchanged": {
+    "variables": 512,
+    "initial_rows": 734,
+    "row_cap": 1850
+  },
+  "telemetry_transport": "stderr ENERGY_DIAGNOSTIC JSON, flush=True",
+  "fields": [
+    "Status",
+    "SolCount",
+    "NumVars",
+    "NumConstrs",
+    "iteration",
+    "active_rows",
+    "full_rows",
+    "worst_full_row_violation",
+    "worst_full_row_residual",
+    "worst_row_index",
+    "worst_row_category",
+    "full_rows_violated_at_publish_tolerance",
+    "exit_reason",
+    "complete_witness_found",
+    "elapsed_seconds"
+  ],
+  "exit_reasons": [
+    "no_solution_count",
+    "no_inactive_row_violations",
+    "active_row_cap",
+    "adding_violated_rows",
+    "deadline"
+  ],
+  "preserved": [
+    "Every model expression and original witness serialization",
+    "Six-hour blocks and constant commitment",
+    "1850 row cap and100-row separation batches",
+    "Mandatory Gurobi controls and callback",
+    "Official logger min_interval0 and early epoch origin",
+    "Integer CLI time limit"
+  ],
+  "worker_model_construction": false,
+  "worker_solver_execution": false,
+  "three_hour_implemented": false,
+  "preregistered_belief_id": "daae1a83-c2c1-4fd1-b72f-8d5b0325312c",
+  "status": "READY diagnostic-only LIVE; root native execution pending",
+  "experiment_id": "58b55122-59f4-48b1-8fd8-5bebfdaadb78",
+  "readback_verified": true
+}

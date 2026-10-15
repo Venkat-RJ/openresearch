@@ -1,0 +1,132 @@
+{
+  "self": {
+    "id": "4e0b7540-a429-41ff-9f21-8378d4d8ccc2",
+    "seq": 105,
+    "owner": "[private field removed]",
+    "account": "[private field removed]",
+    "status": "active",
+    "title": "Final synthetic comparison: measured outcome",
+    "description": "All180 planned executions retained. This is a comparison of frozen implementations on a preregistered custom distribution, not current SOTA. {\"instances\": [{\"instance\": \"final-tf3_2-uniform-0\", \"stratum\": \"tf3/2-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.06254176202877966}, {\"instance\": \"final-tf3_2-uniform-1\", \"stratum\": \"tf3/2-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.13205643126728156}, {\"instance\": \"final-tf3_2-uniform-2\", \"stratum\": \"tf3/2-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.11442386863648994}, {\"instance\": \"final-tf3_2-uniform-3\", \"stratum\": \"tf3/2-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.11231894368401582}, {\"instance\": \"final-tf3_2-uniform-4\", \"stratum\": \"tf3/2-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.10819126696699355}, {\"instance\": \"final-tf3_2-priority-0\", \"stratum\": \"tf3/2-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.055515516827185606}, {\"instance\": \"final-tf3_2-priority-1\", \"stratum\": \"tf3/2-priority\", \"wins\": 0, \"ties\": 0, \"losses\": 9, \"head_to_head\": -1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": -0.016532004563764597}, {\"instance\": \"final-tf3_2-priority-2\", \"stratum\": \"tf3/2-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.09675516224188786}, {\"instance\": \"final-tf3_2-priority-3\", \"stratum\": \"tf3/2-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.09041689225771521}, {\"instance\": \"final-tf3_2-priority-4\", \"stratum\": \"tf3/2-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.07125744404134438}, {\"instance\": \"final-tf7_4-uniform-0\", \"stratum\": \"tf7/4-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.058648949662333937}, {\"instance\": \"final-tf7_4-uniform-1\", \"stratum\": \"tf7/4-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.1856162694802711}, {\"instance\": \"final-tf7_4-uniform-2\", \"stratum\": \"tf7/4-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.10031101375963598}, {\"instance\": \"final-tf7_4-uniform-3\", \"stratum\": \"tf7/4-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.21185756156100713}, {\"instance\": \"final-tf7_4-uniform-4\", \"stratum\": \"tf7/4-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.10983686612034373}, {\"instance\": \"final-tf7_4-priority-0\", \"stratum\": \"tf7/4-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.01943559545644695}, {\"instance\": \"final-tf7_4-priority-1\", \"stratum\": \"tf7/4-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.040095806893119264}, {\"instance\": \"final-tf7_4-priority-2\", \"stratum\": \"tf7/4-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.052932892481018914}, {\"instance\": \"final-tf7_4-priority-3\", \"stratum\": \"tf7/4-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.10824742268041238}, {\"instance\": \"final-tf7_4-priority-4\", \"stratum\": \"tf7/4-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.053979823588443505}, {\"instance\": \"final-tf2-uniform-0\", \"stratum\": \"tf2-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.08999076070218663}, {\"instance\": \"final-tf2-uniform-1\", \"stratum\": \"tf2-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.17756751632973133}, {\"instance\": \"final-tf2-uniform-2\", \"stratum\": \"tf2-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.11835188340644602}, {\"instance\": \"final-tf2-uniform-3\", \"stratum\": \"tf2-uniform\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.14999036051667633}, {\"instance\": \"final-tf2-uniform-4\", \"stratum\": \"tf2-uniform\", \"wins\": 8, \"ties\": 0, \"losses\": 1, \"head_to_head\": 0.7777777777777778, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.08048192771084342}, {\"instance\": \"final-tf2-priority-0\", \"stratum\": \"tf2-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.09759662926179118}, {\"instance\": \"final-tf2-priority-1\", \"stratum\": \"tf2-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.09586859133897462}, {\"instance\": \"final-tf2-priority-2\", \"stratum\": \"tf2-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.09207512597343107}, {\"instance\": \"final-tf2-priority-3\", \"stratum\": \"tf2-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.10066630650099041}, {\"instance\": \"final-tf2-priority-4\", \"stratum\": \"tf2-priority\", \"wins\": 9, \"ties\": 0, \"losses\": 0, \"head_to_head\": 1, \"candidate_valid\": 3, \"comparator_valid\": 3, \"reliability_difference\": 0.0, \"complete_numeric\": 0.12823320817688783}], \"bootstrap_seed\": 2026100802, \"resamples\": 10000, \"unit\": \"instance; stratified percentile bootstrap\", \"intervals\": {\"head_to_head\": [0.7925925925925926, 1.0], \"reliability_difference\": [0.0, 0.0], \"complete_numeric\": [0.08389061830025754, 0.10974923048216585]}, \"means\": {\"head_to_head\": 0.9259259259259259, \"reliability_difference\": 0.0, \"complete_numeric\": 0.0966243264996307}, \"candidate_valid\": 90, \"comparator_valid\": 90, \"descriptive_reliability_gate\": true, \"failure_aware_advantage_supported\": true, \"numerical_quality_supported\": true, \"incomplete_numeric_policy\": \"No full-sample numeric advantage if any failures; conditional analyses must be labelled separately\"}",
+    "labels": null,
+    "marginal_cost": {
+      "agent_usd": 0.0,
+      "resource_usd": 0.0
+    },
+    "subscribers": "[private field removed]",
+    "created": "2026-10-09T00:36:55.428000+00:00",
+    "modified": "2026-10-09T00:36:55.438000+00:00",
+    "judgement": "unproven",
+    "confidence": null,
+    "kind": "Belief"
+  },
+  "edges": {
+    "produced_by": [
+      {
+        "id": "aa3d267e-2acb-417e-9225-61384194d436",
+        "kind": "Issue",
+        "seq": 1,
+        "title": "Develop a scheduling algorithm that beats the published references and strongest verified comparators",
+        "status": "active",
+        "peer_created": "2026-10-07T17:19:04.805000+00:00"
+      }
+    ]
+  },
+  "backlinks": {
+    "favors": [
+      {
+        "id": "30259df7-e529-4d91-a667-98dc707a25f9",
+        "kind": "Experiment",
+        "seq": 61,
+        "title": "Frozen v2 versus historical EGRASP: preregistered thirty-case final evaluation",
+        "status": "complete",
+        "peer_created": "2026-10-08T10:04:42.496000+00:00",
+        "valence": 1.0
+      }
+    ]
+  },
+  "changes": [
+    {
+      "id": "c267d249-ae53-4666-a446-eba64351daeb",
+      "created": "2026-10-09T00:36:55.439000+00:00",
+      "actor": "Venkat/Codex campaign runner",
+      "principal": "",
+      "api_key_id": null,
+      "subject_id": "4e0b7540-a429-41ff-9f21-8378d4d8ccc2",
+      "subject_kind": "Belief",
+      "kind": "edge_added",
+      "caused_by": null,
+      "reason": "",
+      "old": {
+        "marginal_cost": {
+          "agent_usd": 0.0,
+          "resource_usd": 0.0
+        }
+      },
+      "new": {
+        "peer_id": "aa3d267e-2acb-417e-9225-61384194d436",
+        "peer_kind": "Issue",
+        "peer_edge_kind": "produced_by",
+        "edge_note": "",
+        "edge_labels": [],
+        "marginal_cost": {
+          "agent_usd": 0.0,
+          "resource_usd": 0.0
+        }
+      }
+    },
+    {
+      "id": "33f837e1-4b4d-4f05-a194-4c50b354e12c",
+      "created": "2026-10-09T00:36:55.433000+00:00",
+      "actor": "Venkat/Codex campaign runner",
+      "principal": "",
+      "api_key_id": null,
+      "subject_id": "4e0b7540-a429-41ff-9f21-8378d4d8ccc2",
+      "subject_kind": "Belief",
+      "kind": "edge_added",
+      "caused_by": "4ce687a7-86c8-451a-b3a8-9ae1d3497670",
+      "reason": "",
+      "old": {
+        "marginal_cost": {
+          "agent_usd": 0.0,
+          "resource_usd": 0.0
+        }
+      },
+      "new": {
+        "peer_id": "30259df7-e529-4d91-a667-98dc707a25f9",
+        "peer_kind": "Experiment",
+        "peer_edge_kind": "favors",
+        "edge_note": "",
+        "edge_valence": 1.0,
+        "edge_labels": [],
+        "marginal_cost": {
+          "agent_usd": 0.0,
+          "resource_usd": 0.0
+        }
+      }
+    },
+    {
+      "id": "4ce687a7-86c8-451a-b3a8-9ae1d3497670",
+      "created": "2026-10-09T00:36:55.430000+00:00",
+      "actor": "Venkat/Codex campaign runner",
+      "principal": "",
+      "api_key_id": null,
+      "subject_id": "4e0b7540-a429-41ff-9f21-8378d4d8ccc2",
+      "subject_kind": "Belief",
+      "kind": "created",
+      "caused_by": null,
+      "reason": "",
+      "old": {
+        "marginal_cost": {
+          "agent_usd": 0.0,
+          "resource_usd": 0.0
+        }
+      },
+      "new": {
+        "marginal_cost": {
+          "agent_usd": 0.0,
+          "resource_usd": 0.0
+        }
+      }
+    }
+  ]
+}

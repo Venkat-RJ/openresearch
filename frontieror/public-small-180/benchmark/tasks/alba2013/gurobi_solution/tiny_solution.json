@@ -1,0 +1,33 @@
+{
+  "problem": "DTSPMS",
+  "instance": "research-workspace/Code/efficient_opt_bench/efficient_opt_benchmark/alba2013/instance/tiny_instance.json",
+  "objective_value": 6025.0,
+  "status": "optimal",
+  "gap": 0.0,
+  "pickup_tour": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    5,
+    8,
+    7,
+    4
+  ],
+  "delivery_tour": [
+    0,
+    7,
+    6,
+    4,
+    8,
+    3,
+    1,
+    5,
+    2
+  ],
+  "pickup_cost": 2905,
+  "delivery_cost": 3120,
+  "solve_time": 0.17197704315185547,
+  "runtime": 0.34
+}

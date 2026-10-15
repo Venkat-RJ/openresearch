@@ -1,0 +1,23 @@
+{
+  "num_customers": "<int> Number of customers to be served.",
+  "num_nodes": "<int> Total number of nodes including the depot and all customers.",
+  "parameters": {
+    "truck_speed": "<float> Travel speed of the truck.",
+    "truck_service_time": "<int> Time the truck spends servicing at each visited customer location.",
+    "num_drones": "<int> Number of drones carried by the truck.",
+    "drone_speed_parameters_alpha": "<list[float], length num_drones> Speed parameter for each drone, where higher values indicate faster but more energy-consuming drones.",
+    "drone_battery_capacities": "<list[int], length num_drones> Maximum total battery energy available to each drone across all its assigned deliveries.",
+    "standard_drone_speed": "<float> Travel speed of the baseline standard drone.",
+    "standard_drone_flight_duration": "<int> Maximum flight duration of the baseline standard drone.",
+    "standard_drone_service_time": "<int> Time a drone spends servicing at each customer location."
+  },
+  "depot_index": "<int> Index of the depot node where the truck starts and ends its route.",
+  "customer_indices": "<list[int], length num_customers> Indices of all customer nodes that must be served.",
+  "node_positions": {
+    "x": "<list[int], length num_nodes> Horizontal coordinate of each node.",
+    "y": "<list[int], length num_nodes> Vertical coordinate of each node."
+  },
+  "truck_travel_times": "<list[list[int]], shape [num_nodes][num_nodes]> Truck travel time from each node to every other node, including service time at the destination.",
+  "drone_battery_consumption": "<list[list[list[int]]], shape [num_drones][num_nodes][num_nodes]> Battery energy consumed by each drone for a round-trip delivery from a launch node to a customer and back.",
+  "drone_delivery_time": "<list[list[list[int]]], shape [num_drones][num_nodes][num_nodes]> Elapsed time for each drone to complete a round-trip delivery from a launch node to a customer and back."
+}

@@ -1,0 +1,60 @@
+{
+  "global_parameters": {
+    "lambda": "<float> Weight applied to total line cost in the objective, with (1 - lambda) applied to total passenger travel time.",
+    "fixed_cost_per_line": "<float> Fixed cost incurred for establishing any transit line.",
+    "operating_cost_per_edge": "<float> Cost per unit frequency for operating a line over one edge.",
+    "max_line_length_edges": "<int> Maximum number of edges allowed in any single transit line.",
+    "frequency_upper_bound_F": "<float> Global upper bound on the frequency assigned to any individual line.",
+    "traveling_times_unit": "<str> Unit of measurement for all edge traveling times.",
+    "coordinates_unit": "<str> Unit of measurement for node coordinates and edge lengths."
+  },
+  "network": {
+    "num_nodes": "<int> Total number of stations (nodes) in the transit network.",
+    "num_edges": "<int> Total number of undirected edges connecting stations in the network.",
+    "num_od_nodes": "<int> Number of stations that serve as origins or destinations for passenger demand.",
+    "area_km": "<float> Side length of the square area containing the network.",
+    "nodes": [
+      {
+        "id": "<int> Unique identifier for this station.",
+        "x": "<float> Horizontal coordinate of this station.",
+        "y": "<float> Vertical coordinate of this station.",
+        "is_od_node": "<bool> Whether this station can be an origin or destination for passenger trips."
+      }
+    ],
+    "edges": [
+      {
+        "id": "<int> Unique identifier for this edge.",
+        "endpoints": "<list[int], length 2> Pair of node identifiers connected by this edge.",
+        "traveling_time_seconds": "<float> Time required to traverse this edge.",
+        "edge_capacity": "<float> Maximum total frequency of all lines that may use this edge.",
+        "operating_cost": "<float> Per-unit-frequency cost of operating a line over this edge.",
+        "length_km": "<float> Physical length of this edge."
+      }
+    ]
+  },
+  "modes": [
+    {
+      "name": "<str> Name of this transportation mode.",
+      "vehicle_capacity": "<int> Number of passengers a single vehicle run of this mode can carry.",
+      "speed_kmh": "<float> Travel speed of vehicles operating in this mode.",
+      "fixed_cost_per_line": "<float> Fixed cost for establishing a line of this mode.",
+      "operating_cost_per_edge": "<float> Per-unit-frequency cost for each edge traversed by a line of this mode.",
+      "terminals": "<list[int], length num_terminals> Node identifiers where lines of this mode may begin or end.",
+      "edge_indices": "<list[int], length num_edges> Indices of edges available to lines of this mode.",
+      "num_edges": "<int> Number of edges in the subnetwork for this mode.",
+      "num_terminals": "<int> Number of terminal stations for this mode."
+    }
+  ],
+  "od_matrix": [
+    {
+      "origin": "<int> Node identifier of the trip origin.",
+      "destination": "<int> Node identifier of the trip destination.",
+      "demand": "<int> Number of passengers wishing to travel from the origin to the destination."
+    }
+  ],
+  "od_summary": {
+    "num_od_pairs": "<int> Total number of origin-destination pairs with positive demand.",
+    "total_demand": "<int> Sum of passenger demand across all origin-destination pairs.",
+    "num_od_nodes": "<int> Number of distinct stations appearing as origins or destinations."
+  }
+}

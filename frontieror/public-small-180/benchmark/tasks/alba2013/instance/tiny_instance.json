@@ -1,0 +1,371 @@
+{
+  "problem_name": "DTSPMS",
+  "problem_full_name": "Double Traveling Salesman Problem with Multiple Stacks",
+  "instance_id": 1,
+  "scale_label": "small",
+  "seed_used": 420100,
+  "parameters": {
+    "num_stacks_s": 2,
+    "stack_height_l": 4,
+    "num_requests_n": 8,
+    "num_pickup_vertices": 9,
+    "num_delivery_vertices": 9,
+    "coordinate_range": [
+      0,
+      1000
+    ],
+    "distance_metric": "rounded_euclidean"
+  },
+  "pickup_region": {
+    "depot_index": 0,
+    "coordinates": [
+      {
+        "vertex_id": 0,
+        "x": 144,
+        "y": 842
+      },
+      {
+        "vertex_id": 1,
+        "x": 160,
+        "y": 662
+      },
+      {
+        "vertex_id": 2,
+        "x": 605,
+        "y": 481
+      },
+      {
+        "vertex_id": 3,
+        "x": 980,
+        "y": 12
+      },
+      {
+        "vertex_id": 4,
+        "x": 158,
+        "y": 864
+      },
+      {
+        "vertex_id": 5,
+        "x": 622,
+        "y": 891
+      },
+      {
+        "vertex_id": 6,
+        "x": 831,
+        "y": 879
+      },
+      {
+        "vertex_id": 7,
+        "x": 215,
+        "y": 842
+      },
+      {
+        "vertex_id": 8,
+        "x": 452,
+        "y": 757
+      }
+    ],
+    "distance_matrix": [
+      [
+        0,
+        181,
+        586,
+        1178,
+        26,
+        481,
+        688,
+        71,
+        320
+      ],
+      [
+        181,
+        0,
+        480,
+        1046,
+        202,
+        516,
+        705,
+        188,
+        307
+      ],
+      [
+        586,
+        480,
+        0,
+        600,
+        589,
+        410,
+        458,
+        531,
+        316
+      ],
+      [
+        1178,
+        1046,
+        600,
+        0,
+        1184,
+        949,
+        880,
+        1129,
+        913
+      ],
+      [
+        26,
+        202,
+        589,
+        1184,
+        0,
+        465,
+        673,
+        61,
+        313
+      ],
+      [
+        481,
+        516,
+        410,
+        949,
+        465,
+        0,
+        209,
+        410,
+        216
+      ],
+      [
+        688,
+        705,
+        458,
+        880,
+        673,
+        209,
+        0,
+        617,
+        398
+      ],
+      [
+        71,
+        188,
+        531,
+        1129,
+        61,
+        410,
+        617,
+        0,
+        252
+      ],
+      [
+        320,
+        307,
+        316,
+        913,
+        313,
+        216,
+        398,
+        252,
+        0
+      ]
+    ]
+  },
+  "delivery_region": {
+    "depot_index": 0,
+    "coordinates": [
+      {
+        "vertex_id": 0,
+        "x": 16,
+        "y": 862
+      },
+      {
+        "vertex_id": 1,
+        "x": 907,
+        "y": 819
+      },
+      {
+        "vertex_id": 2,
+        "x": 510,
+        "y": 832
+      },
+      {
+        "vertex_id": 3,
+        "x": 881,
+        "y": 600
+      },
+      {
+        "vertex_id": 4,
+        "x": 614,
+        "y": 394
+      },
+      {
+        "vertex_id": 5,
+        "x": 794,
+        "y": 773
+      },
+      {
+        "vertex_id": 6,
+        "x": 250,
+        "y": 47
+      },
+      {
+        "vertex_id": 7,
+        "x": 376,
+        "y": 558
+      },
+      {
+        "vertex_id": 8,
+        "x": 617,
+        "y": 301
+      }
+    ],
+    "distance_matrix": [
+      [
+        0,
+        892,
+        495,
+        904,
+        759,
+        783,
+        848,
+        471,
+        822
+      ],
+      [
+        892,
+        0,
+        397,
+        221,
+        516,
+        122,
+        1014,
+        592,
+        594
+      ],
+      [
+        495,
+        397,
+        0,
+        438,
+        450,
+        290,
+        827,
+        305,
+        542
+      ],
+      [
+        904,
+        221,
+        438,
+        0,
+        337,
+        194,
+        839,
+        507,
+        399
+      ],
+      [
+        759,
+        516,
+        450,
+        337,
+        0,
+        420,
+        503,
+        289,
+        93
+      ],
+      [
+        783,
+        122,
+        290,
+        194,
+        420,
+        0,
+        907,
+        470,
+        504
+      ],
+      [
+        848,
+        1014,
+        827,
+        839,
+        503,
+        907,
+        0,
+        526,
+        446
+      ],
+      [
+        471,
+        592,
+        305,
+        507,
+        289,
+        470,
+        526,
+        0,
+        352
+      ],
+      [
+        822,
+        594,
+        542,
+        399,
+        93,
+        504,
+        446,
+        352,
+        0
+      ]
+    ]
+  },
+  "requests": [
+    {
+      "request_id": 1,
+      "pickup_vertex": 1,
+      "delivery_vertex": 1,
+      "item_size": 1
+    },
+    {
+      "request_id": 2,
+      "pickup_vertex": 2,
+      "delivery_vertex": 2,
+      "item_size": 1
+    },
+    {
+      "request_id": 3,
+      "pickup_vertex": 3,
+      "delivery_vertex": 3,
+      "item_size": 1
+    },
+    {
+      "request_id": 4,
+      "pickup_vertex": 4,
+      "delivery_vertex": 4,
+      "item_size": 1
+    },
+    {
+      "request_id": 5,
+      "pickup_vertex": 5,
+      "delivery_vertex": 5,
+      "item_size": 1
+    },
+    {
+      "request_id": 6,
+      "pickup_vertex": 6,
+      "delivery_vertex": 6,
+      "item_size": 1
+    },
+    {
+      "request_id": 7,
+      "pickup_vertex": 7,
+      "delivery_vertex": 7,
+      "item_size": 1
+    },
+    {
+      "request_id": 8,
+      "pickup_vertex": 8,
+      "delivery_vertex": 8,
+      "item_size": 1
+    }
+  ]
+}

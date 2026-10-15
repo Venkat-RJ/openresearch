@@ -1,0 +1,2551 @@
+{
+  "problem": "0-1 Knapsack Problem with Setups (KPS)",
+  "N": 5,
+  "total_items": 500,
+  "knapsack_capacity": 13900,
+  "correlation_type": "strongly_correlated",
+  "setup_e1": 0.159927,
+  "setup_e2": 0.1772,
+  "families": [
+    {
+      "family_id": 1,
+      "n_i": 100,
+      "setup_cost": 1031,
+      "setup_capacity": 965,
+      "items": [
+        {
+          "item_id": 1,
+          "weight": 78,
+          "profit": 88
+        },
+        {
+          "item_id": 2,
+          "weight": 99,
+          "profit": 109
+        },
+        {
+          "item_id": 3,
+          "weight": 93,
+          "profit": 103
+        },
+        {
+          "item_id": 4,
+          "weight": 30,
+          "profit": 40
+        },
+        {
+          "item_id": 5,
+          "weight": 18,
+          "profit": 28
+        },
+        {
+          "item_id": 6,
+          "weight": 34,
+          "profit": 44
+        },
+        {
+          "item_id": 7,
+          "weight": 56,
+          "profit": 66
+        },
+        {
+          "item_id": 8,
+          "weight": 64,
+          "profit": 74
+        },
+        {
+          "item_id": 9,
+          "weight": 45,
+          "profit": 55
+        },
+        {
+          "item_id": 10,
+          "weight": 59,
+          "profit": 69
+        },
+        {
+          "item_id": 11,
+          "weight": 96,
+          "profit": 106
+        },
+        {
+          "item_id": 12,
+          "weight": 72,
+          "profit": 82
+        },
+        {
+          "item_id": 13,
+          "weight": 57,
+          "profit": 67
+        },
+        {
+          "item_id": 14,
+          "weight": 75,
+          "profit": 85
+        },
+        {
+          "item_id": 15,
+          "weight": 12,
+          "profit": 22
+        },
+        {
+          "item_id": 16,
+          "weight": 38,
+          "profit": 48
+        },
+        {
+          "item_id": 17,
+          "weight": 93,
+          "profit": 103
+        },
+        {
+          "item_id": 18,
+          "weight": 40,
+          "profit": 50
+        },
+        {
+          "item_id": 19,
+          "weight": 44,
+          "profit": 54
+        },
+        {
+          "item_id": 20,
+          "weight": 41,
+          "profit": 51
+        },
+        {
+          "item_id": 21,
+          "weight": 38,
+          "profit": 48
+        },
+        {
+          "item_id": 22,
+          "weight": 17,
+          "profit": 27
+        },
+        {
+          "item_id": 23,
+          "weight": 83,
+          "profit": 93
+        },
+        {
+          "item_id": 24,
+          "weight": 37,
+          "profit": 47
+        },
+        {
+          "item_id": 25,
+          "weight": 43,
+          "profit": 53
+        },
+        {
+          "item_id": 26,
+          "weight": 71,
+          "profit": 81
+        },
+        {
+          "item_id": 27,
+          "weight": 46,
+          "profit": 56
+        },
+        {
+          "item_id": 28,
+          "weight": 76,
+          "profit": 86
+        },
+        {
+          "item_id": 29,
+          "weight": 50,
+          "profit": 60
+        },
+        {
+          "item_id": 30,
+          "weight": 97,
+          "profit": 107
+        },
+        {
+          "item_id": 31,
+          "weight": 15,
+          "profit": 25
+        },
+        {
+          "item_id": 32,
+          "weight": 79,
+          "profit": 89
+        },
+        {
+          "item_id": 33,
+          "weight": 57,
+          "profit": 67
+        },
+        {
+          "item_id": 34,
+          "weight": 57,
+          "profit": 67
+        },
+        {
+          "item_id": 35,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 36,
+          "weight": 34,
+          "profit": 44
+        },
+        {
+          "item_id": 37,
+          "weight": 27,
+          "profit": 37
+        },
+        {
+          "item_id": 38,
+          "weight": 14,
+          "profit": 24
+        },
+        {
+          "item_id": 39,
+          "weight": 71,
+          "profit": 81
+        },
+        {
+          "item_id": 40,
+          "weight": 55,
+          "profit": 65
+        },
+        {
+          "item_id": 41,
+          "weight": 36,
+          "profit": 46
+        },
+        {
+          "item_id": 42,
+          "weight": 86,
+          "profit": 96
+        },
+        {
+          "item_id": 43,
+          "weight": 74,
+          "profit": 84
+        },
+        {
+          "item_id": 44,
+          "weight": 39,
+          "profit": 49
+        },
+        {
+          "item_id": 45,
+          "weight": 41,
+          "profit": 51
+        },
+        {
+          "item_id": 46,
+          "weight": 46,
+          "profit": 56
+        },
+        {
+          "item_id": 47,
+          "weight": 47,
+          "profit": 57
+        },
+        {
+          "item_id": 48,
+          "weight": 86,
+          "profit": 96
+        },
+        {
+          "item_id": 49,
+          "weight": 20,
+          "profit": 30
+        },
+        {
+          "item_id": 50,
+          "weight": 73,
+          "profit": 83
+        },
+        {
+          "item_id": 51,
+          "weight": 50,
+          "profit": 60
+        },
+        {
+          "item_id": 52,
+          "weight": 55,
+          "profit": 65
+        },
+        {
+          "item_id": 53,
+          "weight": 27,
+          "profit": 37
+        },
+        {
+          "item_id": 54,
+          "weight": 57,
+          "profit": 67
+        },
+        {
+          "item_id": 55,
+          "weight": 18,
+          "profit": 28
+        },
+        {
+          "item_id": 56,
+          "weight": 100,
+          "profit": 110
+        },
+        {
+          "item_id": 57,
+          "weight": 100,
+          "profit": 110
+        },
+        {
+          "item_id": 58,
+          "weight": 15,
+          "profit": 25
+        },
+        {
+          "item_id": 59,
+          "weight": 53,
+          "profit": 63
+        },
+        {
+          "item_id": 60,
+          "weight": 96,
+          "profit": 106
+        },
+        {
+          "item_id": 61,
+          "weight": 98,
+          "profit": 108
+        },
+        {
+          "item_id": 62,
+          "weight": 56,
+          "profit": 66
+        },
+        {
+          "item_id": 63,
+          "weight": 47,
+          "profit": 57
+        },
+        {
+          "item_id": 64,
+          "weight": 49,
+          "profit": 59
+        },
+        {
+          "item_id": 65,
+          "weight": 75,
+          "profit": 85
+        },
+        {
+          "item_id": 66,
+          "weight": 75,
+          "profit": 85
+        },
+        {
+          "item_id": 67,
+          "weight": 66,
+          "profit": 76
+        },
+        {
+          "item_id": 68,
+          "weight": 23,
+          "profit": 33
+        },
+        {
+          "item_id": 69,
+          "weight": 59,
+          "profit": 69
+        },
+        {
+          "item_id": 70,
+          "weight": 25,
+          "profit": 35
+        },
+        {
+          "item_id": 71,
+          "weight": 80,
+          "profit": 90
+        },
+        {
+          "item_id": 72,
+          "weight": 91,
+          "profit": 101
+        },
+        {
+          "item_id": 73,
+          "weight": 43,
+          "profit": 53
+        },
+        {
+          "item_id": 74,
+          "weight": 26,
+          "profit": 36
+        },
+        {
+          "item_id": 75,
+          "weight": 22,
+          "profit": 32
+        },
+        {
+          "item_id": 76,
+          "weight": 100,
+          "profit": 110
+        },
+        {
+          "item_id": 77,
+          "weight": 34,
+          "profit": 44
+        },
+        {
+          "item_id": 78,
+          "weight": 48,
+          "profit": 58
+        },
+        {
+          "item_id": 79,
+          "weight": 81,
+          "profit": 91
+        },
+        {
+          "item_id": 80,
+          "weight": 10,
+          "profit": 20
+        },
+        {
+          "item_id": 81,
+          "weight": 100,
+          "profit": 110
+        },
+        {
+          "item_id": 82,
+          "weight": 11,
+          "profit": 21
+        },
+        {
+          "item_id": 83,
+          "weight": 22,
+          "profit": 32
+        },
+        {
+          "item_id": 84,
+          "weight": 17,
+          "profit": 27
+        },
+        {
+          "item_id": 85,
+          "weight": 93,
+          "profit": 103
+        },
+        {
+          "item_id": 86,
+          "weight": 16,
+          "profit": 26
+        },
+        {
+          "item_id": 87,
+          "weight": 40,
+          "profit": 50
+        },
+        {
+          "item_id": 88,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 89,
+          "weight": 43,
+          "profit": 53
+        },
+        {
+          "item_id": 90,
+          "weight": 46,
+          "profit": 56
+        },
+        {
+          "item_id": 91,
+          "weight": 96,
+          "profit": 106
+        },
+        {
+          "item_id": 92,
+          "weight": 68,
+          "profit": 78
+        },
+        {
+          "item_id": 93,
+          "weight": 48,
+          "profit": 58
+        },
+        {
+          "item_id": 94,
+          "weight": 51,
+          "profit": 61
+        },
+        {
+          "item_id": 95,
+          "weight": 39,
+          "profit": 49
+        },
+        {
+          "item_id": 96,
+          "weight": 37,
+          "profit": 47
+        },
+        {
+          "item_id": 97,
+          "weight": 38,
+          "profit": 48
+        },
+        {
+          "item_id": 98,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 99,
+          "weight": 65,
+          "profit": 75
+        },
+        {
+          "item_id": 100,
+          "weight": 51,
+          "profit": 61
+        }
+      ]
+    },
+    {
+      "family_id": 2,
+      "n_i": 100,
+      "setup_cost": 1000,
+      "setup_capacity": 930,
+      "items": [
+        {
+          "item_id": 1,
+          "weight": 49,
+          "profit": 59
+        },
+        {
+          "item_id": 2,
+          "weight": 34,
+          "profit": 44
+        },
+        {
+          "item_id": 3,
+          "weight": 63,
+          "profit": 73
+        },
+        {
+          "item_id": 4,
+          "weight": 12,
+          "profit": 22
+        },
+        {
+          "item_id": 5,
+          "weight": 89,
+          "profit": 99
+        },
+        {
+          "item_id": 6,
+          "weight": 48,
+          "profit": 58
+        },
+        {
+          "item_id": 7,
+          "weight": 69,
+          "profit": 79
+        },
+        {
+          "item_id": 8,
+          "weight": 67,
+          "profit": 77
+        },
+        {
+          "item_id": 9,
+          "weight": 18,
+          "profit": 28
+        },
+        {
+          "item_id": 10,
+          "weight": 14,
+          "profit": 24
+        },
+        {
+          "item_id": 11,
+          "weight": 91,
+          "profit": 101
+        },
+        {
+          "item_id": 12,
+          "weight": 36,
+          "profit": 46
+        },
+        {
+          "item_id": 13,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 14,
+          "weight": 37,
+          "profit": 47
+        },
+        {
+          "item_id": 15,
+          "weight": 87,
+          "profit": 97
+        },
+        {
+          "item_id": 16,
+          "weight": 82,
+          "profit": 92
+        },
+        {
+          "item_id": 17,
+          "weight": 71,
+          "profit": 81
+        },
+        {
+          "item_id": 18,
+          "weight": 34,
+          "profit": 44
+        },
+        {
+          "item_id": 19,
+          "weight": 57,
+          "profit": 67
+        },
+        {
+          "item_id": 20,
+          "weight": 93,
+          "profit": 103
+        },
+        {
+          "item_id": 21,
+          "weight": 16,
+          "profit": 26
+        },
+        {
+          "item_id": 22,
+          "weight": 76,
+          "profit": 86
+        },
+        {
+          "item_id": 23,
+          "weight": 72,
+          "profit": 82
+        },
+        {
+          "item_id": 24,
+          "weight": 40,
+          "profit": 50
+        },
+        {
+          "item_id": 25,
+          "weight": 28,
+          "profit": 38
+        },
+        {
+          "item_id": 26,
+          "weight": 16,
+          "profit": 26
+        },
+        {
+          "item_id": 27,
+          "weight": 88,
+          "profit": 98
+        },
+        {
+          "item_id": 28,
+          "weight": 72,
+          "profit": 82
+        },
+        {
+          "item_id": 29,
+          "weight": 74,
+          "profit": 84
+        },
+        {
+          "item_id": 30,
+          "weight": 70,
+          "profit": 80
+        },
+        {
+          "item_id": 31,
+          "weight": 53,
+          "profit": 63
+        },
+        {
+          "item_id": 32,
+          "weight": 44,
+          "profit": 54
+        },
+        {
+          "item_id": 33,
+          "weight": 39,
+          "profit": 49
+        },
+        {
+          "item_id": 34,
+          "weight": 81,
+          "profit": 91
+        },
+        {
+          "item_id": 35,
+          "weight": 75,
+          "profit": 85
+        },
+        {
+          "item_id": 36,
+          "weight": 46,
+          "profit": 56
+        },
+        {
+          "item_id": 37,
+          "weight": 38,
+          "profit": 48
+        },
+        {
+          "item_id": 38,
+          "weight": 60,
+          "profit": 70
+        },
+        {
+          "item_id": 39,
+          "weight": 99,
+          "profit": 109
+        },
+        {
+          "item_id": 40,
+          "weight": 22,
+          "profit": 32
+        },
+        {
+          "item_id": 41,
+          "weight": 82,
+          "profit": 92
+        },
+        {
+          "item_id": 42,
+          "weight": 24,
+          "profit": 34
+        },
+        {
+          "item_id": 43,
+          "weight": 75,
+          "profit": 85
+        },
+        {
+          "item_id": 44,
+          "weight": 70,
+          "profit": 80
+        },
+        {
+          "item_id": 45,
+          "weight": 28,
+          "profit": 38
+        },
+        {
+          "item_id": 46,
+          "weight": 19,
+          "profit": 29
+        },
+        {
+          "item_id": 47,
+          "weight": 76,
+          "profit": 86
+        },
+        {
+          "item_id": 48,
+          "weight": 75,
+          "profit": 85
+        },
+        {
+          "item_id": 49,
+          "weight": 45,
+          "profit": 55
+        },
+        {
+          "item_id": 50,
+          "weight": 71,
+          "profit": 81
+        },
+        {
+          "item_id": 51,
+          "weight": 49,
+          "profit": 59
+        },
+        {
+          "item_id": 52,
+          "weight": 81,
+          "profit": 91
+        },
+        {
+          "item_id": 53,
+          "weight": 21,
+          "profit": 31
+        },
+        {
+          "item_id": 54,
+          "weight": 100,
+          "profit": 110
+        },
+        {
+          "item_id": 55,
+          "weight": 14,
+          "profit": 24
+        },
+        {
+          "item_id": 56,
+          "weight": 57,
+          "profit": 67
+        },
+        {
+          "item_id": 57,
+          "weight": 14,
+          "profit": 24
+        },
+        {
+          "item_id": 58,
+          "weight": 32,
+          "profit": 42
+        },
+        {
+          "item_id": 59,
+          "weight": 73,
+          "profit": 83
+        },
+        {
+          "item_id": 60,
+          "weight": 82,
+          "profit": 92
+        },
+        {
+          "item_id": 61,
+          "weight": 27,
+          "profit": 37
+        },
+        {
+          "item_id": 62,
+          "weight": 19,
+          "profit": 29
+        },
+        {
+          "item_id": 63,
+          "weight": 74,
+          "profit": 84
+        },
+        {
+          "item_id": 64,
+          "weight": 73,
+          "profit": 83
+        },
+        {
+          "item_id": 65,
+          "weight": 30,
+          "profit": 40
+        },
+        {
+          "item_id": 66,
+          "weight": 66,
+          "profit": 76
+        },
+        {
+          "item_id": 67,
+          "weight": 78,
+          "profit": 88
+        },
+        {
+          "item_id": 68,
+          "weight": 30,
+          "profit": 40
+        },
+        {
+          "item_id": 69,
+          "weight": 50,
+          "profit": 60
+        },
+        {
+          "item_id": 70,
+          "weight": 56,
+          "profit": 66
+        },
+        {
+          "item_id": 71,
+          "weight": 78,
+          "profit": 88
+        },
+        {
+          "item_id": 72,
+          "weight": 10,
+          "profit": 20
+        },
+        {
+          "item_id": 73,
+          "weight": 18,
+          "profit": 28
+        },
+        {
+          "item_id": 74,
+          "weight": 35,
+          "profit": 45
+        },
+        {
+          "item_id": 75,
+          "weight": 66,
+          "profit": 76
+        },
+        {
+          "item_id": 76,
+          "weight": 79,
+          "profit": 89
+        },
+        {
+          "item_id": 77,
+          "weight": 16,
+          "profit": 26
+        },
+        {
+          "item_id": 78,
+          "weight": 19,
+          "profit": 29
+        },
+        {
+          "item_id": 79,
+          "weight": 64,
+          "profit": 74
+        },
+        {
+          "item_id": 80,
+          "weight": 74,
+          "profit": 84
+        },
+        {
+          "item_id": 81,
+          "weight": 78,
+          "profit": 88
+        },
+        {
+          "item_id": 82,
+          "weight": 92,
+          "profit": 102
+        },
+        {
+          "item_id": 83,
+          "weight": 71,
+          "profit": 81
+        },
+        {
+          "item_id": 84,
+          "weight": 89,
+          "profit": 99
+        },
+        {
+          "item_id": 85,
+          "weight": 12,
+          "profit": 22
+        },
+        {
+          "item_id": 86,
+          "weight": 17,
+          "profit": 27
+        },
+        {
+          "item_id": 87,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 88,
+          "weight": 16,
+          "profit": 26
+        },
+        {
+          "item_id": 89,
+          "weight": 15,
+          "profit": 25
+        },
+        {
+          "item_id": 90,
+          "weight": 40,
+          "profit": 50
+        },
+        {
+          "item_id": 91,
+          "weight": 19,
+          "profit": 29
+        },
+        {
+          "item_id": 92,
+          "weight": 19,
+          "profit": 29
+        },
+        {
+          "item_id": 93,
+          "weight": 17,
+          "profit": 27
+        },
+        {
+          "item_id": 94,
+          "weight": 29,
+          "profit": 39
+        },
+        {
+          "item_id": 95,
+          "weight": 35,
+          "profit": 45
+        },
+        {
+          "item_id": 96,
+          "weight": 78,
+          "profit": 88
+        },
+        {
+          "item_id": 97,
+          "weight": 73,
+          "profit": 83
+        },
+        {
+          "item_id": 98,
+          "weight": 36,
+          "profit": 46
+        },
+        {
+          "item_id": 99,
+          "weight": 55,
+          "profit": 65
+        },
+        {
+          "item_id": 100,
+          "weight": 98,
+          "profit": 108
+        }
+      ]
+    },
+    {
+      "family_id": 3,
+      "n_i": 100,
+      "setup_cost": 1078,
+      "setup_capacity": 1017,
+      "items": [
+        {
+          "item_id": 1,
+          "weight": 72,
+          "profit": 82
+        },
+        {
+          "item_id": 2,
+          "weight": 76,
+          "profit": 86
+        },
+        {
+          "item_id": 3,
+          "weight": 54,
+          "profit": 64
+        },
+        {
+          "item_id": 4,
+          "weight": 73,
+          "profit": 83
+        },
+        {
+          "item_id": 5,
+          "weight": 89,
+          "profit": 99
+        },
+        {
+          "item_id": 6,
+          "weight": 97,
+          "profit": 107
+        },
+        {
+          "item_id": 7,
+          "weight": 81,
+          "profit": 91
+        },
+        {
+          "item_id": 8,
+          "weight": 74,
+          "profit": 84
+        },
+        {
+          "item_id": 9,
+          "weight": 56,
+          "profit": 66
+        },
+        {
+          "item_id": 10,
+          "weight": 57,
+          "profit": 67
+        },
+        {
+          "item_id": 11,
+          "weight": 63,
+          "profit": 73
+        },
+        {
+          "item_id": 12,
+          "weight": 46,
+          "profit": 56
+        },
+        {
+          "item_id": 13,
+          "weight": 47,
+          "profit": 57
+        },
+        {
+          "item_id": 14,
+          "weight": 81,
+          "profit": 91
+        },
+        {
+          "item_id": 15,
+          "weight": 88,
+          "profit": 98
+        },
+        {
+          "item_id": 16,
+          "weight": 64,
+          "profit": 74
+        },
+        {
+          "item_id": 17,
+          "weight": 57,
+          "profit": 67
+        },
+        {
+          "item_id": 18,
+          "weight": 48,
+          "profit": 58
+        },
+        {
+          "item_id": 19,
+          "weight": 94,
+          "profit": 104
+        },
+        {
+          "item_id": 20,
+          "weight": 33,
+          "profit": 43
+        },
+        {
+          "item_id": 21,
+          "weight": 19,
+          "profit": 29
+        },
+        {
+          "item_id": 22,
+          "weight": 91,
+          "profit": 101
+        },
+        {
+          "item_id": 23,
+          "weight": 97,
+          "profit": 107
+        },
+        {
+          "item_id": 24,
+          "weight": 44,
+          "profit": 54
+        },
+        {
+          "item_id": 25,
+          "weight": 42,
+          "profit": 52
+        },
+        {
+          "item_id": 26,
+          "weight": 15,
+          "profit": 25
+        },
+        {
+          "item_id": 27,
+          "weight": 90,
+          "profit": 100
+        },
+        {
+          "item_id": 28,
+          "weight": 53,
+          "profit": 63
+        },
+        {
+          "item_id": 29,
+          "weight": 53,
+          "profit": 63
+        },
+        {
+          "item_id": 30,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 31,
+          "weight": 61,
+          "profit": 71
+        },
+        {
+          "item_id": 32,
+          "weight": 64,
+          "profit": 74
+        },
+        {
+          "item_id": 33,
+          "weight": 20,
+          "profit": 30
+        },
+        {
+          "item_id": 34,
+          "weight": 47,
+          "profit": 57
+        },
+        {
+          "item_id": 35,
+          "weight": 32,
+          "profit": 42
+        },
+        {
+          "item_id": 36,
+          "weight": 71,
+          "profit": 81
+        },
+        {
+          "item_id": 37,
+          "weight": 25,
+          "profit": 35
+        },
+        {
+          "item_id": 38,
+          "weight": 63,
+          "profit": 73
+        },
+        {
+          "item_id": 39,
+          "weight": 27,
+          "profit": 37
+        },
+        {
+          "item_id": 40,
+          "weight": 56,
+          "profit": 66
+        },
+        {
+          "item_id": 41,
+          "weight": 58,
+          "profit": 68
+        },
+        {
+          "item_id": 42,
+          "weight": 54,
+          "profit": 64
+        },
+        {
+          "item_id": 43,
+          "weight": 59,
+          "profit": 69
+        },
+        {
+          "item_id": 44,
+          "weight": 66,
+          "profit": 76
+        },
+        {
+          "item_id": 45,
+          "weight": 24,
+          "profit": 34
+        },
+        {
+          "item_id": 46,
+          "weight": 81,
+          "profit": 91
+        },
+        {
+          "item_id": 47,
+          "weight": 100,
+          "profit": 110
+        },
+        {
+          "item_id": 48,
+          "weight": 71,
+          "profit": 81
+        },
+        {
+          "item_id": 49,
+          "weight": 28,
+          "profit": 38
+        },
+        {
+          "item_id": 50,
+          "weight": 42,
+          "profit": 52
+        },
+        {
+          "item_id": 51,
+          "weight": 57,
+          "profit": 67
+        },
+        {
+          "item_id": 52,
+          "weight": 93,
+          "profit": 103
+        },
+        {
+          "item_id": 53,
+          "weight": 81,
+          "profit": 91
+        },
+        {
+          "item_id": 54,
+          "weight": 76,
+          "profit": 86
+        },
+        {
+          "item_id": 55,
+          "weight": 24,
+          "profit": 34
+        },
+        {
+          "item_id": 56,
+          "weight": 52,
+          "profit": 62
+        },
+        {
+          "item_id": 57,
+          "weight": 89,
+          "profit": 99
+        },
+        {
+          "item_id": 58,
+          "weight": 69,
+          "profit": 79
+        },
+        {
+          "item_id": 59,
+          "weight": 20,
+          "profit": 30
+        },
+        {
+          "item_id": 60,
+          "weight": 26,
+          "profit": 36
+        },
+        {
+          "item_id": 61,
+          "weight": 30,
+          "profit": 40
+        },
+        {
+          "item_id": 62,
+          "weight": 78,
+          "profit": 88
+        },
+        {
+          "item_id": 63,
+          "weight": 24,
+          "profit": 34
+        },
+        {
+          "item_id": 64,
+          "weight": 96,
+          "profit": 106
+        },
+        {
+          "item_id": 65,
+          "weight": 15,
+          "profit": 25
+        },
+        {
+          "item_id": 66,
+          "weight": 33,
+          "profit": 43
+        },
+        {
+          "item_id": 67,
+          "weight": 79,
+          "profit": 89
+        },
+        {
+          "item_id": 68,
+          "weight": 97,
+          "profit": 107
+        },
+        {
+          "item_id": 69,
+          "weight": 98,
+          "profit": 108
+        },
+        {
+          "item_id": 70,
+          "weight": 98,
+          "profit": 108
+        },
+        {
+          "item_id": 71,
+          "weight": 68,
+          "profit": 78
+        },
+        {
+          "item_id": 72,
+          "weight": 33,
+          "profit": 43
+        },
+        {
+          "item_id": 73,
+          "weight": 46,
+          "profit": 56
+        },
+        {
+          "item_id": 74,
+          "weight": 17,
+          "profit": 27
+        },
+        {
+          "item_id": 75,
+          "weight": 29,
+          "profit": 39
+        },
+        {
+          "item_id": 76,
+          "weight": 98,
+          "profit": 108
+        },
+        {
+          "item_id": 77,
+          "weight": 97,
+          "profit": 107
+        },
+        {
+          "item_id": 78,
+          "weight": 46,
+          "profit": 56
+        },
+        {
+          "item_id": 79,
+          "weight": 37,
+          "profit": 47
+        },
+        {
+          "item_id": 80,
+          "weight": 71,
+          "profit": 81
+        },
+        {
+          "item_id": 81,
+          "weight": 59,
+          "profit": 69
+        },
+        {
+          "item_id": 82,
+          "weight": 25,
+          "profit": 35
+        },
+        {
+          "item_id": 83,
+          "weight": 20,
+          "profit": 30
+        },
+        {
+          "item_id": 84,
+          "weight": 16,
+          "profit": 26
+        },
+        {
+          "item_id": 85,
+          "weight": 90,
+          "profit": 100
+        },
+        {
+          "item_id": 86,
+          "weight": 70,
+          "profit": 80
+        },
+        {
+          "item_id": 87,
+          "weight": 64,
+          "profit": 74
+        },
+        {
+          "item_id": 88,
+          "weight": 36,
+          "profit": 46
+        },
+        {
+          "item_id": 89,
+          "weight": 20,
+          "profit": 30
+        },
+        {
+          "item_id": 90,
+          "weight": 22,
+          "profit": 32
+        },
+        {
+          "item_id": 91,
+          "weight": 35,
+          "profit": 45
+        },
+        {
+          "item_id": 92,
+          "weight": 79,
+          "profit": 89
+        },
+        {
+          "item_id": 93,
+          "weight": 63,
+          "profit": 73
+        },
+        {
+          "item_id": 94,
+          "weight": 41,
+          "profit": 51
+        },
+        {
+          "item_id": 95,
+          "weight": 38,
+          "profit": 48
+        },
+        {
+          "item_id": 96,
+          "weight": 96,
+          "profit": 106
+        },
+        {
+          "item_id": 97,
+          "weight": 19,
+          "profit": 29
+        },
+        {
+          "item_id": 98,
+          "weight": 76,
+          "profit": 86
+        },
+        {
+          "item_id": 99,
+          "weight": 91,
+          "profit": 101
+        },
+        {
+          "item_id": 100,
+          "weight": 25,
+          "profit": 35
+        }
+      ]
+    },
+    {
+      "family_id": 4,
+      "n_i": 100,
+      "setup_cost": 1100,
+      "setup_capacity": 1041,
+      "items": [
+        {
+          "item_id": 1,
+          "weight": 67,
+          "profit": 77
+        },
+        {
+          "item_id": 2,
+          "weight": 42,
+          "profit": 52
+        },
+        {
+          "item_id": 3,
+          "weight": 76,
+          "profit": 86
+        },
+        {
+          "item_id": 4,
+          "weight": 74,
+          "profit": 84
+        },
+        {
+          "item_id": 5,
+          "weight": 50,
+          "profit": 60
+        },
+        {
+          "item_id": 6,
+          "weight": 56,
+          "profit": 66
+        },
+        {
+          "item_id": 7,
+          "weight": 69,
+          "profit": 79
+        },
+        {
+          "item_id": 8,
+          "weight": 49,
+          "profit": 59
+        },
+        {
+          "item_id": 9,
+          "weight": 57,
+          "profit": 67
+        },
+        {
+          "item_id": 10,
+          "weight": 97,
+          "profit": 107
+        },
+        {
+          "item_id": 11,
+          "weight": 46,
+          "profit": 56
+        },
+        {
+          "item_id": 12,
+          "weight": 15,
+          "profit": 25
+        },
+        {
+          "item_id": 13,
+          "weight": 68,
+          "profit": 78
+        },
+        {
+          "item_id": 14,
+          "weight": 35,
+          "profit": 45
+        },
+        {
+          "item_id": 15,
+          "weight": 11,
+          "profit": 21
+        },
+        {
+          "item_id": 16,
+          "weight": 94,
+          "profit": 104
+        },
+        {
+          "item_id": 17,
+          "weight": 39,
+          "profit": 49
+        },
+        {
+          "item_id": 18,
+          "weight": 42,
+          "profit": 52
+        },
+        {
+          "item_id": 19,
+          "weight": 98,
+          "profit": 108
+        },
+        {
+          "item_id": 20,
+          "weight": 70,
+          "profit": 80
+        },
+        {
+          "item_id": 21,
+          "weight": 13,
+          "profit": 23
+        },
+        {
+          "item_id": 22,
+          "weight": 44,
+          "profit": 54
+        },
+        {
+          "item_id": 23,
+          "weight": 26,
+          "profit": 36
+        },
+        {
+          "item_id": 24,
+          "weight": 72,
+          "profit": 82
+        },
+        {
+          "item_id": 25,
+          "weight": 42,
+          "profit": 52
+        },
+        {
+          "item_id": 26,
+          "weight": 78,
+          "profit": 88
+        },
+        {
+          "item_id": 27,
+          "weight": 87,
+          "profit": 97
+        },
+        {
+          "item_id": 28,
+          "weight": 64,
+          "profit": 74
+        },
+        {
+          "item_id": 29,
+          "weight": 54,
+          "profit": 64
+        },
+        {
+          "item_id": 30,
+          "weight": 82,
+          "profit": 92
+        },
+        {
+          "item_id": 31,
+          "weight": 83,
+          "profit": 93
+        },
+        {
+          "item_id": 32,
+          "weight": 19,
+          "profit": 29
+        },
+        {
+          "item_id": 33,
+          "weight": 88,
+          "profit": 98
+        },
+        {
+          "item_id": 34,
+          "weight": 84,
+          "profit": 94
+        },
+        {
+          "item_id": 35,
+          "weight": 15,
+          "profit": 25
+        },
+        {
+          "item_id": 36,
+          "weight": 56,
+          "profit": 66
+        },
+        {
+          "item_id": 37,
+          "weight": 86,
+          "profit": 96
+        },
+        {
+          "item_id": 38,
+          "weight": 74,
+          "profit": 84
+        },
+        {
+          "item_id": 39,
+          "weight": 30,
+          "profit": 40
+        },
+        {
+          "item_id": 40,
+          "weight": 62,
+          "profit": 72
+        },
+        {
+          "item_id": 41,
+          "weight": 75,
+          "profit": 85
+        },
+        {
+          "item_id": 42,
+          "weight": 30,
+          "profit": 40
+        },
+        {
+          "item_id": 43,
+          "weight": 93,
+          "profit": 103
+        },
+        {
+          "item_id": 44,
+          "weight": 80,
+          "profit": 90
+        },
+        {
+          "item_id": 45,
+          "weight": 53,
+          "profit": 63
+        },
+        {
+          "item_id": 46,
+          "weight": 48,
+          "profit": 58
+        },
+        {
+          "item_id": 47,
+          "weight": 86,
+          "profit": 96
+        },
+        {
+          "item_id": 48,
+          "weight": 16,
+          "profit": 26
+        },
+        {
+          "item_id": 49,
+          "weight": 45,
+          "profit": 55
+        },
+        {
+          "item_id": 50,
+          "weight": 37,
+          "profit": 47
+        },
+        {
+          "item_id": 51,
+          "weight": 45,
+          "profit": 55
+        },
+        {
+          "item_id": 52,
+          "weight": 53,
+          "profit": 63
+        },
+        {
+          "item_id": 53,
+          "weight": 33,
+          "profit": 43
+        },
+        {
+          "item_id": 54,
+          "weight": 81,
+          "profit": 91
+        },
+        {
+          "item_id": 55,
+          "weight": 94,
+          "profit": 104
+        },
+        {
+          "item_id": 56,
+          "weight": 84,
+          "profit": 94
+        },
+        {
+          "item_id": 57,
+          "weight": 89,
+          "profit": 99
+        },
+        {
+          "item_id": 58,
+          "weight": 33,
+          "profit": 43
+        },
+        {
+          "item_id": 59,
+          "weight": 28,
+          "profit": 38
+        },
+        {
+          "item_id": 60,
+          "weight": 44,
+          "profit": 54
+        },
+        {
+          "item_id": 61,
+          "weight": 20,
+          "profit": 30
+        },
+        {
+          "item_id": 62,
+          "weight": 43,
+          "profit": 53
+        },
+        {
+          "item_id": 63,
+          "weight": 78,
+          "profit": 88
+        },
+        {
+          "item_id": 64,
+          "weight": 58,
+          "profit": 68
+        },
+        {
+          "item_id": 65,
+          "weight": 74,
+          "profit": 84
+        },
+        {
+          "item_id": 66,
+          "weight": 34,
+          "profit": 44
+        },
+        {
+          "item_id": 67,
+          "weight": 86,
+          "profit": 96
+        },
+        {
+          "item_id": 68,
+          "weight": 65,
+          "profit": 75
+        },
+        {
+          "item_id": 69,
+          "weight": 31,
+          "profit": 41
+        },
+        {
+          "item_id": 70,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 71,
+          "weight": 64,
+          "profit": 74
+        },
+        {
+          "item_id": 72,
+          "weight": 95,
+          "profit": 105
+        },
+        {
+          "item_id": 73,
+          "weight": 25,
+          "profit": 35
+        },
+        {
+          "item_id": 74,
+          "weight": 81,
+          "profit": 91
+        },
+        {
+          "item_id": 75,
+          "weight": 37,
+          "profit": 47
+        },
+        {
+          "item_id": 76,
+          "weight": 69,
+          "profit": 79
+        },
+        {
+          "item_id": 77,
+          "weight": 89,
+          "profit": 99
+        },
+        {
+          "item_id": 78,
+          "weight": 89,
+          "profit": 99
+        },
+        {
+          "item_id": 79,
+          "weight": 73,
+          "profit": 83
+        },
+        {
+          "item_id": 80,
+          "weight": 88,
+          "profit": 98
+        },
+        {
+          "item_id": 81,
+          "weight": 93,
+          "profit": 103
+        },
+        {
+          "item_id": 82,
+          "weight": 85,
+          "profit": 95
+        },
+        {
+          "item_id": 83,
+          "weight": 98,
+          "profit": 108
+        },
+        {
+          "item_id": 84,
+          "weight": 36,
+          "profit": 46
+        },
+        {
+          "item_id": 85,
+          "weight": 31,
+          "profit": 41
+        },
+        {
+          "item_id": 86,
+          "weight": 54,
+          "profit": 64
+        },
+        {
+          "item_id": 87,
+          "weight": 78,
+          "profit": 88
+        },
+        {
+          "item_id": 88,
+          "weight": 63,
+          "profit": 73
+        },
+        {
+          "item_id": 89,
+          "weight": 32,
+          "profit": 42
+        },
+        {
+          "item_id": 90,
+          "weight": 42,
+          "profit": 52
+        },
+        {
+          "item_id": 91,
+          "weight": 29,
+          "profit": 39
+        },
+        {
+          "item_id": 92,
+          "weight": 33,
+          "profit": 43
+        },
+        {
+          "item_id": 93,
+          "weight": 59,
+          "profit": 69
+        },
+        {
+          "item_id": 94,
+          "weight": 91,
+          "profit": 101
+        },
+        {
+          "item_id": 95,
+          "weight": 93,
+          "profit": 103
+        },
+        {
+          "item_id": 96,
+          "weight": 47,
+          "profit": 57
+        },
+        {
+          "item_id": 97,
+          "weight": 28,
+          "profit": 38
+        },
+        {
+          "item_id": 98,
+          "weight": 14,
+          "profit": 24
+        },
+        {
+          "item_id": 99,
+          "weight": 90,
+          "profit": 100
+        },
+        {
+          "item_id": 100,
+          "weight": 46,
+          "profit": 56
+        }
+      ]
+    },
+    {
+      "family_id": 5,
+      "n_i": 100,
+      "setup_cost": 1035,
+      "setup_capacity": 970,
+      "items": [
+        {
+          "item_id": 1,
+          "weight": 38,
+          "profit": 48
+        },
+        {
+          "item_id": 2,
+          "weight": 29,
+          "profit": 39
+        },
+        {
+          "item_id": 3,
+          "weight": 41,
+          "profit": 51
+        },
+        {
+          "item_id": 4,
+          "weight": 15,
+          "profit": 25
+        },
+        {
+          "item_id": 5,
+          "weight": 16,
+          "profit": 26
+        },
+        {
+          "item_id": 6,
+          "weight": 87,
+          "profit": 97
+        },
+        {
+          "item_id": 7,
+          "weight": 45,
+          "profit": 55
+        },
+        {
+          "item_id": 8,
+          "weight": 45,
+          "profit": 55
+        },
+        {
+          "item_id": 9,
+          "weight": 38,
+          "profit": 48
+        },
+        {
+          "item_id": 10,
+          "weight": 87,
+          "profit": 97
+        },
+        {
+          "item_id": 11,
+          "weight": 84,
+          "profit": 94
+        },
+        {
+          "item_id": 12,
+          "weight": 33,
+          "profit": 43
+        },
+        {
+          "item_id": 13,
+          "weight": 56,
+          "profit": 66
+        },
+        {
+          "item_id": 14,
+          "weight": 90,
+          "profit": 100
+        },
+        {
+          "item_id": 15,
+          "weight": 67,
+          "profit": 77
+        },
+        {
+          "item_id": 16,
+          "weight": 43,
+          "profit": 53
+        },
+        {
+          "item_id": 17,
+          "weight": 18,
+          "profit": 28
+        },
+        {
+          "item_id": 18,
+          "weight": 41,
+          "profit": 51
+        },
+        {
+          "item_id": 19,
+          "weight": 44,
+          "profit": 54
+        },
+        {
+          "item_id": 20,
+          "weight": 48,
+          "profit": 58
+        },
+        {
+          "item_id": 21,
+          "weight": 22,
+          "profit": 32
+        },
+        {
+          "item_id": 22,
+          "weight": 64,
+          "profit": 74
+        },
+        {
+          "item_id": 23,
+          "weight": 40,
+          "profit": 50
+        },
+        {
+          "item_id": 24,
+          "weight": 72,
+          "profit": 82
+        },
+        {
+          "item_id": 25,
+          "weight": 80,
+          "profit": 90
+        },
+        {
+          "item_id": 26,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 27,
+          "weight": 62,
+          "profit": 72
+        },
+        {
+          "item_id": 28,
+          "weight": 36,
+          "profit": 46
+        },
+        {
+          "item_id": 29,
+          "weight": 20,
+          "profit": 30
+        },
+        {
+          "item_id": 30,
+          "weight": 57,
+          "profit": 67
+        },
+        {
+          "item_id": 31,
+          "weight": 48,
+          "profit": 58
+        },
+        {
+          "item_id": 32,
+          "weight": 62,
+          "profit": 72
+        },
+        {
+          "item_id": 33,
+          "weight": 67,
+          "profit": 77
+        },
+        {
+          "item_id": 34,
+          "weight": 14,
+          "profit": 24
+        },
+        {
+          "item_id": 35,
+          "weight": 41,
+          "profit": 51
+        },
+        {
+          "item_id": 36,
+          "weight": 13,
+          "profit": 23
+        },
+        {
+          "item_id": 37,
+          "weight": 59,
+          "profit": 69
+        },
+        {
+          "item_id": 38,
+          "weight": 18,
+          "profit": 28
+        },
+        {
+          "item_id": 39,
+          "weight": 49,
+          "profit": 59
+        },
+        {
+          "item_id": 40,
+          "weight": 44,
+          "profit": 54
+        },
+        {
+          "item_id": 41,
+          "weight": 95,
+          "profit": 105
+        },
+        {
+          "item_id": 42,
+          "weight": 17,
+          "profit": 27
+        },
+        {
+          "item_id": 43,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 44,
+          "weight": 26,
+          "profit": 36
+        },
+        {
+          "item_id": 45,
+          "weight": 56,
+          "profit": 66
+        },
+        {
+          "item_id": 46,
+          "weight": 15,
+          "profit": 25
+        },
+        {
+          "item_id": 47,
+          "weight": 73,
+          "profit": 83
+        },
+        {
+          "item_id": 48,
+          "weight": 31,
+          "profit": 41
+        },
+        {
+          "item_id": 49,
+          "weight": 65,
+          "profit": 75
+        },
+        {
+          "item_id": 50,
+          "weight": 61,
+          "profit": 71
+        },
+        {
+          "item_id": 51,
+          "weight": 86,
+          "profit": 96
+        },
+        {
+          "item_id": 52,
+          "weight": 38,
+          "profit": 48
+        },
+        {
+          "item_id": 53,
+          "weight": 24,
+          "profit": 34
+        },
+        {
+          "item_id": 54,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 55,
+          "weight": 46,
+          "profit": 56
+        },
+        {
+          "item_id": 56,
+          "weight": 27,
+          "profit": 37
+        },
+        {
+          "item_id": 57,
+          "weight": 89,
+          "profit": 99
+        },
+        {
+          "item_id": 58,
+          "weight": 29,
+          "profit": 39
+        },
+        {
+          "item_id": 59,
+          "weight": 92,
+          "profit": 102
+        },
+        {
+          "item_id": 60,
+          "weight": 89,
+          "profit": 99
+        },
+        {
+          "item_id": 61,
+          "weight": 62,
+          "profit": 72
+        },
+        {
+          "item_id": 62,
+          "weight": 90,
+          "profit": 100
+        },
+        {
+          "item_id": 63,
+          "weight": 90,
+          "profit": 100
+        },
+        {
+          "item_id": 64,
+          "weight": 21,
+          "profit": 31
+        },
+        {
+          "item_id": 65,
+          "weight": 27,
+          "profit": 37
+        },
+        {
+          "item_id": 66,
+          "weight": 20,
+          "profit": 30
+        },
+        {
+          "item_id": 67,
+          "weight": 81,
+          "profit": 91
+        },
+        {
+          "item_id": 68,
+          "weight": 98,
+          "profit": 108
+        },
+        {
+          "item_id": 69,
+          "weight": 36,
+          "profit": 46
+        },
+        {
+          "item_id": 70,
+          "weight": 99,
+          "profit": 109
+        },
+        {
+          "item_id": 71,
+          "weight": 90,
+          "profit": 100
+        },
+        {
+          "item_id": 72,
+          "weight": 72,
+          "profit": 82
+        },
+        {
+          "item_id": 73,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 74,
+          "weight": 68,
+          "profit": 78
+        },
+        {
+          "item_id": 75,
+          "weight": 55,
+          "profit": 65
+        },
+        {
+          "item_id": 76,
+          "weight": 77,
+          "profit": 87
+        },
+        {
+          "item_id": 77,
+          "weight": 86,
+          "profit": 96
+        },
+        {
+          "item_id": 78,
+          "weight": 61,
+          "profit": 71
+        },
+        {
+          "item_id": 79,
+          "weight": 73,
+          "profit": 83
+        },
+        {
+          "item_id": 80,
+          "weight": 38,
+          "profit": 48
+        },
+        {
+          "item_id": 81,
+          "weight": 84,
+          "profit": 94
+        },
+        {
+          "item_id": 82,
+          "weight": 88,
+          "profit": 98
+        },
+        {
+          "item_id": 83,
+          "weight": 16,
+          "profit": 26
+        },
+        {
+          "item_id": 84,
+          "weight": 86,
+          "profit": 96
+        },
+        {
+          "item_id": 85,
+          "weight": 36,
+          "profit": 46
+        },
+        {
+          "item_id": 86,
+          "weight": 64,
+          "profit": 74
+        },
+        {
+          "item_id": 87,
+          "weight": 36,
+          "profit": 46
+        },
+        {
+          "item_id": 88,
+          "weight": 44,
+          "profit": 54
+        },
+        {
+          "item_id": 89,
+          "weight": 44,
+          "profit": 54
+        },
+        {
+          "item_id": 90,
+          "weight": 41,
+          "profit": 51
+        },
+        {
+          "item_id": 91,
+          "weight": 65,
+          "profit": 75
+        },
+        {
+          "item_id": 92,
+          "weight": 71,
+          "profit": 81
+        },
+        {
+          "item_id": 93,
+          "weight": 71,
+          "profit": 81
+        },
+        {
+          "item_id": 94,
+          "weight": 99,
+          "profit": 109
+        },
+        {
+          "item_id": 95,
+          "weight": 37,
+          "profit": 47
+        },
+        {
+          "item_id": 96,
+          "weight": 54,
+          "profit": 64
+        },
+        {
+          "item_id": 97,
+          "weight": 69,
+          "profit": 79
+        },
+        {
+          "item_id": 98,
+          "weight": 10,
+          "profit": 20
+        },
+        {
+          "item_id": 99,
+          "weight": 24,
+          "profit": 34
+        },
+        {
+          "item_id": 100,
+          "weight": 94,
+          "profit": 104
+        }
+      ]
+    }
+  ]
+}

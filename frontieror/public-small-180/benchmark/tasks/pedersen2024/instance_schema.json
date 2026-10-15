@@ -1,0 +1,31 @@
+{
+  "parameters": {
+    "num_potential_turbines": "<int> Number of candidate turbine sites in the region.",
+    "num_substations": "<int> Number of fixed grid substations in the region.",
+    "num_steiner_nodes": "<int> Number of intermediate cable routing points that cannot host turbines.",
+    "total_nodes": "<int> Total number of locations (substations, candidate turbine sites, and Steiner nodes).",
+    "total_edges": "<int> Total number of feasible cable connections between pairs of locations.",
+    "quota": "<float> Minimum total annual energy yield that the selected turbines must collectively achieve.",
+    "alpha": "<float> Weight given to financial cost in the combined objective, with the remainder weighting scenic impact."
+  },
+  "nodes": [
+    {
+      "id": "<int> Unique identifier for this location.",
+      "type": "<str> Role of this location: 'substation', 'potential_turbine', or 'steiner'.",
+      "x": "<float> Horizontal coordinate of this location in kilometers.",
+      "y": "<float> Vertical coordinate of this location in kilometers.",
+      "cost": "<float> Installation cost of building a turbine at this location (zero for substations and Steiner nodes).",
+      "profit": "<float> Annual energy yield from a turbine at this location (zero for substations and Steiner nodes).",
+      "scenic_impact": "<float> Visual burden imposed on the landscape by placing a turbine at this location (zero for substations and Steiner nodes)."
+    }
+  ],
+  "edges": [
+    {
+      "id": "<int> Unique identifier for this cable connection.",
+      "from": "<int> Node identifier of one endpoint of this cable connection.",
+      "to": "<int> Node identifier of the other endpoint of this cable connection.",
+      "cost": "<float> Financial cost of laying this cable segment (zero between substations).",
+      "scenic_impact": "<float> Visual burden imposed on the landscape by this cable route (zero between substations)."
+    }
+  ]
+}

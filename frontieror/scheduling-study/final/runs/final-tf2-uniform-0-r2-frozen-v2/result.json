@@ -1,0 +1,72 @@
+{
+  "slot": "final-tf2-uniform-0-r2-frozen-v2",
+  "instance": "final-tf2-uniform-0",
+  "solver": "frozen-v2",
+  "repeat": 2,
+  "block": 73,
+  "seed": 155921,
+  "stratum": "tf2-uniform",
+  "status": "VALID_IN_TIME",
+  "objective": 29004,
+  "measurement": {
+    "argv": [
+      "./frozen-v2",
+      "/work/runs/final-tf2-uniform-0-r2-frozen-v2/input.txt",
+      "/work/runs/final-tf2-uniform-0-r2-frozen-v2/output.json",
+      "290",
+      "155921",
+      "1"
+    ],
+    "pid": 1056,
+    "started_unix": 1791496332.2991323,
+    "external_deadline_seconds": 300.0,
+    "elapsed_seconds": 289.88290000800043,
+    "user_cpu_seconds": 287.953349,
+    "system_cpu_seconds": 0.0009989999999999999,
+    "returncode": 0,
+    "timed_out": false,
+    "samples": [
+      {
+        "observed_seconds": 289.86801263300003,
+        "sha256": "3328e7b9950d7a7f2a58e367cd04bcea8078f3d46a4ce24311233869dc10fdfc",
+        "bytes": 8193,
+        "parseable": false,
+        "parse_error": "JSONDecodeError"
+      },
+      {
+        "observed_seconds": 289.8814419659975,
+        "sha256": "de2cc75b5c5ed062e6e9536124c3fa39d15657bd9dd98c3065c044df5c503965",
+        "bytes": 11457,
+        "parseable": true,
+        "parse_error": null,
+        "snapshot": "snapshot-0001.json"
+      }
+    ],
+    "validation_status": "Pending both schedule validators; parseable is not feasible",
+    "timing_scope": "Process startup and execution; excludes container startup and preconversion"
+  },
+  "checks": [
+    {
+      "snapshot": "snapshot-0001.json",
+      "observed_seconds": 289.8814419659975,
+      "sha256": "de2cc75b5c5ed062e6e9536124c3fa39d15657bd9dd98c3065c044df5c503965",
+      "audit": {
+        "feasible": true,
+        "recomputed_objective": 29004,
+        "jobs_checked": 30,
+        "operations_checked": 300,
+        "errors": []
+      },
+      "official": {
+        "feasible": true,
+        "violated_constraints": [],
+        "violations": [],
+        "violation_magnitudes": []
+      },
+      "objective": 29004,
+      "valid": true
+    }
+  ],
+  "report_matches_snapshot": true,
+  "reported": null
+}

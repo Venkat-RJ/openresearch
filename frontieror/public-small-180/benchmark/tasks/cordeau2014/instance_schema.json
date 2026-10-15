@@ -1,0 +1,26 @@
+{
+  "parameters": {
+    "n_customers": "<int> Number of customers to be visited by the vehicle.",
+    "total_vertices": "<int> Total number of vertices in the graph, including the depot and all customers.",
+    "H": "<int> Number of consecutive time periods that partition the planning horizon.",
+    "b_h": "<list[float], length H> Global congestion factor for each time period, representing the lightest congestion level on the network during that period.",
+    "time_horizon_T": "<float> End time of the planning horizon, within which the vehicle must complete its tour.",
+    "period_boundaries": "<list[float], length H+1> Start and end times of each time period, from time zero to the end of the horizon."
+  },
+  "depot": {
+    "index": "<int> Index of the depot vertex in the vertex list.",
+    "x": "<float> X-coordinate of the depot location.",
+    "y": "<float> Y-coordinate of the depot location."
+  },
+  "vertices": {
+    "count": "<int> Total number of vertices including the depot.",
+    "coordinates": "<list[list[float]], shape [total_vertices][2]> X and Y coordinates of each vertex, starting with the depot at index 0 followed by each customer.",
+    "zones": "<list[str], length total_vertices> Concentric traffic zone assignment for each vertex based on its distance from the depot."
+  },
+  "arcs": {
+    "distances": "<list[list[float]], shape [total_vertices][total_vertices]> Euclidean travel distance from vertex i to vertex j for every ordered pair of vertices.",
+    "max_speeds_u_ij": "<list[list[float]], shape [total_vertices][total_vertices]> Maximum achievable travel speed on the arc from vertex i to vertex j across all time periods.",
+    "speeds_v_ijh": "<list[list[list[float]]], shape [total_vertices][total_vertices][H]> Travel speed on the arc from vertex i to vertex j during each time period.",
+    "delta_ijh": "<list[list[list[float]]], shape [total_vertices][total_vertices][H]> Arc-specific congestion degradation factor for the arc from vertex i to vertex j during each time period."
+  }
+}

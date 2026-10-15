@@ -1,0 +1,21 @@
+{
+  "n": "<int> Number of customers to be served.",
+  "T": "<int> Number of time periods in the planning horizon.",
+  "m": "<int> Number of identical vehicles available at the plant.",
+  "Q": "<int> Maximum load capacity of each vehicle.",
+  "C": "<int> Maximum production quantity at the plant per period.",
+  "f": "<float> Fixed cost incurred whenever production takes place in a period.",
+  "u": "<float> Cost per unit of product produced at the plant.",
+  "epsilon": "<float> Half-width of the demand uncertainty interval as a fraction of nominal demand.",
+  "alpha_hat": "<int> Multiplier used to compute the per-unit penalty cost for unmet customer demand.",
+  "coordinates": "<list[list[float]], shape [n+1][2]> Spatial coordinates of each node, where index 0 is the plant and indices 1 through n are customers.",
+  "transportation_costs": "<list[list[float]], shape [n+1][n+1]> Symmetric travel cost between each pair of nodes, where index 0 is the plant.",
+  "h": "<list[float], length n+1> Per-unit inventory holding cost at each node per period, where index 0 is the plant.",
+  "L": "<list[int], length n+1> Maximum inventory storage capacity at each node, where index 0 is the plant.",
+  "I0": "<list[int], length n+1> Inventory on hand at each node at the start of the planning horizon, where index 0 is the plant.",
+  "d_bar": "<list[list[int]], shape [n][T]> Nominal (expected) demand for each customer in each period.",
+  "sigma": "<list[float], length n> Per-unit penalty cost for unmet demand at each customer.",
+  "n_scenarios": "<int> Number of demand scenarios considered.",
+  "scenario_probabilities": "<list[float], length n_scenarios> Probability of each demand scenario being realized.",
+  "demand_scenarios": "<list[list[list[float]]], shape [n_scenarios][n][T]> Realized demand for each customer in each period under each scenario."
+}

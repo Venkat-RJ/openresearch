@@ -1,0 +1,910 @@
+{
+  "problem_name": "Outbound Baggage Handling Problem (OBHP)",
+  "source_paper": "Frey, Kolisch, Artigues (2017) - Column Generation for Outbound Baggage Handling at Airports",
+  "instance_number": 1,
+  "planning_horizon": {
+    "start_time": "03:00",
+    "end_time": "22:40",
+    "num_periods": 236,
+    "period_length_minutes": 5
+  },
+  "objective": {
+    "target_utilization": 0.5,
+    "threshold_values": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0,
+      2.0,
+      10.0,
+      100.0
+    ],
+    "penalties": [
+      1,
+      4,
+      27,
+      256,
+      3125,
+      46656,
+      823543,
+      16777216,
+      387420489,
+      10000000000,
+      285311670611,
+      8916100448256,
+      302875106592253
+    ],
+    "description": "Minimize sum of penalty values for utilization exceeding target across all carousels and peak intervals"
+  },
+  "peak_intervals": [
+    {
+      "peak_id": 1,
+      "start_period": 36,
+      "end_period": 84
+    },
+    {
+      "peak_id": 2,
+      "start_period": 108,
+      "end_period": 144
+    },
+    {
+      "peak_id": 3,
+      "start_period": 168,
+      "end_period": 228
+    }
+  ],
+  "central_storage": {
+    "capacity_bags": 3500,
+    "depletion_rate_bags_per_period": 19,
+    "depletion_offset_periods": 6
+  },
+  "working_rate_bags_per_period": 8,
+  "baggage_transfer_time_periods": 1,
+  "flight_end_offset_periods": 2,
+  "quantile_used": 0.8,
+  "num_flights": 25,
+  "num_carousels": 10,
+  "carousel_config": [
+    {
+      "type_r": 2,
+      "count": 10
+    }
+  ],
+  "carousel_types": {
+    "1": {
+      "Kpp": 8,
+      "Kws": 4,
+      "Kppws": 2,
+      "Kcb": 20
+    },
+    "2": {
+      "Kpp": 12,
+      "Kws": 4,
+      "Kppws": 3,
+      "Kcb": 25
+    },
+    "3": {
+      "Kpp": 24,
+      "Kws": 6,
+      "Kppws": 4,
+      "Kcb": 40
+    }
+  },
+  "carousels": [
+    {
+      "carousel_id": 1,
+      "type_r": 2,
+      "Kpp": 12,
+      "Kws": 4,
+      "Kppws": 3,
+      "Kcb": 25
+    },
+    {
+      "carousel_id": 2,
+      "type_r": 2,
+      "Kpp": 12,
+      "Kws": 4,
+      "Kppws": 3,
+      "Kcb": 25
+    },
+    {
+      "carousel_id": 3,
+      "type_r": 2,
+      "Kpp": 12,
+      "Kws": 4,
+      "Kppws": 3,
+      "Kcb": 25
+    },
+    {
+      "carousel_id": 4,
+      "type_r": 2,
+      "Kpp": 12,
+      "Kws": 4,
+      "Kppws": 3,
+      "Kcb": 25
+    },
+    {
+      "carousel_id": 5,
+      "type_r": 2,
+      "Kpp": 12,
+      "Kws": 4,
+      "Kppws": 3,
+      "Kcb": 25
+    },
+    {
+      "carousel_id": 6,
+      "type_r": 2,
+      "Kpp": 12,
+      "Kws": 4,
+      "Kppws": 3,
+      "Kcb": 25
+    },
+    {
+      "carousel_id": 7,
+      "type_r": 2,
+      "Kpp": 12,
+      "Kws": 4,
+      "Kppws": 3,
+      "Kcb": 25
+    },
+    {
+      "carousel_id": 8,
+      "type_r": 2,
+      "Kpp": 12,
+      "Kws": 4,
+      "Kppws": 3,
+      "Kcb": 25
+    },
+    {
+      "carousel_id": 9,
+      "type_r": 2,
+      "Kpp": 12,
+      "Kws": 4,
+      "Kppws": 3,
+      "Kcb": 25
+    },
+    {
+      "carousel_id": 10,
+      "type_r": 2,
+      "Kpp": 12,
+      "Kws": 4,
+      "Kppws": 3,
+      "Kcb": 25
+    }
+  ],
+  "flights": [
+    {
+      "flight_id": 1,
+      "departure_period": 51,
+      "expected_baggage": 14,
+      "num_containers": 1,
+      "earliest_start_period": 37,
+      "latest_start_period": 43,
+      "end_period": 49,
+      "handling_duration_periods": 9,
+      "arrival_profile": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        3,
+        1,
+        0,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 2,
+      "departure_period": 52,
+      "expected_baggage": 34,
+      "num_containers": 3,
+      "earliest_start_period": 38,
+      "latest_start_period": 44,
+      "end_period": 50,
+      "handling_duration_periods": 10,
+      "arrival_profile": [
+        1,
+        1,
+        6,
+        3,
+        4,
+        3,
+        7,
+        1,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 3,
+      "departure_period": 60,
+      "expected_baggage": 28,
+      "num_containers": 2,
+      "earliest_start_period": 46,
+      "latest_start_period": 52,
+      "end_period": 58,
+      "handling_duration_periods": 10,
+      "arrival_profile": [
+        1,
+        1,
+        5,
+        2,
+        3,
+        2,
+        6,
+        1,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 2
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 2
+    },
+    {
+      "flight_id": 4,
+      "departure_period": 66,
+      "expected_baggage": 38,
+      "num_containers": 3,
+      "earliest_start_period": 52,
+      "latest_start_period": 58,
+      "end_period": 64,
+      "handling_duration_periods": 7,
+      "arrival_profile": [
+        4,
+        8,
+        5,
+        4,
+        8,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 5,
+      "departure_period": 68,
+      "expected_baggage": 22,
+      "num_containers": 2,
+      "earliest_start_period": 54,
+      "latest_start_period": 60,
+      "end_period": 66,
+      "handling_duration_periods": 8,
+      "arrival_profile": [
+        1,
+        4,
+        2,
+        2,
+        5,
+        2,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 2
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 2
+    },
+    {
+      "flight_id": 6,
+      "departure_period": 76,
+      "expected_baggage": 24,
+      "num_containers": 2,
+      "earliest_start_period": 62,
+      "latest_start_period": 68,
+      "end_period": 74,
+      "handling_duration_periods": 6,
+      "arrival_profile": [
+        2,
+        6,
+        4,
+        6,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 2
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 2
+    },
+    {
+      "flight_id": 7,
+      "departure_period": 84,
+      "expected_baggage": 18,
+      "num_containers": 2,
+      "earliest_start_period": 70,
+      "latest_start_period": 76,
+      "end_period": 82,
+      "handling_duration_periods": 6,
+      "arrival_profile": [
+        1,
+        4,
+        3,
+        5,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 2
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 2
+    },
+    {
+      "flight_id": 8,
+      "departure_period": 92,
+      "expected_baggage": 12,
+      "num_containers": 1,
+      "earliest_start_period": 78,
+      "latest_start_period": 84,
+      "end_period": 90,
+      "handling_duration_periods": 11,
+      "arrival_profile": [
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 9,
+      "departure_period": 93,
+      "expected_baggage": 40,
+      "num_containers": 3,
+      "earliest_start_period": 79,
+      "latest_start_period": 85,
+      "end_period": 91,
+      "handling_duration_periods": 12,
+      "arrival_profile": [
+        1,
+        2,
+        8,
+        3,
+        3,
+        3,
+        3,
+        7,
+        1,
+        1,
+        0,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 10,
+      "departure_period": 105,
+      "expected_baggage": 44,
+      "num_containers": 3,
+      "earliest_start_period": 91,
+      "latest_start_period": 97,
+      "end_period": 103,
+      "handling_duration_periods": 7,
+      "arrival_profile": [
+        4,
+        10,
+        6,
+        5,
+        9,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 11,
+      "departure_period": 126,
+      "expected_baggage": 27,
+      "num_containers": 2,
+      "earliest_start_period": 112,
+      "latest_start_period": 118,
+      "end_period": 124,
+      "handling_duration_periods": 8,
+      "arrival_profile": [
+        1,
+        5,
+        3,
+        3,
+        7,
+        2,
+        0,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 2
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 2
+    },
+    {
+      "flight_id": 12,
+      "departure_period": 133,
+      "expected_baggage": 23,
+      "num_containers": 2,
+      "earliest_start_period": 119,
+      "latest_start_period": 125,
+      "end_period": 131,
+      "handling_duration_periods": 6,
+      "arrival_profile": [
+        1,
+        7,
+        3,
+        6,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 2
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 2
+    },
+    {
+      "flight_id": 13,
+      "departure_period": 140,
+      "expected_baggage": 45,
+      "num_containers": 3,
+      "earliest_start_period": 126,
+      "latest_start_period": 132,
+      "end_period": 138,
+      "handling_duration_periods": 9,
+      "arrival_profile": [
+        2,
+        8,
+        4,
+        5,
+        5,
+        9,
+        2,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 14,
+      "departure_period": 141,
+      "expected_baggage": 33,
+      "num_containers": 3,
+      "earliest_start_period": 127,
+      "latest_start_period": 133,
+      "end_period": 139,
+      "handling_duration_periods": 10,
+      "arrival_profile": [
+        1,
+        1,
+        6,
+        3,
+        3,
+        3,
+        7,
+        1,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 15,
+      "departure_period": 144,
+      "expected_baggage": 10,
+      "num_containers": 1,
+      "earliest_start_period": 130,
+      "latest_start_period": 136,
+      "end_period": 142,
+      "handling_duration_periods": 9,
+      "arrival_profile": [
+        0,
+        2,
+        1,
+        1,
+        1,
+        3,
+        0,
+        0,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 16,
+      "departure_period": 148,
+      "expected_baggage": 21,
+      "num_containers": 2,
+      "earliest_start_period": 134,
+      "latest_start_period": 140,
+      "end_period": 146,
+      "handling_duration_periods": 8,
+      "arrival_profile": [
+        1,
+        3,
+        3,
+        2,
+        5,
+        1,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 2
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 2
+    },
+    {
+      "flight_id": 17,
+      "departure_period": 155,
+      "expected_baggage": 17,
+      "num_containers": 2,
+      "earliest_start_period": 141,
+      "latest_start_period": 147,
+      "end_period": 153,
+      "handling_duration_periods": 11,
+      "arrival_profile": [
+        0,
+        1,
+        3,
+        2,
+        2,
+        1,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 2
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 2
+    },
+    {
+      "flight_id": 18,
+      "departure_period": 155,
+      "expected_baggage": 11,
+      "num_containers": 1,
+      "earliest_start_period": 141,
+      "latest_start_period": 147,
+      "end_period": 153,
+      "handling_duration_periods": 11,
+      "arrival_profile": [
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 19,
+      "departure_period": 156,
+      "expected_baggage": 31,
+      "num_containers": 3,
+      "earliest_start_period": 142,
+      "latest_start_period": 148,
+      "end_period": 154,
+      "handling_duration_periods": 12,
+      "arrival_profile": [
+        1,
+        1,
+        6,
+        2,
+        2,
+        2,
+        3,
+        5,
+        1,
+        1,
+        0,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 20,
+      "departure_period": 184,
+      "expected_baggage": 41,
+      "num_containers": 3,
+      "earliest_start_period": 170,
+      "latest_start_period": 176,
+      "end_period": 182,
+      "handling_duration_periods": 7,
+      "arrival_profile": [
+        3,
+        10,
+        5,
+        5,
+        8,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 21,
+      "departure_period": 194,
+      "expected_baggage": 47,
+      "num_containers": 4,
+      "earliest_start_period": 180,
+      "latest_start_period": 186,
+      "end_period": 192,
+      "handling_duration_periods": 7,
+      "arrival_profile": [
+        3,
+        11,
+        7,
+        6,
+        9,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 2
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 2
+    },
+    {
+      "flight_id": 22,
+      "departure_period": 200,
+      "expected_baggage": 16,
+      "num_containers": 2,
+      "earliest_start_period": 186,
+      "latest_start_period": 192,
+      "end_period": 198,
+      "handling_duration_periods": 11,
+      "arrival_profile": [
+        0,
+        1,
+        3,
+        1,
+        1,
+        2,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 2
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 2
+    },
+    {
+      "flight_id": 23,
+      "departure_period": 207,
+      "expected_baggage": 31,
+      "num_containers": 3,
+      "earliest_start_period": 193,
+      "latest_start_period": 199,
+      "end_period": 205,
+      "handling_duration_periods": 10,
+      "arrival_profile": [
+        1,
+        1,
+        6,
+        2,
+        4,
+        2,
+        6,
+        1,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    },
+    {
+      "flight_id": 24,
+      "departure_period": 217,
+      "expected_baggage": 29,
+      "num_containers": 2,
+      "earliest_start_period": 203,
+      "latest_start_period": 209,
+      "end_period": 215,
+      "handling_duration_periods": 10,
+      "arrival_profile": [
+        1,
+        1,
+        6,
+        2,
+        3,
+        2,
+        6,
+        1,
+        1,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 2
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 2
+    },
+    {
+      "flight_id": 25,
+      "departure_period": 227,
+      "expected_baggage": 35,
+      "num_containers": 3,
+      "earliest_start_period": 213,
+      "latest_start_period": 219,
+      "end_period": 225,
+      "handling_duration_periods": 12,
+      "arrival_profile": [
+        1,
+        2,
+        6,
+        3,
+        3,
+        3,
+        2,
+        7,
+        1,
+        0,
+        0,
+        0
+      ],
+      "working_station_bounds_by_carousel_type": {
+        "2": {
+          "Wmin": 1,
+          "Wmax": 1
+        }
+      },
+      "Wmin": 1,
+      "Wmax": 1
+    }
+  ]
+}

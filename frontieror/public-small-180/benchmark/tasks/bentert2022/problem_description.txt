@@ -1,0 +1,7 @@
+# Problem Description
+
+A wireless sensor network consists of a set of sensors (nodes) and a set of possible communication links (edges) between pairs of distinct sensors, forming a connected undirected simple graph. Each link has a non-negative integer weight representing the power cost required to maintain that link, where in typical instances weights equal the squared Euclidean distance between the two sensors' positions.
+
+The network operator must select a subset of communication links such that the resulting subgraph spans all sensors (every sensor is included) and is connected (every sensor can reach every other sensor through the chosen links). The power cost paid by each sensor equals the maximum weight among all chosen links incident to that sensor. The goal is to minimize the total power cost across all sensors, defined as the sum over all sensors of the maximum-weight chosen link incident to each sensor.
+
+The input specifies the number of sensors, the number of links, the two-dimensional coordinates of each sensor, and the weight of each link. The graph over which the optimization takes place is complete, meaning every pair of sensors is connected by a link whose weight is the squared Euclidean distance between them.

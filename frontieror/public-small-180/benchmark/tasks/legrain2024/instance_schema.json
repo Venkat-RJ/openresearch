@@ -1,0 +1,86 @@
+{
+  "shifts": "<list[str], length num_shifts> Named work shifts available in the scheduling horizon.",
+  "skills": "<list[str], length num_skills> Named skills that nurses may possess and perform during shifts.",
+  "nurses": [
+    {
+      "id": "<str> Unique identifier for the nurse.",
+      "skills": "<list[str]> Skills this nurse is qualified to perform.",
+      "preferences": [
+        {
+          "day": "<int> Day number (1-indexed) the preference applies to.",
+          "type": "<str> Kind of preference, either 'day_off', 'day_on', 'shift_on', or 'shift_off'.",
+          "shift": "<str> Shift name the preference refers to, or 'None' for day-off preferences.",
+          "penalty": "<int> Cost incurred if this preference is not honored."
+        }
+      ]
+    }
+  ],
+  "weekend_definition": "<str> Which days of the week constitute a weekend.",
+  "weekends": [
+    {
+      "week": "<int> Week number (1-indexed) this weekend belongs to.",
+      "saturday": "<int> Day number (1-indexed) of Saturday in this weekend.",
+      "sunday": "<int> Day number (1-indexed) of Sunday in this weekend."
+    }
+  ],
+  "demand": {
+    "day_{d}": {
+      "{shift}": {
+        "{skill}": "<int> Minimum number of nurses with this skill required on this shift and day."
+      }
+    }
+  },
+  "unsatisfied_demand_penalty": "<int> Cost per unit of unmet demand across day-shift-skill combinations.",
+  "constraints": {
+    "hard_constraints": {
+      "forbidden_patterns": [
+        {
+          "pattern": "<list[list[str]], shape [pattern_length][2]> Sequence of consecutive-day [day_type, shift] pairs that must never appear in any nurse's schedule.",
+          "description": "<str> Human-readable explanation of the forbidden pattern."
+        }
+      ],
+      "skill_requirement": "<bool> Whether nurses may only perform skills they possess.",
+      "single_assignment_per_day": "<bool> Whether each nurse must be assigned exactly one shift per day.",
+      "demand_equality": "<bool, optional> If true, staffing must equal demand exactly and demand slack is disabled."
+    },
+    "soft_constraints": {
+      "total_working_days": {
+        "min": "<int> Minimum number of days each nurse should work over the horizon.",
+        "max": "<int> Maximum number of days each nurse should work over the horizon.",
+        "penalty_under": "<int> Cost per day below the minimum working-day target.",
+        "penalty_over": "<int> Cost per day above the maximum working-day target."
+      },
+      "total_worked_weekends": {
+        "max": "<int> Maximum number of weekends each nurse should work.",
+        "penalty": "<int> Cost per weekend worked above the maximum."
+      },
+      "consecutive_working_days": {
+        "min": "<int> Minimum length of any unbroken streak of working days.",
+        "max": "<int> Maximum length of any unbroken streak of working days.",
+        "penalty_under": "<int> Cost per occurrence of a working streak shorter than the minimum.",
+        "penalty_over": "<int> Cost per day a working streak exceeds the maximum."
+      },
+      "consecutive_days_off": {
+        "min": "<int> Minimum length of any unbroken streak of rest days.",
+        "max": "<int> Maximum length of any unbroken streak of rest days.",
+        "penalty_under": "<int> Cost per occurrence of a rest streak shorter than the minimum.",
+        "penalty_over": "<int> Cost per day a rest streak exceeds the maximum."
+      },
+      "consecutive_same_shift": {
+        "max": "<int> Maximum number of consecutive days a nurse may be assigned the same work shift.",
+        "penalty": "<int> Cost per day a same-shift streak exceeds the maximum."
+      },
+      "consecutive_worked_weekends": {
+        "max": "<int> Maximum number of consecutive weekends a nurse may work.",
+        "penalty": "<int> Cost per weekend a consecutive-weekend streak exceeds the maximum."
+      },
+      "identical_weekend": {
+        "enabled": "<bool> Whether the identical-weekend rule is active.",
+        "penalty": "<int> Cost incurred when the shifts on the days named by a weekend record are not all identical."
+      },
+      "skill_requirement_penalty": "<int, optional> Cost per worked day assigned to a skill the nurse does not possess when skill possession is soft.",
+      "forbidden_patterns": "<list[object], optional> Soft forbidden shift sequences with per-occurrence penalties.",
+      "preferences_penalty": "<bool or number, optional> Enables the penalty stored on each unmet nurse preference."
+    }
+  }
+}

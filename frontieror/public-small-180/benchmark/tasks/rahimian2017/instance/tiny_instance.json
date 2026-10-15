@@ -1,0 +1,339 @@
+{
+  "num_days": 14,
+  "num_weeks": 2,
+  "num_nurses": 8,
+  "num_shift_types": 1,
+  "num_weekends": 2,
+  "shift_types": [
+    {
+      "id": 0,
+      "name": "Early",
+      "length_minutes": 480
+    }
+  ],
+  "forbidden_shift_rotations": [],
+  "nurses": [
+    {
+      "id": 0,
+      "max_shifts_per_type": {
+        "0": 12
+      },
+      "min_total_minutes": 1920,
+      "max_total_minutes": 4320,
+      "min_consecutive_shifts": 2,
+      "max_consecutive_shifts": 5,
+      "min_consecutive_days_off": 1,
+      "max_weekends": 1,
+      "day_off_requests": [
+        1,
+        9,
+        12
+      ]
+    },
+    {
+      "id": 1,
+      "max_shifts_per_type": {
+        "0": 14
+      },
+      "min_total_minutes": 2880,
+      "max_total_minutes": 5280,
+      "min_consecutive_shifts": 2,
+      "max_consecutive_shifts": 6,
+      "min_consecutive_days_off": 2,
+      "max_weekends": 1,
+      "day_off_requests": [
+        5
+      ]
+    },
+    {
+      "id": 2,
+      "max_shifts_per_type": {
+        "0": 14
+      },
+      "min_total_minutes": 2400,
+      "max_total_minutes": 4800,
+      "min_consecutive_shifts": 2,
+      "max_consecutive_shifts": 7,
+      "min_consecutive_days_off": 1,
+      "max_weekends": 1,
+      "day_off_requests": [
+        13
+      ]
+    },
+    {
+      "id": 3,
+      "max_shifts_per_type": {
+        "0": 14
+      },
+      "min_total_minutes": 2880,
+      "max_total_minutes": 5280,
+      "min_consecutive_shifts": 2,
+      "max_consecutive_shifts": 5,
+      "min_consecutive_days_off": 2,
+      "max_weekends": 1,
+      "day_off_requests": []
+    },
+    {
+      "id": 4,
+      "max_shifts_per_type": {
+        "0": 14
+      },
+      "min_total_minutes": 2880,
+      "max_total_minutes": 5280,
+      "min_consecutive_shifts": 2,
+      "max_consecutive_shifts": 6,
+      "min_consecutive_days_off": 1,
+      "max_weekends": 1,
+      "day_off_requests": [
+        11
+      ]
+    },
+    {
+      "id": 5,
+      "max_shifts_per_type": {
+        "0": 14
+      },
+      "min_total_minutes": 2400,
+      "max_total_minutes": 4800,
+      "min_consecutive_shifts": 2,
+      "max_consecutive_shifts": 7,
+      "min_consecutive_days_off": 2,
+      "max_weekends": 1,
+      "day_off_requests": []
+    },
+    {
+      "id": 6,
+      "max_shifts_per_type": {
+        "0": 13
+      },
+      "min_total_minutes": 1920,
+      "max_total_minutes": 4320,
+      "min_consecutive_shifts": 2,
+      "max_consecutive_shifts": 5,
+      "min_consecutive_days_off": 1,
+      "max_weekends": 1,
+      "day_off_requests": [
+        5,
+        10
+      ]
+    },
+    {
+      "id": 7,
+      "max_shifts_per_type": {
+        "0": 14
+      },
+      "min_total_minutes": 2880,
+      "max_total_minutes": 5280,
+      "min_consecutive_shifts": 2,
+      "max_consecutive_shifts": 6,
+      "min_consecutive_days_off": 2,
+      "max_weekends": 1,
+      "day_off_requests": [
+        2
+      ]
+    }
+  ],
+  "shift_on_requests": [
+    {
+      "nurse_id": 3,
+      "day": 5,
+      "shift_type": 0,
+      "penalty": 100
+    },
+    {
+      "nurse_id": 0,
+      "day": 7,
+      "shift_type": 0,
+      "penalty": 100
+    },
+    {
+      "nurse_id": 5,
+      "day": 3,
+      "shift_type": 0,
+      "penalty": 100
+    },
+    {
+      "nurse_id": 2,
+      "day": 8,
+      "shift_type": 0,
+      "penalty": 10000
+    },
+    {
+      "nurse_id": 3,
+      "day": 11,
+      "shift_type": 0,
+      "penalty": 1000
+    },
+    {
+      "nurse_id": 5,
+      "day": 8,
+      "shift_type": 0,
+      "penalty": 1000
+    },
+    {
+      "nurse_id": 1,
+      "day": 4,
+      "shift_type": 0,
+      "penalty": 10000
+    },
+    {
+      "nurse_id": 3,
+      "day": 1,
+      "shift_type": 0,
+      "penalty": 10000
+    },
+    {
+      "nurse_id": 6,
+      "day": 7,
+      "shift_type": 0,
+      "penalty": 10000
+    },
+    {
+      "nurse_id": 1,
+      "day": 6,
+      "shift_type": 0,
+      "penalty": 10000
+    },
+    {
+      "nurse_id": 3,
+      "day": 8,
+      "shift_type": 0,
+      "penalty": 1000
+    }
+  ],
+  "shift_off_requests": [
+    {
+      "nurse_id": 1,
+      "day": 11,
+      "shift_type": 0,
+      "penalty": 1000
+    },
+    {
+      "nurse_id": 2,
+      "day": 10,
+      "shift_type": 0,
+      "penalty": 1000
+    },
+    {
+      "nurse_id": 3,
+      "day": 0,
+      "shift_type": 0,
+      "penalty": 100
+    },
+    {
+      "nurse_id": 0,
+      "day": 1,
+      "shift_type": 0,
+      "penalty": 100
+    },
+    {
+      "nurse_id": 2,
+      "day": 3,
+      "shift_type": 0,
+      "penalty": 1000
+    }
+  ],
+  "coverage_requirements": [
+    {
+      "day": 0,
+      "shift_type": 0,
+      "preferred": 2,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 1,
+      "shift_type": 0,
+      "preferred": 3,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 2,
+      "shift_type": 0,
+      "preferred": 4,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 3,
+      "shift_type": 0,
+      "preferred": 2,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 4,
+      "shift_type": 0,
+      "preferred": 4,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 5,
+      "shift_type": 0,
+      "preferred": 3,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 6,
+      "shift_type": 0,
+      "preferred": 1,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 7,
+      "shift_type": 0,
+      "preferred": 3,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 8,
+      "shift_type": 0,
+      "preferred": 3,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 9,
+      "shift_type": 0,
+      "preferred": 2,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 10,
+      "shift_type": 0,
+      "preferred": 2,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 11,
+      "shift_type": 0,
+      "preferred": 4,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 12,
+      "shift_type": 0,
+      "preferred": 1,
+      "under_weight": 100,
+      "over_weight": 10
+    },
+    {
+      "day": 13,
+      "shift_type": 0,
+      "preferred": 2,
+      "under_weight": 100,
+      "over_weight": 10
+    }
+  ],
+  "total_day_off_requests": 9,
+  "total_shift_on_off_requests": 16,
+  "generation_seed": 42
+}

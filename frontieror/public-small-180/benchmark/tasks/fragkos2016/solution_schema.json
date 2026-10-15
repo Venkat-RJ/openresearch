@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Total cost comprising setup, production, and inventory holding costs across all items and periods.",
+  "x": "<list[list[float]], shape [n_items][n_periods]> Quantity produced of each item in each period.",
+  "s": "<list[list[float]], shape [n_items][n_periods + 1]> Inventory of each item at the beginning of each period, plus a final entry representing inventory after the last period.",
+  "y": "<list[list[int]], shape [n_items][n_periods]> Whether the production line is set up for each item in each period (1 = yes, 0 = no)."
+}

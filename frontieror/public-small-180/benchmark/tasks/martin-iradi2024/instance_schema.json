@@ -1,0 +1,58 @@
+{
+  "planning_horizon_hours": "<int> Total length of the scheduling period in hours.",
+  "cost_parameters": {
+    "fuel_price_usd_per_tonne": "<int> Price of bunker fuel per metric tonne in US dollars.",
+    "handling_cost_usd_per_hour": "<int> Cost per hour of cargo handling at berth in US dollars.",
+    "delay_cost_usd_per_hour": "<int> Cost per hour of finishing after the expected finish time in US dollars.",
+    "waiting_cost_usd_per_hour": "<int> Cost per hour a ship waits at anchorage before berthing in US dollars.",
+    "lft_penalty_usd": "<int> Penalty in US dollars for each hour of finishing after the latest finish time."
+  },
+  "handling_time_deviation_factor_beta_per_meter": "<float> Rate at which handling time increases per meter of deviation from the ideal berthing position.",
+  "ports": [
+    {
+      "id": "<str> Unique port identifier code.",
+      "quay_length_meters": "<int> Total usable quay length at the port in meters."
+    }
+  ],
+  "distances_nautical_miles": "<dict, key: '{origin_port}_{destination_port}'> Sailing distance in nautical miles between each ordered pair of ports.",
+  "speeds_knots": "<list[float], length num_speeds> Set of discrete sailing speeds available to all ships in knots.",
+  "travel_time_hours_per_nm_by_speed": "<dict, key: '{speed_knots}'> Hours required to sail one nautical mile at each available speed.",
+  "ships": [
+    {
+      "id": "<int> Unique ship identifier.",
+      "type": "<str> Ship size category (feeder, medium, or large).",
+      "length_meters": "<int> Overall length of the ship in meters.",
+      "design_speed_knots": "<float> Nominal cruising speed of the ship in knots.",
+      "fuel_consumption_at_design_speed_tonnes_per_day": "<float> Daily fuel consumption when sailing at design speed in metric tonnes.",
+      "fuel_consumption_per_nm_by_speed": "<dict, key: '{speed_knots}'> Fuel consumed per nautical mile at each available sailing speed in metric tonnes.",
+      "route": "<list[str]> Ordered sequence of port identifiers the ship must visit.",
+      "port_visits": [
+        {
+          "port_call_index": "<int> Position of this visit in the ship's route sequence, starting from 1.",
+          "port_id": "<str> Identifier of the port being visited.",
+          "ideal_berthing_position": "<float> Preferred leftmost quay coordinate in meters where the ship should berth.",
+          "min_handling_time_hours": "<float> Minimum cargo handling duration in hours when berthed at the ideal position.",
+          "max_handling_time_hours": "<float> Maximum possible cargo handling duration in hours when berthed at the worst position.",
+          "earliest_start_time_hours": "<float> Earliest hour at which berthing may begin.",
+          "expected_finish_time_hours": "<float> Target departure hour equal to earliest start time plus minimum handling time.",
+          "latest_finish_time_hours": "<float> Latest acceptable departure hour before penalty costs apply."
+        }
+      ]
+    }
+  ],
+  "external_ships": [
+    {
+      "port_id": "<str> Identifier of the port where these external ships are berthed.",
+      "ships": [
+        {
+          "id": "<int> Unique identifier of the external ship within this port.",
+          "berthing_position": "<float> Fixed leftmost quay coordinate in meters where the external ship is berthed.",
+          "length_meters": "<int> Overall length of the external ship in meters.",
+          "start_time_hours": "<float> Hour at which the external ship begins occupying the berth.",
+          "handling_time_hours": "<float> Duration in hours the external ship occupies the berth.",
+          "end_time_hours": "<float> Hour at which the external ship departs the berth."
+        }
+      ]
+    }
+  ]
+}

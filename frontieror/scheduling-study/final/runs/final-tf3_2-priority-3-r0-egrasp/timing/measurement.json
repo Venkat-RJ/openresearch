@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "./egrasp",
+    "/work/runs/final-tf3_2-priority-3-r0-egrasp/input.xml",
+    "/work/runs/final-tf3_2-priority-3-r0-egrasp/output.xml",
+    "s",
+    "290"
+  ],
+  "pid": 630,
+  "started_unix": 1791479178.4077764,
+  "external_deadline_seconds": 300.0,
+  "elapsed_seconds": 290.6164924650002,
+  "user_cpu_seconds": 289.644314,
+  "system_cpu_seconds": 0.005993,
+  "returncode": 1,
+  "timed_out": false,
+  "samples": [
+    {
+      "observed_seconds": 290.6110222569987,
+      "sha256": "260e23770bbf8d5951635753241405d3f39a3bdebc4eb89f593e013ccfa72093",
+      "bytes": 7154,
+      "parseable": true,
+      "parse_error": null,
+      "snapshot": "snapshot-0000.xml"
+    }
+  ],
+  "validation_status": "Pending both schedule validators; parseable is not feasible",
+  "timing_scope": "Process startup and execution; excludes container startup and preconversion"
+}

@@ -1,0 +1,9 @@
+{
+  "objective_value": "<float> Total cost comprising initial inventory penalties, setup costs, variable production costs, and inventory holding costs across all products and periods.",
+  "variables": {
+    "production": "<list[list[float]], shape [num_products][num_periods]> Quantity of each product produced in each period.",
+    "setup": "<list[list[int]], shape [num_products][num_periods]> Whether production of each product is initiated in each period (1 = yes, 0 = no).",
+    "inventory": "<list[list[float]], shape [num_products][num_periods]> Quantity of each product held in inventory at the end of each period.",
+    "initial_inventory": "<list[float], length num_products> Quantity of each product available in inventory at the start of the first period."
+  }
+}

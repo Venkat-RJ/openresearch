@@ -1,0 +1,1591 @@
+{
+  "instance_id": 1,
+  "num_products": 5,
+  "num_facilities": 2,
+  "num_production_levels": 2,
+  "num_scenarios_per_distribution": 5,
+  "num_yield_distributions_per_product": 4,
+  "num_total_distributions_per_product": 5,
+  "total_scenarios": 125,
+  "products": [
+    {
+      "id": 0,
+      "expected_demand": 20000.0,
+      "sale_price": 156.001424,
+      "discounted_price": 25.592479
+    },
+    {
+      "id": 1,
+      "expected_demand": 20000.0,
+      "sale_price": 159.456541,
+      "discounted_price": 20.398034
+    },
+    {
+      "id": 2,
+      "expected_demand": 20000.0,
+      "sale_price": 135.194438,
+      "discounted_price": 34.657987
+    },
+    {
+      "id": 3,
+      "expected_demand": 20000.0,
+      "sale_price": 149.414045,
+      "discounted_price": 25.788129
+    },
+    {
+      "id": 4,
+      "expected_demand": 20000.0,
+      "sale_price": 170.60323,
+      "discounted_price": 20.524604
+    }
+  ],
+  "facilities": [
+    {
+      "id": 0,
+      "capacity": 48038.296199
+    },
+    {
+      "id": 1,
+      "capacity": 53785.388139
+    }
+  ],
+  "product_facility_data": [
+    {
+      "product_id": 0,
+      "facility_id": 0,
+      "manufacturing_cost": 65.849521,
+      "yield_distribution_type": 1,
+      "production_levels": [
+        {
+          "level_id": 0,
+          "lower_bound": 0.0,
+          "upper_bound": 15000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.2
+        },
+        {
+          "level_id": 1,
+          "lower_bound": 15000.0,
+          "upper_bound": 20000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.1
+        }
+      ]
+    },
+    {
+      "product_id": 0,
+      "facility_id": 1,
+      "manufacturing_cost": 65.81583,
+      "yield_distribution_type": 1,
+      "production_levels": [
+        {
+          "level_id": 0,
+          "lower_bound": 0.0,
+          "upper_bound": 15000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.2
+        },
+        {
+          "level_id": 1,
+          "lower_bound": 15000.0,
+          "upper_bound": 20000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.1
+        }
+      ]
+    },
+    {
+      "product_id": 1,
+      "facility_id": 0,
+      "manufacturing_cost": 72.74371,
+      "yield_distribution_type": 3,
+      "production_levels": [
+        {
+          "level_id": 0,
+          "lower_bound": 0.0,
+          "upper_bound": 15000.0,
+          "yield_mean": 0.9,
+          "yield_std": 0.05
+        },
+        {
+          "level_id": 1,
+          "lower_bound": 15000.0,
+          "upper_bound": 20000.0,
+          "yield_mean": 0.9,
+          "yield_std": 0.01
+        }
+      ]
+    },
+    {
+      "product_id": 1,
+      "facility_id": 1,
+      "manufacturing_cost": 64.180129,
+      "yield_distribution_type": 2,
+      "production_levels": [
+        {
+          "level_id": 0,
+          "lower_bound": 0.0,
+          "upper_bound": 15000.0,
+          "yield_mean": 0.7,
+          "yield_std": 0.2
+        },
+        {
+          "level_id": 1,
+          "lower_bound": 15000.0,
+          "upper_bound": 20000.0,
+          "yield_mean": 0.7,
+          "yield_std": 0.1
+        }
+      ]
+    },
+    {
+      "product_id": 2,
+      "facility_id": 0,
+      "manufacturing_cost": 72.681186,
+      "yield_distribution_type": 1,
+      "production_levels": [
+        {
+          "level_id": 0,
+          "lower_bound": 0.0,
+          "upper_bound": 15000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.2
+        },
+        {
+          "level_id": 1,
+          "lower_bound": 15000.0,
+          "upper_bound": 20000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.1
+        }
+      ]
+    },
+    {
+      "product_id": 2,
+      "facility_id": 1,
+      "manufacturing_cost": 61.831005,
+      "yield_distribution_type": 1,
+      "production_levels": [
+        {
+          "level_id": 0,
+          "lower_bound": 0.0,
+          "upper_bound": 15000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.2
+        },
+        {
+          "level_id": 1,
+          "lower_bound": 15000.0,
+          "upper_bound": 20000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.1
+        }
+      ]
+    },
+    {
+      "product_id": 3,
+      "facility_id": 0,
+      "manufacturing_cost": 79.595821,
+      "yield_distribution_type": 1,
+      "production_levels": [
+        {
+          "level_id": 0,
+          "lower_bound": 0.0,
+          "upper_bound": 15000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.2
+        },
+        {
+          "level_id": 1,
+          "lower_bound": 15000.0,
+          "upper_bound": 20000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.1
+        }
+      ]
+    },
+    {
+      "product_id": 3,
+      "facility_id": 1,
+      "manufacturing_cost": 60.987242,
+      "yield_distribution_type": 1,
+      "production_levels": [
+        {
+          "level_id": 0,
+          "lower_bound": 0.0,
+          "upper_bound": 15000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.2
+        },
+        {
+          "level_id": 1,
+          "lower_bound": 15000.0,
+          "upper_bound": 20000.0,
+          "yield_mean": 0.5,
+          "yield_std": 0.1
+        }
+      ]
+    },
+    {
+      "product_id": 4,
+      "facility_id": 0,
+      "manufacturing_cost": 67.477631,
+      "yield_distribution_type": 3,
+      "production_levels": [
+        {
+          "level_id": 0,
+          "lower_bound": 0.0,
+          "upper_bound": 15000.0,
+          "yield_mean": 0.9,
+          "yield_std": 0.05
+        },
+        {
+          "level_id": 1,
+          "lower_bound": 15000.0,
+          "upper_bound": 20000.0,
+          "yield_mean": 0.9,
+          "yield_std": 0.01
+        }
+      ]
+    },
+    {
+      "product_id": 4,
+      "facility_id": 1,
+      "manufacturing_cost": 67.299997,
+      "yield_distribution_type": 2,
+      "production_levels": [
+        {
+          "level_id": 0,
+          "lower_bound": 0.0,
+          "upper_bound": 15000.0,
+          "yield_mean": 0.7,
+          "yield_std": 0.2
+        },
+        {
+          "level_id": 1,
+          "lower_bound": 15000.0,
+          "upper_bound": 20000.0,
+          "yield_mean": 0.7,
+          "yield_std": 0.1
+        }
+      ]
+    }
+  ],
+  "products_distributions": [
+    {
+      "product_id": 0,
+      "num_distributions": 5,
+      "distributions": [
+        {
+          "distribution_id": 0,
+          "type": "yield_and_demand",
+          "level_combination": [
+            0,
+            0
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.84027621,
+                "1": 0.41155268
+              },
+              "demand": 28877.3616
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.56419796,
+                "1": 0.6762558
+              },
+              "demand": 30676.4031
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.25788322,
+                "1": 0.52702361
+              },
+              "demand": 11888.9917
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.43077745,
+                "1": 0.46136271
+              },
+              "demand": 15633.3397
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.46135267,
+                "1": 0.70105351
+              },
+              "demand": 46499.4075
+            }
+          ]
+        },
+        {
+          "distribution_id": 1,
+          "type": "yield_and_demand",
+          "level_combination": [
+            0,
+            1
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.59667356,
+                "1": 0.49871109
+              },
+              "demand": 40789.9425
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.50310519,
+                "1": 0.41363142
+              },
+              "demand": 26663.9197
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.5521633,
+                "1": 0.27456225
+              },
+              "demand": 27324.0616
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.52536318,
+                "1": 0.54866966
+              },
+              "demand": 32164.4663
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.63552328,
+                "1": 0.59918271
+              },
+              "demand": 15421.4625
+            }
+          ]
+        },
+        {
+          "distribution_id": 2,
+          "type": "yield_and_demand",
+          "level_combination": [
+            1,
+            0
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.63058503,
+                "1": 0.53685792
+              },
+              "demand": 18104.5459
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.54216456,
+                "1": 0.36060698
+              },
+              "demand": 23256.661
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.49924992,
+                "1": 0.34717833
+              },
+              "demand": 29352.128
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.4164395,
+                "1": 0.70105101
+              },
+              "demand": 6539.8735
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.43438478,
+                "1": 0.95724136
+              },
+              "demand": 31381.4406
+            }
+          ]
+        },
+        {
+          "distribution_id": 3,
+          "type": "yield_and_demand",
+          "level_combination": [
+            1,
+            1
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.59647597,
+                "1": 0.59083229
+              },
+              "demand": 44192.1557
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.46341707,
+                "1": 0.41959204
+              },
+              "demand": 47048.7951
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.57299146,
+                "1": 0.3993609
+              },
+              "demand": 34108.1194
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.34625955,
+                "1": 0.52900521
+              },
+              "demand": 4201.4045
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.42821939,
+                "1": 0.42879679
+              },
+              "demand": 9110.8812
+            }
+          ]
+        },
+        {
+          "distribution_id": 4,
+          "type": "demand_only",
+          "level_combination": null,
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "demand": 48068.9381
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "demand": 15047.5106
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "demand": 8432.6537
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "demand": 23891.0179
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "demand": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 1,
+      "num_distributions": 5,
+      "distributions": [
+        {
+          "distribution_id": 0,
+          "type": "yield_and_demand",
+          "level_combination": [
+            0,
+            0
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.87789306,
+                "1": 0.99328364
+              },
+              "demand": 43559.6241
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.90331698,
+                "1": 0.82446202
+              },
+              "demand": 27433.6925
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.80765549,
+                "1": 0.51816171
+              },
+              "demand": 13095.5048
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.96038929,
+                "1": 0.89573709
+              },
+              "demand": 2810.967
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.87412396,
+                "1": 0.81681
+              },
+              "demand": 47113.7442
+            }
+          ]
+        },
+        {
+          "distribution_id": 1,
+          "type": "yield_and_demand",
+          "level_combination": [
+            0,
+            1
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.93514319,
+                "1": 0.70322296
+              },
+              "demand": 40226.5206
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.91542743,
+                "1": 0.68245033
+              },
+              "demand": 24754.4282
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.9193995,
+                "1": 0.85203485
+              },
+              "demand": 19418.7649
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.89804801,
+                "1": 0.80811409
+              },
+              "demand": 28425.1753
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.89049602,
+                "1": 0.7537485
+              },
+              "demand": 30230.936
+            }
+          ]
+        },
+        {
+          "distribution_id": 2,
+          "type": "yield_and_demand",
+          "level_combination": [
+            1,
+            0
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.89871914,
+                "1": 0.61255515
+              },
+              "demand": 17018.6424
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.92101408,
+                "1": 0.64624337
+              },
+              "demand": 17055.6696
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.90777274,
+                "1": 0.83965898
+              },
+              "demand": 2995.9031
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.89547435,
+                "1": 0.59502169
+              },
+              "demand": 21326.8751
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.90172118,
+                "1": 0.96790137
+              },
+              "demand": 27204.4893
+            }
+          ]
+        },
+        {
+          "distribution_id": 3,
+          "type": "yield_and_demand",
+          "level_combination": [
+            1,
+            1
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.88714996,
+                "1": 0.74458373
+              },
+              "demand": 20896.0568
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.90206721,
+                "1": 0.61253972
+              },
+              "demand": 13307.8361
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.90254188,
+                "1": 0.83700419
+              },
+              "demand": 5204.99
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.88784398,
+                "1": 0.74906806
+              },
+              "demand": 3601.0793
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.89751997,
+                "1": 0.58323542
+              },
+              "demand": 20832.9426
+            }
+          ]
+        },
+        {
+          "distribution_id": 4,
+          "type": "demand_only",
+          "level_combination": null,
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "demand": 15422.7056
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "demand": 43085.6365
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "demand": 24240.4076
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "demand": 37125.5348
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "demand": 28354.7228
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 2,
+      "num_distributions": 5,
+      "distributions": [
+        {
+          "distribution_id": 0,
+          "type": "yield_and_demand",
+          "level_combination": [
+            0,
+            0
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.42940064,
+                "1": 0.36531521
+              },
+              "demand": 25725.0159
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.90162458,
+                "1": 0.51811935
+              },
+              "demand": 32416.5507
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.668852,
+                "1": 0.68019532
+              },
+              "demand": 29910.7068
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.48868815,
+                "1": 0.41569606
+              },
+              "demand": 26856.6582
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.32377916,
+                "1": 0.66592636
+              },
+              "demand": 4942.776
+            }
+          ]
+        },
+        {
+          "distribution_id": 1,
+          "type": "yield_and_demand",
+          "level_combination": [
+            0,
+            1
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.45095684,
+                "1": 0.41592705
+              },
+              "demand": 20753.2871
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.785905,
+                "1": 0.50877378
+              },
+              "demand": 48755.6888
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.47696299,
+                "1": 0.58648759
+              },
+              "demand": 28439.6064
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.68723945,
+                "1": 0.52831133
+              },
+              "demand": 38301.3856
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.44781998,
+                "1": 0.48105348
+              },
+              "demand": 9985.7773
+            }
+          ]
+        },
+        {
+          "distribution_id": 2,
+          "type": "yield_and_demand",
+          "level_combination": [
+            1,
+            0
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.59329616,
+                "1": 0.60106096
+              },
+              "demand": 29295.8128
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.49121912,
+                "1": 0.59838906
+              },
+              "demand": 24356.5061
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.5965743,
+                "1": 0.44644121
+              },
+              "demand": 20014.6136
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.41786563,
+                "1": 0.29263034
+              },
+              "demand": 35811.7008
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.49686073,
+                "1": 0.29770634
+              },
+              "demand": 54729.9343
+            }
+          ]
+        },
+        {
+          "distribution_id": 3,
+          "type": "yield_and_demand",
+          "level_combination": [
+            1,
+            1
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.54647849,
+                "1": 0.49822371
+              },
+              "demand": 27668.9624
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.62259379,
+                "1": 0.38008602
+              },
+              "demand": 0.0
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.53846817,
+                "1": 0.41647374
+              },
+              "demand": 8944.4271
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.28418464,
+                "1": 0.38613043
+              },
+              "demand": 42156.6284
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.55499475,
+                "1": 0.69583917
+              },
+              "demand": 10184.2513
+            }
+          ]
+        },
+        {
+          "distribution_id": 4,
+          "type": "demand_only",
+          "level_combination": null,
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "demand": 24056.4147
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "demand": 29230.4468
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "demand": 12060.6865
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "demand": 12261.7995
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "demand": 29649.4056
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 3,
+      "num_distributions": 5,
+      "distributions": [
+        {
+          "distribution_id": 0,
+          "type": "yield_and_demand",
+          "level_combination": [
+            0,
+            0
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.76122767,
+                "1": 0.64985144
+              },
+              "demand": 20351.5432
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.52508524,
+                "1": 0.52108157
+              },
+              "demand": 27885.0763
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.85579049,
+                "1": 0.47109173
+              },
+              "demand": 42431.3722
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.60446247,
+                "1": 0.33122942
+              },
+              "demand": 25373.4238
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.43443935,
+                "1": 0.33893971
+              },
+              "demand": 12127.4748
+            }
+          ]
+        },
+        {
+          "distribution_id": 1,
+          "type": "yield_and_demand",
+          "level_combination": [
+            0,
+            1
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.54893705,
+                "1": 0.55685498
+              },
+              "demand": 8711.2203
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.28724248,
+                "1": 0.44682884
+              },
+              "demand": 12584.0329
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.41663498,
+                "1": 0.5294242
+              },
+              "demand": 3513.1886
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.57829574,
+                "1": 0.64821453
+              },
+              "demand": 8332.5095
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.67097766,
+                "1": 0.30903793
+              },
+              "demand": 0.0
+            }
+          ]
+        },
+        {
+          "distribution_id": 2,
+          "type": "yield_and_demand",
+          "level_combination": [
+            1,
+            0
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.63708897,
+                "1": 0.27311697
+              },
+              "demand": 26606.5573
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.44030565,
+                "1": 0.55095809
+              },
+              "demand": 23728.1007
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.35114478,
+                "1": 0.74341385
+              },
+              "demand": 12440.5941
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.66004391,
+                "1": 0.76647346
+              },
+              "demand": 10912.7737
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.4608981,
+                "1": 0.4987302
+              },
+              "demand": 0.0
+            }
+          ]
+        },
+        {
+          "distribution_id": 3,
+          "type": "yield_and_demand",
+          "level_combination": [
+            1,
+            1
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.50507685,
+                "1": 0.46561423
+              },
+              "demand": 25274.7523
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.55558246,
+                "1": 0.53070901
+              },
+              "demand": 15497.1655
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.40560173,
+                "1": 0.50353297
+              },
+              "demand": 24648.388
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.32359029,
+                "1": 0.46488689
+              },
+              "demand": 26803.8948
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.60360211,
+                "1": 0.5229842
+              },
+              "demand": 24439.297
+            }
+          ]
+        },
+        {
+          "distribution_id": 4,
+          "type": "demand_only",
+          "level_combination": null,
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "demand": 34940.1962
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "demand": 10811.8938
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "demand": 18603.6368
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "demand": 10604.5262
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "demand": 29694.6128
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_id": 4,
+      "num_distributions": 5,
+      "distributions": [
+        {
+          "distribution_id": 0,
+          "type": "yield_and_demand",
+          "level_combination": [
+            0,
+            0
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.80301263,
+                "1": 0.65606604
+              },
+              "demand": 9404.6233
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.88825091,
+                "1": 0.89271494
+              },
+              "demand": 29783.3918
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.89703151,
+                "1": 0.91256801
+              },
+              "demand": 27103.1574
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.93532492,
+                "1": 0.71242922
+              },
+              "demand": 20436.064
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.92589293,
+                "1": 0.57519141
+              },
+              "demand": 9647.6328
+            }
+          ]
+        },
+        {
+          "distribution_id": 1,
+          "type": "yield_and_demand",
+          "level_combination": [
+            0,
+            1
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.89454181,
+                "1": 0.50379582
+              },
+              "demand": 11905.3004
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.95069037,
+                "1": 0.70012704
+              },
+              "demand": 30831.7408
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.8849439,
+                "1": 0.79443233
+              },
+              "demand": 7654.5566
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.88899677,
+                "1": 0.64704484
+              },
+              "demand": 25223.8595
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.95261961,
+                "1": 0.58388148
+              },
+              "demand": 18757.5136
+            }
+          ]
+        },
+        {
+          "distribution_id": 2,
+          "type": "yield_and_demand",
+          "level_combination": [
+            1,
+            0
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.90994237,
+                "1": 0.89740013
+              },
+              "demand": 8583.6192
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.90968269,
+                "1": 0.63029782
+              },
+              "demand": 17482.5525
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.91129446,
+                "1": 0.68668441
+              },
+              "demand": 20873.9225
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.89152479,
+                "1": 0.88784416
+              },
+              "demand": 22246.5851
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.90135777,
+                "1": 0.65622633
+              },
+              "demand": 35613.439
+            }
+          ]
+        },
+        {
+          "distribution_id": 3,
+          "type": "yield_and_demand",
+          "level_combination": [
+            1,
+            1
+          ],
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.87960103,
+                "1": 0.69372959
+              },
+              "demand": 4384.1298
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.89877466,
+                "1": 0.72760911
+              },
+              "demand": 18373.2998
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.89751696,
+                "1": 0.67266031
+              },
+              "demand": 48817.4973
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.91101943,
+                "1": 0.65733483
+              },
+              "demand": 19871.0342
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "yields": {
+                "0": 0.92233637,
+                "1": 0.69073756
+              },
+              "demand": 14833.6783
+            }
+          ]
+        },
+        {
+          "distribution_id": 4,
+          "type": "demand_only",
+          "level_combination": null,
+          "num_scenarios": 5,
+          "scenarios": [
+            {
+              "scenario_id": 0,
+              "probability": 0.2,
+              "demand": 11583.3604
+            },
+            {
+              "scenario_id": 1,
+              "probability": 0.2,
+              "demand": 29649.4704
+            },
+            {
+              "scenario_id": 2,
+              "probability": 0.2,
+              "demand": 35903.8361
+            },
+            {
+              "scenario_id": 3,
+              "probability": 0.2,
+              "demand": 29104.5256
+            },
+            {
+              "scenario_id": 4,
+              "probability": 0.2,
+              "demand": 17471.1077
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

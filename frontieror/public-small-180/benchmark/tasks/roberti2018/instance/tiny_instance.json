@@ -1,0 +1,219 @@
+{
+  "problem_name": "2E-CVRPGC",
+  "instance_type": "scattered",
+  "num_satellites": 2,
+  "num_customers": 20,
+  "num_groups": 4,
+  "seed": 1001,
+  "Q1": 30,
+  "Q2": 15,
+  "T1": 4,
+  "T2": 8,
+  "depot": {
+    "id": 0,
+    "x": 50,
+    "y": 50
+  },
+  "satellites": [
+    {
+      "id": 1,
+      "x": 25,
+      "y": 50,
+      "capacity": 48,
+      "max_vehicles": 4,
+      "handling_cost": 1.8734
+    },
+    {
+      "id": 2,
+      "x": 75,
+      "y": 50,
+      "capacity": 48,
+      "max_vehicles": 4,
+      "handling_cost": 1.6078
+    }
+  ],
+  "customers": [
+    {
+      "id": 3,
+      "x": 7,
+      "y": 97,
+      "demand": 4,
+      "group": 2
+    },
+    {
+      "id": 4,
+      "x": 97,
+      "y": 25,
+      "demand": 6,
+      "group": 1
+    },
+    {
+      "id": 5,
+      "x": 11,
+      "y": 71,
+      "demand": 2,
+      "group": 2
+    },
+    {
+      "id": 6,
+      "x": 48,
+      "y": 100,
+      "demand": 1,
+      "group": 2
+    },
+    {
+      "id": 7,
+      "x": 20,
+      "y": 52,
+      "demand": 7,
+      "group": 2
+    },
+    {
+      "id": 8,
+      "x": 92,
+      "y": 47,
+      "demand": 3,
+      "group": 1
+    },
+    {
+      "id": 9,
+      "x": 72,
+      "y": 83,
+      "demand": 4,
+      "group": 3
+    },
+    {
+      "id": 10,
+      "x": 99,
+      "y": 51,
+      "demand": 5,
+      "group": 3
+    },
+    {
+      "id": 11,
+      "x": 99,
+      "y": 73,
+      "demand": 1,
+      "group": 3
+    },
+    {
+      "id": 12,
+      "x": 25,
+      "y": 77,
+      "demand": 5,
+      "group": 2
+    },
+    {
+      "id": 13,
+      "x": 6,
+      "y": 3,
+      "demand": 5,
+      "group": 0
+    },
+    {
+      "id": 14,
+      "x": 94,
+      "y": 90,
+      "demand": 7,
+      "group": 3
+    },
+    {
+      "id": 15,
+      "x": 95,
+      "y": 63,
+      "demand": 4,
+      "group": 3
+    },
+    {
+      "id": 16,
+      "x": 91,
+      "y": 89,
+      "demand": 1,
+      "group": 3
+    },
+    {
+      "id": 17,
+      "x": 83,
+      "y": 78,
+      "demand": 3,
+      "group": 3
+    },
+    {
+      "id": 18,
+      "x": 94,
+      "y": 24,
+      "demand": 3,
+      "group": 1
+    },
+    {
+      "id": 19,
+      "x": 64,
+      "y": 93,
+      "demand": 2,
+      "group": 3
+    },
+    {
+      "id": 20,
+      "x": 78,
+      "y": 19,
+      "demand": 4,
+      "group": 1
+    },
+    {
+      "id": 21,
+      "x": 2,
+      "y": 72,
+      "demand": 1,
+      "group": 2
+    },
+    {
+      "id": 22,
+      "x": 12,
+      "y": 81,
+      "demand": 2,
+      "group": 2
+    }
+  ],
+  "groups": [
+    {
+      "group_id": 0,
+      "customer_ids": [
+        13
+      ]
+    },
+    {
+      "group_id": 1,
+      "customer_ids": [
+        4,
+        8,
+        18,
+        20
+      ]
+    },
+    {
+      "group_id": 2,
+      "customer_ids": [
+        3,
+        5,
+        6,
+        7,
+        12,
+        21,
+        22
+      ]
+    },
+    {
+      "group_id": 3,
+      "customer_ids": [
+        9,
+        10,
+        11,
+        14,
+        15,
+        16,
+        17,
+        19
+      ]
+    }
+  ]
+}

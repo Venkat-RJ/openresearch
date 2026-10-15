@@ -1,0 +1,10 @@
+{
+  "objective_value": "<float> Total construction, transportation, and quadratic congestion cost represented by the complete witness.",
+  "model_variables": "<dict, key: canonical variable name> Sparse complete witness; omitted variables are zero. Keys use Gurobi bracket syntax exactly as specified by model_variable_name_patterns.",
+  "z": "<dict, key: '{edge}'> Whether each edge is activated for use in the network (1 = constructed, 0 = not constructed).",
+  "model_variable_name_patterns": {
+    "z[e]": "binary design variable for edge e",
+    "x[k,r,e]": "commodity k, scenario r, edge e flow",
+    "tf[r,e]": "total scenario flow on edge e"
+  }
+}

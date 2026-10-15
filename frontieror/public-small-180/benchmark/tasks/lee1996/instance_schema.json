@@ -1,0 +1,23 @@
+{
+  "parameters": {
+    "m": "<int> Number of target nodes that must be connected to the network.",
+    "n": "<int> Number of potential hub sites (Steiner nodes) available for activation."
+  },
+  "target_nodes": {
+    "count": "<int> Number of target nodes that must be connected to the network.",
+    "coordinates": "<list[list[int]], shape [m][2]> Two-dimensional position of each target node on the Euclidean plane."
+  },
+  "steiner_nodes": {
+    "count": "<int> Number of potential hub sites (Steiner nodes) available for activation.",
+    "coordinates": "<list[list[int]], shape [n][2]> Two-dimensional position of each Steiner node on the Euclidean plane.",
+    "node_weights": "<list[int], length n> Fixed activation cost incurred when each Steiner node is selected for use in the network."
+  },
+  "cost_matrices": {
+    "assignment_costs": {
+      "matrix": "<list[list[float]], shape [m][n]> Euclidean distance from each target node to each Steiner node, representing the cost of assigning a target node to a Steiner node."
+    },
+    "interconnection_costs": {
+      "matrix": "<list[list[float]], shape [n][n]> Euclidean distance between each pair of Steiner nodes, representing the cost of connecting two active Steiner nodes in the spanning tree."
+    }
+  }
+}

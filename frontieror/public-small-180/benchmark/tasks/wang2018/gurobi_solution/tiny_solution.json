@@ -1,0 +1,374 @@
+{
+  "instance_path": "research-workspace/Code/efficient_opt_bench/efficient_opt_benchmark/wang2018/instance/tiny_instance.json",
+  "solver": "Gurobi",
+  "model": "M2_linearized_MILP",
+  "time_limit": 100,
+  "runtime": 5.11,
+  "status": "optimal",
+  "objective_value": 87.95266686507938,
+  "mip_gap": 0.0,
+  "vessels": [
+    {
+      "vessel_id": 1,
+      "alpha": 27,
+      "beta": 28,
+      "berth": 0,
+      "profile": 0,
+      "subblocks": [
+        70,
+        71,
+        79
+      ],
+      "handling_time": 2,
+      "qc_per_timestep": [
+        1,
+        1
+      ]
+    },
+    {
+      "vessel_id": 2,
+      "alpha": 13,
+      "beta": 16,
+      "berth": 0,
+      "profile": 1,
+      "subblocks": [
+        50,
+        51,
+        62,
+        67,
+        74,
+        76
+      ],
+      "handling_time": 4,
+      "qc_per_timestep": [
+        4,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "vessel_id": 3,
+      "alpha": 39,
+      "beta": 42,
+      "berth": 0,
+      "profile": 0,
+      "subblocks": [
+        30,
+        41,
+        48,
+        53,
+        56,
+        57,
+        64,
+        65
+      ],
+      "handling_time": 4,
+      "qc_per_timestep": [
+        5,
+        5,
+        5,
+        3
+      ]
+    },
+    {
+      "vessel_id": 4,
+      "alpha": 16,
+      "beta": 17,
+      "berth": 1,
+      "profile": 0,
+      "subblocks": [
+        29,
+        39
+      ],
+      "handling_time": 2,
+      "qc_per_timestep": [
+        3,
+        1
+      ]
+    },
+    {
+      "vessel_id": 5,
+      "alpha": 33,
+      "beta": 34,
+      "berth": 1,
+      "profile": 0,
+      "subblocks": [
+        38,
+        49
+      ],
+      "handling_time": 2,
+      "qc_per_timestep": [
+        3,
+        1
+      ]
+    },
+    {
+      "vessel_id": 6,
+      "alpha": 35,
+      "beta": 38,
+      "berth": 0,
+      "profile": 0,
+      "subblocks": [
+        0,
+        1,
+        12,
+        17,
+        18,
+        23,
+        24,
+        26
+      ],
+      "handling_time": 4,
+      "qc_per_timestep": [
+        5,
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "vessel_id": 7,
+      "alpha": 20,
+      "beta": 21,
+      "berth": 1,
+      "profile": 0,
+      "subblocks": [
+        9,
+        19
+      ],
+      "handling_time": 2,
+      "qc_per_timestep": [
+        3,
+        2
+      ]
+    },
+    {
+      "vessel_id": 8,
+      "alpha": 23,
+      "beta": 25,
+      "berth": 0,
+      "profile": 0,
+      "subblocks": [
+        8,
+        13,
+        16,
+        25
+      ],
+      "handling_time": 3,
+      "qc_per_timestep": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "vessel_id": 9,
+      "alpha": 9,
+      "beta": 12,
+      "berth": 0,
+      "profile": 0,
+      "subblocks": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        14,
+        15
+      ],
+      "handling_time": 4,
+      "qc_per_timestep": [
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "vessel_id": 10,
+      "alpha": 1,
+      "beta": 4,
+      "berth": 0,
+      "profile": 0,
+      "subblocks": [
+        10,
+        21,
+        22,
+        28,
+        33,
+        36,
+        37,
+        44,
+        45
+      ],
+      "handling_time": 4,
+      "qc_per_timestep": [
+        5,
+        5,
+        5,
+        4
+      ]
+    },
+    {
+      "vessel_id": 11,
+      "alpha": 17,
+      "beta": 19,
+      "berth": 0,
+      "profile": 0,
+      "subblocks": [
+        11,
+        27,
+        34,
+        35
+      ],
+      "handling_time": 3,
+      "qc_per_timestep": [
+        4,
+        4,
+        3
+      ]
+    },
+    {
+      "vessel_id": 12,
+      "alpha": 5,
+      "beta": 8,
+      "berth": 0,
+      "profile": 0,
+      "subblocks": [
+        20,
+        31,
+        32,
+        42,
+        43,
+        46,
+        47,
+        54,
+        55
+      ],
+      "handling_time": 4,
+      "qc_per_timestep": [
+        5,
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "vessel_id": 13,
+      "alpha": 30,
+      "beta": 33,
+      "berth": 0,
+      "profile": 0,
+      "subblocks": [
+        40,
+        52,
+        58,
+        63,
+        66,
+        75
+      ],
+      "handling_time": 4,
+      "qc_per_timestep": [
+        4,
+        4,
+        3,
+        2
+      ]
+    },
+    {
+      "vessel_id": 14,
+      "alpha": 14,
+      "beta": 15,
+      "berth": 1,
+      "profile": 0,
+      "subblocks": [
+        59,
+        69
+      ],
+      "handling_time": 2,
+      "qc_per_timestep": [
+        3,
+        1
+      ]
+    },
+    {
+      "vessel_id": 15,
+      "alpha": 20,
+      "beta": 22,
+      "berth": 0,
+      "profile": 0,
+      "subblocks": [
+        60,
+        61,
+        68,
+        72,
+        73,
+        77,
+        78
+      ],
+      "handling_time": 3,
+      "qc_per_timestep": [
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "berths": [
+    {
+      "berth": 0,
+      "rho": 1,
+      "varsigma": 42
+    },
+    {
+      "berth": 1,
+      "rho": 14,
+      "varsigma": 34
+    }
+  ],
+  "qc_usage": {
+    "1": 5.0,
+    "2": 5.0,
+    "3": 5.0,
+    "4": 4.0,
+    "5": 5.0,
+    "6": 5.0,
+    "7": 4.0,
+    "8": 3.0,
+    "9": 5.0,
+    "10": 5.0,
+    "11": 5.0,
+    "12": 5.0,
+    "13": 4.0,
+    "14": 5.0,
+    "15": 3.0,
+    "16": 5.0,
+    "17": 5.0,
+    "18": 4.0,
+    "19": 3.0,
+    "20": 5.0,
+    "21": 4.0,
+    "22": 2.0,
+    "23": 4.0,
+    "24": 4.0,
+    "25": 4.0,
+    "27": 1.0,
+    "28": 1.0,
+    "30": 4.0,
+    "31": 4.0,
+    "32": 3.0,
+    "33": 5.0,
+    "34": 1.0,
+    "35": 5.0,
+    "36": 5.0,
+    "37": 4.0,
+    "38": 3.0,
+    "39": 5.0,
+    "40": 5.0,
+    "41": 5.0,
+    "42": 3.0
+  },
+  "solve_time_seconds": 4.85
+}

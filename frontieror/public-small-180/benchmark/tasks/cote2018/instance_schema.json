@@ -1,0 +1,12 @@
+{
+  "bin_capacity": "<int> Maximum total width that can be packed into a single bin.",
+  "num_item_types": "<int> Number of distinct item types to be cut.",
+  "total_num_items": "<int> Total number of individual items to be produced across all types.",
+  "items": [
+    {
+      "type_id": "<int> Unique identifier for this item type.",
+      "width": "<int> Width of each copy of this item type.",
+      "demand": "<int> Number of copies of this item type that must be produced."
+    }
+  ]
+}

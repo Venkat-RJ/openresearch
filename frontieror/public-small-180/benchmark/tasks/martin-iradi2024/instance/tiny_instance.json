@@ -1,0 +1,348 @@
+{
+  "problem": "MCBAP",
+  "instance_id": 1,
+  "num_ships": 4,
+  "num_external_ships_per_port": 3,
+  "segment_length_meters": 80,
+  "generation_seed": 1001000,
+  "planning_horizon_hours": 336,
+  "cost_parameters": {
+    "fuel_price_usd_per_tonne": 500,
+    "handling_cost_usd_per_hour": 200,
+    "delay_cost_usd_per_hour": 5000,
+    "waiting_cost_usd_per_hour": 800,
+    "lft_penalty_usd": 100000
+  },
+  "handling_time_deviation_factor_beta_per_meter": 0.001,
+  "ports": [
+    {
+      "id": "NLRTM",
+      "name": "Rotterdam APMT",
+      "quay_length_meters": 1600
+    },
+    {
+      "id": "DEBRV",
+      "name": "Bremerhaven NTB",
+      "quay_length_meters": 1800
+    },
+    {
+      "id": "DEHAM",
+      "name": "Hamburg EGH",
+      "quay_length_meters": 2100
+    }
+  ],
+  "distances_nautical_miles": {
+    "NLRTM_DEBRV": 265,
+    "DEBRV_NLRTM": 265,
+    "NLRTM_DEHAM": 395,
+    "DEHAM_NLRTM": 395,
+    "DEBRV_DEHAM": 120,
+    "DEHAM_DEBRV": 120
+  },
+  "speeds_knots": [
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5
+  ],
+  "travel_time_hours_per_nm_by_speed": {
+    "17.0": 0.058824,
+    "17.5": 0.057143,
+    "18.0": 0.055556,
+    "18.5": 0.054054,
+    "19.0": 0.052632,
+    "19.5": 0.051282,
+    "20.0": 0.05,
+    "20.5": 0.04878,
+    "21.0": 0.047619,
+    "21.5": 0.046512
+  },
+  "ships": [
+    {
+      "id": 1,
+      "type": "feeder",
+      "length_meters": 180,
+      "design_speed_knots": 19.0,
+      "fuel_consumption_at_design_speed_tonnes_per_day": 30.0,
+      "fuel_consumption_per_nm_by_speed": {
+        "17.0": 0.052668,
+        "17.5": 0.055812,
+        "18.0": 0.059047,
+        "18.5": 0.062372,
+        "19.0": 0.065789,
+        "19.5": 0.069298,
+        "20.0": 0.072897,
+        "20.5": 0.076587,
+        "21.0": 0.080369,
+        "21.5": 0.084242
+      },
+      "route": [
+        "DEHAM",
+        "DEBRV"
+      ],
+      "port_visits": [
+        {
+          "port_call_index": 1,
+          "port_id": "DEHAM",
+          "ideal_berthing_position": 1290.6,
+          "min_handling_time_hours": 10.1,
+          "max_handling_time_hours": 29.49,
+          "earliest_start_time_hours": 22.1,
+          "expected_finish_time_hours": 32.2,
+          "latest_finish_time_hours": 41.9
+        },
+        {
+          "port_call_index": 2,
+          "port_id": "DEBRV",
+          "ideal_berthing_position": 690.5,
+          "min_handling_time_hours": 12.1,
+          "max_handling_time_hours": 31.7,
+          "earliest_start_time_hours": 57.3,
+          "expected_finish_time_hours": 69.4,
+          "latest_finish_time_hours": 79.2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "large",
+      "length_meters": 350,
+      "design_speed_knots": 24.0,
+      "fuel_consumption_at_design_speed_tonnes_per_day": 180.0,
+      "fuel_consumption_per_nm_by_speed": {
+        "17.0": 0.156793,
+        "17.5": 0.166151,
+        "18.0": 0.175781,
+        "18.5": 0.185683,
+        "19.0": 0.195855,
+        "19.5": 0.206299,
+        "20.0": 0.217014,
+        "20.5": 0.228,
+        "21.0": 0.239258,
+        "21.5": 0.250787
+      },
+      "route": [
+        "NLRTM",
+        "DEBRV",
+        "DEHAM"
+      ],
+      "port_visits": [
+        {
+          "port_call_index": 1,
+          "port_id": "NLRTM",
+          "ideal_berthing_position": 393.9,
+          "min_handling_time_hours": 26.7,
+          "max_handling_time_hours": 60.07,
+          "earliest_start_time_hours": 21.8,
+          "expected_finish_time_hours": 48.5,
+          "latest_finish_time_hours": 65.2
+        },
+        {
+          "port_call_index": 2,
+          "port_id": "DEBRV",
+          "ideal_berthing_position": 456.8,
+          "min_handling_time_hours": 33.7,
+          "max_handling_time_hours": 82.57,
+          "earliest_start_time_hours": 61.0,
+          "expected_finish_time_hours": 94.7,
+          "latest_finish_time_hours": 119.1
+        },
+        {
+          "port_call_index": 3,
+          "port_id": "DEHAM",
+          "ideal_berthing_position": 87.4,
+          "min_handling_time_hours": 41.0,
+          "max_handling_time_hours": 112.75,
+          "earliest_start_time_hours": 112.2,
+          "expected_finish_time_hours": 153.2,
+          "latest_finish_time_hours": 189.1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "feeder",
+      "length_meters": 150,
+      "design_speed_knots": 19.0,
+      "fuel_consumption_at_design_speed_tonnes_per_day": 30.0,
+      "fuel_consumption_per_nm_by_speed": {
+        "17.0": 0.052668,
+        "17.5": 0.055812,
+        "18.0": 0.059047,
+        "18.5": 0.062372,
+        "19.0": 0.065789,
+        "19.5": 0.069298,
+        "20.0": 0.072897,
+        "20.5": 0.076587,
+        "21.0": 0.080369,
+        "21.5": 0.084242
+      },
+      "route": [
+        "NLRTM",
+        "DEBRV"
+      ],
+      "port_visits": [
+        {
+          "port_call_index": 1,
+          "port_id": "NLRTM",
+          "ideal_berthing_position": 1067.7,
+          "min_handling_time_hours": 10.4,
+          "max_handling_time_hours": 25.48,
+          "earliest_start_time_hours": 69.7,
+          "expected_finish_time_hours": 80.1,
+          "latest_finish_time_hours": 87.6
+        },
+        {
+          "port_call_index": 2,
+          "port_id": "DEBRV",
+          "ideal_berthing_position": 755.2,
+          "min_handling_time_hours": 12.1,
+          "max_handling_time_hours": 32.07,
+          "earliest_start_time_hours": 99.8,
+          "expected_finish_time_hours": 111.9,
+          "latest_finish_time_hours": 121.9
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "feeder",
+      "length_meters": 180,
+      "design_speed_knots": 19.0,
+      "fuel_consumption_at_design_speed_tonnes_per_day": 30.0,
+      "fuel_consumption_per_nm_by_speed": {
+        "17.0": 0.052668,
+        "17.5": 0.055812,
+        "18.0": 0.059047,
+        "18.5": 0.062372,
+        "19.0": 0.065789,
+        "19.5": 0.069298,
+        "20.0": 0.072897,
+        "20.5": 0.076587,
+        "21.0": 0.080369,
+        "21.5": 0.084242
+      },
+      "route": [
+        "DEHAM",
+        "DEBRV"
+      ],
+      "port_visits": [
+        {
+          "port_call_index": 1,
+          "port_id": "DEHAM",
+          "ideal_berthing_position": 1670.9,
+          "min_handling_time_hours": 10.1,
+          "max_handling_time_hours": 29.49,
+          "earliest_start_time_hours": 51.0,
+          "expected_finish_time_hours": 61.1,
+          "latest_finish_time_hours": 70.8
+        },
+        {
+          "port_call_index": 2,
+          "port_id": "DEBRV",
+          "ideal_berthing_position": 875.9,
+          "min_handling_time_hours": 12.1,
+          "max_handling_time_hours": 31.7,
+          "earliest_start_time_hours": 79.4,
+          "expected_finish_time_hours": 91.5,
+          "latest_finish_time_hours": 101.3
+        }
+      ]
+    }
+  ],
+  "external_ships": [
+    {
+      "port_id": "NLRTM",
+      "ships": [
+        {
+          "id": 1,
+          "berthing_position": 656.0,
+          "length_meters": 302,
+          "start_time_hours": 271.3,
+          "handling_time_hours": 25.7,
+          "end_time_hours": 297.0
+        },
+        {
+          "id": 2,
+          "berthing_position": 668.2,
+          "length_meters": 304,
+          "start_time_hours": 103.4,
+          "handling_time_hours": 32.6,
+          "end_time_hours": 136.0
+        },
+        {
+          "id": 3,
+          "berthing_position": 831.8,
+          "length_meters": 272,
+          "start_time_hours": 224.6,
+          "handling_time_hours": 31.1,
+          "end_time_hours": 255.7
+        }
+      ]
+    },
+    {
+      "port_id": "DEBRV",
+      "ships": [
+        {
+          "id": 1,
+          "berthing_position": 1312.2,
+          "length_meters": 274,
+          "start_time_hours": 136.5,
+          "handling_time_hours": 27.3,
+          "end_time_hours": 163.8
+        },
+        {
+          "id": 2,
+          "berthing_position": 541.8,
+          "length_meters": 302,
+          "start_time_hours": 210.6,
+          "handling_time_hours": 36.2,
+          "end_time_hours": 246.8
+        },
+        {
+          "id": 3,
+          "berthing_position": 1458.3,
+          "length_meters": 297,
+          "start_time_hours": 0.4,
+          "handling_time_hours": 26.3,
+          "end_time_hours": 26.7
+        }
+      ]
+    },
+    {
+      "port_id": "DEHAM",
+      "ships": [
+        {
+          "id": 1,
+          "berthing_position": 137.6,
+          "length_meters": 190,
+          "start_time_hours": 110.6,
+          "handling_time_hours": 17.7,
+          "end_time_hours": 128.3
+        },
+        {
+          "id": 2,
+          "berthing_position": 1258.1,
+          "length_meters": 306,
+          "start_time_hours": 251.0,
+          "handling_time_hours": 26.5,
+          "end_time_hours": 277.5
+        },
+        {
+          "id": 3,
+          "berthing_position": 1360.0,
+          "length_meters": 273,
+          "start_time_hours": 128.4,
+          "handling_time_hours": 30.3,
+          "end_time_hours": 158.7
+        }
+      ]
+    }
+  ]
+}

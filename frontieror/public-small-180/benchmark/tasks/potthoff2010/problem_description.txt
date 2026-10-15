@@ -1,0 +1,32 @@
+# Problem Description
+
+## Public executable contract
+
+The released instances use the variant discriminator `relief_point_completion_v1`.
+For this finite public variant, a submitted completion is an ordered list of
+operated tasks. The checker verifies timing, minimum connections, route
+knowledge, rolling-stock licenses, the duty horizon, taxi connections, and the
+exact task coverage. Normally the driver returns to the original crew base.
+Some frozen synthetic duties have no possible base-return path inside their
+horizon; in precisely that case the historical generator's fallback is made
+explicit as `release_at_relief_point=true`, allowing the driver to finish at
+the current relief point. This is a release-specific emergency rule, not a
+claim about the full pricing subproblem in the source paper.
+
+The executable completion cost is exactly the instance's fixed duty-change
+cost, plus its per-reassigned-task, per-new-transfer, and taxi costs. The
+synthetic files do not provide short-connection or overtime cost coefficients,
+so those terms are not silently invented. Meal-break fields remain contextual
+metadata and are not decision variables in this finite released variant. The
+checker recomputes every completion cost and the full objective rather than
+trusting reported values.
+
+A passenger railway operator runs a daily crew schedule consisting of original duties, each assigned to one train driver. A disruption occurs at a known time, after which a modified timetable and rolling stock schedule are given. The crew must be rescheduled to match the new situation. The railway network comprises a set of stations, a subset of which are designated as relief points where drivers may transfer between rolling stock units. A further subset of relief points serve as crew bases where duties begin and end. Some relief points have a canteen, which is relevant for meal breaks. The network also defines route segments connecting pairs of stations, each with a known travel time, and a set of train lines, each running along a sequence of stations at a given frequency. Taxi connections between certain pairs of stations are available, each with a specified travel time.
+
+Every task that has not yet started at the time of rescheduling must be either covered by some driver's revised duty or canceled. Each task has a departure station, an arrival station, a departure time, an arrival time, a rolling stock type, and a task type that is either "A to B" (departure and arrival stations differ) or "A to A" (same station). The set of unfinished original duties is partitioned into active duties, whose drivers are currently working or about to work, and reserve duties, whose drivers are on standby at a designated station. Each original duty records the crew base where it starts and ends, the driver's current station at the time of rescheduling (which is the station where the driver currently is or the arrival station of the task the driver is performing at the time of rescheduling), its planned start and end times, the sequence of tasks originally assigned to it, the driver's route knowledge (a list of stations the driver is licensed to operate through), the driver's rolling stock licenses (the set of rolling stock types the driver may operate), and whether the original duty already includes a meal break.
+
+The operator must choose, for every unfinished original duty, exactly one feasible completion. A feasible completion is a possibly empty sequence of tasks that, together with whatever tasks from the original duty were already performed before the rescheduling time, forms the replacement duty. A feasible completion may include tasks on which the driver rides as a passenger for repositioning; such deadhead tasks do not count as covering those tasks. Independently, the operator must decide which tasks to cancel. Each task must be either covered by at least one selected feasible completion or canceled; a task may also be covered by more than one duty, in which case one driver operates and the others deadhead as passengers. Deadheading on trains incurs no additional cost.
+
+A released completion must respect the timing, connection, horizon, route-knowledge, and rolling-stock rules described above. It returns to the original crew base whenever the frozen network permits this; otherwise the explicit emergency relief-point release rule applies as described in the executable-contract section.
+
+The goal is to minimize total cost. The total cost is the sum of two components. The first is the exact released cost of all selected completions. A completion that leaves a duty unchanged costs zero; otherwise its cost is the fixed duty-change penalty plus a penalty for each newly assigned task, each new consecutive-task transfer, and any taxi use. The second component is the cost of canceled tasks. Canceling an A-to-B task incurs the high instance penalty, while canceling an A-to-A task incurs the lower instance penalty.

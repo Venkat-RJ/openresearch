@@ -1,0 +1,19 @@
+{
+  "N": "<int> Number of item families available for selection.",
+  "knapsack_capacity": "<int> Maximum total weight the knapsack can hold, including both item weights and family setup capacity consumptions.",
+  "families": [
+    {
+      "family_id": "<int> Unique identifier for this family.",
+      "n_i": "<int> Number of items belonging to this family.",
+      "setup_cost": "<int> Fixed cost subtracted from profit when this family is activated.",
+      "setup_capacity": "<int> Knapsack capacity consumed when this family is activated.",
+      "items": [
+        {
+          "item_id": "<int> Unique identifier for this item within its family.",
+          "weight": "<int> Knapsack capacity consumed when this item is placed in the knapsack.",
+          "profit": "<int> Profit earned when this item is placed in the knapsack."
+        }
+      ]
+    }
+  ]
+}

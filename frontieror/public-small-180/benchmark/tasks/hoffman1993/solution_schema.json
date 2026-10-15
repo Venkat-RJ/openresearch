@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total cost of all selected crew rotations.",
+  "selected_rotations": "<list[int]> Indices of the crew rotations chosen to cover every flight leg.",
+  "variable_values": "<dict, key: '{rotation_index}'> Whether each candidate rotation is selected (1.0) or not (0.0)."
+}

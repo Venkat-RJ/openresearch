@@ -1,0 +1,58 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "task": "knueven2020",
+  "status": "MEASURED root official tiny300 followup299.14s, no complete witness",
+  "official_experiment": "bbf55f07-f683-40c5-8685-1f2543f2c84c",
+  "conclusion_experiment": "e0147f89-d478-49e8-a04a-df94aedc32ad",
+  "owner_preregistration_status": "complete",
+  "diagnosis": {
+    "master_candidates": 434,
+    "first12period_fixedmask_LP_infeasible_Status3": 433,
+    "final_dispatch_deadline": 1,
+    "terminal_masterStatus": 9,
+    "terminal_masterSolCount": 1,
+    "remaining_seconds": 0.099,
+    "original_UC_infeasibility_claim": false
+  },
+  "live_code": "research-workspace/Personal_experiments/frontieror-fresh-20261011/solvers/knueven2020/gpt-5.6-sol/code.py",
+  "source_sha256": "92c8e862a08d2a891ab11414105e90152d6350c509e9b770969f74f0722d2fc1",
+  "unchanged_final300_frozen_sha256": "357e0051d36a471b2346421feb7476bc17eb1df706099a9f6b1ed9025e01b557",
+  "hypothesis": "fe305d40-e2dd-4c49-98b9-1b08caf2a95e",
+  "static_experiment": "f237371f-884d-4952-811c-3b7acea73228",
+  "native_followup_preregistration": "3b4be3c5-8f4e-4478-8c2c-845623ec0e47",
+  "readbacks_asserted": true,
+  "checks": {
+    "compile": true,
+    "model_construction_AST_unchanged": true,
+    "transition_and_complete_original_witness_emitter_AST_unchanged": true,
+    "params": {
+      "Seed": 0,
+      "Threads": 1,
+      "NumericFocus": 0,
+      "MIPGap": 0.0001
+    },
+    "logger": {
+      "min_interval": 0,
+      "start_time": "module-entry time.time",
+      "partial_events": false
+    },
+    "master_allocation": "one quarter remaining deadline budget; retry nonterminal no-incumbent statuses until deadline",
+    "dispatch_allocation": "remaining budget divided by remaining six-period blocks plus one; retry nonterminal no-incumbent statuses until deadline",
+    "fixed_2second_caps": false,
+    "fixed_40mask_cap": false,
+    "diagnostics": "concise stderr masterStatus/SolCount, failed dispatch block/status/reason and remaining budget",
+    "worker_optimization_runs": 0,
+    "large_runs": 0,
+    "frozen_all180_mutations": 0
+  },
+  "evaluation": {
+    "driver": "root",
+    "time_limit": 300,
+    "instance": "tiny",
+    "exec_mode": "standard Docker",
+    "cpus": 1,
+    "memory": "2G",
+    "anti_hack": false
+  },
+  "qualification": "Previous2.08s internal branch remains unmeasured. Followup433first12period fixedmask LPsStatus3infeasible followed by deadline confirms restricted-search failure, not original UC infeasibility or prior2s timeout root cause."
+}

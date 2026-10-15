@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Total cost of the production plan, combining setup costs, production costs, and inventory holding costs across all items, periods, and capable machines.",
+  "production": "<dict, key: 'X_item{item}_machine{machine}_period{period}'> Quantity of the given item produced on the given machine during the given period.",
+  "inventory": "<dict, key: 'I_item{item}_period{period}'> Amount of the given item held in inventory at the end of the given period.",
+  "setups": "<dict, key: 'Y_item{item}_machine{machine}_period{period}'> Whether a setup for the given item is performed on the given machine during the given period (1 = yes)."
+}

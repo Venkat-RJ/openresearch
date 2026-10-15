@@ -1,0 +1,52 @@
+{
+  "num_tasks": "<int> Total number of trips (tasks) that must be covered by vehicles.",
+  "num_depots": "<int> Total number of depots from which vehicles can be dispatched.",
+  "num_compatible_pairs": "<int> Total number of feasible consecutive trip pairs where a vehicle can travel from one trip to the next in time.",
+  "num_arcs": "<int> Total number of arcs in the network including depot-to-task, task-to-task, and task-to-depot connections.",
+  "time_horizon": "<int> Length of the scheduling day in minutes.",
+  "depot_penalty": "<int> Fixed cost penalty added to each vehicle used, representing the cost of dispatching a vehicle from a depot.",
+  "depots": [
+    {
+      "id": "<int> Unique identifier for the depot.",
+      "x": "<float> X-coordinate of the depot location.",
+      "y": "<float> Y-coordinate of the depot location.",
+      "capacity": "<int> Maximum number of vehicles that can be dispatched from this depot."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "<int> Unique identifier for the trip.",
+      "start_time": "<float> Scheduled departure time of the trip in minutes from the start of the day.",
+      "end_time": "<float> Scheduled arrival time of the trip in minutes from the start of the day.",
+      "duration": "<float> Duration of the trip in minutes.",
+      "start_x": "<float> X-coordinate of the trip's origin location.",
+      "start_y": "<float> Y-coordinate of the trip's origin location.",
+      "end_x": "<float> X-coordinate of the trip's destination location.",
+      "end_y": "<float> Y-coordinate of the trip's destination location."
+    }
+  ],
+  "compatible_pairs": [
+    {
+      "task_i": "<int> Identifier of the earlier trip in the feasible consecutive pair.",
+      "task_j": "<int> Identifier of the later trip in the feasible consecutive pair.",
+      "travel_time": "<float> Deadhead travel time in minutes for a vehicle to reposition from the end of task_i to the start of task_j.",
+      "cost": "<float> Cost of the deadhead travel from the end of task_i to the start of task_j."
+    }
+  ],
+  "depot_to_task_costs": [
+    {
+      "depot_id": "<int> Identifier of the depot from which the vehicle departs.",
+      "task_id": "<int> Identifier of the first trip the vehicle serves after leaving the depot.",
+      "travel_time": "<float> Deadhead travel time in minutes from the depot to the start of the task.",
+      "cost": "<float> Total pull-out cost including the depot penalty and deadhead travel from the depot to the task."
+    }
+  ],
+  "task_to_depot_costs": [
+    {
+      "task_id": "<int> Identifier of the last trip the vehicle serves before returning to the depot.",
+      "depot_id": "<int> Identifier of the depot to which the vehicle returns.",
+      "travel_time": "<float> Deadhead travel time in minutes from the end of the task back to the depot.",
+      "cost": "<float> Total pull-in cost including the depot penalty and deadhead travel from the task to the depot."
+    }
+  ]
+}

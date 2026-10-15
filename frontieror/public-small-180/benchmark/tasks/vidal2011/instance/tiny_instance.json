@@ -1,0 +1,149 @@
+{
+  "problem_type": "MDPVRP",
+  "n": 9,
+  "d": 2,
+  "t": 2,
+  "m": 2,
+  "vehicle_capacity": 70,
+  "route_duration_limit": 3800,
+  "depots": [
+    {
+      "id": 0,
+      "x": 250,
+      "y": 500
+    },
+    {
+      "id": 1,
+      "x": 750,
+      "y": 500
+    }
+  ],
+  "customers": [
+    {
+      "id": 0,
+      "x": 654,
+      "y": 114,
+      "demand": 2,
+      "service_duration": 8,
+      "frequency": 1,
+      "pattern_list": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "id": 1,
+      "x": 754,
+      "y": 104,
+      "demand": 44,
+      "service_duration": 17,
+      "frequency": 1,
+      "pattern_list": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "x": 95,
+      "y": 223,
+      "demand": 15,
+      "service_duration": 16,
+      "frequency": 2,
+      "pattern_list": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "id": 3,
+      "x": 733,
+      "y": 665,
+      "demand": 45,
+      "service_duration": 17,
+      "frequency": 2,
+      "pattern_list": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "id": 4,
+      "x": 603,
+      "y": 284,
+      "demand": 1,
+      "service_duration": 5,
+      "frequency": 2,
+      "pattern_list": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "id": 5,
+      "x": 159,
+      "y": 220,
+      "demand": 49,
+      "service_duration": 10,
+      "frequency": 1,
+      "pattern_list": [
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "id": 6,
+      "x": 99,
+      "y": 367,
+      "demand": 23,
+      "service_duration": 19,
+      "frequency": 1,
+      "pattern_list": [
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "id": 7,
+      "x": 549,
+      "y": 127,
+      "demand": 25,
+      "service_duration": 2,
+      "frequency": 2,
+      "pattern_list": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "id": 8,
+      "x": 591,
+      "y": 196,
+      "demand": 46,
+      "service_duration": 2,
+      "frequency": 1,
+      "pattern_list": [
+        [
+          2
+        ]
+      ]
+    }
+  ],
+  "instance_id": 1,
+  "seed": 42
+}

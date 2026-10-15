@@ -1,0 +1,131 @@
+{
+  "problem_name": "CMLS-NM",
+  "description": "Capacitated Multi-Item Lot Sizing with Nonidentical Machines",
+  "case": "M_j subset of M, mm_j = 1",
+  "num_items": 3,
+  "num_periods": 8,
+  "num_machines": 2,
+  "max_machines_per_item_per_period": [
+    1,
+    1,
+    1
+  ],
+  "machine_capabilities": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "demand": [
+    [
+      15,
+      23,
+      21,
+      23,
+      22,
+      20,
+      22,
+      16
+    ],
+    [
+      24,
+      15,
+      24,
+      24,
+      16,
+      17,
+      16,
+      15
+    ],
+    [
+      23,
+      20,
+      19,
+      16,
+      18,
+      21,
+      17,
+      16
+    ]
+  ],
+  "production_time": {
+    "item_1_machine_1": 0.4909,
+    "item_1_machine_2": 0.396,
+    "item_2_machine_1": 0.4469,
+    "item_2_machine_2": 0.6043,
+    "item_3_machine_1": 0.4748,
+    "item_3_machine_2": 0.5696
+  },
+  "holding_cost": [
+    2.2343,
+    0.6195,
+    1.6243
+  ],
+  "setup_cost": {
+    "item_1_machine_1": 452.4458,
+    "item_1_machine_2": 452.4458,
+    "item_2_machine_1": 116.9306,
+    "item_2_machine_2": 116.9306,
+    "item_3_machine_1": 304.5563,
+    "item_3_machine_2": 304.5563
+  },
+  "setup_time": {
+    "item_1_machine_1": 4.3703,
+    "item_1_machine_2": 3.9222,
+    "item_2_machine_1": 4.7426,
+    "item_2_machine_2": 3.7212,
+    "item_3_machine_1": 3.6651,
+    "item_3_machine_2": 4.7423
+  },
+  "production_cost": {
+    "item_1_machine_1": 0.0,
+    "item_1_machine_2": 0.0,
+    "item_2_machine_1": 0.0,
+    "item_2_machine_2": 0.0,
+    "item_3_machine_1": 0.0,
+    "item_3_machine_2": 0.0
+  },
+  "capacity": [
+    [
+      31.7908,
+      31.7908,
+      31.7908,
+      31.7908,
+      31.7908,
+      31.7908,
+      31.7908,
+      31.7908
+    ],
+    [
+      33.7229,
+      33.7229,
+      33.7229,
+      33.7229,
+      33.7229,
+      33.7229,
+      33.7229,
+      33.7229
+    ]
+  ],
+  "generation_parameters": {
+    "seed": 20180402,
+    "demand_multiplier": 0.5,
+    "production_time_multiplier": 0.5,
+    "holding_cost_multiplier": 0.5,
+    "setup_cost_multiplier": 10,
+    "setup_time_multiplier": 0.5,
+    "utilization_factor": 0.9,
+    "machine_capability_choices": [
+      2,
+      3
+    ]
+  }
+}

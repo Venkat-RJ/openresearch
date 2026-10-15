@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total travel cost of the closed tour through all selected nodes.",
+  "tour": "<list[int], length m> Ordered sequence of selected nodes forming the closed tour, with one node chosen from each cluster.",
+  "visited_nodes": "<list[int], length m> Set of nodes selected as cluster representatives, one per cluster."
+}

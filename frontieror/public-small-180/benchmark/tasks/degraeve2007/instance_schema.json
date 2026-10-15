@@ -1,0 +1,22 @@
+{
+  "dimensions": {
+    "num_products": "<int> Number of distinct products manufactured at the facility.",
+    "num_periods": "<int> Number of discrete time periods in the planning horizon."
+  },
+  "factor_settings": {
+    "capacity_utilization": "<str> Level of production resource capacity tightness (low, medium, or high).",
+    "time_between_orders": "<str> Average number of periods between consecutive production setups for each product (low, medium, or high).",
+    "demand_variability": "<str> Degree of period-to-period fluctuation in product demand (medium or high).",
+    "setup_time_level": "<str> Magnitude of time consumed when initiating production of a product (low or high)."
+  },
+  "parameters": {
+    "demand": "<list[list[int]], shape [num_products][num_periods]> Quantity of each product that must be delivered in each period.",
+    "holding_cost": "<list[list[float]], shape [num_products][num_periods]> Per-unit cost of carrying one unit of each product in inventory at the end of each period.",
+    "setup_cost": "<list[list[float]], shape [num_products][num_periods]> Fixed cost incurred whenever production of each product is initiated in each period.",
+    "variable_production_cost": "<list[list[float]], shape [num_products][num_periods]> Per-unit cost of producing each product in each period.",
+    "variable_production_time": "<list[list[float]], shape [num_products][num_periods]> Time consumed on the shared resource to produce one unit of each product in each period.",
+    "setup_time": "<list[list[float]], shape [num_products][num_periods]> Time consumed on the shared resource when initiating production of each product in each period.",
+    "capacity": "<list[int], length num_periods> Total available time on the shared production resource in each period.",
+    "initial_inventory_cost": "<list[float], length num_products> Per-unit penalty cost for each product's initial inventory available at the start of the first period."
+  }
+}

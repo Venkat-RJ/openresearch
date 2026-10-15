@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total distance traveled by all vehicles across every arc of every route.",
+  "routes": "<list[list[int]]> Sequence of expanded node IDs visited by each vehicle, beginning and ending at the depot (node 0), with linehaul nodes numbered 1..n and backhaul nodes numbered n+1..2n.",
+  "routes_detailed": "<list[list[dict]]> Same per-vehicle visit sequences as 'routes' with each stop annotated by its role (depot, linehaul, or backhaul), the original customer it corresponds to, and the delivery or pickup quantity served at that stop."
+}

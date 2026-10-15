@@ -1,0 +1,58 @@
+{
+  "problem_name": "instance_1",
+  "problem_type": "F|nwt, d_j|C_max",
+  "n_jobs": 7,
+  "n_machines": 4,
+  "tightness_factor": 1,
+  "due_date_multiplier": 1.6,
+  "seed": 101,
+  "attempt": 0,
+  "notes": "processing_times[i][j] = p_{i+1, j+1} (0-indexed; machine i+1, job j+1 in 1-indexed paper notation). due_dates[j] = d_{j+1} (0-indexed).",
+  "processing_times": [
+    [
+      96,
+      12,
+      82,
+      71,
+      64,
+      88,
+      76
+    ],
+    [
+      10,
+      78,
+      41,
+      5,
+      64,
+      41,
+      61
+    ],
+    [
+      93,
+      65,
+      6,
+      13,
+      94,
+      41,
+      50
+    ],
+    [
+      84,
+      9,
+      30,
+      60,
+      35,
+      45,
+      73
+    ]
+  ],
+  "due_dates": [
+    453,
+    468,
+    516,
+    631,
+    917,
+    999,
+    1212
+  ]
+}

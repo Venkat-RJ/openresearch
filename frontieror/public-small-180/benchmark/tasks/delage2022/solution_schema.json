@@ -1,0 +1,13 @@
+{
+  "objective_value": "<float> Total time required, equal to fixed setup times plus repetition times and, for knife-dependent instances, knife setup times.",
+  "patterns": {
+    "<key: '{pattern_index}'>": {
+      "used": "<bool> Whether this pattern is selected for use on the cutting machine.",
+      "repetitions": "<int> Number of times this pattern is repeated on the cutting machine.",
+      "pieces": "<dict, key: '{product_id}'> Number of pieces of each product cut in a single pass of this pattern.",
+      "knife_count": "<int, conditionally required> For cscp_with_knife_dependent_setups, the total number of pieces cut in one pass of this pattern; omit for other variants."
+    }
+  },
+  "extra_pieces": "<dict, key: '{product_id}'> Number of extra pieces of each product produced via the open end; every value must be zero for closed_ended_cscp.",
+  "production_quantities": "<dict, key: 'product_{product_id}_pattern_{pattern_index}'> Total number of pieces of each product produced by each pattern, equal to the pieces per pass multiplied by the number of repetitions."
+}

@@ -1,0 +1,71 @@
+{
+  "slot": "final-tf2-priority-2-r2-egrasp",
+  "instance": "final-tf2-priority-2",
+  "solver": "egrasp",
+  "repeat": 2,
+  "block": 56,
+  "seed": null,
+  "stratum": "tf2-priority",
+  "status": "VALID_IN_TIME",
+  "objective": 8026,
+  "measurement": {
+    "argv": [
+      "./egrasp",
+      "/work/runs/final-tf2-priority-2-r2-egrasp/input.xml",
+      "/work/runs/final-tf2-priority-2-r2-egrasp/output.xml",
+      "s",
+      "290"
+    ],
+    "pid": 817,
+    "started_unix": 1791486446.6600144,
+    "external_deadline_seconds": 300.0,
+    "elapsed_seconds": 291.73558579900055,
+    "user_cpu_seconds": 289.805043,
+    "system_cpu_seconds": 0.006992,
+    "returncode": 1,
+    "timed_out": false,
+    "samples": [
+      {
+        "observed_seconds": 291.7111102989984,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "parseable": false,
+        "parse_error": "ParseError"
+      },
+      {
+        "observed_seconds": 291.72975259099985,
+        "sha256": "63a9eb218f4f17e572e16b16feb6f3be2da7b20b7eef40e059f3c0f20f4f2574",
+        "bytes": 7171,
+        "parseable": true,
+        "parse_error": null,
+        "snapshot": "snapshot-0001.xml"
+      }
+    ],
+    "validation_status": "Pending both schedule validators; parseable is not feasible",
+    "timing_scope": "Process startup and execution; excludes container startup and preconversion"
+  },
+  "checks": [
+    {
+      "snapshot": "snapshot-0001.xml",
+      "observed_seconds": 291.72975259099985,
+      "sha256": "63a9eb218f4f17e572e16b16feb6f3be2da7b20b7eef40e059f3c0f20f4f2574",
+      "audit": {
+        "feasible": true,
+        "recomputed_objective": 8026,
+        "jobs_checked": 30,
+        "operations_checked": 300,
+        "errors": []
+      },
+      "official": {
+        "feasible": true,
+        "violated_constraints": [],
+        "violations": [],
+        "violation_magnitudes": []
+      },
+      "objective": 8026,
+      "valid": true
+    }
+  ],
+  "report_matches_snapshot": true,
+  "reported": 8026.0
+}

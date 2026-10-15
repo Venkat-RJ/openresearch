@@ -1,0 +1,15 @@
+{
+  "parameters": {
+    "T_planning_horizon_minutes": "<int> Total length of the planning horizon over which all train services must be scheduled.",
+    "D_num_train_services": "<int> Number of train services to be dispatched during the planning horizon.",
+    "NT_num_demand_periods": "<int> Number of equal-length demand periods that partition the planning horizon.",
+    "theta_period_length_minutes": "<int> Duration of each demand period.",
+    "h_min_minutes": "<int> Minimum allowed time gap between two consecutive interior train departures.",
+    "h_max_minutes": "<int> Maximum allowed time gap between two consecutive interior train departures.",
+    "C_train_capacity_passengers": "<int> Maximum number of passengers that can board a single train at departure.",
+    "demand_profile_type": "<str> Label describing the shape of the passenger arrival pattern across demand periods.",
+    "total_demand_passengers": "<int> Total number of passengers arriving over the entire planning horizon."
+  },
+  "demand_periods": "<list[dict], length NT_num_demand_periods> Passenger arrival rates for each demand period, each entry containing 'period' and 'lambda_pax_per_min'.",
+  "feasibility_lower_bound_AWT_minutes": "<float> Theoretical lower bound on average waiting time per passenger, derived from the minimum headway."
+}

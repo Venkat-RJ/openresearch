@@ -1,0 +1,144 @@
+{
+  "description": "Small-scale instance: 10 vessels, 4 berths, 10 big + 10 small QC profiles, instance set 1",
+  "scale": "small",
+  "num_vessels": 10,
+  "num_berths": 4,
+  "total_qc": 15,
+  "num_big_profiles": 10,
+  "num_small_profiles": 10,
+  "time_horizon_hours": 168,
+  "num_shifts_per_step": 28,
+  "time_steps_per_shift": 6,
+  "total_time_steps": 168,
+  "c1": 1000,
+  "c2": 1000,
+  "vessels": [
+    {
+      "id": 0,
+      "name": "FY26",
+      "a": 1,
+      "b": 21,
+      "k_bar": 3,
+      "t_bar": 1,
+      "duration_hours": 18
+    },
+    {
+      "id": 1,
+      "name": "CGSCA",
+      "a": 1,
+      "b": 26,
+      "k_bar": 2,
+      "t_bar": 1,
+      "duration_hours": 96
+    },
+    {
+      "id": 2,
+      "name": "GT1",
+      "a": 2,
+      "b": 16,
+      "k_bar": 0,
+      "t_bar": 2,
+      "duration_hours": 11
+    },
+    {
+      "id": 3,
+      "name": "CMNAB",
+      "a": 2,
+      "b": 25,
+      "k_bar": 2,
+      "t_bar": 2,
+      "duration_hours": 113
+    },
+    {
+      "id": 4,
+      "name": "ZHOHE",
+      "a": 18,
+      "b": 51,
+      "k_bar": 3,
+      "t_bar": 18,
+      "duration_hours": 113
+    },
+    {
+      "id": 5,
+      "name": "ASIAN",
+      "a": 22,
+      "b": 41,
+      "k_bar": 2,
+      "t_bar": 22,
+      "duration_hours": 25
+    },
+    {
+      "id": 6,
+      "name": "NLLOA",
+      "a": 35,
+      "b": 46,
+      "k_bar": 2,
+      "t_bar": 35,
+      "duration_hours": 18
+    },
+    {
+      "id": 7,
+      "name": "COSHL",
+      "a": 38,
+      "b": 54,
+      "k_bar": 0,
+      "t_bar": 38,
+      "duration_hours": 27
+    },
+    {
+      "id": 8,
+      "name": "XINYK",
+      "a": 50,
+      "b": 79,
+      "k_bar": 1,
+      "t_bar": 50,
+      "duration_hours": 114
+    },
+    {
+      "id": 9,
+      "name": "DONGH",
+      "a": 54,
+      "b": 88,
+      "k_bar": 3,
+      "t_bar": 54,
+      "duration_hours": 105
+    }
+  ],
+  "berths": [
+    {
+      "id": 0,
+      "a_k": 1,
+      "b_k": 168
+    },
+    {
+      "id": 1,
+      "a_k": 1,
+      "b_k": 168
+    },
+    {
+      "id": 2,
+      "a_k": 1,
+      "b_k": 168
+    },
+    {
+      "id": 3,
+      "a_k": 1,
+      "b_k": 168
+    }
+  ],
+  "qc_profiles": {
+    "big": {
+      "min_qc": 3,
+      "max_qc": 5,
+      "min_handling_shifts": 3,
+      "max_handling_shifts": 6
+    },
+    "small": {
+      "min_qc": 1,
+      "max_qc": 3,
+      "min_handling_shifts": 2,
+      "max_handling_shifts": 4
+    }
+  },
+  "random_seed": 42
+}

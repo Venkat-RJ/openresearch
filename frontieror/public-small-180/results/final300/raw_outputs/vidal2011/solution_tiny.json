@@ -1,0 +1,127 @@
+{
+  "objective_value": 5113.6304286212735,
+  "routes": [
+    {
+      "depot": 0,
+      "period": 1,
+      "vehicle": 1,
+      "customers": [
+        2
+      ]
+    },
+    {
+      "depot": 0,
+      "period": 2,
+      "vehicle": 1,
+      "customers": [
+        2,
+        5
+      ]
+    },
+    {
+      "depot": 0,
+      "period": 2,
+      "vehicle": 2,
+      "customers": [
+        6,
+        8
+      ]
+    },
+    {
+      "depot": 1,
+      "period": 1,
+      "vehicle": 1,
+      "customers": [
+        4,
+        7,
+        0
+      ]
+    },
+    {
+      "depot": 1,
+      "period": 1,
+      "vehicle": 2,
+      "customers": [
+        3
+      ]
+    },
+    {
+      "depot": 1,
+      "period": 2,
+      "vehicle": 1,
+      "customers": [
+        4,
+        7,
+        1
+      ]
+    },
+    {
+      "depot": 1,
+      "period": 2,
+      "vehicle": 2,
+      "customers": [
+        3
+      ]
+    }
+  ],
+  "assignments": {
+    "7": {
+      "depot": 1,
+      "pattern": [
+        1,
+        2
+      ]
+    },
+    "5": {
+      "depot": 0,
+      "pattern": [
+        2
+      ]
+    },
+    "4": {
+      "depot": 1,
+      "pattern": [
+        1,
+        2
+      ]
+    },
+    "3": {
+      "depot": 1,
+      "pattern": [
+        1,
+        2
+      ]
+    },
+    "6": {
+      "depot": 0,
+      "pattern": [
+        2
+      ]
+    },
+    "0": {
+      "depot": 1,
+      "pattern": [
+        1
+      ]
+    },
+    "2": {
+      "depot": 0,
+      "pattern": [
+        1,
+        2
+      ]
+    },
+    "8": {
+      "depot": 0,
+      "pattern": [
+        2
+      ]
+    },
+    "1": {
+      "depot": 1,
+      "pattern": [
+        2
+      ]
+    }
+  }
+}

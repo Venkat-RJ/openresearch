@@ -1,0 +1,6 @@
+{
+  "num_vertices": "<int> Total number of vertices in the undirected graph.",
+  "num_edges": "<int> Total number of edges in the undirected graph.",
+  "edges": "<list[list[int]], shape [num_edges][2]> Each edge as a pair of zero-indexed vertex identifiers indicating a direct connection between two vertices.",
+  "adjacency_list": "<list[list[int]], shape [num_vertices][variable]> For each vertex, the sorted list of zero-indexed identifiers of its neighboring vertices."
+}

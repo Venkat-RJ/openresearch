@@ -1,0 +1,56 @@
+[
+  {
+    "id": "c317a40f-45fa-465f-8559-47ee44ca6e40",
+    "seq": 868,
+    "owner": "[private field removed]",
+    "account": "[private field removed]",
+    "status": "active",
+    "title": "Rahmaniani2018 official tiny300 parameter-only status disambiguation",
+    "description": "Preregistered before root sequential native run. Original and first-diagnostic failures retained; no original-instance infeasibility claim.",
+    "labels": [
+      "frontieror-fresh",
+      "rahmaniani2018",
+      "tiny",
+      "final300-energy-diagnostic"
+    ],
+    "marginal_cost": {
+      "agent_usd": 0.0,
+      "resource_usd": 0.0
+    },
+    "subscribers": "[private field removed]",
+    "superseded_by": [],
+    "supersedes": [],
+    "produces": [],
+    "produced_by": [],
+    "created": "2026-10-11T11:43:37.318000+00:00",
+    "modified": "2026-10-11T11:43:37.320000+00:00",
+    "proves": [],
+    "favors": [],
+    "codechanges": null,
+    "outcome": null,
+    "config": {
+      "cpus": 1,
+      "batch": "final300-energy-diagnostic",
+      "image": "sha256:6bd6f194a15bbcc8f4adfc621197e2849e8279b0372896cc8fff18d9dd0b72ca",
+      "phase": "Gurobi INF_OR_UNBD parameter-only disambiguation",
+      "memory": "2G",
+      "changes": "After INF_OR_UNBD/noincumbent, DualReductions0+reset+same-callback optimize within remaining deadline; model, policy, schema, full-row gates and mandatory controls unchanged",
+      "task_id": "rahmaniani2018",
+      "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+      "instance": "tiny",
+      "anti_hack": false,
+      "exec_mode": "docker",
+      "time_limit": 300,
+      "code_sha256": "3fbbf1c19c97f3f31ed85d426957a9bd106bc2138993e537b8c52efda064288d",
+      "frozen_code": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/final300-energy-diagnostic/code/rahmaniani2018/gpt-5.6-sol/code.py",
+      "results_csv": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/final300-energy-diagnostic/results.csv",
+      "dataset_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+      "static_experiment": "255137e9-c948-4434-b338-ad407b556185",
+      "evaluator_revision": "9bd047c9271d3048eff91dd0639941d0bc182d86",
+      "previous_diagnostic_code_sha256": "0122a19d1f6ffe7fc55bd258c7dd191905fb9fc716c9e3fd87307c359d0f351b"
+    },
+    "proved_by": [],
+    "favored_by": [],
+    "kind": "Experiment"
+  }
+]

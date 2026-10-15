@@ -1,0 +1,32 @@
+{
+  "objective_value": "<float> Total cost of the shipping plan, computed as transport costs plus demurrage costs plus procurement costs minus delivery revenues.",
+  "vessel_routes": {
+    "{vessel_id}": [
+      {
+        "tail": "<str> Origin node of the arc, formatted as a (port, time) pair for port-time nodes or (src/snk, vessel_id) for source/sink nodes.",
+        "head": "<str> Destination node of the arc, formatted as a (port, time) pair for port-time nodes or (src/snk, vessel_id) for source/sink nodes.",
+        "type": "<str> Arc category: 'travel' for transit between ports, 'demurrage' for waiting at a port, 'source' for departure from the virtual origin, or 'sink' for arrival at the virtual destination.",
+        "cost": "<float> Cost incurred by traversing this arc, based on transport or demurrage rates.",
+        "product_flow": "<float> Amount of cargo on board the vessel while traversing this arc."
+      }
+    ]
+  },
+  "port_inventories": "<dict, key: '{port_id}'> Each value must contain exactly one inventory entry for every one-based time period 1..planning_horizon; period 0 must not be included.",
+  "vessel_operations": {
+    "{vessel_id}": [
+      {
+        "port": "<str> Identifier of the port where the operation takes place.",
+        "time": "<int> Time period during which the operation occurs.",
+        "quantity": "<float> Amount of product transferred: positive for loading at supply ports, negative for discharging at demand ports.",
+        "type": "<str> Operation category: 'load' for picking up product at a supply port or 'discharge' for delivering product at a demand port."
+      }
+    ]
+  },
+  "cost_breakdown": {
+    "transport_cost": "<float> Total cost incurred across all vessels for traveling between ports.",
+    "demurrage_cost": "<float> Total cost incurred across all vessels for waiting idle at ports.",
+    "procurement_cost": "<float> Total cost paid for product loaded at all supply ports.",
+    "supply_revenue": "<float> Total revenue earned from product delivered to all demand ports.",
+    "total_cost": "<float> Net cost computed as transport cost plus demurrage cost plus procurement cost minus supply revenue."
+  }
+}

@@ -1,0 +1,5 @@
+# Problem Description
+
+Given a simple, undirected graph with a set of vertices and a set of edges, every edge carries a strictly positive weight. A clique is a subset of vertices in which every pair of vertices is connected by an edge. The edge weight of a clique is the sum of the weights of all edges whose both endpoints belong to that clique. The goal is to find a clique whose total edge weight is as large as possible.
+
+The input data specifies the number of vertices, the set of edges (each defined by its two endpoint vertices), and the positive weight associated with each edge. For each vertex, one must decide whether it is included in the chosen clique or not. Likewise, for each edge, one must decide whether it is included in the clique. An edge can only be included if both of its endpoint vertices are included. Two vertices that are not connected by an edge in the graph cannot both be included, since the selected vertices must form a clique. The quantity to be maximized is the sum of the weights of all included edges.

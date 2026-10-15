@@ -1,0 +1,7 @@
+{
+  "objective_value": "<float> Total tour completion time, equal to the moment the later of the truck and drone returns to the depot.",
+  "truck_route": "<list[int], length varies> Ordered sequence of node identifiers visited by the truck, starting at the depot and ending at the depot.",
+  "drone_route": "<list[int], length varies> Ordered sequence of node identifiers visited by the drone, starting at the depot and ending at the depot.",
+  "customer_types": "<dict, key: '{customer_id}'> Service type assigned to each customer, valued 'truck' if served by the truck alone, 'drone' if served by the drone alone, or 'combined' if both vehicles meet at that customer.",
+  "arrival_times": "<dict, key: '{node_id}'> Time at which service begins at each node, where node 0 is the depot origin, nodes 1..num_customers are the customers, and node num_customers+1 is the depot destination whose value equals the tour completion time."
+}

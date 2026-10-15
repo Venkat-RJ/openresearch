@@ -1,0 +1,4 @@
+{
+  "objective_value": "<int> Size of the maximum clique remaining in the graph after the interdictor optimally removes edges.",
+  "interdicted_edges": "<list[list[int]], shape [num_interdicted][2]> Edges removed by the interdictor to minimize the maximum clique in the remaining graph."
+}

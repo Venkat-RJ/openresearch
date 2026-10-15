@@ -1,0 +1,9 @@
+{
+  "n": "<int> Total number of vertices in the undirected graph.",
+  "m": "<int> Total number of edges in the undirected graph.",
+  "max_degree": "<int> Largest number of edges incident to any single vertex in the graph.",
+  "degeneracy": "<int> Smallest value d such that every subgraph contains a vertex of degree at most d.",
+  "omega": "<int> Size of the largest clique known to exist in the graph.",
+  "clique_core_gap": "<int> Difference between the degeneracy plus one and the maximum clique size.",
+  "edges": "<list[list[int]], shape [m][2]> Each entry is a pair of vertex indices representing an undirected edge in the graph."
+}

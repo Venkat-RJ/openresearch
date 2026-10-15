@@ -1,0 +1,7 @@
+# Problem Description
+
+A traveler operates on a network of locations, one of which is designated as the home depot. Every pair of locations is connected by a direct link, and each link has a known positive travel distance. Each location has a known positive score representing the profit or reward collected by visiting it. The traveler must plan a single round-trip route that starts and ends at the depot, visiting a subset of the other locations along the way, where the total travel distance of the route must not exceed a given distance budget.
+
+The traveler must decide which locations to visit and which links to traverse. The route must form a single closed loop: it must pass through the depot, and every visited location must be entered and exited exactly once, so the route has no branches, dead-ends, or disconnected pieces. A location that is not visited must not have any links of the route touching it. The route must consist of exactly one connected cycle; it is not permitted to break the journey into multiple separate loops. The depot is always visited.
+
+The goal is to choose the route that maximizes the total score collected from all visited locations, while ensuring that the sum of the distances of all traversed links does not exceed the distance budget.

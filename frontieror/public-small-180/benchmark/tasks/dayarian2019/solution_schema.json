@@ -1,0 +1,41 @@
+{
+  "objective_value": "<float> Total operating cost including driver salaries, vehicle operating costs, employee salaries, and setup costs.",
+  "routes": [
+    {
+      "vehicle": "<int> Identifier of the vehicle assigned to this route.",
+      "trips": [
+        {
+          "trip": "<int> Sequential index of this trip within the vehicle's route.",
+          "customers": "<list[int]> Ordered sequence of customer order IDs visited during this trip.",
+          "start_period": "<int> Period index at which this trip departs from the depot."
+        }
+      ]
+    }
+  ],
+  "production_schedule": [
+    {
+      "order": "<int> Customer order ID for which this production quantity is allocated.",
+      "product": "<int> Product type ID being produced.",
+      "subperiod": "<int> Subperiod index during which production occurs.",
+      "quantity": "<float> Number of units produced for this order, product, and subperiod."
+    }
+  ],
+  "production_staffing": {
+    "employees_by_product_subperiod": [
+      {
+        "product": "<int> Product type ID.",
+        "subperiod": "<int> Valid production subperiod ID for the product.",
+        "employees": "<int> Number of employees assigned to production in this product/subperiod."
+      }
+    ],
+    "setups_by_product_subperiod": [
+      {
+        "product": "<int> Product type ID.",
+        "subperiod": "<int> Valid production subperiod ID for the product.",
+        "setups": "<int> Number of employees starting a setup in this product/subperiod."
+      }
+    ],
+    "workstations_by_period": "<list[int], length global_parameters.num_periods> Certified workstations/employees paid in each period.",
+    "shift_starts_by_period": "<list[int], length global_parameters.num_periods> Number of production employee shifts starting in each period."
+  }
+}

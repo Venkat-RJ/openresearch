@@ -1,0 +1,22 @@
+{
+  "n_generators": "<int> Number of thermal generators in the fleet.",
+  "n_scenarios": "<int> Number of equally likely demand scenarios.",
+  "T": "<int> Number of time periods in the planning horizon.",
+  "generators": [
+    {
+      "M": "<int> Maximum power output of the generator when running (MW).",
+      "m": "<int> Minimum power output of the generator when running (MW).",
+      "L": "<int> Minimum number of consecutive periods the generator must remain on once started.",
+      "ell": "<int> Minimum number of consecutive periods the generator must remain off once shut down.",
+      "RU": "<int> Maximum increase in production allowed between consecutive periods while the generator stays on (MW).",
+      "SU": "<int> Maximum production allowed in the period the generator first turns on (MW).",
+      "RD": "<int> Maximum decrease in production allowed between consecutive periods while the generator stays on (MW).",
+      "SD": "<int> Maximum production allowed in the last period before the generator turns off (MW).",
+      "c_g": "<float> Per-unit cost of power produced by the generator ($/MWh).",
+      "c_f": "<float> Fixed operating cost paid in every period the generator is running ($).",
+      "startup_costs_K": "<list[float], length T> Cost of starting the generator after exactly k consecutive inactive periods, for k = 1 to T ($)."
+    }
+  ],
+  "demand_scenarios": "<list[list[float]], shape [n_scenarios][T]> Power demand for each scenario in each time period (MW).",
+  "reserve_scenarios": "<list[list[float]], shape [n_scenarios][T]> Spinning reserve requirement for each scenario in each time period (MW)."
+}

@@ -1,0 +1,53 @@
+{
+  "planning_horizon_days": "<int> Number of days in the monthly scheduling period.",
+  "num_crew_members": "<int> Total number of cabin crew members to be scheduled.",
+  "num_mother_pairings": "<int> Total number of distinct pairings that need to be covered.",
+  "num_daughter_pairings": "<int> Total number of pairing copies to be covered, summing the coverage requirement across all pairings.",
+  "num_aircraft_types": "<int> Number of distinct aircraft types operated during the planning horizon.",
+  "work_rules": {
+    "weekly_rest_period_hours": "<int> Minimum consecutive hours of rest each crew member must receive within every calendar week.",
+    "monthly_rest_additional_hours": "<int> Additional consecutive hours of rest that must be appended to one weekly rest period each month.",
+    "max_spread_between_breaks_days": "<int> Maximum number of days allowed between two consecutive periodic rest breaks.",
+    "monthly_flight_limit_hours": "<int> Maximum total flight hours a crew member may accumulate during the planning month.",
+    "rolling_flight_limit_hours": "<int> Maximum total flight hours a crew member may accumulate in the rolling period spanning the last 15 days of the preceding month and the first 15 days of the current month.",
+    "rolling_flight_period_description": "<str> Description of the date range used for the rolling flight-hour limit.",
+    "max_consecutive_early_departures_before_8am": "<int> Maximum number of consecutive days on which a crew member may depart before 8:00 AM.",
+    "max_cross_pairings_per_month": "<int> Maximum number of cross-base pairings a crew member may fly in one month.",
+    "week_definition": "<str> Definition of the calendar week boundaries used for weekly rest calculations.",
+    "weekly_rest_latest_start_on_sunday_hour": "<int> Latest hour on Sunday by which a weekly rest period must begin."
+  },
+  "objective": {
+    "type": "<str> Direction of optimization.",
+    "description": "<str> Plain-language statement of what the objective function measures."
+  },
+  "pairings": [
+    {
+      "id": "<int> Unique identifier for this pairing.",
+      "start_day": "<int> Zero-based day within the planning horizon on which this pairing departs.",
+      "duration_days": "<int> Number of consecutive calendar days this pairing spans.",
+      "departure_hour": "<float> Hour of day (fractional, 24-hour clock) at which the crew departs on the start day.",
+      "return_hour": "<float> Hour of day (fractional, 24-hour clock) at which the crew returns on the final day of the pairing.",
+      "flight_hours": "<float> Total hours of actual flying time contained in this pairing.",
+      "duration_minutes": "<int> Total elapsed time of this pairing from departure to return, in minutes.",
+      "aircraft_type": "<int> Aircraft type required for this pairing, as a zero-based index into the set of aircraft types.",
+      "is_cross_pairing": "<bool> Whether this pairing departs from one crew base and arrives at a different base.",
+      "coverage_requirement": "<int> Number of crew members that must be assigned to fly this pairing."
+    }
+  ],
+  "crew_members": [
+    {
+      "id": "<int> Unique identifier for this crew member.",
+      "qualifications": "<list[int]> Aircraft types this crew member is certified to operate, as zero-based indices.",
+      "pre_assigned_days": "<list[int]> Zero-based days within the planning horizon that are already blocked by pre-assigned activities.",
+      "pre_assigned_activities": [
+        {
+          "start_day": "<int> Zero-based first day of this pre-assigned activity.",
+          "end_day": "<int> Zero-based last day (inclusive) of this pre-assigned activity.",
+          "duration_days": "<int> Number of consecutive days this pre-assigned activity spans.",
+          "type": "<str> Category of the pre-assigned activity (e.g., annual_leave, training, medical, reserve_block, transition, desiderata)."
+        }
+      ],
+      "flight_hours_previous_15_days": "<float> Total flight hours this crew member accumulated during the last 15 days of the preceding month."
+    }
+  ]
+}

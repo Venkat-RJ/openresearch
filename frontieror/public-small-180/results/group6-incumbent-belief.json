@@ -1,0 +1,10 @@
+{
+  "id": "df08b5b7-9bb6-4143-a04b-6fa03a299589",
+  "audit_records": [
+    "1e5a8b77-49b6-4956-b5b7-b76e0a4c190a",
+    "c58db96f-9f06-4bed-a996-90c526ac6009"
+  ],
+  "readback_verified": true,
+  "scope": "candidate-only complete-witness logging; no optimization execution; no large",
+  "wu2022_contract_constraint": "feasibility_check.py:183-221 binds objective to minimum-cost continuous W completion of Z/U/Y; callback canonicalization uses a separate continuous Gurobi model rather than logging arbitrary callback W costs"
+}

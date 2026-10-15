@@ -1,0 +1,434 @@
+{
+  "instance_info": {
+    "instance_number": 1,
+    "n": 3,
+    "seed": 42,
+    "generation_attempt": 1,
+    "num_truck_customers": 3,
+    "num_trailer_customers": 3,
+    "num_transshipment_locations": 3,
+    "num_locations": 10,
+    "num_vertices_in_pricing_network": 26,
+    "problem_type": "TTRPTW",
+    "paper_reference": "Rothenbaecher, Drexl, Irnich (2018)"
+  },
+  "parameters": {
+    "max_route_duration": 345.0,
+    "service_time": 5.0,
+    "coupling_time": 3.0,
+    "decoupling_time": 3.0,
+    "transfer_time": 3.0,
+    "coupling_cost": 2.0,
+    "decoupling_cost": 2.0,
+    "transfer_cost": 0.0,
+    "coordinate_range": [
+      0,
+      100
+    ],
+    "planning_horizon": [
+      0,
+      345.0
+    ],
+    "strict_parking_rule": false,
+    "customer_time_windows": false,
+    "transfer_time_type": "constant"
+  },
+  "fleet": {
+    "truck_types": [
+      {
+        "id": 1,
+        "capacity": 60,
+        "fixed_cost": 50.0,
+        "cost_factor": 1.0,
+        "num_available": 1
+      },
+      {
+        "id": 2,
+        "capacity": 80,
+        "fixed_cost": 70.0,
+        "cost_factor": 1.1,
+        "num_available": 1
+      }
+    ],
+    "trailer_types": [
+      {
+        "id": 1,
+        "capacity": 100,
+        "towing_cost_multiplier": 0.2,
+        "num_available": 1
+      },
+      {
+        "id": 2,
+        "capacity": 120,
+        "towing_cost_multiplier": 0.2,
+        "num_available": 1
+      }
+    ],
+    "vehicle_classes": [
+      {
+        "class_id": 1,
+        "truck_type_id": 1,
+        "trailer_type_id": 0,
+        "truck_capacity": 60,
+        "trailer_capacity": 0,
+        "total_capacity": 60,
+        "truck_fixed_cost": 50.0,
+        "truck_cost_factor": 1.0,
+        "trailer_towing_cost_multiplier": 0.0,
+        "num_available": 1,
+        "description": "Truck type 1 solo"
+      },
+      {
+        "class_id": 2,
+        "truck_type_id": 1,
+        "trailer_type_id": 1,
+        "truck_capacity": 60,
+        "trailer_capacity": 100,
+        "total_capacity": 160,
+        "truck_fixed_cost": 50.0,
+        "truck_cost_factor": 1.0,
+        "trailer_towing_cost_multiplier": 0.2,
+        "num_available": 1,
+        "description": "Truck type 1 + Trailer type 1"
+      },
+      {
+        "class_id": 3,
+        "truck_type_id": 2,
+        "trailer_type_id": 0,
+        "truck_capacity": 80,
+        "trailer_capacity": 0,
+        "total_capacity": 80,
+        "truck_fixed_cost": 70.0,
+        "truck_cost_factor": 1.1,
+        "trailer_towing_cost_multiplier": 0.0,
+        "num_available": 1,
+        "description": "Truck type 2 solo"
+      },
+      {
+        "class_id": 4,
+        "truck_type_id": 2,
+        "trailer_type_id": 2,
+        "truck_capacity": 80,
+        "trailer_capacity": 120,
+        "total_capacity": 200,
+        "truck_fixed_cost": 70.0,
+        "truck_cost_factor": 1.1,
+        "trailer_towing_cost_multiplier": 0.2,
+        "num_available": 1,
+        "description": "Truck type 2 + Trailer type 2"
+      }
+    ]
+  },
+  "depot": {
+    "id": 0,
+    "x": 50.0,
+    "y": 50.0
+  },
+  "truck_customers": [
+    {
+      "id": 1,
+      "x": 27.71,
+      "y": 12.93,
+      "supply": 6,
+      "service_time": 5.0
+    },
+    {
+      "id": 2,
+      "x": 56.96,
+      "y": 25.03,
+      "supply": 9,
+      "service_time": 5.0
+    },
+    {
+      "id": 3,
+      "x": 38.81,
+      "y": 7.31,
+      "supply": 19,
+      "service_time": 5.0
+    }
+  ],
+  "trailer_customers": [
+    {
+      "id": 4,
+      "x": 45.26,
+      "y": 15.66,
+      "supply": 32,
+      "service_time": 5.0
+    },
+    {
+      "id": 5,
+      "x": 83.64,
+      "y": 94.52,
+      "supply": 35,
+      "service_time": 5.0
+    },
+    {
+      "id": 6,
+      "x": 81.79,
+      "y": 49.97,
+      "supply": 34,
+      "service_time": 5.0
+    }
+  ],
+  "transshipment_locations": [
+    {
+      "id": 7,
+      "x": 49.52,
+      "y": 26.5
+    },
+    {
+      "id": 8,
+      "x": 86.53,
+      "y": 82.24
+    },
+    {
+      "id": 9,
+      "x": 71.0,
+      "y": 63.47
+    }
+  ],
+  "distance_matrix": [
+    [
+      0.0,
+      43.26,
+      25.92,
+      44.13,
+      34.67,
+      55.8,
+      31.79,
+      23.5,
+      48.72,
+      24.95
+    ],
+    [
+      43.26,
+      0.0,
+      31.65,
+      12.44,
+      17.76,
+      98.92,
+      65.55,
+      25.69,
+      90.9,
+      66.55
+    ],
+    [
+      25.92,
+      31.65,
+      0.0,
+      25.37,
+      14.99,
+      74.44,
+      35.19,
+      7.58,
+      64.4,
+      40.92
+    ],
+    [
+      44.13,
+      12.44,
+      25.37,
+      0.0,
+      10.55,
+      98.06,
+      60.56,
+      21.98,
+      88.84,
+      64.73
+    ],
+    [
+      34.67,
+      17.76,
+      14.99,
+      10.55,
+      0.0,
+      87.7,
+      50.12,
+      11.65,
+      78.33,
+      54.3
+    ],
+    [
+      55.8,
+      98.92,
+      74.44,
+      98.06,
+      87.7,
+      0.0,
+      44.59,
+      76.1,
+      12.62,
+      33.52
+    ],
+    [
+      31.79,
+      65.55,
+      35.19,
+      60.56,
+      50.12,
+      44.59,
+      0.0,
+      39.9,
+      32.62,
+      17.28
+    ],
+    [
+      23.5,
+      25.69,
+      7.58,
+      21.98,
+      11.65,
+      76.1,
+      39.9,
+      0.0,
+      66.91,
+      42.76
+    ],
+    [
+      48.72,
+      90.9,
+      64.4,
+      88.84,
+      78.33,
+      12.62,
+      32.62,
+      66.91,
+      0.0,
+      24.36
+    ],
+    [
+      24.95,
+      66.55,
+      40.92,
+      64.73,
+      54.3,
+      33.52,
+      17.28,
+      42.76,
+      24.36,
+      0.0
+    ]
+  ],
+  "travel_time_matrix": [
+    [
+      0.0,
+      43.26,
+      25.92,
+      44.13,
+      34.67,
+      55.8,
+      31.79,
+      23.5,
+      48.72,
+      24.95
+    ],
+    [
+      43.26,
+      0.0,
+      31.65,
+      12.44,
+      17.76,
+      98.92,
+      65.55,
+      25.69,
+      90.9,
+      66.55
+    ],
+    [
+      25.92,
+      31.65,
+      0.0,
+      25.37,
+      14.99,
+      74.44,
+      35.19,
+      7.58,
+      64.4,
+      40.92
+    ],
+    [
+      44.13,
+      12.44,
+      25.37,
+      0.0,
+      10.55,
+      98.06,
+      60.56,
+      21.98,
+      88.84,
+      64.73
+    ],
+    [
+      34.67,
+      17.76,
+      14.99,
+      10.55,
+      0.0,
+      87.7,
+      50.12,
+      11.65,
+      78.33,
+      54.3
+    ],
+    [
+      55.8,
+      98.92,
+      74.44,
+      98.06,
+      87.7,
+      0.0,
+      44.59,
+      76.1,
+      12.62,
+      33.52
+    ],
+    [
+      31.79,
+      65.55,
+      35.19,
+      60.56,
+      50.12,
+      44.59,
+      0.0,
+      39.9,
+      32.62,
+      17.28
+    ],
+    [
+      23.5,
+      25.69,
+      7.58,
+      21.98,
+      11.65,
+      76.1,
+      39.9,
+      0.0,
+      66.91,
+      42.76
+    ],
+    [
+      48.72,
+      90.9,
+      64.4,
+      88.84,
+      78.33,
+      12.62,
+      32.62,
+      66.91,
+      0.0,
+      24.36
+    ],
+    [
+      24.95,
+      66.55,
+      40.92,
+      64.73,
+      54.3,
+      33.52,
+      17.28,
+      42.76,
+      24.36,
+      0.0
+    ]
+  ]
+}

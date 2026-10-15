@@ -1,0 +1,42 @@
+{
+  "problem_name": "PCSP-SL",
+  "S": 5,
+  "n": 5,
+  "m": 1,
+  "p": 1,
+  "sigma_w": 0,
+  "sigma_l": 2,
+  "seaside_containers": [
+    {
+      "id": 1,
+      "target_slot": 1
+    },
+    {
+      "id": 2,
+      "target_slot": 4
+    },
+    {
+      "id": 3,
+      "target_slot": 1
+    },
+    {
+      "id": 4,
+      "target_slot": 5
+    },
+    {
+      "id": 5,
+      "target_slot": 4
+    }
+  ],
+  "landside_containers": [
+    {
+      "id": 1,
+      "source_slot": 5,
+      "earliest_finish_time": 11,
+      "deadline": 54
+    }
+  ],
+  "seed": 100000,
+  "instance_index": 1,
+  "tiny_clamp_target_slot_to_S": true
+}

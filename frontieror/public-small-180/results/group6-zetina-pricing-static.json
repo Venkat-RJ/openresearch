@@ -1,0 +1,12 @@
+{
+  "id": "7cd212ae-2a94-447c-a64e-30608c9fb4eb",
+  "outcome": {
+    "archive": "group6-pass2/zetina2019",
+    "ast": "pass",
+    "execution": "not_run_by_group6; root tiny retest pending",
+    "hypothesis": "a4caa45a-26d0-42b8-9a43-13f89feb756e",
+    "license": "<=2000vars;<=1900rows asserted before every optimize",
+    "method": "Preserve incumbent via previous path MIP, then LP shortest-path column pricing using global/selected commodity arc duals; final MIP only arc binaries; actual shortest-path network witness recovery",
+    "sha256": "18933c7706e0aad7db3cdac9b4e308e29d94b3b7cb470515a85a531c1f614e45"
+  }
+}

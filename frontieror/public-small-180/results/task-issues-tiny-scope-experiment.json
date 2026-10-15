@@ -1,0 +1,40 @@
+{
+  "id": "bd024b1c-3bbd-4af4-8a2a-cbbb95dc8c0f",
+  "seq": 872,
+  "owner": "[private field removed]",
+  "account": "[private field removed]",
+  "status": "complete",
+  "title": "All180 issue scope reconciled to user tiny-only correction",
+  "description": "Original metadata preserved. Timeout recovery changed only remaining metadata. No solver/source changes.",
+  "labels": [
+    "frontieror-fresh",
+    "scope",
+    "tiny"
+  ],
+  "marginal_cost": {
+    "agent_usd": 0.0,
+    "resource_usd": 0.0
+  },
+  "subscribers": "[private field removed]",
+  "superseded_by": [],
+  "supersedes": [],
+  "produces": [],
+  "produced_by": [],
+  "created": "2026-10-11T11:48:13.584000+00:00",
+  "modified": "2026-10-11T11:48:13.589000+00:00",
+  "proves": [],
+  "favors": [],
+  "codechanges": null,
+  "outcome": "{\"GET_verified\": 180, \"first_attempt\": \"120second ancillary timeout after160 titles; no solver execution\", \"large_executions\": 0, \"old_large_execution_directives_replaced\": true, \"recovered_missing_metadata_updates\": 26}",
+  "config": {
+    "scope": "tiny only",
+    "artifact": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/task-issues-tiny-scope.json",
+    "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+    "issues_updated": 180,
+    "artifact_sha256": "f3185fec4ad8fc08e1fbaee3b9b25f3ca2f0b57585da41c2a94011a57ac99309",
+    "original_metadata": "research-workspace/Personal_experiments/frontieror-fresh-20261011/task-records.json"
+  },
+  "proved_by": [],
+  "favored_by": [],
+  "kind": "Experiment"
+}

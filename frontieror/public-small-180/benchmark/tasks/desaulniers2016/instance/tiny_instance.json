@@ -1,0 +1,144 @@
+{
+  "problem_type": "Inventory-Routing Problem (IRP)",
+  "replenishment_policy": "Maximum-Level (ML)",
+  "instance_class": "H3",
+  "holding_cost_level": "high",
+  "num_customers": 5,
+  "num_periods": 3,
+  "num_vehicles": 2,
+  "vehicle_capacity": 176,
+  "num_nodes": 6,
+  "coordinates": [
+    [
+      327,
+      57
+    ],
+    [
+      12,
+      379
+    ],
+    [
+      140,
+      125
+    ],
+    [
+      114,
+      71
+    ],
+    [
+      377,
+      52
+    ],
+    [
+      346,
+      379
+    ]
+  ],
+  "distance_matrix": [
+    [
+      0,
+      450,
+      199,
+      213,
+      50,
+      323
+    ],
+    [
+      450,
+      0,
+      284,
+      324,
+      490,
+      334
+    ],
+    [
+      199,
+      284,
+      0,
+      60,
+      248,
+      327
+    ],
+    [
+      213,
+      324,
+      60,
+      0,
+      264,
+      386
+    ],
+    [
+      50,
+      490,
+      248,
+      264,
+      0,
+      328
+    ],
+    [
+      323,
+      334,
+      327,
+      386,
+      328,
+      0
+    ]
+  ],
+  "holding_costs": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "customer_demands": [
+    [
+      79,
+      21,
+      85
+    ],
+    [
+      64,
+      14,
+      13
+    ],
+    [
+      21,
+      37,
+      39
+    ],
+    [
+      74,
+      87,
+      13
+    ],
+    [
+      81,
+      35,
+      93
+    ]
+  ],
+  "supplier_production": [
+    319,
+    194,
+    243
+  ],
+  "inventory_capacities": [
+    638,
+    239,
+    181,
+    92,
+    231,
+    261
+  ],
+  "initial_inventories": [
+    319,
+    71,
+    1,
+    20,
+    178,
+    216
+  ],
+  "seed_used": 42
+}

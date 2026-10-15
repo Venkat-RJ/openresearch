@@ -1,0 +1,12 @@
+{
+  "parameters": {
+    "n_cities": "<int> Number of cities the salesman must visit in the tour.",
+    "coordinate_range": "<list[float], length 2> Lower and upper bounds of the square region in which city coordinates are placed.",
+    "penalty_A": "<int> Penalty weight applied to violations of the requirement that exactly one city is visited at each time step in the unconstrained reformulation.",
+    "penalty_B": "<int> Penalty weight applied to violations of the requirement that each city appears at exactly one time step in the unconstrained reformulation."
+  },
+  "data": {
+    "coordinates": "<list[list[float]], shape [n_cities][2]> Two-dimensional position of each city within the coordinate range.",
+    "distance_matrix": "<list[list[float]], shape [n_cities][n_cities]> Euclidean distance between each pair of cities, where entry [i][j] is the travel distance from city i to city j."
+  }
+}

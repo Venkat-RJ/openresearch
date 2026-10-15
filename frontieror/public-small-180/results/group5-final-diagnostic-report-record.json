@@ -1,0 +1,82 @@
+{
+  "experiment_id": "3c25f691-0488-4273-9986-deaf4192f635",
+  "readback_verified": true,
+  "outcome": {
+    "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+    "task": "rahmaniani2018",
+    "conclusion": "Native Gurobi reports the restricted six-hour profile master INFEASIBLE after400 deferred rows; original-instance infeasibility is not established",
+    "diagnostic_records": [
+      {
+        "batch": "final300-logging2",
+        "experiment_id": "2853b9f3-b447-44bc-b79a-75cb0d81abc8",
+        "readback_verified": true
+      },
+      {
+        "batch": "final300-energy-diagnostic",
+        "experiment_id": "c317a40f-45fa-465f-8559-47ee44ca6e40",
+        "readback_verified": true
+      }
+    ],
+    "evaluated_hashes": {
+      "primary": "974bd301e5fe92a10b7830be1b655e8152ba646ae47cb74f83ddae07583b59ac",
+      "telemetry": "0122a19d1f6ffe7fc55bd258c7dd191905fb9fc716c9e3fd87307c359d0f351b",
+      "parameter_only": "3fbbf1c19c97f3f31ed85d426957a9bd106bc2138993e537b8c52efda064288d"
+    },
+    "before": {
+      "NumConstrs": 1134,
+      "NumVars": 512,
+      "SolCount": 0,
+      "Status": 4,
+      "active_rows": 400,
+      "complete_witness_found": false,
+      "elapsed_seconds": 0.39213399999999865,
+      "exit_reason": "inf_or_unbd_before_disambiguation",
+      "full_rows": 6720,
+      "full_rows_violated_at_publish_tolerance": null,
+      "iteration": 5,
+      "worst_full_row_residual": null,
+      "worst_full_row_violation": null,
+      "worst_row_category": null,
+      "worst_row_index": null
+    },
+    "after": {
+      "NumConstrs": 1134,
+      "NumVars": 512,
+      "SolCount": 0,
+      "Status": 3,
+      "active_rows": 400,
+      "complete_witness_found": false,
+      "elapsed_seconds": 0.4077631669999846,
+      "exit_reason": "inf_or_unbd_after_disambiguation",
+      "full_rows": 6720,
+      "full_rows_violated_at_publish_tolerance": null,
+      "iteration": 5,
+      "worst_full_row_residual": null,
+      "worst_full_row_violation": null,
+      "worst_row_category": null,
+      "worst_row_index": null
+    },
+    "original_instance_infeasibility_claim": false,
+    "specific_IIS_not_identified": true,
+    "no_more_source_changes_or_runs": true,
+    "primary_group_results_unchanged": {
+      "feasible": 29,
+      "quality_gate_passes": 28,
+      "meaningful_reference_beats": 0
+    },
+    "artifacts": [
+      {
+        "path": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/group5-rahmaniani2018-final-native-diagnosis.json",
+        "sha256": "080e215e23614945514816f56fde67665f50db22df4f2fe41e82765daef2852e"
+      },
+      {
+        "path": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/group5-results.json",
+        "sha256": "43bf3cdaaa76a6c126ff7e8d6f6e184718e13a2ab0be876a632d0cdd77b6f033"
+      },
+      {
+        "path": "research-workspace/Personal_experiments/frontieror-fresh-20261011/results/group5-final-measured.json",
+        "sha256": "2fd972c6a38b7f9dc007c34664970ddb048ac62ea2a225d0458eed691ba8652c"
+      }
+    ]
+  }
+}

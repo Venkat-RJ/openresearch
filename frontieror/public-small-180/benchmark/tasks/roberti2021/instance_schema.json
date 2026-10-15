@@ -1,0 +1,15 @@
+{
+  "num_customers": "<int> Number of customers to be served by the truck-drone team.",
+  "num_nodes": "<int> Total number of locations including the depot and all customers.",
+  "alpha": "<int> Drone speed multiplier relative to the truck, used to scale Euclidean distances for drone travel times.",
+  "nodes": [
+    {
+      "id": "<int> Unique identifier for this location, where 0 is the depot and 1 through num_customers are customers.",
+      "label": "<str> Human-readable name for this location.",
+      "x": "<int> Horizontal coordinate of this location on the grid.",
+      "y": "<int> Vertical coordinate of this location on the grid."
+    }
+  ],
+  "truck_travel_times": "<list[list[int]], shape [num_nodes][num_nodes]> Travel time for the truck between each pair of locations using the Manhattan distance metric.",
+  "drone_travel_times": "<list[list[int]], shape [num_nodes][num_nodes]> Travel time for the drone between each pair of locations using the Euclidean distance scaled by the drone speed factor."
+}

@@ -1,0 +1,161 @@
+{
+  "objective_value": 1101.794830754819,
+  "solver_status": "OPTIMAL",
+  "mip_gap": 0.0,
+  "best_bound": 1101.794830754819,
+  "num_routes": 9,
+  "optimization_method": "exact_vehicle_indexed_arc_flow",
+  "total_time_seconds": 3.18,
+  "routes": [
+    {
+      "route_id": 1,
+      "customer_ids": [
+        21,
+        3,
+        16
+      ],
+      "cost": 68.043483,
+      "demand": 66,
+      "path": [
+        0,
+        21,
+        3,
+        16,
+        0
+      ]
+    },
+    {
+      "route_id": 2,
+      "customer_ids": [
+        17,
+        6,
+        15,
+        14
+      ],
+      "cost": 164.969167,
+      "demand": 165,
+      "path": [
+        0,
+        17,
+        6,
+        15,
+        14,
+        0
+      ]
+    },
+    {
+      "route_id": 3,
+      "customer_ids": [
+        2
+      ],
+      "cost": 114.978259,
+      "demand": 23,
+      "path": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "route_id": 4,
+      "customer_ids": [
+        8,
+        20,
+        23
+      ],
+      "cost": 120.257516,
+      "demand": 55,
+      "path": [
+        0,
+        8,
+        20,
+        23,
+        0
+      ]
+    },
+    {
+      "route_id": 5,
+      "customer_ids": [
+        19,
+        5,
+        1
+      ],
+      "cost": 139.628801,
+      "demand": 72,
+      "path": [
+        0,
+        19,
+        5,
+        1,
+        0
+      ]
+    },
+    {
+      "route_id": 6,
+      "customer_ids": [
+        24,
+        9,
+        10
+      ],
+      "cost": 121.489271,
+      "demand": 83,
+      "path": [
+        0,
+        24,
+        9,
+        10,
+        0
+      ]
+    },
+    {
+      "route_id": 7,
+      "customer_ids": [
+        7,
+        12,
+        25
+      ],
+      "cost": 129.111549,
+      "demand": 85,
+      "path": [
+        0,
+        7,
+        12,
+        25,
+        0
+      ]
+    },
+    {
+      "route_id": 8,
+      "customer_ids": [
+        11,
+        4,
+        22
+      ],
+      "cost": 109.413578,
+      "demand": 66,
+      "path": [
+        0,
+        11,
+        4,
+        22,
+        0
+      ]
+    },
+    {
+      "route_id": 9,
+      "customer_ids": [
+        13,
+        18
+      ],
+      "cost": 133.903208,
+      "demand": 32,
+      "path": [
+        0,
+        13,
+        18,
+        0
+      ]
+    }
+  ],
+  "runtime": 8.557744901627302
+}

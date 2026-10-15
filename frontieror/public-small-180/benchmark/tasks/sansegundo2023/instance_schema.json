@@ -1,0 +1,11 @@
+{
+  "num_vertices": "<int> Total number of vertices in the undirected graph.",
+  "target_density": "<float> Target probability that an edge exists between any pair of vertices in the Erdos-Renyi random graph.",
+  "actual_density": "<float> Realized fraction of possible edges present in the generated graph.",
+  "num_edges": "<int> Total number of edges in the graph.",
+  "greedy_clique_size": "<int> Size of a clique found by a greedy heuristic, serving as a known lower bound on the maximum clique size.",
+  "greedy_clique": "<list[int], length greedy_clique_size> Vertex indices belonging to the greedy heuristic clique.",
+  "vertices": "<list[int], length num_vertices> List of all vertex indices in the graph.",
+  "edges": "<list[list[int]], shape [num_edges][2]> Each entry is a pair of vertex indices representing an undirected edge, with the smaller index first.",
+  "adjacency_list": "<dict, key: '{vertex}'> For each vertex, the sorted list of neighboring vertex indices that share an edge with it."
+}

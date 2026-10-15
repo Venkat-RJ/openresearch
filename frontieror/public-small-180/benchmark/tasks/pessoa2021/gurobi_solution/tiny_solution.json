@@ -1,0 +1,37 @@
+{
+  "objective_value": 380.0,
+  "status": "optimal",
+  "routes": [
+    {
+      "customers": [
+        5,
+        3,
+        8,
+        10,
+        1
+      ],
+      "cost": 135,
+      "worst_case_demand": 116
+    },
+    {
+      "customers": [
+        9,
+        6,
+        7,
+        11
+      ],
+      "cost": 101,
+      "worst_case_demand": 114
+    },
+    {
+      "customers": [
+        12,
+        4,
+        2
+      ],
+      "cost": 144,
+      "worst_case_demand": 115
+    }
+  ],
+  "runtime": 0.58
+}

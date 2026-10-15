@@ -1,0 +1,23 @@
+{
+  "num_customers": "<int> Total number of customers to be served.",
+  "num_vehicles": "<int> Number of identical vehicles available in the fleet.",
+  "vehicle_capacity": "<int> Maximum total demand each vehicle can carry under any realized demand scenario.",
+  "uncertainty_set": {
+    "Gamma": "<int> Maximum number of customers whose demands may simultaneously deviate from their nominal values."
+  },
+  "depot": {
+    "id": "<int> Identifier for the depot node in the distance matrix.",
+    "x": "<int> Horizontal coordinate of the depot.",
+    "y": "<int> Vertical coordinate of the depot."
+  },
+  "customers": [
+    {
+      "id": "<int> Unique identifier for the customer, used as a node index in the distance matrix.",
+      "x": "<int> Horizontal coordinate of the customer location.",
+      "y": "<int> Vertical coordinate of the customer location.",
+      "nominal_demand": "<int> Expected demand quantity for the customer under normal conditions.",
+      "demand_deviation": "<int> Maximum amount by which the customer's actual demand can exceed its nominal demand."
+    }
+  ],
+  "distance_matrix": "<list[list[int]], shape [num_customers+1][num_customers+1]> Transportation cost between each pair of locations, where row/column 0 is the depot and rows/columns 1 through num_customers are customers."
+}

@@ -1,0 +1,304 @@
+{
+  "instance_path": "research-workspace/Code/efficient_opt_bench/efficient_opt_benchmark/bierwirth2017/instance/tiny_instance.json",
+  "solver": "Gurobi",
+  "time_limit": 100.0,
+  "wall_time": 3.639,
+  "objective_value": 2197.0,
+  "best_bound": 2197.0,
+  "mip_gap": 0.0,
+  "status": "optimal",
+  "num_solutions": 10,
+  "schedule": [
+    {
+      "job_id": 0,
+      "weight": 4,
+      "due_date": 175,
+      "release_date": 0,
+      "completion_time": 170.0,
+      "tardiness": 0.0,
+      "weighted_tardiness": 0.0,
+      "operations": [
+        {
+          "machine": 1,
+          "start_time": 25.0,
+          "processing_time": 4,
+          "end_time": 29.0
+        },
+        {
+          "machine": 0,
+          "start_time": 36.0,
+          "processing_time": 95,
+          "end_time": 131.0
+        },
+        {
+          "machine": 2,
+          "start_time": 134.0,
+          "processing_time": 36,
+          "end_time": 170.0
+        }
+      ]
+    },
+    {
+      "job_id": 1,
+      "weight": 4,
+      "due_date": 165,
+      "release_date": 0,
+      "completion_time": 145.0,
+      "tardiness": 0.0,
+      "weighted_tardiness": 0.0,
+      "operations": [
+        {
+          "machine": 1,
+          "start_time": 0.0,
+          "processing_time": 18,
+          "end_time": 18.0
+        },
+        {
+          "machine": 2,
+          "start_time": 18.0,
+          "processing_time": 95,
+          "end_time": 113.0
+        },
+        {
+          "machine": 0,
+          "start_time": 131.0,
+          "processing_time": 14,
+          "end_time": 145.0
+        }
+      ]
+    },
+    {
+      "job_id": 2,
+      "weight": 2,
+      "due_date": 176,
+      "release_date": 0,
+      "completion_time": 205.0,
+      "tardiness": 29.0,
+      "weighted_tardiness": 58.0,
+      "operations": [
+        {
+          "machine": 1,
+          "start_time": 29.0,
+          "processing_time": 76,
+          "end_time": 105.0
+        },
+        {
+          "machine": 0,
+          "start_time": 145.0,
+          "processing_time": 55,
+          "end_time": 200.0
+        },
+        {
+          "machine": 2,
+          "start_time": 200.0,
+          "processing_time": 5,
+          "end_time": 205.0
+        }
+      ]
+    },
+    {
+      "job_id": 3,
+      "weight": 2,
+      "due_date": 159,
+      "release_date": 0,
+      "completion_time": 294.0,
+      "tardiness": 135.0,
+      "weighted_tardiness": 270.0,
+      "operations": [
+        {
+          "machine": 1,
+          "start_time": 105.0,
+          "processing_time": 28,
+          "end_time": 133.0
+        },
+        {
+          "machine": 2,
+          "start_time": 170.0,
+          "processing_time": 30,
+          "end_time": 200.0
+        },
+        {
+          "machine": 0,
+          "start_time": 229.0,
+          "processing_time": 65,
+          "end_time": 294.0
+        }
+      ]
+    },
+    {
+      "job_id": 4,
+      "weight": 2,
+      "due_date": 247,
+      "release_date": 0,
+      "completion_time": 471.0,
+      "tardiness": 224.0,
+      "weighted_tardiness": 448.0,
+      "operations": [
+        {
+          "machine": 1,
+          "start_time": 173.0,
+          "processing_time": 72,
+          "end_time": 245.0
+        },
+        {
+          "machine": 0,
+          "start_time": 324.0,
+          "processing_time": 26,
+          "end_time": 350.0
+        },
+        {
+          "machine": 2,
+          "start_time": 379.0,
+          "processing_time": 92,
+          "end_time": 471.0
+        }
+      ]
+    },
+    {
+      "job_id": 5,
+      "weight": 2,
+      "due_date": 211,
+      "release_date": 0,
+      "completion_time": 379.0,
+      "tardiness": 168.0,
+      "weighted_tardiness": 336.0,
+      "operations": [
+        {
+          "machine": 0,
+          "start_time": 200.0,
+          "processing_time": 29,
+          "end_time": 229.0
+        },
+        {
+          "machine": 1,
+          "start_time": 245.0,
+          "processing_time": 58,
+          "end_time": 303.0
+        },
+        {
+          "machine": 2,
+          "start_time": 303.0,
+          "processing_time": 76,
+          "end_time": 379.0
+        }
+      ]
+    },
+    {
+      "job_id": 6,
+      "weight": 2,
+      "due_date": 271,
+      "release_date": 0,
+      "completion_time": 414.0,
+      "tardiness": 143.0,
+      "weighted_tardiness": 286.0,
+      "operations": [
+        {
+          "machine": 2,
+          "start_time": 205.0,
+          "processing_time": 98,
+          "end_time": 303.0
+        },
+        {
+          "machine": 0,
+          "start_time": 303.0,
+          "processing_time": 21,
+          "end_time": 324.0
+        },
+        {
+          "machine": 1,
+          "start_time": 324.0,
+          "processing_time": 90,
+          "end_time": 414.0
+        }
+      ]
+    },
+    {
+      "job_id": 7,
+      "weight": 2,
+      "due_date": 109,
+      "release_date": 0,
+      "completion_time": 161.0,
+      "tardiness": 52.0,
+      "weighted_tardiness": 104.0,
+      "operations": [
+        {
+          "machine": 0,
+          "start_time": 0.0,
+          "processing_time": 36,
+          "end_time": 36.0
+        },
+        {
+          "machine": 2,
+          "start_time": 113.0,
+          "processing_time": 20,
+          "end_time": 133.0
+        },
+        {
+          "machine": 1,
+          "start_time": 133.0,
+          "processing_time": 28,
+          "end_time": 161.0
+        }
+      ]
+    },
+    {
+      "job_id": 8,
+      "weight": 1,
+      "due_date": 96,
+      "release_date": 0,
+      "completion_time": 427.0,
+      "tardiness": 331.0,
+      "weighted_tardiness": 331.0,
+      "operations": [
+        {
+          "machine": 2,
+          "start_time": 6.0,
+          "processing_time": 12,
+          "end_time": 18.0
+        },
+        {
+          "machine": 0,
+          "start_time": 350.0,
+          "processing_time": 49,
+          "end_time": 399.0
+        },
+        {
+          "machine": 1,
+          "start_time": 414.0,
+          "processing_time": 13,
+          "end_time": 427.0
+        }
+      ]
+    },
+    {
+      "job_id": 9,
+      "weight": 1,
+      "due_date": 153,
+      "release_date": 0,
+      "completion_time": 517.0,
+      "tardiness": 364.0,
+      "weighted_tardiness": 364.0,
+      "operations": [
+        {
+          "machine": 0,
+          "start_time": 399.0,
+          "processing_time": 78,
+          "end_time": 477.0
+        },
+        {
+          "machine": 2,
+          "start_time": 477.0,
+          "processing_time": 34,
+          "end_time": 511.0
+        },
+        {
+          "machine": 1,
+          "start_time": 511.0,
+          "processing_time": 6,
+          "end_time": 517.0
+        }
+      ]
+    }
+  ],
+  "runtime": 3.75
+}

@@ -1,0 +1,35 @@
+{
+  "parameters": {
+    "n": "<int> Total number of nodes in the transportation network.",
+    "num_arcs": "<int> Total number of undirected arcs connecting nodes in the network.",
+    "m": "<int> Number of nodes designated as origin-destination (OD) nodes.",
+    "num_od_pairs": "<int> Total number of origin-destination pairs with traffic flow.",
+    "R": "<int> Maximum distance a vehicle can travel on a full tank before needing to refuel.",
+    "p": "<int> Number of refueling stations to be located."
+  },
+  "nodes": [
+    {
+      "id": "<int> Unique identifier for this node.",
+      "x": "<float> Horizontal coordinate of this node in the network.",
+      "y": "<float> Vertical coordinate of this node in the network.",
+      "weight": "<int> Population proxy weight of this node, used to compute traffic flow via the gravity model."
+    }
+  ],
+  "arcs": [
+    {
+      "from": "<int> Node identifier at one end of this arc.",
+      "to": "<int> Node identifier at the other end of this arc.",
+      "distance": "<float> Euclidean distance of this arc between its two endpoint nodes."
+    }
+  ],
+  "od_nodes": "<list[int], length m> Node identifiers designated as origin-destination nodes.",
+  "od_pairs": [
+    {
+      "origin": "<int> Node identifier where this traffic flow originates.",
+      "destination": "<int> Node identifier where this traffic flow is destined.",
+      "flow": "<float> Volume of round-trip traffic traveling between the origin and destination.",
+      "shortest_path": "<list[int]> Ordered sequence of node identifiers forming the shortest path from origin to destination.",
+      "path_distance": "<float> Total distance of the shortest path from origin to destination."
+    }
+  ]
+}

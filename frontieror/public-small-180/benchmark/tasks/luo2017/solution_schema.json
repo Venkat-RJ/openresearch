@@ -1,0 +1,17 @@
+{
+  "objective_value": "<float> Total transportation cost summed over all vehicles and all traversed edges, equal to edge distance times the linear weight-related cost evaluated at the vehicle's load weight.",
+  "routes": [
+    {
+      "vehicle": "<int> Zero-based dispatched-vehicle identifier.",
+      "route": "<list[int]> Ordered route using the formulation's duplicated depot nodes: start at depot.id (normally 0), visit customer IDs 1..num_customers, and end at the virtual depot entrance num_customers+1. The virtual entrance has the physical location and time window of the depot.",
+      "deliveries": "<dict, key: '{customer}'> Positive quantity delivered to each visited customer.",
+      "edges": [
+        {
+          "from": "<int> Origin node, including virtual entrance where applicable.",
+          "to": "<int> Destination node; the final edge ends at num_customers+1.",
+          "load_weight": "<float> Load carried on this edge before delivery at its destination."
+        }
+      ]
+    }
+  ]
+}

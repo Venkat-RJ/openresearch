@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total number of bins used in the packing.",
+  "num_bins": "<int> Total number of bins used in the packing.",
+  "bins": "<list[list[int]], length num_bins> Item types assigned to each bin, where each inner list contains the item_type identifiers of all items packed into that bin."
+}

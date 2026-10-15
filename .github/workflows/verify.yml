@@ -1,0 +1,16 @@
+name: Verify saved research results
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  saved-results:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check saved solutions and file hashes
+        run: python3 frontieror/tools/verify_public_release.py
+      - name: Check research guide links
+        run: python3 tools/check_links.py

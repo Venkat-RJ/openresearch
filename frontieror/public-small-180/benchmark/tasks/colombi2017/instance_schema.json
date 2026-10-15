@@ -1,0 +1,14 @@
+{
+  "num_nodes": "<int> Total number of nodes in the directed road network.",
+  "depot": "<int> Node index where the hauler's tour must start and end.",
+  "num_arcs": "<int> Total number of directed arcs in the road network.",
+  "num_profitable_arcs": "<int> Number of arcs that yield a profit when served.",
+  "num_VI_nodes": "<int> Number of starting nodes that appear in the incompatibility graph.",
+  "num_strong_incompatibilities": "<int> Number of strong incompatibility edges between starting nodes.",
+  "num_weak_incompatibilities": "<int> Number of weak incompatibility edges between starting nodes.",
+  "arcs": "<list[list[int]], shape [num_arcs][3]> Each entry [i, j, cost] defines a directed arc from node i to node j with its traveling cost.",
+  "profitable_arcs": "<list[list[int]], shape [num_profitable_arcs][3]> Each entry [i, j, profit] defines a profitable arc from node i to node j with its collectible profit.",
+  "VI_nodes": "<list[int], length num_VI_nodes> Nodes that are starting nodes of profitable arcs and appear in the incompatibility graph.",
+  "strong_incompatibilities": "<list[list[int]], shape [num_strong_incompatibilities][2]> Each entry [i, j] defines a pair of starting nodes that cannot both have their profitable arcs served.",
+  "weak_incompatibilities": "<list[list[int]], shape [num_weak_incompatibilities][3]> Each entry [i, j, penalty] defines a pair of starting nodes that can both have their profitable arcs served only if the associated penalty cost is paid."
+}

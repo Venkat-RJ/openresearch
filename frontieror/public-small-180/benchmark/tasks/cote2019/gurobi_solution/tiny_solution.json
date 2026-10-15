@@ -1,0 +1,39 @@
+{
+  "instance_id": 1,
+  "problem": "S2L-CVRP",
+  "solver": "Gurobi",
+  "status": "Optimal",
+  "objective_value": 670.0,
+  "routing_cost": 665.0,
+  "recourse_cost": 5.0,
+  "routes": [
+    [
+      5,
+      9,
+      7
+    ],
+    [
+      6,
+      2,
+      15,
+      13
+    ],
+    [
+      10,
+      1,
+      8,
+      14
+    ],
+    [
+      11,
+      3,
+      4,
+      12
+    ]
+  ],
+  "time_limit": 100.0,
+  "solve_time": 91.47979402542114,
+  "theta": 5.0,
+  "mip_gap": 0.0,
+  "runtime": 91.82
+}

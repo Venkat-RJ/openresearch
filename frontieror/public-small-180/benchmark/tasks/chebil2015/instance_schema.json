@@ -1,0 +1,21 @@
+{
+  "problem": "<str> Name of the optimization problem.",
+  "n_star": "<int> Total number of items across all classes.",
+  "N": "<int> Number of item classes (families).",
+  "b": "<int> Capacity of the knapsack.",
+  "classes": [
+    {
+      "class_id": "<int> Identifier of this class, ranging from 1 to N.",
+      "n_i": "<int> Number of items in this class.",
+      "f_i": "<int> Fixed setup cost incurred when this class is activated (negative value representing a profit reduction).",
+      "d_i": "<int> Knapsack capacity consumed when this class is activated.",
+      "items": [
+        {
+          "item_id": "<int> Identifier of this item within its class, ranging from 1 to n_i.",
+          "a_ij": "<int> Weight of this item.",
+          "c_ij": "<int> Profit earned by selecting this item."
+        }
+      ]
+    }
+  ]
+}

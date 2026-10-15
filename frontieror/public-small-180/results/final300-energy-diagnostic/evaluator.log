@@ -1,0 +1,60 @@
+Results CSV: research-workspace/Personal_experiments/frontieror-fresh-20261011/results/final300-energy-diagnostic/results.csv (--results_csv override)
+API cost CSV: research-workspace/Personal_experiments/frontieror-fresh-20261011/results/final300-energy-diagnostic/api-cost.csv
+Models: ['openai/gpt-5.6-sol']
+Papers: ['rahmaniani2018']
+Instances: ['tiny']
+Task plan: research-workspace/Personal_experiments/frontieror-fresh-20261011/results/final300-energy-diagnostic/plan.json (1 paper/model group(s))
+Data dir: research-workspace/Personal_experiments/frontieror-fresh-20261011/FrontierOR/frontier-or
+GRB_LICENSE_FILE: <not set>
+Max correct retries: 0, Max debug retries: 0, Time limit: 300s, Paper workers: 3, Model workers: 1, Instance workers: 3
+Exec: docker (mem=2G), T_max: time_limit
+Checker timeout: 300s, Temp dir: /var/folders/6d/h8yb_wjs2bx1f5f7l8jvnbs80000gn/T
+Mode: REUSE-CODE=all (reuse code.py on disk; fresh init-gen where missing; run all --instances)
+
+[task-pool] dispatching 1 (paper, model) tasks across 3 worker(s) (paper_workers × model_workers = 3 × 1)
+
+================================================================================
+PAPER: rahmaniani2018  |  MODEL: openai/gpt-5.6-sol (gpt-5.6-sol)
+================================================================================
+
+  [reuse] no prior code_attempt files — starting counters at 0.
+
+  --- Running code_v0 on tiny instance ['tiny'] for first_results ---
+  Instance tiny: FAIL runtime_error (0.67s)
+
+  --- Phase 0: Self-debug for runtime_error (budget=0 remaining of 0, already used=0) ---
+
+  --- Phase 1: Tiny-instance gate (instance tiny, gap<=10%) ---
+
+  *** Tiny-instance gate FAILED for instance tiny after 0 LLM correction(s) (debug=0, phase1=0). Skipping instances []. ***
+
+    Result written to research-workspace/Personal_experiments/frontieror-fresh-20261011/results/final300-energy-diagnostic/results.csv
+    API cost written to research-workspace/Personal_experiments/frontieror-fresh-20261011/results/final300-energy-diagnostic/api-cost.csv
+
+================================================================================
+EVALUATION SUMMARY
+================================================================================
+Instance     Status   Retries   LLM Obj            Gurobi Obj         Error
+--------------------------------------------------------------------------------
+  tiny       fail     0         N/A                1524152091.7837    Process exited with code 1:...
+--------------------------------------------------------------------------------
+Total: 1  |  Pass: 0  |  Fail: 1  |  Skip: 0
+================================================================================
+
+ERROR DETAILS
+--------------------------------------------------------------------------------
+  Instance tiny:
+Process exited with code 1:
+ENERGY_DIAGNOSTIC {"Status": 2, "SolCount": 2, "NumVars": 512, "NumConstrs": 734, "iteration": 1, "active_rows": 0, "full_rows": 6720, "worst_full_row_violation": 25444.76, "worst_full_row_residual": 25444.76, "worst_row_index": 4264, "worst_row_category": ["balancer_capacity", 10, 58], "full_rows_violated_at_publish_tolerance": 1344, "exit_reason": "adding_violated_rows", "complete_witness_found": false, "elapsed_seconds": 0.1634395419999919}
+ENERGY_DIAGNOSTIC {"Status": 2, "SolCount": 6, "NumVars": 512, "NumConstrs": 834, "iteration": 2, "active_rows": 100, "full_rows": 6720, "worst_full_row_violation": 12783.579999999998, "worst_full_row_residual": 12783.579999999998, "worst_row_index": 6088, "worst_row_category": ["balancer_capacity", 41, 178], "full_rows_violated_at_publish_tolerance": 893, "exit_reason": "adding_violated_rows", "complete_witness_found": false, "elapsed_seconds": 0.22278529200002595}
+ENERGY_DIAGNOSTIC {"Status": 2, "SolCount": 7, "NumVars": 512, "NumConstrs": 934, "iteration": 3, "active_rows": 200, "full_rows": 6720, "worst_full_row_violation": 5367.688519065872, "worst_full_row_residual": 5367.688519065872, "worst_row_index": 4106, "worst_row_category": ["balancer_ramp_up", 10, 18], "full_rows_violated_at_publish_tolerance": 380, "exit_reason": "adding_violated_rows", "complete_witness_found": false, "elapsed_seconds": 0.2750301250000007}
+ENERGY_DIAGNOSTIC {"Status": 2, "SolCount": 8, "NumVars": 512, "NumConstrs": 1034, "iteration": 4, "active_rows": 300, "full_rows": 6720, "worst_full_row_violation": 4234.79735313396, "worst_full_row_residual": 4234.79735313396, "worst_row_index": 5992, "worst_row_category": ["balancer_capacity", 41, 154], "full_rows_violated_at_publish_tolerance": 185, "exit_reason": "adding_violated_rows", "complete_witness_found": false, "elapsed_seconds": 0.37380541700002823}
+ENERGY_DIAGNOSTIC {"Status": 4, "SolCount": 0, "NumVars": 512, "NumConstrs": 1134, "iteration": 5, "active_rows": 400, "full_rows": 6720, "worst_full_row_violation": null, "worst_full_row_residual": null, "worst_row_index": null, "worst_row_category": null, "full_rows_violated_at_publish_tolerance": null, "exit_reason": "inf_or_unbd_before_disambiguation", "complete_witness_found": false, "elapsed_seconds": 0.39213399999999865}
+ENERGY_DIAGNOSTIC {"Status": 3, "SolCount": 0, "NumVars": 512, "NumConstrs": 1134, "iteration": 5, "active_rows": 400, "full_rows": 6720, "worst_full_row_violation": null, "worst_full_row_residual": null, "worst_row_index": null, "worst_row_category": null, "full_rows_violated_at_publish_tolerance": null, "exit_reason": "inf_or_unbd_after_disambiguation", "complete_witness_found": false, "elapsed_seconds": 0.4077631669999846}
+ENERGY_DIAGNOSTIC {"Status": 3, "SolCount": 0, "NumVars": 512, "NumConstrs": 1134, "iteration": 5, "active_rows": 400, "full_rows": 6720, "worst_full_row_violation": null, "worst_full_row_residual": null, "worst_row_index": null, "worst_row_category": null, "full_rows_violated_at_publish_tolerance": null, "exit_reason": "no_solution_count", "complete_witness_found": false, "elapsed_seconds": 0.40780454200000804}
+Traceback (most recent call last):
+  File "/workspace/code.py", line 155, in <module>
+    if solution is None:raise RuntimeError('No complete feasible restricted-profile energy witness')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: No complete feasible restricted-profile energy witness
+

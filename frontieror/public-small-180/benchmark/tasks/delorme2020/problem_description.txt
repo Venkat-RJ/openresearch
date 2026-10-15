@@ -1,0 +1,5 @@
+# Problem Description
+
+A facility has an unlimited supply of identical bins (or stock rolls), each with a fixed integer capacity. There are multiple distinct item types, where each item type has an integer width (strictly between zero and the bin capacity) and an integer demand specifying how many copies of that item must be packed. In the bin-packing variant of the problem each item is unique (all demands equal one), but items sharing the same width are grouped into a single type for compactness. The input data specifies the bin capacity, the number of item types, and for each item type its width and demand.
+
+Every demanded copy of every item type must be placed into exactly one bin. The total width of all items placed in any single bin must not exceed the bin capacity. The goal is to find a packing that satisfies all demand and capacity requirements while using as few bins as possible.

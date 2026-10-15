@@ -1,0 +1,9 @@
+{
+  "objective_value": "<float> Total weighted cost combining vehicle-scheduling cost (fleet size, terminal waiting, pull-in/pull-out) and the sum of squared headway-deviation penalties across all selected trips.",
+  "selected_trips": "<list[int]> IDs of the potential trips that are chosen to operate in the final timetable.",
+  "num_vehicles": "<int> Fleet size. It must equal the flow on the depot circulation arc whose exact vs_flows key is 'VS_O_plus-->VS_O_minus'.",
+  "tt_arcs_used": {
+    "{pattern_id}": "<list[list[str]]> Ordered list of arcs forming the timetable chain for this direction/pattern, where each arc is a pair [from_node, to_node] consisting of either a trip ID or a source/sink marker."
+  },
+  "vs_flows": "<dict, key: '{from_node}-->{to_node}'> Sparse positive flow on the canonical vehicle-scheduling network. Use VS_O_minus for the depot departure node and VS_O_plus for the depot return node. The required circulation arc key is exactly 'VS_O_plus-->VS_O_minus'. Trip operation nodes use Python tuple strings such as \"(73, 'start')\" and \"(73, 'end')\"."
+}

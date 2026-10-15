@@ -1,0 +1,10 @@
+{
+  "graph": {
+    "n": "<int> Total number of vertices in the graph.",
+    "m": "<int> Total number of edges in the graph.",
+    "target_density": "<float> Intended probability that any two vertices are connected by an edge.",
+    "actual_density": "<float> Realized fraction of possible edges that are present in the graph.",
+    "edges": "<list[list[int]], length m> Each entry is a pair [u, v] identifying two vertices connected by an edge, with u < v.",
+    "adjacency_list": "<list[list[int]], shape [n]> For each vertex, the sorted list of neighboring vertices that share an edge with it."
+  }
+}

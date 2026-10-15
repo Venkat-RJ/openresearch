@@ -1,0 +1,21 @@
+{
+  "N": "<int> Number of retailer locations in the distribution network.",
+  "retailer_locations": "<list[list[float]], shape [N][2]> Two-dimensional coordinates of each retailer on a planar grid.",
+  "first_stage": {
+    "variable_lower_bounds": "<list[float], length N> Minimum allowable order-up-to stock level for each retailer."
+  },
+  "second_stage": {
+    "holding_costs": "<list[float], length N> Per-unit cost of holding unsold inventory at each retailer after demand is observed.",
+    "penalty_costs": "<list[float], length N> Per-unit cost of unmet demand (backlog) at each retailer after demand is observed.",
+    "transshipment_costs_mean": "<list[list[float]], shape [N][N]> Average per-unit cost of shipping goods from one retailer to another, with zero on the diagonal.",
+    "transshipment_costs_std": "<list[list[float]], shape [N][N]> Standard deviation of the per-unit transshipment cost for each directed retailer pair, nonzero only for links subject to cost uncertainty.",
+    "random_cost_links": "<list[list[int]], length varies, each element length 2> Directed retailer pairs whose transshipment costs are uncertain, given as zero-indexed origin-destination pairs.",
+    "random_cost_std_fraction": "<float> Ratio of the standard deviation to the mean for transshipment costs on links subject to cost uncertainty.",
+    "mean_demands": "<list[float], length N> Expected customer demand at each retailer location.",
+    "demand_distribution": {
+      "num_scenarios": "<int> Number of discrete demand scenarios.",
+      "scenarios": "<list[list[float]], shape [num_scenarios][N]> Realized customer demand at each retailer under each scenario.",
+      "probabilities": "<list[float], length num_scenarios> Probability of each demand scenario occurring."
+    }
+  }
+}

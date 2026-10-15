@@ -1,0 +1,29 @@
+{
+  "n_requests": "<int> Number of transportation requests, each requiring pickup at one location and delivery to another.",
+  "n_nodes": "<int> Total number of nodes in the network, equal to 2 * n_requests + 2 (pickups, deliveries, and two depot copies).",
+  "vehicle_capacity": "<int> Maximum carrying capacity of each identical vehicle.",
+  "planning_horizon": "<list[int], length 2> Earliest and latest times defining the operational planning window.",
+  "vehicle_fixed_cost": "<int> Fixed cost incurred for each vehicle used, added to arcs leaving the origin depot.",
+  "nodes": [
+    {
+      "node_id": "<int> Unique identifier for this node in the network.",
+      "node_type": "<str> Role of the node: 'depot_origin', 'pickup', 'delivery', or 'depot_destination'.",
+      "request_id": "<int or null> Identifier of the transportation request this node belongs to, or null for depot nodes.",
+      "x": "<int> Horizontal geographic coordinate of the node.",
+      "y": "<int> Vertical geographic coordinate of the node.",
+      "load": "<int> Quantity of goods picked up (positive) or delivered (negative) at this node, zero at depots.",
+      "service_time": "<int> Duration of the service operation performed at this node.",
+      "tw_early": "<int> Earliest time at which service may begin at this node.",
+      "tw_late": "<int> Latest time at which service may begin at this node."
+    }
+  ],
+  "n_arcs": "<int> Total number of directed arcs in the network.",
+  "arcs": [
+    {
+      "from": "<int> Node identifier where this arc originates.",
+      "to": "<int> Node identifier where this arc terminates.",
+      "cost": "<float> Travel cost of traversing this arc, including the vehicle fixed cost for arcs leaving the origin depot.",
+      "travel_time": "<float> Travel time required to traverse this arc."
+    }
+  ]
+}

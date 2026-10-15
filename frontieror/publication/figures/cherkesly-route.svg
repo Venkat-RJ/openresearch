@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1490" viewBox="0 0 640 1490" role="img" aria-labelledby="title desc">
+<title id="title">Cherkesly: a saved route excerpt and its single-stack loading sequence</title>
+<desc id="desc">Four actual consecutive stops from vehicle 5. Request 5 is picked up at 30,52 at time 440. Request 4 is picked up at 12,73 at 477.7. Request 4 is delivered at 5,73 at 494.7; request 5 at 4,64 at 513.8. The reconstructed single stack requires 4 to be unloaded before 5. The full candidate has ten routes and cost 102616.4; the reference forces 30 routes and costs 303868.0.</desc>
+<rect width="640" height="1490" fill="#f6f8f7"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="32" y="40" fill="#172c30" font-size="23" font-weight="600">One truck, four legal stops</text>
+<text x="32" y="68" fill="#586c70" font-size="15">A consecutive excerpt of saved vehicle 5, not its full route.</text>
+<g transform="translate(45 95)">
+<defs><marker id="download-map-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L7 3.5 L0 7 Z" fill="#172c30"/></marker></defs><path d="M45 22.5 V285" stroke="#c9d5d3" stroke-width=".7"/><path d="M85 22.5 V285" stroke="#c9d5d3" stroke-width=".7"/><path d="M125 22.5 V285" stroke="#c9d5d3" stroke-width=".7"/><path d="M165 22.5 V285" stroke="#c9d5d3" stroke-width=".7"/><path d="M205 22.5 V285" stroke="#c9d5d3" stroke-width=".7"/><path d="M245 22.5 V285" stroke="#c9d5d3" stroke-width=".7"/><path d="M285 22.5 V285" stroke="#c9d5d3" stroke-width=".7"/><path d="M325 22.5 V285" stroke="#c9d5d3" stroke-width=".7"/><path d="M45 285.0 H325" stroke="#c9d5d3" stroke-width=".7"/><path d="M45 247.5 H325" stroke="#c9d5d3" stroke-width=".7"/><path d="M45 210.0 H325" stroke="#c9d5d3" stroke-width=".7"/><path d="M45 172.5 H325" stroke="#c9d5d3" stroke-width=".7"/><path d="M45 135.0 H325" stroke="#c9d5d3" stroke-width=".7"/><path d="M45 97.5 H325" stroke="#c9d5d3" stroke-width=".7"/><path d="M45 60.0 H325" stroke="#c9d5d3" stroke-width=".7"/><path d="M45 22.5 H325" stroke="#c9d5d3" stroke-width=".7"/><path d="M45 22.5 V285 H325" fill="none" stroke="#586c70" stroke-width="1.4"/><text x="45" y="305" text-anchor="middle" fill="#586c70" font-size="15">0</text><text x="125" y="305" text-anchor="middle" fill="#586c70" font-size="15">10</text><text x="205" y="305" text-anchor="middle" fill="#586c70" font-size="15">20</text><text x="285" y="305" text-anchor="middle" fill="#586c70" font-size="15">30</text><text x="35" y="252.5" text-anchor="end" fill="#586c70" font-size="15">50</text><text x="35" y="177.5" text-anchor="end" fill="#586c70" font-size="15">60</text><text x="35" y="102.5" text-anchor="end" fill="#586c70" font-size="15">70</text><text x="35" y="27.5" text-anchor="end" fill="#586c70" font-size="15">80</text><text x="339" y="289" fill="#586c70" font-size="16">x</text><text x="42" y="14" fill="#586c70" font-size="16">y</text><g fill="none" stroke="#172c30" stroke-width="2.1" marker-end="url(#download-map-arrow)"><path d="M278 223 L148 86"/><path d="M129 75 H100"/><path d="M84 88 L78 127"/></g><g fill="#f6f8f7" stroke="#236f60" stroke-width="3"><circle cx="285" cy="232.5" r="10"/><circle cx="141" cy="75" r="10"/></g><g fill="#f6f8f7" stroke="#ad562e" stroke-width="3"><rect x="75" y="65" width="20" height="20" rx="2"/><rect x="67" y="132.5" width="20" height="20" rx="2"/></g><g font-size="20" font-weight="600"><text x="280" y="215" fill="#236f60">P5</text><text x="141" y="53" text-anchor="middle" fill="#236f60">P4</text><text x="80" y="53" text-anchor="middle" fill="#ad562e">D4</text><text x="98" y="149" fill="#ad562e">D5</text></g>
+</g>
+<g font-size="15">
+<text x="423" y="150" fill="#172c30" font-weight="600">1. Pick up 5</text>
+<text x="423" y="170" fill="#586c70">(30, 52) · time 440.0</text>
+<text x="423" y="201" fill="#172c30" font-weight="600">2. Pick up 4</text>
+<text x="423" y="221" fill="#586c70">(12, 73) · time 477.7</text>
+<text x="423" y="252" fill="#172c30" font-weight="600">3. Deliver 4</text>
+<text x="423" y="272" fill="#586c70">(5, 73) · time 494.7</text>
+<text x="423" y="303" fill="#172c30" font-weight="600">4. Deliver 5</text>
+<text x="423" y="323" fill="#586c70">(4, 64) · time 513.8</text>
+</g>
+<text x="32" y="440" fill="#586c70" font-size="15">Circles: pickup. Squares: delivery. Arrows: saved visit order.</text>
+<text x="32" y="464" fill="#586c70" font-size="15">Abstract instance coordinates. Stack reconstructed from the route.</text>
+<path d="M32 490 H608" stroke="#c9d5d3"/>
+<text x="32" y="516" fill="#172c30" font-size="18" font-weight="600">1. Pick up 5 · time 440.0</text>
+<g transform="translate(36 524) scale(.7)">
+<defs><marker id="download-truck-1-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#ad562e"/></marker></defs><g fill="none" stroke="#586c70" stroke-width="2"><path d="M24 66 H56 V130 H24 Z M24 66 L36 40 H56 V66 M56 50 H280 V138 H56 Z"/><path d="M280 50 H292 V138 H280" stroke-dasharray="4 4"/><circle cx="42" cy="143" r="10"/><circle cx="252" cy="143" r="10"/></g><text x="65" y="29" fill="#586c70" font-size="15">Deeper inside</text><text x="260" y="29" fill="#586c70" font-size="15">Rear door</text><rect x="91" y="72" width="64" height="50" rx="4" fill="#f6f8f7" stroke="#236f60" stroke-width="3"/><text x="123" y="106" text-anchor="middle" fill="#236f60" font-size="29" font-weight="600">5</text><text x="178" y="177" text-anchor="middle" fill="#586c70" font-size="15">One loading lane, seen from above</text>
+</g>
+<text x="325" y="565" fill="#172c30" font-size="17">Load: 1 / 22</text>
+<text x="325" y="595" fill="#586c70" font-size="15">Deepest → rear door</text>
+<text x="325" y="625" fill="#172c30" font-size="22" font-weight="600">5</text>
+<path d="M32 680 H608" stroke="#c9d5d3"/>
+<text x="32" y="706" fill="#172c30" font-size="18" font-weight="600">2. Pick up 4 · time 477.7</text>
+<g transform="translate(36 714) scale(.7)">
+<defs><marker id="download-truck-2-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#ad562e"/></marker></defs><g fill="none" stroke="#586c70" stroke-width="2"><path d="M24 66 H56 V130 H24 Z M24 66 L36 40 H56 V66 M56 50 H280 V138 H56 Z"/><path d="M280 50 H292 V138 H280" stroke-dasharray="4 4"/><circle cx="42" cy="143" r="10"/><circle cx="252" cy="143" r="10"/></g><text x="65" y="29" fill="#586c70" font-size="15">Deeper inside</text><text x="260" y="29" fill="#586c70" font-size="15">Rear door</text><rect x="91" y="72" width="64" height="50" rx="4" fill="#f6f8f7" stroke="#236f60" stroke-width="3"/><text x="123" y="106" text-anchor="middle" fill="#236f60" font-size="29" font-weight="600">5</text><rect x="197" y="72" width="64" height="50" rx="4" fill="#f6f8f7" stroke="#ad562e" stroke-width="3"/><text x="229" y="106" text-anchor="middle" fill="#ad562e" font-size="29" font-weight="600">4</text><text x="178" y="177" text-anchor="middle" fill="#586c70" font-size="15">One loading lane, seen from above</text>
+</g>
+<text x="325" y="755" fill="#172c30" font-size="17">Load: 8 / 22</text>
+<text x="325" y="785" fill="#586c70" font-size="15">Deepest → rear door</text>
+<text x="325" y="815" fill="#172c30" font-size="22" font-weight="600">5, 4</text>
+<path d="M32 870 H608" stroke="#c9d5d3"/>
+<text x="32" y="896" fill="#172c30" font-size="18" font-weight="600">3. Deliver 4 · time 494.7</text>
+<g transform="translate(36 904) scale(.7)">
+<defs><marker id="download-truck-3-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#ad562e"/></marker></defs><g fill="none" stroke="#586c70" stroke-width="2"><path d="M24 66 H56 V130 H24 Z M24 66 L36 40 H56 V66 M56 50 H280 V138 H56 Z"/><path d="M280 50 H292 V138 H280" stroke-dasharray="4 4"/><circle cx="42" cy="143" r="10"/><circle cx="252" cy="143" r="10"/></g><text x="65" y="29" fill="#586c70" font-size="15">Deeper inside</text><text x="260" y="29" fill="#586c70" font-size="15">Rear door</text><rect x="91" y="72" width="64" height="50" rx="4" fill="#f6f8f7" stroke="#236f60" stroke-width="3"/><text x="123" y="106" text-anchor="middle" fill="#236f60" font-size="29" font-weight="600">5</text><path d="M205 96 H325" fill="none" stroke="#ad562e" stroke-width="2.5" marker-end="url(#download-truck-3-arrow)"/><text x="305" y="79" text-anchor="middle" fill="#ad562e" font-size="23" font-weight="600">4</text><text x="178" y="177" text-anchor="middle" fill="#586c70" font-size="15">One loading lane, seen from above</text>
+</g>
+<text x="325" y="945" fill="#172c30" font-size="17">Load: 1 / 22</text>
+<text x="325" y="975" fill="#586c70" font-size="15">Deepest → rear door</text>
+<text x="325" y="1005" fill="#172c30" font-size="22" font-weight="600">5</text>
+<path d="M32 1060 H608" stroke="#c9d5d3"/>
+<text x="32" y="1086" fill="#172c30" font-size="18" font-weight="600">4. Deliver 5 · time 513.8</text>
+<g transform="translate(36 1094) scale(.7)">
+<defs><marker id="download-truck-4-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#ad562e"/></marker></defs><g fill="none" stroke="#586c70" stroke-width="2"><path d="M24 66 H56 V130 H24 Z M24 66 L36 40 H56 V66 M56 50 H280 V138 H56 Z"/><path d="M280 50 H292 V138 H280" stroke-dasharray="4 4"/><circle cx="42" cy="143" r="10"/><circle cx="252" cy="143" r="10"/></g><text x="65" y="29" fill="#586c70" font-size="15">Deeper inside</text><text x="260" y="29" fill="#586c70" font-size="15">Rear door</text><path d="M123 96 H325" fill="none" stroke="#ad562e" stroke-width="2.5" marker-end="url(#download-truck-4-arrow)"/><text x="184" y="79" text-anchor="middle" fill="#586c70" font-size="18">Empty</text><text x="305" y="79" text-anchor="middle" fill="#236f60" font-size="23" font-weight="600">5</text><text x="178" y="177" text-anchor="middle" fill="#586c70" font-size="15">One loading lane, seen from above</text>
+</g>
+<text x="325" y="1135" fill="#172c30" font-size="17">Load: 0 / 22</text>
+<text x="325" y="1165" fill="#586c70" font-size="15">Deepest → rear door</text>
+<text x="325" y="1195" fill="#172c30" font-size="22" font-weight="600">empty</text>
+<path d="M32 1270 H608" stroke="#c9d5d3"/>
+<text x="32" y="1304" fill="#172c30" font-size="19" font-weight="600">Reference 30 vehicles → candidate 10 routes</text>
+<text x="32" y="1335" fill="#172c30" font-size="17">20 × 10,000 fewer vehicle charges = 200,000</text>
+<text x="32" y="1364" fill="#172c30" font-size="17">Other arc saving 1,251.6 · total saving 201,251.6</text>
+<text x="32" y="1393" fill="#586c70" font-size="15">Reference cost 303,868.0 · candidate cost 102,616.4</text>
+<text x="32" y="1425" fill="#586c70" font-size="14">The reference source forces all 30 vehicles to operate.</text>
+<text x="32" y="1448" fill="#586c70" font-size="14">The task permits the chosen number of vehicles.</text>
+</g>
+</svg>

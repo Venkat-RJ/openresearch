@@ -1,0 +1,94 @@
+{
+  "problem": "Edge Interdiction Clique Problem (EICP)",
+  "instance_id": 1,
+  "scale": "small",
+  "generation_style": "tang",
+  "num_vertices": 8,
+  "num_edges": 17,
+  "target_edge_density": 0.7,
+  "actual_edge_density": 0.607143,
+  "interdiction_budget_k": 5,
+  "budget_rule": "ceil(|E|/4)",
+  "budget_mu_percent": null,
+  "generation_seed": 10000,
+  "vertices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      6,
+      7
+    ]
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "objective_value": "<float> Expected total profit (revenue from electricity sales minus fuel, startup, and shutdown costs) across the scenario tree.",
+  "x": "<dict, key: '{node_id}'> Sparse generation overrides by node.",
+  "y": "<dict, key: '{node_id}'> Sparse commitment overrides by node.",
+  "u": "<dict, key: '{node_id}'> Sparse startup overrides by non-root node.",
+  "sparse_defaults": "<optional dict with numeric x, y, u> Values for omitted node IDs; each defaults to 0 when this field or key is absent."
+}

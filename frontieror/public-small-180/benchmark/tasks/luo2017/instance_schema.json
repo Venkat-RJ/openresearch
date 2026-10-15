@@ -1,0 +1,28 @@
+{
+  "num_customers": "<int> Number of customers to be served.",
+  "vehicle_capacity": "<int> Maximum total weight each vehicle can carry.",
+  "scheduling_horizon": "<int> Latest time by which all vehicles must return to the depot.",
+  "cost_function": {
+    "a": "<int> Slope of the linear weight-related cost function applied to the load weight on each edge.",
+    "b": "<float> Intercept of the linear weight-related cost function, representing the cost attributable to the vehicle's own curb weight."
+  },
+  "depot": {
+    "id": "<int> Index of the depot node in the distance matrix.",
+    "x": "<int> Horizontal coordinate of the depot.",
+    "y": "<int> Vertical coordinate of the depot.",
+    "time_window": "<list[int], length 2> Earliest and latest time at which vehicles may depart from or return to the depot.",
+    "service_time": "<int> Time spent at the depot for loading or unloading.",
+    "demand": "<int> Delivery demand at the depot, always zero."
+  },
+  "customers": [
+    {
+      "id": "<int> Unique index of the customer in the distance matrix.",
+      "x": "<int> Horizontal coordinate of the customer location.",
+      "y": "<int> Vertical coordinate of the customer location.",
+      "demand": "<int> Total weight of goods that must be delivered to this customer.",
+      "time_window": "<list[int], length 2> Earliest and latest time at which service may begin at this customer.",
+      "service_time": "<int> Time a vehicle must spend at this customer per visit, regardless of delivery quantity."
+    }
+  ],
+  "distance_matrix": "<list[list[float]], shape [num_customers+1][num_customers+1]> Travel distance between each pair of locations, where row and column 0 is the depot and rows/columns 1 through num_customers are customers."
+}

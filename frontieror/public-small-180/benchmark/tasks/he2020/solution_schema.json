@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total cost of the solution, equal to the sum of routing cost over all traversed arcs and inconvenience cost over all customers.",
+  "routes": "<list[list[int]]> Ordered sequence of vertex indices visited by each used vehicle, beginning at the start depot (0) and ending at the return depot (num_customers+1).",
+  "schedule": "<dict, key: '{customer_id}'> Service start time at each customer."
+}

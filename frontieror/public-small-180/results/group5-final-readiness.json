@@ -1,0 +1,142 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "group": "group5",
+  "assignment_group_index": 4,
+  "status": "READY; owned sources frozen for root official tiny300 replay; final native feasibility and logging verification pending",
+  "scope": "tiny only; root sole official evaluator; standard Docker one CPU; no solver execution by worker; no large instances; no official harness/helper edits",
+  "source_template": "solvers/{task}/gpt-5.6-sol/code.py",
+  "records": {
+    "final_readiness_experiment": "f85a49fe-2f80-4bb8-bf55-b3a4b39abb7d",
+    "logger_belief": "ff7063be-c93d-40ce-9f7f-28dd90a88bae",
+    "logger_static_experiment": "2de9d33c-5fef-4397-a224-b751ce301ec8",
+    "additional_callbacks_belief": "1651d54f-2ef9-4831-a8d6-0293d0a9a04f",
+    "additional_callbacks_experiment": "8f64c00e-7821-4714-bbc0-7286551d4c1d",
+    "verification_preparation_failures": "98817a6c-f7ac-46d6-a2b1-5efb0d6be7b7",
+    "rahmaniani2018_alternative_belief": "0d5594ca-b6a1-485d-8015-b1c645ea267d",
+    "rahmaniani2018_alternative_static": "dfc2fd10-5a32-4278-8321-8cd105456608",
+    "rahmaniani2022_alternative_belief": "539f6231-9b52-4c97-9ca8-c52fc3973be0",
+    "rahmaniani2022_alternative_static": "04d1c145-0a40-442a-bb63-960edb2022d9"
+  },
+  "readback_verified": true,
+  "checks": {
+    "all30_AST_and_compile": "passed",
+    "all30_integer_time_limit": true,
+    "Gurobi_controls": {
+      "Seed": 0,
+      "MIPGap": 0.0001,
+      "NumericFocus": 0,
+      "Threads": 1
+    },
+    "Gurobi_not_applicable": [
+      "pettersson2020",
+      "rahmaniani2017",
+      "roshanaei2017",
+      "ruiz2007",
+      "sansegundo2016",
+      "sansegundo2023"
+    ],
+    "model_factories": "Riley and Salemi model() initialize required controls before returning every master/recourse model",
+    "MIPSOL": "Every mixed-integer optimize call has an original-witness callback; all25 MIP optimize call sites inspected",
+    "continuous_exception": "salemi2022 rec.optimize() is fixed-commitment continuous dispatch LP; completed scenario result is merged into complete robust witness and published",
+    "heuristic_emissions": "Complete improving heuristic witnesses retained; Ruiz tiny permutation improvements now emitted immediately",
+    "logger_min_interval": 0,
+    "logger_start_time": "_wall_start=time.time() captured on line2 before heavy imports and instance loading; each official logger.start_time=_wall_start",
+    "official_logger_unchanged": "FrontierOR/scripts/utils/solution_logger.py read but not modified",
+    "logger_unit_test": {
+      "rapid_objectives_serialized": [
+        10,
+        5
+      ],
+      "event_times_seconds": [
+        0.2,
+        0.2
+      ],
+      "complete_snapshots": true,
+      "early_origin_includes_preparation": true
+    },
+    "NumPy_threads": "rahmaniani2017 sets OPENBLAS_NUM_THREADS, OMP_NUM_THREADS, MKL_NUM_THREADS to1 before NumPy import",
+    "forbidden_optimizer_imports": "none",
+    "license_environment": "Gurobi candidates remove GRB_LICENSE_FILE only when configured path does not exist",
+    "optimization_executed_by_worker": false,
+    "native_checker_validation_and_terminal_log_objective_equality": "pending root official tiny300",
+    "QTE_AOCC_compliance": "not claimed before native replay"
+  },
+  "additional_logging_repairs": {
+    "sadykov2013": "MIPSOL selected covering patterns become disjoint capacity/conflict-feasible bins; true bin count recomputed and complete packing emitted",
+    "rostami2021": "All scenarios receive feasible allocations before each scenario MIQP; MIPSOL replaces current scenario and recomputes probability-weighted whole original objective; no partial scenario value emitted",
+    "ruiz2007": "Each strictly improving exact tiny permutation emits complete sequence and completion times",
+    "strict_improvements": "Original-witness publish methods no longer suppress small objective improvements with epsilon thresholds",
+    "root_audits_read": [
+      "1e5a8b77-49b6-4956-b5b7-b76e0a4c190a",
+      "c58db96f-9f06-4bed-a996-90c526ac6009"
+    ]
+  },
+  "energy_alternatives": {
+    "method": "Identical thermal groups; constant aggregate relaxed commitment in MW; six-hour varying nonbalancing thermal generation; hourly residual balancing group per zone; proportional installed-capacity-share serialization to original cluster injections and unit commitments",
+    "group_signature": [
+      "zone",
+      "technology",
+      "physical unit size",
+      "minimum output",
+      "ramp rates",
+      "variable price",
+      "CO2 emissions",
+      "RPS flag",
+      "hourly availability"
+    ],
+    "original_integer_investments": "retained for each original cluster",
+    "complete_original_witness": "Original linked investments/transmission, all336hour injection/commitment values, zero startup/shutdown and storage operations, original hydro profiles; full deferred hourly capacity/min-output/ramp inequalities checked before publish",
+    "restricted_policy_not_original_optimality_claim": true,
+    "constraint_cap": 1850,
+    "rahmaniani2018": {
+      "source_ready": true,
+      "thermal_groups": 8,
+      "variables_counted_from_source_loops": 512,
+      "initial_rows_counted_from_source_loops": 734,
+      "block_hours": 6,
+      "weekly_block_alignment": true,
+      "native_outcome": "pending root final attempt; previous restricted-policy no-witness failure is not original-instance infeasibility"
+    },
+    "rahmaniani2022": {
+      "source_ready": true,
+      "thermal_groups": 6,
+      "variables_counted_from_source_loops": 399,
+      "initial_rows_counted_from_source_loops": 532,
+      "block_hours": 6,
+      "weekly_block_alignment": true,
+      "native_outcome": "pending root final attempt; previous candidate checker-feasible but26.4079percent above reference"
+    }
+  },
+  "source_hashes": {
+    "pecin2017": "678797443b2c21f1d3347995d940f227d21d85d20bd45e8a9eba6cc5642710d5",
+    "pedersen2024": "94205b064ab7bd7d4ec94fbccca00fd3d95ca4367a7cb5dac1eb10a83ee99222",
+    "pessoa2021": "1bb7ff7e9371b947a51e10e2b7beda84e19a175f4ce8e75ea94401477b33b40e",
+    "pettersson2020": "04234eb09c148b49a3aa6933ceb92cb0688c30556b287c3067bfe72b5784a56b",
+    "pinnoi1997": "8802bf7d985edd731a6d253bd36209931af9f5444e410cfa6336434d6d252fc7",
+    "potthoff2010": "d172b08dd5db42c5f962ae113e546f73c9bef4b6e2ab488d285bc8d2929ce506",
+    "rahimian2017": "6bcc38387ff93ac3a9a52a322f6f836dea920df270375cc5cba6c41cc7b1a5e7",
+    "rahmaniani2017": "4d85ac90fffc9f9136357a0bae73977714766251179aecd3cb99897616976572",
+    "rahmaniani2018": "974bd301e5fe92a10b7830be1b655e8152ba646ae47cb74f83ddae07583b59ac",
+    "rahmaniani2020": "c00cf63ca0fec8a7feaf5dcb92f6f32d344587f451286bb88a2b641c98b99eab",
+    "rahmaniani2022": "c9c5f836a21fbf569925b73c7b215aa5823028fa0fa2c46dd84f904cdd985046",
+    "reihaneh2019": "3f180a63ace77193f68914eaf9d43e62f60f855ebc5a72c67660bc7db5ea2a56",
+    "reinhardt2016": "cc8671dea3fbc3c49812ae9b614e300a315d21a193a5cea676a5d89a37a4825d",
+    "ribeiro1994": "630ba337d95ddc77e762c5a69f818fc74358ad6080113e39bb602e20d0fb3e2c",
+    "riley2025": "928524526508457636f78e59534da157dd003e7bd68bef9fe57c7d13bab05246",
+    "roberti2015": "b14a810f71b2af39a62b3112d13bd10d677f3e1d4ccd9d0ccd08a973f07de16b",
+    "roberti2018": "fbe6bd1a7921b18b4579f6a7e0d3c130ac67bda2ce9e27d04e84e44e10007668",
+    "roberti2021": "634164773e87c293e5bb69dc1180476629c1d8587d80db8cad276e9c98a36399",
+    "ropke2009": "3947ccc46db6bd0e111cbe6345bf200a825b8ecbe98959f02f0c4f56714ce402",
+    "roshanaei2017": "8a4a7cc288375ff7f997e3d9319e36deeb17c9a1d5265ae2af28c15a97196009",
+    "rostami2021": "f18ddac41c6b430e492c4fd8f200c22fb8627d428df0144f22cffb98e3ebc7f9",
+    "rothenbacher2018": "6efdb39ab8d241e8b9559fb5dde20d26cb25f30e1f348abcf7125bb0cdca84e1",
+    "rothenbacher2019": "ee7cc000ac388cc1d89978b72558dae3631211d416bb3b37cd64ac5aeb94014f",
+    "ruiz2007": "d381936d2596ad186efd056970a3bc4410a2cb4ea6d4cbaa832394f7d1f8ccfb",
+    "sadykov2013": "9130923a5398100c014a7e4eda7f71623ef78c7e74eaa39ef37f7e94ed500b88",
+    "salemi2022": "4aebcf3a888f889b595d4abe4164c002559ffa1e157415c9efc00755899a95a6",
+    "samarghandi2017": "ff42ea3408af59dc0fc8c49c5502417d70523fb252b4d5b58655b3b0906ee8ea",
+    "sansegundo2016": "7988ce58893d21caec9583a2d8ee9c55bd3bf35932e9fca8aeb048ba655e8cfb",
+    "sansegundo2023": "7b03330493ee69f171c53dafcac9e7b8105458369537419733024b6c7ff72b22",
+    "savelsbergh1997": "5e6feffaa57681955abb61ce7a2e7b1b17aef8dbd2b1ab84372f1bd22051fd3b"
+  }
+}

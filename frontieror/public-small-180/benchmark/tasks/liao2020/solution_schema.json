@@ -1,0 +1,20 @@
+{
+  "objective_value": "<float> Worst-case expected total operational cost represented by the complete submitted witness.",
+  "model_variables": "<dict, key: canonical variable name> Sparse complete DRO witness; omitted variables are zero. Use Gurobi bracket syntax and the exact case-sensitive families in model_variable_name_patterns.",
+  "cost_structure": "<str> Authoritative instance cost structure; this benchmark uses the first declared structure, Cost1.",
+  "c_w": "<float> Waiting-time unit cost copied from the authoritative cost structure.",
+  "c_g": "<float> Provider-idle unit cost copied from the authoritative cost structure.",
+  "c_o": "<float> Overtime unit cost copied from the authoritative cost structure.",
+  "assignment": "<dict, key: '{patient_index}'> Appointment position (1 through P) to which each patient is assigned in the sequence.",
+  "schedule": "<dict, key: '{position_index}'> Scheduled start time, in minutes from the beginning of the session, for each appointment position.",
+  "patient_start_times": "<dict, key: '{patient_index}'> Scheduled start time, in minutes from the beginning of the session, for each patient based on their assigned position.",
+  "model_variable_name_patterns": {
+    "x[p,i]": "patient-position assignment, p and i are 1..P",
+    "t[i]": "position start time",
+    "rho[i], alpha[i], lambda[i], gamma[i]": "dual variables",
+    "beta[i]": "i is 1..P+2",
+    "z[i], v[i], r[i], e[i]": "one-dimensional auxiliary variables",
+    "eta[p,i], tau[p,i], nu[p,i], Gam[p,i]": "McCormick variables",
+    "zeta[p,i], psi[p,i], phi[p,i]": "nonnegative McCormick variables"
+  }
+}

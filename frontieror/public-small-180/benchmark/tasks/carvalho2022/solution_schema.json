@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Total cost comprising inventory holding costs and setup changeover costs.",
+  "production": "<dict, key: 'x_{item}_{machine}_{production_period}_{demand_period}'> Quantity of each item produced on each machine in each production period to satisfy each demand period.",
+  "setups": "<dict, key: 'y_{from_item}_{to_item}_{machine}_{period}'> Number of times production changes from one item to another on each machine in each period.",
+  "carryover": "<dict, key: 'z_{item}_{machine}_{period}'> Whether each machine is configured to produce a given item at the beginning of each period (1 = yes)."
+}

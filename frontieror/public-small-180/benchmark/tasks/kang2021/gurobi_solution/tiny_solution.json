@@ -1,0 +1,71 @@
+{
+  "objective_value": 17530.0,
+  "truck_route": [
+    [
+      1,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      11
+    ]
+  ],
+  "drone_assignments": [
+    {
+      "drone": 0,
+      "dispatch_node": 1,
+      "delivery_node": 3
+    },
+    {
+      "drone": 0,
+      "dispatch_node": 1,
+      "delivery_node": 4
+    },
+    {
+      "drone": 0,
+      "dispatch_node": 9,
+      "delivery_node": 5
+    },
+    {
+      "drone": 1,
+      "dispatch_node": 1,
+      "delivery_node": 2
+    },
+    {
+      "drone": 1,
+      "dispatch_node": 1,
+      "delivery_node": 8
+    },
+    {
+      "drone": 1,
+      "dispatch_node": 9,
+      "delivery_node": 6
+    },
+    {
+      "drone": 1,
+      "dispatch_node": 9,
+      "delivery_node": 7
+    }
+  ],
+  "waiting_times": {
+    "1": 2912.0,
+    "9": 2094.0
+  },
+  "solver_status": 2,
+  "mip_gap": 0.0,
+  "solve_time": 0.23774290084838867,
+  "num_nodes": 164,
+  "runtime": 0.35
+}

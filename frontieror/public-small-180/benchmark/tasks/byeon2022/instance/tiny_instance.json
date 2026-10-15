@@ -1,0 +1,384 @@
+{
+  "instance_id": "instance_1",
+  "scale": "small",
+  "problem_type": "UCGNA_BSOCP",
+  "stress_parameters": {
+    "eta_p": 1.0,
+    "eta_g": 1.0
+  },
+  "time_periods": 3,
+  "electricity_network": {
+    "num_buses": 5,
+    "num_lines": 5,
+    "buses": [
+      {
+        "id": 0,
+        "demand_profile": [
+          47.1196,
+          29.407,
+          46.2458
+        ],
+        "voltage_angle_lb": -1.570796,
+        "voltage_angle_ub": 1.570796
+      },
+      {
+        "id": 1,
+        "demand_profile": [
+          48.7049,
+          30.1906,
+          49.6598
+        ],
+        "voltage_angle_lb": -1.570796,
+        "voltage_angle_ub": 1.570796
+      },
+      {
+        "id": 2,
+        "demand_profile": [
+          46.8615,
+          37.7603,
+          36.9873
+        ],
+        "voltage_angle_lb": -1.570796,
+        "voltage_angle_ub": 1.570796
+      },
+      {
+        "id": 3,
+        "demand_profile": [
+          43.5766,
+          37.6222,
+          41.7307
+        ],
+        "voltage_angle_lb": -1.570796,
+        "voltage_angle_ub": 1.570796
+      },
+      {
+        "id": 4,
+        "demand_profile": [
+          42.587,
+          29.2174,
+          45.6901
+        ],
+        "voltage_angle_lb": -1.570796,
+        "voltage_angle_ub": 1.570796
+      }
+    ],
+    "lines": [
+      {
+        "id": 0,
+        "from_bus": 0,
+        "to_bus": 3,
+        "susceptance": 357.818,
+        "thermal_limit": 248.2204,
+        "angle_diff_limit": 1.047198
+      },
+      {
+        "id": 1,
+        "from_bus": 2,
+        "to_bus": 4,
+        "susceptance": 218.6645,
+        "thermal_limit": 321.2777,
+        "angle_diff_limit": 1.047198
+      },
+      {
+        "id": 2,
+        "from_bus": 3,
+        "to_bus": 1,
+        "susceptance": 252.7771,
+        "thermal_limit": 278.0526,
+        "angle_diff_limit": 1.047198
+      },
+      {
+        "id": 3,
+        "from_bus": 1,
+        "to_bus": 4,
+        "susceptance": 203.7536,
+        "thermal_limit": 272.2257,
+        "angle_diff_limit": 1.047198
+      },
+      {
+        "id": 4,
+        "from_bus": 1,
+        "to_bus": 2,
+        "susceptance": 290.7343,
+        "thermal_limit": 232.1973,
+        "angle_diff_limit": 1.047198
+      }
+    ]
+  },
+  "generators": {
+    "num_generators": 4,
+    "num_gfpp": 1,
+    "generators": [
+      {
+        "id": 0,
+        "bus": 0,
+        "is_gfpp": false,
+        "gas_junction": null,
+        "min_power": 14.0391,
+        "max_power": 114.7327,
+        "ramp_down": 49.1562,
+        "ramp_up": 49.1562,
+        "no_load_cost": 102.8228,
+        "min_up_time": 1,
+        "min_down_time": 1,
+        "initial_status": 1,
+        "initial_gen": 34.2365,
+        "initial_active_periods": 0,
+        "initial_inactive_periods": 0,
+        "startup_cost_params": [
+          [
+            1,
+            564.6613
+          ]
+        ],
+        "num_bids": 2,
+        "bids": [
+          {
+            "id": 0,
+            "price": 20.0,
+            "max_amount": 41.0446
+          },
+          {
+            "id": 1,
+            "price": 29.5262,
+            "max_amount": 73.6881
+          }
+        ],
+        "heat_rate_coefficients": null,
+        "max_gas_price_fraction": null
+      },
+      {
+        "id": 1,
+        "bus": 1,
+        "is_gfpp": true,
+        "gas_junction": 1,
+        "min_power": 13.7305,
+        "max_power": 88.2715,
+        "ramp_down": 40.1341,
+        "ramp_up": 40.1341,
+        "no_load_cost": 286.559,
+        "min_up_time": 1,
+        "min_down_time": 1,
+        "initial_status": 1,
+        "initial_gen": 53.0789,
+        "initial_active_periods": 0,
+        "initial_inactive_periods": 0,
+        "startup_cost_params": [
+          [
+            1,
+            208.676
+          ]
+        ],
+        "num_bids": 2,
+        "bids": [
+          {
+            "id": 0,
+            "price": 20.0,
+            "max_amount": 26.1983
+          },
+          {
+            "id": 1,
+            "price": 31.286,
+            "max_amount": 62.0732
+          }
+        ],
+        "heat_rate_coefficients": {
+          "H_u2": 0.003914,
+          "H_u1": 0.425975,
+          "H_u0": 4.712178
+        },
+        "max_gas_price_fraction": 0.5563
+      },
+      {
+        "id": 2,
+        "bus": 2,
+        "is_gfpp": false,
+        "gas_junction": null,
+        "min_power": 20.0226,
+        "max_power": 96.2476,
+        "ramp_down": 64.5148,
+        "ramp_up": 64.5148,
+        "no_load_cost": 255.286,
+        "min_up_time": 1,
+        "min_down_time": 1,
+        "initial_status": 1,
+        "initial_gen": 85.242,
+        "initial_active_periods": 0,
+        "initial_inactive_periods": 0,
+        "startup_cost_params": [
+          [
+            1,
+            114.9094
+          ]
+        ],
+        "num_bids": 2,
+        "bids": [
+          {
+            "id": 0,
+            "price": 20.0,
+            "max_amount": 33.4019
+          },
+          {
+            "id": 1,
+            "price": 31.6389,
+            "max_amount": 62.8457
+          }
+        ],
+        "heat_rate_coefficients": null,
+        "max_gas_price_fraction": null
+      },
+      {
+        "id": 3,
+        "bus": 3,
+        "is_gfpp": false,
+        "gas_junction": null,
+        "min_power": 12.4184,
+        "max_power": 112.6776,
+        "ramp_down": 56.1635,
+        "ramp_up": 56.1635,
+        "no_load_cost": 128.4668,
+        "min_up_time": 1,
+        "min_down_time": 1,
+        "initial_status": 1,
+        "initial_gen": 92.8696,
+        "initial_active_periods": 0,
+        "initial_inactive_periods": 0,
+        "startup_cost_params": [
+          [
+            1,
+            502.55
+          ]
+        ],
+        "num_bids": 3,
+        "bids": [
+          {
+            "id": 0,
+            "price": 20.0,
+            "max_amount": 36.9742
+          },
+          {
+            "id": 1,
+            "price": 32.9432,
+            "max_amount": 40.3701
+          },
+          {
+            "id": 2,
+            "price": 47.4346,
+            "max_amount": 35.3333
+          }
+        ],
+        "heat_rate_coefficients": null,
+        "max_gas_price_fraction": null
+      }
+    ]
+  },
+  "gas_network": {
+    "num_junctions": 3,
+    "num_connections": 3,
+    "num_compressors": 1,
+    "num_pricing_zones": 1,
+    "max_gas_price_mmBtu": 200.0,
+    "min_gas_price_mmBtu": 0.0,
+    "pricing_zones": [
+      {
+        "id": 0,
+        "junctions": [
+          0,
+          1,
+          2
+        ]
+      }
+    ],
+    "junctions": [
+      {
+        "id": 0,
+        "is_source": true,
+        "pressure_lb_squared": 16.8928,
+        "pressure_ub_squared": 93.4578,
+        "demand_shedding_cost": 1652.7988,
+        "gas_demand_profile": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "supply_intervals": [
+          {
+            "id": 0,
+            "interval_lb": 0.0,
+            "interval_ub": 164.3707,
+            "slope": 1.967
+          },
+          {
+            "id": 1,
+            "interval_lb": 164.3707,
+            "interval_ub": 328.7414,
+            "slope": 2.9964
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "is_source": false,
+        "pressure_lb_squared": 28.0274,
+        "pressure_ub_squared": 93.6722,
+        "demand_shedding_cost": 671.7289,
+        "gas_demand_profile": [
+          17.5567,
+          12.782,
+          18.4466
+        ],
+        "supply_intervals": []
+      },
+      {
+        "id": 2,
+        "is_source": false,
+        "pressure_lb_squared": 18.7194,
+        "pressure_ub_squared": 158.8427,
+        "demand_shedding_cost": 801.568,
+        "gas_demand_profile": [
+          11.3584,
+          18.2908,
+          18.3229
+        ],
+        "supply_intervals": []
+      }
+    ],
+    "connections": [
+      {
+        "id": 0,
+        "from_junction": 0,
+        "to_junction": 1,
+        "type": "pipeline",
+        "weymouth_factor": 0.181241,
+        "compression_ratio_lb": null,
+        "compression_ratio_ub": null,
+        "control_ratio_lb": null,
+        "control_ratio_ub": null
+      },
+      {
+        "id": 1,
+        "from_junction": 1,
+        "to_junction": 2,
+        "type": "pipeline",
+        "weymouth_factor": 0.054256,
+        "compression_ratio_lb": null,
+        "compression_ratio_ub": null,
+        "control_ratio_lb": null,
+        "control_ratio_ub": null
+      },
+      {
+        "id": 2,
+        "from_junction": 2,
+        "to_junction": 0,
+        "type": "compressor",
+        "weymouth_factor": null,
+        "compression_ratio_lb": 1.021,
+        "compression_ratio_ub": 1.8539,
+        "control_ratio_lb": null,
+        "control_ratio_ub": null
+      }
+    ]
+  },
+  "released_problem_variant": "integrated_primal_ucgna",
+  "objective_weight_beta": 0.5
+}

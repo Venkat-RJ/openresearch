@@ -1,0 +1,12 @@
+{
+  "num_vertices": "<int> Total number of vertices in the graph.",
+  "num_edges": "<int> Total number of edges in the graph.",
+  "vertices": "<list[int], length num_vertices> Labels of all vertices in the graph.",
+  "edges": [
+    {
+      "i": "<int> First endpoint vertex of the edge.",
+      "j": "<int> Second endpoint vertex of the edge.",
+      "weight": "<int> Positive weight assigned to the edge."
+    }
+  ]
+}

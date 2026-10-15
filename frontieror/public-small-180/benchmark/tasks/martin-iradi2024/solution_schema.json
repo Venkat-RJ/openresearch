@@ -1,0 +1,28 @@
+{
+  "objective_value": "<float> Total operational cost across all optimized ships including waiting, handling, delay, latest-finish-time penalty, and fuel costs in US dollars.",
+  "ships": [
+    {
+      "ship_id": "<int> Identifier of the optimized ship matching the input data.",
+      "port_visits": [
+        {
+          "port_call_index": "<int> Position of this visit in the ship's route sequence, starting from 1.",
+          "port_id": "<str> Identifier of the port being visited at this port call.",
+          "berthing_position": "<float> Assigned leftmost quay coordinate in meters where the ship berths at this port call.",
+          "start_time": "<float> Hour at which the ship begins berthing at this port call.",
+          "handling_time": "<float> Actual cargo handling duration in hours at this port call, inflated by the deviation from the ideal berthing position.",
+          "arrival_time": "<float> Hour at which the ship arrives at the port and becomes ready to berth for this port call.",
+          "delay": "<float> Hours by which the berthing end time exceeds the expected finish time, zero if on time.",
+          "lft_violation": "<float> Hours by which the berthing end time exceeds the latest finish time, zero if within the limit.",
+          "position_deviation": "<float> Absolute distance in meters between the assigned berthing position and the ideal berthing position."
+        }
+      ],
+      "speed_selections": [
+        {
+          "from_call": "<int> Port call index of the departure port for this sailing leg.",
+          "to_call": "<int> Port call index of the arrival port for this sailing leg.",
+          "speed_knots": "<float> Sailing speed chosen in knots for this sailing leg between consecutive port visits."
+        }
+      ]
+    }
+  ]
+}

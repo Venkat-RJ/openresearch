@@ -1,0 +1,3485 @@
+{
+  "instance_id": "instance_1",
+  "scale": "small",
+  "num_generators": 73,
+  "num_time_periods": 48,
+  "time_period_hours": 1,
+  "total_installed_capacity_mw": 17142.9,
+  "peak_demand_mw": 12222.76,
+  "fleet_type_counts": {
+    "gas_ct": 33,
+    "gas_cc": 22,
+    "coal": 9,
+    "steam": 7,
+    "nuclear": 2
+  },
+  "generators": [
+    {
+      "id": "g_0",
+      "type": "gas_cc",
+      "p_min": 50.5,
+      "p_max": 245.4,
+      "ramp_up_limit": 20.8,
+      "ramp_down_limit": 18.4,
+      "startup_ramp_limit": 162.2,
+      "shutdown_ramp_limit": 189.6,
+      "min_up_time": 7,
+      "min_down_time": 8,
+      "no_load_cost": 1286.18,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 1082.91
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 3227.29
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 4949.7
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 50.5,
+          "output_mw_end": 115.5,
+          "marginal_cost_per_mwh": 54.6202
+        },
+        {
+          "output_mw_start": 115.5,
+          "output_mw_end": 180.4,
+          "marginal_cost_per_mwh": 59.8777
+        },
+        {
+          "output_mw_start": 180.4,
+          "output_mw_end": 245.4,
+          "marginal_cost_per_mwh": 62.1755
+        }
+      ],
+      "initial_status": 7,
+      "initial_power": 185.5
+    },
+    {
+      "id": "g_1",
+      "type": "gas_ct",
+      "p_min": 22.0,
+      "p_max": 103.7,
+      "ramp_up_limit": 23.5,
+      "ramp_down_limit": 20.6,
+      "startup_ramp_limit": 75.3,
+      "shutdown_ramp_limit": 72.7,
+      "min_up_time": 2,
+      "min_down_time": 3,
+      "no_load_cost": 318.39,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 230.19
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 420.72
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 636.79
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 22.0,
+          "output_mw_end": 62.9,
+          "marginal_cost_per_mwh": 59.5842
+        },
+        {
+          "output_mw_start": 62.9,
+          "output_mw_end": 103.7,
+          "marginal_cost_per_mwh": 67.2356
+        }
+      ],
+      "initial_status": -6,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_2",
+      "type": "gas_cc",
+      "p_min": 66.8,
+      "p_max": 234.7,
+      "ramp_up_limit": 18.1,
+      "ramp_down_limit": 21.8,
+      "startup_ramp_limit": 131.9,
+      "shutdown_ramp_limit": 141.9,
+      "min_up_time": 4,
+      "min_down_time": 7,
+      "no_load_cost": 813.8,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 1097.66
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 2761.34
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 4684.4
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 66.8,
+          "output_mw_end": 122.8,
+          "marginal_cost_per_mwh": 38.6274
+        },
+        {
+          "output_mw_start": 122.8,
+          "output_mw_end": 178.7,
+          "marginal_cost_per_mwh": 41.6919
+        },
+        {
+          "output_mw_start": 178.7,
+          "output_mw_end": 234.7,
+          "marginal_cost_per_mwh": 46.7138
+        }
+      ],
+      "initial_status": -8,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_3",
+      "type": "steam",
+      "p_min": 33.0,
+      "p_max": 277.0,
+      "ramp_up_limit": 22.1,
+      "ramp_down_limit": 20.8,
+      "startup_ramp_limit": 180.1,
+      "shutdown_ramp_limit": 194.1,
+      "min_up_time": 10,
+      "min_down_time": 4,
+      "no_load_cost": 407.14,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 6,
+          "cost": 468.73
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 18,
+          "cost": 1520.9
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 2447.89
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 33.0,
+          "output_mw_end": 155.0,
+          "marginal_cost_per_mwh": 25.4472
+        },
+        {
+          "output_mw_start": 155.0,
+          "output_mw_end": 277.0,
+          "marginal_cost_per_mwh": 31.5784
+        }
+      ],
+      "initial_status": 10,
+      "initial_power": 169.3
+    },
+    {
+      "id": "g_4",
+      "type": "gas_ct",
+      "p_min": 12.6,
+      "p_max": 43.5,
+      "ramp_up_limit": 13.0,
+      "ramp_down_limit": 9.5,
+      "startup_ramp_limit": 38.9,
+      "shutdown_ramp_limit": 33.3,
+      "min_up_time": 2,
+      "min_down_time": 2,
+      "no_load_cost": 380.46,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 387.34
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 674.58
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1338.44
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 12.6,
+          "output_mw_end": 28.0,
+          "marginal_cost_per_mwh": 65.436
+        },
+        {
+          "output_mw_start": 28.0,
+          "output_mw_end": 43.5,
+          "marginal_cost_per_mwh": 72.8117
+        }
+      ],
+      "initial_status": -2,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_5",
+      "type": "gas_ct",
+      "p_min": 21.8,
+      "p_max": 108.1,
+      "ramp_up_limit": 32.4,
+      "ramp_down_limit": 27.7,
+      "startup_ramp_limit": 101.8,
+      "shutdown_ramp_limit": 101.3,
+      "min_up_time": 2,
+      "min_down_time": 1,
+      "no_load_cost": 321.26,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 330.97
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 618.23
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1084.91
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 21.8,
+          "output_mw_end": 65.0,
+          "marginal_cost_per_mwh": 78.5312
+        },
+        {
+          "output_mw_start": 65.0,
+          "output_mw_end": 108.1,
+          "marginal_cost_per_mwh": 86.8586
+        }
+      ],
+      "initial_status": -3,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_6",
+      "type": "gas_ct",
+      "p_min": 25.5,
+      "p_max": 113.7,
+      "ramp_up_limit": 18.7,
+      "ramp_down_limit": 23.1,
+      "startup_ramp_limit": 95.6,
+      "shutdown_ramp_limit": 97.8,
+      "min_up_time": 2,
+      "min_down_time": 1,
+      "no_load_cost": 166.55,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 196.28
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 427.74
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 779.4
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 25.5,
+          "output_mw_end": 69.6,
+          "marginal_cost_per_mwh": 67.2393
+        },
+        {
+          "output_mw_start": 69.6,
+          "output_mw_end": 113.7,
+          "marginal_cost_per_mwh": 72.8046
+        }
+      ],
+      "initial_status": 3,
+      "initial_power": 34.8
+    },
+    {
+      "id": "g_7",
+      "type": "coal",
+      "p_min": 167.5,
+      "p_max": 571.8,
+      "ramp_up_limit": 22.7,
+      "ramp_down_limit": 28.5,
+      "startup_ramp_limit": 332.6,
+      "shutdown_ramp_limit": 332.5,
+      "min_up_time": 13,
+      "min_down_time": 16,
+      "no_load_cost": 2109.63,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 8,
+          "cost": 6898.1
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 24,
+          "cost": 22922.63
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 49694.2
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 167.5,
+          "output_mw_end": 302.3,
+          "marginal_cost_per_mwh": 19.6367
+        },
+        {
+          "output_mw_start": 302.3,
+          "output_mw_end": 437.0,
+          "marginal_cost_per_mwh": 21.7973
+        },
+        {
+          "output_mw_start": 437.0,
+          "output_mw_end": 571.8,
+          "marginal_cost_per_mwh": 22.9256
+        }
+      ],
+      "initial_status": 17,
+      "initial_power": 268.9
+    },
+    {
+      "id": "g_8",
+      "type": "gas_cc",
+      "p_min": 84.1,
+      "p_max": 235.5,
+      "ramp_up_limit": 14.6,
+      "ramp_down_limit": 17.9,
+      "startup_ramp_limit": 124.7,
+      "shutdown_ramp_limit": 149.3,
+      "min_up_time": 7,
+      "min_down_time": 7,
+      "no_load_cost": 1058.87,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 525.0
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 1333.98
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 2438.25
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 84.1,
+          "output_mw_end": 134.6,
+          "marginal_cost_per_mwh": 36.1316
+        },
+        {
+          "output_mw_start": 134.6,
+          "output_mw_end": 185.0,
+          "marginal_cost_per_mwh": 39.2544
+        },
+        {
+          "output_mw_start": 185.0,
+          "output_mw_end": 235.5,
+          "marginal_cost_per_mwh": 42.4123
+        }
+      ],
+      "initial_status": -7,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_9",
+      "type": "gas_ct",
+      "p_min": 23.7,
+      "p_max": 139.2,
+      "ramp_up_limit": 29.2,
+      "ramp_down_limit": 22.4,
+      "startup_ramp_limit": 106.8,
+      "shutdown_ramp_limit": 131.9,
+      "min_up_time": 2,
+      "min_down_time": 2,
+      "no_load_cost": 329.79,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 265.87
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 484.86
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 888.53
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 23.7,
+          "output_mw_end": 81.4,
+          "marginal_cost_per_mwh": 63.6334
+        },
+        {
+          "output_mw_start": 81.4,
+          "output_mw_end": 139.2,
+          "marginal_cost_per_mwh": 67.7925
+        }
+      ],
+      "initial_status": -5,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_10",
+      "type": "gas_cc",
+      "p_min": 78.0,
+      "p_max": 238.9,
+      "ramp_up_limit": 19.3,
+      "ramp_down_limit": 21.9,
+      "startup_ramp_limit": 124.3,
+      "shutdown_ramp_limit": 125.7,
+      "min_up_time": 8,
+      "min_down_time": 8,
+      "no_load_cost": 1330.7,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 1807.25
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 3777.05
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 6468.07
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 78.0,
+          "output_mw_end": 131.6,
+          "marginal_cost_per_mwh": 48.9486
+        },
+        {
+          "output_mw_start": 131.6,
+          "output_mw_end": 185.3,
+          "marginal_cost_per_mwh": 52.4464
+        },
+        {
+          "output_mw_start": 185.3,
+          "output_mw_end": 238.9,
+          "marginal_cost_per_mwh": 55.1939
+        }
+      ],
+      "initial_status": 10,
+      "initial_power": 178.2
+    },
+    {
+      "id": "g_11",
+      "type": "gas_ct",
+      "p_min": 12.9,
+      "p_max": 71.7,
+      "ramp_up_limit": 13.4,
+      "ramp_down_limit": 15.0,
+      "startup_ramp_limit": 61.5,
+      "shutdown_ramp_limit": 67.4,
+      "min_up_time": 1,
+      "min_down_time": 1,
+      "no_load_cost": 385.94,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 454.42
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 815.94
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1779.48
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 12.9,
+          "output_mw_end": 42.3,
+          "marginal_cost_per_mwh": 74.5212
+        },
+        {
+          "output_mw_start": 42.3,
+          "output_mw_end": 71.7,
+          "marginal_cost_per_mwh": 78.2353
+        }
+      ],
+      "initial_status": -5,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_12",
+      "type": "gas_ct",
+      "p_min": 10.5,
+      "p_max": 51.6,
+      "ramp_up_limit": 14.6,
+      "ramp_down_limit": 10.0,
+      "startup_ramp_limit": 41.2,
+      "shutdown_ramp_limit": 39.7,
+      "min_up_time": 1,
+      "min_down_time": 1,
+      "no_load_cost": 166.99,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 405.82
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 927.56
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1382.85
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 10.5,
+          "output_mw_end": 31.1,
+          "marginal_cost_per_mwh": 41.5278
+        },
+        {
+          "output_mw_start": 31.1,
+          "output_mw_end": 51.6,
+          "marginal_cost_per_mwh": 48.027
+        }
+      ],
+      "initial_status": -6,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_13",
+      "type": "coal",
+      "p_min": 166.6,
+      "p_max": 579.1,
+      "ramp_up_limit": 22.0,
+      "ramp_down_limit": 31.1,
+      "startup_ramp_limit": 364.5,
+      "shutdown_ramp_limit": 291.1,
+      "min_up_time": 13,
+      "min_down_time": 10,
+      "no_load_cost": 2809.78,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 8,
+          "cost": 3860.4
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 24,
+          "cost": 12547.62
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 28064.14
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 166.6,
+          "output_mw_end": 304.1,
+          "marginal_cost_per_mwh": 18.059
+        },
+        {
+          "output_mw_start": 304.1,
+          "output_mw_end": 441.6,
+          "marginal_cost_per_mwh": 20.6015
+        },
+        {
+          "output_mw_start": 441.6,
+          "output_mw_end": 579.1,
+          "marginal_cost_per_mwh": 22.3462
+        }
+      ],
+      "initial_status": 14,
+      "initial_power": 318.0
+    },
+    {
+      "id": "g_14",
+      "type": "gas_ct",
+      "p_min": 16.9,
+      "p_max": 119.8,
+      "ramp_up_limit": 34.2,
+      "ramp_down_limit": 24.7,
+      "startup_ramp_limit": 116.4,
+      "shutdown_ramp_limit": 106.3,
+      "min_up_time": 2,
+      "min_down_time": 3,
+      "no_load_cost": 145.63,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 113.43
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 210.31
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 344.53
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 16.9,
+          "output_mw_end": 68.3,
+          "marginal_cost_per_mwh": 66.1324
+        },
+        {
+          "output_mw_start": 68.3,
+          "output_mw_end": 119.8,
+          "marginal_cost_per_mwh": 73.1169
+        }
+      ],
+      "initial_status": -8,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_15",
+      "type": "coal",
+      "p_min": 150.3,
+      "p_max": 515.7,
+      "ramp_up_limit": 27.7,
+      "ramp_down_limit": 17.2,
+      "startup_ramp_limit": 279.6,
+      "shutdown_ramp_limit": 244.9,
+      "min_up_time": 13,
+      "min_down_time": 14,
+      "no_load_cost": 2814.85,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 8,
+          "cost": 2117.7
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 24,
+          "cost": 7711.72
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 13354.72
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 150.3,
+          "output_mw_end": 272.1,
+          "marginal_cost_per_mwh": 20.1664
+        },
+        {
+          "output_mw_start": 272.1,
+          "output_mw_end": 393.9,
+          "marginal_cost_per_mwh": 24.1378
+        },
+        {
+          "output_mw_start": 393.9,
+          "output_mw_end": 515.7,
+          "marginal_cost_per_mwh": 25.3502
+        }
+      ],
+      "initial_status": 16,
+      "initial_power": 398.6
+    },
+    {
+      "id": "g_16",
+      "type": "gas_cc",
+      "p_min": 53.8,
+      "p_max": 167.9,
+      "ramp_up_limit": 10.8,
+      "ramp_down_limit": 10.6,
+      "startup_ramp_limit": 125.6,
+      "shutdown_ramp_limit": 113.9,
+      "min_up_time": 5,
+      "min_down_time": 6,
+      "no_load_cost": 1005.79,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 592.57
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 1217.48
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 2436.34
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 53.8,
+          "output_mw_end": 91.8,
+          "marginal_cost_per_mwh": 31.2934
+        },
+        {
+          "output_mw_start": 91.8,
+          "output_mw_end": 129.9,
+          "marginal_cost_per_mwh": 36.4078
+        },
+        {
+          "output_mw_start": 129.9,
+          "output_mw_end": 167.9,
+          "marginal_cost_per_mwh": 38.7991
+        }
+      ],
+      "initial_status": 6,
+      "initial_power": 101.5
+    },
+    {
+      "id": "g_17",
+      "type": "gas_cc",
+      "p_min": 72.4,
+      "p_max": 367.8,
+      "ramp_up_limit": 18.7,
+      "ramp_down_limit": 27.4,
+      "startup_ramp_limit": 270.3,
+      "shutdown_ramp_limit": 186.8,
+      "min_up_time": 8,
+      "min_down_time": 7,
+      "no_load_cost": 1341.08,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 1528.75
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 3464.05
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 6955.9
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 72.4,
+          "output_mw_end": 170.9,
+          "marginal_cost_per_mwh": 51.9037
+        },
+        {
+          "output_mw_start": 170.9,
+          "output_mw_end": 269.3,
+          "marginal_cost_per_mwh": 56.6669
+        },
+        {
+          "output_mw_start": 269.3,
+          "output_mw_end": 367.8,
+          "marginal_cost_per_mwh": 62.2319
+        }
+      ],
+      "initial_status": -7,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_18",
+      "type": "gas_cc",
+      "p_min": 73.3,
+      "p_max": 160.7,
+      "ramp_up_limit": 11.8,
+      "ramp_down_limit": 8.5,
+      "startup_ramp_limit": 127.3,
+      "shutdown_ramp_limit": 102.3,
+      "min_up_time": 7,
+      "min_down_time": 4,
+      "no_load_cost": 717.52,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 1236.5
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 3126.47
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 4820.57
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 73.3,
+          "output_mw_end": 102.4,
+          "marginal_cost_per_mwh": 37.0943
+        },
+        {
+          "output_mw_start": 102.4,
+          "output_mw_end": 131.6,
+          "marginal_cost_per_mwh": 42.5114
+        },
+        {
+          "output_mw_start": 131.6,
+          "output_mw_end": 160.7,
+          "marginal_cost_per_mwh": 48.3716
+        }
+      ],
+      "initial_status": 8,
+      "initial_power": 128.4
+    },
+    {
+      "id": "g_19",
+      "type": "gas_cc",
+      "p_min": 70.7,
+      "p_max": 365.8,
+      "ramp_up_limit": 20.3,
+      "ramp_down_limit": 24.6,
+      "startup_ramp_limit": 281.1,
+      "shutdown_ramp_limit": 196.4,
+      "min_up_time": 6,
+      "min_down_time": 7,
+      "no_load_cost": 901.08,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 511.45
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 1114.51
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1938.09
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 70.7,
+          "output_mw_end": 169.1,
+          "marginal_cost_per_mwh": 28.8152
+        },
+        {
+          "output_mw_start": 169.1,
+          "output_mw_end": 267.4,
+          "marginal_cost_per_mwh": 32.4412
+        },
+        {
+          "output_mw_start": 267.4,
+          "output_mw_end": 365.8,
+          "marginal_cost_per_mwh": 36.0227
+        }
+      ],
+      "initial_status": -9,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_20",
+      "type": "gas_ct",
+      "p_min": 14.2,
+      "p_max": 50.3,
+      "ramp_up_limit": 13.0,
+      "ramp_down_limit": 11.2,
+      "startup_ramp_limit": 37.7,
+      "shutdown_ramp_limit": 45.7,
+      "min_up_time": 2,
+      "min_down_time": 2,
+      "no_load_cost": 157.51,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 449.63
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 855.02
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1314.22
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 14.2,
+          "output_mw_end": 32.2,
+          "marginal_cost_per_mwh": 69.297
+        },
+        {
+          "output_mw_start": 32.2,
+          "output_mw_end": 50.3,
+          "marginal_cost_per_mwh": 78.8246
+        }
+      ],
+      "initial_status": -2,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_21",
+      "type": "gas_cc",
+      "p_min": 52.4,
+      "p_max": 263.2,
+      "ramp_up_limit": 25.9,
+      "ramp_down_limit": 18.4,
+      "startup_ramp_limit": 185.5,
+      "shutdown_ramp_limit": 187.1,
+      "min_up_time": 6,
+      "min_down_time": 8,
+      "no_load_cost": 1104.0,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 1336.23
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 3243.8
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 5777.42
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 52.4,
+          "output_mw_end": 122.7,
+          "marginal_cost_per_mwh": 49.8568
+        },
+        {
+          "output_mw_start": 122.7,
+          "output_mw_end": 192.9,
+          "marginal_cost_per_mwh": 53.4786
+        },
+        {
+          "output_mw_start": 192.9,
+          "output_mw_end": 263.2,
+          "marginal_cost_per_mwh": 56.2102
+        }
+      ],
+      "initial_status": 6,
+      "initial_power": 188.9
+    },
+    {
+      "id": "g_22",
+      "type": "gas_cc",
+      "p_min": 78.6,
+      "p_max": 317.4,
+      "ramp_up_limit": 17.8,
+      "ramp_down_limit": 16.1,
+      "startup_ramp_limit": 187.1,
+      "shutdown_ramp_limit": 232.8,
+      "min_up_time": 6,
+      "min_down_time": 8,
+      "no_load_cost": 1457.14,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 972.62
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 2326.28
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 4043.07
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 78.6,
+          "output_mw_end": 158.2,
+          "marginal_cost_per_mwh": 49.9304
+        },
+        {
+          "output_mw_start": 158.2,
+          "output_mw_end": 237.8,
+          "marginal_cost_per_mwh": 52.097
+        },
+        {
+          "output_mw_start": 237.8,
+          "output_mw_end": 317.4,
+          "marginal_cost_per_mwh": 55.1389
+        }
+      ],
+      "initial_status": 6,
+      "initial_power": 128.0
+    },
+    {
+      "id": "g_23",
+      "type": "gas_ct",
+      "p_min": 17.7,
+      "p_max": 100.6,
+      "ramp_up_limit": 22.9,
+      "ramp_down_limit": 22.0,
+      "startup_ramp_limit": 70.5,
+      "shutdown_ramp_limit": 89.3,
+      "min_up_time": 2,
+      "min_down_time": 2,
+      "no_load_cost": 185.82,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 198.22
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 468.9
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 514.49
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 17.7,
+          "output_mw_end": 59.1,
+          "marginal_cost_per_mwh": 63.1542
+        },
+        {
+          "output_mw_start": 59.1,
+          "output_mw_end": 100.6,
+          "marginal_cost_per_mwh": 70.6687
+        }
+      ],
+      "initial_status": -8,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_24",
+      "type": "gas_cc",
+      "p_min": 44.8,
+      "p_max": 382.6,
+      "ramp_up_limit": 24.5,
+      "ramp_down_limit": 38.0,
+      "startup_ramp_limit": 242.8,
+      "shutdown_ramp_limit": 269.5,
+      "min_up_time": 7,
+      "min_down_time": 8,
+      "no_load_cost": 777.92,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 978.75
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 2151.7
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 3693.34
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 44.8,
+          "output_mw_end": 157.4,
+          "marginal_cost_per_mwh": 47.6925
+        },
+        {
+          "output_mw_start": 157.4,
+          "output_mw_end": 270.0,
+          "marginal_cost_per_mwh": 51.6502
+        },
+        {
+          "output_mw_start": 270.0,
+          "output_mw_end": 382.6,
+          "marginal_cost_per_mwh": 56.0023
+        }
+      ],
+      "initial_status": -8,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_25",
+      "type": "gas_ct",
+      "p_min": 11.1,
+      "p_max": 89.5,
+      "ramp_up_limit": 23.0,
+      "ramp_down_limit": 16.5,
+      "startup_ramp_limit": 84.6,
+      "shutdown_ramp_limit": 63.3,
+      "min_up_time": 2,
+      "min_down_time": 1,
+      "no_load_cost": 161.58,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 452.03
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 963.98
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1471.48
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 11.1,
+          "output_mw_end": 50.3,
+          "marginal_cost_per_mwh": 53.2337
+        },
+        {
+          "output_mw_start": 50.3,
+          "output_mw_end": 89.5,
+          "marginal_cost_per_mwh": 58.6655
+        }
+      ],
+      "initial_status": -4,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_26",
+      "type": "gas_cc",
+      "p_min": 43.0,
+      "p_max": 383.2,
+      "ramp_up_limit": 30.3,
+      "ramp_down_limit": 26.4,
+      "startup_ramp_limit": 279.4,
+      "shutdown_ramp_limit": 201.7,
+      "min_up_time": 5,
+      "min_down_time": 8,
+      "no_load_cost": 535.54,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 607.16
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 1463.09
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 2860.22
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 43.0,
+          "output_mw_end": 156.4,
+          "marginal_cost_per_mwh": 44.3642
+        },
+        {
+          "output_mw_start": 156.4,
+          "output_mw_end": 269.8,
+          "marginal_cost_per_mwh": 50.3121
+        },
+        {
+          "output_mw_start": 269.8,
+          "output_mw_end": 383.2,
+          "marginal_cost_per_mwh": 52.8347
+        }
+      ],
+      "initial_status": 7,
+      "initial_power": 56.5
+    },
+    {
+      "id": "g_27",
+      "type": "gas_cc",
+      "p_min": 84.9,
+      "p_max": 388.8,
+      "ramp_up_limit": 31.6,
+      "ramp_down_limit": 38.5,
+      "startup_ramp_limit": 303.5,
+      "shutdown_ramp_limit": 295.9,
+      "min_up_time": 6,
+      "min_down_time": 7,
+      "no_load_cost": 772.42,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 719.52
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 1819.4
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 3202.67
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 84.9,
+          "output_mw_end": 186.2,
+          "marginal_cost_per_mwh": 37.9141
+        },
+        {
+          "output_mw_start": 186.2,
+          "output_mw_end": 287.5,
+          "marginal_cost_per_mwh": 41.2395
+        },
+        {
+          "output_mw_start": 287.5,
+          "output_mw_end": 388.8,
+          "marginal_cost_per_mwh": 46.4694
+        }
+      ],
+      "initial_status": 8,
+      "initial_power": 290.9
+    },
+    {
+      "id": "g_28",
+      "type": "gas_ct",
+      "p_min": 27.5,
+      "p_max": 134.8,
+      "ramp_up_limit": 29.2,
+      "ramp_down_limit": 36.0,
+      "startup_ramp_limit": 95.3,
+      "shutdown_ramp_limit": 107.8,
+      "min_up_time": 1,
+      "min_down_time": 1,
+      "no_load_cost": 252.82,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 454.25
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 1128.96
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1700.26
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 27.5,
+          "output_mw_end": 81.2,
+          "marginal_cost_per_mwh": 62.5459
+        },
+        {
+          "output_mw_start": 81.2,
+          "output_mw_end": 134.8,
+          "marginal_cost_per_mwh": 65.8167
+        }
+      ],
+      "initial_status": -5,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_29",
+      "type": "gas_ct",
+      "p_min": 29.8,
+      "p_max": 118.1,
+      "ramp_up_limit": 30.0,
+      "ramp_down_limit": 21.3,
+      "startup_ramp_limit": 109.8,
+      "shutdown_ramp_limit": 101.7,
+      "min_up_time": 3,
+      "min_down_time": 1,
+      "no_load_cost": 394.93,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 170.47
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 374.8
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 454.01
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 29.8,
+          "output_mw_end": 74.0,
+          "marginal_cost_per_mwh": 46.4105
+        },
+        {
+          "output_mw_start": 74.0,
+          "output_mw_end": 118.1,
+          "marginal_cost_per_mwh": 50.0606
+        }
+      ],
+      "initial_status": 4,
+      "initial_power": 48.6
+    },
+    {
+      "id": "g_30",
+      "type": "nuclear",
+      "p_min": 503.4,
+      "p_max": 1140.4,
+      "ramp_up_limit": 22.0,
+      "ramp_down_limit": 24.5,
+      "startup_ramp_limit": 503.4,
+      "shutdown_ramp_limit": 503.4,
+      "min_up_time": 17,
+      "min_down_time": 20,
+      "no_load_cost": 7756.06,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 16,
+          "cost": 40688.45
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 72,
+          "cost": 107123.8
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 224730.84
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 503.4,
+          "output_mw_end": 821.9,
+          "marginal_cost_per_mwh": 9.0128
+        },
+        {
+          "output_mw_start": 821.9,
+          "output_mw_end": 1140.4,
+          "marginal_cost_per_mwh": 10.224
+        }
+      ],
+      "initial_status": 22,
+      "initial_power": 602.1
+    },
+    {
+      "id": "g_31",
+      "type": "gas_cc",
+      "p_min": 81.4,
+      "p_max": 371.4,
+      "ramp_up_limit": 25.5,
+      "ramp_down_limit": 24.1,
+      "startup_ramp_limit": 284.2,
+      "shutdown_ramp_limit": 259.2,
+      "min_up_time": 7,
+      "min_down_time": 5,
+      "no_load_cost": 1371.07,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 1580.08
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 3874.36
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 6605.89
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 81.4,
+          "output_mw_end": 178.1,
+          "marginal_cost_per_mwh": 44.6566
+        },
+        {
+          "output_mw_start": 178.1,
+          "output_mw_end": 274.7,
+          "marginal_cost_per_mwh": 49.3317
+        },
+        {
+          "output_mw_start": 274.7,
+          "output_mw_end": 371.4,
+          "marginal_cost_per_mwh": 54.4055
+        }
+      ],
+      "initial_status": 7,
+      "initial_power": 90.7
+    },
+    {
+      "id": "g_32",
+      "type": "gas_ct",
+      "p_min": 25.2,
+      "p_max": 119.0,
+      "ramp_up_limit": 34.2,
+      "ramp_down_limit": 18.6,
+      "startup_ramp_limit": 84.7,
+      "shutdown_ramp_limit": 110.6,
+      "min_up_time": 1,
+      "min_down_time": 3,
+      "no_load_cost": 393.07,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 138.46
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 250.67
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 388.81
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 25.2,
+          "output_mw_end": 72.1,
+          "marginal_cost_per_mwh": 58.4318
+        },
+        {
+          "output_mw_start": 72.1,
+          "output_mw_end": 119.0,
+          "marginal_cost_per_mwh": 62.3029
+        }
+      ],
+      "initial_status": -4,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_33",
+      "type": "steam",
+      "p_min": 50.0,
+      "p_max": 89.1,
+      "ramp_up_limit": 5.1,
+      "ramp_down_limit": 5.1,
+      "startup_ramp_limit": 55.5,
+      "shutdown_ramp_limit": 56.4,
+      "min_up_time": 9,
+      "min_down_time": 6,
+      "no_load_cost": 769.3,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 6,
+          "cost": 800.87
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 18,
+          "cost": 2024.41
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 4524.27
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 50.0,
+          "output_mw_end": 69.5,
+          "marginal_cost_per_mwh": 20.3597
+        },
+        {
+          "output_mw_start": 69.5,
+          "output_mw_end": 89.1,
+          "marginal_cost_per_mwh": 26.4375
+        }
+      ],
+      "initial_status": -8,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_34",
+      "type": "gas_cc",
+      "p_min": 47.4,
+      "p_max": 238.5,
+      "ramp_up_limit": 17.9,
+      "ramp_down_limit": 17.6,
+      "startup_ramp_limit": 169.6,
+      "shutdown_ramp_limit": 174.2,
+      "min_up_time": 7,
+      "min_down_time": 8,
+      "no_load_cost": 576.14,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 640.06
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 1389.2
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 2689.11
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 47.4,
+          "output_mw_end": 111.1,
+          "marginal_cost_per_mwh": 29.1264
+        },
+        {
+          "output_mw_start": 111.1,
+          "output_mw_end": 174.8,
+          "marginal_cost_per_mwh": 32.821
+        },
+        {
+          "output_mw_start": 174.8,
+          "output_mw_end": 238.5,
+          "marginal_cost_per_mwh": 38.2437
+        }
+      ],
+      "initial_status": 7,
+      "initial_power": 180.5
+    },
+    {
+      "id": "g_35",
+      "type": "gas_ct",
+      "p_min": 18.1,
+      "p_max": 61.4,
+      "ramp_up_limit": 10.8,
+      "ramp_down_limit": 11.6,
+      "startup_ramp_limit": 43.2,
+      "shutdown_ramp_limit": 49.1,
+      "min_up_time": 3,
+      "min_down_time": 1,
+      "no_load_cost": 205.67,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 122.2
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 286.73
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 427.86
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 18.1,
+          "output_mw_end": 39.8,
+          "marginal_cost_per_mwh": 56.6933
+        },
+        {
+          "output_mw_start": 39.8,
+          "output_mw_end": 61.4,
+          "marginal_cost_per_mwh": 60.9982
+        }
+      ],
+      "initial_status": -2,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_36",
+      "type": "steam",
+      "p_min": 41.2,
+      "p_max": 296.2,
+      "ramp_up_limit": 20.0,
+      "ramp_down_limit": 21.6,
+      "startup_ramp_limit": 190.6,
+      "shutdown_ramp_limit": 210.4,
+      "min_up_time": 4,
+      "min_down_time": 5,
+      "no_load_cost": 1145.37,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 6,
+          "cost": 616.79
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 18,
+          "cost": 1509.06
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 2266.01
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 41.2,
+          "output_mw_end": 168.7,
+          "marginal_cost_per_mwh": 45.8996
+        },
+        {
+          "output_mw_start": 168.7,
+          "output_mw_end": 296.2,
+          "marginal_cost_per_mwh": 49.9723
+        }
+      ],
+      "initial_status": -5,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_37",
+      "type": "gas_cc",
+      "p_min": 57.7,
+      "p_max": 336.3,
+      "ramp_up_limit": 25.0,
+      "ramp_down_limit": 27.0,
+      "startup_ramp_limit": 189.0,
+      "shutdown_ramp_limit": 266.5,
+      "min_up_time": 4,
+      "min_down_time": 4,
+      "no_load_cost": 1392.28,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 1295.42
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 2670.18
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 5182.22
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 57.7,
+          "output_mw_end": 150.6,
+          "marginal_cost_per_mwh": 46.1772
+        },
+        {
+          "output_mw_start": 150.6,
+          "output_mw_end": 243.4,
+          "marginal_cost_per_mwh": 51.5402
+        },
+        {
+          "output_mw_start": 243.4,
+          "output_mw_end": 336.3,
+          "marginal_cost_per_mwh": 54.6322
+        }
+      ],
+      "initial_status": -4,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_38",
+      "type": "gas_ct",
+      "p_min": 12.4,
+      "p_max": 115.2,
+      "ramp_up_limit": 23.6,
+      "ramp_down_limit": 23.6,
+      "startup_ramp_limit": 107.1,
+      "shutdown_ramp_limit": 100.5,
+      "min_up_time": 2,
+      "min_down_time": 2,
+      "no_load_cost": 169.78,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 404.41
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 997.03
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1506.14
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 12.4,
+          "output_mw_end": 63.8,
+          "marginal_cost_per_mwh": 77.3253
+        },
+        {
+          "output_mw_start": 63.8,
+          "output_mw_end": 115.2,
+          "marginal_cost_per_mwh": 85.553
+        }
+      ],
+      "initial_status": -6,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_39",
+      "type": "gas_ct",
+      "p_min": 14.5,
+      "p_max": 84.6,
+      "ramp_up_limit": 16.3,
+      "ramp_down_limit": 23.1,
+      "startup_ramp_limit": 62.6,
+      "shutdown_ramp_limit": 73.5,
+      "min_up_time": 3,
+      "min_down_time": 1,
+      "no_load_cost": 301.55,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 104.4
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 207.76
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 376.47
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 14.5,
+          "output_mw_end": 49.5,
+          "marginal_cost_per_mwh": 70.2421
+        },
+        {
+          "output_mw_start": 49.5,
+          "output_mw_end": 84.6,
+          "marginal_cost_per_mwh": 77.9111
+        }
+      ],
+      "initial_status": -1,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_40",
+      "type": "coal",
+      "p_min": 163.0,
+      "p_max": 303.1,
+      "ramp_up_limit": 10.4,
+      "ramp_down_limit": 16.4,
+      "startup_ramp_limit": 195.5,
+      "shutdown_ramp_limit": 163.0,
+      "min_up_time": 9,
+      "min_down_time": 13,
+      "no_load_cost": 1673.55,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 8,
+          "cost": 2452.47
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 24,
+          "cost": 8290.14
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 15260.96
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 163.0,
+          "output_mw_end": 209.7,
+          "marginal_cost_per_mwh": 24.894
+        },
+        {
+          "output_mw_start": 209.7,
+          "output_mw_end": 256.4,
+          "marginal_cost_per_mwh": 26.0222
+        },
+        {
+          "output_mw_start": 256.4,
+          "output_mw_end": 303.1,
+          "marginal_cost_per_mwh": 27.1119
+        }
+      ],
+      "initial_status": 9,
+      "initial_power": 227.8
+    },
+    {
+      "id": "g_41",
+      "type": "coal",
+      "p_min": 112.4,
+      "p_max": 333.0,
+      "ramp_up_limit": 10.2,
+      "ramp_down_limit": 14.3,
+      "startup_ramp_limit": 145.0,
+      "shutdown_ramp_limit": 211.8,
+      "min_up_time": 16,
+      "min_down_time": 9,
+      "no_load_cost": 1385.57,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 8,
+          "cost": 6768.11
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 24,
+          "cost": 18417.62
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 40163.22
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 112.4,
+          "output_mw_end": 185.9,
+          "marginal_cost_per_mwh": 25.9289
+        },
+        {
+          "output_mw_start": 185.9,
+          "output_mw_end": 259.5,
+          "marginal_cost_per_mwh": 27.7171
+        },
+        {
+          "output_mw_start": 259.5,
+          "output_mw_end": 333.0,
+          "marginal_cost_per_mwh": 28.9014
+        }
+      ],
+      "initial_status": 17,
+      "initial_power": 215.6
+    },
+    {
+      "id": "g_42",
+      "type": "gas_ct",
+      "p_min": 26.8,
+      "p_max": 40.4,
+      "ramp_up_limit": 12.1,
+      "ramp_down_limit": 11.6,
+      "startup_ramp_limit": 37.8,
+      "shutdown_ramp_limit": 36.5,
+      "min_up_time": 2,
+      "min_down_time": 2,
+      "no_load_cost": 262.56,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 179.69
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 326.75
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 635.37
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 26.8,
+          "output_mw_end": 33.6,
+          "marginal_cost_per_mwh": 48.9123
+        },
+        {
+          "output_mw_start": 33.6,
+          "output_mw_end": 40.4,
+          "marginal_cost_per_mwh": 55.7551
+        }
+      ],
+      "initial_status": -6,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_43",
+      "type": "gas_cc",
+      "p_min": 87.9,
+      "p_max": 159.5,
+      "ramp_up_limit": 10.4,
+      "ramp_down_limit": 12.6,
+      "startup_ramp_limit": 87.9,
+      "shutdown_ramp_limit": 87.9,
+      "min_up_time": 5,
+      "min_down_time": 5,
+      "no_load_cost": 1416.34,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 920.0
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 2326.18
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 3721.16
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 87.9,
+          "output_mw_end": 111.8,
+          "marginal_cost_per_mwh": 39.8701
+        },
+        {
+          "output_mw_start": 111.8,
+          "output_mw_end": 135.6,
+          "marginal_cost_per_mwh": 42.6652
+        },
+        {
+          "output_mw_start": 135.6,
+          "output_mw_end": 159.5,
+          "marginal_cost_per_mwh": 45.1771
+        }
+      ],
+      "initial_status": -5,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_44",
+      "type": "gas_cc",
+      "p_min": 70.8,
+      "p_max": 383.2,
+      "ramp_up_limit": 19.4,
+      "ramp_down_limit": 19.4,
+      "startup_ramp_limit": 296.9,
+      "shutdown_ramp_limit": 279.8,
+      "min_up_time": 6,
+      "min_down_time": 8,
+      "no_load_cost": 796.15,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 511.22
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 1323.83
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 2511.77
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 70.8,
+          "output_mw_end": 174.9,
+          "marginal_cost_per_mwh": 50.6755
+        },
+        {
+          "output_mw_start": 174.9,
+          "output_mw_end": 279.1,
+          "marginal_cost_per_mwh": 55.0232
+        },
+        {
+          "output_mw_start": 279.1,
+          "output_mw_end": 383.2,
+          "marginal_cost_per_mwh": 58.9322
+        }
+      ],
+      "initial_status": 6,
+      "initial_power": 99.2
+    },
+    {
+      "id": "g_45",
+      "type": "coal",
+      "p_min": 138.1,
+      "p_max": 527.2,
+      "ramp_up_limit": 24.5,
+      "ramp_down_limit": 26.5,
+      "startup_ramp_limit": 327.4,
+      "shutdown_ramp_limit": 259.4,
+      "min_up_time": 11,
+      "min_down_time": 8,
+      "no_load_cost": 2224.22,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 8,
+          "cost": 5471.8
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 24,
+          "cost": 21797.55
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 37813.2
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 138.1,
+          "output_mw_end": 267.8,
+          "marginal_cost_per_mwh": 22.8349
+        },
+        {
+          "output_mw_start": 267.8,
+          "output_mw_end": 397.5,
+          "marginal_cost_per_mwh": 23.8714
+        },
+        {
+          "output_mw_start": 397.5,
+          "output_mw_end": 527.2,
+          "marginal_cost_per_mwh": 27.2449
+        }
+      ],
+      "initial_status": 15,
+      "initial_power": 343.7
+    },
+    {
+      "id": "g_46",
+      "type": "gas_ct",
+      "p_min": 24.0,
+      "p_max": 115.9,
+      "ramp_up_limit": 26.8,
+      "ramp_down_limit": 20.0,
+      "startup_ramp_limit": 110.0,
+      "shutdown_ramp_limit": 87.9,
+      "min_up_time": 1,
+      "min_down_time": 2,
+      "no_load_cost": 227.38,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 433.37
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 1068.85
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1525.66
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 24.0,
+          "output_mw_end": 70.0,
+          "marginal_cost_per_mwh": 43.5297
+        },
+        {
+          "output_mw_start": 70.0,
+          "output_mw_end": 115.9,
+          "marginal_cost_per_mwh": 51.1688
+        }
+      ],
+      "initial_status": -4,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_47",
+      "type": "coal",
+      "p_min": 100.3,
+      "p_max": 455.0,
+      "ramp_up_limit": 25.2,
+      "ramp_down_limit": 18.4,
+      "startup_ramp_limit": 276.0,
+      "shutdown_ramp_limit": 239.6,
+      "min_up_time": 16,
+      "min_down_time": 11,
+      "no_load_cost": 1870.04,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 8,
+          "cost": 3893.8
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 24,
+          "cost": 10647.13
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 23811.95
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 100.3,
+          "output_mw_end": 218.5,
+          "marginal_cost_per_mwh": 20.3694
+        },
+        {
+          "output_mw_start": 218.5,
+          "output_mw_end": 336.8,
+          "marginal_cost_per_mwh": 23.6804
+        },
+        {
+          "output_mw_start": 336.8,
+          "output_mw_end": 455.0,
+          "marginal_cost_per_mwh": 26.8871
+        }
+      ],
+      "initial_status": 19,
+      "initial_power": 229.4
+    },
+    {
+      "id": "g_48",
+      "type": "gas_ct",
+      "p_min": 18.5,
+      "p_max": 53.7,
+      "ramp_up_limit": 10.2,
+      "ramp_down_limit": 9.1,
+      "startup_ramp_limit": 47.7,
+      "shutdown_ramp_limit": 52.4,
+      "min_up_time": 2,
+      "min_down_time": 1,
+      "no_load_cost": 179.1,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 443.43
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 900.89
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1338.62
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 18.5,
+          "output_mw_end": 36.1,
+          "marginal_cost_per_mwh": 61.6696
+        },
+        {
+          "output_mw_start": 36.1,
+          "output_mw_end": 53.7,
+          "marginal_cost_per_mwh": 68.3306
+        }
+      ],
+      "initial_status": 3,
+      "initial_power": 42.1
+    },
+    {
+      "id": "g_49",
+      "type": "gas_ct",
+      "p_min": 17.0,
+      "p_max": 58.6,
+      "ramp_up_limit": 13.3,
+      "ramp_down_limit": 11.8,
+      "startup_ramp_limit": 44.0,
+      "shutdown_ramp_limit": 46.1,
+      "min_up_time": 1,
+      "min_down_time": 2,
+      "no_load_cost": 353.25,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 389.24
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 889.38
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1107.11
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 17.0,
+          "output_mw_end": 37.8,
+          "marginal_cost_per_mwh": 49.016
+        },
+        {
+          "output_mw_start": 37.8,
+          "output_mw_end": 58.6,
+          "marginal_cost_per_mwh": 53.5673
+        }
+      ],
+      "initial_status": -8,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_50",
+      "type": "gas_ct",
+      "p_min": 19.3,
+      "p_max": 86.8,
+      "ramp_up_limit": 19.6,
+      "ramp_down_limit": 19.5,
+      "startup_ramp_limit": 66.8,
+      "shutdown_ramp_limit": 75.1,
+      "min_up_time": 2,
+      "min_down_time": 1,
+      "no_load_cost": 108.0,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 304.83
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 576.27
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 987.01
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 19.3,
+          "output_mw_end": 53.0,
+          "marginal_cost_per_mwh": 58.9813
+        },
+        {
+          "output_mw_start": 53.0,
+          "output_mw_end": 86.8,
+          "marginal_cost_per_mwh": 63.1145
+        }
+      ],
+      "initial_status": 2,
+      "initial_power": 46.2
+    },
+    {
+      "id": "g_51",
+      "type": "gas_ct",
+      "p_min": 22.4,
+      "p_max": 119.8,
+      "ramp_up_limit": 30.4,
+      "ramp_down_limit": 31.7,
+      "startup_ramp_limit": 90.9,
+      "shutdown_ramp_limit": 105.5,
+      "min_up_time": 1,
+      "min_down_time": 2,
+      "no_load_cost": 132.44,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 225.14
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 542.57
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 880.55
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 22.4,
+          "output_mw_end": 71.1,
+          "marginal_cost_per_mwh": 59.4148
+        },
+        {
+          "output_mw_start": 71.1,
+          "output_mw_end": 119.8,
+          "marginal_cost_per_mwh": 66.7303
+        }
+      ],
+      "initial_status": -7,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_52",
+      "type": "steam",
+      "p_min": 53.3,
+      "p_max": 224.8,
+      "ramp_up_limit": 13.9,
+      "ramp_down_limit": 15.9,
+      "startup_ramp_limit": 158.0,
+      "shutdown_ramp_limit": 135.6,
+      "min_up_time": 5,
+      "min_down_time": 5,
+      "no_load_cost": 771.13,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 6,
+          "cost": 1368.24
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 18,
+          "cost": 2807.59
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 8208.18
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 53.3,
+          "output_mw_end": 139.1,
+          "marginal_cost_per_mwh": 40.7149
+        },
+        {
+          "output_mw_start": 139.1,
+          "output_mw_end": 224.8,
+          "marginal_cost_per_mwh": 44.0786
+        }
+      ],
+      "initial_status": 6,
+      "initial_power": 106.0
+    },
+    {
+      "id": "g_53",
+      "type": "coal",
+      "p_min": 165.6,
+      "p_max": 500.6,
+      "ramp_up_limit": 19.2,
+      "ramp_down_limit": 23.4,
+      "startup_ramp_limit": 229.6,
+      "shutdown_ramp_limit": 210.6,
+      "min_up_time": 11,
+      "min_down_time": 11,
+      "no_load_cost": 1082.89,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 8,
+          "cost": 2345.93
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 24,
+          "cost": 6836.2
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 13891.1
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 165.6,
+          "output_mw_end": 277.3,
+          "marginal_cost_per_mwh": 25.339
+        },
+        {
+          "output_mw_start": 277.3,
+          "output_mw_end": 388.9,
+          "marginal_cost_per_mwh": 28.3076
+        },
+        {
+          "output_mw_start": 388.9,
+          "output_mw_end": 500.6,
+          "marginal_cost_per_mwh": 32.0196
+        }
+      ],
+      "initial_status": 15,
+      "initial_power": 193.9
+    },
+    {
+      "id": "g_54",
+      "type": "steam",
+      "p_min": 73.9,
+      "p_max": 132.4,
+      "ramp_up_limit": 10.3,
+      "ramp_down_limit": 6.5,
+      "startup_ramp_limit": 95.1,
+      "shutdown_ramp_limit": 85.2,
+      "min_up_time": 8,
+      "min_down_time": 4,
+      "no_load_cost": 406.69,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 6,
+          "cost": 1020.75
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 18,
+          "cost": 2259.35
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 4766.06
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 73.9,
+          "output_mw_end": 103.2,
+          "marginal_cost_per_mwh": 24.4299
+        },
+        {
+          "output_mw_start": 103.2,
+          "output_mw_end": 132.4,
+          "marginal_cost_per_mwh": 29.3475
+        }
+      ],
+      "initial_status": -6,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_55",
+      "type": "gas_ct",
+      "p_min": 19.9,
+      "p_max": 93.2,
+      "ramp_up_limit": 22.0,
+      "ramp_down_limit": 16.7,
+      "startup_ramp_limit": 92.6,
+      "shutdown_ramp_limit": 80.8,
+      "min_up_time": 3,
+      "min_down_time": 1,
+      "no_load_cost": 287.17,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 466.5
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 838.86
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1717.55
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 19.9,
+          "output_mw_end": 56.6,
+          "marginal_cost_per_mwh": 47.9375
+        },
+        {
+          "output_mw_start": 56.6,
+          "output_mw_end": 93.2,
+          "marginal_cost_per_mwh": 53.3165
+        }
+      ],
+      "initial_status": -7,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_56",
+      "type": "gas_ct",
+      "p_min": 13.6,
+      "p_max": 93.6,
+      "ramp_up_limit": 26.9,
+      "ramp_down_limit": 18.1,
+      "startup_ramp_limit": 69.1,
+      "shutdown_ramp_limit": 88.0,
+      "min_up_time": 2,
+      "min_down_time": 1,
+      "no_load_cost": 208.67,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 366.9
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 838.52
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1163.32
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 13.6,
+          "output_mw_end": 53.6,
+          "marginal_cost_per_mwh": 40.2984
+        },
+        {
+          "output_mw_start": 53.6,
+          "output_mw_end": 93.6,
+          "marginal_cost_per_mwh": 45.2632
+        }
+      ],
+      "initial_status": -4,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_57",
+      "type": "nuclear",
+      "p_min": 599.8,
+      "p_max": 1134.8,
+      "ramp_up_limit": 19.6,
+      "ramp_down_limit": 22.0,
+      "startup_ramp_limit": 599.8,
+      "shutdown_ramp_limit": 599.8,
+      "min_up_time": 18,
+      "min_down_time": 19,
+      "no_load_cost": 6203.63,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 16,
+          "cost": 37845.79
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 72,
+          "cost": 106979.58
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 226661.68
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 599.8,
+          "output_mw_end": 867.3,
+          "marginal_cost_per_mwh": 7.1962
+        },
+        {
+          "output_mw_start": 867.3,
+          "output_mw_end": 1134.8,
+          "marginal_cost_per_mwh": 9.1204
+        }
+      ],
+      "initial_status": 20,
+      "initial_power": 873.3
+    },
+    {
+      "id": "g_58",
+      "type": "gas_cc",
+      "p_min": 63.1,
+      "p_max": 202.0,
+      "ramp_up_limit": 18.8,
+      "ramp_down_limit": 17.0,
+      "startup_ramp_limit": 158.2,
+      "shutdown_ramp_limit": 147.8,
+      "min_up_time": 8,
+      "min_down_time": 4,
+      "no_load_cost": 1412.23,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 1398.58
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 3230.52
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 6719.03
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 63.1,
+          "output_mw_end": 109.4,
+          "marginal_cost_per_mwh": 31.2605
+        },
+        {
+          "output_mw_start": 109.4,
+          "output_mw_end": 155.7,
+          "marginal_cost_per_mwh": 34.5277
+        },
+        {
+          "output_mw_start": 155.7,
+          "output_mw_end": 202.0,
+          "marginal_cost_per_mwh": 39.4427
+        }
+      ],
+      "initial_status": -4,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_59",
+      "type": "gas_ct",
+      "p_min": 21.6,
+      "p_max": 131.3,
+      "ramp_up_limit": 24.2,
+      "ramp_down_limit": 38.4,
+      "startup_ramp_limit": 95.5,
+      "shutdown_ramp_limit": 126.3,
+      "min_up_time": 1,
+      "min_down_time": 2,
+      "no_load_cost": 249.53,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 288.76
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 668.8
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 769.11
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 21.6,
+          "output_mw_end": 76.5,
+          "marginal_cost_per_mwh": 65.3694
+        },
+        {
+          "output_mw_start": 76.5,
+          "output_mw_end": 131.3,
+          "marginal_cost_per_mwh": 74.5484
+        }
+      ],
+      "initial_status": 2,
+      "initial_power": 50.4
+    },
+    {
+      "id": "g_60",
+      "type": "steam",
+      "p_min": 71.6,
+      "p_max": 216.8,
+      "ramp_up_limit": 12.4,
+      "ramp_down_limit": 13.1,
+      "startup_ramp_limit": 131.6,
+      "shutdown_ramp_limit": 106.0,
+      "min_up_time": 4,
+      "min_down_time": 4,
+      "no_load_cost": 631.86,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 6,
+          "cost": 974.86
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 18,
+          "cost": 2104.55
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 5354.87
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 71.6,
+          "output_mw_end": 144.2,
+          "marginal_cost_per_mwh": 34.3194
+        },
+        {
+          "output_mw_start": 144.2,
+          "output_mw_end": 216.8,
+          "marginal_cost_per_mwh": 38.8519
+        }
+      ],
+      "initial_status": 6,
+      "initial_power": 128.4
+    },
+    {
+      "id": "g_61",
+      "type": "gas_cc",
+      "p_min": 93.6,
+      "p_max": 279.3,
+      "ramp_up_limit": 21.4,
+      "ramp_down_limit": 14.8,
+      "startup_ramp_limit": 184.6,
+      "shutdown_ramp_limit": 179.3,
+      "min_up_time": 8,
+      "min_down_time": 7,
+      "no_load_cost": 1263.43,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 1938.58
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 4859.81
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 7805.85
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 93.6,
+          "output_mw_end": 155.5,
+          "marginal_cost_per_mwh": 52.6864
+        },
+        {
+          "output_mw_start": 155.5,
+          "output_mw_end": 217.4,
+          "marginal_cost_per_mwh": 55.6806
+        },
+        {
+          "output_mw_start": 217.4,
+          "output_mw_end": 279.3,
+          "marginal_cost_per_mwh": 58.1402
+        }
+      ],
+      "initial_status": -8,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_62",
+      "type": "gas_ct",
+      "p_min": 25.6,
+      "p_max": 100.3,
+      "ramp_up_limit": 18.0,
+      "ramp_down_limit": 19.4,
+      "startup_ramp_limit": 79.8,
+      "shutdown_ramp_limit": 90.0,
+      "min_up_time": 1,
+      "min_down_time": 2,
+      "no_load_cost": 285.83,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 458.14
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 1085.53
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1347.26
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 25.6,
+          "output_mw_end": 62.9,
+          "marginal_cost_per_mwh": 58.3282
+        },
+        {
+          "output_mw_start": 62.9,
+          "output_mw_end": 100.3,
+          "marginal_cost_per_mwh": 64.7231
+        }
+      ],
+      "initial_status": -2,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_63",
+      "type": "gas_ct",
+      "p_min": 14.2,
+      "p_max": 86.8,
+      "ramp_up_limit": 18.4,
+      "ramp_down_limit": 13.6,
+      "startup_ramp_limit": 77.9,
+      "shutdown_ramp_limit": 66.5,
+      "min_up_time": 2,
+      "min_down_time": 1,
+      "no_load_cost": 262.43,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 273.91
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 549.94
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1092.34
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 14.2,
+          "output_mw_end": 50.5,
+          "marginal_cost_per_mwh": 59.6409
+        },
+        {
+          "output_mw_start": 50.5,
+          "output_mw_end": 86.8,
+          "marginal_cost_per_mwh": 69.335
+        }
+      ],
+      "initial_status": -1,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_64",
+      "type": "gas_ct",
+      "p_min": 17.5,
+      "p_max": 97.1,
+      "ramp_up_limit": 14.9,
+      "ramp_down_limit": 18.9,
+      "startup_ramp_limit": 94.1,
+      "shutdown_ramp_limit": 69.2,
+      "min_up_time": 1,
+      "min_down_time": 1,
+      "no_load_cost": 131.02,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 180.0
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 295.34
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 470.09
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 17.5,
+          "output_mw_end": 57.3,
+          "marginal_cost_per_mwh": 61.9547
+        },
+        {
+          "output_mw_start": 57.3,
+          "output_mw_end": 97.1,
+          "marginal_cost_per_mwh": 71.8913
+        }
+      ],
+      "initial_status": 1,
+      "initial_power": 55.5
+    },
+    {
+      "id": "g_65",
+      "type": "gas_ct",
+      "p_min": 13.4,
+      "p_max": 69.1,
+      "ramp_up_limit": 15.7,
+      "ramp_down_limit": 17.7,
+      "startup_ramp_limit": 67.7,
+      "shutdown_ramp_limit": 61.9,
+      "min_up_time": 1,
+      "min_down_time": 2,
+      "no_load_cost": 398.56,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 342.41
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 818.1
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1203.4
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 13.4,
+          "output_mw_end": 41.2,
+          "marginal_cost_per_mwh": 42.7458
+        },
+        {
+          "output_mw_start": 41.2,
+          "output_mw_end": 69.1,
+          "marginal_cost_per_mwh": 50.6481
+        }
+      ],
+      "initial_status": -3,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_66",
+      "type": "gas_ct",
+      "p_min": 13.8,
+      "p_max": 114.9,
+      "ramp_up_limit": 19.0,
+      "ramp_down_limit": 24.1,
+      "startup_ramp_limit": 90.8,
+      "shutdown_ramp_limit": 114.0,
+      "min_up_time": 1,
+      "min_down_time": 2,
+      "no_load_cost": 369.08,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 314.11
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 499.13
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1249.36
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 13.8,
+          "output_mw_end": 64.4,
+          "marginal_cost_per_mwh": 41.8311
+        },
+        {
+          "output_mw_start": 64.4,
+          "output_mw_end": 114.9,
+          "marginal_cost_per_mwh": 47.805
+        }
+      ],
+      "initial_status": -2,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_67",
+      "type": "gas_ct",
+      "p_min": 21.8,
+      "p_max": 130.7,
+      "ramp_up_limit": 30.8,
+      "ramp_down_limit": 31.3,
+      "startup_ramp_limit": 103.9,
+      "shutdown_ramp_limit": 103.6,
+      "min_up_time": 3,
+      "min_down_time": 3,
+      "no_load_cost": 132.27,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 400.4
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 844.89
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 1436.8
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 21.8,
+          "output_mw_end": 76.2,
+          "marginal_cost_per_mwh": 65.378
+        },
+        {
+          "output_mw_start": 76.2,
+          "output_mw_end": 130.7,
+          "marginal_cost_per_mwh": 74.2039
+        }
+      ],
+      "initial_status": -9,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_68",
+      "type": "gas_cc",
+      "p_min": 83.5,
+      "p_max": 243.8,
+      "ramp_up_limit": 15.2,
+      "ramp_down_limit": 16.6,
+      "startup_ramp_limit": 158.5,
+      "shutdown_ramp_limit": 182.4,
+      "min_up_time": 6,
+      "min_down_time": 5,
+      "no_load_cost": 1155.89,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 880.35
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 2526.53
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 4313.65
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 83.5,
+          "output_mw_end": 136.9,
+          "marginal_cost_per_mwh": 41.1913
+        },
+        {
+          "output_mw_start": 136.9,
+          "output_mw_end": 190.4,
+          "marginal_cost_per_mwh": 44.7183
+        },
+        {
+          "output_mw_start": 190.4,
+          "output_mw_end": 243.8,
+          "marginal_cost_per_mwh": 48.1492
+        }
+      ],
+      "initial_status": -7,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_69",
+      "type": "steam",
+      "p_min": 75.2,
+      "p_max": 121.3,
+      "ramp_up_limit": 9.5,
+      "ramp_down_limit": 6.9,
+      "startup_ramp_limit": 75.2,
+      "shutdown_ramp_limit": 75.2,
+      "min_up_time": 8,
+      "min_down_time": 8,
+      "no_load_cost": 647.59,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 6,
+          "cost": 1096.53
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 18,
+          "cost": 2348.05
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 5612.47
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 75.2,
+          "output_mw_end": 98.2,
+          "marginal_cost_per_mwh": 33.3499
+        },
+        {
+          "output_mw_start": 98.2,
+          "output_mw_end": 121.3,
+          "marginal_cost_per_mwh": 38.3612
+        }
+      ],
+      "initial_status": -8,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_70",
+      "type": "coal",
+      "p_min": 198.9,
+      "p_max": 396.3,
+      "ramp_up_limit": 19.4,
+      "ramp_down_limit": 13.5,
+      "startup_ramp_limit": 267.6,
+      "shutdown_ramp_limit": 198.9,
+      "min_up_time": 15,
+      "min_down_time": 16,
+      "no_load_cost": 2619.35,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 8,
+          "cost": 6069.87
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 24,
+          "cost": 16793.89
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 47005.93
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 198.9,
+          "output_mw_end": 264.7,
+          "marginal_cost_per_mwh": 26.2379
+        },
+        {
+          "output_mw_start": 264.7,
+          "output_mw_end": 330.5,
+          "marginal_cost_per_mwh": 29.5632
+        },
+        {
+          "output_mw_start": 330.5,
+          "output_mw_end": 396.3,
+          "marginal_cost_per_mwh": 30.7734
+        }
+      ],
+      "initial_status": 19,
+      "initial_power": 267.8
+    },
+    {
+      "id": "g_71",
+      "type": "gas_cc",
+      "p_min": 93.8,
+      "p_max": 221.1,
+      "ramp_up_limit": 19.2,
+      "ramp_down_limit": 12.1,
+      "startup_ramp_limit": 134.9,
+      "shutdown_ramp_limit": 110.6,
+      "min_up_time": 6,
+      "min_down_time": 7,
+      "no_load_cost": 1179.19,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 4,
+          "cost": 1510.42
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 12,
+          "cost": 4142.36
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 5834.44
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 93.8,
+          "output_mw_end": 136.2,
+          "marginal_cost_per_mwh": 47.8656
+        },
+        {
+          "output_mw_start": 136.2,
+          "output_mw_end": 178.7,
+          "marginal_cost_per_mwh": 52.2466
+        },
+        {
+          "output_mw_start": 178.7,
+          "output_mw_end": 221.1,
+          "marginal_cost_per_mwh": 55.6224
+        }
+      ],
+      "initial_status": -7,
+      "initial_power": 0.0
+    },
+    {
+      "id": "g_72",
+      "type": "gas_ct",
+      "p_min": 13.2,
+      "p_max": 124.3,
+      "ramp_up_limit": 35.9,
+      "ramp_down_limit": 29.7,
+      "startup_ramp_limit": 93.3,
+      "shutdown_ramp_limit": 105.2,
+      "min_up_time": 3,
+      "min_down_time": 1,
+      "no_load_cost": 164.86,
+      "startup_costs": [
+        {
+          "label": "hot",
+          "max_downtime_hours": 2,
+          "cost": 344.86
+        },
+        {
+          "label": "warm",
+          "max_downtime_hours": 8,
+          "cost": 731.22
+        },
+        {
+          "label": "cold",
+          "max_downtime_hours": null,
+          "cost": 985.02
+        }
+      ],
+      "production_cost_segments": [
+        {
+          "output_mw_start": 13.2,
+          "output_mw_end": 68.8,
+          "marginal_cost_per_mwh": 45.7595
+        },
+        {
+          "output_mw_start": 68.8,
+          "output_mw_end": 124.3,
+          "marginal_cost_per_mwh": 54.165
+        }
+      ],
+      "initial_status": -4,
+      "initial_power": 0.0
+    }
+  ],
+  "demand": [
+    6563.93,
+    5907.63,
+    5607.67,
+    5444.23,
+    5981.48,
+    6118.59,
+    6470.7,
+    7700.9,
+    9095.56,
+    10715.34,
+    10962.83,
+    10777.76,
+    10177.63,
+    10357.15,
+    9788.31,
+    9724.0,
+    10191.56,
+    10646.1,
+    11114.69,
+    11788.01,
+    11707.17,
+    11613.37,
+    10483.85,
+    8913.55,
+    6390.04,
+    5854.32,
+    5995.7,
+    5320.76,
+    5494.29,
+    6116.48,
+    6954.26,
+    7664.34,
+    9301.82,
+    11002.9,
+    11349.36,
+    11031.95,
+    10661.72,
+    9901.25,
+    10204.89,
+    10185.54,
+    10051.13,
+    10298.34,
+    11401.0,
+    11775.7,
+    12222.76,
+    11332.34,
+    10428.03,
+    9086.63
+  ],
+  "reserve_requirement": [
+    328.2,
+    295.38,
+    280.38,
+    272.21,
+    299.07,
+    305.93,
+    323.54,
+    385.05,
+    454.78,
+    535.77,
+    548.14,
+    538.89,
+    508.88,
+    517.86,
+    489.42,
+    486.2,
+    509.58,
+    532.31,
+    555.73,
+    589.4,
+    585.36,
+    580.67,
+    524.19,
+    445.68,
+    319.5,
+    292.72,
+    299.79,
+    266.04,
+    274.71,
+    305.82,
+    347.71,
+    383.22,
+    465.09,
+    550.14,
+    567.47,
+    551.6,
+    533.09,
+    495.06,
+    510.24,
+    509.28,
+    502.56,
+    514.92,
+    570.05,
+    588.79,
+    611.14,
+    566.62,
+    521.4,
+    454.33
+  ]
+}

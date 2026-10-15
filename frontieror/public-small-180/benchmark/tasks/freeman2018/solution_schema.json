@@ -1,0 +1,7 @@
+{
+  "objective_value": "<float> Total profit from the tour, computed as total event revenue minus fixed event costs and travel costs.",
+  "tour": "<dict, key: '{period}'> Which venue site the tour visits in each period.",
+  "events": "<dict, key: '{period}'> Whether an event is held in each period (1 = yes, 0 = no).",
+  "event_sites": "<dict, key: '{period}'> Which venue site hosts the event in each period, if an event is held.",
+  "attendance": "<dict, key: '{site}_{period}'> Expected number of customers attending the event at each site in each period."
+}

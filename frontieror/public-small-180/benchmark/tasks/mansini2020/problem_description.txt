@@ -1,0 +1,5 @@
+# Problem Description
+
+A collection of items is partitioned into a number of disjoint groups. Each group contains a specified number of items, and every item belongs to exactly one group. There are also several shared resources, each with a given capacity. For every item, the input data specifies a profit and, for each resource, the amount of that resource the item consumes. All profits and resource consumptions are nonnegative, and every resource capacity is nonnegative.
+
+The task is to select exactly one item from each group so as to maximize the total profit of the selected items. The selection must respect all resource limits: for each resource, the sum of the consumptions of the selected items across all groups must not exceed that resource's capacity. Because exactly one item must be chosen per group, omitting a group entirely or picking more than one item from any single group is not allowed.

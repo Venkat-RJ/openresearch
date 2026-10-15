@@ -1,0 +1,7 @@
+# Problem Description
+
+A facility must pack a collection of items into identical bins of fixed capacity, using as few bins as possible. There are m distinct item types, where each item type has a known integer weight and a known integer demand specifying how many copies of that type must be packed. The bin capacity is a single integer W, and every item weight is strictly positive and does not exceed W.
+
+The planner decides how many bins to use and how to allocate items to those bins. The total weight of items placed in any single bin must not exceed the capacity W, and for every item type the total number of copies packed across all bins must be at least that type's demand.
+
+The objective is to minimize the total number of bins used.

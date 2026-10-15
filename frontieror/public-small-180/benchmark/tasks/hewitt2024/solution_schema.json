@@ -1,0 +1,11 @@
+{
+  "objective_value": "<float> Total expected profit, equal to expected sales revenue minus total manufacturing cost.",
+  "solution": {
+    "x": "<dict, key: '{product_id}_{facility_id}'> Quantity of raw materials (in finished-goods units) allocated to each product at each facility.",
+    "y": "<dict, key: '{product_id}_{facility_id}_{level_id}'> Whether the given production level is selected for each product at each facility (1 = selected, 0 = not selected).",
+    "delta": "<dict, key: '{product_id}_{distribution_id}'> Whether the given joint yield-and-demand distribution is selected for each product (1 = selected, 0 = not selected).",
+    "z": "<dict, key: '{product_id}_{distribution_id}_{scenario_id}'> Available inventory of each product in each scenario of each distribution.",
+    "w": "<dict, key: '{product_id}_{distribution_id}_{scenario_id}'> Amount of each product sold at full price in each scenario of each distribution.",
+    "o": "<dict, key: '{product_id}_{distribution_id}_{scenario_id}'> Amount of each product sold at discounted price (excess inventory) in each scenario of each distribution."
+  }
+}

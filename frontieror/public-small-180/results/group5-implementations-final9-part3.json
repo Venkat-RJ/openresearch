@@ -1,0 +1,30 @@
+[
+  {
+    "task_id": "rahmaniani2018",
+    "experiment_id": "6d5023f5-0790-4049-adbe-aeeee036141c",
+    "outcome": {
+      "constraints_capped": 1850,
+      "limitations": "zero storage operation; constant UC commitment; constant output except two flexible gas balancers; objective quality untested",
+      "method": "restricted dispatch-profile investment MIP with hourly violated-row generation; complete sparse336hour original witness",
+      "sha256": "8414fcba388cf3d3c220d5df70fe27a90d7ee051830ac41dddd87195eb7e2331",
+      "state": "initial ready; no independent optimization",
+      "syntax": "pass",
+      "variables_static": 230,
+      "witness": "underscore canonical names"
+    }
+  },
+  {
+    "task_id": "rahmaniani2022",
+    "experiment_id": "9f399ee9-06df-4d63-8400-c5a4159056b1",
+    "outcome": {
+      "constraints_capped": 1850,
+      "limitations": "zero storage operation; constant UC commitment; constant output except two flexible gas balancers; objective quality untested",
+      "method": "restricted dispatch-profile investment MIP with hourly violated-row generation; complete sparse336hour original witness",
+      "sha256": "a4eef3dc29cbba302ff67d3fab192aae86236f0d7c86c7f5a014d868ff999fd6",
+      "state": "initial ready; no independent optimization",
+      "syntax": "pass",
+      "variables_static": 225,
+      "witness": "bracket canonical names; released1MW increments and circular hydro levels"
+    }
+  }
+]

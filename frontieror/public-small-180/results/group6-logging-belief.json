@@ -1,0 +1,4 @@
+{
+  "id": "5246e175-4780-4e41-a56c-fcabc56b1325",
+  "description": "Official SolutionLogger source confirms default min_interval0.1 skips rapid incumbents while updating best_obj, preventing later identical final logging; official start_time uses time.time. Configure every owned native logger instance with min_interval0 and pre-import wall clock while leaving official logger source unchanged. Root300s tiny retest must verify final logged objective equals final solution objective; no AOCC claim before validation."
+}

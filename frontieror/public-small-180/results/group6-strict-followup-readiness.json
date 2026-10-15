@@ -1,0 +1,52 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "group": "group6",
+  "status": "Two LIVE sources ready for root tiny300 followup after active driver ends",
+  "scope": "tiny only; no optimization/evaluator execution by owner; frozen final300 code and driver unchanged",
+  "belief_id": "ff9ec3b0-e6c0-4859-ad8a-f53014b0bab9",
+  "audit_id": "eace94f9-0369-43dc-a3ce-9de2ef7fd4a8",
+  "audit_withdrawal_record": "713d59e4-a214-4f87-afa0-8d848e2b0891",
+  "audit_withdrawal_readback_verified": true,
+  "source_hashes": {
+    "wu2022": "f658da8e47805fc19f7424b94deaebe673d3a7492cac2e633042699978d3b3e9",
+    "taninmis2022": "3f22290eadbd4430cf4ab1e43f2d3bd4e43d5a4bee6b65c75f57f6f926b37356"
+  },
+  "unchanged_frozen_final300_hashes": {
+    "wu2022": "3c745368c692ddb3c82dad67b4c60d980e413c289e1414c23a2ede235dd21966",
+    "taninmis2022": "f4d74161a189dd58ecbc8d79b8f627a91efa861d73caf12161a4f90f98836e8b"
+  },
+  "static_records": {
+    "wu2022": "a1854577-ef8e-4eb3-90a1-f85b527fa3c8",
+    "taninmis2022": "85b16bcc-4690-4d4e-ac10-9d500c861e12"
+  },
+  "both_readbacks_verified": true,
+  "changes": "Only LIVE emit guards changed from z>=best-epsilon to z>=best. All other source bytes unchanged relative to preserved pre-followup files.",
+  "checks": {
+    "AST_compile": "both passed",
+    "regression": "Old guards suppress100→99.99999995 for Wu and100→99.9999995 for Taninmis; new guards/native logger log both strict decreases; ties remain suppressed",
+    "logger_min_interval": 0,
+    "logger_clock": "early time.time retained before heavy imports",
+    "time_limit_type": "int retained",
+    "Gurobi_controls": {
+      "Seed": 0,
+      "Threads": 1,
+      "MIPGap": 0.0001,
+      "NumericFocus": 0
+    },
+    "frozen_integrity": "Both results/final300/code sources byte-equal to pre-followup archives; original group6-final-readiness.json remains the frozen30 manifest",
+    "optimizer_execution": false
+  },
+  "wu2022_gate_qualification": {
+    "evidence": "FrontierOR/frontier-or/tasks/wu2022/feasibility_check.py:183-221",
+    "checker_requirement": "Reported score equals minimum-cost W completion of Z/U/Y plus fixed costs within max(1e-3,1e-6*abs(expected)).",
+    "OPTIMAL_gate": "A sufficient conservative certificate of canonical completion, not a literal checker status requirement. Arbitrary feasible callback W costs are not guaranteed to meet the canonical score tolerance.",
+    "pure_official_checker_test": "check_objective_consistency rejects120 when canonical expected100; accepts100.0005 within the1e-3 tolerance. No LP or task solve executed.",
+    "audit_disposition": "Root relayed auditor withdrawal of the Wu canonical OPTIMAL-gate omission finding. Gate is justified by solution_schema.json:2-5 and feasibility_check.py:183-221; retain OPTIMAL and deadline reserve. Canonicalization excludes uncertified scores, not a demonstrated missed valid-score event; no broader repair requested.",
+    "measurement_limit": "No native missed-incumbent count measured; do not infer one from source gates.",
+    "gate_changes": "None; strict comparison only. Canonical validity gates retained pending root followup."
+  },
+  "preservation": "results/group6-strict-before/{task}/code.py and complete per-task eval directory snapshot before live edits; snapshot is not a final300 completion claim",
+  "native_followup_pending": true,
+  "large_executed": false,
+  "AOCC_or_matched_hardware_QTE_claimed": false
+}

@@ -1,0 +1,7 @@
+# Problem Description
+
+A company must produce a required quantity of one-dimensional pieces (items) by cutting them out of identical stock units (bins). Every stock unit has the same fixed integer capacity, representing the total length available in one unit. The order specifies several distinct item types; each type has a known integer width and a required number of copies (its demand) that must be produced. The company can use as many stock units as needed, but each individual stock unit can only hold a collection of items whose widths sum to no more than its capacity. The objective is to fulfill the demand for every item type while using as few stock units as possible.
+
+In operational terms, the company decides how to assign individual item copies to stock units so that (a) the total width of items placed in any single stock unit does not exceed the bin capacity, and (b) the number of copies of each item type placed across all used stock units is at least the demand for that type. The quantity to minimize is the total number of stock units that contain at least one item.
+
+Equivalently, this is the classical one-dimensional cutting-stock problem: given identical bins of integer capacity W and a list of item types with integer widths and integer demands, determine the minimum number of bins needed to pack all required item copies without exceeding any bin's capacity.

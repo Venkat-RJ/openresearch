@@ -1,0 +1,16 @@
+{
+  "objective_value": "<float> Total cost of the solution, including all fixed vehicle costs, distance-based travel costs with the trailer towing surcharge where applicable, and handling costs for coupling and decoupling operations.",
+  "routes": [
+    {
+      "vehicle_class": "<int> Identifier of the vehicle class deployed on this route, specifying the truck type and whether a trailer is attached.",
+      "vehicle_index": "<int> Index distinguishing this deployed vehicle from other vehicles of the same class.",
+      "customers_served": "<list[int]> Identifiers of all customers visited and served on this route.",
+      "route_sequence": "<list[int], length variable> Ordered sequence of stop identifiers traversed on this route, in which each separate decoupling or coupling operation at a parking location is represented by its own distinct identifier so that repeated visits to the same parking location are distinguishable.",
+      "route_sequence_physical": "<list[int], length variable> Ordered sequence of physical location identifiers visited on this route, where the depot, customers, and parking locations are each referred to by their original location identifier.",
+      "decouple_locations": "<list[int]> Physical location identifiers at which the trailer is detached from the truck on this route.",
+      "couple_locations": "<list[int]> Physical location identifiers at which the trailer is reattached to the truck on this route.",
+      "arrival_times": "<dict, key: '{stop_identifier}'> Time at which the vehicle arrives at each stop along the route, where the key is the stop identifier from route_sequence and the value is the arrival time measured from the start of the planning horizon."
+    }
+  ],
+  "expanded_node_convention": "Let n_orig be the number of physical locations and P be the instance parking-location IDs in their published list order. Physical nodes retain IDs 0..n_orig-1. The decouple copy of P[i] has ID n_orig+i, and the couple copy of P[i] has ID n_orig+len(P)+i. Both copies map back to physical location P[i]."
+}

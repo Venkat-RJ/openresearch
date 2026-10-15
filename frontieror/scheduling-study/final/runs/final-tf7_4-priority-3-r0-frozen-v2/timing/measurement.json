@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "./frozen-v2",
+    "/work/runs/final-tf7_4-priority-3-r0-frozen-v2/input.txt",
+    "/work/runs/final-tf7_4-priority-3-r0-frozen-v2/output.json",
+    "290",
+    "104729",
+    "1"
+  ],
+  "pid": 1272,
+  "started_unix": 1791505344.3180535,
+  "external_deadline_seconds": 300.0,
+  "elapsed_seconds": 289.8746583000029,
+  "user_cpu_seconds": 288.092175,
+  "system_cpu_seconds": 0.014988,
+  "returncode": 0,
+  "timed_out": false,
+  "samples": [
+    {
+      "observed_seconds": 289.8720977999983,
+      "sha256": "45cb5829848fef4d26f57cf0ad09142e5268300067d26f0b66ba8160e1a53ff1",
+      "bytes": 11452,
+      "parseable": true,
+      "parse_error": null,
+      "snapshot": "snapshot-0000.json"
+    }
+  ],
+  "validation_status": "Pending both schedule validators; parseable is not feasible",
+  "timing_scope": "Process startup and execution; excludes container startup and preconversion"
+}

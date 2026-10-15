@@ -1,0 +1,809 @@
+{
+  "task_id": "furini2016",
+  "review_date": "2026-10-12",
+  "review_kind": "Separate Codex witness validation. This is not outside scientific replication.",
+  "no_solver_or_official_evaluator_executed": true,
+  "manifest": {
+    "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+    "batch": "final300",
+    "phase": "published-budget final verification",
+    "task_id": "furini2016",
+    "instance": "tiny",
+    "time_limit": 300,
+    "exec_mode": "docker",
+    "anti_hack": false,
+    "cpus": 1,
+    "memory": "2G",
+    "code_sha256": "d36dfe460a2b3895fa2215071e0e05295305e016f86c89fa5450283f0f564671",
+    "frozen_code": "FROZEN_CAMPAIGN/results/final300/code/furini2016/gpt-5.6-sol/code.py",
+    "results_csv": "FROZEN_CAMPAIGN/results/final300/results.csv",
+    "image": "sha256:6bd6f194a15bbcc8f4adfc621197e2849e8279b0372896cc8fff18d9dd0b72ca",
+    "evaluator_revision": "9bd047c9271d3048eff91dd0639941d0bc182d86",
+    "dataset_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8",
+    "group": 3
+  },
+  "files": {
+    "input": {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/furini2016/instance/tiny_instance.json",
+      "sha256": "e157c9f43089641e90198adc13cc32f45702c00962f0cb3b581021ab3fcfdbf6"
+    },
+    "formulation": {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/furini2016/mathematical_formulation.md",
+      "sha256": "79158ce9399d18468cf98b2dd7cc7dadadac9c21487a9ae3adfdb12c16595f75"
+    },
+    "description": {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/furini2016/problem_description.txt",
+      "sha256": "a73073267af919263d26e131ce7f0c0d890f45d175e88ffa658de12233e2f22f"
+    },
+    "schema": {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/furini2016/solution_schema.json",
+      "sha256": "79b65a1d0aad313b1694f7ea7b83bc0efd11b7bba7834556baecf2c936092177"
+    },
+    "checker": {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/furini2016/feasibility_check.py",
+      "sha256": "e1e5b9327fb48add1d3c20d8d7a8f153a5aa2ab92875122052947707a4e7ed15"
+    },
+    "reference_source": {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/furini2016/gurobi_code.py",
+      "sha256": "61256cbe45272e78058c1c731ebc601d0addad3c91cbc9d99fc9682ab54a921f"
+    },
+    "reference_witness": {
+      "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/furini2016/gurobi_solution/tiny_solution.json",
+      "sha256": "43fb60c04a7ed4fead3c7d1e69307c069ed974f5b5232191a6cd04dd23812ab6"
+    },
+    "saved_witness": {
+      "path": "FROZEN_CAMPAIGN/results/final300/raw_outputs/furini2016/solution_tiny.json",
+      "sha256": "bb59961bd6e0cc8c7ec002b552a9e0ff195553042133c178cc113524126ce14b"
+    },
+    "frozen_source": {
+      "path": "FROZEN_CAMPAIGN/results/final300/code/furini2016/gpt-5.6-sol/code.py",
+      "sha256": "d36dfe460a2b3895fa2215071e0e05295305e016f86c89fa5450283f0f564671"
+    },
+    "manifest": {
+      "path": "FROZEN_CAMPAIGN/results/final300/manifest.json",
+      "sha256": "5c5d2fa93b389852dc0585f2cb83d56230948bb957ba31934d169f8c021447f4"
+    },
+    "archived_checker_result": {
+      "path": "FROZEN_CAMPAIGN/results/final300/raw_outputs/furini2016/feasi_result_tiny.json",
+      "sha256": "3269392edcbb7720882e77caadb88b4a9cf2fda04cf482cebd23baace4a531fd"
+    }
+  },
+  "reference_urls": {
+    "input": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/furini2016/instance/tiny_instance.json",
+    "formulation": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/furini2016/mathematical_formulation.md",
+    "description": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/furini2016/problem_description.txt",
+    "schema": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/furini2016/solution_schema.json",
+    "checker": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/furini2016/feasibility_check.py",
+    "reference_source": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/furini2016/gurobi_code.py",
+    "reference_witness": "https://huggingface.co/datasets/frontieror/FrontierOR/blob/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/furini2016/gurobi_solution/tiny_solution.json"
+  },
+  "reference_url_status": "Revision paths established from local release metadata and README. web open was unavailable, so online retrieval was not independently confirmed.",
+  "evaluator_url": "https://github.com/Minw913/FrontierOR/tree/9bd047c9271d3048eff91dd0639941d0bc182d86",
+  "saved_witness_validation": {
+    "valid": true,
+    "recomputed_profit": 1600,
+    "selected_area": 1600,
+    "panel_area": 1600,
+    "unselected_area": 0,
+    "items_selected": [
+      {
+        "item_id": 1,
+        "copies": 400,
+        "available_copies": 400,
+        "length": 1,
+        "width": 4,
+        "unit_profit": 4
+      },
+      {
+        "item_id": 2,
+        "copies": 0,
+        "available_copies": 88,
+        "length": 2,
+        "width": 9,
+        "unit_profit": 18
+      },
+      {
+        "item_id": 3,
+        "copies": 0,
+        "available_copies": 76,
+        "length": 7,
+        "width": 3,
+        "unit_profit": 21
+      },
+      {
+        "item_id": 4,
+        "copies": 0,
+        "available_copies": 38,
+        "length": 7,
+        "width": 6,
+        "unit_profit": 42
+      },
+      {
+        "item_id": 5,
+        "copies": 0,
+        "available_copies": 22,
+        "length": 10,
+        "width": 7,
+        "unit_profit": 70
+      }
+    ],
+    "plate_types": 49,
+    "cut_types": 48,
+    "physical_cut_count": 399,
+    "finished_item_count": 400,
+    "midpoint_cuts": [
+      {
+        "cut_index": 9,
+        "parent_plate_id": 11,
+        "parent_dims": [
+          1,
+          8
+        ],
+        "orientation": "h",
+        "position": 4,
+        "count": 40,
+        "child_dims": [
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      {
+        "cut_index": 47,
+        "parent_plate_id": 48,
+        "parent_dims": [
+          2,
+          40
+        ],
+        "orientation": "v",
+        "position": 1,
+        "count": 1,
+        "child_dims": [
+          [
+            1,
+            40
+          ],
+          [
+            1,
+            40
+          ]
+        ]
+      }
+    ],
+    "flow": [
+      {
+        "plate_id": 0,
+        "dims": [
+          40,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 1,
+        "dims": [
+          1,
+          40
+        ],
+        "available": 40,
+        "cut": 40,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 2,
+        "dims": [
+          39,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 3,
+        "dims": [
+          1,
+          4
+        ],
+        "available": 400,
+        "cut": 0,
+        "kept": 400,
+        "slack": 0
+      },
+      {
+        "plate_id": 4,
+        "dims": [
+          1,
+          36
+        ],
+        "available": 40,
+        "cut": 40,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 5,
+        "dims": [
+          1,
+          32
+        ],
+        "available": 40,
+        "cut": 40,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 6,
+        "dims": [
+          1,
+          28
+        ],
+        "available": 40,
+        "cut": 40,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 7,
+        "dims": [
+          1,
+          24
+        ],
+        "available": 40,
+        "cut": 40,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 8,
+        "dims": [
+          1,
+          20
+        ],
+        "available": 40,
+        "cut": 40,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 9,
+        "dims": [
+          1,
+          16
+        ],
+        "available": 40,
+        "cut": 40,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 10,
+        "dims": [
+          1,
+          12
+        ],
+        "available": 40,
+        "cut": 40,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 11,
+        "dims": [
+          1,
+          8
+        ],
+        "available": 40,
+        "cut": 40,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 12,
+        "dims": [
+          38,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 13,
+        "dims": [
+          37,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 14,
+        "dims": [
+          36,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 15,
+        "dims": [
+          35,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 16,
+        "dims": [
+          34,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 17,
+        "dims": [
+          33,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 18,
+        "dims": [
+          32,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 19,
+        "dims": [
+          31,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 20,
+        "dims": [
+          30,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 21,
+        "dims": [
+          29,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 22,
+        "dims": [
+          28,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 23,
+        "dims": [
+          27,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 24,
+        "dims": [
+          26,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 25,
+        "dims": [
+          25,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 26,
+        "dims": [
+          24,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 27,
+        "dims": [
+          23,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 28,
+        "dims": [
+          22,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 29,
+        "dims": [
+          21,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 30,
+        "dims": [
+          20,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 31,
+        "dims": [
+          19,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 32,
+        "dims": [
+          18,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 33,
+        "dims": [
+          17,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 34,
+        "dims": [
+          16,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 35,
+        "dims": [
+          15,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 36,
+        "dims": [
+          14,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 37,
+        "dims": [
+          13,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 38,
+        "dims": [
+          12,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 39,
+        "dims": [
+          11,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 40,
+        "dims": [
+          10,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 41,
+        "dims": [
+          9,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 42,
+        "dims": [
+          8,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 43,
+        "dims": [
+          7,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 44,
+        "dims": [
+          6,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 45,
+        "dims": [
+          5,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 46,
+        "dims": [
+          4,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 47,
+        "dims": [
+          3,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      },
+      {
+        "plate_id": 48,
+        "dims": [
+          2,
+          40
+        ],
+        "available": 1,
+        "cut": 1,
+        "kept": 0,
+        "slack": 0
+      }
+    ]
+  },
+  "reference_witness_validation": {
+    "valid": true,
+    "recomputed_profit": 1592,
+    "selected_area": 1592,
+    "panel_area": 1600,
+    "unselected_area": 8,
+    "items_selected": [
+      {
+        "item_id": 1,
+        "copies": 38,
+        "available_copies": 400,
+        "length": 1,
+        "width": 4,
+        "unit_profit": 4
+      },
+      {
+        "item_id": 2,
+        "copies": 24,
+        "available_copies": 88,
+        "length": 2,
+        "width": 9,
+        "unit_profit": 18
+      },
+      {
+        "item_id": 3,
+        "copies": 16,
+        "available_copies": 76,
+        "length": 7,
+        "width": 3,
+        "unit_profit": 21
+      },
+      {
+        "item_id": 4,
+        "copies": 16,
+        "available_copies": 38,
+        "length": 7,
+        "width": 6,
+        "unit_profit": 42
+      },
+      {
+        "item_id": 5,
+        "copies": 0,
+        "available_copies": 22,
+        "length": 10,
+        "width": 7,
+        "unit_profit": 70
+      }
+    ],
+    "plate_types": 1394,
+    "cut_types": 52,
+    "physical_cut_count": 94,
+    "finished_item_count": 94,
+    "midpoint_cuts": []
+  },
+  "global_area_bound": {
+    "premise": "Every item profit equals its area, all items are non-overlapping pieces cut from one 40x40 panel.",
+    "upper_bound": 1600,
+    "saved_witness_reaches_bound": true,
+    "optimality_scope": "This pinned tiny instance under the stated general guillotine model."
+  },
+  "midpoint_source_finding": {
+    "path": "FROZEN_CAMPAIGN/FrontierOR/frontier-or/tasks/furini2016/gurobi_code.py",
+    "lines": [
+      102,
+      103
+    ],
+    "code": [
+      "h_pos = sorted(q for q in h_all if 2 * q < plate_w)",
+      "v_pos = sorted(q for q in v_all if 2 * q < plate_l)"
+    ],
+    "excluded_physical_cuts_in_saved_witness": 41,
+    "claim_scope": "The reference cut enumeration excludes this valid saved witness. No modified reference solver was run; the causal contribution of that change alone to the archived 8-point gap was not experimentally isolated."
+  },
+  "checker_limits": [
+    "The public solution schema lists only objective_value and items_selected.",
+    "The saved witness also provides plate_id, plates and cuts_used.",
+    "The checker computes cut-flow counts but trusts supplied child IDs and item classification.",
+    "It does not compare cut geometry or positions against parent/child dimensions.",
+    "Its x nonnegative integer section does not perform an x-count check.",
+    "The independent validator checks these properties and explicitly expands the saved cut multiset into a physical tree."
+  ],
+  "limits": [
+    "No solver was rerun.",
+    "No official feasibility checker or benchmark evaluator was executed.",
+    "No new campaign was launched.",
+    "The archived runtime is not a newly verified performance measurement.",
+    "This is one pinned tiny instance, not a general solver guarantee.",
+    "The review was performed by a separate Codex agent, not an outside scientific researcher."
+  ]
+}

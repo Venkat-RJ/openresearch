@@ -1,0 +1,10 @@
+{
+  "objective_value": "<int> Total number of bins used to pack all items.",
+  "bins": [
+    {
+      "items": "<list[int], length varies> Zero-based indices of the items assigned to this bin.",
+      "total_weight": "<int> Combined weight of all items assigned to this bin.",
+      "total_volume": "<int> Combined volume of all items assigned to this bin."
+    }
+  ]
+}

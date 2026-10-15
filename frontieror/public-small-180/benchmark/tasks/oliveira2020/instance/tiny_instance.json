@@ -1,0 +1,66 @@
+{
+  "instance_id": "instance_1",
+  "problem": "P||sum_wjTj",
+  "description": "Small parallel-machine weighted-tardiness smoke-test instance.",
+  "scale": "small",
+  "parameters": {
+    "n": 8,
+    "m": 2,
+    "TF": 0.2,
+    "RF": 0.4,
+    "seed": 4200000
+  },
+  "time_horizon": 222,
+  "total_processing_time": 347,
+  "p_max": 98,
+  "jobs": [
+    {
+      "id": 1,
+      "processing_time": 40,
+      "weight": 4,
+      "due_date": 146
+    },
+    {
+      "id": 2,
+      "processing_time": 32,
+      "weight": 2,
+      "due_date": 129
+    },
+    {
+      "id": 3,
+      "processing_time": 9,
+      "weight": 10,
+      "due_date": 157
+    },
+    {
+      "id": 4,
+      "processing_time": 26,
+      "weight": 4,
+      "due_date": 160
+    },
+    {
+      "id": 5,
+      "processing_time": 90,
+      "weight": 10,
+      "due_date": 135
+    },
+    {
+      "id": 6,
+      "processing_time": 29,
+      "weight": 6,
+      "due_date": 153
+    },
+    {
+      "id": 7,
+      "processing_time": 23,
+      "weight": 2,
+      "due_date": 126
+    },
+    {
+      "id": 8,
+      "processing_time": 98,
+      "weight": 10,
+      "due_date": 169
+    }
+  ]
+}

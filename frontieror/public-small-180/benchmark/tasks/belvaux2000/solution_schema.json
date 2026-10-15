@@ -1,0 +1,8 @@
+{
+  "objective_value": "<float> Total cost of the production plan, combining setup, startup, inventory holding, and backlogging costs over the planning horizon.",
+  "production": "<dict, key: '{item}_{machine}_{period}'> Quantity of an item produced on a specific machine in a specific period.",
+  "stock": "<dict, key: '{item}_{period}'> Inventory of an item held on hand at the end of a specific period.",
+  "backlog": "<dict, key: '{item}_{period}'> Unfulfilled demand for an item carried as backlog at the end of a specific period.",
+  "setup": "<dict, key: '{item}_{machine}_{period}'> Whether a machine is set up to produce a given item in a given period (1 = set up).",
+  "startup": "<dict, key: '{item}_{machine}_{period}'> Whether a machine begins a new setup for a given item in a given period, having not been set up for that item in the previous period (1 = startup occurs)."
+}

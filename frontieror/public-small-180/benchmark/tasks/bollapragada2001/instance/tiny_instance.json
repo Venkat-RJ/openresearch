@@ -1,0 +1,302 @@
+{
+  "problem_name": "Problem_1A",
+  "problem_description": "10-bar cantilever truss, 1 load, no displacement bounds",
+  "source": "Bollapragada, Ghattas, Hooker (2001)",
+  "structure_type": "10_bar_planar_cantilever",
+  "dimension": 2,
+  "num_bars": 10,
+  "num_nodes": 6,
+  "num_loading_conditions": 1,
+  "num_free_dofs": 8,
+  "num_linking_groups": 0,
+  "linking_groups": [],
+  "nodes": [
+    {
+      "node_id": 1,
+      "x": 720.0,
+      "y": 360.0,
+      "is_support": false
+    },
+    {
+      "node_id": 2,
+      "x": 720.0,
+      "y": 0.0,
+      "is_support": false
+    },
+    {
+      "node_id": 3,
+      "x": 360.0,
+      "y": 360.0,
+      "is_support": false
+    },
+    {
+      "node_id": 4,
+      "x": 360.0,
+      "y": 0.0,
+      "is_support": false
+    },
+    {
+      "node_id": 5,
+      "x": 0.0,
+      "y": 360.0,
+      "is_support": true,
+      "fixed_dofs": [
+        "x",
+        "y"
+      ]
+    },
+    {
+      "node_id": 6,
+      "x": 0.0,
+      "y": 0.0,
+      "is_support": true,
+      "fixed_dofs": [
+        "x",
+        "y"
+      ]
+    }
+  ],
+  "bars": [
+    {
+      "bar_id": 1,
+      "node_i": 5,
+      "node_j": 3,
+      "length": 360.0,
+      "direction_cosines": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "bar_id": 2,
+      "node_i": 3,
+      "node_j": 1,
+      "length": 360.0,
+      "direction_cosines": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "bar_id": 3,
+      "node_i": 6,
+      "node_j": 4,
+      "length": 360.0,
+      "direction_cosines": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "bar_id": 4,
+      "node_i": 4,
+      "node_j": 2,
+      "length": 360.0,
+      "direction_cosines": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "bar_id": 5,
+      "node_i": 3,
+      "node_j": 4,
+      "length": 360.0,
+      "direction_cosines": [
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bar_id": 6,
+      "node_i": 1,
+      "node_j": 2,
+      "length": 360.0,
+      "direction_cosines": [
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bar_id": 7,
+      "node_i": 5,
+      "node_j": 4,
+      "length": 509.116882,
+      "direction_cosines": [
+        0.707107,
+        -0.707107
+      ]
+    },
+    {
+      "bar_id": 8,
+      "node_i": 6,
+      "node_j": 3,
+      "length": 509.116882,
+      "direction_cosines": [
+        0.707107,
+        0.707107
+      ]
+    },
+    {
+      "bar_id": 9,
+      "node_i": 3,
+      "node_j": 2,
+      "length": 509.116882,
+      "direction_cosines": [
+        0.707107,
+        -0.707107
+      ]
+    },
+    {
+      "bar_id": 10,
+      "node_i": 4,
+      "node_j": 1,
+      "length": 509.116882,
+      "direction_cosines": [
+        0.707107,
+        0.707107
+      ]
+    }
+  ],
+  "degrees_of_freedom": [
+    {
+      "dof_id": 1,
+      "node": 1,
+      "direction": "x"
+    },
+    {
+      "dof_id": 2,
+      "node": 1,
+      "direction": "y"
+    },
+    {
+      "dof_id": 3,
+      "node": 2,
+      "direction": "x"
+    },
+    {
+      "dof_id": 4,
+      "node": 2,
+      "direction": "y"
+    },
+    {
+      "dof_id": 5,
+      "node": 3,
+      "direction": "x"
+    },
+    {
+      "dof_id": 6,
+      "node": 3,
+      "direction": "y"
+    },
+    {
+      "dof_id": 7,
+      "node": 4,
+      "direction": "x"
+    },
+    {
+      "dof_id": 8,
+      "node": 4,
+      "direction": "y"
+    }
+  ],
+  "material_properties": {
+    "modulus_of_elasticity": 10000000.0,
+    "cost_density": 0.1
+  },
+  "discrete_areas": [
+    0.01,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "num_discrete_areas": 11,
+  "stress_bounds": {
+    "lower": -25000,
+    "upper": 25000
+  },
+  "bar_specific_stress_bounds": [
+    {
+      "bar_id": 1,
+      "lower": -25000,
+      "upper": 25000
+    },
+    {
+      "bar_id": 2,
+      "lower": -25000,
+      "upper": 25000
+    },
+    {
+      "bar_id": 3,
+      "lower": -25000,
+      "upper": 25000
+    },
+    {
+      "bar_id": 4,
+      "lower": -25000,
+      "upper": 25000
+    },
+    {
+      "bar_id": 5,
+      "lower": -25000,
+      "upper": 25000
+    },
+    {
+      "bar_id": 6,
+      "lower": -25000,
+      "upper": 25000
+    },
+    {
+      "bar_id": 7,
+      "lower": -25000,
+      "upper": 25000
+    },
+    {
+      "bar_id": 8,
+      "lower": -25000,
+      "upper": 25000
+    },
+    {
+      "bar_id": 9,
+      "lower": -25000,
+      "upper": 25000
+    },
+    {
+      "bar_id": 10,
+      "lower": -25000,
+      "upper": 25000
+    }
+  ],
+  "displacement_bounds": {
+    "lower": null,
+    "upper": null
+  },
+  "loading_conditions": [
+    {
+      "load_id": 1,
+      "description": "Two 100000 lb downward loads at nodes 2, 4",
+      "loads": [
+        {
+          "node": 2,
+          "direction": "y",
+          "dof_id": 4,
+          "force": -100000
+        },
+        {
+          "node": 4,
+          "direction": "y",
+          "dof_id": 8,
+          "force": -100000
+        }
+      ]
+    }
+  ],
+  "expected_optimal_mass": 1674.0
+}

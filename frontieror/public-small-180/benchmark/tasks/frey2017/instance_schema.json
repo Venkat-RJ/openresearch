@@ -1,0 +1,74 @@
+{
+  "planning_horizon": {
+    "num_periods": "<int> Total number of discrete time periods spanning the planning day.",
+    "period_length_minutes": "<int> Duration of each time period in minutes."
+  },
+  "objective": {
+    "target_utilization": "<float> Target conveyor belt utilization ratio below which no penalty is incurred.",
+    "threshold_values": "<list[float], length num_thresholds> Ordered utilization excess thresholds above the target at which penalties are triggered.",
+    "penalties": "<list[int], length num_thresholds> Penalty cost associated with each utilization threshold level, increasing steeply with the threshold index."
+  },
+  "peak_intervals": [
+    {
+      "peak_id": "<int> Identifier for this peak interval.",
+      "start_period": "<int> First period of this peak interval during which carousel utilization is monitored.",
+      "end_period": "<int> Last period (inclusive) of this peak interval during which carousel utilization is monitored."
+    }
+  ],
+  "central_storage": {
+    "capacity_bags": "<int> Maximum number of bags that can be held in the central storage system at any time.",
+    "depletion_rate_bags_per_period": "<int> Number of bags transferred from central storage to the carousel per period during depletion.",
+    "depletion_offset_periods": "<int> Number of periods before the handling end by which storage depletion must commence."
+  },
+  "working_rate_bags_per_period": "<int> Number of bags each working station can load into containers per period.",
+  "baggage_transfer_time_periods": "<int> Number of periods required to transfer baggage from storage to a carousel.",
+  "flight_end_offset_periods": "<int> Number of periods before departure by which baggage handling must conclude.",
+  "quantile_used": "<float> Quantile of the baggage arrival distribution used to estimate the arrival profile.",
+  "num_flights": "<int> Total number of outgoing flights to be scheduled.",
+  "num_carousels": "<int> Total number of carousels available for baggage handling.",
+  "carousel_config": [
+    {
+      "type_r": "<int> Carousel type identifier.",
+      "count": "<int> Number of carousels of this type."
+    }
+  ],
+  "carousel_types": {
+    "{type_id}": {
+      "Kpp": "<int> Maximum number of container parking positions at a carousel of this type.",
+      "Kws": "<int> Maximum number of working stations at a carousel of this type.",
+      "Kppws": "<int> Number of container parking positions per working station at a carousel of this type.",
+      "Kcb": "<int> Conveyor belt capacity (maximum bags on the belt in any period) for a carousel of this type."
+    }
+  },
+  "carousels": [
+    {
+      "carousel_id": "<int> Unique identifier for this carousel.",
+      "type_r": "<int> Type of this carousel, referencing a key in carousel_types.",
+      "Kpp": "<int> Maximum number of container parking positions at this carousel.",
+      "Kws": "<int> Maximum number of working stations at this carousel.",
+      "Kppws": "<int> Number of container parking positions per working station at this carousel.",
+      "Kcb": "<int> Conveyor belt capacity (maximum bags on the belt in any period) for this carousel."
+    }
+  ],
+  "flights": [
+    {
+      "flight_id": "<int> Unique identifier for this flight.",
+      "departure_period": "<int> Period in which this flight departs.",
+      "expected_baggage": "<int> Expected total number of bags for this flight.",
+      "num_containers": "<int> Number of containers required to hold this flight's baggage.",
+      "earliest_start_period": "<int> Earliest period at which baggage handling may begin for this flight.",
+      "latest_start_period": "<int> Latest period at which baggage handling may begin for this flight.",
+      "end_period": "<int> Period by which all baggage handling must be completed for this flight.",
+      "handling_duration_periods": "<int> Number of periods over which baggage arrives for this flight.",
+      "arrival_profile": "<list[int], length handling_duration_periods> Number of bags arriving in each successive period of the handling window.",
+      "working_station_bounds_by_carousel_type": {
+        "{type_id}": {
+          "Wmin": "<int> Minimum number of working stations required for this flight at a carousel of this type.",
+          "Wmax": "<int> Maximum number of working stations allowed for this flight at a carousel of this type."
+        }
+      },
+      "Wmin": "<int> Minimum number of working stations required for this flight across all compatible carousel types.",
+      "Wmax": "<int> Maximum number of working stations allowed for this flight across all compatible carousel types."
+    }
+  ]
+}

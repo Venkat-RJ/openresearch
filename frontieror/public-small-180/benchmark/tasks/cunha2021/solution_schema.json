@@ -1,0 +1,12 @@
+{
+  "objective_value": "<float> Total cost over the planning horizon, summing all fixed setup costs incurred and all per-unit holding costs charged at every facility in every period.",
+  "x_plant": "<list[float], length num_periods> Quantity produced at the plant in each period.",
+  "s_plant": "<list[float], length num_periods> Inventory held at the plant at the end of each period.",
+  "y_plant": "<list[int], length num_periods> Whether the plant is set up to produce in each period (1 = yes, 0 = no).",
+  "x_warehouses": "<list[list[float]], shape [num_warehouses][num_periods]> Quantity shipped from the plant to each warehouse in each period.",
+  "s_warehouses": "<list[list[float]], shape [num_warehouses][num_periods]> Inventory held at each warehouse at the end of each period.",
+  "y_warehouses": "<list[list[int]], shape [num_warehouses][num_periods]> Whether each warehouse is set up to receive a shipment in each period (1 = yes, 0 = no).",
+  "x_retailers": "<list[list[float]], shape [num_retailers][num_periods]> Quantity shipped from the assigned warehouse to each retailer in each period.",
+  "s_retailers": "<list[list[float]], shape [num_retailers][num_periods]> Inventory held at each retailer at the end of each period.",
+  "y_retailers": "<list[list[int]], shape [num_retailers][num_periods]> Whether each retailer is set up to receive a shipment in each period (1 = yes, 0 = no)."
+}

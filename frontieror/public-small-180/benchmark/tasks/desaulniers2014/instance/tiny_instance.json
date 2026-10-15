@@ -1,0 +1,132 @@
+{
+  "problem_name": "Inventory-Routing Problem (desaulniers2014)",
+  "replenishment_policy": "Maximum-Level (ML)",
+  "instance_class": "H3",
+  "num_customers": 5,
+  "num_periods": 3,
+  "num_vehicles": 2,
+  "vehicle_capacity": 158,
+  "depot": {
+    "id": 0,
+    "x": 163,
+    "y": 498,
+    "initial_inventory": 554,
+    "max_inventory": 1187,
+    "production_per_period": 211,
+    "holding_cost": 0.3
+  },
+  "customers": [
+    {
+      "id": 1,
+      "x": 127,
+      "y": 74,
+      "initial_inventory": 110,
+      "max_inventory": 110,
+      "min_inventory": 0,
+      "demand_per_period": 55,
+      "holding_cost": 0.45
+    },
+    {
+      "id": 2,
+      "x": 250,
+      "y": 200,
+      "initial_inventory": 94,
+      "max_inventory": 94,
+      "min_inventory": 0,
+      "demand_per_period": 47,
+      "holding_cost": 0.29
+    },
+    {
+      "id": 3,
+      "x": 163,
+      "y": 320,
+      "initial_inventory": 62,
+      "max_inventory": 93,
+      "min_inventory": 0,
+      "demand_per_period": 31,
+      "holding_cost": 0.11
+    },
+    {
+      "id": 4,
+      "x": 33,
+      "y": 183,
+      "initial_inventory": 84,
+      "max_inventory": 126,
+      "min_inventory": 0,
+      "demand_per_period": 42,
+      "holding_cost": 0.31
+    },
+    {
+      "id": 5,
+      "x": 390,
+      "y": 105,
+      "initial_inventory": 36,
+      "max_inventory": 108,
+      "min_inventory": 0,
+      "demand_per_period": 36,
+      "holding_cost": 0.16
+    }
+  ],
+  "distance_matrix": [
+    [
+      0,
+      426,
+      310,
+      178,
+      341,
+      454
+    ],
+    [
+      426,
+      0,
+      176,
+      249,
+      144,
+      265
+    ],
+    [
+      310,
+      176,
+      0,
+      148,
+      218,
+      169
+    ],
+    [
+      178,
+      249,
+      148,
+      0,
+      189,
+      313
+    ],
+    [
+      341,
+      144,
+      218,
+      189,
+      0,
+      365
+    ],
+    [
+      454,
+      265,
+      169,
+      313,
+      365,
+      0
+    ]
+  ],
+  "parameters": {
+    "holding_cost_type": "High",
+    "coordinate_range": [
+      0,
+      500
+    ],
+    "demand_range": [
+      10,
+      99
+    ],
+    "seed": 1042
+  }
+}

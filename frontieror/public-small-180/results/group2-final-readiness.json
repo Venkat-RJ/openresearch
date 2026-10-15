@@ -1,0 +1,246 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "group": 2,
+  "scope": "tiny-only",
+  "driver": "root official one_shot_eval.py, standard Docker, 1CPU",
+  "requested_time_limit_seconds": 300,
+  "ready": true,
+  "verification": "All30 frozen final300 sources and native outcomes verified;29 quality passes,1 feasible quality failure. Separate Degraeve retention followup officially measured and exactly coherent;bound-tolerance numerical artifact,not substantive/exact beat.",
+  "experiment": "d458c8be-eaf9-4a55-afe3-50a545dd9d66",
+  "prior_static_experiment": "695a8c5e-5f00-44de-8757-aac0a3f4d24e",
+  "chebil_repairs": {
+    "tasks": [
+      "chebil2015",
+      "chebil2019"
+    ],
+    "audit_records": [
+      "1e5a8b77-49b6-4956-b5b7-b76e0a4c190a",
+      "c58db96f-9f06-4bed-a996-90c526ac6009"
+    ],
+    "logger_before_DP": true,
+    "every_improved_global_capacity_feasible_state": "complete original decision witness; unprocessed items/families zero",
+    "deadline": "write stored best feasible witness; no timeout exception",
+    "verification": "AST/compile/source inspection only; native log verification pending root"
+  },
+  "readback_verified": true,
+  "logging_hypothesis": "ea1d5b11-d914-4c72-a34e-d52be63d723d",
+  "common_checks": {
+    "ast_parse": true,
+    "compile": true,
+    "time_limit_cli_type": "int",
+    "logger_min_interval": 0,
+    "logger_clock": "time.time",
+    "clock_capture": "first statement in main, before CLI and instance preparation",
+    "logger_upstream_unchanged": true,
+    "full_solution_snapshots": true,
+    "all_Gurobi_models": {
+      "Seed": 0,
+      "MIPGap": 0.0001,
+      "NumericFocus": 0,
+      "Threads": 1
+    },
+    "large_executions": 0
+  },
+  "source_bytes_scope": "Immutable all30 source snapshot frozen in final300; live Degraeve-only postfreeze repair separately identified below",
+  "native_final300": {
+    "summary_record": "616010cf-89a4-4252-9e5c-ec10f3dd780f",
+    "summary_GET_verified": true,
+    "receipt_scope": "Snapshot before attaching this external receipt ID",
+    "all30_GET_verified": true,
+    "all30_official_feasible": true,
+    "gate_passes": 29,
+    "gate_failures": 1,
+    "results": "results/group2-results.json",
+    "outcomes": "results/final300/verified-outcomes.json"
+  },
+  "postfreeze_live_only_repair": {
+    "task": "degraeve2007",
+    "sha256": "4dc392b2130fae61a3cdabe69bbc5ac02a329c50cdda4a4e3dfbb1e73d27d30f",
+    "frozen_hash_unchanged": true,
+    "diagnosis_record": "d55a72e0-c8b9-4945-a13b-84d37484fb77",
+    "static_record": "cdbc80c6-8a43-45be-80f7-ada8423b6959",
+    "strict3e-7_regression_record": "5bd65029-7146-4acd-bdd5-7917620b3ed4",
+    "GET_verified": true,
+    "native300_followup": "results/final300-logging2",
+    "native_outcome": "000cac35-51fb-4fe4-8dea-944c17457398",
+    "native_GET_raw_hash_checker_verified": true,
+    "native_objective": 46597.339999653,
+    "native_log_events": 13,
+    "native_terminal_difference": 0.0,
+    "native_exact_full_snapshot_equal": true,
+    "measured_followup_summary": "a7264603-0e7d-481e-a9d9-cfedf3492d51",
+    "measured_followup_summary_GET_verified": true,
+    "qualification": "Best saved complete witness official-checker tolerance-feasible: minimum bound-1.1232608254641008e-7 vs1e-5; no full exact feasibility or material beat claim"
+  },
+  "quality_alternatives_at_freeze": [
+    {
+      "task": "engineer2012",
+      "hypothesis": "fda5eca8-4fad-47ec-baad-995e12bd3ed1",
+      "method": "Immediate unused-vessel sink, early-exit demand prefixes, structured two-supply/two-demand voyages; capped190 paths/vessel and exact shared transfer/cargo/inventory master"
+    },
+    {
+      "task": "carvalho2022",
+      "hypothesis": "f47d9e06-7988-4de7-8116-35aa7c421d31",
+      "method": "Aggregate production/inventory, integer repeated setup multigraph, lazy reachability, original before/after and carryover lot inequalities, FIFO demand allocation"
+    },
+    {
+      "task": "cote2019",
+      "hypothesis": "f2631952-9b6c-42c2-941e-b6fc455b3838",
+      "method": "Bidirectional all-scenario robust packing,2-opt,destroy/reinsert, insertion-column pool,1900-column partition master; zero recourse restriction retained"
+    }
+  ],
+  "source_path_template": "results/final300/code/{task}/gpt-5.6-sol/code.py",
+  "live_source_path_template": "solvers/{task}/gpt-5.6-sol/code.py",
+  "tasks": [
+    {
+      "task": "caprara1999",
+      "sha256": "ede42330c858427bc4c9501960bab113261d0c202f9f6fc6cd1849c0ebb88c7c",
+      "engine": "enumeration"
+    },
+    {
+      "task": "carosi2019",
+      "sha256": "e2863aa2a31b9da6775644155e7a55d9327de62daef2ab5e1e5b2b88b8ad33d2",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "carvalho1999",
+      "sha256": "265556af749e340d3282912d8ad28238b34e04801c39f3329f43e7d5c5c293dc",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "carvalho2022",
+      "sha256": "5c47738ec6c103e8b7b5969d0ff3b9e1e3e367026878975b9e64cd87155daccb",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "castro2021",
+      "sha256": "0b013d52c789f64fd7386ff5f9d576fa2f699edf2c5c19d7fc0dbd0d3fc2b074",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "chebil2015",
+      "sha256": "275f154c3942037b685a9de6abdf61e6e31f0aa041149a90310f871a174187e3",
+      "engine": "dynamic programming"
+    },
+    {
+      "task": "chebil2019",
+      "sha256": "f4a2f7e292701f7d8b52239703b158870b6a88eaa741340333a6c4d53dfc93e0",
+      "engine": "dynamic programming"
+    },
+    {
+      "task": "chen1999",
+      "sha256": "d19ba857fd2bf7d66c3c3da88176476367e368bab48f493ccc20d3c4ee84a69c",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "cherkesly2015",
+      "sha256": "bd4b573e5065b25be0bed3694fe8fc049553b2553890532e7a508aa6fc0d2683",
+      "engine": "heuristic"
+    },
+    {
+      "task": "colombi2017",
+      "sha256": "33dd5971c0286d81d6a8b0610e7825710f29632ca71c68402eeb2aa8a6927919",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "contreras2011",
+      "sha256": "27a32ea1aca42113a094a005eafb8ed0a68d0a1ab6257544834753e36281969c",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "cordeau2006",
+      "sha256": "4412a2e400bdc4b66ca01df782325763f06870db7c1ce8f4ec61bac596eda8ef",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "cordeau2014",
+      "sha256": "153b264e0b0a7b5e00b15e6ccb5e4294d2bb24081cf03a33bf2e5ac30c4c0f88",
+      "engine": "dynamic programming"
+    },
+    {
+      "task": "cordeau2019",
+      "sha256": "88e3b52d7728e91f08c26bea4e423971f8584dd8c182a9c8870db4bd44533941",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "cote2018",
+      "sha256": "488902dc61e55ff7a4729c8a0e771cd0996eee1a41558da7a12b555c6179b23b",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "cote2019",
+      "sha256": "8510bf689ae70412d14e320d3a3b8618b2f0ba68ca01b00a71f39548cec5c26a",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "cunha2021",
+      "sha256": "f1a487f60f54e90d509484d2bb6cc5bca4bca43d494fab926f0840c14d65016b",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "damcikurt2016",
+      "sha256": "f43a94bf8348469eff4e58de613d1edc2b1f4711fa2cce0aac21317393e4e83b",
+      "engine": "dynamic programming"
+    },
+    {
+      "task": "dayarian2019",
+      "sha256": "f0796c66d5bbb487179ceba1bab2701339310954966df569feaff574802514dd",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "degraeve2007",
+      "sha256": "c4cb9c877bd900de35f4f896d95875945a0d2e15ff02fee3f9b4a1c4bc2489ab",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "delage2022",
+      "sha256": "86e495dff9ad58db139e34e85e1148865281a0ffef77e7618f29a72a2e2a3d4c",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "delorme2020",
+      "sha256": "71947201b1df58c5afee672fc29a03efd65210a06c973c1b8726821341892b88",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "desaulniers2010",
+      "sha256": "501e76309f283d8a72877997faf8e727796aa0bf7b88171c34fb61ccb352c1eb",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "desaulniers2014",
+      "sha256": "725be8f966038d7ba256d3a1f80f192947e13a9470eee21660af62133f0c8011",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "desaulniers2016",
+      "sha256": "ff92cc140c1c89755564f5fd29d41d4907e5b9de5186aaaecf9517840edf63ac",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "dienstknecht2024",
+      "sha256": "99d0182679ba9a2f11675cde857bd2f78badcbc81016eaa0fae71a541ea86b8a",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "earl2005",
+      "sha256": "ccaec959843c99857311be5471d18a8ab8a4595d22eb1dd9b45f1926b2c8481d",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "eiselt2009",
+      "sha256": "934895db156e4f72d4df9341c5a42d2bd0f418d9a78bef0a7f6e9e9442f65017",
+      "engine": "enumeration"
+    },
+    {
+      "task": "elci2022",
+      "sha256": "098356867a8d053334b564cf26463d62ba6412b70ba2b8c2f9b4aeb73e030900",
+      "engine": "gurobipy"
+    },
+    {
+      "task": "engineer2012",
+      "sha256": "cdfc54c223306720be570ef5121927f6891f62ab5144b3cbb41b571c81fdb5ea",
+      "engine": "gurobipy"
+    }
+  ]
+}

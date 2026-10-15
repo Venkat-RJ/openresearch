@@ -1,0 +1,20 @@
+{
+  "num_retailers": "<int> Total number of retailers in the supply chain network.",
+  "num_warehouses": "<int> Total number of warehouses in the supply chain network.",
+  "num_periods": "<int> Number of discrete time periods in the planning horizon.",
+  "retailer_warehouse_assignment": "<list[int], length num_retailers> Index of the warehouse that each retailer is assigned to.",
+  "warehouse_retailer_sets": {
+    "{warehouse_index}": "<list[int]> Indices of retailers served by this warehouse."
+  },
+  "demands": "<list[list[int]], shape [num_retailers][num_periods]> Quantity of the item demanded by each retailer in each period.",
+  "fixed_costs": {
+    "plant": "<list[int], length num_periods> Fixed setup cost incurred at the plant when it produces in each period.",
+    "warehouses": "<list[list[int]], shape [num_warehouses][num_periods]> Fixed setup cost incurred at each warehouse when it receives goods in each period.",
+    "retailers": "<list[list[int]], shape [num_retailers][num_periods]> Fixed setup cost incurred at each retailer when it receives goods in each period."
+  },
+  "holding_costs": {
+    "plant": "<float> Per-unit cost of holding inventory at the plant at the end of each period.",
+    "warehouses": "<float> Per-unit cost of holding inventory at any warehouse at the end of each period.",
+    "retailers": "<list[float], length num_retailers> Per-unit cost of holding inventory at each retailer at the end of each period."
+  }
+}

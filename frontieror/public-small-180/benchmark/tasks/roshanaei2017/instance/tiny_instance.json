@@ -1,0 +1,591 @@
+{
+  "instance_id": 1,
+  "num_patients": 8,
+  "num_surgeons": 3,
+  "num_hospitals": 3,
+  "ORs_per_hospital": 3,
+  "num_days": 5,
+  "alpha": 0.6,
+  "allocation_type": "semiflexible",
+  "schedule_density_label": "sparse",
+  "schedule_density_value": 3.5,
+  "seed": 44,
+  "patients": [
+    {
+      "patient_id": 0,
+      "due_date": 4,
+      "is_mandatory": true,
+      "preparation_time": 70.6,
+      "cleaning_time": 25,
+      "base_surgical_time": 227.3,
+      "eligible_surgeons": [
+        1
+      ],
+      "eligible_ORs_by_hospital": {
+        "0": [
+          2
+        ],
+        "1": [
+          0,
+          2
+        ],
+        "2": [
+          2
+        ]
+      },
+      "surgeon_specific_times": {
+        "1": 245.4
+      },
+      "reward": 0.0
+    },
+    {
+      "patient_id": 1,
+      "due_date": 4,
+      "is_mandatory": true,
+      "preparation_time": 34.1,
+      "cleaning_time": 25,
+      "base_surgical_time": 211.3,
+      "eligible_surgeons": [
+        2
+      ],
+      "eligible_ORs_by_hospital": {
+        "0": [
+          0,
+          1,
+          2
+        ],
+        "1": [
+          0,
+          1,
+          2
+        ],
+        "2": [
+          0,
+          2
+        ]
+      },
+      "surgeon_specific_times": {
+        "2": 224.5
+      },
+      "reward": 0.0
+    },
+    {
+      "patient_id": 2,
+      "due_date": 2,
+      "is_mandatory": true,
+      "preparation_time": 53.7,
+      "cleaning_time": 25,
+      "base_surgical_time": 210.5,
+      "eligible_surgeons": [
+        1
+      ],
+      "eligible_ORs_by_hospital": {
+        "0": [
+          0,
+          1,
+          2
+        ],
+        "1": [
+          0,
+          1,
+          2
+        ],
+        "2": [
+          0,
+          1
+        ]
+      },
+      "surgeon_specific_times": {
+        "1": 192.5
+      },
+      "reward": 0.0
+    },
+    {
+      "patient_id": 3,
+      "due_date": 4,
+      "is_mandatory": true,
+      "preparation_time": 28.3,
+      "cleaning_time": 25,
+      "base_surgical_time": 71.4,
+      "eligible_surgeons": [
+        1
+      ],
+      "eligible_ORs_by_hospital": {
+        "0": [
+          0,
+          1,
+          2
+        ],
+        "1": [
+          1
+        ],
+        "2": [
+          1
+        ]
+      },
+      "surgeon_specific_times": {
+        "1": 75.0
+      },
+      "reward": 0.0
+    },
+    {
+      "patient_id": 4,
+      "due_date": 4,
+      "is_mandatory": true,
+      "preparation_time": 35.6,
+      "cleaning_time": 25,
+      "base_surgical_time": 117.2,
+      "eligible_surgeons": [
+        2
+      ],
+      "eligible_ORs_by_hospital": {
+        "0": [
+          1
+        ],
+        "1": [
+          0,
+          2
+        ],
+        "2": [
+          0
+        ]
+      },
+      "surgeon_specific_times": {
+        "2": 117.8
+      },
+      "reward": 0.0
+    },
+    {
+      "patient_id": 5,
+      "due_date": 7,
+      "is_mandatory": false,
+      "preparation_time": 52.6,
+      "cleaning_time": 25,
+      "base_surgical_time": 184.0,
+      "eligible_surgeons": [
+        0
+      ],
+      "eligible_ORs_by_hospital": {
+        "0": [
+          0
+        ],
+        "1": [
+          0,
+          1,
+          2
+        ],
+        "2": [
+          2
+        ]
+      },
+      "surgeon_specific_times": {
+        "0": 215.6
+      },
+      "reward": 3721.43
+    },
+    {
+      "patient_id": 6,
+      "due_date": 7,
+      "is_mandatory": false,
+      "preparation_time": 20.2,
+      "cleaning_time": 25,
+      "base_surgical_time": 99.1,
+      "eligible_surgeons": [
+        1
+      ],
+      "eligible_ORs_by_hospital": {
+        "0": [
+          0
+        ],
+        "1": [
+          1,
+          2
+        ],
+        "2": [
+          2
+        ]
+      },
+      "surgeon_specific_times": {
+        "1": 97.0
+      },
+      "reward": 3721.43
+    },
+    {
+      "patient_id": 7,
+      "due_date": 6,
+      "is_mandatory": false,
+      "preparation_time": 51.2,
+      "cleaning_time": 25,
+      "base_surgical_time": 173.2,
+      "eligible_surgeons": [
+        0,
+        1,
+        2
+      ],
+      "eligible_ORs_by_hospital": {
+        "0": [
+          0,
+          1,
+          2
+        ],
+        "1": [
+          0,
+          1,
+          2
+        ],
+        "2": [
+          0,
+          1,
+          2
+        ]
+      },
+      "surgeon_specific_times": {
+        "0": 194.9,
+        "1": 153.2,
+        "2": 178.6
+      },
+      "reward": 4341.67
+    }
+  ],
+  "surgeons": [
+    {
+      "surgeon_id": 0,
+      "availability_by_day": {
+        "1": 600,
+        "2": 240,
+        "3": 600
+      },
+      "operating_days": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "surgeon_id": 1,
+      "availability_by_day": {
+        "0": 480,
+        "1": 240,
+        "3": 240,
+        "4": 600
+      },
+      "operating_days": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "surgeon_id": 2,
+      "availability_by_day": {
+        "0": 600,
+        "1": 240,
+        "2": 240,
+        "3": 240
+      },
+      "operating_days": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "hospitals": [
+    {
+      "hospital_id": 0,
+      "hospital_name": "TGH",
+      "ORs": [
+        {
+          "or_id": 0,
+          "regular_time": 480,
+          "max_overtime": 120,
+          "fixed_cost_per_hour": 409.87,
+          "overtime_cost_per_hour": 614.81,
+          "daily": {
+            "0": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "1": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "2": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "3": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "4": {
+              "regular_time": 480,
+              "max_overtime": 120
+            }
+          }
+        },
+        {
+          "or_id": 1,
+          "regular_time": 480,
+          "max_overtime": 120,
+          "fixed_cost_per_hour": 446.3,
+          "overtime_cost_per_hour": 669.45,
+          "daily": {
+            "0": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "1": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "2": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "3": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "4": {
+              "regular_time": 480,
+              "max_overtime": 120
+            }
+          }
+        },
+        {
+          "or_id": 2,
+          "regular_time": 480,
+          "max_overtime": 120,
+          "fixed_cost_per_hour": 411.61,
+          "overtime_cost_per_hour": 617.41,
+          "daily": {
+            "0": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "1": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "2": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "3": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "4": {
+              "regular_time": 480,
+              "max_overtime": 120
+            }
+          }
+        }
+      ],
+      "surgeon_fixed_costs_per_day": {
+        "0": 560.6,
+        "1": 582.51,
+        "2": 542.25
+      }
+    },
+    {
+      "hospital_id": 1,
+      "hospital_name": "TWH",
+      "ORs": [
+        {
+          "or_id": 0,
+          "regular_time": 480,
+          "max_overtime": 120,
+          "fixed_cost_per_hour": 461.97,
+          "overtime_cost_per_hour": 692.96,
+          "daily": {
+            "0": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "1": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "2": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "3": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "4": {
+              "regular_time": 480,
+              "max_overtime": 120
+            }
+          }
+        },
+        {
+          "or_id": 1,
+          "regular_time": 480,
+          "max_overtime": 120,
+          "fixed_cost_per_hour": 483.63,
+          "overtime_cost_per_hour": 725.44,
+          "daily": {
+            "0": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "1": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "2": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "3": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "4": {
+              "regular_time": 480,
+              "max_overtime": 120
+            }
+          }
+        },
+        {
+          "or_id": 2,
+          "regular_time": 480,
+          "max_overtime": 120,
+          "fixed_cost_per_hour": 482.41,
+          "overtime_cost_per_hour": 723.62,
+          "daily": {
+            "0": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "1": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "2": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "3": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "4": {
+              "regular_time": 480,
+              "max_overtime": 120
+            }
+          }
+        }
+      ],
+      "surgeon_fixed_costs_per_day": {
+        "0": 531.35,
+        "1": 556.57,
+        "2": 547.51
+      }
+    },
+    {
+      "hospital_id": 2,
+      "hospital_name": "PMCC",
+      "ORs": [
+        {
+          "or_id": 0,
+          "regular_time": 480,
+          "max_overtime": 120,
+          "fixed_cost_per_hour": 411.99,
+          "overtime_cost_per_hour": 617.99,
+          "daily": {
+            "0": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "1": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "2": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "3": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "4": {
+              "regular_time": 480,
+              "max_overtime": 120
+            }
+          }
+        },
+        {
+          "or_id": 1,
+          "regular_time": 480,
+          "max_overtime": 120,
+          "fixed_cost_per_hour": 419.98,
+          "overtime_cost_per_hour": 629.97,
+          "daily": {
+            "0": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "1": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "2": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "3": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "4": {
+              "regular_time": 480,
+              "max_overtime": 120
+            }
+          }
+        },
+        {
+          "or_id": 2,
+          "regular_time": 480,
+          "max_overtime": 120,
+          "fixed_cost_per_hour": 408.43,
+          "overtime_cost_per_hour": 612.64,
+          "daily": {
+            "0": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "1": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "2": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "3": {
+              "regular_time": 480,
+              "max_overtime": 120
+            },
+            "4": {
+              "regular_time": 480,
+              "max_overtime": 120
+            }
+          }
+        }
+      ],
+      "surgeon_fixed_costs_per_day": {
+        "0": 522.22,
+        "1": 595.79,
+        "2": 590.69
+      }
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "instance_info": {
+    "problem": "Two-stage robust knapsack",
+    "paper": "Arslan & Detienne (2022), INFORMS Journal on Computing 34(2)",
+    "section": "Section 4.1",
+    "num_items": 20,
+    "category": "UN",
+    "category_description": "uncorrelated",
+    "h": 40,
+    "delta": 0.1,
+    "Gamma_fraction": 0.1,
+    "scale": "small",
+    "seed_used": 12014020,
+    "generation_attempt": 1
+  },
+  "generation_constants": {
+    "R": 1000,
+    "H": 100
+  },
+  "problem_parameters": {
+    "knapsack_capacity": 3472.871287,
+    "uncertainty_budget": 2.0,
+    "uncertainty_set": "Xi = {xi in R^I_+ | sum(xi_i) <= Gamma, 0 <= xi_i <= 1}"
+  },
+  "items": [
+    {
+      "id": 1,
+      "weight": 805,
+      "nominal_profit": 393.945142,
+      "max_degradation": 181.934585,
+      "outsource_penalty": 484.91949,
+      "repair_capacity": 124.173582
+    },
+    {
+      "id": 2,
+      "weight": 453,
+      "nominal_profit": 805.387385,
+      "max_degradation": 415.913139,
+      "outsource_penalty": 1084.420151,
+      "repair_capacity": 258.895137
+    },
+    {
+      "id": 3,
+      "weight": 151,
+      "nominal_profit": 919.854502,
+      "max_degradation": 433.785073,
+      "outsource_penalty": 1179.755761,
+      "repair_capacity": 126.150797
+    },
+    {
+      "id": 4,
+      "weight": 136,
+      "nominal_profit": 481.900917,
+      "max_degradation": 262.626706,
+      "outsource_penalty": 642.288763,
+      "repair_capacity": 119.594466
+    },
+    {
+      "id": 5,
+      "weight": 603,
+      "nominal_profit": 265.016309,
+      "max_degradation": 131.49318,
+      "outsource_penalty": 339.341269,
+      "repair_capacity": 12.44603
+    },
+    {
+      "id": 6,
+      "weight": 183,
+      "nominal_profit": 479.526647,
+      "max_degradation": 251.119556,
+      "outsource_penalty": 572.132374,
+      "repair_capacity": 167.929581
+    },
+    {
+      "id": 7,
+      "weight": 701,
+      "nominal_profit": 740.096231,
+      "max_degradation": 397.343657,
+      "outsource_penalty": 1090.085237,
+      "repair_capacity": 232.276868
+    },
+    {
+      "id": 8,
+      "weight": 38,
+      "nominal_profit": 866.76881,
+      "max_degradation": 434.662629,
+      "outsource_penalty": 1290.265235,
+      "repair_capacity": 25.178233
+    },
+    {
+      "id": 9,
+      "weight": 755,
+      "nominal_profit": 746.060618,
+      "max_degradation": 392.229785,
+      "outsource_penalty": 1031.561478,
+      "repair_capacity": 193.580835
+    },
+    {
+      "id": 10,
+      "weight": 124,
+      "nominal_profit": 733.61173,
+      "max_degradation": 336.667171,
+      "outsource_penalty": 887.610531,
+      "repair_capacity": 29.998476
+    },
+    {
+      "id": 11,
+      "weight": 822,
+      "nominal_profit": 61.864587,
+      "max_degradation": 30.612103,
+      "outsource_penalty": 68.062083,
+      "repair_capacity": 303.169554
+    },
+    {
+      "id": 12,
+      "weight": 343,
+      "nominal_profit": 515.398734,
+      "max_degradation": 283.37623,
+      "outsource_penalty": 723.629474,
+      "repair_capacity": 301.848363
+    },
+    {
+      "id": 13,
+      "weight": 603,
+      "nominal_profit": 987.912523,
+      "max_degradation": 466.356903,
+      "outsource_penalty": 1226.855632,
+      "repair_capacity": 305.335541
+    },
+    {
+      "id": 14,
+      "weight": 587,
+      "nominal_profit": 251.046479,
+      "max_degradation": 118.952642,
+      "outsource_penalty": 343.582032,
+      "repair_capacity": 119.904055
+    },
+    {
+      "id": 15,
+      "weight": 607,
+      "nominal_profit": 940.100234,
+      "max_degradation": 427.672523,
+      "outsource_penalty": 1073.678256,
+      "repair_capacity": 357.262223
+    },
+    {
+      "id": 16,
+      "weight": 659,
+      "nominal_profit": 15.551926,
+      "max_degradation": 7.610372,
+      "outsource_penalty": 20.025883,
+      "repair_capacity": 629.528296
+    },
+    {
+      "id": 17,
+      "weight": 372,
+      "nominal_profit": 843.068988,
+      "max_degradation": 434.540111,
+      "outsource_penalty": 1089.866298,
+      "repair_capacity": 242.41651
+    },
+    {
+      "id": 18,
+      "weight": 191,
+      "nominal_profit": 685.338977,
+      "max_degradation": 334.970781,
+      "outsource_penalty": 898.740707,
+      "repair_capacity": 130.68525
+    },
+    {
+      "id": 19,
+      "weight": 304,
+      "nominal_profit": 626.449512,
+      "max_degradation": 310.788318,
+      "outsource_penalty": 698.8771,
+      "repair_capacity": 207.550526
+    },
+    {
+      "id": 20,
+      "weight": 332,
+      "nominal_profit": 941.78278,
+      "max_degradation": 446.706477,
+      "outsource_penalty": 1104.465175,
+      "repair_capacity": 10.58532
+    }
+  ]
+}

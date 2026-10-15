@@ -1,0 +1,864 @@
+[
+  {
+    "study": "development_1",
+    "instance": "dev-tf2-uniform-0",
+    "stratum": "tf2-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 13497,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.8754461379999,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf2-uniform-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.8727204710001
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf2-uniform-0",
+    "stratum": "tf2-uniform",
+    "algorithm": "egrasp",
+    "objective": 16691,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 298.640413053,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf2-uniform-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      298.63681938599984
+    ],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf2-uniform-1",
+    "stratum": "tf2-uniform",
+    "algorithm": "egrasp",
+    "objective": 26508,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 298.81360447,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf2-uniform-1-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      298.80832863700016
+    ],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf2-uniform-1",
+    "stratum": "tf2-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 22179,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.87708584500024,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf2-uniform-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.8742309700001
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf2-priority-0",
+    "stratum": "tf2-priority",
+    "algorithm": "frozen-v2",
+    "objective": 7758,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.876330219,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf2-priority-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.87371926000014
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf2-priority-0",
+    "stratum": "tf2-priority",
+    "algorithm": "egrasp",
+    "objective": 7642,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 298.6915202189998,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf2-priority-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      298.68617905200017
+    ],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf2-priority-1",
+    "stratum": "tf2-priority",
+    "algorithm": "egrasp",
+    "objective": null,
+    "status": "SOLVER_FAILURE",
+    "elapsed_s": 300.0046439270004,
+    "timed_out": true,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf2-priority-1-egrasp",
+    "parseable_snapshots": 0,
+    "capture_times_s": [],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf2-priority-1",
+    "stratum": "tf2-priority",
+    "algorithm": "frozen-v2",
+    "objective": 7917,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.87057951099996,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf2-priority-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.8669987200001
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf3-uniform-0",
+    "stratum": "tf3-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.87776184500035,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf3-uniform-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.87448271999983
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf3-uniform-0",
+    "stratum": "tf3-uniform",
+    "algorithm": "egrasp",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 196.4172496299998,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf3-uniform-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      196.4108666709999
+    ],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf3-uniform-1",
+    "stratum": "tf3-uniform",
+    "algorithm": "egrasp",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 1.5948327920004886,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf3-uniform-1-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      1.5907435420003821
+    ],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf3-uniform-1",
+    "stratum": "tf3-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.8810734690005,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf3-uniform-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.87761034400046
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf3-priority-0",
+    "stratum": "tf3-priority",
+    "algorithm": "frozen-v2",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.87447692800015,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf3-priority-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.86990784500085
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf3-priority-0",
+    "stratum": "tf3-priority",
+    "algorithm": "egrasp",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 0.18526400000064314,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf3-priority-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      0.1789065840002877
+    ],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf3-priority-1",
+    "stratum": "tf3-priority",
+    "algorithm": "egrasp",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 78.88800853500015,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf3-priority-1-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      78.88267611900028
+    ],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf3-priority-1",
+    "stratum": "tf3-priority",
+    "algorithm": "frozen-v2",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.87204688600013,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf3-priority-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.86932046899983
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf4-uniform-0",
+    "stratum": "tf4-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.8759703040005,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf4-uniform-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.87329296999997
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf4-uniform-0",
+    "stratum": "tf4-uniform",
+    "algorithm": "egrasp",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 0.054725375000089116,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf4-uniform-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      0.05083929200009152
+    ],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf4-uniform-1",
+    "stratum": "tf4-uniform",
+    "algorithm": "egrasp",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 0.05119266600013361,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf4-uniform-1-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      0.044869791000564874
+    ],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf4-uniform-1",
+    "stratum": "tf4-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.87230426099995,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf4-uniform-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.8693910530001
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf4-priority-0",
+    "stratum": "tf4-priority",
+    "algorithm": "frozen-v2",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.87844671899984,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf4-priority-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.87522363600056
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf4-priority-0",
+    "stratum": "tf4-priority",
+    "algorithm": "egrasp",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 0.05248104200018133,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf4-priority-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      0.046565042000111134
+    ],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf4-priority-1",
+    "stratum": "tf4-priority",
+    "algorithm": "egrasp",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 0.054630625999379845,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf4-priority-1-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      0.05087895899941941
+    ],
+    "internal_budget_s": 298,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_1",
+    "instance": "dev-tf4-priority-1",
+    "stratum": "tf4-priority",
+    "algorithm": "frozen-v2",
+    "objective": 0,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 299.87518634299977,
+    "timed_out": false,
+    "experiment_id": "72c3545c-c8b0-4946-846a-481a873a6707",
+    "evidence": "evidence/development-comparison-1791440130924504000/runs/dev-tf4-priority-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      299.8724550099996
+    ],
+    "internal_budget_s": 300,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf3_2-uniform-0",
+    "stratum": "tf3/2-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 46333,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.87448233999993,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf3_2-uniform-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.871714048
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf3_2-uniform-0",
+    "stratum": "tf3/2-uniform",
+    "algorithm": "egrasp",
+    "objective": 50224,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 290.531590381,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf3_2-uniform-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      290.5260847149999
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf3_2-uniform-1",
+    "stratum": "tf3/2-uniform",
+    "algorithm": "egrasp",
+    "objective": 55232,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 290.810199881,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf3_2-uniform-1-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      290.80587471499985
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf3_2-uniform-1",
+    "stratum": "tf3/2-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 50616,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.876416007,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf3_2-uniform-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.873085965
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf3_2-priority-0",
+    "stratum": "tf3/2-priority",
+    "algorithm": "frozen-v2",
+    "objective": 12452,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.8801575499999,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf3_2-priority-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.87741709199986
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf3_2-priority-0",
+    "stratum": "tf3/2-priority",
+    "algorithm": "egrasp",
+    "objective": 13500,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 290.61754292299975,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf3_2-priority-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      290.6137311729999
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf3_2-priority-1",
+    "stratum": "tf3/2-priority",
+    "algorithm": "egrasp",
+    "objective": 16400,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 290.803828051,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf3_2-priority-1-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      290.80059063399995
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf3_2-priority-1",
+    "stratum": "tf3/2-priority",
+    "algorithm": "frozen-v2",
+    "objective": 14663,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.87119617400003,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf3_2-priority-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.8686857160001
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf7_4-uniform-0",
+    "stratum": "tf7/4-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 38297,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.8767137980003,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf7_4-uniform-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.87424200700025
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf7_4-uniform-0",
+    "stratum": "tf7/4-uniform",
+    "algorithm": "egrasp",
+    "objective": 44061,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 290.69496930000014,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf7_4-uniform-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      290.691268133
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf7_4-uniform-1",
+    "stratum": "tf7/4-uniform",
+    "algorithm": "egrasp",
+    "objective": 33147,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 290.8128149240001,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf7_4-uniform-1-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      290.8083545909999
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf7_4-uniform-1",
+    "stratum": "tf7/4-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 28982,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.8772400069997,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf7_4-uniform-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.87453121499993
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf7_4-priority-0",
+    "stratum": "tf7/4-priority",
+    "algorithm": "frozen-v2",
+    "objective": 9485,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.87853509000024,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf7_4-priority-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.87531950699986
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf7_4-priority-0",
+    "stratum": "tf7/4-priority",
+    "algorithm": "egrasp",
+    "objective": 10627,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 290.63114171599955,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf7_4-priority-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      290.62509371599936
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf7_4-priority-1",
+    "stratum": "tf7/4-priority",
+    "algorithm": "egrasp",
+    "objective": 9812,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 291.9434302569998,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf7_4-priority-1-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      291.939906007
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf7_4-priority-1",
+    "stratum": "tf7/4-priority",
+    "algorithm": "frozen-v2",
+    "objective": 9021,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.87476734199936,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf7_4-priority-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.87188830000014
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf2-uniform-0",
+    "stratum": "tf2-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 26403,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.8833640490002,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf2-uniform-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.8807425490004
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf2-uniform-0",
+    "stratum": "tf2-uniform",
+    "algorithm": "egrasp",
+    "objective": 27368,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 290.5068514660006,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf2-uniform-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      290.5033184240001
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf2-uniform-1",
+    "stratum": "tf2-uniform",
+    "algorithm": "egrasp",
+    "objective": 17611,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 292.62296638299995,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf2-uniform-1-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      292.6192391750001
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf2-uniform-1",
+    "stratum": "tf2-uniform",
+    "algorithm": "frozen-v2",
+    "objective": 15154,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.87747833999947,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf2-uniform-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.8747887569998
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf2-priority-0",
+    "stratum": "tf2-priority",
+    "algorithm": "frozen-v2",
+    "objective": 6376,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.8766310479996,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf2-priority-0-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.87389242300014
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf2-priority-0",
+    "stratum": "tf2-priority",
+    "algorithm": "egrasp",
+    "objective": 6697,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 293.2441336330003,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf2-priority-0-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      293.23829617500087
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf2-priority-1",
+    "stratum": "tf2-priority",
+    "algorithm": "egrasp",
+    "objective": 7282,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 290.3933546340004,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf2-priority-1-egrasp",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      290.38739821800027
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  },
+  {
+    "study": "development_2",
+    "instance": "dev2-tf2-priority-1",
+    "stratum": "tf2-priority",
+    "algorithm": "frozen-v2",
+    "objective": 6150,
+    "status": "VALID_IN_TIME",
+    "elapsed_s": 289.8726898820005,
+    "timed_out": false,
+    "experiment_id": "baf3ce95-a680-460a-a7da-f0f3ce20c493",
+    "evidence": "evidence/development-comparison-v2-1791446280029379000/runs/dev2-tf2-priority-1-frozen-v2",
+    "parseable_snapshots": 1,
+    "capture_times_s": [
+      289.86973384000066
+    ],
+    "internal_budget_s": 290,
+    "external_deadline_s": 300
+  }
+]

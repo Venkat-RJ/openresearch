@@ -1,0 +1,581 @@
+{
+  "instance_id": 1,
+  "problem_type": "PVRPTW",
+  "num_customers": 10,
+  "num_days": 4,
+  "num_vehicles": 4,
+  "vehicle_capacity": 160,
+  "max_route_duration": 280,
+  "schedule_type": "standard",
+  "time_window_type": "small",
+  "depot": {
+    "id": 0,
+    "x": 50.0,
+    "y": 50.0,
+    "time_window": [
+      0,
+      300
+    ],
+    "service_time": 0
+  },
+  "customers": [
+    {
+      "id": 1,
+      "x": 26.73,
+      "y": 47.46,
+      "demand_per_day": 8,
+      "time_window": [
+        101.09,
+        153.91
+      ],
+      "service_time": 10,
+      "visit_frequency_original": 1,
+      "schedules": [
+        {
+          "days": [
+            0
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 0,
+              "days_covered": 4,
+              "demand_per_visit": 32
+            }
+          ]
+        },
+        {
+          "days": [
+            1
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 1,
+              "days_covered": 4,
+              "demand_per_visit": 32
+            }
+          ]
+        },
+        {
+          "days": [
+            2
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 2,
+              "days_covered": 4,
+              "demand_per_visit": 32
+            }
+          ]
+        },
+        {
+          "days": [
+            3
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 3,
+              "days_covered": 4,
+              "demand_per_visit": 32
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "x": 84.08,
+      "y": 64.97,
+      "demand_per_day": 14,
+      "time_window": [
+        182.96,
+        229.76
+      ],
+      "service_time": 10,
+      "visit_frequency_original": 2,
+      "schedules": [
+        {
+          "days": [
+            0,
+            2
+          ],
+          "visit_frequency": 2,
+          "parts": [
+            {
+              "visit_day": 0,
+              "days_covered": 2,
+              "demand_per_visit": 28
+            },
+            {
+              "visit_day": 2,
+              "days_covered": 2,
+              "demand_per_visit": 28
+            }
+          ]
+        },
+        {
+          "days": [
+            1,
+            3
+          ],
+          "visit_frequency": 2,
+          "parts": [
+            {
+              "visit_day": 1,
+              "days_covered": 2,
+              "demand_per_visit": 28
+            },
+            {
+              "visit_day": 3,
+              "days_covered": 2,
+              "demand_per_visit": 28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "x": 0.11,
+      "y": 13.18,
+      "demand_per_day": 5,
+      "time_window": [
+        140.11,
+        193.98
+      ],
+      "service_time": 10,
+      "visit_frequency_original": 4,
+      "schedules": [
+        {
+          "days": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "visit_frequency": 4,
+          "parts": [
+            {
+              "visit_day": 0,
+              "days_covered": 1,
+              "demand_per_visit": 5
+            },
+            {
+              "visit_day": 1,
+              "days_covered": 1,
+              "demand_per_visit": 5
+            },
+            {
+              "visit_day": 2,
+              "days_covered": 1,
+              "demand_per_visit": 5
+            },
+            {
+              "visit_day": 3,
+              "days_covered": 1,
+              "demand_per_visit": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "x": 89.54,
+      "y": 11.96,
+      "demand_per_day": 14,
+      "time_window": [
+        151.22,
+        205.66
+      ],
+      "service_time": 10,
+      "visit_frequency_original": 1,
+      "schedules": [
+        {
+          "days": [
+            0
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 0,
+              "days_covered": 4,
+              "demand_per_visit": 56
+            }
+          ]
+        },
+        {
+          "days": [
+            1
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 1,
+              "days_covered": 4,
+              "demand_per_visit": 56
+            }
+          ]
+        },
+        {
+          "days": [
+            2
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 2,
+              "days_covered": 4,
+              "demand_per_visit": 56
+            }
+          ]
+        },
+        {
+          "days": [
+            3
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 3,
+              "days_covered": 4,
+              "demand_per_visit": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "x": 94.99,
+      "y": 67.42,
+      "demand_per_day": 8,
+      "time_window": [
+        48.24,
+        94.22
+      ],
+      "service_time": 10,
+      "visit_frequency_original": 2,
+      "schedules": [
+        {
+          "days": [
+            0,
+            2
+          ],
+          "visit_frequency": 2,
+          "parts": [
+            {
+              "visit_day": 0,
+              "days_covered": 2,
+              "demand_per_visit": 16
+            },
+            {
+              "visit_day": 2,
+              "days_covered": 2,
+              "demand_per_visit": 16
+            }
+          ]
+        },
+        {
+          "days": [
+            1,
+            3
+          ],
+          "visit_frequency": 2,
+          "parts": [
+            {
+              "visit_day": 1,
+              "days_covered": 2,
+              "demand_per_visit": 16
+            },
+            {
+              "visit_day": 3,
+              "days_covered": 2,
+              "demand_per_visit": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "x": 74.43,
+      "y": 73.54,
+      "demand_per_day": 9,
+      "time_window": [
+        54.09,
+        103.04
+      ],
+      "service_time": 10,
+      "visit_frequency_original": 4,
+      "schedules": [
+        {
+          "days": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "visit_frequency": 4,
+          "parts": [
+            {
+              "visit_day": 0,
+              "days_covered": 1,
+              "demand_per_visit": 9
+            },
+            {
+              "visit_day": 1,
+              "days_covered": 1,
+              "demand_per_visit": 9
+            },
+            {
+              "visit_day": 2,
+              "days_covered": 1,
+              "demand_per_visit": 9
+            },
+            {
+              "visit_day": 3,
+              "days_covered": 1,
+              "demand_per_visit": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "x": 11.06,
+      "y": 11.59,
+      "demand_per_day": 10,
+      "time_window": [
+        174.72,
+        220.84
+      ],
+      "service_time": 10,
+      "visit_frequency_original": 1,
+      "schedules": [
+        {
+          "days": [
+            0
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 0,
+              "days_covered": 4,
+              "demand_per_visit": 40
+            }
+          ]
+        },
+        {
+          "days": [
+            1
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 1,
+              "days_covered": 4,
+              "demand_per_visit": 40
+            }
+          ]
+        },
+        {
+          "days": [
+            2
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 2,
+              "days_covered": 4,
+              "demand_per_visit": 40
+            }
+          ]
+        },
+        {
+          "days": [
+            3
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 3,
+              "days_covered": 4,
+              "demand_per_visit": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "x": 10.45,
+      "y": 16.02,
+      "demand_per_day": 9,
+      "time_window": [
+        101.02,
+        140.69
+      ],
+      "service_time": 10,
+      "visit_frequency_original": 2,
+      "schedules": [
+        {
+          "days": [
+            0,
+            2
+          ],
+          "visit_frequency": 2,
+          "parts": [
+            {
+              "visit_day": 0,
+              "days_covered": 2,
+              "demand_per_visit": 18
+            },
+            {
+              "visit_day": 2,
+              "days_covered": 2,
+              "demand_per_visit": 18
+            }
+          ]
+        },
+        {
+          "days": [
+            1,
+            3
+          ],
+          "visit_frequency": 2,
+          "parts": [
+            {
+              "visit_day": 1,
+              "days_covered": 2,
+              "demand_per_visit": 18
+            },
+            {
+              "visit_day": 3,
+              "days_covered": 2,
+              "demand_per_visit": 18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "x": 96.48,
+      "y": 42.09,
+      "demand_per_day": 15,
+      "time_window": [
+        128.9,
+        166.78
+      ],
+      "service_time": 10,
+      "visit_frequency_original": 4,
+      "schedules": [
+        {
+          "days": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "visit_frequency": 4,
+          "parts": [
+            {
+              "visit_day": 0,
+              "days_covered": 1,
+              "demand_per_visit": 15
+            },
+            {
+              "visit_day": 1,
+              "days_covered": 1,
+              "demand_per_visit": 15
+            },
+            {
+              "visit_day": 2,
+              "days_covered": 1,
+              "demand_per_visit": 15
+            },
+            {
+              "visit_day": 3,
+              "days_covered": 1,
+              "demand_per_visit": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "x": 85.99,
+      "y": 14.13,
+      "demand_per_day": 6,
+      "time_window": [
+        154.85,
+        212.08
+      ],
+      "service_time": 10,
+      "visit_frequency_original": 1,
+      "schedules": [
+        {
+          "days": [
+            0
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 0,
+              "days_covered": 4,
+              "demand_per_visit": 24
+            }
+          ]
+        },
+        {
+          "days": [
+            1
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 1,
+              "days_covered": 4,
+              "demand_per_visit": 24
+            }
+          ]
+        },
+        {
+          "days": [
+            2
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 2,
+              "days_covered": 4,
+              "demand_per_visit": 24
+            }
+          ]
+        },
+        {
+          "days": [
+            3
+          ],
+          "visit_frequency": 1,
+          "parts": [
+            {
+              "visit_day": 3,
+              "days_covered": 4,
+              "demand_per_visit": 24
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "distance_matrix_type": "euclidean",
+  "cost_type": "euclidean_distance",
+  "planning_horizon_cyclic": true
+}

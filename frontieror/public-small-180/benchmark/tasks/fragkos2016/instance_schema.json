@@ -1,0 +1,13 @@
+{
+  "n_items": "<int> Number of distinct items to be produced.",
+  "n_periods": "<int> Number of discrete time periods in the planning horizon.",
+  "capacity": "<list[float], length n_periods> Total available production and setup time in each period.",
+  "initial_inventory": "<list[float], length n_items> Stock on hand for each item at the start of the first period.",
+  "demands": "<list[list[int]], shape [n_items][n_periods]> Quantity of each item that must be fulfilled in each period.",
+  "setup_costs": "<list[list[float]], shape [n_items][n_periods]> Fixed cost incurred when the production line is set up for each item in each period.",
+  "holding_costs": "<list[list[float]], shape [n_items][n_periods]> Per-unit cost of carrying inventory of each item from one period to the next.",
+  "variable_costs": "<list[list[float]], shape [n_items][n_periods]> Per-unit production cost for each item in each period.",
+  "setup_times": "<list[list[float]], shape [n_items][n_periods]> Time consumed to set up the production line for each item in each period.",
+  "variable_times": "<list[list[float]], shape [n_items][n_periods]> Time required to produce one unit of each item in each period.",
+  "big_M": "<list[list[float]], shape [n_items][n_periods]> Maximum production quantity for each item in each period, given capacity and remaining demand."
+}

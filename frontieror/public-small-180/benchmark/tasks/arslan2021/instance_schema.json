@@ -1,0 +1,16 @@
+{
+  "problem_parameters": {
+    "knapsack_capacity": "<float> Total capacity of the knapsack available for production and repair activities.",
+    "uncertainty_budget": "<float> Maximum total degradation the adversary can impose across all items."
+  },
+  "items": [
+    {
+      "id": "<int> Unique identifier for the item.",
+      "weight": "<int> Capacity consumed when the item is produced.",
+      "nominal_profit": "<float> Profit earned from the item when there is no degradation.",
+      "max_degradation": "<float> Worst-case profit reduction for the item when its degradation factor equals one.",
+      "outsource_penalty": "<float> Cost penalty incurred when the item is outsourced instead of produced in-house.",
+      "repair_capacity": "<float> Additional capacity consumed when the item is repaired to recover its full nominal profit."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "task_id": "zetina2019",
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "instance": "tiny",
+  "batch": "batch013",
+  "budget_seconds": 60,
+  "candidate_witness_objective": 11162,
+  "reference_objective": 10477,
+  "signed_gap_full_precision": 0.06538131144411569,
+  "signed_gap_native_csv": 0.065381,
+  "checker_feasible": true,
+  "official_status": "pass",
+  "runtime_seconds": 4.43,
+  "objective_quality_within_one_percent": false,
+  "strict_objective_beat": false,
+  "own_objective_history": [
+    19301,
+    11221,
+    11162
+  ],
+  "source_sha256": "18933c7706e0aad7db3cdac9b4e308e29d94b3b7cb470515a85a531c1f614e45",
+  "preserved_artifact_directory": "results/group6-pass3/zetina2019",
+  "pre_logging_fix_last_logged_objective": 11238,
+  "pre_logging_fix_log_matches_final_witness": false,
+  "final_logging_fixed_source_verification": "pending root tiny300",
+  "hypothesis_id": "a4caa45a-26d0-42b8-9a43-13f89feb756e",
+  "experiment_id": "6f8afd24-517a-4273-94e8-e616a8b31854",
+  "readback_verified": true,
+  "large_executed": false,
+  "matched_hardware_QTE_or_AOCC_claimed": false
+}

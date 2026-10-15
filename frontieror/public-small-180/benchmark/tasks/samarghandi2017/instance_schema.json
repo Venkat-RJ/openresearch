@@ -1,0 +1,6 @@
+{
+  "n_jobs": "<int> Number of jobs to be processed through the flow shop.",
+  "n_machines": "<int> Number of machines arranged in series that every job must visit.",
+  "processing_times": "<list[list[int]], shape [n_machines][n_jobs]> Time required for each machine to process each job.",
+  "due_dates": "<list[int], length n_jobs> Latest allowable completion time on the last machine for each job."
+}

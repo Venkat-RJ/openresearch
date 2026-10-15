@@ -1,0 +1,103 @@
+[
+  {
+    "Status": 2,
+    "SolCount": 2,
+    "NumVars": 512,
+    "NumConstrs": 734,
+    "iteration": 1,
+    "active_rows": 0,
+    "full_rows": 6720,
+    "worst_full_row_violation": 25444.76,
+    "worst_full_row_residual": 25444.76,
+    "worst_row_index": 4264,
+    "worst_row_category": [
+      "balancer_capacity",
+      10,
+      58
+    ],
+    "full_rows_violated_at_publish_tolerance": 1344,
+    "exit_reason": "adding_violated_rows",
+    "complete_witness_found": false,
+    "elapsed_seconds": 0.14014187499999986
+  },
+  {
+    "Status": 2,
+    "SolCount": 6,
+    "NumVars": 512,
+    "NumConstrs": 834,
+    "iteration": 2,
+    "active_rows": 100,
+    "full_rows": 6720,
+    "worst_full_row_violation": 12783.579999999998,
+    "worst_full_row_residual": 12783.579999999998,
+    "worst_row_index": 6088,
+    "worst_row_category": [
+      "balancer_capacity",
+      41,
+      178
+    ],
+    "full_rows_violated_at_publish_tolerance": 893,
+    "exit_reason": "adding_violated_rows",
+    "complete_witness_found": false,
+    "elapsed_seconds": 0.2002070840000001
+  },
+  {
+    "Status": 2,
+    "SolCount": 7,
+    "NumVars": 512,
+    "NumConstrs": 934,
+    "iteration": 3,
+    "active_rows": 200,
+    "full_rows": 6720,
+    "worst_full_row_violation": 5367.688519065872,
+    "worst_full_row_residual": 5367.688519065872,
+    "worst_row_index": 4106,
+    "worst_row_category": [
+      "balancer_ramp_up",
+      10,
+      18
+    ],
+    "full_rows_violated_at_publish_tolerance": 380,
+    "exit_reason": "adding_violated_rows",
+    "complete_witness_found": false,
+    "elapsed_seconds": 0.25301458399999976
+  },
+  {
+    "Status": 2,
+    "SolCount": 8,
+    "NumVars": 512,
+    "NumConstrs": 1034,
+    "iteration": 4,
+    "active_rows": 300,
+    "full_rows": 6720,
+    "worst_full_row_violation": 4234.79735313396,
+    "worst_full_row_residual": 4234.79735313396,
+    "worst_row_index": 5992,
+    "worst_row_category": [
+      "balancer_capacity",
+      41,
+      154
+    ],
+    "full_rows_violated_at_publish_tolerance": 185,
+    "exit_reason": "adding_violated_rows",
+    "complete_witness_found": false,
+    "elapsed_seconds": 0.34306662500000007
+  },
+  {
+    "Status": 4,
+    "SolCount": 0,
+    "NumVars": 512,
+    "NumConstrs": 1134,
+    "iteration": 5,
+    "active_rows": 400,
+    "full_rows": 6720,
+    "worst_full_row_violation": null,
+    "worst_full_row_residual": null,
+    "worst_row_index": null,
+    "worst_row_category": null,
+    "full_rows_violated_at_publish_tolerance": null,
+    "exit_reason": "no_solution_count",
+    "complete_witness_found": false,
+    "elapsed_seconds": 0.36078029199999984
+  }
+]

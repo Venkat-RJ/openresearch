@@ -1,0 +1,39 @@
+{
+  "num_sites": "<int> Number of candidate venue sites where events may be held.",
+  "num_customers": "<int> Number of customer locations representing nearby population centers.",
+  "num_periods": "<int> Number of time periods in the planning horizon.",
+  "parameters": {
+    "T": "<int> Number of time periods in the planning horizon.",
+    "delta": "<int> Maximum number of events that may be held in any window of delta-plus-one consecutive periods.",
+    "epsilon": "<int> Number of periods before and after a given period considered when computing competitive interactions among events.",
+    "L": "<float> Maximum travel distance allowed in any single period.",
+    "c": "<float> Cost per unit distance traveled between sites.",
+    "q": "<float> Distance decay exponent controlling how quickly customer attraction diminishes with distance.",
+    "weekly_attraction_cycle": "<list[float], length 7> Relative attractiveness factor for each day of the week from Monday to Sunday, cycling over periods.",
+    "avg_businesses_customers": "<float> Average number of businesses across all customer locations, used to normalize self-attraction values.",
+    "avg_businesses_sites": "<float> Average number of businesses across all venue sites, used to normalize site attraction values."
+  },
+  "sites": [
+    {
+      "id": "<int> Unique identifier for this venue site (1-indexed).",
+      "x": "<float> Horizontal coordinate of the venue site in miles.",
+      "y": "<float> Vertical coordinate of the venue site in miles.",
+      "capacity": "<int> Maximum number of attendees the venue can accommodate at any single event.",
+      "num_businesses": "<int> Number of businesses near the venue site, used to compute site attraction.",
+      "revenue_per_customer": "<int> Revenue earned per customer attending an event at this site.",
+      "fixed_cost": "<int> Fixed cost incurred each time an event is held at this site.",
+      "max_events": "<int> Maximum number of events that may be held at this site over the entire planning horizon."
+    }
+  ],
+  "customers": [
+    {
+      "id": "<int> Unique identifier for this customer location (1-indexed).",
+      "x": "<float> Horizontal coordinate of the customer location in miles.",
+      "y": "<float> Vertical coordinate of the customer location in miles.",
+      "population": "<int> Number of potential attendees residing at this customer location.",
+      "num_businesses": "<int> Number of businesses at this customer location, used to compute self-attraction."
+    }
+  ],
+  "site_to_site_distances": "<dict, key: '{from_site}_{to_site}'> Travel distance between each pair of venue sites, including the dummy starting site 0 which has zero distance to all venues.",
+  "customer_to_site_distances": "<dict, key: '{customer}_{site}'> Distance from each customer location to each venue site."
+}

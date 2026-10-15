@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "./frozen-v2",
+    "/work/runs/final-tf3_2-priority-3-r0-frozen-v2/input.txt",
+    "/work/runs/final-tf3_2-priority-3-r0-frozen-v2/output.json",
+    "290",
+    "104729",
+    "1"
+  ],
+  "pid": 623,
+  "started_unix": 1791478888.2834387,
+  "external_deadline_seconds": 300.0,
+  "elapsed_seconds": 289.8793917160001,
+  "user_cpu_seconds": 288.578242,
+  "system_cpu_seconds": 0.0009989999999999999,
+  "returncode": 0,
+  "timed_out": false,
+  "samples": [
+    {
+      "observed_seconds": 289.87620467399756,
+      "sha256": "2075f9c6e5be2c0466c55d92c8604293414c16a4a200c011b39ac963eb8e3924",
+      "bytes": 11451,
+      "parseable": true,
+      "parse_error": null,
+      "snapshot": "snapshot-0000.json"
+    }
+  ],
+  "validation_status": "Pending both schedule validators; parseable is not feasible",
+  "timing_scope": "Process startup and execution; excludes container startup and preconversion"
+}

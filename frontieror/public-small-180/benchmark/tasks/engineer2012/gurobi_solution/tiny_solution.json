@@ -1,0 +1,809 @@
+{
+  "objective_value": -919.23,
+  "solver_status": "optimal",
+  "mip_gap": 0.0,
+  "solve_time": 12.22,
+  "vessel_routes": {
+    "V1": [
+      {
+        "tail": "('src', 'V1')",
+        "head": "('D2', 2)",
+        "type": "source",
+        "cost": 0.0,
+        "product_flow": 0.0
+      },
+      {
+        "tail": "('D2', 2)",
+        "head": "('snk', 'V1')",
+        "type": "sink",
+        "cost": 0.0,
+        "product_flow": 0.0
+      }
+    ],
+    "V2": [
+      {
+        "tail": "('S2', 1)",
+        "head": "('D1', 17)",
+        "type": "travel",
+        "cost": 102.4,
+        "product_flow": 78.0
+      },
+      {
+        "tail": "('D1', 17)",
+        "head": "('D2', 18)",
+        "type": "travel",
+        "cost": 6.4,
+        "product_flow": 47.0
+      },
+      {
+        "tail": "('S2', 0)",
+        "head": "('S2', 1)",
+        "type": "demurrage",
+        "cost": 2.9,
+        "product_flow": 39.0
+      },
+      {
+        "tail": "('src', 'V2')",
+        "head": "('S2', 0)",
+        "type": "source",
+        "cost": 0.0,
+        "product_flow": 0.0
+      },
+      {
+        "tail": "('D2', 18)",
+        "head": "('snk', 'V2')",
+        "type": "sink",
+        "cost": 0.0,
+        "product_flow": 0.0
+      }
+    ],
+    "V3": [
+      {
+        "tail": "('S1', 11)",
+        "head": "('S2', 13)",
+        "type": "travel",
+        "cost": 13.62,
+        "product_flow": 43.0
+      },
+      {
+        "tail": "('S2', 13)",
+        "head": "('D2', 29)",
+        "type": "travel",
+        "cost": 108.96,
+        "product_flow": 82.0
+      },
+      {
+        "tail": "('D2', 29)",
+        "head": "('D1', 30)",
+        "type": "travel",
+        "cost": 6.81,
+        "product_flow": 30.0
+      },
+      {
+        "tail": "('S1', 1)",
+        "head": "('S1', 2)",
+        "type": "demurrage",
+        "cost": 2.1,
+        "product_flow": 7.0
+      },
+      {
+        "tail": "('S1', 2)",
+        "head": "('S1', 3)",
+        "type": "demurrage",
+        "cost": 2.1,
+        "product_flow": 7.0
+      },
+      {
+        "tail": "('S1', 3)",
+        "head": "('S1', 4)",
+        "type": "demurrage",
+        "cost": 2.1,
+        "product_flow": 7.0
+      },
+      {
+        "tail": "('S1', 4)",
+        "head": "('S1', 5)",
+        "type": "demurrage",
+        "cost": 2.1,
+        "product_flow": 7.0
+      },
+      {
+        "tail": "('S1', 5)",
+        "head": "('S1', 6)",
+        "type": "demurrage",
+        "cost": 2.1,
+        "product_flow": 7.0
+      },
+      {
+        "tail": "('S1', 6)",
+        "head": "('S1', 7)",
+        "type": "demurrage",
+        "cost": 2.1,
+        "product_flow": 7.0
+      },
+      {
+        "tail": "('S1', 7)",
+        "head": "('S1', 8)",
+        "type": "demurrage",
+        "cost": 2.1,
+        "product_flow": 14.0
+      },
+      {
+        "tail": "('S1', 8)",
+        "head": "('S1', 9)",
+        "type": "demurrage",
+        "cost": 2.1,
+        "product_flow": 14.0
+      },
+      {
+        "tail": "('S1', 9)",
+        "head": "('S1', 10)",
+        "type": "demurrage",
+        "cost": 2.1,
+        "product_flow": 21.0
+      },
+      {
+        "tail": "('S1', 10)",
+        "head": "('S1', 11)",
+        "type": "demurrage",
+        "cost": 2.1,
+        "product_flow": 28.0
+      },
+      {
+        "tail": "('src', 'V3')",
+        "head": "('S1', 1)",
+        "type": "source",
+        "cost": 0.0,
+        "product_flow": 0.0
+      },
+      {
+        "tail": "('D1', 30)",
+        "head": "('snk', 'V3')",
+        "type": "sink",
+        "cost": 0.0,
+        "product_flow": 0.0
+      }
+    ],
+    "V4": [
+      {
+        "tail": "('S1', 2)",
+        "head": "('S2', 4)",
+        "type": "travel",
+        "cost": 13.1,
+        "product_flow": 38.0
+      },
+      {
+        "tail": "('S2', 4)",
+        "head": "('D1', 20)",
+        "type": "travel",
+        "cost": 104.8,
+        "product_flow": 59.0
+      },
+      {
+        "tail": "('D1', 20)",
+        "head": "('D1', 21)",
+        "type": "demurrage",
+        "cost": 2.66,
+        "product_flow": 28.0
+      },
+      {
+        "tail": "('src', 'V4')",
+        "head": "('S1', 2)",
+        "type": "source",
+        "cost": 0.0,
+        "product_flow": 0.0
+      },
+      {
+        "tail": "('D1', 21)",
+        "head": "('snk', 'V4')",
+        "type": "sink",
+        "cost": 0.0,
+        "product_flow": 0.0
+      }
+    ]
+  },
+  "port_inventories": {
+    "S1": [
+      {
+        "time": 1,
+        "inventory": 34.0
+      },
+      {
+        "time": 2,
+        "inventory": 0.0
+      },
+      {
+        "time": 3,
+        "inventory": 4.0
+      },
+      {
+        "time": 4,
+        "inventory": 8.0
+      },
+      {
+        "time": 5,
+        "inventory": 12.0
+      },
+      {
+        "time": 6,
+        "inventory": 16.0
+      },
+      {
+        "time": 7,
+        "inventory": 13.0
+      },
+      {
+        "time": 8,
+        "inventory": 17.0
+      },
+      {
+        "time": 9,
+        "inventory": 14.0
+      },
+      {
+        "time": 10,
+        "inventory": 11.0
+      },
+      {
+        "time": 11,
+        "inventory": 0.0
+      },
+      {
+        "time": 12,
+        "inventory": 4.0
+      },
+      {
+        "time": 13,
+        "inventory": 8.0
+      },
+      {
+        "time": 14,
+        "inventory": 12.0
+      },
+      {
+        "time": 15,
+        "inventory": 16.0
+      },
+      {
+        "time": 16,
+        "inventory": 20.0
+      },
+      {
+        "time": 17,
+        "inventory": 24.0
+      },
+      {
+        "time": 18,
+        "inventory": 28.0
+      },
+      {
+        "time": 19,
+        "inventory": 32.0
+      },
+      {
+        "time": 20,
+        "inventory": 35.0
+      },
+      {
+        "time": 21,
+        "inventory": 38.0
+      },
+      {
+        "time": 22,
+        "inventory": 41.0
+      },
+      {
+        "time": 23,
+        "inventory": 44.0
+      },
+      {
+        "time": 24,
+        "inventory": 47.0
+      },
+      {
+        "time": 25,
+        "inventory": 50.0
+      },
+      {
+        "time": 26,
+        "inventory": 53.0
+      },
+      {
+        "time": 27,
+        "inventory": 56.0
+      },
+      {
+        "time": 28,
+        "inventory": 59.0
+      },
+      {
+        "time": 29,
+        "inventory": 62.0
+      },
+      {
+        "time": 30,
+        "inventory": 65.0
+      }
+    ],
+    "S2": [
+      {
+        "time": 1,
+        "inventory": 28.0
+      },
+      {
+        "time": 2,
+        "inventory": 31.0
+      },
+      {
+        "time": 3,
+        "inventory": 34.0
+      },
+      {
+        "time": 4,
+        "inventory": 16.0
+      },
+      {
+        "time": 5,
+        "inventory": 19.0
+      },
+      {
+        "time": 6,
+        "inventory": 22.0
+      },
+      {
+        "time": 7,
+        "inventory": 25.0
+      },
+      {
+        "time": 8,
+        "inventory": 28.0
+      },
+      {
+        "time": 9,
+        "inventory": 31.0
+      },
+      {
+        "time": 10,
+        "inventory": 33.0
+      },
+      {
+        "time": 11,
+        "inventory": 35.0
+      },
+      {
+        "time": 12,
+        "inventory": 37.0
+      },
+      {
+        "time": 13,
+        "inventory": 0.0
+      },
+      {
+        "time": 14,
+        "inventory": 2.0
+      },
+      {
+        "time": 15,
+        "inventory": 4.0
+      },
+      {
+        "time": 16,
+        "inventory": 6.0
+      },
+      {
+        "time": 17,
+        "inventory": 8.0
+      },
+      {
+        "time": 18,
+        "inventory": 10.0
+      },
+      {
+        "time": 19,
+        "inventory": 13.0
+      },
+      {
+        "time": 20,
+        "inventory": 16.0
+      },
+      {
+        "time": 21,
+        "inventory": 19.0
+      },
+      {
+        "time": 22,
+        "inventory": 22.0
+      },
+      {
+        "time": 23,
+        "inventory": 25.0
+      },
+      {
+        "time": 24,
+        "inventory": 27.0
+      },
+      {
+        "time": 25,
+        "inventory": 29.0
+      },
+      {
+        "time": 26,
+        "inventory": 31.0
+      },
+      {
+        "time": 27,
+        "inventory": 33.0
+      },
+      {
+        "time": 28,
+        "inventory": 35.0
+      },
+      {
+        "time": 29,
+        "inventory": 38.0
+      },
+      {
+        "time": 30,
+        "inventory": 41.0
+      }
+    ],
+    "D1": [
+      {
+        "time": 1,
+        "inventory": 75.0
+      },
+      {
+        "time": 2,
+        "inventory": 71.0
+      },
+      {
+        "time": 3,
+        "inventory": 67.0
+      },
+      {
+        "time": 4,
+        "inventory": 63.0
+      },
+      {
+        "time": 5,
+        "inventory": 59.0
+      },
+      {
+        "time": 6,
+        "inventory": 55.0
+      },
+      {
+        "time": 7,
+        "inventory": 51.0
+      },
+      {
+        "time": 8,
+        "inventory": 47.0
+      },
+      {
+        "time": 9,
+        "inventory": 43.0
+      },
+      {
+        "time": 10,
+        "inventory": 39.0
+      },
+      {
+        "time": 11,
+        "inventory": 35.0
+      },
+      {
+        "time": 12,
+        "inventory": 31.0
+      },
+      {
+        "time": 13,
+        "inventory": 27.0
+      },
+      {
+        "time": 14,
+        "inventory": 23.0
+      },
+      {
+        "time": 15,
+        "inventory": 19.0
+      },
+      {
+        "time": 16,
+        "inventory": 15.0
+      },
+      {
+        "time": 17,
+        "inventory": 42.0
+      },
+      {
+        "time": 18,
+        "inventory": 38.0
+      },
+      {
+        "time": 19,
+        "inventory": 34.0
+      },
+      {
+        "time": 20,
+        "inventory": 62.0
+      },
+      {
+        "time": 21,
+        "inventory": 87.0
+      },
+      {
+        "time": 22,
+        "inventory": 84.0
+      },
+      {
+        "time": 23,
+        "inventory": 81.0
+      },
+      {
+        "time": 24,
+        "inventory": 78.0
+      },
+      {
+        "time": 25,
+        "inventory": 73.0
+      },
+      {
+        "time": 26,
+        "inventory": 68.0
+      },
+      {
+        "time": 27,
+        "inventory": 63.0
+      },
+      {
+        "time": 28,
+        "inventory": 58.0
+      },
+      {
+        "time": 29,
+        "inventory": 53.0
+      },
+      {
+        "time": 30,
+        "inventory": 78.0
+      }
+    ],
+    "D2": [
+      {
+        "time": 1,
+        "inventory": 50.0
+      },
+      {
+        "time": 2,
+        "inventory": 47.0
+      },
+      {
+        "time": 3,
+        "inventory": 44.0
+      },
+      {
+        "time": 4,
+        "inventory": 41.0
+      },
+      {
+        "time": 5,
+        "inventory": 38.0
+      },
+      {
+        "time": 6,
+        "inventory": 35.0
+      },
+      {
+        "time": 7,
+        "inventory": 32.0
+      },
+      {
+        "time": 8,
+        "inventory": 29.0
+      },
+      {
+        "time": 9,
+        "inventory": 26.0
+      },
+      {
+        "time": 10,
+        "inventory": 23.0
+      },
+      {
+        "time": 11,
+        "inventory": 20.0
+      },
+      {
+        "time": 12,
+        "inventory": 17.0
+      },
+      {
+        "time": 13,
+        "inventory": 14.0
+      },
+      {
+        "time": 14,
+        "inventory": 11.0
+      },
+      {
+        "time": 15,
+        "inventory": 8.0
+      },
+      {
+        "time": 16,
+        "inventory": 4.0
+      },
+      {
+        "time": 17,
+        "inventory": 0.0
+      },
+      {
+        "time": 18,
+        "inventory": 43.0
+      },
+      {
+        "time": 19,
+        "inventory": 39.0
+      },
+      {
+        "time": 20,
+        "inventory": 35.0
+      },
+      {
+        "time": 21,
+        "inventory": 31.0
+      },
+      {
+        "time": 22,
+        "inventory": 27.0
+      },
+      {
+        "time": 23,
+        "inventory": 23.0
+      },
+      {
+        "time": 24,
+        "inventory": 19.0
+      },
+      {
+        "time": 25,
+        "inventory": 15.0
+      },
+      {
+        "time": 26,
+        "inventory": 11.0
+      },
+      {
+        "time": 27,
+        "inventory": 7.0
+      },
+      {
+        "time": 28,
+        "inventory": 3.0
+      },
+      {
+        "time": 29,
+        "inventory": 51.0
+      },
+      {
+        "time": 30,
+        "inventory": 47.0
+      }
+    ]
+  },
+  "vessel_operations": {
+    "V1": [],
+    "V2": [
+      {
+        "port": "S2",
+        "time": 0,
+        "quantity": 39.0,
+        "type": "load"
+      },
+      {
+        "port": "S2",
+        "time": 1,
+        "quantity": 39.0,
+        "type": "load"
+      },
+      {
+        "port": "D1",
+        "time": 17,
+        "quantity": -31.0,
+        "type": "discharge"
+      },
+      {
+        "port": "D2",
+        "time": 18,
+        "quantity": -47.0,
+        "type": "discharge"
+      }
+    ],
+    "V3": [
+      {
+        "port": "S1",
+        "time": 1,
+        "quantity": 7.0,
+        "type": "load"
+      },
+      {
+        "port": "S1",
+        "time": 7,
+        "quantity": 7.0,
+        "type": "load"
+      },
+      {
+        "port": "S1",
+        "time": 9,
+        "quantity": 7.0,
+        "type": "load"
+      },
+      {
+        "port": "S1",
+        "time": 10,
+        "quantity": 7.0,
+        "type": "load"
+      },
+      {
+        "port": "S1",
+        "time": 11,
+        "quantity": 15.0,
+        "type": "load"
+      },
+      {
+        "port": "S2",
+        "time": 13,
+        "quantity": 39.0,
+        "type": "load"
+      },
+      {
+        "port": "D1",
+        "time": 30,
+        "quantity": -30.0,
+        "type": "discharge"
+      },
+      {
+        "port": "D2",
+        "time": 29,
+        "quantity": -52.0,
+        "type": "discharge"
+      }
+    ],
+    "V4": [
+      {
+        "port": "S1",
+        "time": 2,
+        "quantity": 38.0,
+        "type": "load"
+      },
+      {
+        "port": "S2",
+        "time": 4,
+        "quantity": 21.0,
+        "type": "load"
+      },
+      {
+        "port": "D1",
+        "time": 20,
+        "quantity": -31.0,
+        "type": "discharge"
+      },
+      {
+        "port": "D1",
+        "time": 21,
+        "quantity": -28.0,
+        "type": "discharge"
+      }
+    ]
+  },
+  "instance_path": "research-workspace/Code/efficient_opt_bench/efficient_opt_benchmark/engineer2012/instance/tiny_instance.json",
+  "cost_breakdown": {
+    "transport_cost": 356.09,
+    "demurrage_cost": 26.56,
+    "procurement_cost": 606.9,
+    "supply_revenue": 1908.78,
+    "total_cost": -919.23
+  },
+  "runtime": 12.41
+}

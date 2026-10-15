@@ -1,0 +1,7 @@
+{
+  "objective_value": "<float> Total cost combining the supplier's inventory holding cost over the extended horizon, all retailers' inventory holding costs over the extended horizon, and the transportation costs of all route segments used in delivery periods.",
+  "deliveries": "<dict, key: '{period}' -> dict, key: '{retailer}'> Quantity of product shipped from the supplier to each visited retailer in each delivery period.",
+  "routes": "<dict, key: '{period}' -> list[list[int]]> Route segments used by the vehicle in each delivery period, where each entry [i, j, k] indicates the segment between location i and location j is traversed k times, with k equal to 1 for a segment between two retailers and 1 or 2 for a segment incident to the supplier.",
+  "supplier_inventory": "<dict, key: '{period}'> Inventory level held at the supplier at each period of the extended horizon.",
+  "retailer_inventory": "<dict, key: '{retailer}' -> dict, key: '{period}'> Inventory level held at each retailer at each period of the extended horizon."
+}

@@ -1,0 +1,4 @@
+{
+  "objective_value": "<float> Defender's minimum total cost achieved under the interdictor's chosen attack pattern.",
+  "interdiction_pattern": "<dict, key: '{facility_tier}_{facility_index}'> Interdiction intensity level assigned to each facility, where the key identifies the facility tier ('S1' for level I, 'S2' for level II) and its index within that tier, and the value is the chosen intensity level."
+}

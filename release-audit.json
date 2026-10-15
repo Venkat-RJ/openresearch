@@ -1,0 +1,24 @@
+{
+  "scope": "Full current public tree plus every ZIP member and nested gzip payload",
+  "scan": {
+    "files": 5722,
+    "zip_members": 5606,
+    "gzip_payloads": 4
+  },
+  "pattern_categories": [
+    "home_path_or_username",
+    "private_key",
+    "credential",
+    "signed_url",
+    "private_endpoint",
+    "personal_email",
+    "credential_assignment"
+  ],
+  "matches": [],
+  "internal_html_links_checked": 1953,
+  "broken_internal_html_links": [],
+  "images_without_alt": [],
+  "duplicate_ids": [],
+  "limit": "Pattern scans do not guarantee absence of every possible sensitive datum. Source-code matrix expressions resembling email addresses were separately reviewed as false positives.",
+  "approved_media": "Original Sagent and Trackinizer captures are retained unchanged with author approval. The intro GIF is an illustrative export of the existing site animations."
+}

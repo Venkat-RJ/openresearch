@@ -1,0 +1,9 @@
+# Problem Description
+
+A facility must process a set of n independent jobs on m identical parallel machines. Each job has a known nonnegative integer processing time and a known nonnegative integer weight that represents its priority or importance. Each machine can process at most one job at a time, preemption is not allowed, and every job must be assigned to exactly one machine. On each machine, jobs are processed contiguously starting from time zero with no idle time inserted between them.
+
+The planner must decide how to assign the jobs to the machines and, for each machine, in what order to process the jobs assigned to it. The completion time of a job is the time at which its processing finishes, which equals the sum of the processing times of that job and of all jobs processed before it on the same machine.
+
+The objective is to minimize the total weighted completion time across all jobs, that is, the sum over all jobs of the product of each job's weight and its completion time.
+
+The input data for an instance consists of the number of jobs n, the number of machines m, and for each job its processing time and its weight. A solution is an assignment of every job to one machine together with a processing order on each machine, and its cost is the total weighted completion time.

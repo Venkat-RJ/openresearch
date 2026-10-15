@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "./frozen-v2",
+    "/work/runs/final-tf2-uniform-1-r0-frozen-v2/input.txt",
+    "/work/runs/final-tf2-uniform-1-r0-frozen-v2/output.json",
+    "290",
+    "104729",
+    "1"
+  ],
+  "pid": 539,
+  "started_unix": 1791475400.2794793,
+  "external_deadline_seconds": 300.0,
+  "elapsed_seconds": 289.8728876749992,
+  "user_cpu_seconds": 288.672152,
+  "system_cpu_seconds": 0.0049949999999999994,
+  "returncode": 0,
+  "timed_out": false,
+  "samples": [
+    {
+      "observed_seconds": 289.8683428000004,
+      "sha256": "f5a2cf34fb03e0edb02b924127e92ab380e5c50f67c7bbf9035a8ed079f0acdf",
+      "bytes": 11410,
+      "parseable": true,
+      "parse_error": null,
+      "snapshot": "snapshot-0000.json"
+    }
+  ],
+  "validation_status": "Pending both schedule validators; parseable is not feasible",
+  "timing_scope": "Process startup and execution; excludes container startup and preconversion"
+}

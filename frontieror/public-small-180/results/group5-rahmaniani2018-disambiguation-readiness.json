@@ -1,0 +1,142 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "task": "rahmaniani2018",
+  "status": "READY LIVE parameter-only disambiguation; root official native execution pending",
+  "live_code": "research-workspace/Personal_experiments/frontieror-fresh-20261011/solvers/rahmaniani2018/gpt-5.6-sol/code.py",
+  "live_code_sha256": "3fbbf1c19c97f3f31ed85d426957a9bd106bc2138993e537b8c52efda064288d",
+  "immutable_primary_code_sha256": "974bd301e5fe92a10b7830be1b655e8152ba646ae47cb74f83ddae07583b59ac",
+  "immutable_telemetry_followup_code_sha256": "0122a19d1f6ffe7fc55bd258c7dd191905fb9fc716c9e3fd87307c359d0f351b",
+  "frozen_sources_preserved": true,
+  "compile_passed": true,
+  "AST_exact_telemetry_baseline_after_removing_only_retry_block": true,
+  "both_optimize_calls_use_same_original_witness_callback": true,
+  "retry_guard": "not m.SolCount and m.Status==GRB.INF_OR_UNBD",
+  "retry_sequence": [
+    "Emit inf_or_unbd_before_disambiguation telemetry",
+    "Set DualReductions=0",
+    "m.reset() preserving variables/constraints/objective",
+    "Recompute remaining=deadline-time.monotonic()",
+    "If remaining>0: TimeLimit=remaining; m.optimize(cb); emit inf_or_unbd_after_disambiguation telemetry",
+    "Otherwise emit disambiguation_deadline; no retry",
+    "Continue unchanged no-incumbent and full-original-row publication handling"
+  ],
+  "unchanged": [
+    "512variables/734initialrows/1850rowcap",
+    "Every mathematical expression, investment, profile and witness schema",
+    "Six-hour blocks; no3h alternative",
+    "Seed0/MIPGap1e-4/NumericFocus0/Threads1",
+    "Official logger min_interval0/early epoch",
+    "Original callback and candidate publication tolerance"
+  ],
+  "hypothesis_belief_id": "dee27c42-fe8f-4abc-a7cb-72dab77f42f7",
+  "observed_previous_native_diagnostics": [
+    {
+      "Status": 2,
+      "SolCount": 2,
+      "NumVars": 512,
+      "NumConstrs": 734,
+      "iteration": 1,
+      "active_rows": 0,
+      "full_rows": 6720,
+      "worst_full_row_violation": 25444.76,
+      "worst_full_row_residual": 25444.76,
+      "worst_row_index": 4264,
+      "worst_row_category": [
+        "balancer_capacity",
+        10,
+        58
+      ],
+      "full_rows_violated_at_publish_tolerance": 1344,
+      "exit_reason": "adding_violated_rows",
+      "complete_witness_found": false,
+      "elapsed_seconds": 0.14014187499999986
+    },
+    {
+      "Status": 2,
+      "SolCount": 6,
+      "NumVars": 512,
+      "NumConstrs": 834,
+      "iteration": 2,
+      "active_rows": 100,
+      "full_rows": 6720,
+      "worst_full_row_violation": 12783.579999999998,
+      "worst_full_row_residual": 12783.579999999998,
+      "worst_row_index": 6088,
+      "worst_row_category": [
+        "balancer_capacity",
+        41,
+        178
+      ],
+      "full_rows_violated_at_publish_tolerance": 893,
+      "exit_reason": "adding_violated_rows",
+      "complete_witness_found": false,
+      "elapsed_seconds": 0.2002070840000001
+    },
+    {
+      "Status": 2,
+      "SolCount": 7,
+      "NumVars": 512,
+      "NumConstrs": 934,
+      "iteration": 3,
+      "active_rows": 200,
+      "full_rows": 6720,
+      "worst_full_row_violation": 5367.688519065872,
+      "worst_full_row_residual": 5367.688519065872,
+      "worst_row_index": 4106,
+      "worst_row_category": [
+        "balancer_ramp_up",
+        10,
+        18
+      ],
+      "full_rows_violated_at_publish_tolerance": 380,
+      "exit_reason": "adding_violated_rows",
+      "complete_witness_found": false,
+      "elapsed_seconds": 0.25301458399999976
+    },
+    {
+      "Status": 2,
+      "SolCount": 8,
+      "NumVars": 512,
+      "NumConstrs": 1034,
+      "iteration": 4,
+      "active_rows": 300,
+      "full_rows": 6720,
+      "worst_full_row_violation": 4234.79735313396,
+      "worst_full_row_residual": 4234.79735313396,
+      "worst_row_index": 5992,
+      "worst_row_category": [
+        "balancer_capacity",
+        41,
+        154
+      ],
+      "full_rows_violated_at_publish_tolerance": 185,
+      "exit_reason": "adding_violated_rows",
+      "complete_witness_found": false,
+      "elapsed_seconds": 0.34306662500000007
+    },
+    {
+      "Status": 4,
+      "SolCount": 0,
+      "NumVars": 512,
+      "NumConstrs": 1134,
+      "iteration": 5,
+      "active_rows": 400,
+      "full_rows": 6720,
+      "worst_full_row_violation": null,
+      "worst_full_row_residual": null,
+      "worst_row_index": null,
+      "worst_row_category": null,
+      "full_rows_violated_at_publish_tolerance": null,
+      "exit_reason": "no_solution_count",
+      "complete_witness_found": false,
+      "elapsed_seconds": 0.36078029199999984
+    }
+  ],
+  "previous_native_conclusion": "INF_OR_UNBD at partial restricted master1134rows; not established infeasible or unbounded, not active-row cap or deadline exhaustion; no original-instance infeasibility claim",
+  "previous_native_outcome_API_record_pending_root": true,
+  "gurobi_guidance": "https://support.gurobi.com/hc/en-us/articles/4402704428177-How-do-I-resolve-the-error-Model-is-infeasible-or-unbounded",
+  "worker_model_construction": false,
+  "worker_solver_execution": false,
+  "experiment_id": "255137e9-c948-4434-b338-ad407b556185",
+  "readback_verified": true
+}

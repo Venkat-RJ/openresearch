@@ -1,0 +1,29 @@
+{
+  "num_customers": "<int> Total number of customers to be served.",
+  "depot": {
+    "id": "<int> Identifier for the depot node in the distance matrix.",
+    "x": "<float> Horizontal coordinate of the depot location.",
+    "y": "<float> Vertical coordinate of the depot location.",
+    "exogenous_time_window": "<list[int], length 2> Earliest departure and latest return time for vehicles at the depot."
+  },
+  "vehicle_capacity": "<int> Maximum total demand a single vehicle can carry on one route.",
+  "num_vehicles": "<str> Availability of vehicles for routing ('unlimited' means no fleet size constraint).",
+  "endogenous_time_window_width": "<float> Duration of the narrow delivery time window to be assigned to each customer.",
+  "customers": [
+    {
+      "id": "<int> Unique identifier for the customer, corresponding to the row/column index in the distance matrix.",
+      "x": "<float> Horizontal coordinate of the customer location.",
+      "y": "<float> Vertical coordinate of the customer location.",
+      "exogenous_time_window": "<list[int], length 2> Earliest and latest times during which a delivery is permitted at this customer.",
+      "endogenous_time_window_width": "<float> Duration of the narrow delivery time window to be assigned to this customer."
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "<int> Unique identifier for the demand scenario.",
+      "probability": "<float> Likelihood of this demand scenario occurring.",
+      "demands": "<list[int], length num_customers> Quantity of goods requested by each customer under this scenario, ordered by customer id."
+    }
+  ],
+  "distance_matrix": "<list[list[float]], shape [num_customers+2][num_customers+2]> Travel cost and travel time between each pair of locations, where row/column 0 is the start depot, 1 through num_customers are customers, and num_customers+1 is the end depot."
+}

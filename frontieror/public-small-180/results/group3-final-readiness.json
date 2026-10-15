@@ -1,0 +1,173 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "group": 3,
+  "scope": "tiny-only",
+  "root_budget_seconds": 300,
+  "verification": {
+    "all30_AST": "pass",
+    "all30_min_interval": 0,
+    "clock": "wall-clock start_time; custom time.time() minus elapsed monotonic duration; copied _GUROBI_CODE_START_TIME=time.time()",
+    "all30_Trackinizer": "POST saved outcome then GET/assert exact outcome",
+    "local_solver_executions": 0,
+    "upstream_changes": 0,
+    "AOCC": "unclaimed pending native final stream audit"
+  },
+  "sources": [
+    {
+      "task": "fischetti1997",
+      "sha256": "2340739844fb1b48cc89b9ade50cd50e433a5dc1761176fbfdab68e24b1167ff",
+      "record": "748bd455-31fb-453d-9110-4047dcb9017a"
+    },
+    {
+      "task": "fischetti1998",
+      "sha256": "1f90947c248b770b7b12ed9b8e99f8e56e4e11af6f04035a72f6b599f50274f7",
+      "record": "4257079c-ba19-490e-9794-56f700c763bd"
+    },
+    {
+      "task": "fischetti2017",
+      "sha256": "1c231485d5e6d9a5c0f3a37a71770c831808b2d3b187c15c76179535fb6eeed0",
+      "record": "135131af-d960-4b95-ba6b-737ca9cd54d6"
+    },
+    {
+      "task": "fleszar2022b",
+      "sha256": "938bea5995744dccd4101acf262df68c4bbd200c5f1b9aa6a207f65acd0bf37b",
+      "record": "a43f0eb7-8bc6-454b-952e-96e1706ed451"
+    },
+    {
+      "task": "forrest2006",
+      "sha256": "e1301fc7795cc7218b166b6a40383cb5783e60b53896ee35f3c1123faa8e2f53",
+      "record": "2116dcb3-5ada-41a2-a68f-84f1fbd7f842"
+    },
+    {
+      "task": "fragkos2016",
+      "sha256": "51c9b60d437f2d4aa18cb173dfab859bd25b6bc7d880a7985515a239549de1eb",
+      "record": "04d628bf-55f1-44ed-93f3-b09246e0da51"
+    },
+    {
+      "task": "fragkos2021",
+      "sha256": "89d846f75c94f5fb4e28ae49f9c9043fab14274d6ca33b4e9e58a172eb1be959",
+      "record": "93f570ef-6792-4ab5-a3dd-d8fca7bd733e"
+    },
+    {
+      "task": "freeman2018",
+      "sha256": "80f4dffcf042440118439179ab11fe71913242466779209a4446c3d77f00134e",
+      "record": "1e28436e-2829-473d-93d1-7a6c160d283b"
+    },
+    {
+      "task": "freling2003",
+      "sha256": "8cc498cc166805db8f1b4209cfb8c70d7dab3a9109d6c252adf0f4da49328dc8",
+      "record": "da8d1c81-d0b6-44cc-93f1-404df284d5c3"
+    },
+    {
+      "task": "frey2017",
+      "sha256": "683dd5b064ab42ef37a64de54a19af033971c516bf79cf9d405fef05ce7fe8d9",
+      "record": "956f65fe-d597-4a71-a339-f65c0ba1fced"
+    },
+    {
+      "task": "furini2016",
+      "sha256": "d36dfe460a2b3895fa2215071e0e05295305e016f86c89fa5450283f0f564671",
+      "record": "f1cfdd9f-d696-4d6a-a055-b5a79efff095"
+    },
+    {
+      "task": "furini2017",
+      "sha256": "0ff82cf5bbbc33009157c318d058d5337650a6f604aea58f27bad9bc63a200dd",
+      "record": "7c996487-034a-4273-88eb-bedfbd54ff53"
+    },
+    {
+      "task": "furini2019",
+      "sha256": "ed788ba15875f6d3879b918c092e12dfafb040dc7ec93bc02e1b1e8ce1e2eb8c",
+      "record": "e59ee629-1025-40a0-8517-f51ed859cb9c"
+    },
+    {
+      "task": "furini2021",
+      "sha256": "3fabc461c807fd5cff0887653bfb28f7055b7034d42501b4b9b3ef445adc1c34",
+      "record": "279ee377-ff6c-4ab4-bcb3-ce240494ac48"
+    },
+    {
+      "task": "gamache1999",
+      "sha256": "ac2ccaa8143b496ca3a45d29ded42ccadffc941fbe612c4d064418a4aa7d42d0",
+      "record": "4434ae37-a8f8-448b-a3b0-6219bdcf3f1a"
+    },
+    {
+      "task": "gangammanavar2020",
+      "sha256": "b9db05435716a356302c5899347e565ead30537ba2180ef4dd9caf825fe8ba3e",
+      "record": "17fd8cec-3ad8-4316-a21d-5ea2c8f091f2"
+    },
+    {
+      "task": "garcia2011",
+      "sha256": "660f0b7b79cd872f6ae9bb806ebaa858667bc9a7b048a6becd19d815c389730a",
+      "record": "3c66b3c9-ebfa-48da-8a2e-87b573128088"
+    },
+    {
+      "task": "gruson2021",
+      "sha256": "7d704f83365fe56ecc6632e43c4fc4590cbf5ff2361171408504b18f7ed0d9ac",
+      "record": "e110677f-9c72-4a4a-9315-00bce166eb88"
+    },
+    {
+      "task": "gschwind2021",
+      "sha256": "16f51287a37379183d06add660d525d884a55a7da48e606537dcfa623983c4b1",
+      "record": "62c85dbe-0883-475d-b3d7-58fc9a8ca084"
+    },
+    {
+      "task": "gualandi2012",
+      "sha256": "ffbd24f7402bcfa94bdd9cda19f7bc2ef9930a71254a0b63cbee5502cb54b0f2",
+      "record": "d4c01553-cc7a-4eda-8050-38bb90083b8a"
+    },
+    {
+      "task": "guo2021",
+      "sha256": "2fd0e6935d4990d782c86295cad3e54421504e92d99c5256fc8e9e79028de157",
+      "record": "1eae534d-afaf-4936-9da7-28d7cb29e6da"
+    },
+    {
+      "task": "hadjar2006",
+      "sha256": "4b4ab4234b65262d3da46154069b90a0e56043ce9992347987f4b6687cc4ea59",
+      "record": "97d989d0-68dc-476a-adff-983c30c4102a"
+    },
+    {
+      "task": "hassannayebi2016",
+      "sha256": "41edd54d2b195991a169542ebc8752d6ba467a1aa84d5919c4efe3f52606827a",
+      "record": "cb822fb1-21aa-42aa-9234-cf8d501493b5"
+    },
+    {
+      "task": "he2020",
+      "sha256": "2279ef6a674828ac42fa3199af84ac5ed334161202fd35fdd5def96401db8ac4",
+      "record": "4d4d9069-b1b6-4518-ad8c-bf5309804483"
+    },
+    {
+      "task": "hewitt2024",
+      "sha256": "6ed97956b4cc92d4606eccbc60c5f665149f5937a810ea182ef61fb5489a7e0d",
+      "record": "2846bf4f-344d-46f4-8564-ef01b4102eb2"
+    },
+    {
+      "task": "hoffman1993",
+      "sha256": "7a0c50c8169f637558c6d9734f701da06cfe327866cb2de1fd50a5e4f01ad3b2",
+      "record": "cf05c104-4458-422d-8ba2-e4af9be0936d"
+    },
+    {
+      "task": "hosseinian2020",
+      "sha256": "7a2af4a0c19e8fbd28901e9a30f0b9fabdb544d18b637310881a1f2c5bf19900",
+      "record": "58d090d4-4772-4dcf-a2bd-84a61412fe44"
+    },
+    {
+      "task": "huisman2005",
+      "sha256": "0ffb27ceffcb65b4baaa3ac8d235f531be878d6396ad36005b909c718b04e8ed",
+      "record": "db443234-10ad-454b-b86a-f5d9193f1f0e"
+    },
+    {
+      "task": "ji2019",
+      "sha256": "c2e1a35ef42cd90c5cde898d678c03478720343eac6cf333150ad1f1cb60325b",
+      "record": "a3f60bb7-8a04-4733-be98-55dd3a84fd41"
+    },
+    {
+      "task": "juvin2023",
+      "sha256": "5b81dc6b57889b2af0f52d22332ac720f4c9cb1ca28c76aa2e07497384f3a24c",
+      "record": "92781821-1fb7-4f7b-98d4-5f6a6f0c39e6"
+    }
+  ],
+  "new_quality_hypotheses": {
+    "huisman2005": "351bb39a-acda-455a-bf8b-d6e4cd6f0440",
+    "ji2019": "45e3dc4e-4695-4de8-b193-ca90bc1b71c3"
+  },
+  "ji_qualifier": "Conservative common subset: integer right-wall anchors and genuine sibling mooring only. No mismatched left-wall equation. Original2354.2 remains quarantined; new native result pending.",
+  "source_freeze": "No source edits after finalREADY unless root requests or reports failure."
+}

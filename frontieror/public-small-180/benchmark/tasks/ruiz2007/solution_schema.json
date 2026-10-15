@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Makespan, the completion time of the job in the last sequence position on the last machine.",
+  "sequence": "<list[int], length n_jobs> Permutation of jobs giving the order in which jobs enter every machine, where the k-th entry is the job placed in position k.",
+  "completion_times": "<dict, key: 'machine_{machine_index}'> Completion time of the job in each sequence position on the given machine, given as a list of length n_jobs ordered by position."
+}

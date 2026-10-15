@@ -1,0 +1,77 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "group": "group1",
+  "assignment_group_index": 0,
+  "status": "READY for root freeze and official tiny300 replay; not yet final evaluated",
+  "scope": "tiny only; root sole optimization driver; no large executions; no reference witnesses",
+  "source_template": "solvers/{task}/gpt-5.6-sol/code.py",
+  "belief": "1adafbe5-43b9-4541-ace8-42adb9938fd2",
+  "static_preflight_experiment": "326d4538-dc5f-4570-95d5-85f7dfe8e156",
+  "previous_static_preflight_experiment": "e8deb7b4-a5db-403c-8fe7-2219326a5aa3",
+  "portfolio_callback_belief": "701bc9eb-3604-4363-9aca-cd1418fec401",
+  "independent_audit_records_read": [
+    "1e5a8b77-49b6-4956-b5b7-b76e0a4c190a",
+    "c58db96f-9f06-4bed-a996-90c526ac6009"
+  ],
+  "readback_verified": true,
+  "checks": {
+    "all30_AST_and_compile": "passed",
+    "all30_argparse_time_limit": "type=int",
+    "Gurobi_controls": {
+      "Seed": 0,
+      "Threads": 1,
+      "MIPGap": 0.0001,
+      "NumericFocus": 0
+    },
+    "Gurobi_not_applicable": [
+      "alfieri2020",
+      "amaldi2013"
+    ],
+    "NumPy_controls": "explicit OPENBLAS_NUM_THREADS/OMP_NUM_THREADS/MKL_NUM_THREADS=1 before NumPy in amaldi2013 and bertsimas2022",
+    "official_logger_module": "FrontierOR/scripts/utils/solution_logger.py read, not modified",
+    "native_logger_min_interval": 0,
+    "native_logger_start_time": "time.time() - (time.monotonic() - start); maps wall-clock logger to existing early monotonic origin captured before instance loading and solve preparation",
+    "incumbents": "existing algorithm callbacks and complete-witness emissions retained; final returned witness additionally submitted to official log_solution if improving",
+    "official_logger_unit_test": "rapid10→5 improvements both serialized; early origin includes preparation delay",
+    "optimization_execution_by_owner": false,
+    "final_native_witness_and_log_objective_equality": "pending root official evaluation"
+  },
+  "quality_changes": {
+    "adulyasak2015": "retain exact route-subset/grouped-Benders alternative that tied reference in batch011",
+    "bertsimas2024": "scenario-local tangent reset, license-safe nearby-tangent pruning,160 refinements, best actual feasible iterate; incomplete repeated-design recourse refinement retained. Quality belief10a75460-0049-468e-9339-d1a5dd93048c; corrected objective not yet measured",
+    "bertsimas2022": "MIPSOL callback emits complete original portfolio x with recomputed original objective; best full incumbent retained across continuous polishing. No partial subproblem objective logging",
+    "other27": "no optimization-method changes in final logger repair"
+  },
+  "source_hashes": {
+    "adulyasak2015": "3eff5a78699d4567f6e2bc57d3436a13706f0c09293faad7ceeaacd7e083aa0a",
+    "alba2013": "72e77ed625356b42ef1d037155ca5af40b9b551b3e7a6b01090dc5e83114f534",
+    "alfieri2020": "d780a591a134da9c9ae754467c923f979b5c5f9836d10a5376d34628a7c275cf",
+    "amaldi2013": "946a8b37b51de734fef36975d04b9b5ee0781807e8b8f3582b841255b87b37f3",
+    "araujo2015": "fee8a238df96447b3389a02b6236a473708852852dfda0ea913336379c0bfcbe",
+    "araujo2020": "1d5e38d64f70d160a1062330623790bf2c97d6dccc02a2481ba3a965938a72e4",
+    "archetti2007": "115a3896d5e153342332d8b48774a295403326b318d848d7c0a29dca26a0397d",
+    "armbruster2012": "0aa20c8ac9c4a9b50a1bc25e37ef281f69af32d0d6a90c9706934a04efbf9bd8",
+    "arslan2021": "9d07ca4b0c0ac383bd77452844afc18b74ef1c3e0a6c03718ef7c18e25f74099",
+    "bard2002": "f51ec322afdbc077754f24e9b96d755dabe5f8b3f24e109bd73d7a2da09f330d",
+    "barnhart2000": "be6b78f31af59caf4efcb2a04a813884c0c71d80a98aa1470a2fab4e457c0a96",
+    "bayani2024": "c299acb855da4ebf2bca9e99be2fd0fdd1785dfb31b7bd1e711d23612c059771",
+    "belhoul2014": "9672be6b0c25e8d81fb7bdc995c5e7c24794fd44a37ce66b37a410a52537e7f8",
+    "belvaux2000": "d939507c250ef7d33015be1b7532cff24c0c64f99df2bb7cbe0cdf1e501932fc",
+    "bentert2022": "3218181c2c1ac7b76cb41a590ba8d9fc78b6b6b13e05d48e45dc48d6201b138c",
+    "bergman2019": "b05824ec62f6134f6368165193996e8d4c938664c3b775dc16c9260b1f9e3dec",
+    "bertsimas2022": "ad888fb43f84c53b52d5520e55076a4bdc65ede7513f911a7d79e7d208a2373a",
+    "bertsimas2024": "0f44a8a15f73c8f5d68be120b6a29c6f3ab5351ed33f47e5244eace471591916",
+    "bettinelli2017": "39a272751be6520b4831a451f57e14c2fd5fdebf7fd59df42e747682abc22cfe",
+    "bierwirth2017": "164635064dfcd6dc92a9070fcf8a43e04bfecd9f95d6a5a8b144955410cdd5c8",
+    "bode2012": "7a327c3a3abe6addb82f203baa7c2a757f85358b7821ee481804a075716c68fd",
+    "bodur2017": "8a6f94473bb34f3fdb999ed98eb8253b8b80dceeb689c1d51b736e63580d8726",
+    "boland2019": "c331f44b4480553d114fe649f0bbf191b5352e51588e47cf43adce0c39512c81",
+    "bollapragada2001": "1e29240f57b2e24c2c8fd2f5c98ad289e6111a1f5178de2e156fd53dac858974",
+    "borndorfer2007": "ed575e7828fd7bcfedb005101c666b39da3fb266205b9bf7903fefe60861bfe4",
+    "bragin2022": "fcb1e9d004990679bea9eb007979c1922c8ba0da5b83c312f04f30b51e4ebeba",
+    "brandao2016": "aba23d30472c0a6af001983b271d3ccab6a6e26f8f4164bf3c836d805c35b52c",
+    "bront2009": "e5c2b85ae2082d21740951e226da885faca646f851f4cf59d0d533d8d32dd853",
+    "buchheim2018": "062e242f040008c589359042a600c69c17313eba28e2bea614957a30c62fa56c",
+    "byeon2022": "6bef5caf9e8463f0f4389e0759807da24c99724b55ee1a7e593f8a7677ed0f0a"
+  }
+}

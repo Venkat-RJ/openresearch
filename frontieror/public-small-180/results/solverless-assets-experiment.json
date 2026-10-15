@@ -1,0 +1,45 @@
+{
+  "id": "97a724d4-8fed-4e4e-8284-b0cf2ed26053",
+  "seq": 255,
+  "owner": "[private field removed]",
+  "account": "[private field removed]",
+  "status": "complete",
+  "title": "Acquire omitted canonical tiny solverless checker snapshots",
+  "description": "Official checker rejects candidates because pinned dataset solverless_models/<instanceSHA>.npz files were not downloaded. Fetch six canonical tiny snapshots unchanged; no solving, no checker changes. Acquisition begun before this record; result pending.",
+  "labels": [
+    "frontieror-fresh",
+    "infrastructure",
+    "canonical-assets"
+  ],
+  "marginal_cost": {
+    "agent_usd": 0.0,
+    "resource_usd": 0.0
+  },
+  "subscribers": "[private field removed]",
+  "superseded_by": [],
+  "supersedes": [],
+  "produces": [],
+  "produced_by": [],
+  "created": "2026-10-11T09:59:04.882000+00:00",
+  "modified": "2026-10-11T09:59:26.404000+00:00",
+  "proves": [],
+  "favors": [],
+  "codechanges": null,
+  "outcome": "{\"assets\": [{\"bytes\": 107962, \"file\": \"research-workspace/Personal_experiments/frontieror-fresh-20261011/FrontierOR/frontier-or/tasks/adulyasak2015/solverless_models/14d69b67d716fa56028ddc806bceb14da45ed4b1b2190c889e798f0711ecfb47.npz\", \"sha256\": \"3988d387e85e367755c37e9849c1d8f0894e119da3aeac1157f9e52638c9d840\", \"task\": \"adulyasak2015\", \"url\": \"https://huggingface.co/datasets/frontieror/FrontierOR/resolve/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/adulyasak2015/solverless_models/14d69b67d716fa56028ddc806bceb14da45ed4b1b2190c889e798f0711ecfb47.npz\"}, {\"bytes\": 55590, \"file\": \"research-workspace/Personal_experiments/frontieror-fresh-20261011/FrontierOR/frontier-or/tasks/bertsimas2024/solverless_models/1849aa0e5d7bf1273e9ac1d1340b3f84e8d7150e3b3c170e17f0a84dab485d48.npz\", \"sha256\": \"6e72da9ab523092d5f7751d21e7f489331e27fad16bbf93238ff3c7f4f53ac28\", \"task\": \"bertsimas2024\", \"url\": \"https://huggingface.co/datasets/frontieror/FrontierOR/resolve/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/bertsimas2024/solverless_models/1849aa0e5d7bf1273e9ac1d1340b3f84e8d7150e3b3c170e17f0a84dab485d48.npz\"}, {\"bytes\": 7754, \"file\": \"research-workspace/Personal_experiments/frontieror-fresh-20261011/FrontierOR/frontier-or/tasks/cote2018/solverless_models/7813c9cf1c3851a8f5584beebaccd068512c48aa5774b3570c880e93f1511479.npz\", \"sha256\": \"c14f9b34e0c7cbc8fe73860eec50c3f20aef61f3d6c1136246fa327f9b75e92c\", \"task\": \"cote2018\", \"url\": \"https://huggingface.co/datasets/frontieror/FrontierOR/resolve/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/cote2018/solverless_models/7813c9cf1c3851a8f5584beebaccd068512c48aa5774b3570c880e93f1511479.npz\"}, {\"bytes\": 10579, \"file\": \"research-workspace/Personal_experiments/frontieror-fresh-20261011/FrontierOR/frontier-or/tasks/liao2020/solverless_models/b4b92c4380e1c1c4358f57d1ee360bcdf8ab81e6b4fc3ca0969d2ad1860f1bc2.npz\", \"sha256\": \"3cb77609528cc68d422e7b985339155795a79299c7cfc0ce92663e35fe541273\", \"task\": \"liao2020\", \"url\": \"https://huggingface.co/datasets/frontieror/FrontierOR/resolve/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/liao2020/solverless_models/b4b92c4380e1c1c4358f57d1ee360bcdf8ab81e6b4fc3ca0969d2ad1860f1bc2.npz\"}, {\"bytes\": 1296189, \"file\": \"research-workspace/Personal_experiments/frontieror-fresh-20261011/FrontierOR/frontier-or/tasks/rahmaniani2018/solverless_models/5dd1b43b5f42b21c7d32d55c444455a4c3e891203dfb32cb09f12db9405fcfce.npz\", \"sha256\": \"10ea6e86da9c52b6df8a3ceb2f21b29fb4c449b0b19e966a8e13afb47e91e301\", \"task\": \"rahmaniani2018\", \"url\": \"https://huggingface.co/datasets/frontieror/FrontierOR/resolve/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/rahmaniani2018/solverless_models/5dd1b43b5f42b21c7d32d55c444455a4c3e891203dfb32cb09f12db9405fcfce.npz\"}, {\"bytes\": 1561890, \"file\": \"research-workspace/Personal_experiments/frontieror-fresh-20261011/FrontierOR/frontier-or/tasks/rahmaniani2022/solverless_models/d39eb0c51c661635e8232d2f19bb754f198fc76ba20d8084771233bd43bedd42.npz\", \"sha256\": \"07b9532b7d241384b21918a15376b27591f2a5a7fc8d77d28b583d06f7292390\", \"task\": \"rahmaniani2022\", \"url\": \"https://huggingface.co/datasets/frontieror/FrontierOR/resolve/36c0406670b9d33eb35f0fbfdd987b4836b3aaa8/tasks/rahmaniani2022/solverless_models/d39eb0c51c661635e8232d2f19bb754f198fc76ba20d8084771233bd43bedd42.npz\"}], \"large_instances_solved\": 0, \"result\": \"six pinned canonical tiny checker snapshots acquired unchanged\"}",
+  "config": {
+    "scope": "tiny assets only",
+    "tasks": [
+      "adulyasak2015",
+      "bertsimas2024",
+      "cote2018",
+      "liao2020",
+      "rahmaniani2018",
+      "rahmaniani2022"
+    ],
+    "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+    "dataset_revision": "36c0406670b9d33eb35f0fbfdd987b4836b3aaa8"
+  },
+  "proved_by": [],
+  "favored_by": [],
+  "kind": "Experiment"
+}

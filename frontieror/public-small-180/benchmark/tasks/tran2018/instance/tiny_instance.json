@@ -1,0 +1,1057 @@
+{
+  "problem": "FRLM",
+  "description": "Flow-Refueling Location Model instance 1 (small scale). Locate 5 refueling stations on a network of 25 nodes to maximize round-trip traffic volume refueled. Vehicle range R=50.",
+  "instance_id": 1,
+  "scale": "small",
+  "generation_seed": 10042,
+  "parameters": {
+    "n": 25,
+    "num_arcs": 71,
+    "m": 10,
+    "num_od_pairs": 45,
+    "R": 50,
+    "p": 5
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "x": 100.34,
+      "y": 54.65,
+      "weight": 7360
+    },
+    {
+      "id": 1,
+      "x": 135.37,
+      "y": 17.9,
+      "weight": 2496
+    },
+    {
+      "id": 2,
+      "x": 157.44,
+      "y": 94.98,
+      "weight": 1340
+    },
+    {
+      "id": 3,
+      "x": 47.58,
+      "y": 96.5,
+      "weight": 6164
+    },
+    {
+      "id": 4,
+      "x": 139.91,
+      "y": 113.58,
+      "weight": 2160
+    },
+    {
+      "id": 5,
+      "x": 172.82,
+      "y": 30.31,
+      "weight": 4818
+    },
+    {
+      "id": 6,
+      "x": 62.35,
+      "y": 132.6,
+      "weight": 9342
+    },
+    {
+      "id": 7,
+      "x": 41.17,
+      "y": 100.44,
+      "weight": 3760
+    },
+    {
+      "id": 8,
+      "x": 159.1,
+      "y": 82.2,
+      "weight": 3501
+    },
+    {
+      "id": 9,
+      "x": 133.58,
+      "y": 100.58,
+      "weight": 1070
+    },
+    {
+      "id": 10,
+      "x": 5.82,
+      "y": 49.34,
+      "weight": 6544
+    },
+    {
+      "id": 11,
+      "x": 28.15,
+      "y": 4.97,
+      "weight": 2619
+    },
+    {
+      "id": 12,
+      "x": 40.96,
+      "y": 160.65,
+      "weight": 5443
+    },
+    {
+      "id": 13,
+      "x": 20.94,
+      "y": 149.03,
+      "weight": 5087
+    },
+    {
+      "id": 14,
+      "x": 145.35,
+      "y": 100.59,
+      "weight": 2893
+    },
+    {
+      "id": 15,
+      "x": 105.32,
+      "y": 14.94,
+      "weight": 5760
+    },
+    {
+      "id": 16,
+      "x": 45.79,
+      "y": 154.79,
+      "weight": 8571
+    },
+    {
+      "id": 17,
+      "x": 74.37,
+      "y": 26.23,
+      "weight": 752
+    },
+    {
+      "id": 18,
+      "x": 80.63,
+      "y": 8.62,
+      "weight": 307
+    },
+    {
+      "id": 19,
+      "x": 58.13,
+      "y": 106.84,
+      "weight": 8117
+    },
+    {
+      "id": 20,
+      "x": 155.45,
+      "y": 162.6,
+      "weight": 4205
+    },
+    {
+      "id": 21,
+      "x": 111.01,
+      "y": 8.57,
+      "weight": 6749
+    },
+    {
+      "id": 22,
+      "x": 18.94,
+      "y": 38.33,
+      "weight": 4574
+    },
+    {
+      "id": 23,
+      "x": 80.67,
+      "y": 118.98,
+      "weight": 5078
+    },
+    {
+      "id": 24,
+      "x": 62.53,
+      "y": 47.22,
+      "weight": 4328
+    }
+  ],
+  "arcs": [
+    {
+      "from": 0,
+      "to": 1,
+      "distance": 50.77
+    },
+    {
+      "from": 0,
+      "to": 3,
+      "distance": 67.34
+    },
+    {
+      "from": 0,
+      "to": 8,
+      "distance": 64.9
+    },
+    {
+      "from": 0,
+      "to": 9,
+      "distance": 56.7
+    },
+    {
+      "from": 0,
+      "to": 15,
+      "distance": 40.02
+    },
+    {
+      "from": 0,
+      "to": 17,
+      "distance": 38.5
+    },
+    {
+      "from": 0,
+      "to": 19,
+      "distance": 67.12
+    },
+    {
+      "from": 0,
+      "to": 23,
+      "distance": 67.27
+    },
+    {
+      "from": 0,
+      "to": 24,
+      "distance": 38.53
+    },
+    {
+      "from": 1,
+      "to": 5,
+      "distance": 39.45
+    },
+    {
+      "from": 1,
+      "to": 8,
+      "distance": 68.54
+    },
+    {
+      "from": 1,
+      "to": 15,
+      "distance": 30.2
+    },
+    {
+      "from": 1,
+      "to": 17,
+      "distance": 61.57
+    },
+    {
+      "from": 1,
+      "to": 21,
+      "distance": 26.09
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "distance": 25.56
+    },
+    {
+      "from": 2,
+      "to": 5,
+      "distance": 66.47
+    },
+    {
+      "from": 2,
+      "to": 8,
+      "distance": 12.89
+    },
+    {
+      "from": 2,
+      "to": 14,
+      "distance": 13.33
+    },
+    {
+      "from": 2,
+      "to": 20,
+      "distance": 67.65
+    },
+    {
+      "from": 3,
+      "to": 7,
+      "distance": 7.52
+    },
+    {
+      "from": 3,
+      "to": 10,
+      "distance": 62.99
+    },
+    {
+      "from": 3,
+      "to": 19,
+      "distance": 14.77
+    },
+    {
+      "from": 3,
+      "to": 22,
+      "distance": 64.84
+    },
+    {
+      "from": 3,
+      "to": 24,
+      "distance": 51.5
+    },
+    {
+      "from": 4,
+      "to": 9,
+      "distance": 14.46
+    },
+    {
+      "from": 4,
+      "to": 14,
+      "distance": 14.08
+    },
+    {
+      "from": 4,
+      "to": 20,
+      "distance": 51.42
+    },
+    {
+      "from": 4,
+      "to": 23,
+      "distance": 59.49
+    },
+    {
+      "from": 5,
+      "to": 8,
+      "distance": 53.67
+    },
+    {
+      "from": 5,
+      "to": 20,
+      "distance": 133.43
+    },
+    {
+      "from": 5,
+      "to": 21,
+      "distance": 65.52
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "distance": 38.51
+    },
+    {
+      "from": 6,
+      "to": 9,
+      "distance": 78.1
+    },
+    {
+      "from": 6,
+      "to": 13,
+      "distance": 44.55
+    },
+    {
+      "from": 6,
+      "to": 16,
+      "distance": 27.69
+    },
+    {
+      "from": 6,
+      "to": 19,
+      "distance": 26.1
+    },
+    {
+      "from": 6,
+      "to": 20,
+      "distance": 97.81
+    },
+    {
+      "from": 6,
+      "to": 23,
+      "distance": 22.83
+    },
+    {
+      "from": 7,
+      "to": 10,
+      "distance": 62.14
+    },
+    {
+      "from": 7,
+      "to": 13,
+      "distance": 52.63
+    },
+    {
+      "from": 7,
+      "to": 19,
+      "distance": 18.13
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "distance": 31.45
+    },
+    {
+      "from": 8,
+      "to": 14,
+      "distance": 22.96
+    },
+    {
+      "from": 9,
+      "to": 14,
+      "distance": 11.77
+    },
+    {
+      "from": 9,
+      "to": 17,
+      "distance": 95.05
+    },
+    {
+      "from": 9,
+      "to": 23,
+      "distance": 56.02
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "distance": 49.67
+    },
+    {
+      "from": 10,
+      "to": 13,
+      "distance": 100.83
+    },
+    {
+      "from": 10,
+      "to": 22,
+      "distance": 17.13
+    },
+    {
+      "from": 11,
+      "to": 17,
+      "distance": 50.88
+    },
+    {
+      "from": 11,
+      "to": 18,
+      "distance": 52.61
+    },
+    {
+      "from": 11,
+      "to": 21,
+      "distance": 82.94
+    },
+    {
+      "from": 11,
+      "to": 22,
+      "distance": 34.61
+    },
+    {
+      "from": 11,
+      "to": 24,
+      "distance": 54.47
+    },
+    {
+      "from": 12,
+      "to": 13,
+      "distance": 23.15
+    },
+    {
+      "from": 12,
+      "to": 16,
+      "distance": 7.59
+    },
+    {
+      "from": 12,
+      "to": 20,
+      "distance": 114.51
+    },
+    {
+      "from": 13,
+      "to": 16,
+      "distance": 25.51
+    },
+    {
+      "from": 14,
+      "to": 20,
+      "distance": 62.83
+    },
+    {
+      "from": 15,
+      "to": 17,
+      "distance": 32.94
+    },
+    {
+      "from": 15,
+      "to": 18,
+      "distance": 25.49
+    },
+    {
+      "from": 15,
+      "to": 21,
+      "distance": 8.54
+    },
+    {
+      "from": 16,
+      "to": 20,
+      "distance": 109.94
+    },
+    {
+      "from": 17,
+      "to": 18,
+      "distance": 18.69
+    },
+    {
+      "from": 17,
+      "to": 24,
+      "distance": 24.1
+    },
+    {
+      "from": 18,
+      "to": 21,
+      "distance": 30.38
+    },
+    {
+      "from": 19,
+      "to": 22,
+      "distance": 78.93
+    },
+    {
+      "from": 19,
+      "to": 23,
+      "distance": 25.6
+    },
+    {
+      "from": 19,
+      "to": 24,
+      "distance": 59.78
+    },
+    {
+      "from": 20,
+      "to": 23,
+      "distance": 86.57
+    },
+    {
+      "from": 22,
+      "to": 24,
+      "distance": 44.49
+    }
+  ],
+  "od_nodes": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    7,
+    13,
+    16,
+    17,
+    20
+  ],
+  "od_pairs": [
+    {
+      "origin": 0,
+      "destination": 1,
+      "flow": 361838.88,
+      "shortest_path": [
+        0,
+        1
+      ],
+      "path_distance": 50.77
+    },
+    {
+      "origin": 0,
+      "destination": 2,
+      "flow": 126782.36,
+      "shortest_path": [
+        0,
+        8,
+        2
+      ],
+      "path_distance": 77.79
+    },
+    {
+      "origin": 0,
+      "destination": 3,
+      "flow": 673701.22,
+      "shortest_path": [
+        0,
+        3
+      ],
+      "path_distance": 67.34
+    },
+    {
+      "origin": 0,
+      "destination": 5,
+      "flow": 393044.56,
+      "shortest_path": [
+        0,
+        1,
+        5
+      ],
+      "path_distance": 90.22
+    },
+    {
+      "origin": 0,
+      "destination": 7,
+      "flow": 369671.39,
+      "shortest_path": [
+        0,
+        3,
+        7
+      ],
+      "path_distance": 74.86
+    },
+    {
+      "origin": 0,
+      "destination": 13,
+      "flow": 293672.6,
+      "shortest_path": [
+        0,
+        3,
+        7,
+        13
+      ],
+      "path_distance": 127.49
+    },
+    {
+      "origin": 0,
+      "destination": 16,
+      "flow": 535551.07,
+      "shortest_path": [
+        0,
+        23,
+        6,
+        16
+      ],
+      "path_distance": 117.79
+    },
+    {
+      "origin": 0,
+      "destination": 17,
+      "flow": 143758.96,
+      "shortest_path": [
+        0,
+        17
+      ],
+      "path_distance": 38.5
+    },
+    {
+      "origin": 0,
+      "destination": 20,
+      "flow": 252478.38,
+      "shortest_path": [
+        0,
+        9,
+        4,
+        20
+      ],
+      "path_distance": 122.58
+    },
+    {
+      "origin": 1,
+      "destination": 2,
+      "flow": 41073.81,
+      "shortest_path": [
+        1,
+        8,
+        2
+      ],
+      "path_distance": 81.43
+    },
+    {
+      "origin": 1,
+      "destination": 3,
+      "flow": 130262.84,
+      "shortest_path": [
+        1,
+        0,
+        3
+      ],
+      "path_distance": 118.11
+    },
+    {
+      "origin": 1,
+      "destination": 5,
+      "flow": 304834.68,
+      "shortest_path": [
+        1,
+        5
+      ],
+      "path_distance": 39.45
+    },
+    {
+      "origin": 1,
+      "destination": 7,
+      "flow": 74703.18,
+      "shortest_path": [
+        1,
+        0,
+        3,
+        7
+      ],
+      "path_distance": 125.63
+    },
+    {
+      "origin": 1,
+      "destination": 13,
+      "flow": 71228.27,
+      "shortest_path": [
+        1,
+        0,
+        3,
+        7,
+        13
+      ],
+      "path_distance": 178.26
+    },
+    {
+      "origin": 1,
+      "destination": 16,
+      "flow": 126917.51,
+      "shortest_path": [
+        1,
+        0,
+        23,
+        6,
+        16
+      ],
+      "path_distance": 168.56
+    },
+    {
+      "origin": 1,
+      "destination": 17,
+      "flow": 30485.5,
+      "shortest_path": [
+        1,
+        17
+      ],
+      "path_distance": 61.57
+    },
+    {
+      "origin": 1,
+      "destination": 20,
+      "flow": 70403.01,
+      "shortest_path": [
+        1,
+        8,
+        2,
+        20
+      ],
+      "path_distance": 149.08
+    },
+    {
+      "origin": 2,
+      "destination": 3,
+      "flow": 67987.16,
+      "shortest_path": [
+        2,
+        14,
+        9,
+        23,
+        19,
+        3
+      ],
+      "path_distance": 121.49
+    },
+    {
+      "origin": 2,
+      "destination": 5,
+      "flow": 97128.33,
+      "shortest_path": [
+        2,
+        5
+      ],
+      "path_distance": 66.47
+    },
+    {
+      "origin": 2,
+      "destination": 7,
+      "flow": 40355.63,
+      "shortest_path": [
+        2,
+        14,
+        9,
+        23,
+        19,
+        7
+      ],
+      "path_distance": 124.85
+    },
+    {
+      "origin": 2,
+      "destination": 13,
+      "flow": 46135.91,
+      "shortest_path": [
+        2,
+        14,
+        9,
+        6,
+        13
+      ],
+      "path_distance": 147.75
+    },
+    {
+      "origin": 2,
+      "destination": 16,
+      "flow": 87746.5,
+      "shortest_path": [
+        2,
+        14,
+        9,
+        6,
+        16
+      ],
+      "path_distance": 130.89
+    },
+    {
+      "origin": 2,
+      "destination": 17,
+      "flow": 8665.23,
+      "shortest_path": [
+        2,
+        8,
+        0,
+        17
+      ],
+      "path_distance": 116.29
+    },
+    {
+      "origin": 2,
+      "destination": 20,
+      "flow": 83291.94,
+      "shortest_path": [
+        2,
+        20
+      ],
+      "path_distance": 67.65
+    },
+    {
+      "origin": 3,
+      "destination": 5,
+      "flow": 188487.89,
+      "shortest_path": [
+        3,
+        0,
+        1,
+        5
+      ],
+      "path_distance": 157.56
+    },
+    {
+      "origin": 3,
+      "destination": 7,
+      "flow": 3082000.0,
+      "shortest_path": [
+        3,
+        7
+      ],
+      "path_distance": 7.52
+    },
+    {
+      "origin": 3,
+      "destination": 13,
+      "flow": 521301.21,
+      "shortest_path": [
+        3,
+        7,
+        13
+      ],
+      "path_distance": 60.15
+    },
+    {
+      "origin": 3,
+      "destination": 16,
+      "flow": 770589.91,
+      "shortest_path": [
+        3,
+        19,
+        6,
+        16
+      ],
+      "path_distance": 68.56
+    },
+    {
+      "origin": 3,
+      "destination": 17,
+      "flow": 61313.86,
+      "shortest_path": [
+        3,
+        24,
+        17
+      ],
+      "path_distance": 75.6
+    },
+    {
+      "origin": 3,
+      "destination": 20,
+      "flow": 204187.96,
+      "shortest_path": [
+        3,
+        19,
+        23,
+        20
+      ],
+      "path_distance": 126.94
+    },
+    {
+      "origin": 5,
+      "destination": 7,
+      "flow": 109738.79,
+      "shortest_path": [
+        5,
+        1,
+        0,
+        3,
+        7
+      ],
+      "path_distance": 165.08
+    },
+    {
+      "origin": 5,
+      "destination": 13,
+      "flow": 117962.97,
+      "shortest_path": [
+        5,
+        8,
+        9,
+        6,
+        13
+      ],
+      "path_distance": 207.77
+    },
+    {
+      "origin": 5,
+      "destination": 16,
+      "flow": 216306.52,
+      "shortest_path": [
+        5,
+        8,
+        9,
+        6,
+        16
+      ],
+      "path_distance": 190.91
+    },
+    {
+      "origin": 5,
+      "destination": 17,
+      "flow": 35865.53,
+      "shortest_path": [
+        5,
+        1,
+        17
+      ],
+      "path_distance": 101.02
+    },
+    {
+      "origin": 5,
+      "destination": 20,
+      "flow": 151837.59,
+      "shortest_path": [
+        5,
+        20
+      ],
+      "path_distance": 133.43
+    },
+    {
+      "origin": 7,
+      "destination": 13,
+      "flow": 363426.18,
+      "shortest_path": [
+        7,
+        13
+      ],
+      "path_distance": 52.63
+    },
+    {
+      "origin": 7,
+      "destination": 16,
+      "flow": 486812.08,
+      "shortest_path": [
+        7,
+        6,
+        16
+      ],
+      "path_distance": 66.2
+    },
+    {
+      "origin": 7,
+      "destination": 17,
+      "flow": 34017.32,
+      "shortest_path": [
+        7,
+        3,
+        24,
+        17
+      ],
+      "path_distance": 83.12
+    },
+    {
+      "origin": 7,
+      "destination": 20,
+      "flow": 121341.52,
+      "shortest_path": [
+        7,
+        19,
+        23,
+        20
+      ],
+      "path_distance": 130.3
+    },
+    {
+      "origin": 13,
+      "destination": 16,
+      "flow": 1709160.21,
+      "shortest_path": [
+        13,
+        16
+      ],
+      "path_distance": 25.51
+    },
+    {
+      "origin": 13,
+      "destination": 17,
+      "flow": 28179.92,
+      "shortest_path": [
+        13,
+        7,
+        3,
+        24,
+        17
+      ],
+      "path_distance": 135.75
+    },
+    {
+      "origin": 13,
+      "destination": 20,
+      "flow": 157924.22,
+      "shortest_path": [
+        13,
+        16,
+        20
+      ],
+      "path_distance": 135.45
+    },
+    {
+      "origin": 16,
+      "destination": 17,
+      "flow": 46817.69,
+      "shortest_path": [
+        16,
+        6,
+        19,
+        24,
+        17
+      ],
+      "path_distance": 137.67
+    },
+    {
+      "origin": 16,
+      "destination": 20,
+      "flow": 327824.77,
+      "shortest_path": [
+        16,
+        20
+      ],
+      "path_distance": 109.94
+    },
+    {
+      "origin": 17,
+      "destination": 20,
+      "flow": 19649.29,
+      "shortest_path": [
+        17,
+        9,
+        4,
+        20
+      ],
+      "path_distance": 160.93
+    }
+  ]
+}

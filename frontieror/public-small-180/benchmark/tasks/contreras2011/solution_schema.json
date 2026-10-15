@@ -1,0 +1,5 @@
+{
+  "objective_value": "<float> Total cost of the solution, comprising hub setup costs and all routing costs.",
+  "hubs": "<list[int]> Indices of nodes selected to operate as hubs.",
+  "assignment": "<list[int], length n> Index of the hub to which each node is assigned for sending and receiving all its flow."
+}

@@ -1,0 +1,6 @@
+{
+  "objective_value": "<float> Total prize collected from all visited cities.",
+  "visited_nodes": "<list[int], length variable> Cities included in the tour.",
+  "edges": "<list[list[int]]> Pairs of cities connected by links used in the tour.",
+  "tour": "<list[int]> Ordered sequence of cities visited, starting and ending at the depot."
+}

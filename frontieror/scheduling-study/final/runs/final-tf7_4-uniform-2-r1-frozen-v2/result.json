@@ -1,0 +1,65 @@
+{
+  "slot": "final-tf7_4-uniform-2-r1-frozen-v2",
+  "instance": "final-tf7_4-uniform-2",
+  "solver": "frozen-v2",
+  "repeat": 1,
+  "block": 64,
+  "seed": 130363,
+  "stratum": "tf7/4-uniform",
+  "status": "VALID_IN_TIME",
+  "objective": 24151,
+  "measurement": {
+    "argv": [
+      "./frozen-v2",
+      "/work/runs/final-tf7_4-uniform-2-r1-frozen-v2/input.txt",
+      "/work/runs/final-tf7_4-uniform-2-r1-frozen-v2/output.json",
+      "290",
+      "130363",
+      "1"
+    ],
+    "pid": 936,
+    "started_unix": 1791491390.1290255,
+    "external_deadline_seconds": 300.0,
+    "elapsed_seconds": 289.8811446309992,
+    "user_cpu_seconds": 286.609683,
+    "system_cpu_seconds": 0.0029969999999999997,
+    "returncode": 0,
+    "timed_out": false,
+    "samples": [
+      {
+        "observed_seconds": 289.8778275479999,
+        "sha256": "1b3b0bdad03f8a24677be178a72b614cd5ab2a351af3553a694d0a97c23a3c60",
+        "bytes": 11448,
+        "parseable": true,
+        "parse_error": null,
+        "snapshot": "snapshot-0000.json"
+      }
+    ],
+    "validation_status": "Pending both schedule validators; parseable is not feasible",
+    "timing_scope": "Process startup and execution; excludes container startup and preconversion"
+  },
+  "checks": [
+    {
+      "snapshot": "snapshot-0000.json",
+      "observed_seconds": 289.8778275479999,
+      "sha256": "1b3b0bdad03f8a24677be178a72b614cd5ab2a351af3553a694d0a97c23a3c60",
+      "audit": {
+        "feasible": true,
+        "recomputed_objective": 24151,
+        "jobs_checked": 30,
+        "operations_checked": 300,
+        "errors": []
+      },
+      "official": {
+        "feasible": true,
+        "violated_constraints": [],
+        "violations": [],
+        "violation_magnitudes": []
+      },
+      "objective": 24151,
+      "valid": true
+    }
+  ],
+  "report_matches_snapshot": true,
+  "reported": null
+}

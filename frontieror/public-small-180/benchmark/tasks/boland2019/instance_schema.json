@@ -1,0 +1,10 @@
+{
+  "num_facilities": "<int> Number of candidate facility locations that may be opened.",
+  "num_customers": "<int> Number of customers that must each be served by exactly one open facility.",
+  "demands": "<list[int], length num_customers> Quantity of goods or service required by each customer.",
+  "capacities": "<list[int], length num_facilities> Maximum total demand that each facility can handle if opened.",
+  "fixed_costs_obj1": "<list[int], length num_facilities> Fixed cost incurred for opening each facility under the first cost structure.",
+  "fixed_costs_obj2": "<list[int], length num_facilities> Fixed cost incurred for opening each facility under the second cost structure.",
+  "assignment_costs_obj1": "<list[list[int]], shape [num_facilities][num_customers]> Cost of assigning each customer to each facility under the first cost structure.",
+  "assignment_costs_obj2": "<list[list[int]], shape [num_facilities][num_customers]> Cost of assigning each customer to each facility under the second cost structure."
+}

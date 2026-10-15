@@ -1,0 +1,23 @@
+{
+  "num_vehicles": "<int> Number of vehicles available in the dial-a-ride fleet.",
+  "num_users": "<int> Number of users requesting transportation service.",
+  "vehicle_capacity": "<int> Maximum number of passengers that each vehicle can carry simultaneously.",
+  "maximum_ride_time": "<int> Maximum time any user may spend aboard a vehicle from pickup to drop-off.",
+  "num_nodes": "<int> Total number of nodes in the service network, equal to 2 * num_users + 2 (one pickup and one drop-off per user, plus origin and destination depots).",
+  "nodes": [
+    {
+      "node_id": "<int> Unique identifier for this node, ranging from 0 (origin depot) to num_nodes - 1 (destination depot).",
+      "x": "<float> Horizontal coordinate of this node's location.",
+      "y": "<float> Vertical coordinate of this node's location.",
+      "earliest_time": "<float> Earliest time at which service may begin at this node.",
+      "latest_time": "<float> Latest time at which service may begin at this node.",
+      "service_duration": "<float> Time required to board or alight passengers at this node.",
+      "load": "<int> Change in vehicle occupancy when visiting this node (positive at pickups, negative at drop-offs, zero at depots).",
+      "node_type": "<str> Role of this node: 'origin_depot', 'destination_depot', 'pickup', or 'dropoff'.",
+      "user_id": "<int> Identifier of the user associated with this pickup or drop-off node (present only for pickup and dropoff nodes).",
+      "paired_node": "<int> Node identifier of the corresponding drop-off node for a pickup, or the corresponding pickup node for a drop-off (present only for pickup and dropoff nodes).",
+      "request_type": "<str> Whether this user's trip is 'outbound' (from home to a destination) or 'inbound' (from an origin back home) (present only for pickup and dropoff nodes)."
+    }
+  ],
+  "maximum_route_duration": "<int> Maximum total duration of any single vehicle's route from depot departure to depot return."
+}

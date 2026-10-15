@@ -1,0 +1,105 @@
+{
+  "stage": "development",
+  "image": "sha256:5bf378efea878ad3fba6a3772e7eee8061dcd620d6f738e8dccd27286679c448",
+  "generator_version": "custom-jsptwt-development-v0.1",
+  "plan": [
+    {
+      "name": "dev-tf2-uniform-0",
+      "tightness": 2,
+      "weights": "uniform",
+      "seed": "development:2:uniform:0"
+    },
+    {
+      "name": "dev-tf2-uniform-1",
+      "tightness": 2,
+      "weights": "uniform",
+      "seed": "development:2:uniform:1"
+    },
+    {
+      "name": "dev-tf2-priority-0",
+      "tightness": 2,
+      "weights": "priority",
+      "seed": "development:2:priority:0"
+    },
+    {
+      "name": "dev-tf2-priority-1",
+      "tightness": 2,
+      "weights": "priority",
+      "seed": "development:2:priority:1"
+    },
+    {
+      "name": "dev-tf3-uniform-0",
+      "tightness": 3,
+      "weights": "uniform",
+      "seed": "development:3:uniform:0"
+    },
+    {
+      "name": "dev-tf3-uniform-1",
+      "tightness": 3,
+      "weights": "uniform",
+      "seed": "development:3:uniform:1"
+    },
+    {
+      "name": "dev-tf3-priority-0",
+      "tightness": 3,
+      "weights": "priority",
+      "seed": "development:3:priority:0"
+    },
+    {
+      "name": "dev-tf3-priority-1",
+      "tightness": 3,
+      "weights": "priority",
+      "seed": "development:3:priority:1"
+    },
+    {
+      "name": "dev-tf4-uniform-0",
+      "tightness": 4,
+      "weights": "uniform",
+      "seed": "development:4:uniform:0"
+    },
+    {
+      "name": "dev-tf4-uniform-1",
+      "tightness": 4,
+      "weights": "uniform",
+      "seed": "development:4:uniform:1"
+    },
+    {
+      "name": "dev-tf4-priority-0",
+      "tightness": 4,
+      "weights": "priority",
+      "seed": "development:4:priority:0"
+    },
+    {
+      "name": "dev-tf4-priority-1",
+      "tightness": 4,
+      "weights": "priority",
+      "seed": "development:4:priority:1"
+    }
+  ],
+  "external_deadline_seconds": 300,
+  "internal_seconds": {
+    "egrasp": 298,
+    "frozen-v2": 300
+  },
+  "executions_per_solver_case": 1,
+  "seed_v2": 0,
+  "seed_egrasp": "undocumented; not seed-matched",
+  "cpu_limit": 1,
+  "memory": "512m",
+  "capture_poll_seconds": 0.01,
+  "rationale": "Initial development comparison and 300s deadline-policy verification; retain all failures and zero scores",
+  "final_holdout_generated": false,
+  "python_version": "3.13.14",
+  "weights_priority": "Exactly six uniformly sampled jobs of30 have weight10; others1",
+  "due_dates": "release + TF times own processing sum; TF2/3/4",
+  "release_dates": "uniform integers0..floor(total processing/(2n))",
+  "provenance": "LiSA handbook p70 equations7.1/7.2 motivate time formulas; other parameters are custom design",
+  "source_sha256": {
+    "synthetic_instances.py": "4f70361a69475a3f639b773b0a7be180ddb3f662a72976db0c5b214c62fdf672",
+    "development_comparison.py": "5e9f4264b89b3674625fcdb8581b742e7414c44752f6b2af8770d87f1ba8e619",
+    "comparator_timing_calibration.py": "e2324058a5824169cc67f1c9ed3b6bc3121095338813f773915abbbba03c1339",
+    "timed_solver.py": "8760c22f9a04a7d402650d04de75a373364a36676a32244fe3af7cec27f5bacb",
+    "lisa_adapter.py": "b8fdfb18e4ee002b12da35b292ed85c02f697a3db6d743e02e3b8f27c733ac3c",
+    "audit_schedule.py": "dc05abc0c68e074c91ccfecc910819a262a834e8efba0b34a832fff49c03ff22"
+  }
+}

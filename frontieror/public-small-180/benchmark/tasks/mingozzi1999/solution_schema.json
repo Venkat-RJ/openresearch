@@ -1,0 +1,4 @@
+{
+  "objective_value": "<float> Total travel distance across all vehicle routes.",
+  "routes": "<list[list[int]], length num_routes> Ordered sequence of node indices visited by each vehicle, starting and ending at the depot with all linehaul customers served before any backhaul customers."
+}

@@ -1,0 +1,48 @@
+{
+  "instance_id": 1,
+  "problem_type": "P/p-Batch, r_j, p_j, v_j, Cap / sum(C_j)",
+  "num_jobs": 6,
+  "num_machines": 4,
+  "batch_capacity": 50,
+  "release_date_type": "narrow",
+  "release_date_upper_bound": 5,
+  "seed": 42,
+  "jobs": [
+    {
+      "job_id": 1,
+      "release_date": 4,
+      "processing_time": 2,
+      "size": 24
+    },
+    {
+      "job_id": 2,
+      "release_date": 3,
+      "processing_time": 1,
+      "size": 4
+    },
+    {
+      "job_id": 3,
+      "release_date": 0,
+      "processing_time": 5,
+      "size": 22
+    },
+    {
+      "job_id": 4,
+      "release_date": 0,
+      "processing_time": 4,
+      "size": 24
+    },
+    {
+      "job_id": 5,
+      "release_date": 0,
+      "processing_time": 4,
+      "size": 18
+    },
+    {
+      "job_id": 6,
+      "release_date": 1,
+      "processing_time": 3,
+      "size": 3
+    }
+  ]
+}

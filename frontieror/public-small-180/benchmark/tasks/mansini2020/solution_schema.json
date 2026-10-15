@@ -1,0 +1,11 @@
+{
+  "objective_value": "<float> Total profit obtained from the chosen items across all groups.",
+  "selected_items": [
+    {
+      "group_id": "<int> Identifier of the group from which an item has been picked.",
+      "item_id": "<int> Identifier of the item chosen from the corresponding group.",
+      "profit": "<int> Profit contributed by the chosen item.",
+      "weights": "<list[int], length m_resources> Amount of each resource consumed by the chosen item."
+    }
+  ]
+}

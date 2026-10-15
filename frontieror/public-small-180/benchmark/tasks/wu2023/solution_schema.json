@@ -1,0 +1,19 @@
+{
+  "objective_value": "<float> Best scaling factor achieved across all reduction methods and target sizes.",
+  "one_stage_IP_mu": "<dict, key: '{K}'> Results of one-stage scenario reduction with binary assignments for each target set size K.",
+  "one_stage_IP_mu.*": {
+    "t": "<float> Optimal scaling factor guaranteeing approximation quality of the reduced set.",
+    "approximation_ratio": "<float> Worst-case ratio of the true robust optimum to the optimum over the reduced set, equal to one over t.",
+    "assignment": "<dict, key: scenario index, value: aggregate index> Complete binary mu assignment, with every original scenario assigned to exactly one aggregate in 0..K-1.",
+    "lambda_weights": "<dict, key: aggregate index, value: dict[scenario index, float]> Sparse nonnegative convex-combination weights for every aggregate; omitted inner entries are zero.",
+    "solver_status": "<int> Gurobi status for this subproblem.",
+    "best_bound": "<float> Gurobi objective bound for this subproblem.",
+    "mip_gap": "<float> Gurobi relative MIP gap for this subproblem."
+  },
+  "two_stage_IP": "<dict, key: '{K}'> Results of two-stage scenario reduction with scenario selection for each target set size K.",
+  "two_stage_IP.*": {
+    "t": "<float> Optimal scaling factor guaranteeing approximation quality of the selected scenarios.",
+    "approximation_ratio": "<float> Worst-case ratio of the true robust optimum to the optimum over the selected scenarios, equal to one over t.",
+    "selected_scenarios": "<list[int], length K> Indices of the original scenarios chosen to form the reduced set."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "num_satellites": "<int> Number of satellite transshipment facilities in the distribution network.",
+  "num_customers": "<int> Number of customers to be served.",
+  "num_groups": "<int> Number of disjoint customer groups that must each be served from a single satellite.",
+  "Q1": "<int> Carrying capacity of each first-echelon (large) vehicle.",
+  "Q2": "<int> Carrying capacity of each second-echelon (small) vehicle.",
+  "T1": "<int> Total number of first-echelon vehicles available at the depot.",
+  "T2": "<int> Total number of second-echelon vehicles available across the entire system.",
+  "depot": {
+    "id": "<int> Unique node identifier for the depot.",
+    "x": "<int> Horizontal coordinate of the depot.",
+    "y": "<int> Vertical coordinate of the depot."
+  },
+  "satellites": [
+    {
+      "id": "<int> Unique node identifier for this satellite.",
+      "x": "<int> Horizontal coordinate of this satellite.",
+      "y": "<int> Vertical coordinate of this satellite.",
+      "capacity": "<int> Maximum total freight throughput this satellite can handle.",
+      "max_vehicles": "<int> Maximum number of second-echelon vehicles that may operate from this satellite.",
+      "handling_cost": "<float> Per-unit cost incurred for each unit of freight passing through this satellite."
+    }
+  ],
+  "customers": [
+    {
+      "id": "<int> Unique node identifier for this customer.",
+      "x": "<int> Horizontal coordinate of this customer.",
+      "y": "<int> Vertical coordinate of this customer.",
+      "demand": "<int> Quantity of freight required by this customer.",
+      "group": "<int> Identifier of the customer group to which this customer belongs."
+    }
+  ],
+  "groups": [
+    {
+      "group_id": "<int> Unique identifier for this customer group.",
+      "customer_ids": "<list[int], length varies> Node identifiers of all customers belonging to this group."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "num_customers": "<int> Number of customers whose demands must be fulfilled.",
+  "num_plants": "<int> Number of candidate plant sites that may be opened.",
+  "capacity_tightness_ratio": "<int> Ratio of total plant capacity to total customer demand, controlling how tight capacity constraints are.",
+  "total_demand": "<int> Sum of all customer demands.",
+  "total_capacity": "<float> Sum of all plant capacities.",
+  "customers": {
+    "demands": "<list[int], length num_customers> Quantity of goods demanded by each customer.",
+    "x_coords": "<list[float], length num_customers> Horizontal coordinate of each customer's location.",
+    "y_coords": "<list[float], length num_customers> Vertical coordinate of each customer's location."
+  },
+  "plants": {
+    "fixed_costs": "<list[int], length num_plants> Fixed cost incurred for opening each candidate plant.",
+    "capacities": "<list[float], length num_plants> Maximum total demand each plant can serve if opened.",
+    "x_coords": "<list[float], length num_plants> Horizontal coordinate of each candidate plant's location.",
+    "y_coords": "<list[float], length num_plants> Vertical coordinate of each candidate plant's location."
+  },
+  "shipping_costs": "<list[list[float]], shape [num_customers][num_plants]> Cost of supplying a customer's entire demand from a given plant, proportional to demand and Euclidean distance."
+}

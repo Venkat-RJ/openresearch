@@ -1,0 +1,66 @@
+{
+  "campaign": "94b0b288-f89e-42a5-b928-e99ac17b6397",
+  "task": "laporte2003",
+  "status": "MEASURED root official tiny300 followup18 reference tie,0.53s; primary19 preserved",
+  "official_experiment": "0e2af719-91cf-40d7-96a8-02cbcb8cabbb",
+  "conclusion_experiment": "c650b428-16fb-4ec2-8bd1-48b80f5ae923",
+  "owner_preregistration_status": "complete",
+  "runtime_entry_verified": {
+    "first_eligible_own_bound": 43,
+    "variables": 1888,
+    "later_callback_improvements": 7,
+    "events": 24,
+    "terminal_full_snapshot_exact": true,
+    "stderr_marker_observed": false
+  },
+  "live_code": "research-workspace/Personal_experiments/frontieror-fresh-20261011/solvers/laporte2003/gpt-5.6-sol/code.py",
+  "source_sha256": "ad778c0f1306f064f9418585fcbcb5174235f692bd605de470dac5c2bc2d22aa",
+  "unchanged_primary_frozen_sha256": "330d6759dd9350e960024de2d3f413b1391f4d85842ac23047f2b765fcd5cf31",
+  "unchanged_knueven_followup_sha256": "92c8e862a08d2a891ab11414105e90152d6350c509e9b770969f74f0722d2fc1",
+  "hypothesis": "d56b434c-7cdc-4c85-b8a6-750c1c62e967",
+  "static_experiment": "66fdd6d3-34c1-4ad6-bff2-861f89782159",
+  "native_followup_preregistration": "db4be2a5-ff2d-4054-80d9-653f5691cbe5",
+  "readbacks_asserted": true,
+  "correction": "Prior inherited claim that exact1649-variable model executed is falsified: frozen primary forms groups at initial own78 bound, yielding1973>1900guard. Measured primary300 is heuristic fallback19; exact branch skipped.",
+  "change": "Refresh price groups after own heuristic incumbent improves; transition from oversized heuristic search to existing exact compact model when<=1900, with remaining original deadline and exact_entry stderr marker.",
+  "counts": {
+    "own_initial78": {
+      "groups": 698,
+      "variables": 1973,
+      "constraints_before_lazy": 798,
+      "eligible": false
+    },
+    "own_archived19": {
+      "groups": 374,
+      "variables": 1649,
+      "constraints_before_lazy": 474,
+      "eligible": true
+    }
+  },
+  "checks": {
+    "compile": true,
+    "model_math_and_callback_AST_unchanged": true,
+    "purchase_route_emitter_AST_unchanged": true,
+    "params": {
+      "Seed": 0,
+      "Threads": 1,
+      "NumericFocus": 0,
+      "MIPGap": 0.0001
+    },
+    "logger": "official unchanged,min_interval0,module-entry time.time",
+    "embedded_or_reference_warm_start": false,
+    "owner_optimization_runs": 0,
+    "large_runs": 0,
+    "frozen_primary_mutations": 0
+  },
+  "evaluation": {
+    "driver": "root",
+    "time_limit": 300,
+    "instance": "tiny",
+    "exec_mode": "standard Docker",
+    "cpus": 1,
+    "memory": "2G",
+    "anti_hack": false
+  },
+  "qualification": "Counts are arithmetic checks, not local optimization or measured exact entry. Runtime/quality now measured by root; exact entry proven from frozen control flow and later recorded incumbents, not an archived stderr marker. Released missing-price zero semantics preserved."
+}

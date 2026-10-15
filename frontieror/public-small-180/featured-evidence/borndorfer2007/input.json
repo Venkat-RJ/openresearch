@@ -1,0 +1,960 @@
+{
+  "instance_id": 1,
+  "scale": "small",
+  "topology": "grid",
+  "seed": 42,
+  "problem": "Line Planning Problem (LPP)",
+  "paper": "Borndoerfer, Groetschel, Pfetsch (2007) - A Column-Generation Approach to Line Planning in Public Transport",
+  "global_parameters": {
+    "lambda": 0.9978,
+    "fixed_cost_per_line": 10000,
+    "operating_cost_per_edge": 100,
+    "max_line_length_edges": 4,
+    "frequency_upper_bound_F": 8.9,
+    "traveling_times_unit": "seconds",
+    "coordinates_unit": "km"
+  },
+  "network": {
+    "num_nodes": 20,
+    "num_edges": 60,
+    "num_od_nodes": 5,
+    "area_km": 1.0,
+    "nodes": [
+      {
+        "id": 0,
+        "x": 0.0105,
+        "y": 0,
+        "is_od_node": true
+      },
+      {
+        "id": 1,
+        "x": 0,
+        "y": 0.2292,
+        "is_od_node": false
+      },
+      {
+        "id": 2,
+        "x": 0.0177,
+        "y": 0.5133,
+        "is_od_node": false
+      },
+      {
+        "id": 3,
+        "x": 0.0294,
+        "y": 0.719,
+        "is_od_node": true
+      },
+      {
+        "id": 4,
+        "x": 0,
+        "y": 0.9647,
+        "is_od_node": false
+      },
+      {
+        "id": 5,
+        "x": 0.2289,
+        "y": 0.0004,
+        "is_od_node": false
+      },
+      {
+        "id": 6,
+        "x": 0.2145,
+        "y": 0.2274,
+        "is_od_node": false
+      },
+      {
+        "id": 7,
+        "x": 0.2612,
+        "y": 0.5034,
+        "is_od_node": false
+      },
+      {
+        "id": 8,
+        "x": 0.229,
+        "y": 0.7567,
+        "is_od_node": true
+      },
+      {
+        "id": 9,
+        "x": 0.2732,
+        "y": 0.963,
+        "is_od_node": false
+      },
+      {
+        "id": 10,
+        "x": 0.5229,
+        "y": 0.0149,
+        "is_od_node": true
+      },
+      {
+        "id": 11,
+        "x": 0.488,
+        "y": 0.2242,
+        "is_od_node": false
+      },
+      {
+        "id": 12,
+        "x": 0.5343,
+        "y": 0.4877,
+        "is_od_node": false
+      },
+      {
+        "id": 13,
+        "x": 0.4695,
+        "y": 0.7198,
+        "is_od_node": false
+      },
+      {
+        "id": 14,
+        "x": 0.5261,
+        "y": 1.0,
+        "is_od_node": false
+      },
+      {
+        "id": 15,
+        "x": 0.773,
+        "y": 0.0172,
+        "is_od_node": false
+      },
+      {
+        "id": 16,
+        "x": 0.7527,
+        "y": 0.2855,
+        "is_od_node": false
+      },
+      {
+        "id": 17,
+        "x": 0.7409,
+        "y": 0.5039,
+        "is_od_node": true
+      },
+      {
+        "id": 18,
+        "x": 0.7747,
+        "y": 0.7589,
+        "is_od_node": false
+      },
+      {
+        "id": 19,
+        "x": 0.7771,
+        "y": 1.0,
+        "is_od_node": false
+      }
+    ],
+    "edges": [
+      {
+        "id": 0,
+        "endpoints": [
+          0,
+          1
+        ],
+        "traveling_time_seconds": 27.54,
+        "edge_capacity": 4.4,
+        "operating_cost": 100,
+        "length_km": 0.2295
+      },
+      {
+        "id": 1,
+        "endpoints": [
+          0,
+          2
+        ],
+        "traveling_time_seconds": 61.6,
+        "edge_capacity": 5.3,
+        "operating_cost": 100,
+        "length_km": 0.5133
+      },
+      {
+        "id": 2,
+        "endpoints": [
+          0,
+          5
+        ],
+        "traveling_time_seconds": 26.21,
+        "edge_capacity": 4.2,
+        "operating_cost": 100,
+        "length_km": 0.2184
+      },
+      {
+        "id": 3,
+        "endpoints": [
+          0,
+          6
+        ],
+        "traveling_time_seconds": 36.66,
+        "edge_capacity": 5.0,
+        "operating_cost": 100,
+        "length_km": 0.3055
+      },
+      {
+        "id": 4,
+        "endpoints": [
+          0,
+          10
+        ],
+        "traveling_time_seconds": 61.52,
+        "edge_capacity": 4.7,
+        "operating_cost": 100,
+        "length_km": 0.5127
+      },
+      {
+        "id": 5,
+        "endpoints": [
+          1,
+          2
+        ],
+        "traveling_time_seconds": 34.15,
+        "edge_capacity": 5.6,
+        "operating_cost": 100,
+        "length_km": 0.2846
+      },
+      {
+        "id": 6,
+        "endpoints": [
+          1,
+          5
+        ],
+        "traveling_time_seconds": 38.84,
+        "edge_capacity": 5.0,
+        "operating_cost": 100,
+        "length_km": 0.3237
+      },
+      {
+        "id": 7,
+        "endpoints": [
+          1,
+          6
+        ],
+        "traveling_time_seconds": 25.74,
+        "edge_capacity": 5.7,
+        "operating_cost": 100,
+        "length_km": 0.2145
+      },
+      {
+        "id": 8,
+        "endpoints": [
+          1,
+          7
+        ],
+        "traveling_time_seconds": 45.44,
+        "edge_capacity": 6.6,
+        "operating_cost": 100,
+        "length_km": 0.3787
+      },
+      {
+        "id": 9,
+        "endpoints": [
+          2,
+          3
+        ],
+        "traveling_time_seconds": 24.73,
+        "edge_capacity": 5.8,
+        "operating_cost": 100,
+        "length_km": 0.2061
+      },
+      {
+        "id": 10,
+        "endpoints": [
+          2,
+          4
+        ],
+        "traveling_time_seconds": 54.22,
+        "edge_capacity": 5.2,
+        "operating_cost": 100,
+        "length_km": 0.4518
+      },
+      {
+        "id": 11,
+        "endpoints": [
+          2,
+          6
+        ],
+        "traveling_time_seconds": 41.64,
+        "edge_capacity": 6.5,
+        "operating_cost": 100,
+        "length_km": 0.347
+      },
+      {
+        "id": 12,
+        "endpoints": [
+          2,
+          7
+        ],
+        "traveling_time_seconds": 29.24,
+        "edge_capacity": 6.9,
+        "operating_cost": 100,
+        "length_km": 0.2437
+      },
+      {
+        "id": 13,
+        "endpoints": [
+          2,
+          8
+        ],
+        "traveling_time_seconds": 38.68,
+        "edge_capacity": 6.5,
+        "operating_cost": 100,
+        "length_km": 0.3224
+      },
+      {
+        "id": 14,
+        "endpoints": [
+          3,
+          4
+        ],
+        "traveling_time_seconds": 29.7,
+        "edge_capacity": 4.7,
+        "operating_cost": 100,
+        "length_km": 0.2475
+      },
+      {
+        "id": 15,
+        "endpoints": [
+          3,
+          7
+        ],
+        "traveling_time_seconds": 37.99,
+        "edge_capacity": 6.7,
+        "operating_cost": 100,
+        "length_km": 0.3166
+      },
+      {
+        "id": 16,
+        "endpoints": [
+          3,
+          8
+        ],
+        "traveling_time_seconds": 24.38,
+        "edge_capacity": 6.0,
+        "operating_cost": 100,
+        "length_km": 0.2031
+      },
+      {
+        "id": 17,
+        "endpoints": [
+          3,
+          9
+        ],
+        "traveling_time_seconds": 41.39,
+        "edge_capacity": 5.4,
+        "operating_cost": 100,
+        "length_km": 0.3449
+      },
+      {
+        "id": 18,
+        "endpoints": [
+          4,
+          8
+        ],
+        "traveling_time_seconds": 37.13,
+        "edge_capacity": 5.1,
+        "operating_cost": 100,
+        "length_km": 0.3094
+      },
+      {
+        "id": 19,
+        "endpoints": [
+          4,
+          9
+        ],
+        "traveling_time_seconds": 32.79,
+        "edge_capacity": 4.5,
+        "operating_cost": 100,
+        "length_km": 0.2732
+      },
+      {
+        "id": 20,
+        "endpoints": [
+          4,
+          14
+        ],
+        "traveling_time_seconds": 63.27,
+        "edge_capacity": 4.7,
+        "operating_cost": 100,
+        "length_km": 0.5272
+      },
+      {
+        "id": 21,
+        "endpoints": [
+          5,
+          6
+        ],
+        "traveling_time_seconds": 27.3,
+        "edge_capacity": 5.5,
+        "operating_cost": 100,
+        "length_km": 0.2275
+      },
+      {
+        "id": 22,
+        "endpoints": [
+          5,
+          10
+        ],
+        "traveling_time_seconds": 35.33,
+        "edge_capacity": 4.8,
+        "operating_cost": 100,
+        "length_km": 0.2944
+      },
+      {
+        "id": 23,
+        "endpoints": [
+          5,
+          11
+        ],
+        "traveling_time_seconds": 41.08,
+        "edge_capacity": 5.7,
+        "operating_cost": 100,
+        "length_km": 0.3424
+      },
+      {
+        "id": 24,
+        "endpoints": [
+          6,
+          7
+        ],
+        "traveling_time_seconds": 33.59,
+        "edge_capacity": 7.3,
+        "operating_cost": 100,
+        "length_km": 0.2799
+      },
+      {
+        "id": 25,
+        "endpoints": [
+          6,
+          10
+        ],
+        "traveling_time_seconds": 44.95,
+        "edge_capacity": 5.8,
+        "operating_cost": 100,
+        "length_km": 0.3746
+      },
+      {
+        "id": 26,
+        "endpoints": [
+          6,
+          11
+        ],
+        "traveling_time_seconds": 32.83,
+        "edge_capacity": 6.7,
+        "operating_cost": 100,
+        "length_km": 0.2735
+      },
+      {
+        "id": 27,
+        "endpoints": [
+          7,
+          8
+        ],
+        "traveling_time_seconds": 30.64,
+        "edge_capacity": 7.4,
+        "operating_cost": 100,
+        "length_km": 0.2554
+      },
+      {
+        "id": 28,
+        "endpoints": [
+          7,
+          12
+        ],
+        "traveling_time_seconds": 32.82,
+        "edge_capacity": 8.9,
+        "operating_cost": 100,
+        "length_km": 0.2735
+      },
+      {
+        "id": 29,
+        "endpoints": [
+          7,
+          13
+        ],
+        "traveling_time_seconds": 36.03,
+        "edge_capacity": 8.0,
+        "operating_cost": 100,
+        "length_km": 0.3003
+      },
+      {
+        "id": 30,
+        "endpoints": [
+          8,
+          9
+        ],
+        "traveling_time_seconds": 25.32,
+        "edge_capacity": 5.7,
+        "operating_cost": 100,
+        "length_km": 0.211
+      },
+      {
+        "id": 31,
+        "endpoints": [
+          8,
+          13
+        ],
+        "traveling_time_seconds": 29.19,
+        "edge_capacity": 6.9,
+        "operating_cost": 100,
+        "length_km": 0.2432
+      },
+      {
+        "id": 32,
+        "endpoints": [
+          8,
+          14
+        ],
+        "traveling_time_seconds": 46.07,
+        "edge_capacity": 5.7,
+        "operating_cost": 100,
+        "length_km": 0.384
+      },
+      {
+        "id": 33,
+        "endpoints": [
+          9,
+          13
+        ],
+        "traveling_time_seconds": 37.5,
+        "edge_capacity": 6.0,
+        "operating_cost": 100,
+        "length_km": 0.3125
+      },
+      {
+        "id": 34,
+        "endpoints": [
+          9,
+          14
+        ],
+        "traveling_time_seconds": 30.67,
+        "edge_capacity": 4.8,
+        "operating_cost": 100,
+        "length_km": 0.2555
+      },
+      {
+        "id": 35,
+        "endpoints": [
+          9,
+          19
+        ],
+        "traveling_time_seconds": 60.63,
+        "edge_capacity": 4.6,
+        "operating_cost": 100,
+        "length_km": 0.5053
+      },
+      {
+        "id": 36,
+        "endpoints": [
+          10,
+          11
+        ],
+        "traveling_time_seconds": 25.46,
+        "edge_capacity": 5.6,
+        "operating_cost": 100,
+        "length_km": 0.2122
+      },
+      {
+        "id": 37,
+        "endpoints": [
+          10,
+          15
+        ],
+        "traveling_time_seconds": 30.01,
+        "edge_capacity": 4.3,
+        "operating_cost": 100,
+        "length_km": 0.2501
+      },
+      {
+        "id": 38,
+        "endpoints": [
+          10,
+          16
+        ],
+        "traveling_time_seconds": 42.6,
+        "edge_capacity": 5.3,
+        "operating_cost": 100,
+        "length_km": 0.355
+      },
+      {
+        "id": 39,
+        "endpoints": [
+          11,
+          12
+        ],
+        "traveling_time_seconds": 32.11,
+        "edge_capacity": 7.4,
+        "operating_cost": 100,
+        "length_km": 0.2676
+      },
+      {
+        "id": 40,
+        "endpoints": [
+          11,
+          15
+        ],
+        "traveling_time_seconds": 42.27,
+        "edge_capacity": 5.1,
+        "operating_cost": 100,
+        "length_km": 0.3522
+      },
+      {
+        "id": 41,
+        "endpoints": [
+          11,
+          16
+        ],
+        "traveling_time_seconds": 32.61,
+        "edge_capacity": 6.1,
+        "operating_cost": 100,
+        "length_km": 0.2717
+      },
+      {
+        "id": 42,
+        "endpoints": [
+          11,
+          17
+        ],
+        "traveling_time_seconds": 45.25,
+        "edge_capacity": 6.7,
+        "operating_cost": 100,
+        "length_km": 0.3771
+      },
+      {
+        "id": 43,
+        "endpoints": [
+          12,
+          13
+        ],
+        "traveling_time_seconds": 28.91,
+        "edge_capacity": 7.6,
+        "operating_cost": 100,
+        "length_km": 0.2409
+      },
+      {
+        "id": 44,
+        "endpoints": [
+          12,
+          15
+        ],
+        "traveling_time_seconds": 63.31,
+        "edge_capacity": 5.9,
+        "operating_cost": 100,
+        "length_km": 0.5276
+      },
+      {
+        "id": 45,
+        "endpoints": [
+          12,
+          16
+        ],
+        "traveling_time_seconds": 35.72,
+        "edge_capacity": 6.6,
+        "operating_cost": 100,
+        "length_km": 0.2977
+      },
+      {
+        "id": 46,
+        "endpoints": [
+          12,
+          17
+        ],
+        "traveling_time_seconds": 24.87,
+        "edge_capacity": 6.8,
+        "operating_cost": 100,
+        "length_km": 0.2072
+      },
+      {
+        "id": 47,
+        "endpoints": [
+          12,
+          18
+        ],
+        "traveling_time_seconds": 43.49,
+        "edge_capacity": 6.4,
+        "operating_cost": 100,
+        "length_km": 0.3624
+      },
+      {
+        "id": 48,
+        "endpoints": [
+          13,
+          14
+        ],
+        "traveling_time_seconds": 34.31,
+        "edge_capacity": 5.7,
+        "operating_cost": 100,
+        "length_km": 0.2859
+      },
+      {
+        "id": 49,
+        "endpoints": [
+          13,
+          17
+        ],
+        "traveling_time_seconds": 41.62,
+        "edge_capacity": 6.8,
+        "operating_cost": 100,
+        "length_km": 0.3468
+      },
+      {
+        "id": 50,
+        "endpoints": [
+          13,
+          18
+        ],
+        "traveling_time_seconds": 36.93,
+        "edge_capacity": 6.1,
+        "operating_cost": 100,
+        "length_km": 0.3077
+      },
+      {
+        "id": 51,
+        "endpoints": [
+          13,
+          19
+        ],
+        "traveling_time_seconds": 49.94,
+        "edge_capacity": 5.2,
+        "operating_cost": 100,
+        "length_km": 0.4162
+      },
+      {
+        "id": 52,
+        "endpoints": [
+          14,
+          18
+        ],
+        "traveling_time_seconds": 41.56,
+        "edge_capacity": 5.0,
+        "operating_cost": 100,
+        "length_km": 0.3463
+      },
+      {
+        "id": 53,
+        "endpoints": [
+          14,
+          19
+        ],
+        "traveling_time_seconds": 30.13,
+        "edge_capacity": 4.1,
+        "operating_cost": 100,
+        "length_km": 0.2511
+      },
+      {
+        "id": 54,
+        "endpoints": [
+          15,
+          16
+        ],
+        "traveling_time_seconds": 32.28,
+        "edge_capacity": 4.6,
+        "operating_cost": 100,
+        "length_km": 0.269
+      },
+      {
+        "id": 55,
+        "endpoints": [
+          15,
+          17
+        ],
+        "traveling_time_seconds": 58.53,
+        "edge_capacity": 5.2,
+        "operating_cost": 100,
+        "length_km": 0.4877
+      },
+      {
+        "id": 56,
+        "endpoints": [
+          16,
+          17
+        ],
+        "traveling_time_seconds": 26.25,
+        "edge_capacity": 5.8,
+        "operating_cost": 100,
+        "length_km": 0.2187
+      },
+      {
+        "id": 57,
+        "endpoints": [
+          17,
+          18
+        ],
+        "traveling_time_seconds": 30.87,
+        "edge_capacity": 5.6,
+        "operating_cost": 100,
+        "length_km": 0.2572
+      },
+      {
+        "id": 58,
+        "endpoints": [
+          17,
+          19
+        ],
+        "traveling_time_seconds": 59.69,
+        "edge_capacity": 5.1,
+        "operating_cost": 100,
+        "length_km": 0.4974
+      },
+      {
+        "id": 59,
+        "endpoints": [
+          18,
+          19
+        ],
+        "traveling_time_seconds": 28.93,
+        "edge_capacity": 4.3,
+        "operating_cost": 100,
+        "length_km": 0.2411
+      }
+    ]
+  },
+  "modes": [
+    {
+      "name": "bus",
+      "vehicle_capacity": 80,
+      "speed_kmh": 30,
+      "fixed_cost_per_line": 10000,
+      "operating_cost_per_edge": 100,
+      "terminals": [
+        0,
+        4,
+        5,
+        14,
+        15,
+        19
+      ],
+      "edge_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "num_edges": 60,
+      "num_terminals": 6
+    }
+  ],
+  "od_matrix": [
+    {
+      "origin": 3,
+      "destination": 8,
+      "demand": 87
+    },
+    {
+      "origin": 8,
+      "destination": 3,
+      "demand": 87
+    },
+    {
+      "origin": 10,
+      "destination": 17,
+      "demand": 61
+    },
+    {
+      "origin": 17,
+      "destination": 10,
+      "demand": 61
+    },
+    {
+      "origin": 8,
+      "destination": 17,
+      "demand": 31
+    },
+    {
+      "origin": 17,
+      "destination": 8,
+      "demand": 31
+    },
+    {
+      "origin": 3,
+      "destination": 17,
+      "demand": 20
+    },
+    {
+      "origin": 17,
+      "destination": 3,
+      "demand": 20
+    },
+    {
+      "origin": 8,
+      "destination": 10,
+      "demand": 20
+    },
+    {
+      "origin": 10,
+      "destination": 8,
+      "demand": 20
+    },
+    {
+      "origin": 0,
+      "destination": 10,
+      "demand": 19
+    },
+    {
+      "origin": 10,
+      "destination": 0,
+      "demand": 19
+    },
+    {
+      "origin": 3,
+      "destination": 10,
+      "demand": 18
+    }
+  ],
+  "od_summary": {
+    "num_od_pairs": 13,
+    "total_demand": 494,
+    "num_od_nodes": 5
+  }
+}
