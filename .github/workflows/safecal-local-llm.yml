@@ -1,0 +1,112 @@
+name: SafeCal real local-model diagnostic smoke
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/safecal-local-llm.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  real-model-inference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install SafeCal, Verifiers and CPU inference
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e './safecal[bayes,verifiers]'
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'transformers>=4.48,<5' 'safetensors>=0.4'
+      - name: Run model-generated actions through actual Verifiers v1 environment
+        env:
+          HF_HUB_DISABLE_TELEMETRY: '1'
+          TOKENIZERS_PARALLELISM: 'false'
+        run: |
+          cd safecal
+          python - <<'PY'
+          import asyncio
+          import json
+          from types import SimpleNamespace
+          import torch
+          from transformers import AutoModelForCausalLM, AutoTokenizer
+          from safecal_v1.taskset import SafeCalTaskset, SafeCalTasksetConfig, SafeCalVerifierConfig, SafeCalVerifierEnv
+
+          MODEL = 'Qwen/Qwen2.5-0.5B-Instruct'
+          torch.set_num_threads(2)
+          tokenizer = AutoTokenizer.from_pretrained(MODEL)
+          model = AutoModelForCausalLM.from_pretrained(MODEL, torch_dtype=torch.float32)
+          model.eval()
+          results = []
+
+          class Trace:
+              def __init__(self):
+                  self.rewards, self.metrics = {}, {}
+              def record_reward(self, name, value, weight):
+                  self.rewards[name] = float(value)
+              def record_metric(self, name, value):
+                  self.metrics[name] = float(value)
+
+          class ModelInteraction:
+              def __init__(self, task):
+                  self.task, self.trace, self.turns = task, Trace(), 0
+                  self.messages = [
+                      {'role':'system','content':task.data.system_prompt},
+                      {'role':'user','content':task.data.prompt},
+                  ]
+                  self.actions = []
+              async def __aenter__(self): return self
+              async def __aexit__(self, exc_type, exc, tb): return False
+              async def turn(self, observation=None):
+                  self.turns += 1
+                  if observation is not None:
+                      self.messages.append({'role':'user','content':observation})
+                  toks=tokenizer.apply_chat_template(self.messages,tokenize=True,
+                                      add_generation_prompt=True, return_tensors='pt')
+                  with torch.inference_mode():
+                      outputs=model.generate(toks,max_new_tokens=96,do_sample=False,
+                            pad_token_id=tokenizer.eos_token_id)
+                  reply=tokenizer.decode(outputs[0][toks.shape[-1]:],skip_special_tokens=True).strip()
+                  self.messages.append({'role':'assistant','content':reply})
+                  self.actions.append(reply)
+                  print('turn',self.turns,repr(reply[:220]),flush=True)
+                  return SimpleNamespace(terminated=False,last_reply=reply)
+
+          class ModelAgent:
+              def __init__(self): self.io = None
+              def interaction(self,task):
+                  self.io = ModelInteraction(task)
+                  return self.io
+
+          async def main():
+              for split in ('heldout','combined'):
+                  config=SafeCalTasksetConfig(id='safecal-v1',split=split)
+                  task=next(iter(SafeCalTaskset(config)))
+                  env=SafeCalVerifierEnv(SafeCalVerifierConfig(taskset=config))
+                  agent=ModelAgent()
+                  await env.run(task,SimpleNamespace(agent=agent))
+                  result={'split':split,'seed':task.data.info['seed'],
+                          'model':MODEL,'actions':agent.io.actions,
+                          'rewards':agent.io.trace.rewards,'metrics':agent.io.trace.metrics}
+                  results.append(result)
+                  print('episode',split,result['rewards'],result['metrics'],flush=True)
+              with open('safecal_llm_log.json','w') as f:
+                  json.dump(results,f,indent=2)
+              assert len(results)==2
+              assert all('safecal_net_reward' in r['rewards'] for r in results)
+              print('Completed two genuine model-generated diagnostic episodes through real Verifiers v1 Env.run')
+          asyncio.run(main())
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: safecal-real-model-rollout
+          path: safecal/safecal_llm_log.json
+          if-no-files-found: ignore
