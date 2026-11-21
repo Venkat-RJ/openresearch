@@ -12,8 +12,9 @@ dependencies = []
 
 [project.optional-dependencies]
 bayes = ["numpy>=1.24"]
+rl = ["numpy>=1.24", "torch>=2.2"]
 verifiers = ["verifiers>=0.4.0,<0.5.0"]
 
 [tool.setuptools]
-py-modules = ["safecal", "bayes_id", "benchmark", "budget_sweep", "report_analysis", "demo"]
+py-modules = ["safecal", "bayes_id", "benchmark", "budget_sweep", "report_analysis", "demo", "train_probe_rl", "audit_rl"]
 packages = ["safecal_v1"]
