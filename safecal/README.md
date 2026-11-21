@@ -2,7 +2,7 @@
 
 **A trainable, simulated engineering diagnosis task.** The question is whether an agent can learn to choose *safe, informative experiments* and recalibrate an unfamiliar actuator with fewer tests than strong classical system-identification methods.
 
-SafeCal is a CPU-based research simulator with an optional [Prime Intellect Verifiers v1](https://github.com/PrimeIntellect-ai/verifiers) taskset. It is **not** automotive control software, a real hardware controller, or a validated robotics safety benchmark. **No RL policy has been trained.**
+SafeCal is a CPU-based research simulator with an optional [Prime Intellect Verifiers v1](https://github.com/PrimeIntellect-ai/verifiers) taskset. It is **not** automotive control software, a real hardware controller, or a validated robotics safety benchmark. **A CPU-only neural diagnostic selection policy has now been trained. It collapsed to a fixed one-probe strategy and matched the corresponding hand-coded control exactly. No language model was RL-trained.** See [RL_PILOT.md](RL_PILOT.md).
 
 The original motivation comes from industrial power-liftgate calibration work, but all plant parameters, faults, trajectories, and rewards here are synthetic and normalized. No employer code, proprietary parameters, or hardware traces are included.
 
@@ -79,10 +79,10 @@ vf-eval safecal-v1 -n 10 --model your-provider/your-model \
     --env.taskset.split train --env.agent.runtime.type docker --no-push
 ```
 
-**Integration status:** The taskset and host-side dialogue are implemented; the dialogue is unit-tested. We have **not** run a model evaluation or RL training in Verifiers because package installation was blocked in the development container. Run an actual `vf-eval` smoke test in a configured environment before publishing the taskset to an environment hub or making integration claims. A coding harness must be isolated from host evaluator code and task seeds.
+**Integration status:** The real Verifiers v1 package loaded and ran a scripted diagnostic interaction in [GitHub Actions](https://github.com/Venkat-RJ/openresearch/actions/runs/44873170003). A [small Qwen2.5-0.5B model-driven smoke](LLM_SMOKE.md) also completed two episodes through the real Verifiers v1 host environment; both failed the JSON action protocol and scored zero. This used a custom CPU inference wrapper, not native `vf-eval`. No language-model RL training was performed. For future coding harnesses, isolate the host evaluator and hidden task seeds.
 
 ## Next scientific test
 
 Can a learned policy beat the train-selected, cost-aware Bayesian diagnostic baseline on **unseen dynamics**, across matched diagnostic budgets, while respecting an independently enforced safety shield? Better reward on this simplified simulator alone would not establish real-world safety or scientific generalization. Stronger Bayesian value-of-information and model-mismatch baselines are still needed.
 
-All experiments to date are simulations, with **no RL training and no hardware validation**.
+All experiments to date are simulations, with **one small neural diagnostic-selection RL pilot, no language-model RL training, and no hardware validation**. See [RL_PILOT.md](RL_PILOT.md) for the fixed-probe negative control.
