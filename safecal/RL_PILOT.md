@@ -31,7 +31,11 @@ python -m unittest discover -s tests -q
 python train_probe_rl.py --episodes 720 --seed 20261121 --train-only --output rl_pilot_20261121
 # Load the checkpoint, run evaluation once:
 python train_probe_rl.py --evaluate rl_pilot_20261121/policy.pt --output rl_pilot_20261121 --eval-tasks 60
-# Match same 180 seeds against the existing Bayes-2 evaluations and fixed-probe control:
+# Recreate the classical comparison files on the same 180 evaluation seeds:
+python benchmark.py --tasks 60 --split heldout --policies default bayes2 --json results_bayes2_heldout.json
+python benchmark.py --tasks 60 --split combined --policies default bayes2 --json results_bayes2_combined.json
+python benchmark.py --tasks 60 --split shifted --policies default bayes2 --json results_bayes2_shifted.json
+# Audit the fixed-probe control and calculate paired uncertainty intervals:
 python audit_rl.py
 ```
 
