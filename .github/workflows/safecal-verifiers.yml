@@ -1,0 +1,81 @@
+name: SafeCal Verifiers v1 compatibility
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'safecal/**'
+      - '.github/workflows/safecal-verifiers.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verifiers-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install real Verifiers v1 package
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e './safecal[bayes,verifiers]'
+      - name: Test SafeCal simulator and protocol
+        run: cd safecal && python -m unittest discover -s tests -v
+      - name: Import and instantiate real Verifiers v1 taskset
+        run: |
+          cd safecal
+          python - <<'PY'
+          import verifiers.v1 as vf
+          from safecal_v1 import SafeCalTaskset, SafeCalVerifierEnv
+          from safecal_v1.taskset import SafeCalTasksetConfig, SafeCalVerifierConfig
+          from safecal_v1.protocol import SafeCalDialogue
+          assert issubclass(SafeCalTaskset, vf.Taskset)
+          assert issubclass(SafeCalVerifierEnv, vf.Env)
+          taskset = SafeCalTaskset(SafeCalTasksetConfig(id='safecal-v1', split='heldout'))
+          t = next(iter(taskset))
+          assert t.data.info['seed'] == 900000
+          assert t.data.info['split'] == 'heldout'
+          e = SafeCalVerifierEnv(SafeCalVerifierConfig(taskset=SafeCalTasksetConfig(id='safecal-v1', split='heldout')))
+          assert isinstance(e, vf.Env)
+          print('Real Verifiers v1 taskset and env initialization PASS')
+          PY
+      - name: Verify scripted host interaction through v1 Env.run
+        run: |
+          cd safecal
+          python - <<'PY'
+          import asyncio
+          from types import SimpleNamespace
+          from safecal_v1.taskset import SafeCalTaskset, SafeCalTasksetConfig, SafeCalVerifierEnv, SafeCalVerifierConfig
+          class Trace:
+              def __init__(self): self.rewards={}; self.metrics={}
+              def record_reward(self,name,val,weight): self.rewards[name]=val
+              def record_metric(self,name,val): self.metrics[name]=val
+          class Interaction:
+              def __init__(self): self.trace=Trace(); self.turns=0
+              async def __aenter__(self): return self
+              async def __aexit__(self,*args): pass
+              async def turn(self, observation=None):
+                  self.turns+=1
+                  if self.turns==1: reply='{"probe":"pulse_pos_high"}'
+                  else: reply='{"calibration":{"gain":1.0,"friction_ff":0.08,"sensor_offset":0.0}}'
+                  return SimpleNamespace(terminated=False,last_reply=reply)
+          class Agent:
+              def __init__(self): self.io=Interaction()
+              def interaction(self,task): return self.io
+          async def check():
+              config=SafeCalTasksetConfig(id='safecal-v1',split='heldout')
+              t=next(iter(SafeCalTaskset(config)))
+              e=SafeCalVerifierEnv(SafeCalVerifierConfig(taskset=config))
+              agent=Agent()
+              await e.run(t, SimpleNamespace(agent=agent))
+              assert agent.io.trace.metrics['completed']==1.0
+              assert agent.io.trace.metrics['num_probes']==1.0
+              assert agent.io.trace.rewards['safecal_net_reward']>0.0
+              print('SafeCal host-side interaction in real v1 Env.run PASS')
+          asyncio.run(check())
+          PY
