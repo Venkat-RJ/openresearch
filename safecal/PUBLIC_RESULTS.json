@@ -1,0 +1,280 @@
+{
+  "protocol": "SafeCal v0.2, simulated-only, seed-paired, no RL training",
+  "splits": {
+    "combined": {
+      "comparisons": {
+        "bayes2_minus_bayes": {
+          "bootstrap_95": [
+            0.0219,
+            0.03301
+          ],
+          "mean": 0.0276
+        },
+        "bayes2_minus_default": {
+          "bootstrap_95": [
+            0.07058,
+            0.09914
+          ],
+          "mean": 0.0849
+        },
+        "bayes2_minus_greedy": {
+          "bootstrap_95": [
+            0.12434,
+            0.14888
+          ],
+          "mean": 0.13666
+        },
+        "bayes_minus_greedy": {
+          "bootstrap_95": [
+            0.09695,
+            0.12137
+          ],
+          "mean": 0.10906
+        }
+      },
+      "oracle_quality": 0.9205,
+      "policies": {
+        "bayes": {
+          "cost": 4.49167,
+          "quality": 0.90441,
+          "reward": 0.85051
+        },
+        "bayes2": {
+          "cost": 2.35,
+          "quality": 0.90631,
+          "reward": 0.87811
+        },
+        "default": {
+          "cost": 0.0,
+          "quality": 0.79321,
+          "reward": 0.79321
+        },
+        "fixed": {
+          "cost": 4.5,
+          "quality": 0.78945,
+          "reward": 0.73545
+        },
+        "greedy": {
+          "cost": 4.0,
+          "quality": 0.78945,
+          "reward": 0.74145
+        },
+        "random": {
+          "cost": 4.24167,
+          "quality": 0.79159,
+          "reward": 0.74069
+        }
+      },
+      "tasks": 60
+    },
+    "heldout": {
+      "comparisons": {
+        "bayes2_minus_bayes": {
+          "bootstrap_95": [
+            -0.00177,
+            0.0186
+          ],
+          "mean": 0.00856
+        },
+        "bayes2_minus_default": {
+          "bootstrap_95": [
+            0.00489,
+            0.03734
+          ],
+          "mean": 0.02114
+        },
+        "bayes2_minus_greedy": {
+          "bootstrap_95": [
+            -0.0046,
+            0.01622
+          ],
+          "mean": 0.00621
+        },
+        "bayes_minus_greedy": {
+          "bootstrap_95": [
+            -0.00812,
+            0.00358
+          ],
+          "mean": -0.00235
+        }
+      },
+      "oracle_quality": 0.91584,
+      "policies": {
+        "bayes": {
+          "cost": 4.45,
+          "quality": 0.90651,
+          "reward": 0.85311
+        },
+        "bayes2": {
+          "cost": 2.35,
+          "quality": 0.88987,
+          "reward": 0.86167
+        },
+        "default": {
+          "cost": 0.0,
+          "quality": 0.84053,
+          "reward": 0.84053
+        },
+        "fixed": {
+          "cost": 4.5,
+          "quality": 0.9047,
+          "reward": 0.8507
+        },
+        "greedy": {
+          "cost": 4.25,
+          "quality": 0.90646,
+          "reward": 0.85546
+        },
+        "random": {
+          "cost": 4.28333,
+          "quality": 0.88473,
+          "reward": 0.83333
+        }
+      },
+      "tasks": 60
+    },
+    "shifted": {
+      "comparisons": {
+        "bayes2_minus_bayes": {
+          "bootstrap_95": [
+            0.01806,
+            0.02585
+          ],
+          "mean": 0.02206
+        },
+        "bayes2_minus_default": {
+          "bootstrap_95": [
+            0.13039,
+            0.15082
+          ],
+          "mean": 0.14065
+        },
+        "bayes2_minus_greedy": {
+          "bootstrap_95": [
+            0.16532,
+            0.18573
+          ],
+          "mean": 0.17587
+        },
+        "bayes_minus_greedy": {
+          "bootstrap_95": [
+            0.14297,
+            0.16403
+          ],
+          "mean": 0.15381
+        }
+      },
+      "oracle_quality": 0.8201,
+      "policies": {
+        "bayes": {
+          "cost": 4.48333,
+          "quality": 0.81599,
+          "reward": 0.76219
+        },
+        "bayes2": {
+          "cost": 2.35833,
+          "quality": 0.81255,
+          "reward": 0.78425
+        },
+        "default": {
+          "cost": 0.0,
+          "quality": 0.6436,
+          "reward": 0.6436
+        },
+        "fixed": {
+          "cost": 4.5,
+          "quality": 0.65638,
+          "reward": 0.60238
+        },
+        "greedy": {
+          "cost": 4.0,
+          "quality": 0.65638,
+          "reward": 0.60838
+        },
+        "random": {
+          "cost": 4.25833,
+          "quality": 0.66775,
+          "reward": 0.61665
+        }
+      },
+      "tasks": 60
+    }
+  },
+  "training_budget_selection": {
+    "groups": [
+      "single seed 1000..1024",
+      "combined seed 50000..50024"
+    ],
+    "results": {
+      "0": {
+        "macro_reward": 0.830625352356191,
+        "train_compound": {
+          "quality": 0.7980888557424177,
+          "reward": 0.7980888557424177,
+          "test_cost": 0.0
+        },
+        "train_single": {
+          "quality": 0.8631618489699642,
+          "reward": 0.8631618489699642,
+          "test_cost": 0.0
+        }
+      },
+      "1": {
+        "macro_reward": 0.8563770141751367,
+        "train_compound": {
+          "quality": 0.8886728783297292,
+          "reward": 0.8766728783297292,
+          "test_cost": 1.0
+        },
+        "train_single": {
+          "quality": 0.8480811500205442,
+          "reward": 0.8360811500205442,
+          "test_cost": 1.0
+        }
+      },
+      "2": {
+        "macro_reward": 0.8613234652407322,
+        "train_compound": {
+          "quality": 0.8945273457877336,
+          "reward": 0.8669273457877336,
+          "test_cost": 2.3
+        },
+        "train_single": {
+          "quality": 0.8835595846937307,
+          "reward": 0.8557195846937308,
+          "test_cost": 2.32
+        }
+      },
+      "3": {
+        "macro_reward": 0.8484886440179688,
+        "train_compound": {
+          "quality": 0.8935808505815324,
+          "reward": 0.8520608505815322,
+          "test_cost": 3.46
+        },
+        "train_single": {
+          "quality": 0.8854764374544053,
+          "reward": 0.8449164374544053,
+          "test_cost": 3.38
+        }
+      },
+      "4": {
+        "macro_reward": 0.8434670485191655,
+        "train_compound": {
+          "quality": 0.8962176545883449,
+          "reward": 0.8422176545883449,
+          "test_cost": 4.5
+        },
+        "train_single": {
+          "quality": 0.8977564424499863,
+          "reward": 0.8447164424499861,
+          "test_cost": 4.42
+        }
+      }
+    },
+    "rule": "maximize equally weighted mean net reward, tiebreak fewer probes",
+    "selected_max_probes": 2,
+    "train_seeds_per_group": 25,
+    "training_selection_only": true
+  }
+}

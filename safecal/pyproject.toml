@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "safecal-v1"
+version = "0.2.0"
+description = "Synthetic safe actuator diagnosis and calibration taskset for RL research"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+bayes = ["numpy>=1.24"]
+verifiers = ["verifiers>=0.4.0,<0.5.0"]
+
+[tool.setuptools]
+py-modules = ["safecal", "bayes_id", "benchmark", "budget_sweep", "report_analysis", "demo"]
+packages = ["safecal_v1"]

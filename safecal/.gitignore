@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+results_*.json
+budget_0to2.json
+budget_3to4.json
+budget_selection.json
+# PUBLIC_RESULTS.json is a committed, recomputable aggregate; raw local traces are omitted.
+!PUBLIC_RESULTS.json
